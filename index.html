@@ -327,54 +327,68 @@ document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el)
 var NL_URL = 'https://script.google.com/macros/s/AKfycbz0MVzr95UHYMTCmvPyc4y29AqOBYr9ljjUJynAxc0/exec';
 var CT_URL = 'https://script.google.com/macros/s/AKfycbxmPXR6XllhHG09WWzs1vSdiNrjnTxqrRsDMDl_cIXS/exec';
 
+function postToSheet(url, data, onSuccess, onError) {
+  var iframe = document.createElement('iframe');
+  iframe.name = 'form-target-' + Date.now();
+  iframe.style.display = 'none';
+  document.body.appendChild(iframe);
+  var form = document.createElement('form');
+  form.method = 'POST';
+  form.action = url;
+  form.target = iframe.name;
+  form.style.display = 'none';
+  Object.keys(data).forEach(function(key) {
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = key;
+    input.value = data[key];
+    form.appendChild(input);
+  });
+  document.body.appendChild(form);
+  iframe.onload = function() { setTimeout(function() { document.body.removeChild(iframe); document.body.removeChild(form); }, 1000); onSuccess(); };
+  form.submit();
+}
+
 function submitNewsletter(e) {
   e.preventDefault();
   var btn = document.querySelector('#newsletter-form button');
-  var status = document.getElementById('nl-status');
   var email = document.getElementById('nl-email').value;
   if (!email) return false;
   btn.disabled = true; btn.textContent = 'Sending...';
-  var data = {
+  postToSheet(NL_URL, {
     date: new Date().toISOString(),
     email: email,
     name: document.getElementById('nl-name').value,
     interest: document.getElementById('nl-interest').value
-  };
-  fetch(NL_URL, { method: 'POST', mode: 'no-cors', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data) })
-    .then(function() {
-      var form = document.getElementById('newsletter-form');
-      form.innerHTML = '<div style="padding:40px 0;"><p style="font-family:Archivo,sans-serif;font-size:32px;font-weight:400;color:#0D2E1E;letter-spacing:-0.03em;margin-bottom:8px;">Thanks!</p><p style="font-size:17px;color:rgba(13,64,112,0.5);">You are signed up. We will be in touch.</p></div>';
-    })
-    .catch(function() {
-      status.textContent = 'Something went wrong. Email heather@bcbybike.ca instead.';
-      status.style.color = '#D84315';
-      btn.disabled = false; btn.textContent = 'Submit';
-    });
+  }, function() {
+    var f = document.getElementById('newsletter-form');
+    f.innerHTML = '<div style="padding:40px 0;"><p style="font-family:Archivo,sans-serif;font-size:32px;font-weight:400;color:#0D2E1E;letter-spacing:-0.03em;margin-bottom:8px;">Thanks!</p><p style="font-size:17px;color:rgba(13,64,112,0.5);">You are signed up. We will be in touch.</p></div>';
+  }, function() {
+    document.getElementById('nl-status').textContent = 'Something went wrong. Email heather@bcbybike.ca instead.';
+    document.getElementById('nl-status').style.color = '#D84315';
+    btn.disabled = false; btn.textContent = 'Submit';
+  });
   return false;
 }
 
 function submitContact(e) {
   e.preventDefault();
   var btn = document.querySelector('#contact-form button');
-  var status = document.getElementById('ct-status');
   var email = document.getElementById('ct-email').value;
   if (!email) return false;
   btn.disabled = true; btn.textContent = 'Sending...';
-  var data = {
+  postToSheet(CT_URL, {
     date: new Date().toISOString(),
     name: document.getElementById('ct-name').value,
     email: email,
     message: document.getElementById('ct-message').value
-  };
-  fetch(CT_URL, { method: 'POST', mode: 'no-cors', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data) })
-    .then(function() {
-      var form = document.getElementById('contact-form');
-      form.innerHTML = '<div style="padding:20px 0;"><p style="font-family:Archivo,sans-serif;font-size:28px;font-weight:400;color:white;letter-spacing:-0.03em;margin-bottom:6px;">Thanks!</p><p style="font-size:16px;color:rgba(255,255,255,0.7);">We will be in touch.</p></div>';
-    })
-    .catch(function() {
-      status.textContent = 'Something went wrong. Email heather@bcbybike.ca instead.';
-      btn.disabled = false; btn.textContent = 'Submit →';
-    });
+  }, function() {
+    var f = document.getElementById('contact-form');
+    f.innerHTML = '<div style="padding:20px 0;"><p style="font-family:Archivo,sans-serif;font-size:28px;font-weight:400;color:white;letter-spacing:-0.03em;margin-bottom:6px;">Thanks!</p><p style="font-size:16px;color:rgba(255,255,255,0.7);">We will be in touch.</p></div>';
+  }, function() {
+    document.getElementById('ct-status').textContent = 'Something went wrong. Email heather@bcbybike.ca instead.';
+    btn.disabled = false; btn.textContent = 'Submit →';
+  });
   return false;
 }
 </script>
