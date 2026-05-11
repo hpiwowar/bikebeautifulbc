@@ -324,8 +324,8 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: 0.15 });
 document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
 
-var NL_URL = 'NEWSLETTER_APPS_SCRIPT_URL';
-var CT_URL = 'CONTACT_APPS_SCRIPT_URL';
+var NL_URL = 'https://script.google.com/macros/s/AKfycbz0MVzr95UHYMTCmvPyc4y29AqOBYr9ljjUJynAxc0/exec';
+var CT_URL = 'https://script.google.com/macros/s/AKfycbxmPXR6XllhHG09WWzs1vSdiNrjnTxqrRsDMDl_cIXS/exec';
 
 function submitNewsletter(e) {
   e.preventDefault();
