@@ -184,6 +184,9 @@ body {
 .demo-toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #636363; cursor: pointer; user-select: none; }
 .demo-toggle input { width: 16px; height: 16px; accent-color: #1E7D96; cursor: pointer; }
 
+.modal-tips { margin-top: 16px; padding: 14px 16px; background: #F5F0E8; border-radius: 8px; font-size: 13px; color: #4A3C31; line-height: 1.5; }
+.modal-tips strong { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; display: block; margin-bottom: 6px; color: #92400E; }
+
 .modal-notes { margin-top: 14px; display: flex; flex-direction: column; gap: 4px; }
 .modal-note-item { font-size: 12px; color: #4b5563; line-height: 1.4; padding: 6px 10px; background: #F5F9FB; border-left: 3px solid #1E7D96; border-radius: 0 6px 6px 0; }
 .modal-note-item strong { color: #1E7D96; font-weight: 600; }
@@ -301,7 +304,8 @@ var categories = [
         desc: "Hostel-style lodge popular with Sea to Sky Trail riders. Locked ski room doubles as bike storage.",
         checked: [0,1,2,7,8,9,11,14], routes: ["Sea to Sky Trail"],
         detail: { address: "38220 Cleveland Ave, Squamish, BC V8B 0A3", phone: "(604) 555-0134", url: "squamishadventurelodge.ca", hours: "Check-in 3pm, year-round", source: "operator" },
-        notes: { 7: "Ground floor rooms only", 11: "Shared pump in the gear room" } },
+        notes: { 7: "Ground floor rooms only", 11: "Shared pump in the gear room" },
+        tips: "The gear room has a basic workstand and tools — ask at the front desk. There's a great Thai place two doors down that does takeout until 9pm." },
       { name: "Nelson Heritage Guesthouse", location: "Nelson (West Kootenay)", badge: "accredited",
         desc: "Heritage B&B in downtown Nelson. Bikes in the locked garden shed or ground-floor hallway.",
         checked: [0,2,4,5,8,9,10,14], routes: ["Frog Peak Loop"],
@@ -319,7 +323,8 @@ var categories = [
         desc: "Beach lodge with covered bike storage in the surf shed. Popular with Pacific Rim corridor cyclists.",
         checked: [0,1,2,4,7,8,9,14], routes: ["Tofino–Ucluelet"],
         detail: { address: "311 Main St, Tofino, BC V0R 2Z0", phone: "(250) 555-0377", source: "operator" },
-        notes: { 7: "Shared dorm rooms only", 8: "Plug in the surf shed" } },
+        notes: { 7: "Shared dorm rooms only", 8: "Plug in the surf shed" },
+        tips: "They rent surfboards too — ride to Ucluelet in the morning, surf Long Beach in the afternoon. The Co-op in Ucluelet is cheaper for groceries than Tofino." },
       { name: "Kamloops Plaza Hotel", location: "Kamloops (Thompson)", badge: "listed",
         desc: "Editorial listing — downtown hotel with locked underground parking suitable for bikes.",
         checked: [4,8,9,14], routes: ["Lac Du Bois Tranquility"],
@@ -361,7 +366,8 @@ var categories = [
         desc: "Lakeside campground 25 min from downtown Kamloops. Closest camping to the Lac Du Bois grasslands.",
         checked: [1,2,3,4,8,9,14,17], routes: ["Lac Du Bois Tranquility"],
         detail: { address: "Paul Lake Rd, Kamloops, BC V2H 1R8", url: "bcparks.ca/paul-lake", source: "osm" },
-        notes: { 17: "Firewood available at gate" } },
+        notes: { 17: "Firewood available at gate" },
+        tips: "The road from Kamloops to Paul Lake has a solid shoulder but a steep climb — consider it a warmup for the grasslands. Cell service disappears about halfway up." },
       { name: "Jimsmith Lake Campground", location: "Cranbrook (East Kootenay)", badge: "accredited",
         desc: "Small provincial park campground near the North Star trailhead. Potable water, no showers.",
         checked: [0,1,2,8,14,15], routes: ["North Star + Chief Isadore Trail"],
@@ -370,7 +376,8 @@ var categories = [
         desc: "Parks Canada campground in Pacific Rim National Park. Between Tofino and Ucluelet. Reservable hiker/biker sites.",
         checked: [1,2,3,5,8,9,14], routes: ["Tofino–Ucluelet"],
         detail: { url: "reservation.pc.gc.ca", hours: "Mid-Mar–mid-Oct", source: "osm" },
-        notes: { 1: "Reservable, book early for summer", 8: "Bear boxes at each loop" } },
+        notes: { 1: "Reservable, book early for summer", 8: "Bear boxes at each loop" },
+        tips: "Walk-in bike sites are much cheaper than drive-in. The beach trail to Long Beach starts right from the campground — 10 min walk. Raccoons are bold here, use the bear boxes for everything." },
       { name: "Vedder River Campground", location: "Chilliwack (Fraser Valley)", badge: "listed",
         desc: "Editorial listing — riverside campground near the Vedder Rotary Loop trail.",
         checked: [1,2,4,9], routes: ["Chilliwack Loops"],
@@ -408,12 +415,14 @@ var categories = [
       { name: "Nelson Brewing Company", location: "Nelson (West Kootenay)", badge: "accredited",
         desc: "Craft brewery with patio bike visibility on Baker St. Water without purchase. Strong vegetarian menu.",
         checked: [0,2,3,5,6,9], routes: ["Frog Peak Loop"], network: "BC Ale Trail",
-        detail: { address: "310 Latimer St, Nelson, BC V1L 4T6", phone: "(250) 555-0227", hours: "12–9pm daily", source: "operator" } },
+        detail: { address: "310 Latimer St, Nelson, BC V1L 4T6", phone: "(250) 555-0227", hours: "12–9pm daily", source: "operator" },
+        tips: "Baker St is one-way and busy — walk your bike on the sidewalk. The Kootenay Co-op grocery is two blocks east if you need to resupply." },
       { name: "Crescent Valley River Café", location: "Crescent Valley (West Kootenay)", badge: "accredited",
         desc: "Cozy café above the Slocan River. Perfect final stop before Nelson on the Frog Peak Loop.",
         checked: [0,2,3,5,9], routes: ["Frog Peak Loop"],
         detail: { address: "1234 Crescent Valley Rd, Crescent Valley, BC V0G 1H0", hours: "8am–5pm daily, May–Oct", source: "operator" },
-        notes: { 5: "Patio overlooks the Slocan River" } },
+        notes: { 5: "Patio overlooks the Slocan River" },
+        tips: "There's a swimming hole in the Slocan River right below the café — bring a towel. The guesthouse upstairs rents out if you want an extra night." },
       { name: "Kamloops Craft Brewing", location: "Kamloops (Thompson)", badge: "accredited",
         desc: "Downtown brewpub. Covered patio with bike rack. Post-ride fuel for Lac Du Bois riders.",
         checked: [0,2,3,5,6,7,9], routes: ["Lac Du Bois Tranquility"], network: "BC Ale Trail",
@@ -451,7 +460,8 @@ var categories = [
         desc: "Village store 16 km into the KVR ride from Penticton. Last resupply before Chute Lake climb.",
         checked: [0,1,2,3,4,6,7], routes: ["KVR Myra Canyon"],
         detail: { address: "210 Robinson Ave, Naramata, BC V0H 1N0", phone: "(250) 555-0319", hours: "7:30am–7pm daily, summer", source: "operator" },
-        notes: { 4: "Bag ice only" } },
+        notes: { 4: "Bag ice only" },
+        tips: "This is genuinely your last resupply before Chute Lake — fill your bottles and buy more food than you think you need. The climb is long. Naramata Bench wineries are nearby if you're done for the day." },
       { name: "Winlaw Mini Mart", location: "Winlaw (West Kootenay)", badge: "accredited",
         desc: "Slocan Valley general store on the Frog Peak Loop. Basic supplies, produce, camp fuel.",
         checked: [0,1,2,6,7], routes: ["Frog Peak Loop"],
@@ -459,7 +469,8 @@ var categories = [
       { name: "Kimberley City Market", location: "Kimberley (East Kootenay)", badge: "accredited",
         desc: "Full grocery near the Platzl. Outdoor water tap, covered bike parking under the awning.",
         checked: [0,1,2,3,4,7,9,12], routes: ["North Star + Chief Isadore Trail"],
-        detail: { address: "195 Spokane St, Kimberley, BC V1A 2E5", phone: "(250) 555-0356", hours: "8am–8pm daily", source: "operator" } },
+        detail: { address: "195 Spokane St, Kimberley, BC V1A 2E5", phone: "(250) 555-0356", hours: "8am–8pm daily", source: "operator" },
+        tips: "The Platzl is Kimberley's pedestrian area — good cafés, public washrooms, and a giant cuckoo clock. Worth a wander. The trail north back to Cranbrook starts from the far end of town." },
       { name: "Kamloops Farmers Market", location: "Kamloops (Thompson)", badge: "accredited",
         desc: "Seasonal outdoor market downtown. Fresh produce, hot food, public bike racks.",
         checked: [0,1,8], routes: ["Lac Du Bois Tranquility"], network: "BC Farmers’ Market Network",
@@ -610,7 +621,8 @@ var categories = [
         desc: "Intercity bus connecting Tofino, Ucluelet, and Nanaimo. Bikes in luggage bay, bagged.",
         checked: [0,2,4,7,8], routes: ["Tofino–Ucluelet"],
         detail: { url: "tofinobus.com", hours: "2 departures daily, year-round", source: "operator" },
-        notes: { 7: "Soft bag or box required", 4: "$10 per bike", 8: "Battery must be removable" } },
+        notes: { 7: "Soft bag or box required", 4: "$10 per bike", 8: "Battery must be removable" },
+        tips: "Buy a cheap soft bike bag from Amazon before your trip — the bus is strict about bagging. You can leave the bag at your accommodation in Tofino and pick it up for the return trip." },
       { name: "Nelson Transit", location: "Nelson (West Kootenay)", badge: "accredited",
         desc: "Local bus with front bike rack. Useful for getting from Nelson to Crescent Valley trailhead.",
         checked: [0,5,8,13], routes: ["Frog Peak Loop"],
@@ -849,6 +861,7 @@ function openModal(catId, exIdx) {
     '<div class="modal-body">' +
       verifyHTML +
       '<div class="modal-section"><div class="modal-section-title">Amenities</div><div class="modal-pills">' + pills + '</div>' + notesHTML + '</div>' +
+      (ex.tips ? '<div class="modal-tips"><strong>Good to know</strong>' + ex.tips + '</div>' : '') +
       photoHTML +
       '<div class="modal-section"><div class="modal-section-title">About</div><div class="modal-desc">' + ex.desc + '</div></div>' +
       detailHTML +
