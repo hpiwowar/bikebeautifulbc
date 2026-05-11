@@ -123,7 +123,7 @@ body {
 </div>
 
 <div class="form-card">
-<form id="suggest-form" onsubmit="return submitForm()">
+<form id="suggest-form" onsubmit="return submitSuggest(event)">
 
   <div class="field">
     <label>Business name *</label>
@@ -433,7 +433,8 @@ function updateAmenities() {
   }).join("");
 }
 
-function submitForm() {
+function submitSuggest(e) {
+  e.preventDefault();
   var name = document.getElementById("f-name").value;
   var location = document.getElementById("f-location").value;
   var category = document.getElementById("f-category").value;
@@ -461,23 +462,31 @@ function submitForm() {
   }
 
   var isEdit = !!window._editMode;
-  var subject = (isEdit ? "WWC Listing Edit: " : "WWC Listing Suggestion: ") + name;
-  var body = "=== LISTING DATA (OK for AI processing) ===\n\n" +
-    "Business: " + name + "\n" +
-    "Location: " + location + "\n" +
-    "Category: " + category + "\n" +
-    "Route: " + route + "\n" +
-    (reqAnswers.length > 0 ? "Required criteria: " + reqAnswers.join("; ") + "\n" : "") +
-    "Amenities observed: " + (checked.length > 0 ? checked.join(", ") : "none checked") + "\n" +
-    "Notes: " + notes + "\n" +
-    (wantCredit ? "Credit as: " + (displayname || yourname || "anonymous") + "\n" : "") +
-    "\n=== PERSONAL INFO (do NOT paste into AI" + (aiConsent ? " — UNLESS contributor opted in, which they did" : "") + ") ===\n\n" +
-    "Submitted by: " + (yourname || "anonymous") + "\n" +
-    "Email: " + (youremail || "not provided") + "\n" +
-    "Wants contributor credit: " + (wantCredit ? "yes" : "no") + "\n" +
-    "AI consent for contact info: " + (aiConsent ? "yes" : "no");
+  var NL = String.fromCharCode(10);
+  var listing = "Business: " + name + NL + "Location: " + location + NL + "Category: " + category + NL + "Route: " + route + NL + (reqAnswers.length > 0 ? "Required criteria: " + reqAnswers.join("; ") + NL : "") + "Amenities observed: " + (checked.length > 0 ? checked.join(", ") : "none checked") + NL + "Notes: " + notes + (wantCredit ? NL + "Credit as: " + (displayname || yourname || "anonymous") : "");
+  var personal = "Submitted by: " + (yourname || "anonymous") + NL + "Email: " + (youremail || "not provided") + NL + "Wants contributor credit: " + (wantCredit ? "yes" : "no") + NL + "AI consent for contact info: " + (aiConsent ? "yes" : "no");
 
-  window.location.href = "mailto:heather@bcbybike.ca?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  var formData = new FormData();
+  formData.append("access_key", "bc6a6806-190b-4ca7-a66c-301e321188fb");
+  formData.append("subject", (isEdit ? "WWC Listing Edit: " : "WWC Listing Suggestion: ") + name);
+  formData.append("Listing Data", listing);
+  formData.append("Personal Info" + (aiConsent ? " (AI consent given)" : " (NO AI consent)"), personal);
+
+  var btn = document.querySelector('#suggest-form button[type=submit]');
+  btn.disabled = true; btn.textContent = 'Sending...';
+
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
+    .then(function(r) { return r.json(); })
+    .then(function(res) {
+      if (res.success) {
+        document.querySelector('.form-card').innerHTML = '<div style="padding:40px 0;text-align:center;"><p style="font-family:Archivo,sans-serif;font-size:28px;font-weight:400;color:#0D2E1E;letter-spacing:-0.03em;margin-bottom:8px;">Thanks!</p><p style="font-size:16px;color:rgba(13,64,112,0.5);">Your suggestion has been received. We will review it shortly.</p></div>';
+      } else {
+        btn.disabled = false; btn.textContent = 'Submit';
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Submit';
+    });
   return false;
 }
 
