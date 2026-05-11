@@ -327,9 +327,7 @@ function submitNewsletter() {
   var email = document.getElementById('nl-email').value;
   if (!email) return false;
   var subject = 'Newsletter signup' + (name ? ' — ' + name : '');
-  var body = 'Name: ' + (name || '(not provided)') + '
-Email: ' + email + '
-Interest: ' + (document.getElementById('nl-interest').value || '(not provided)');
+  var body = 'Name: ' + (name || '(not provided)') + String.fromCharCode(10) + 'Email: ' + email + String.fromCharCode(10) + 'Interest: ' + (document.getElementById('nl-interest').value || '(not provided)');
   window.location.href = 'mailto:heather@bcbybike.ca?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   return false;
 }
@@ -340,9 +338,7 @@ function submitContact() {
   var message = document.getElementById('ct-message').value;
   if (!email) return false;
   var subject = 'Website contact' + (name ? ' — ' + name : '');
-  var body = 'From: ' + (name || '(not provided)') + ' (' + email + ')
-
-' + (message || '(no message)');
+  var body = 'From: ' + (name || '(not provided)') + ' (' + email + ')' + String.fromCharCode(10) + String.fromCharCode(10) + (message || '(no message)');
   window.location.href = 'mailto:heather@bcbybike.ca?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   return false;
 }
