@@ -127,11 +127,6 @@ body {
   </div>
 
   <div class="field">
-    <label>Hours / season</label>
-    <input type="text" id="a-hours" placeholder="e.g. 9am–5pm daily, May–Oct" />
-  </div>
-
-  <div class="field">
     <label>Category *</label>
     <select id="a-category" required onchange="updateApplyForm()">
       <option value="">Select a category...</option>
@@ -163,6 +158,16 @@ body {
     <div class="section-heading">Optional amenities — check what you offer</div>
     <div class="hint" style="margin-bottom:12px;">These appear as tags on your listing so cyclists know what to expect.</div>
     <div class="amenity-grid" id="amenity-apply-grid"></div>
+    <div class="field" style="margin-top:16px;">
+      <label>Details about your amenities</label>
+      <div class="hint">Anything a visiting cyclist should know about the amenities you checked — where to find them, when they're available, any conditions. These show up as notes on your listing that cyclists read before they arrive.</div>
+      <textarea id="a-amenity-notes" style="min-height:80px;" placeholder="e.g. E-bike charging is behind the deck, ask at reception for the key. Bike storage is only available May–September (it's a ski room in winter). The pump is in the gear closet — ask at the front desk. Laundry is coin-op, $2 per load."></textarea>
+    </div>
+    <div class="field">
+      <label>Anything else about your listing?</label>
+      <div class="hint">General notes — seasonal closures, things that are changing, anything we should know that doesn't fit above</div>
+      <textarea id="a-general-notes" placeholder="e.g. We're closed the first two weeks of November for maintenance. New bike wash station being installed this summer. We're pet-friendly too, lots of cyclists travel with dogs."></textarea>
+    </div>
   </div>
 
   <div class="section-heading">Your local knowledge</div>
@@ -183,12 +188,12 @@ body {
     <div class="field">
       <label>Getting out with a bike</label>
       <div class="hint">If a cyclist needed to leave the area with their bike — what are the options? Public bus, local taxi with a van, a neighbour who does runs to town, a shuttle service?</div>
-      <textarea id="a-cis-transport" style="min-height:60px;" placeholder="e.g. BC Transit bus at Main & Lakeshore (rack fits 2 bikes). Joe's Taxi has a van that fits bikes — (250) 555-1234. Or: honestly, not much — nearest bus is 20 km in town."></textarea>
+      <textarea id="a-cis-transport" style="min-height:60px;" placeholder="e.g. BC Transit bus at Main & Lakeshore (rack fits 2 bikes). Joe's Taxi has a van that fits bikes — (250) 555-1234. Or: honestly, not much — nearest bus is in town, 20 km from here."></textarea>
     </div>
     <div class="field" style="margin-bottom:0;">
       <label>Insider knowledge — hazards, access, seasonal quirks</label>
       <div class="hint">Things a visiting cyclist wouldn't know but should. Trail closures, wildlife, road conditions, water sources, cell coverage, anything.</div>
-      <textarea id="a-cis-hazards" style="min-height:60px;" placeholder="e.g. Trail is muddy and slow after rain — wait a day. Bears are active May–Oct, carry bear spray. No cell service between here and Chute Lake. The shortcut through the orchard is private property — use the main road."></textarea>
+      <textarea id="a-cis-hazards" style="min-height:60px;" placeholder="e.g. Trail is muddy and slow after rain — wait a day. No cell service between here and Chute Lake. The shortcut through the orchard is private property — use the main road. Grab a slice of pie at Mary's before you head out, you won't regret it."></textarea>
     </div>
   </div>
 
@@ -258,7 +263,7 @@ function updateApplyForm() {
 
   amenSection.style.display = "";
   amenGrid.innerHTML = catData[cat].amenities.map(function(a) {
-    return '<label class="amenity-check"><input type="checkbox" name="apply-amenity" value="' + a.name + '" /> ' + a.name + '<span class="tip">' + a.tip + '</span></label>';
+    return '<label class="amenity-check"><input type="checkbox" name="apply-amenity" value="' + a.name + '" /> ' + a.name + '</label>';
   }).join("");
 }
 
@@ -267,7 +272,6 @@ function submitApply() {
   var address = document.getElementById("a-address").value;
   var phone = document.getElementById("a-phone").value;
   var url = document.getElementById("a-url").value;
-  var hours = document.getElementById("a-hours").value;
   var category = document.getElementById("a-category").value;
   var desc = document.getElementById("a-desc").value;
   var contact = document.getElementById("a-contact").value;
@@ -294,11 +298,12 @@ function submitApply() {
     "Address: " + address + "\n" +
     "Phone: " + phone + "\n" +
     "Website: " + url + "\n" +
-    "Hours: " + hours + "\n" +
     "Category: " + category + "\n" +
     "Description: " + desc + "\n\n" +
     "REQUIRED CRITERIA CONFIRMED:\n" + (confirmed.length > 0 ? confirmed.join("\n") : "none checked") + "\n\n" +
-    "OPTIONAL AMENITIES:\n" + (amenities.length > 0 ? amenities.join(", ") : "none checked") + "\n\n" +
+    "OPTIONAL AMENITIES:\n" + (amenities.length > 0 ? amenities.join(", ") : "none checked") + "\n" +
+    "Amenity details: " + (document.getElementById("a-amenity-notes").value || "none") + "\n" +
+    "General notes: " + (document.getElementById("a-general-notes").value || "none") + "\n\n" +
     "CYCLIST INFO SHEET:\n" + (cis.length > 0 ? cis.join("\n") : "none filled in") + "\n" +
     "\n=== PERSONAL INFO (do NOT paste into AI" + (aiConsent ? " — UNLESS applicant opted in, which they did" : "") + ") ===\n\n" +
     "Contact: " + contact + "\n" +
