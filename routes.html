@@ -60,23 +60,26 @@ body {
   .g-footer-nav { gap: 48px; }
 }
 
-.difficulty-group { margin-bottom: 36px; }
-.difficulty-heading { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid; }
-.difficulty-heading-easy { color: #2E8A36; border-color: #C8E6C9; }
-.difficulty-heading-moderate { color: #F57F17; border-color: #FFE082; }
-.difficulty-heading-ambitious { color: #D84315; border-color: #FFAB91; }
-.route-card {
-  background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 10px;
-  padding: 18px 24px; margin-bottom: 10px; cursor: pointer;
-  transition: box-shadow 0.15s, border-color 0.15s; text-decoration: none; display: block; color: inherit;
+.difficulty-group { margin-bottom: 48px; }
+.difficulty-heading {
+  font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400;
+  letter-spacing: -0.03em; margin-bottom: 20px; padding: 0;
 }
-.route-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); border-color: #1E7D96; }
-.route-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
-.route-name { font-size: 17px; font-weight: 700; color: #1F514C; }
-.route-region { font-size: 12px; color: #999; }
-.route-desc { font-size: 13px; color: #636363; line-height: 1.55; margin-bottom: 10px; }
+.difficulty-heading-easy { color: #2E8A36; }
+.difficulty-heading-moderate { color: #C17900; }
+.difficulty-heading-ambitious { color: #C13B00; }
+.route-card {
+  background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 18px;
+  padding: 24px 28px; margin-bottom: 12px; cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; display: block; color: inherit;
+}
+.route-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-color: #1E7D96; transform: translateY(-2px); }
+.route-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+.route-name { font-family: "Archivo", sans-serif; font-size: 20px; font-weight: 400; color: #1F514C; letter-spacing: -0.02em; }
+.route-region { font-size: 13px; color: rgba(13,64,112,0.45); }
+.route-desc { font-size: 15px; color: #4b5563; line-height: 1.5; margin-bottom: 12px; }
 .route-meta { display: flex; flex-wrap: wrap; gap: 8px; }
-.meta-tag { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; white-space: nowrap; }
+.meta-tag { display: inline-flex; align-items: center; gap: 5px; padding: 5px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; }
 .meta-surface { background: #F5F5F5; color: #4b5563; border: 1px solid #E5E7EB; }
 </style>
 </head>
@@ -99,9 +102,9 @@ body {
 
 <div class="g-main">
 
-<div style="margin-bottom:28px;">
-  <h2 style="font-size:26px;font-weight:700;color:#1F514C;margin-bottom:6px;">Explore BC by bike</h2>
-  <p>Ten routes across British Columbia — from easy rail trails to ambitious bikepacking loops. Each links to the businesses, services, and attractions along the way.</p>
+<div style="margin-bottom:40px;">
+  <h2 style="font-family:Archivo,sans-serif;font-size:45px;font-weight:400;color:#0D4070;margin-bottom:12px;letter-spacing:-0.03em;">Explore BC by bike</h2>
+  <p style="font-size:17px;color:rgba(13,64,112,0.5);max-width:600px;letter-spacing:-0.01em;">Ten routes across British Columbia — from easy rail trails to ambitious bikepacking loops. Each links to the businesses, services, and attractions along the way.</p>
 </div>
 
 <div class="difficulty-group"><div class="difficulty-heading difficulty-heading-easy">Easy rides</div>
