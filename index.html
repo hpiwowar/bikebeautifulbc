@@ -342,10 +342,8 @@ function submitNewsletter(e) {
   };
   fetch(NL_URL, { method: 'POST', mode: 'no-cors', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data) })
     .then(function() {
-      status.textContent = 'Thanks! You are signed up.';
-      status.style.color = '#2E8A36';
-      btn.textContent = 'Sent';
-      document.getElementById('newsletter-form').reset();
+      var form = document.getElementById('newsletter-form');
+      form.innerHTML = '<div style="padding:40px 0;"><p style="font-family:Archivo,sans-serif;font-size:32px;font-weight:400;color:#0D2E1E;letter-spacing:-0.03em;margin-bottom:8px;">Thanks!</p><p style="font-size:17px;color:rgba(13,64,112,0.5);">You are signed up. We will be in touch.</p></div>';
     })
     .catch(function() {
       status.textContent = 'Something went wrong. Email heather@bcbybike.ca instead.';
@@ -370,9 +368,8 @@ function submitContact(e) {
   };
   fetch(CT_URL, { method: 'POST', mode: 'no-cors', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data) })
     .then(function() {
-      status.textContent = 'Thanks! We will be in touch.';
-      btn.textContent = 'Sent';
-      document.getElementById('contact-form').reset();
+      var form = document.getElementById('contact-form');
+      form.innerHTML = '<div style="padding:20px 0;"><p style="font-family:Archivo,sans-serif;font-size:28px;font-weight:400;color:white;letter-spacing:-0.03em;margin-bottom:6px;">Thanks!</p><p style="font-size:16px;color:rgba(255,255,255,0.7);">We will be in touch.</p></div>';
     })
     .catch(function() {
       status.textContent = 'Something went wrong. Email heather@bcbybike.ca instead.';
