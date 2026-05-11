@@ -123,7 +123,7 @@ body {
 </div>
 
 <div class="form-card">
-<form id="apply-form" onsubmit="return submitApply()">
+<form id="apply-form" onsubmit="return submitApply(event)">
 
   <div class="section-heading" style="border-top:none;margin-top:0;padding-top:0;">Your business</div>
 
@@ -330,7 +330,8 @@ function updateApplyForm() {
   }).join("");
 }
 
-function submitApply() {
+function submitApply(e) {
+  e.preventDefault();
   var name = document.getElementById("a-name").value;
   var address = document.getElementById("a-address").value;
   var phone = document.getElementById("a-phone").value;
@@ -356,27 +357,31 @@ function submitApply() {
     "Insider knowledge: " + document.getElementById("a-cis-hazards").value
   ].filter(function(s) { return s.split(": ")[1]; });
 
-  var subject = "WWC Accreditation Application: " + name;
-  var body = "=== BUSINESS DETAILS (OK for AI processing) ===\n\n" +
-    "Business: " + name + "\n" +
-    "Address: " + address + "\n" +
-    "Phone: " + phone + "\n" +
-    "Website: " + url + "\n" +
-    "Public email: " + (document.getElementById("a-public-email").value || "not provided") + "\n" +
-    "Category: " + category + "\n" +
-    "Description: " + desc + "\n\n" +
-    "REQUIRED CRITERIA CONFIRMED:\n" + (confirmed.length > 0 ? confirmed.join("\n") : "none checked") + "\n\n" +
-    "OPTIONAL AMENITIES:\n" + (amenities.length > 0 ? amenities.join(", ") : "none checked") + "\n" +
-    "Amenity details: " + (document.getElementById("a-amenity-notes").value || "none") + "\n" +
-    "General notes: " + (document.getElementById("a-general-notes").value || "none") + "\n\n" +
-    "CYCLIST INFO SHEET:\n" + (cis.length > 0 ? cis.join("\n") : "none filled in") + "\n" +
-    "\n=== PERSONAL INFO (do NOT paste into AI" + (aiConsent ? " — UNLESS applicant opted in, which they did" : "") + ") ===\n\n" +
-    "Contact: " + contact + "\n" +
-    "Email: " + email + "\n" +
-    "Role: " + role + "\n" +
-    "AI consent for contact info: " + (aiConsent ? "yes" : "no");
+  var NL = String.fromCharCode(10);
+  var business = "Business: " + name + NL + "Address: " + address + NL + "Phone: " + phone + NL + "Website: " + url + NL + "Public email: " + (document.getElementById("a-public-email").value || "not provided") + NL + "Category: " + category + NL + "Description: " + desc + NL + NL + "REQUIRED CRITERIA CONFIRMED:" + NL + (confirmed.length > 0 ? confirmed.join(NL) : "none checked") + NL + NL + "OPTIONAL AMENITIES:" + NL + (amenities.length > 0 ? amenities.join(", ") : "none checked") + NL + "Amenity details: " + (document.getElementById("a-amenity-notes").value || "none") + NL + "General notes: " + (document.getElementById("a-general-notes").value || "none") + NL + NL + "CYCLIST INFO SHEET:" + NL + (cis.length > 0 ? cis.join(NL) : "none filled in");
+  var personal = "Contact: " + contact + NL + "Email: " + email + NL + "Role: " + role + NL + "AI consent for contact info: " + (aiConsent ? "yes" : "no");
 
-  window.location.href = "mailto:heather@bcbybike.ca?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  var formData = new FormData();
+  formData.append("access_key", "7f92c51f-f7bb-4918-af94-a362655a3e01");
+  formData.append("subject", "WWC Accreditation Application: " + name);
+  formData.append("Business Details", business);
+  formData.append("Personal Info" + (aiConsent ? " (AI consent given)" : " (NO AI consent)"), personal);
+
+  var btn = document.querySelector('#apply-form button[type=submit]');
+  btn.disabled = true; btn.textContent = 'Sending...';
+
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
+    .then(function(r) { return r.json(); })
+    .then(function(res) {
+      if (res.success) {
+        document.querySelector('.form-card').innerHTML = '<div style="padding:40px 0;text-align:center;"><p style="font-family:Archivo,sans-serif;font-size:28px;font-weight:400;color:#0D2E1E;letter-spacing:-0.03em;margin-bottom:8px;">Application received!</p><p style="font-size:16px;color:rgba(13,64,112,0.5);">We review applications ourselves and aim to respond within two weeks.</p></div>';
+      } else {
+        btn.disabled = false; btn.textContent = 'Submit application';
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Submit application';
+    });
   return false;
 }
 
