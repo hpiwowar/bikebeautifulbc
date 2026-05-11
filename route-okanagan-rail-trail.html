@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Routes — BC Cycle Tourism Society</title>
+<title>Okanagan Rail Trail — BC Cycle Tourism Society</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -11,59 +11,68 @@ body {
   font-size: 15px; line-height: 1.6; color: #141414; background: #FAFAFA; min-height: 100vh;
 }
 .site-header { background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 20px 40px; }
-.header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 18px; }
+.header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 18px; }
 .logo { width: 56px; height: 56px; flex-shrink: 0; }
-.header-text h1 { font-size: 24px; font-weight: 700; color: #1F514C; letter-spacing: -0.3px; }
+.header-text h1 { font-size: 22px; font-weight: 700; color: #1F514C; letter-spacing: -0.3px; }
 .header-text .tagline { font-size: 13px; color: #636363; margin-top: 2px; }
 .header-text a { color: #1E7D96; text-decoration: none; font-size: 13px; }
 .header-text a:hover { text-decoration: underline; }
-
 .demo-banner { background: #F5F0E8; border-bottom: 1px solid #E8DFD0; padding: 10px 40px; font-size: 13px; color: #4A3C31; text-align: center; }
 .demo-banner strong { font-weight: 700; }
 
-.main { max-width: 1100px; margin: 0 auto; padding: 32px 28px 64px; }
-.page-intro { margin-bottom: 32px; }
-.page-intro h2 { font-size: 28px; font-weight: 700; color: #1F514C; margin-bottom: 8px; }
-.page-intro p { font-size: 15px; color: #636363; max-width: 700px; line-height: 1.6; }
+.main { max-width: 900px; margin: 0 auto; padding: 32px 28px 64px; }
 
-.route-card {
-  background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px;
-  padding: 28px 32px; margin-bottom: 16px; cursor: pointer;
-  transition: box-shadow 0.15s, border-color 0.15s; text-decoration: none; display: block; color: inherit;
-}
-.route-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); border-color: #1E7D96; }
-.route-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
-.route-name { font-size: 20px; font-weight: 700; color: #1F514C; }
-.route-region { font-size: 13px; color: #636363; margin-top: 3px; }
-.route-desc { font-size: 14px; color: #4b5563; line-height: 1.6; margin-bottom: 16px; max-width: 700px; }
-
-.route-meta { display: flex; flex-wrap: wrap; gap: 8px; }
-.meta-tag {
-  display: inline-flex; align-items: center; gap: 5px;
-  padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500;
-  white-space: nowrap;
-}
+.route-hero { margin-bottom: 32px; }
+.route-hero h2 { font-size: 32px; font-weight: 700; color: #1F514C; margin-bottom: 6px; }
+.route-hero .region { font-size: 15px; color: #636363; margin-bottom: 16px; }
+.route-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.meta-tag { display: inline-flex; align-items: center; gap: 5px; padding: 5px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; }
 .meta-distance { background: #F0F7FA; color: #1E7D96; border: 1px solid #B8E0EC; }
 .meta-surface { background: #F5F5F5; color: #4b5563; border: 1px solid #E5E7EB; }
 .meta-difficulty-easy { background: #E8F5E9; color: #2E8A36; border: 1px solid #C8E6C9; }
 .meta-difficulty-moderate { background: #FFF8E1; color: #F57F17; border: 1px solid #FFE082; }
 .meta-difficulty-ambitious { background: #FBE9E7; color: #D84315; border: 1px solid #FFAB91; }
-.meta-listings { background: #F5F0E8; color: #4A3C31; border: 1px solid #E8DFD0; }
 
-.route-links { margin-top: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
-.route-link { font-size: 13px; color: #1E7D96; text-decoration: none; font-weight: 500; }
-.route-link:hover { text-decoration: underline; }
+.route-desc { font-size: 16px; color: #4b5563; line-height: 1.7; margin-bottom: 32px; }
 
-.footer { text-align: center; margin-top: 32px; font-size: 11px; color: #999; line-height: 1.8; }
+.section { margin-bottom: 32px; }
+.section h3 { font-size: 18px; font-weight: 700; color: #1F514C; margin-bottom: 12px; }
+.section p { font-size: 14px; color: #4b5563; line-height: 1.7; }
+
+.rwgps-placeholder {
+  width: 100%; height: 300px; background: #F3F4F6; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  color: #999; font-size: 14px; border: 2px dashed #DDD; margin-bottom: 32px; gap: 8px;
+}
+.rwgps-placeholder .icon { font-size: 32px; }
+
+.communities { font-size: 14px; color: #636363; margin-bottom: 32px; }
+.communities strong { color: #1F514C; }
+
+.cta-card {
+  background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px;
+  padding: 24px 28px; display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; margin-bottom: 16px;
+}
+.cta-card h4 { font-size: 16px; font-weight: 700; color: #1F514C; }
+.cta-card p { font-size: 13px; color: #636363; margin-top: 4px; }
+.cta-link {
+  display: inline-block; padding: 10px 20px; background: #1E7D96; color: white;
+  border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600;
+  white-space: nowrap;
+}
+.cta-link:hover { background: #176a80; }
+
+.footer { text-align: center; margin-top: 48px; font-size: 11px; color: #999; line-height: 1.8; }
 .footer .org { font-weight: 600; color: #636363; }
 
 @media (max-width: 700px) {
   .demo-banner { padding: 8px 16px; font-size: 12px; }
   .site-header { padding: 16px 20px; }
   .main { padding: 20px 14px 40px; }
-  .route-card { padding: 20px; }
-  .route-top { flex-direction: column; gap: 4px; }
-  .route-name { font-size: 18px; }
+  .route-hero h2 { font-size: 24px; }
+  .rwgps-placeholder { height: 200px; }
+  .cta-card { flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
@@ -76,159 +85,58 @@ body {
     <div class="header-text">
       <h1>Routes</h1>
       <div class="tagline">BC Cycle Tourism Society</div>
-      <a href="preview.html">← Back to directory</a>
+      <a href="routes.html">&larr; All routes</a>
     </div>
   </div>
 </div>
 
 <div class="main">
 
-<div class="page-intro">
-  <h2>Explore BC by bike</h2>
-  <p>Ten routes across British Columbia — from easy rail trails to ambitious bikepacking loops. Each links to the businesses, services, and attractions along the way.</p>
-</div>
-
-<a class="route-card" href="route-okanagan-rail-trail.html">
-  <div class="route-top">
-    <div>
-      <div class="route-name">Okanagan Rail Trail</div>
-      <div class="route-region">Okanagan — Coldstream to Kelowna</div>
-    </div>
-  </div>
-  <div class="route-desc">A smooth, flat rail trail through orchards and vineyards along the shore of Kalamalka and Wood Lakes. Family-friendly, well-serviced, and close to Vernon and Kelowna. The gateway ride for the Okanagan.</div>
+<div class="route-hero">
+  <h2>Okanagan Rail Trail</h2>
+  <div class="region">Okanagan — Coldstream to Kelowna</div>
   <div class="route-meta">
     <span class="meta-tag meta-distance">~55 km</span>
     <span class="meta-tag meta-surface">Paved / crushed gravel</span>
     <span class="meta-tag meta-difficulty-easy">Easy</span>
   </div>
-</a>
-<a class="route-card" href="route-kvr-myra-canyon.html">
-  <div class="route-top">
-    <div>
-      <div class="route-name">KVR Myra Canyon</div>
-      <div class="route-region">Okanagan — Penticton to Myra Canyon trestles</div>
-    </div>
-  </div>
-  <div class="route-desc">The iconic Kettle Valley Rail Trail climb from Penticton through wine-country Naramata to the historic Myra Canyon trestles. Steady uphill, stunning views, unforgettable bridges. The ride people come to BC for.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-distance">~60 km one-way</span>
-    <span class="meta-tag meta-surface">Packed gravel / rail grade</span>
-    <span class="meta-tag meta-difficulty-moderate">Moderate</span>
-  </div>
-</a>
-<a class="route-card" href="route-sea-to-sky-trail.html">
-  <div class="route-top">
-    <div>
-      <div class="route-name">Sea to Sky Trail</div>
-      <div class="route-region">Sea to Sky — Squamish to Whistler</div>
-    </div>
-  </div>
-  <div class="route-desc">A rugged bikepacking corridor through the Coast Mountains. Mostly unpaved singletrack and forest road, with river crossings and big elevation. Squamish and Whistler bookend the wild middle.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-distance">~105 km</span>
-    <span class="meta-tag meta-surface">Singletrack / forest road</span>
-    <span class="meta-tag meta-difficulty-ambitious">Ambitious</span>
-  </div>
-</a>
-<a class="route-card" href="route-frog-peak-loop.html">
-  <div class="route-top">
-    <div>
-      <div class="route-name">Frog Peak Loop</div>
-      <div class="route-region">West Kootenay — Nelson and Slocan Valley</div>
-    </div>
-  </div>
-  <div class="route-desc">A beginner-friendly bikepacking loop through the Slocan Valley, over the Bonnington and Pulpit ridge climbs, and back to Nelson. Riverside cafés, hot springs nearby, and the best small-town vibes in BC.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-distance">~106 km</span>
-    <span class="meta-tag meta-surface">Gravel / forest road / pavement</span>
-    <span class="meta-tag meta-difficulty-ambitious">Ambitious (gateway)</span>
-  </div>
-</a>
-<a class="route-card" href="route-north-star-chief-isadore.html">
-  <div class="route-top">
-    <div>
-      <div class="route-name">North Star + Chief Isadore Trail</div>
-      <div class="route-region">East Kootenay — Cranbrook to Kimberley</div>
-    </div>
-  </div>
-  <div class="route-desc">A relaxed rail trail through the Rocky Mountain Trench. Flat, wide, well-maintained, with mountain views the whole way. Cranbrook and Kimberley have everything you need at each end.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-distance">~72 km</span>
-    <span class="meta-tag meta-surface">Crushed gravel / packed earth</span>
-    <span class="meta-tag meta-difficulty-easy">Easy</span>
-  </div>
-</a>
-<a class="route-card" href="route-lac-du-bois-tranquility.html">
-  <div class="route-top">
-    <div>
-      <div class="route-name">Lac Du Bois Tranquility</div>
-      <div class="route-region">Thompson — Kamloops grasslands</div>
-    </div>
-  </div>
-  <div class="route-desc">A gravel bikepacking loop through BC's grasslands above Kamloops. Rolling sagebrush hills, big sky, and almost nobody else. Starts and ends in Kamloops — the city is your base camp.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-distance">~80 km (estimated)</span>
-    <span class="meta-tag meta-surface">Gravel / dirt / ranch road</span>
-    <span class="meta-tag meta-difficulty-ambitious">Ambitious</span>
-  </div>
-</a>
-<a class="route-card" href="route-seymour-valley-lonsdale-brew-loop.html">
-  <div class="route-top">
-    <div>
-      <div class="route-name">Seymour Valley + Lonsdale Brew Loop</div>
-      <div class="route-region">North Vancouver — urban to wilderness</div>
-    </div>
-  </div>
-  <div class="route-desc">SeaBus from downtown Vancouver to Lonsdale Quay, then ride the LSCR Trailway through eastern North Van breweries into the Seymour Valley conservation reserve. Urban start, wilderness middle, beers at the end.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-distance">~35 km loop</span>
-    <span class="meta-tag meta-surface">Paved / gravel</span>
-    <span class="meta-tag meta-difficulty-moderate">Easy/Moderate</span>
-  </div>
-</a>
-<a class="route-card" href="route-chilliwack-loops.html">
-  <div class="route-top">
-    <div>
-      <div class="route-name">Chilliwack Loops</div>
-      <div class="route-region">Fraser Valley — Vedder River and Canyon to Coast</div>
-    </div>
-  </div>
-  <div class="route-desc">Two easy loops bundled together: the Vedder Rotary Loop along the river, and the Chilliwack section of Canyon to Coast. Farm roads, craft breweries, lavender fields, and riverside trails close to Vancouver.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-distance">~40 km combined</span>
-    <span class="meta-tag meta-surface">Paved / packed gravel</span>
-    <span class="meta-tag meta-difficulty-easy">Easy</span>
-  </div>
-</a>
-<a class="route-card" href="route-tofino-ucluelet.html">
-  <div class="route-top">
-    <div>
-      <div class="route-name">Tofino–Ucluelet</div>
-      <div class="route-region">Pacific Rim — west coast Vancouver Island</div>
-    </div>
-  </div>
-  <div class="route-desc">A paved corridor through Pacific Rim National Park connecting Tofino and Ucluelet. Rainforest, Long Beach, surf culture. Easy riding with ocean views. Passes through Tla-o-qui-aht and Ucluelet First Nation communities.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-distance">~40 km</span>
-    <span class="meta-tag meta-surface">Paved</span>
-    <span class="meta-tag meta-difficulty-easy">Easy</span>
-  </div>
-</a>
-<a class="route-card" href="route-vancouver-crossing-loop.html">
-  <div class="route-top">
-    <div>
-      <div class="route-name">Vancouver Crossing Loop</div>
-      <div class="route-region">Multi-region — Vancouver, Sunshine Coast, Vancouver Island</div>
-    </div>
-  </div>
-  <div class="route-desc">A multi-day, multi-ferry adventure loop: Vancouver to Nanaimo by ferry, down the island through Cowichan Valley and Victoria, ferry to Tsawwassen, back to Vancouver. Stanley Park, Gulf Islands, Goldstream — the best of the south coast in one ride.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-distance">~360 km</span>
-    <span class="meta-tag meta-surface">Mixed — paved / trail / gravel</span>
-    <span class="meta-tag meta-difficulty-moderate">Moderate (multi-day)</span>
-  </div>
-</a>
+</div>
 
+<div class="route-desc">The Okanagan Rail Trail follows the former CN rail corridor from Coldstream (just east of Vernon) south through Oyama and Lake Country to the north end of Kelowna. The surface is mostly packed crushed gravel with some paved sections near town centres. The grade is gentle — rail grade never exceeds 2% — making it accessible to families, e-bikes, and casual riders.<br><br><br><br>The trail passes through some of the Okanagan's best orchard and vineyard country, with Kalamalka Lake's famous turquoise water visible for much of the ride. Oyama is the midpoint and the best place to resupply.</div>
+
+<div class="rwgps-placeholder">
+  <div class="icon">🗺️</div>
+  <div>Interactive route map coming soon</div>
+  <div style="font-size:12px;">RideWithGPS embed will go here</div>
+</div>
+
+<div class="communities"><strong>Communities along the route:</strong> Coldstream, Vernon, Oyama, Lake Country (Winfield), Kelowna</div>
+
+<div class="section">
+  <h3>Getting there</h3>
+  <p>Vernon: BC Transit from Kelowna or drive to the Coldstream trailhead (Kal Lake Rd parking). Kelowna: start from the Kelowna end at Rail Trail Park off Hwy 97.</p>
+</div>
+
+<div class="section">
+  <h3>Getting away</h3>
+  <p>Reverse the ride, or arrange a shuttle. The trail is an out-and-back unless you loop on Highway 97 (not recommended — busy road).</p>
+</div>
+
+<div class="cta-card">
+  <div>
+    <h4>Businesses and services on this route</h4>
+    <p>Accommodation, food, bike shops, transport, and more along the Okanagan Rail Trail.</p>
+  </div>
+  <a class="cta-link" href="preview.html#view=route&route=Okanagan%20Rail%20Trail">View listings &rarr;</a>
+</div>
+
+<div class="cta-card">
+  <div>
+    <h4>Know a business that should be listed?</h4>
+    <p>Help us build the directory for this route.</p>
+  </div>
+  <a class="cta-link" href="#" style="background:#4A3C31;">Suggest a listing &rarr;</a>
+</div>
 
 </div>
 
