@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>We Welcome Cyclists — BC By Bike</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:host, :root { display: block !important; width: 100% !important; }
+body { display: block !important; }
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 15px; line-height: 1.6; color: #141414; background: #FAFAFA; min-height: 100vh;
+}
+
+.site-header { background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 20px 40px; }
+.header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 18px; }
+.logo { width: 56px; height: 56px; flex-shrink: 0; }
+.header-text h1 { font-size: 24px; font-weight: 700; color: #1F514C; letter-spacing: -0.3px; }
+.header-text .tagline { font-size: 13px; color: #636363; margin-top: 2px; }
+
+.badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.2px; white-space: nowrap; }
+.badge-accredited { background: #2E8A36; color: white; }
+.badge-listed { background: #E5E7EB; color: #636363; }
+.badge-sector { background: #4A3C31; color: white; }
+.badge-industry { background: #1E7D96; color: white; }
+
+.main { max-width: 1100px; margin: 0 auto; padding: 28px 28px 48px; }
+
+.category-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.cat-btn { padding: 9px 16px; border: 1.5px solid #DDD; background: white; border-radius: 8px; font-size: 14px; color: #636363; cursor: pointer; transition: all 0.14s; white-space: nowrap; }
+.cat-btn.active { border-color: #1E7D96; background: #1E7D96; color: white; font-weight: 600; }
+.cat-btn:hover:not(.active) { border-color: #999; background: #F9FAFB; }
+
+.card { background: #FFFFFF; border-radius: 12px; border: 1px solid #E5E7EB; }
+.card + .card { margin-top: 20px; }
+
+.cat-header { padding: 32px 36px 24px; border-bottom: 1px solid #EEE; }
+.cat-header h2 { font-size: 24px; font-weight: 700; color: #1F514C; margin-bottom: 6px; }
+.cat-header p { color: #636363; font-size: 14px; max-width: 700px; }
+
+.two-col { display: grid; grid-template-columns: 40% 60%; }
+@media (max-width: 700px) {
+  .two-col { grid-template-columns: 1fr; }
+  .col-right { border-left: none !important; border-top: 1px solid #EEE; }
+  .demo-banner { padding: 8px 16px; font-size: 12px; }
+  .site-header { padding: 16px 20px; }
+  .header-text h1 { font-size: 20px; }
+  .main { padding: 20px 14px 40px; }
+  .view-toggle { width: 100%; }
+  .view-toggle button { flex: 1; padding: 9px 10px; font-size: 13px; }
+  .cat-header { padding: 24px 20px 18px; }
+  .cat-header h2 { font-size: 20px; }
+  .col-left, .col-right { padding: 20px; }
+  .examples-toolbar { padding: 16px 20px 12px; flex-direction: column; align-items: flex-start; }
+  .examples-toolbar .legend { gap: 8px; }
+  .filter-bar { padding: 14px 20px; }
+  .search-input { width: 100%; }
+  .filter-pills-row { max-height: 80px; overflow-y: auto; }
+  .listings-body { padding: 16px 20px 24px; }
+  .listing-card { padding: 18px 18px; }
+  .listing-top { flex-direction: column; gap: 8px; }
+  .listing-badges { align-self: flex-start; }
+  .route-header { padding: 20px; }
+  .route-cat-group { padding: 16px 20px; }
+  .modal { max-height: 95vh; border-radius: 10px; }
+  .modal-header { padding: 18px 20px 12px; }
+  .modal-title { font-size: 18px; }
+  .modal-body { padding: 16px 20px 24px; }
+  .modal-detail-grid { grid-template-columns: 1fr; }
+  .modal-logo-photo { flex-direction: column; }
+}
+.col-left { padding: 28px 32px 32px; background: #F8FBF9; }
+.col-right { padding: 28px 32px 32px; border-left: 1px solid #EEE; }
+
+.section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #1E7D96; margin-bottom: 16px; }
+.section-label .count { color: #999; font-weight: 600; }
+
+.required-list { list-style: none; }
+.required-item { display: flex; align-items: baseline; gap: 8px; padding: 8px 0; font-size: 14px; color: #141414; }
+.req-check { color: #6EC040; font-size: 15px; font-weight: 700; flex-shrink: 0; line-height: 1; }
+.req-title { font-weight: 500; font-size: 14px; }
+
+.tooltip-wrap { position: relative; display: inline-block; border-bottom: 1px dotted #CCC; cursor: help; }
+.tooltip-wrap .tooltip-text { visibility: hidden; opacity: 0; position: fixed; background: #1F514C; color: #FFF; font-size: 12px; font-weight: 400; padding: 10px 14px; border-radius: 8px; line-height: 1.5; width: 320px; max-width: 90vw; z-index: 1000; transition: opacity 0.15s; pointer-events: none; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+.tooltip-wrap:hover .tooltip-text { visibility: visible; opacity: 1; }
+
+.optional-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.opt-pill { display: inline-block; padding: 5px 11px; background: #F5F5F5; color: #4b5563; border: 1px solid #E5E7EB; border-radius: 16px; font-size: 12px; font-weight: 500; white-space: nowrap; }
+
+.examples-toolbar { padding: 20px 36px 16px; border-bottom: 1px solid #EEE; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.examples-toolbar h3 { font-size: 18px; font-weight: 700; color: #1F514C; }
+.examples-toolbar .legend { display: flex; gap: 12px; align-items: center; font-size: 12px; color: #636363; flex-wrap: wrap; }
+.examples-toolbar .legend .badge { font-size: 11px; padding: 3px 10px; }
+
+.filter-bar { padding: 16px 36px; border-bottom: 1px solid #EEE; background: #FAFAFA; }
+.filter-bar-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+.filter-bar-top label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #999; flex-shrink: 0; }
+.search-input { padding: 6px 12px; border: 1px solid #DDD; border-radius: 6px; font-size: 13px; color: #141414; background: white; width: 240px; max-width: 100%; }
+.search-input::placeholder { color: #BBB; }
+.filter-pills-row { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+.filter-pill { display: inline-block; padding: 4px 10px; background: #F5F9FB; color: #4A9BB0; border: 1px solid #D6EDF3; border-radius: 14px; font-size: 11px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.12s; }
+.filter-pill:hover { background: #E4F2F7; }
+.filter-pill.active { background: #1E7D96; color: white; border-color: #1E7D96; }
+.clear-filters { font-size: 11px; color: #1E7D96; cursor: pointer; text-decoration: underline; flex-shrink: 0; margin-left: 4px; }
+.results-count { font-size: 12px; color: #999; padding: 12px 36px 0; }
+
+.listings-body { padding: 20px 36px 32px; }
+
+.listing-card { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 10px; padding: 22px 26px; margin-bottom: 16px; cursor: pointer; transition: box-shadow 0.15s; }
+.listing-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.listing-card:last-of-type { margin-bottom: 0; }
+.listing-card.is-accredited { border-left: 4px solid #6EC040; }
+.listing-card.is-listed { border-left: 4px solid #DDD; }
+.listing-card.is-sector { border-left: 4px solid #4A3C31; }
+.listing-card.is-industry { border-left: 4px solid #1E7D96; }
+
+.listing-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 8px; }
+.listing-badges { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; }
+.listing-name { font-size: 17px; font-weight: 700; color: #141414; }
+.listing-location { font-size: 13px; color: #636363; margin-top: 3px; }
+.listing-desc { font-size: 13px; color: #636363; margin-bottom: 16px; line-height: 1.55; max-width: 700px; }
+.listing-network { font-size: 11px; color: #4A3C31; font-weight: 600; margin-top: 4px; }
+
+.amenities-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #BBB; margin-bottom: 8px; }
+.amenity-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+.pill { padding: 4px 10px; border-radius: 14px; font-size: 11.5px; font-weight: 500; white-space: nowrap; }
+.pill-yes { background: #E8F5E9; color: #2E8A36; border: 1px solid #C8E6C9; cursor: pointer; transition: background 0.12s; }
+.pill-yes:hover { background: #D0EED2; }
+.pill-yes .note-star { color: #1E7D96; font-weight: 800; font-size: 14px; }
+.pill-no { background: #FAFAFA; color: #D1D5DB; border: 1px solid #F3F4F6; text-decoration: line-through; }
+
+.no-results { text-align: center; padding: 40px 20px; color: #999; font-size: 14px; }
+.no-results a { color: #1E7D96; cursor: pointer; text-decoration: underline; }
+
+/* ---- MODAL ---- */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; visibility: hidden; transition: opacity 0.2s; }
+.modal-overlay.open { opacity: 1; visibility: visible; }
+.modal { background: white; border-radius: 14px; width: 100%; max-width: 680px; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
+.modal-header { padding: 24px 28px 16px; border-bottom: 1px solid #EEE; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.modal-header-left { flex: 1; }
+.modal-title { font-size: 22px; font-weight: 700; color: #141414; }
+.modal-location { font-size: 14px; color: #636363; margin-top: 4px; }
+.modal-network { font-size: 12px; color: #4A3C31; font-weight: 600; margin-top: 6px; }
+.modal-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.modal-close { width: 32px; height: 32px; border: none; background: #F3F4F6; border-radius: 50%; font-size: 18px; color: #636363; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.modal-close:hover { background: #E5E7EB; }
+.modal-body { padding: 20px 28px 28px; }
+.modal-section { margin-bottom: 24px; }
+.modal-section:last-child { margin-bottom: 0; }
+.modal-section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 10px; }
+.modal-desc { font-size: 14px; color: #4b5563; line-height: 1.6; }
+.modal-photo { width: 100%; height: 160px; background: #F3F4F6; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #BBB; font-size: 13px; border: 2px dashed #DDD; }
+.modal-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 500px) { .modal-detail-grid { grid-template-columns: 1fr; } }
+.modal-detail-item { font-size: 13px; }
+.modal-detail-item .label { font-weight: 600; color: #999; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+.modal-detail-item .value { color: #141414; margin-top: 2px; }
+.modal-detail-item a { color: #1E7D96; text-decoration: none; }
+.modal-detail-item a:hover { text-decoration: underline; }
+.modal-routes { display: flex; flex-direction: column; gap: 8px; }
+.route-tag { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: 8px; font-size: 13px; color: #1E7D96; font-weight: 500; }
+.route-tag .coming { font-size: 11px; color: #999; font-weight: 400; margin-left: auto; }
+.modal-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+.modal-pill-yes { padding: 5px 12px; border-radius: 14px; font-size: 12px; font-weight: 500; background: #E8F5E9; color: #2E8A36; border: 1px solid #C8E6C9; }
+.modal-pill-yes .note-star { color: #1E7D96; font-weight: 800; font-size: 14px; }
+.modal-pill-no { padding: 5px 12px; border-radius: 14px; font-size: 12px; font-weight: 500; background: #FAFAFA; color: #D1D5DB; border: 1px solid #F3F4F6; text-decoration: line-through; }
+.click-hint { font-size: 11px; color: #BBB; text-align: center; padding: 8px 36px 20px; font-style: italic; }
+
+.demo-tag { font-size: 11px; font-style: italic; color: #BBB; font-weight: 400; margin-left: 6px; }
+
+.criteria-toggle { padding: 14px 36px; cursor: pointer; user-select: none; font-size: 14px; color: #1E7D96; border-top: 1px solid #EEE; }
+.criteria-toggle:hover { background: #F5F9FB; }
+.criteria-toggle .arrow { display: inline-block; transition: transform 0.2s; font-size: 20px; margin-right: 6px; }
+.criteria-toggle .arrow.open { transform: rotate(90deg); }
+.criteria-body { display: none; border-top: 1px solid #EEE; }
+.criteria-body.open { display: block; }
+.listing-card.is-demo { opacity: 0.75; }
+.listing-card.is-demo:hover { opacity: 1; }
+
+.demo-toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #636363; cursor: pointer; user-select: none; }
+.demo-toggle input { width: 16px; height: 16px; accent-color: #1E7D96; cursor: pointer; }
+
+.modal-notes { margin-top: 14px; display: flex; flex-direction: column; gap: 4px; }
+.modal-note-item { font-size: 12px; color: #4b5563; line-height: 1.4; padding: 6px 10px; background: #F5F9FB; border-left: 3px solid #1E7D96; border-radius: 0 6px 6px 0; }
+.modal-note-item strong { color: #1E7D96; font-weight: 600; }
+
+.verify-banner { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #92400E; line-height: 1.5; margin-bottom: 20px; }
+.verify-banner a { color: #92400E; font-weight: 600; text-decoration: underline; cursor: pointer; }
+.verified-banner { background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #15803D; line-height: 1.5; margin-bottom: 20px; }
+
+.legend-badge-wrap { position: relative; display: inline-flex; cursor: pointer; }
+.legend-badge-wrap .legend-tip { visibility: hidden; opacity: 0; position: absolute; left: 50%; transform: translateX(-50%); top: 100%; margin-top: 8px; background: #1F514C; color: #FFF; font-size: 12px; font-weight: 400; padding: 10px 14px; border-radius: 8px; line-height: 1.5; width: 260px; z-index: 1000; transition: opacity 0.15s; pointer-events: none; box-shadow: 0 4px 16px rgba(0,0,0,0.2); text-align: left; }
+.legend-badge-wrap:hover .legend-tip { visibility: visible; opacity: 1; }
+
+.listing-logo { width: 40px; height: 40px; border-radius: 6px; background: #F3F4F6; border: 1px solid #E5E7EB; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #999; flex-shrink: 0; text-align: center; line-height: 1.1; }
+.listing-name-row { display: flex; align-items: center; gap: 12px; }
+
+.modal-logo-photo { display: flex; gap: 16px; align-items: flex-start; }
+.modal-logo-box { width: 80px; height: 80px; border-radius: 10px; background: #F3F4F6; border: 2px dashed #DDD; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #999; text-align: center; flex-shrink: 0; }
+.modal-photo-main { flex: 1; }
+
+.view-toggle { display: flex; border: 1.5px solid #1E7D96; border-radius: 8px; overflow: hidden; margin-bottom: 24px; width: fit-content; }
+.view-toggle button { padding: 9px 22px; border: none; background: white; color: #1E7D96; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.14s; }
+.view-toggle button:not(:last-child) { border-right: 1.5px solid #1E7D96; }
+.view-toggle button.active { background: #1E7D96; color: white; font-weight: 600; }
+
+.route-selector { margin-bottom: 24px; }
+.route-select { padding: 10px 16px; border: 1.5px solid #DDD; border-radius: 8px; font-size: 14px; color: #141414; background: white; width: 100%; max-width: 400px; cursor: pointer; }
+.route-select:focus { border-color: #1E7D96; outline: none; }
+
+.route-header { padding: 28px 36px; border-bottom: 1px solid #EEE; }
+.route-header h2 { font-size: 22px; font-weight: 700; color: #1F514C; margin-bottom: 4px; }
+.route-header p { font-size: 14px; color: #636363; }
+
+.route-cat-group { padding: 20px 36px; }
+.route-cat-group:not(:last-child) { border-bottom: 1px solid #F3F4F6; }
+.route-cat-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #1E7D96; margin-bottom: 14px; }
+
+.cat-tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; background: #F0F7FA; color: #1E7D96; border: 1px solid #D6EDF3; margin-left: 8px; vertical-align: middle; }
+
+.demo-banner { background: #F5F0E8; border-bottom: 1px solid #E8DFD0; padding: 10px 40px; font-size: 13px; color: #4A3C31; text-align: center; }
+.demo-banner strong { font-weight: 700; }
+
+.footer { text-align: center; margin-top: 32px; font-size: 11px; color: #999; line-height: 1.8; }
+.footer .org { font-weight: 600; color: #636363; }
+</style>
+</head>
+<body>
+
+<div id="wwc-root" style="display:block!important;width:100%!important;max-width:100%!important;flex-direction:column!important;">
+<div class="demo-banner"><strong>PRE-LAUNCH PREVIEW</strong> — This site is still in development. Contact us if you have questions or ideas!</div>
+<div class="site-header">
+  <div class="header-inner">
+    <img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDcuNzggOTA3Ljc4Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzU5NTk1OTt9LmNscy0ye2ZpbGw6IzMwMzAzMDt9LmNscy0ze2ZpbGw6IzExMTt9LmNscy00e2ZpbGw6IzhjOGM4Yzt9LmNscy01e2ZpbGw6IzZlNmU2ZTt9LmNscy02e2ZpbGw6I2I4ZTBlYzt9LmNscy03e2ZpbGw6IzNhOWVjMDt9LmNscy04e2ZpbGw6IzJlOGEzNjt9LmNscy05e2ZpbGw6IzZlYzA0MDt9LmNscy0xMHtmaWxsOiMxZTdkOTY7fS5jbHMtMTF7ZmlsbDojMGQ0MDcwO30uY2xzLTEye29wYWNpdHk6MC41Mzt9LmNscy0xM3tmaWxsOiNmZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5pY29uPC90aXRsZT48Y2lyY2xlIGNsYXNzPSJjbHMtMSIgY3g9IjQ1My44OSIgY3k9IjQ1My44OSIgcj0iNDUzLjg5Ii8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNNTEwLDExNS40NGMtMS43OSwwLTMuNTksMC01LjM4LDBzLTMuNiwwLTUuMzgsMGMtMjE0Ljc3LDIuODgtMzg4LDE3Ny44Ni0zODgsMzkzLjMxLDAsMjE3LjI0LDE3Ni4xLDM5My4zNSwzOTMuMzUsMzkzLjM1Uzg5Ny45Myw3MjYsODk3LjkzLDUwOC43NUM4OTcuOTMsMjkzLjMsNzI0LjcyLDExOC4zMiw1MTAsMTE1LjQ0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik01MDQuNTksODc3LjljLTIwMy44OSwwLTM2OS4xNi0xNjUuMjctMzY5LjE2LTM2OS4xNSwwLTIwMi4wOCwxNjIuMzgtMzY2LjI0LDM2My43OC0zNjkuMTIsMS43OCwwLDMuNTgsMCw1LjM4LDBzMy41OSwwLDUuMzgsMGMyMDEuMzksMi44OCwzNjMuNzYsMTY3LDM2My43NiwzNjkuMTJDODczLjczLDcxMi42Myw3MDguNDYsODc3LjksNTA0LjU5LDg3Ny45WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik01MDQuNTksODcyLjgzYy0yMDEuMDksMC0zNjQuMDktMTYzLTM2NC4wOS0zNjQuMDgsMC0xOTkuMzEsMTYwLjE0LTM2MS4yMSwzNTguNzgtMzY0LDEuNzYsMCwzLjUzLDAsNS4zMSwwczMuNTQsMCw1LjMsMGMxOTguNjMsMi44NCwzNTguNzgsMTY0Ljc0LDM1OC43OCwzNjQuMDVDODY4LjY3LDcwOS44Myw3MDUuNjYsODcyLjgzLDUwNC41OSw4NzIuODNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtNSIgZD0iTTUwNC41OSw4NjljLTE5OSwwLTM2MC4yOS0xNjEuMy0zNjAuMjktMzYwLjI4LDAtMTk3LjIzLDE1OC40Ny0zNTcuNDQsMzU1LTM2MC4yNSwxLjc0LDAsMy40OSwwLDUuMjUsMHMzLjUsMCw1LjI1LDBjMTk2LjU1LDIuODEsMzU1LDE2MywzNTUsMzYwLjI1Qzg2NC44Nyw3MDcuNzMsNzAzLjU2LDg2OSw1MDQuNTksODY5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTYiIGQ9Ik03NTcsMjk4Yy0xMTQuNSw0NS41Ny0yMTEuNjMsMTcuNDMtMjExLjYzLDE3LjQzLTE0NC4yOC00Ny44OC0yNTMuOC0yMi4yNC0zMDMuNjYtNC4yMkMzMDAuOCwyMzIuNjYsMzk0LjI5LDE4MS40Niw0OTkuNzksMTgwbDQuOCwwYzEuNTksMCwzLjIsMCw0Ljc5LDBBMzI4LjEyLDMyOC4xMiwwLDAsMSw3NTcsMjk4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTciIGQ9Ik03OTYuNjIsMzU3LjQ4Yy01Mi40OCwxLjkxLTkzLjIsMzAuMTktOTMuMiwzMC4xOS04MC4zMywzOS40NS0xNDguNTUsNDAtMTg3LjQ1LDM1LjE5YTE4Ny41OSwxODcuNTksMCwwLDEtNDcuNDMtMTIuNmMtMTMwLjY2LTUzLjA5LTIzNi0xMi42Ni0yODEuMSwxMS4zMmEzMjcuMzcsMzI3LjM3LDAsMCwxLDU0LjI1LTExMC4zOWM0OS44Ni0xOCwxNTkuMzgtNDMuNjYsMzAzLjY2LDQuMjIsMCwwLDk3LjEzLDI4LjE0LDIxMS42My0xNy40M0EzMjguOCwzMjguOCwwLDAsMSw3OTYuNjIsMzU3LjQ4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTgiIGQ9Ik04MjkuNzksNDU5Ljg0Yy00OC0xNi05NS40LDQuNTctMTEwLjU1LDEyLjI5QTE2MiwxNjIsMCwwLDEsNzAzLDQ3OS4zNGMtMTExLjYzLDQyLjUyLTIxOC4yLDE2LjczLTIxOC4yLDE2LjczLTE0NC43Ny00NC4yNi0yNzAuNTUuNTYtMzA5LDE3cTAtMi4xNiwwLTQuMzVhMzI4Ljk0LDMyOC45NCwwLDAsMSwxMS42OC04Ny4xN2M0NS4xMS0yNCwxNTAuNDQtNjQuNDEsMjgxLjEtMTEuMzJBMTg3LjU5LDE4Ny41OSwwLDAsMCw1MTYsNDIyLjg2YzM4LjksNC43OSwxMDcuMTIsNC4yNiwxODcuNDUtMzUuMTksMCwwLDQwLjcyLTI4LjI4LDkzLjItMzAuMTlBMzI2LjMsMzI2LjMsMCwwLDEsODI5Ljc5LDQ1OS44NFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy05IiBkPSJNODMzLjQxLDUwOC43NUEzMzAsMzMwLDAsMCwxLDgyNC43NSw1ODRjLTkyLDI0LjUyLTI0NS41NywxOC4xNi0yODkuMiwxNS43MmEyMDYsMjA2LDAsMCwxLTIxLjE3LTIuM2MtMTIxLjM0LTE5LjM4LTI3Ni43Mi43OC0zMjQuMiw3Ljg4YTMyOC4wOSwzMjguMDksMCwwLDEtMTQuMzktOTIuMjRjMzguNDgtMTYuNDcsMTY0LjI2LTYxLjI5LDMwOS0xNywwLDAsMTA2LjU3LDI1Ljc5LDIxOC4yLTE2LjczYTE2MiwxNjIsMCwwLDAsMTYuMjItNy4yMWMxNS4xNS03LjcyLDYyLjUxLTI4LjMsMTEwLjU1LTEyLjI5QTMzMC4wOCwzMzAuMDgsMCwwLDEsODMzLjQxLDUwOC43NVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMCIgZD0iTTgyNC43NSw1ODRhMzI3LjUsMzI3LjUsMCwwLDEtNTksMTI0LjU4Yy0zMi41Miw1LjE2LTcyLDcuNjItMTA4LjA1LDguNzFhMTIzNC42LDEyMzQuNiwwLDAsMS0xNDYuNDYtNC42NmMtMTA1LjYzLTkuMzktMjE4LjI5LTEuMjEtMjYyLjM1LDIuNzlhMzI3LjQyLDMyNy40MiwwLDAsMS01OC42OC0xMTAuMTJjNDcuNDgtNy4xLDIwMi44Ni0yNy4yNiwzMjQuMi03Ljg4YTIwNiwyMDYsMCwwLDAsMjEuMTcsMi4zQzU3OS4xOCw2MDIuMiw3MzIuNzYsNjA4LjU2LDgyNC43NSw1ODRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTEiIGQ9Ik03NjUuNzIsNzA4LjYyYy02MC4xMSw3OC40MS0xNTQuNzIsMTI5LTI2MS4xMywxMjlBMzI4LjE2LDMyOC4xNiwwLDAsMSwyNDguODYsNzE1LjQ2YzQ0LjA2LTQsMTU2LjcyLTEyLjE4LDI2Mi4zNS0yLjc5YTEyMzQuNiwxMjM0LjYsMCwwLDAsMTQ2LjQ2LDQuNjZDNjkzLjc0LDcxNi4yNCw3MzMuMiw3MTMuNzgsNzY1LjcyLDcwOC42MloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMjc3Ljc2LDE4Ny40LDI5MiwyMDdxLTIuMTksMS41NC00LjM4LDMuMTRjLTEuNDUsMS4wNS0yLjksMi4xMi00LjMzLDMuMTlsLTE0LjIyLTE5LjU3YzEuNDMtMS4wNywyLjg4LTIuMTQsNC4zNC0zLjE5UzI3Ni4zLDE4OC40MiwyNzcuNzYsMTg3LjRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE4OS41NiwyNzMuMjJsMTkuNTcsMTQuMjFjLTEuMDgsMS40My0yLjE0LDIuODgtMy4yLDQuMzRzLTIuMSwyLjkxLTMuMTMsNC4zN2wtMTkuNTctMTQuMjJjMS0xLjQ2LDIuMDgtMi45MiwzLjEzLTQuMzdTMTg4LjQ4LDI3NC42NSwxODkuNTYsMjczLjIyWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMzIuMTksMzgyLjA5bDIzLDcuNDhxLS44NywyLjU0LTEuNyw1LjF0LTEuNjMsNS4xM2wtMjMtNy40N2MuNTItMS43MSwxLjA3LTMuNDIsMS42Mi01LjEzUzEzMS42MSwzODMuNzgsMTMyLjE5LDM4Mi4wOVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTExLjI4LDUwMy4zN2gyNC4xOWMwLDEuNzksMCwzLjU4LDAsNS4zOHMwLDMuNTksMCw1LjM4SDExMS4yOGMwLTEuNzksMC0zLjU5LDAtNS4zOFMxMTEuMjUsNTA1LjE2LDExMS4yOCw1MDMuMzdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEyOC44Nyw2MjUuMTdsMjMtNy40OHEuOCwyLjU2LDEuNjMsNS4xM2MuNTUsMS43MSwxLjEyLDMuNDIsMS43LDUuMTFsLTIzLDcuNDdjLS41OC0xLjY5LTEuMTQtMy4zOS0xLjctNS4xUzEyOS4zOSw2MjYuODgsMTI4Ljg3LDYyNS4xN1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNNTEwLDExNS40NHYyNC4xOWMtMS43OSwwLTMuNTksMC01LjM4LDBzLTMuNiwwLTUuMzgsMFYxMTUuNDRjMS43OCwwLDMuNTgsMCw1LjM4LDBTNTA4LjE4LDExNS40Miw1MTAsMTE1LjQ0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0zODguMTcsMTMzbDcuNDcsMjNjLTEuNzEuNTItMy40MiwxLjA3LTUuMTMsMS42MnMtMy40MSwxLjEyLTUuMSwxLjdsLTcuNDgtMjNjMS42OS0uNTgsMy40LTEuMTUsNS4xMS0xLjdTMzg2LjQ2LDEzMy41NiwzODguMTcsMTMzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xODMuMjMsNzM1LjU4bDE5LjU3LTE0LjIyYzEsMS40NiwyLjA4LDIuOTIsMy4xMyw0LjM3czIuMTIsMi45LDMuMTksNC4zM2wtMTkuNTcsMTQuMjJjLTEuMDctMS40My0yLjEzLTIuODgtMy4xOS00LjMzUzE4NC4yNiw3MzcsMTgzLjIzLDczNS41OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMjY5LjA1LDgyMy43OGwxNC4yMi0xOS41N2MxLjQzLDEuMDcsMi44OCwyLjEzLDQuMzMsMy4xOXMyLjkxLDIuMTEsNC4zNywzLjEzTDI3Ny43Niw4MzAuMXEtMi4yLTEuNTQtNC4zOC0zLjEzQzI3MS45Myw4MjUuOTEsMjcwLjQ4LDgyNC44NSwyNjkuMDUsODIzLjc4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0zNzcuOTMsODgxLjE0bDcuNDctMjNjMS42OS41OCwzLjQsMS4xNCw1LjExLDEuN3MzLjQyLDEuMSw1LjEzLDEuNjJsLTcuNDgsMjNxLTIuNTctLjc5LTUuMTMtMS42M1QzNzcuOTMsODgxLjE0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik00OTkuMiw5MDIuMDZWODc3Ljg3YzEuNzksMCwzLjU5LDAsNS4zOCwwczMuNiwwLDUuMzgsMHYyNC4xOWMtMS43OCwwLTMuNTgsMC01LjM4LDBTNTAxLDkwMi4wOCw0OTkuMiw5MDIuMDZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTYyMSw4ODQuNDdsLTcuNDctMjNjMS43MS0uNTIsMy40Mi0xLjA3LDUuMTMtMS42MnMzLjQxLTEuMTIsNS4xLTEuN2w3LjQ4LDIzYy0xLjY5LjU4LTMuNCwxLjE1LTUuMTEsMS43UzYyMi43MSw4ODMuOTQsNjIxLDg4NC40N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNNzMxLjQxLDgzMC4xMWwtMTQuMjItMTkuNTdxMi4xOS0xLjU0LDQuMzgtMy4xNGMxLjQ1LTEsMi45LTIuMTIsNC4zMy0zLjE5bDE0LjIxLDE5LjU3Yy0xLjQyLDEuMDctMi44NywyLjE0LTQuMzMsMy4xOVM3MzIuODcsODI5LjA4LDczMS40MSw4MzAuMTFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTgxOS42MSw3NDQuMjgsODAwLDczMC4wN2MxLjA4LTEuNDMsMi4xNC0yLjg4LDMuMTktNC4zM3MyLjExLTIuOTIsMy4xNC00LjM4bDE5LjU3LDE0LjIycS0xLjU1LDIuMTktMy4xNCw0LjM3QzgyMS43NSw3NDEuNDEsODIwLjY4LDc0Mi44NSw4MTkuNjEsNzQ0LjI4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik04NzcsNjM1LjQxbC0yMy03LjQ4Yy41OC0xLjY5LDEuMTQtMy4zOSwxLjctNS4xczEuMS0zLjQyLDEuNjMtNS4xM2wyMyw3LjQ3Yy0uNTIsMS43MS0xLjA3LDMuNDItMS42Myw1LjEzUzg3Ny41Niw2MzMuNzIsODc3LDYzNS40MVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNODk3Ljg5LDUxNC4xM0g4NzMuN2MwLTEuNzgsMC0zLjU4LDAtNS4zOHMwLTMuNTksMC01LjM4aDI0LjE5YzAsMS43OSwwLDMuNTksMCw1LjM4Uzg5Ny45Miw1MTIuMzUsODk3Ljg5LDUxNC4xM1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNODgwLjMsMzkyLjMzbC0yMyw3LjQ4cS0uNzktMi41Ni0xLjYzLTUuMTNjLS41NS0xLjcxLTEuMTItMy40Mi0xLjctNS4xMWwyMy03LjQ3Yy41OCwxLjY5LDEuMTQsMy4zOSwxLjcsNS4xUzg3OS43OCwzOTAuNjIsODgwLjMsMzkyLjMzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik04MjUuOTQsMjgxLjkzbC0xOS41NywxNC4yMWMtMS0xLjQ2LTIuMDgtMi45Mi0zLjEzLTQuMzdzLTIuMTItMi45LTMuMTktNC4zM2wxOS41Ni0xNC4yMmMxLjA4LDEuNDMsMi4xNCwyLjg4LDMuMiw0LjMzUzgyNC45MSwyODAuNDYsODI1Ljk0LDI4MS45M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNNzQwLjEyLDE5My43Miw3MjUuOSwyMTMuMjljLTEuNDMtMS4wNy0yLjg4LTIuMTMtNC4zMy0zLjE5cy0yLjkxLTIuMS00LjM4LTMuMTNsMTQuMjItMTkuNTdxMi4xOSwxLjU0LDQuMzgsMy4xM0M3MzcuMjQsMTkxLjU5LDczOC42OSwxOTIuNjUsNzQwLjEyLDE5My43MloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNNjMxLjI0LDEzNi4zNmwtNy40NywyM2MtMS42OS0uNTgtMy40LTEuMTQtNS4xMS0xLjdzLTMuNDItMS4xLTUuMTMtMS42Mkw2MjEsMTMzcTIuNTcuNzksNS4xMywxLjYzQzYyNy44NCwxMzUuMjIsNjI5LjU1LDEzNS43OCw2MzEuMjQsMTM2LjM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48ZyBjbGFzcz0iY2xzLTEyIj48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNMjc2Ljg3LDg0MS40MmExMi40MiwxMi40MiwwLDAsMSwxLDcuMjQsMTguMSwxOC4xLDAsMCwxLTMuMjcsNy42NiwxNy44MywxNy44MywwLDAsMS02LjEsNS42MywxMi41NywxMi41NywwLDAsMS03LjE0LDEuNDgsMTUsMTUsMCwwLDEtNy4yNi0yLjg0LDE2LjQ2LDE2LjQ2LDAsMCwxLTMuODItMy43MSwxMy40MywxMy40MywwLDAsMS0yLjE5LTQuNDgsMi4zMywyLjMzLDAsMCwxLS4xMS0xLjE3LDIuNiwyLjYsMCwwLDEsLjQ5LTEuMDUsMi4zOCwyLjM4LDAsMCwxLDEuMzEtMSwxLjU0LDEuNTQsMCwwLDEsMS4zOC4xOSwzLjA1LDMuMDUsMCwwLDEsMS4wNywxLjQ5LDEyLjc1LDEyLjc1LDAsMCwwLDEuNjksMy40OSwxMC41OSwxMC41OSwwLDAsMCwyLjU0LDIuNDRxMy42LDIuNTUsNywxLjZjMi4zLS42Myw0LjQ3LTIuNCw2LjUzLTUuMzFzMy01LjU5LDIuODQtOC0xLjQ3LTQuNDEtMy44Ny02LjExYTEwLjE3LDEwLjE3LDAsMCwwLTMuMDgtMS40OUExNi4xNSwxNi4xNSwwLDAsMCwyNjIsODM3YTUuNiw1LjYsMCwwLDEtLjk0LS4xNCwyLjM2LDIuMzYsMCwwLDEtLjgyLS4zOCwxLjQ4LDEuNDgsMCwwLDEtLjY0LTEuMjMsMi40MywyLjQzLDAsMCwxLC40OS0xLjU3LDIuODIsMi44MiwwLDAsMSwuODItLjgsMi40LDIuNCwwLDAsMSwxLjE1LS4zLDEzLjU5LDEzLjU5LDAsMCwxLDQuOTUuNTYsMTYuMjksMTYuMjksMCwwLDEsNC43NywyLjM1QTE1LDE1LDAsMCwxLDI3Ni44Nyw4NDEuNDJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik0yMDguMzcsODIzYTIuNDUsMi40NSwwLDAsMS0uOC0xLjcxLDIuMzcsMi4zNywwLDAsMSwuNjEtMS44MiwyLjUxLDIuNTEsMCwwLDEsMS41NS0uNzhsMTUtMi4zLDcuODUtOC43NGEyLjY1LDIuNjUsMCwwLDEsMS45My0xLDIuNzQsMi43NCwwLDAsMSwxLjkzLjc2LDIuOCwyLjgsMCwwLDEsMSwxLjg3LDIuNjYsMi42NiwwLDAsMS0uNzksMkwyMjguODEsODIwbC0uNjksMTUuMTdBMi41LDIuNSwwLDAsMSwyMjQsODM3YTIuMjksMi4yOSwwLDAsMS0uNzMtMS45MWwuNzMtMTMuODMtMTMuNjMsMi4yNEEyLjMsMi4zLDAsMCwxLDIwOC4zNyw4MjNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik0yMDYuMiw3NzkuNzlhMTIuMzksMTIuMzksMCwwLDEtLjcsNy4yNywxOS45MSwxOS45MSwwLDAsMS0xMi4xOCwxMC43OCwxMi4zOSwxMi4zOSwwLDAsMS03LjI5LS4yMSwxNC44NywxNC44NywwLDAsMS02LjQxLTQuNDMsMTYuMzksMTYuMzksMCwwLDEtMi44Ny00LjQ4LDEzLjgyLDEzLjgyLDAsMCwxLTEuMS00Ljg2LDIuNDQsMi40NCwwLDAsMSwuMTYtMS4xNiwyLjgsMi44LDAsMCwxLC43Mi0uOTIsMi40NSwyLjQ1LDAsMCwxLDEuNTEtLjY2LDEuNTIsMS41MiwwLDAsMSwxLjI5LjUsMy4xMSwzLjExLDAsMCwxLC43MSwxLjcsMTIuNjYsMTIuNjYsMCwwLDAsLjg0LDMuNzksMTAuNywxMC43LDAsMCwwLDEuOSwyLjk1LDguMTksOC4xOSwwLDAsMCw2LjQ5LDMuMThjMi4zOC0uMDksNC45MS0xLjMxLDcuNTctMy42N3M0LjIyLTQuNzUsNC42LTcuMS0uNDItNC42Mi0yLjM3LTYuODNhOS44OCw5Ljg4LDAsMCwwLTIuNjQtMi4xNiwxNi41LDE2LjUsMCwwLDAtMy43Mi0xLjM4LDcsNywwLDAsMS0uODgtLjM1LDIuNDIsMi40MiwwLDAsMS0uNzItLjU2LDEuNTYsMS41NiwwLDAsMS0uMzQtMS4zNCwyLjUxLDIuNTEsMCwwLDEsLjg0LTEuNDIsMi45MSwyLjkxLDAsMCwxLDEtLjU5LDIuMzYsMi4zNiwwLDAsMSwxLjE5LDAsMTMuNywxMy43LDAsMCwxLDQuNjksMS42OCwxNi44LDE2LjgsMCwwLDEsNC4xMSwzLjM5QTE1LDE1LDAsMCwxLDIwNi4yLDc3OS43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTE3OSw3NDUuMWEyLjU5LDIuNTksMCwwLDEtMS4xNSwxLjYzbC0yMC4zOCwxNC4yMWEyLjU5LDIuNTksMCwwLDEtMiwuNTIsMi42NywyLjY3LDAsMCwxLTEuNzQtMS4xOSwyLjc0LDIuNzQsMCwwLDEtLjU0LTIuMDcsMi42NywyLjY3LDAsMCwxLDEuMTktMS43NGwxOC43OC0xMy4xLTYuODEtOS43OHEtMS40Ny0yLjA4LjM4LTMuMzd0My4zLjhsOC40NywxMi4xNEEyLjU4LDIuNTgsMCwwLDEsMTc5LDc0NS4xWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNMTU1LDcwOC4wOWEyLjU0LDIuNTQsMCwwLDEtMS4zNSwxLjUybC0yMS43MiwxMS44MWEyLjU2LDIuNTYsMCwwLDEtMiwuMywyLjY2LDIuNjYsMCwwLDEtMS41Mi0xLjM4bC03LjMxLTEzLjQ1YTIuOTIsMi45MiwwLDAsMS0uNDItMS45NCwxLjg5LDEuODksMCwwLDEsMS0xLjM0LDIsMiwwLDAsMSwxLjc2LS4xOSwyLjkxLDIuOTEsMCwwLDEsMS40MSwxLjQxbDYsMTEuMDYsNy4yMy0zLjkzLTUuNjEtMTAuMzFhMywzLDAsMCwxLS40My0xLjk1LDIsMiwwLDAsMSwxLjA5LTEuMzYsMS44OCwxLjg4LDAsMCwxLDEuNzEtLjE1LDMsMywwLDAsMSwxLjM5LDEuNDFsNS42MSwxMC4zMiw3LjY4LTQuMTctNi0xMS4wN2EyLjg4LDIuODgsMCwwLDEtLjQxLTEuOTUsMiwyLDAsMCwxLDEuMTEtMS4zNywxLjkxLDEuOTEsMCwwLDEsMS43MS0uMTYsMywzLDAsMCwxLDEuMzksMS40Mmw3LjMxLDEzLjQ1QTIuNjksMi42OSwwLDAsMSwxNTUsNzA4LjA5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNMTIxLjIzLDYzMC41M2EyLjY2LDIuNjYsMCwwLDEtMS42NiwxLjI5bC0yMS44Niw2LjgyTDEwMCw2NDZxLjc3LDIuNDMtMS4zOCwzLjFjLTEuNDMuNDQtMi40LS4xNC0yLjkxLTEuNzZsLTYuMjItMjBjLS41MS0xLjYyLDAtMi42NSwxLjM5LTMuMXMyLjQuMTQsMi45LDEuNzZsMi4zLDcuMzcsMjEuODYtNi44MmEyLjU2LDIuNTYsMCwwLDEsMy40LDEuNzhBMi43NywyLjc3LDAsMCwxLDEyMS4yMyw2MzAuNTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik0xMDkuNTQsNTg5LjU0YTEyLjQ2LDEyLjQ2LDAsMCwxLTQuMzcsNS44MiwxOS45LDE5LjksMCwwLDEtMTYsMywxMi4yMywxMi4yMywwLDAsMS02LjEyLTMuODksMTYuMzUsMTYuMzUsMCwwLDEtMi43NS0xNC45MSwxMi4zNSwxMi4zNSwwLDAsMSw0LjM1LTUuOCwyMCwyMCwwLDAsMSwxNi0yLjkyLDEyLjQ0LDEyLjQ0LDAsMCwxLDYuMTUsMy44OSwxNC42NCwxNC42NCwwLDAsMSwzLjE5LDcuMDZBMTQuODQsMTQuODQsMCwwLDEsMTA5LjU0LDU4OS41NFptLTcuNzktMTIuOHEtMy4yMS0xLjc1LTguNDMtLjh0LTcuNTYsMy43NGE4Ljc2LDguNzYsMCwwLDAsMi4zMywxMi42OGMyLjEzLDEuMTgsNC45MywxLjQ0LDguNC44MXM2LTEuODksNy41OS0zLjc1YTguNzIsOC43MiwwLDAsMC0yLjMzLTEyLjY4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNMTAxLjIzLDUzOS4zNHEtMywzLjM1LTkuMTEsMy42NmwtMTUuMjkuNzlhMi42NywyLjY3LDAsMCwxLTItLjYyLDIuOTIsMi45MiwwLDAsMS0uMjEtMy44OSwyLjc1LDIuNzUsMCwwLDEsMS45NC0uODNsMTUuNTgtLjhjMi41Ny0uMTQsNC40OC0uODQsNS43My0yLjEzYTYuOTIsNi45MiwwLDAsMCwxLjY5LTUuNDQsNi44NCw2Ljg0LDAsMCwwLTIuMjYtNS4xOSw4LjM3LDguMzcsMCwwLDAtNS45LTEuNTJsLTE1LjU5LjgxYTIuNjksMi42OSwwLDAsMS0yLS42MSwyLjYsMi42LDAsMCwxLS44NC0xLjkxLDIuNTYsMi41NiwwLDAsMSwuNjQtMiwyLjY4LDIuNjgsMCwwLDEsMS45My0uODJsMTUuMjktLjhjNC0uMiw3LjE3LjY5LDkuNDIsMi43czMuNDYsNSwzLjY3LDkuMTFTMTAzLjI0LDUzNy4xMSwxMDEuMjMsNTM5LjM0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNMTAzLjA1LDQ2Ni4yOWEyLDIsMCwwLDEsMS41NS45LDIuODcsMi44NywwLDAsMSwuNSwxLjg5LDIuNzIsMi43MiwwLDAsMS0uNDEsMS4yNiwyLjc1LDIuNzUsMCwwLDEtMSwxbC05LDVhNS40OCw1LjQ4LDAsMCwwLTIsMS42Niw0Ljc5LDQuNzksMCwwLDAtLjczLDIuNDNsLS4zLDQuMTQsOS40Ny42OWEyLjc1LDIuNzUsMCwwLDEsMiwuODcsMi41OCwyLjU4LDAsMCwxLC42LDIsMi42OCwyLjY4LDAsMCwxLS44OSwxLjkxLDIuNjUsMi42NSwwLDAsMS0yLjA2LjU5TDc2LDQ4OC44MmEyLjU4LDIuNTgsMCwwLDEtMS44Ni0uODMsMi43LDIuNywwLDAsMS0uNTMtMmwuNzYtMTAuNTdjLjI1LTMuMzksMS4xOS01LjksMi44My03LjU2YTguMTYsOC4xNiwwLDAsMSw2LjcyLTIuMTcsOC4yOSw4LjI5LDAsMCwxLDUuNTUsMi4zOCw5LjM3LDkuMzcsMCwwLDEsMi40NSw1Ljc3LDUuMzEsNS4zMSwwLDAsMSwxLjIyLTIuMDgsOS41Miw5LjUyLDAsMCwxLDIuMjQtMS42N2w2LjE2LTMuNDJBMi43MywyLjczLDAsMCwxLDEwMy4wNSw0NjYuMjlabS0xNS45MSw2LjI5YTQuMzUsNC4zNSwwLDAsMC0zLjQ3LTEuN0E0LjI2LDQuMjYsMCwwLDAsODAsNDcyLjA2YTcuNCw3LjQsMCwwLDAtMS40NSw0LjQ1bC0uNTIsNy4xLDkuNDQuNjguNTEtNy4xQTcuMjEsNy4yMSwwLDAsMCw4Ny4xNCw0NzIuNThaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik0xMDguMjksNDQwLjNhMi43NywyLjc3LDAsMCwxLTIuMS4zOWwtMjQuNTEtNC4zM2EyLjYyLDIuNjIsMCwwLDEtMS44MS0xLjA4LDIuNjcsMi42NywwLDAsMS0uMzktMi4wNywyLjc0LDIuNzQsMCwwLDEsMS4wOC0xLjg1LDIuNjcsMi42NywwLDAsMSwyLjA3LS4zOWwyNC41Miw0LjMzYTIuNzQsMi43NCwwLDAsMSwxLjgzLDEuMDgsMi42NywyLjY3LDAsMCwxLC40LDIuMTFBMi42MywyLjYzLDAsMCwxLDEwOC4yOSw0NDAuM1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTExNS45Miw0MDUuMjFhMTMuNzcsMTMuNzcsMCwwLDEtMy41NSwzLjkxLDIuNTksMi41OSwwLDAsMS0zLjU3LS41NSwxLjU1LDEuNTUsMCwwLDEtLjI5LTEuMzgsMy4zNSwzLjM1LDAsMCwxLDEtMS41MSwxMi41OCwxMi41OCwwLDAsMCwyLjg3LTMuMTYsMTQuODksMTQuODksMCwwLDAsMS43Ny00LjA4LDguNjIsOC42MiwwLDAsMCwuMjUtNC44NiwzLjU1LDMuNTUsMCwwLDAtMi41OS0yLjQ2LDIuNzIsMi43MiwwLDAsMC0yLjgxLjgyLDIxLjA1LDIxLjA1LDAsMCwwLTMsNC41LDMwLjgxLDMwLjgxLDAsMCwxLTMuNDQsNS4zNEE4LjUyLDguNTIsMCwwLDEsOTksNDA0LjQyYTcsNywwLDAsMS00LjM2LDAsNy45LDcuOSwwLDAsMS00LjEzLTIuNzEsOS44NSw5Ljg1LDAsMCwxLTItNC44NiwxNC42LDE0LjYsMCwwLDEsLjUtNi4wNSwxNC44MiwxNC44MiwwLDAsMSw1Ljc4LTguNjQsMy40NCwzLjQ0LDAsMCwxLDEuMDktLjUsMi40NSwyLjQ1LDAsMCwxLDEuMTUuMDgsMi4zNSwyLjM1LDAsMCwxLDEuMzQuOTMsMS41NiwxLjU2LDAsMCwxLC4zLDEuMzgsMi4zOSwyLjM5LDAsMCwxLS4zNC43Miw2LjEyLDYuMTIsMCwwLDEtLjcxLjc5LDE0LjQsMTQuNCwwLDAsMC0yLjczLDIuNzRBMTEuMzUsMTEuMzUsMCwwLDAsOTMuMjMsMzkyYTcuODUsNy44NSwwLDAsMC0uMTEsNC43MSwzLjcsMy43LDAsMCwwLDIuNjYsMi40OSwzLDMsMCwwLDAsMy0uNywxNy41MywxNy41MywwLDAsMCwzLTQuMzksMzQuNTQsMzQuNTQsMCwwLDEsMy40OC01LjM4LDkuMDgsOS4wOCwwLDAsMSwzLjUzLTIuNzUsNi4zNyw2LjM3LDAsMCwxLDQuMjItLjExLDcuNzMsNy43MywwLDAsMSw0LjA3LDIuNjcsOS41NCw5LjU0LDAsMCwxLDEuOSw0LjgxLDE1LjUyLDE1LjUyLDAsMCwxLS41Nyw2LjE2QTIxLjUyLDIxLjUyLDAsMCwxLDExNS45Miw0MDUuMjFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik0xMTMuNzIsMzI2LjQ5YTIuNjksMi42OSwwLDAsMSwyLjA5LjExbDIzLjA4LDkuODlhMi41MiwyLjUyLDAsMCwxLDEuNDUsMS4zNSwyLjQxLDIuNDEsMCwwLDEtLjA4LDEuOTEsMi4yNiwyLjI2LDAsMCwxLTEuMzEsMS4zMywyLjYyLDIuNjIsMCwwLDEtMi0uMTVsLTE2LjA2LTYuODgsOS43MSwxMmE0LjExLDQuMTEsMCwwLDEsLjgzLDEuNTYsMi4yNSwyLjI1LDAsMCwxLS4xNCwxLjQ2LDIuMjcsMi4yNywwLDAsMS0uOTQsMS4xMiwzLjg0LDMuODQsMCwwLDEtMS43Mi40NkwxMTMuNDYsMzUybDE1Ljg2LDYuNzlhMi41NiwyLjU2LDAsMCwxLDEuNDQsMS4zMywyLjI4LDIuMjgsMCwwLDEsMCwxLjg5LDIuMjUsMi4yNSwwLDAsMS0xLjMxLDEuMzQsMi42MiwyLjYyLDAsMCwxLTItLjE1bC0yMy4wOC05Ljg5YTIuNzQsMi43NCwwLDAsMS0xLjU0LTEuNDIsMi40NiwyLjQ2LDAsMCwxLC4wNi0yLDIuODYsMi44NiwwLDAsMSwyLjctMS42NmwyMC4xOS0xLjZMMTEzLDMzMWEyLjgyLDIuODIsMCwwLDEtLjY5LTNBMi41MywyLjUzLDAsMCwxLDExMy43MiwzMjYuNDlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik0xNjIuNjQsMjgxLjI5YTMuMzMsMy4zMywwLDAsMS0zLjc2LTIuNTQsMywzLDAsMCwxLC41LTIuMzcsMywzLDAsMCwxLDItMS4zNiwzLjMzLDMuMzMsMCwwLDEsMy43NiwyLjU0LDMsMywwLDAsMS0uNSwyLjM3QTMsMywwLDAsMSwxNjIuNjQsMjgxLjI5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNMjE1LjY1LDIxMS40OWE3LjYyLDcuNjIsMCwwLDEsNC4zMywyLjI0LDcuMjEsNy4yMSwwLDAsMSwyLjM3LDYuMTMsMTEuNzgsMTEuNzgsMCwwLDEtMy43LDYuOUwyMTEsMjM0LjZhMi42NywyLjY3LDAsMCwxLTEuODQuOSwyLjQ5LDIuNDksMCwwLDEtMS44NS0uODNsLTE3LjctMTcuMjZhMi41MiwyLjUyLDAsMCwxLS44OC0xLjgzLDIuNjMsMi42MywwLDAsMSwuODYtMS44NWw3LjM0LTcuNTNhMTEuNjgsMTEuNjgsMCwwLDEsNi41OC0zLjgxLDcuNSw3LjUsMCwwLDEsOCw1Ljg4LDcuMTgsNy4xOCwwLDAsMS0uNTksNC4yNkE3LjI0LDcuMjQsMCwwLDEsMjE1LjY1LDIxMS40OVptLTE1LjE0LDkuMDgsNC44My00Ljk0YzIuNjItMi43LDIuOTQtNSwuOTMtN2EzLjYsMy42LDAsMCwwLTMuMjItMS4xOSw3LjE5LDcuMTksMCwwLDAtMy42OSwyLjMybC00LjgzLDVabTE3LS4xOGE0LDQsMCwwLDAtMS40My0zLjI4LDQsNCwwLDAsMC0zLjM2LTEuMzUsNi44MSw2LjgxLDAsMCwwLTMuNzksMi4zMWwtNS4zMyw1LjQ3LDYuMzIsNi4xNSw1LjMyLTUuNDZBNy4wNyw3LjA3LDAsMCwwLDIxNy40NiwyMjAuMzlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik0yNjIuNTgsMTg1LjU0YTIsMiwwLDAsMSwuMzksMS43NSwyLjgyLDIuODIsMCwwLDEtMSwxLjY1LDIuNjksMi42OSwwLDAsMS0xLjIxLjU2LDIuOCwyLjgsMCwwLDEtMS40LS4wOWwtOS43Ni0zLjE2YTUuNTUsNS41NSwwLDAsMC0yLjYtLjM2LDQuODQsNC44NCwwLDAsMC0yLjI4LDEuMTJsLTMuMjUsMi41OSw1Ljk0LDcuNDJhMi44LDIuOCwwLDAsMSwuNywyLDIuNiwyLjYsMCwwLDEtMS4wNiwxLjgsMi41NSwyLjU1LDAsMCwxLTMuODQtLjQ1TDIyNy42NiwxODFhMi41NCwyLjU0LDAsMCwxLS42NS0xLjkyLDIuNjQsMi42NCwwLDAsMSwxLjA4LTEuNzRsOC4yOC02LjYzYzIuNjUtMi4xMiw1LjEzLTMuMTQsNy40Ni0zLjA3YTguMTUsOC4xNSwwLDAsMSw2LjE2LDMuNDYsOC4yOSw4LjI5LDAsMCwxLDIsNS42OSw5LjM2LDkuMzYsMCwwLDEtMi41Niw1LjcyLDUuMjcsNS4yNywwLDAsMSwyLjM1LS41Myw5LjI3LDkuMjcsMCwwLDEsMi43NS41Mmw2LjY5LDIuMTlBMi42NSwyLjY1LDAsMCwxLDI2Mi41OCwxODUuNTRabS0xNS40My03LjM5YTQuMzMsNC4zMywwLDAsMC0xLjEyLTMuNjksNC4yNyw0LjI3LDAsMCwwLTMuMzYtMS45LDcuNDUsNy40NSwwLDAsMC00LjI1LDJMMjMyLjg2LDE3OWw1LjkyLDcuMzgsNS41Ni00LjQ1QTcuMjEsNy4yMSwwLDAsMCwyNDcuMTUsMTc4LjE1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNMjg1LjIsMTcxLjcxYTIuNywyLjcsMCwwLDEtMS43MS0xLjI3TDI3MCwxNDkuNTNhMi42NCwyLjY0LDAsMCwxLS40NS0yLjA2LDIuNjcsMi42NywwLDAsMSwxLjI1LTEuNywyLjcyLDIuNzIsMCwwLDEsMi4xLS40NiwyLjYyLDIuNjIsMCwwLDEsMS42OSwxLjI1bDEzLjUsMjAuOTJhMi42MSwyLjYxLDAsMCwxLS44MiwzLjgxQTIuNjQsMi42NCwwLDAsMSwyODUuMiwxNzEuNzFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik0zMTkuMjYsMTUxLjc4YTIuNjcsMi42NywwLDAsMS0xLjU2LTEuNDFMMzA3LjI0LDEzMGwtNi44NywzLjUzYy0xLjUxLjc4LTIuNi41LTMuMjktLjgzcy0uMjctMi4zOSwxLjI0LTMuMTdMMzE2LjkxLDEyMHEyLjI2LTEuMTcsMy4yOS44M1QzMTksMTI0bC02Ljg3LDMuNTMsMTAuNDcsMjAuMzdhMi43LDIuNywwLDAsMSwuMjQsMi4wOSwyLjY1LDIuNjUsMCwwLDEtMS40MSwxLjU2QTIuNzEsMi43MSwwLDAsMSwzMTkuMjYsMTUxLjc4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNMzU1LjE3LDEzNS4zM2EyLjcyLDIuNzIsMCwwLDEtMS40Mi0xLjU4bC05LjE0LTIzLjE2YTIuNzIsMi43MiwwLDAsMSwwLTIuMTEsMi42NiwyLjY2LDAsMCwxLDEuNTctMS40MSwyLjU2LDIuNTYsMCwwLDEsMy41NiwxLjUxbDkuMTQsMjMuMTZhMi43NCwyLjc0LDAsMCwxLDAsMi4xMiwyLjY5LDIuNjksMCwwLDEtMS42LDEuNDVBMi42MywyLjYzLDAsMCwxLDM1NS4xNywxMzUuMzNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik0zODksMTIzLjQ4YTEzLjYsMTMuNiwwLDAsMS01LjE5LTEsMi41OSwyLjU5LDAsMCwxLTEuNDEtMy4zMywxLjU5LDEuNTksMCwwLDEsMS0xLDMuNDUsMy40NSwwLDAsMSwxLjgzLjEsMTIuODQsMTIuODQsMCwwLDAsNC4yLjgsMTUuMzMsMTUuMzMsMCwwLDAsNC40LS42Myw4LjcyLDguNzIsMCwwLDAsNC4yOC0yLjMzLDMuNTUsMy41NSwwLDAsMCwuNzMtMy40OSwyLjcxLDIuNzEsMCwwLDAtMi4xNi0yLDIwLjMsMjAuMywwLDAsMC01LjQyLS4yMSwzMC4yNSwzMC4yNSwwLDAsMS02LjM0LS4xNSw4LjQ1LDguNDUsMCwwLDEtNC4xMy0xLjY1LDcsNywwLDAsMS0yLjI4LTMuNzIsNy45MSw3LjkxLDAsMCwxLC4xNC00LjkzLDkuODQsOS44NCwwLDAsMSwzLjEtNC4yNUExNC41OSwxNC41OSwwLDAsMSwzODcuMjQsOTNhMTQuODEsMTQuODEsMCwwLDEsMTAuMzguNDEsMy4wNSwzLjA1LDAsMCwxLDEsLjY3LDIuNjUsMi42NSwwLDAsMSwuNDUsMi42NSwxLjU5LDEuNTksMCwwLDEtMSwxLDIuMTksMi4xOSwwLDAsMS0uNzkuMDksNS42OSw1LjY5LDAsMCwxLTEtLjE5LDE0LjQ3LDE0LjQ3LDAsMCwwLTMuNzYtLjksMTEuNjIsMTEuNjIsMCwwLDAtNCwuNSw3LjgxLDcuODEsMCwwLDAtNC4wNywyLjM3LDMuNywzLjcsMCwwLDAtLjczLDMuNTcsMywzLDAsMCwwLDIuMTUsMi4xNywxNy4zNSwxNy4zNSwwLDAsMCw1LjMzLjMsMzMuOTQsMzMuOTQsMCwwLDEsNi40MS4xNSw5LDksMCwwLDEsNC4xOSwxLjU3LDYuMzIsNi4zMiwwLDAsMSwyLjMsMy41Myw3LjcxLDcuNzEsMCwwLDEtLjE0LDQuODcsOS41Niw5LjU2LDAsMCwxLTMuMTEsNC4xNCwxNS41MSwxNS41MSwwLDAsMS01LjU1LDIuNzRBMjEuNDcsMjEuNDcsMCwwLDEsMzg5LDEyMy40OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTQ1MS44Miw4MC44MmEyLjY5LDIuNjksMCwwLDEsMSwxLjg0bDMuNzMsMjQuNjJhMi43NiwyLjc2LDAsMCwxLS40NCwyLjA4LDIuODYsMi44NiwwLDAsMS0zLjg0LjU4LDIuNzcsMi43NywwLDAsMS0xLTEuODdMNDQ5LjcsOTcuNzIsNDM0LjU2LDEwMGwxLjU2LDEwLjM2YTIuNzMsMi43MywwLDAsMS0uNDMsMi4wOCwyLjY4LDIuNjgsMCwwLDEtMS44NCwxLDIuNjEsMi42MSwwLDAsMS0yLS40NywyLjc1LDIuNzUsMCwwLDEtMS0xLjg2bC0zLjcyLTI0LjYxYTIuNjgsMi42OCwwLDAsMSwuNDItMi4wNiwyLjYxLDIuNjEsMCwwLDEsMS44MS0xLDIuNzMsMi43MywwLDAsMSwyLjA3LjQ0LDIuNjcsMi42NywwLDAsMSwxLDEuODRsMS41LDkuOUw0NDksOTMuMzZsLTEuNS05LjlhMi43MSwyLjcxLDAsMCwxLC40Mi0yLDIuNTYsMi41NiwwLDAsMSwxLjgyLTFBMi41OSwyLjU5LDAsMCwxLDQ1MS44Miw4MC44MloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTUyMS42MSwxMDZhMTIuMzgsMTIuMzgsMCwwLDEtNC42Ny01LjYxLDE5Ljg5LDE5Ljg5LDAsMCwxLC45MS0xNi4yNCwxMi40MiwxMi40MiwwLDAsMSw1LjI3LTUsMTQuOTMsMTQuOTMsMCwwLDEsNy42Ni0xLjQ0LDE2LjU2LDE2LjU2LDAsMCwxLDUuMiwxLjEyLDEzLjUsMTMuNSwwLDAsMSw0LjIzLDIuNjQsMi4zNiwyLjM2LDAsMCwxLC43MS45MywyLjYsMi42LDAsMCwxLC4xNSwxLjE2LDIuMzgsMi4zOCwwLDAsMS0uNTksMS41MywxLjUzLDEuNTMsMCwwLDEtMS4yNy41NywzLjExLDMuMTEsMCwwLDEtMS43LS42OSwxMi41NywxMi41NywwLDAsMC0zLjI4LTIuMDcsMTAuOSwxMC45LDAsMCwwLTMuNDUtLjczQTguMTcsOC4xNywwLDAsMCw1MjQsODQuNWMtMS42MSwxLjc1LTIuNTIsNC40MS0yLjcxLDhzLjQsNi4zNCwxLjgxLDguMjYsMy41OCwzLDYuNTEsMy4xMmE5Ljk0LDkuOTQsMCwwLDAsMy40LS4zNiwxNS43MiwxNS43MiwwLDAsMCwzLjU5LTEuNjcsNi4yOSw2LjI5LDAsMCwxLC44Ny0uMzcsMi4yOCwyLjI4LDAsMCwxLC45LS4xMiwxLjUzLDEuNTMsMCwwLDEsMS4yLjcsMi41LDIuNSwwLDAsMSwuNDIsMS42LDIuOTMsMi45MywwLDAsMS0uMjgsMS4xMSwyLjQyLDIuNDIsMCwwLDEtLjgxLjg2LDEzLjU4LDEzLjU4LDAsMCwxLTQuNSwyLjE1LDE2LjE1LDE2LjE1LDAsMCwxLTUuMjkuNTNBMTUsMTUsMCwwLDEsNTIxLjYxLDEwNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTU3MCwxMTAuODlhMTIuNTIsMTIuNTIsMCwwLDEtMy45LTYuMTQsMjAuMDgsMjAuMDgsMCwwLDEsMi45LTE2LDEyLjM2LDEyLjM2LDAsMCwxLDUuODItNC4zNSwxNi4zOCwxNi4zOCwwLDAsMSwxNC45MiwyLjcyLDEyLjQyLDEyLjQyLDAsMCwxLDMuODgsNi4xMiwyMCwyMCwwLDAsMS0yLjk0LDE2LDEyLjUxLDEyLjUxLDAsMCwxLTUuODMsNC4zN0ExNi4yMSwxNi4yMSwwLDAsMSw1NzAsMTEwLjg5Wm0xNC43My0yLjc0YzEuODYtMS41OCwzLjEtNC4xMiwzLjc0LTcuNTlzLjM2LTYuMjgtLjgyLTguNDFBOC43OCw4Ljc4LDAsMCwwLDU3NSw4OS44NGMtMS44NSwxLjU3LTMuMSw0LjA5LTMuNzMsNy41N3MtLjM3LDYuMjkuODEsOC40M2E4Ljc0LDguNzQsMCwwLDAsMTIuNjgsMi4zMVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTYxNy4wNywxMjIuMzRhMi41NywyLjU3LDAsMCwxLS4wOS0ybDcuNDEtMjMuNzJhMi41NSwyLjU1LDAsMCwxLDMuNC0xLjc4LDIuNTUsMi41NSwwLDAsMSwxLjgyLDMuNDFsLTYuODMsMjEuODYsMTEuMzgsMy41NWMxLjYyLjUsMi4yMSwxLjQ3LDEuNzYsMi45cy0xLjQ4LDEuODktMy4xLDEuMzlsLTE0LjEzLTQuNDFBMi42MSwyLjYxLDAsMCwxLDYxNy4wNywxMjIuMzRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik02NjAuNTIsMTM1LjQxcS0xLjYtNC4yLjg4LTkuNzhsNi4yMy0xNGEyLjY4LDIuNjgsMCwwLDEsMS40Ni0xLjUxLDIuOTMsMi45MywwLDAsMSwzLjU2LDEuNTksMi43LDIuNywwLDAsMS0uMTQsMi4wOWwtNi4zNSwxNC4yNnEtMS41NywzLjUzLS43MSw2LjA3YTguMTUsOC4xNSwwLDAsMCw5LjczLDQuMzEsOC4zLDguMywwLDAsMCw0LTQuNTdsNi4zNS0xNC4yNWEyLjc2LDIuNzYsMCwwLDEsMS40Ny0xLjUxLDIuOTQsMi45NCwwLDAsMSwzLjU2LDEuNTksMi43MywyLjczLDAsMCwxLS4xNSwyLjFsLTYuMjMsMTRxLTIuNDYsNS41My02LjY3LDcuMTd0LTkuNzktLjg2QzY2NCwxNDAuNDQsNjYxLjYsMTM4LjIxLDY2MC41MiwxMzUuNDFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik03NDIuNDQsMTQ5LjA3YTIuNzIsMi43MiwwLDAsMS0uNDIsMi4wNmwtMTMuMTksMjEuMzZhMi41MiwyLjUyLDAsMCwxLTEuNTUsMS4yMywyLjQsMi40LDAsMCwxLTEuODgtLjM2LDIuMjUsMi4yNSwwLDAsMS0xLjEyLTEuNDksMi42NSwyLjY1LDAsMCwxLC40NC0xLjkybDkuMTgtMTQuODctMTMuMzEsNy44NGE0LjI4LDQuMjgsMCwwLDEtMS42Ni41OSwyLjQ3LDIuNDcsMCwwLDEtMi4zOS0xLjQ1LDMuOTEsMy45MSwwLDAsMS0uMjEtMS43N2wuODktMTUuMjUtOS4wNiwxNC42OGEyLjYsMi42LDAsMCwxLTEuNTMsMS4yMywyLjMzLDIuMzMsMCwwLDEtMS44Ni0uMzMsMi4yNiwyLjI2LDAsMCwxLTEuMTMtMS40OSwyLjYxLDIuNjEsMCwwLDEsLjQ0LTEuOTJsMTMuMTktMjEuMzZhMi43NywyLjc3LDAsMCwxLDEuNjMtMS4zMiwyLjQ3LDIuNDcsMCwwLDEsMiwuMzcsMi44MywyLjgzLDAsMCwxLDEuMjUsMi45TDcyMC43MywxNThsMTcuMzktMTAuMzRhMi44MiwyLjgyLDAsMCwxLDMuMDktLjIzQTIuNSwyLjUsMCwwLDEsNzQyLjQ0LDE0OS4wN1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTc3NC44LDE5NC4zN2E3LjU4LDcuNTgsMCwwLDEtMS44NCw0LjUxLDcuMjMsNy4yMywwLDAsMS01LjksMi45MSwxMS43NywxMS43NywwLDAsMS03LjItMy4wOGwtOC40OC02LjkxYTIuNjcsMi42NywwLDAsMS0xLjA3LTEuNzQsMi40OSwyLjQ5LDAsMCwxLC42Ni0xLjkyTDc2Ni41OSwxNjlhMi41NCwyLjU0LDAsMCwxLDEuNzUtMSwyLjcsMi43LDAsMCwxLDEuOTIuNjlsOC4xNSw2LjY1YTExLjY5LDExLjY5LDAsMCwxLDQuMzgsNi4yMSw3LjUsNy41LDAsMCwxLTUuMTUsOC41Myw3LjE2LDcuMTYsMCwwLDEtNC4yOC0uMjFBNy4yMyw3LjIzLDAsMCwxLDc3NC44LDE5NC4zN1pNNzY2LjEsMTk3YTMuOTMsMy45MywwLDAsMCwzLjE0LTEuNzEsNCw0LDAsMCwwLDEtMy40Niw2Ljg4LDYuODgsMCwwLDAtMi42NC0zLjU4bC01LjkyLTQuODItNS41Nyw2Ljg0LDUuOTIsNC44MkE3LDcsMCwwLDAsNzY2LjEsMTk3Wm0tMS42OS0xNi44Niw1LjM2LDQuMzdjMi45MSwyLjM3LDUuMjYsMi40OCw3LC4zMWEzLjYsMy42LDAsMCwwLC45LTMuMzJBNy4xOSw3LjE5LDAsMCwwLDc3NSwxNzhsLTUuMzUtNC4zNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTc4Ny40MiwyMjIuOTRhMi43MywyLjczLDAsMCwxLC44OC0xLjk0bDE3LjYtMTcuNjFhMi41NCwyLjU0LDAsMCwxLDMuODMsMCwyLjcyLDIuNzIsMCwwLDEsLjksMiwyLjY5LDIuNjksMCwwLDEtLjg2LDEuOTJsLTE3LjYsMTcuNjFhMi43NCwyLjc0LDAsMCwxLTEuOTQuODgsMi42NiwyLjY2LDAsMCwxLTItLjg4QTIuNTcsMi41NywwLDAsMSw3ODcuNDIsMjIyLjk0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNODI3LjcxLDI2Ni4xOGEyLjA4LDIuMDgsMCwwLDEtMS43OC40MywyLjYzLDIuNjMsMCwwLDEtMS42Ni0xLDIuMzUsMi4zNSwwLDAsMS0uNTItMS4yMUEyLjM5LDIuMzksMCwwLDEsODI0LDI2M2wyLjgxLTUuNTUtOS40LTExLjYtNiwxLjYxYTIuNDQsMi40NCwwLDAsMS0xLjQ3LDAsMi41MywyLjUzLDAsMCwxLTEuMS0uNzksMi43NCwyLjc0LDAsMCwxLS42LTEuODIsMi4wOCwyLjA4LDAsMCwxLC43OC0xLjY2LDIuNywyLjcsMCwwLDEsMS0uNWwyNi45LTYuNzVhMi43MiwyLjcyLDAsMCwxLDEuNzQuMSwzLjI0LDMuMjQsMCwwLDEsMS40LDEsMy4zNSwzLjM1LDAsMCwxLC43MSwxLjU4LDIuNzMsMi43MywwLDAsMS0uMjcsMS43MmwtMTIuMTMsMjVBMi43MiwyLjcyLDAsMCwxLDgyNy43MSwyNjYuMThaTTgyOSwyNTMuMzIsODM1LjIyLDI0MWwtMTMuMzEsMy41OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTg2MC42LDMxOS41MmExMi4zNSwxMi4zNSwwLDAsMSwyLjQ3LTYuODgsMTkuODQsMTkuODQsMCwwLDEsMTQuNDUtNy40NSwxMi40NCwxMi40NCwwLDAsMSw3LDIsMTQuOTQsMTQuOTQsMCwwLDEsNS4xMiw1Ljg3LDE2LjI0LDE2LjI0LDAsMCwxLDEuNjgsNS4wNSwxMy42MiwxMy42MiwwLDAsMS0uMTMsNSwyLjQyLDIuNDIsMCwwLDEtLjQ0LDEuMDksMi43NCwyLjc0LDAsMCwxLS45Mi43MSwyLjQsMi40LDAsMCwxLTEuNjMuMjcsMS41NiwxLjU2LDAsMCwxLTEuMTMtLjgsMy4xNCwzLjE0LDAsMCwxLS4yNy0xLjgyLDEyLjMzLDEyLjMzLDAsMCwwLC4xMi0zLjg4LDEwLjc0LDEwLjc0LDAsMCwwLTEuMTItMy4zM2MtMS4zNS0yLjYyLTMuMTgtNC4xOC01LjUxLTQuNjhzLTUuMDcuMDctOC4yNCwxLjctNS4yNiwzLjU2LTYuMiw1Ljc1LS43Myw0LjU4LjYxLDcuMTlhMTAsMTAsMCwwLDAsMiwyLjc1LDE2LjA5LDE2LjA5LDAsMCwwLDMuMjYsMi4yNSw2LjYzLDYuNjMsMCwwLDEsLjc3LjU2LDIuNDksMi40OSwwLDAsMSwuNTYuNzIsMS40OSwxLjQ5LDAsMCwxLDAsMS4zOCwyLjM1LDIuMzUsMCwwLDEtMS4xNiwxLjE3LDIuNjcsMi42NywwLDAsMS0xLjA5LjMzLDIuMzYsMi4zNiwwLDAsMS0xLjE2LS4yNiwxMy40NSwxMy40NSwwLDAsMS00LjEzLTIuNzksMTYuMiwxNi4yLDAsMCwxLTMuMTUtNC4yOUExNC44NiwxNC44NiwwLDAsMSw4NjAuNiwzMTkuNTJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik04ODguOTMsMzgzLjg2YTIuMSwyLjEsMCwwLDEtMS44Mi0uMTcsMi43MSwyLjcxLDAsMCwxLTEuMjYtMS40NSwyLjU3LDIuNTcsMCwwLDEtLjEtMS4zMiwyLjQzLDIuNDMsMCwwLDEsLjc0LTEuMjdsNC40Ni00LjM0LTUuMTMtMTQtNi4yMS0uNDNhMi40MSwyLjQxLDAsMCwxLTEuMzgtLjQ5LDIuNTUsMi41NSwwLDAsMS0uNzktMS4xMSwyLjc5LDIuNzksMCwwLDEsMC0xLjkxLDIuMSwyLjEsMCwwLDEsMS4yOC0xLjMyLDIuNDYsMi40NiwwLDAsMSwxLjEyLS4xNGwyNy42NCwyLjM0YTIuNzgsMi43OCwwLDAsMSwxLjYyLjY1LDMuMzksMy4zOSwwLDAsMSwxLjE1LDMuMTUsMi43OSwyLjc5LDAsMCwxLS44MSwxLjU0bC0xOS41OCwxOS42N0EyLjQ4LDIuNDgsMCwwLDEsODg4LjkzLDM4My44NlptNS4zNi0xMS43Niw5LjktOS41OS0xMy43NS0uOTJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik05MjcuNjcsNDI1LjUzYTIuNzYsMi43NiwwLDAsMS0xLjc3LDEuMTFsLTI0LjI5LDUuNDZhMi43NiwyLjc2LDAsMCwxLTIuMS0uMjcsMi40OCwyLjQ4LDAsMCwxLTEuMTYtMS42NSwyLjQ0LDIuNDQsMCwwLDEsLjUtMi4yNGwxNi4yNi0xOS41Mi0xNy45MSw0YTIuOSwyLjksMCwwLDEtMi4xLS4yMiwyLjY4LDIuNjgsMCwwLDEtLjgyLTMuNjQsMi44OCwyLjg4LDAsMCwxLDEuOC0xLjFMOTIwLjM3LDQwMmEyLjcxLDIuNzEsMCwwLDEsMi4wOC4yNywyLjUyLDIuNTIsMCwwLDEsMS4xNCwxLjcsMi4zOCwyLjM4LDAsMCwxLS41LDIuMkw5MDYuOSw0MjUuNjVsMTcuODctNGEyLjc5LDIuNzksMCwwLDEsMi4wOC4yNSwyLjQxLDIuNDEsMCwwLDEsMS4xMywxLjY0QTIuNTEsMi41MSwwLDAsMSw5MjcuNjcsNDI1LjUzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNOTA4LDQ4Ni4xN2EyLjE0LDIuMTQsMCwwLDEtMS43Mi0uNjMsMi42NywyLjY3LDAsMCwxLS44NC0xLjc0LDIuMzMsMi4zMywwLDAsMSwxLjI4LTIuMzNsNS40Mi0zLjA1LTEuMzYtMTQuODctNS44OS0yYTIuNDYsMi40NiwwLDAsMS0xLjIxLS44MywyLjQ5LDIuNDksMCwwLDEtLjQ3LTEuMjcsMi42NiwyLjY2LDAsMCwxLC41MS0xLjg0LDIuMDksMi4wOSwwLDAsMSwxLjU3LTEsMi40NCwyLjQ0LDAsMCwxLDEuMTIuMTVsMjYuMTEsOS4zNmEyLjc3LDIuNzcsMCwwLDEsMS40LDEsMy4zNiwzLjM2LDAsMCwxLC41OSwxLjYzLDMuMjcsMy4yNywwLDAsMS0uMjksMS43MSwyLjc1LDIuNzUsMCwwLDEtMS4xOCwxLjI4bC0yNCwxNEEyLjgyLDIuODIsMCwwLDEsOTA4LDQ4Ni4xN1ptOC4yLTEwLDEyLTYuNzJMOTE1LjE1LDQ2NVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTkwNyw1MTEuNTJhMi41NSwyLjU1LDAsMCwxLDEuOTQtLjYzbDI0LjcuODlhMi41NywyLjU3LDAsMCwxLDEuODkuNzcsMi42OSwyLjY5LDAsMCwxLC42LDJsLS4zLDguNHEtLjI3LDcuMzItNC4zMywxMS4yM3QtMTEuMTUsMy42NWMtNC43NC0uMTctOC4zOC0xLjY1LTEwLjg5LTQuNDRzLTMuNjgtNi42NC0zLjUxLTExLjUzbC4zMS04LjM5QTIuNiwyLjYsMCwwLDEsOTA3LDUxMS41MlptMy40MiwxMC4xMnEtLjM5LDEwLjI5LDEwLjEzLDEwLjY3dDEwLjg0LTkuOTFsLjE5LTUuMjItMjEtLjc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNOTAwLjUyLDU4OS41N2EyLjEsMi4xLDAsMCwxLTEuNTEtMSwyLjY4LDIuNjgsMCwwLDEtLjM3LTEuODksMi4zOSwyLjM5LDAsMCwxLC41Ni0xLjE5LDIuMzQsMi4zNCwwLDAsMSwxLjI2LS43NGw2LTEuNTksMi40My0xNC43M0w5MDMuNzIsNTY1YTIuNCwyLjQsMCwwLDEtMS0xLjExLDIuNDcsMi40NywwLDAsMS0uMTQtMS4zNSwyLjcxLDIuNzEsMCwwLDEsMS0xLjY1LDIuMDgsMi4wOCwwLDAsMSwxLjc2LS41MiwyLjYzLDIuNjMsMCwwLDEsMSwuNDNsMjIuOSwxNS42NGEyLjcsMi43LDAsMCwxLDEuMDksMS4zNiwzLjM2LDMuMzYsMCwwLDEtLjU0LDMuMywyLjY5LDIuNjksMCwwLDEtMS40Ny45NGwtMjYuNzIsNy41QTIuNDMsMi40MywwLDAsMSw5MDAuNTIsNTg5LjU3Wk05MTEsNTgybDEzLjM0LTMuNDctMTEuNTItNy41OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTg5MS41LDY0Ni42NWEzLjEyLDMuMTIsMCwwLDEsMi40NC0uMDYsMy4wNywzLjA3LDAsMCwxLDEuODIsMS42MSwzLjIsMy4yLDAsMCwxLTEuNTMsNC4yMiwzLjE3LDMuMTcsMCwwLDEtMi40NC4wNywzLjEsMy4xLDAsMCwxLTEuODItMS42MSwzLjA2LDMuMDYsMCwwLDEtLjEtMi40M0EzLDMsMCwwLDEsODkxLjUsNjQ2LjY1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNODU3LDcyNy4xNmE3LjU2LDcuNTYsMCwwLDEtNC43NS0xLjEzLDcuMjEsNy4yMSwwLDAsMS0zLjc4LTUuMzgsMTEuODgsMTEuODgsMCwwLDEsMS45My03LjU5bDUuNTItOS40NGEyLjY5LDIuNjksMCwwLDEsMS41Ni0xLjMzLDIuNTcsMi41NywwLDAsMSwyLC4zNmwyMS4zNSwxMi40OGEyLjQ5LDIuNDksMCwwLDEsMS4yOSwxLjU2LDIuNjQsMi42NCwwLDAsMS0uMzgsMmwtNS4zMSw5LjA4YTExLjYxLDExLjYxLDAsMCwxLTUuNDcsNS4yOCw3LjQ4LDcuNDgsMCwwLDEtOS4yMi0zLjc3LDcuMTEsNy4xMSwwLDAsMS0uNDUtNC4yNkE3LjI5LDcuMjksMCwwLDEsODU3LDcyNy4xNlptLTMuOTEtOC4yYTMuOTMsMy45MywwLDAsMCwyLjE4LDIuODQsNCw0LDAsMCwwLDMuNTkuNSw2Ljg4LDYuODgsMCwwLDAsMy4xMi0zLjE2bDMuODUtNi41OS03LjYyLTQuNDUtMy44NSw2LjU5QTcuMTQsNy4xNCwwLDAsMCw4NTMuMDgsNzE5Wm0xNi40LTQuMjctMy40OSw2cS0yLjg0LDQuODYuNzgsN2EzLjYyLDMuNjIsMCwwLDAsMy40Mi4zNyw3LjE5LDcuMTksMCwwLDAsMy0zLjE1bDMuNDgtNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTgzMC43MSw3NDRhMi43NCwyLjc0LDAsMCwxLDIsLjU4bDIwLjExLDE0LjY4YTIuNTYsMi41NiwwLDAsMSwuNTksMy43OSwyLjcyLDIuNzIsMCwwLDEtMS43OSwxLjE5LDIuNjcsMi42NywwLDAsMS0yLS41Nkw4MjkuNTMsNzQ5YTIuNTcsMi41NywwLDAsMS0uNi0zLjg1QTIuNTksMi41OSwwLDAsMSw4MzAuNzEsNzQ0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNNzk2LjUsNzg4LjE3YTIuNTUsMi41NSwwLDAsMS0uMTYtMy41MSwyLjc0LDIuNzQsMCwwLDEsMi0uODZsMTkuMjgtMS42OC04LjUzLTcuNjRhMi43NiwyLjc2LDAsMCwxLTEtMS44OSwyLjczLDIuNzMsMCwwLDEsLjc4LTIsMi42NywyLjY3LDAsMCwxLDEuODgtMSwyLjc1LDIuNzUsMCwwLDEsMiwuNzdMODMxLjI1LDc4N2EyLjU3LDIuNTcsMCwwLDEsLjIxLDMuODQsMi43NCwyLjc0LDAsMCwxLTEuOSwxLDIuNzEsMi43MSwwLDAsMS0yLS43NmwtOC4xMS03LjI4LjQyLDE4LjcyYTIuMzksMi4zOSwwLDAsMS0uNTksMS44LDIuMzEsMi4zMSwwLDAsMS0xLjcuNzgsMi4zOCwyLjM4LDAsMCwxLTEuNzgtLjU5LDIuNDUsMi40NSwwLDAsMS0uNzYtMS44MmwtLjE1LTE1LjQ2LTE2LjQ5LDEuNUEyLjQ5LDIuNDksMCwwLDEsNzk2LjUsNzg4LjE3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNNzc3LjMyLDgwNC41NmEyLjUzLDIuNTMsMCwwLDEsMS43OSwxbDE2LjM3LDE4LjUyYTIuNTUsMi41NSwwLDAsMSwuNzQsMS44OSwyLjY2LDIuNjYsMCwwLDEtMSwxLjc5bC0xMS40NywxMC4xNGEzLDMsMCwwLDEtMS44Ljg1LDEuOTMsMS45MywwLDAsMS0xLjU1LS43MywyLDIsMCwwLDEtLjU3LTEuNjcsMi45MiwyLjkyLDAsMCwxLDEtMS42OWw5LjQ0LTguMzQtNS40NS02LjE3LTguOCw3Ljc4YTIuOTIsMi45MiwwLDAsMS0xLjguODUsMS45MiwxLjkyLDAsMCwxLTEuNTctLjc1LDEuOSwxLjksMCwwLDEtLjUzLTEuNjMsMywzLDAsMCwxLDEuMDYtMS42OGw4LjgtNy43OC01Ljc4LTYuNTQtOS40NCw4LjM0YTIuOSwyLjksMCwwLDEtMS44MS44NCwyLDIsMCwwLDEtMS41OS0uNzgsMS45MiwxLjkyLDAsMCwxLS41My0xLjYyLDIuOTQsMi45NCwwLDAsMSwxLjA3LTEuNjhsMTEuNDYtMTAuMTRBMi42OSwyLjY5LDAsMCwxLDc3Ny4zMiw4MDQuNTZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik03NDIuMTEsODMzLjM1YTIuNjgsMi42OCwwLDAsMSwxLjc2LDEuMjNMNzU4LDg1NWEyLjU0LDIuNTQsMCwwLDEsLjUyLDIsMi42NiwyLjY2LDAsMCwxLTEuMiwxLjY2bC04LjU2LDZjLTIuNjMsMS44Mi01LjEyLDIuNTktNy41LDIuMjlhOS44LDkuOCwwLDAsMS03LjY4LTExLjA1cS44MS0zLjUxLDQuNzQtNi4yNWw2LjI0LTQuMzMtNS4yMS03LjQ5YTIuNzUsMi43NSwwLDAsMS0uNTQtMi4wOCwzLjA2LDMuMDYsMCwwLDEsMy4yNy0yLjI3Wm0tLjgsMTkuMjNxLTQuNjMsMy4yMy0xLjgyLDcuMjZ0Ny40My44Mmw1LjY4LTMuOTVMNzQ3LDg0OC42M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTY4MS41Myw4NzIuMDZhMi4wNywyLjA3LDAsMCwxLS4wOS0xLjgyLDIuNjcsMi42NywwLDAsMSwxLjI3LTEuNDUsMi4zMSwyLjMxLDAsMCwxLDEuMjktLjI4LDIuMzgsMi4zOCwwLDAsMSwxLjM1LjU1bDQuOTIsMy44MSwxMy4xNy03LS40My02LjIxYTIuMzEsMi4zMSwwLDAsMSwuMjktMS40MywyLjQzLDIuNDMsMCwwLDEsMS0uOTQsMi43NiwyLjc2LDAsMCwxLDEuODktLjI0LDIuMTEsMi4xMSwwLDAsMSwxLjQ5LDEuMDgsMi42NCwyLjY0LDAsMCwxLC4yOSwxLjFsMS41MywyNy42OWEyLjY5LDIuNjksMCwwLDEtLjQxLDEuNjksMy40LDMuNCwwLDAsMS0zLDEuNTgsMi43NiwyLjc2LDAsMCwxLTEuNjQtLjU5bC0yMi4yMS0xNi42NEEyLjYyLDIuNjIsMCwwLDEsNjgxLjUzLDg3Mi4wNlptMTIuMzksMy42NywxMC44Nyw4LjQ3LTEtMTMuNzVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik02NTQuMDksODgzLjIyYTEyLjM2LDEyLjM2LDAsMCwxLDYuNTcsMy4yLDE4LjA1LDE4LjA1LDAsMCwxLDQuNTQsNywxNy44NCwxNy44NCwwLDAsMSwxLjI5LDguMiwxMi41LDEyLjUsMCwwLDEtMi43NCw2Ljc2LDE1LDE1LDAsMCwxLTYuNCw0LjQ1LDE2LjU3LDE2LjU3LDAsMCwxLTUuMjEsMS4xMiwxMy45MiwxMy45MiwwLDAsMS00LjkzLS42NywyLjU2LDIuNTYsMCwwLDEtMS0uNTYsMi43NCwyLjc0LDAsMCwxLS42LTEsMi4zNCwyLjM0LDAsMCwxLS4wOS0xLjY0LDEuNTMsMS41MywwLDAsMSwuOTItMSwzLjIsMy4yLDAsMCwxLDEuODMtLjA3LDEyLjczLDEyLjczLDAsMCwwLDMuODUuNTUsMTEuMDUsMTEuMDUsMCwwLDAsMy40My0uNzVjMi43NS0xLjA2LDQuNS0yLjcxLDUuMjUtNXMuNDktNS0uNzktOC4zOC0zLTUuNjEtNS02Ljc4LTQuNDgtMS4yNC03LjIzLS4xOGExMCwxMCwwLDAsMC0zLDEuNzIsMTYsMTYsMCwwLDAtMi41OSwzLDcuMyw3LjMsMCwwLDEtLjY0LjcsMi41NiwyLjU2LDAsMCwxLS43Ny40OCwxLjUzLDEuNTMsMCwwLDEtMS4zOC0uMTYsMi40NCwyLjQ0LDAsMCwxLTEtMS4yOCwyLjc0LDIuNzQsMCwwLDEtLjItMS4xMiwyLjM0LDIuMzQsMCwwLDEsLjM4LTEuMTMsMTMuODQsMTMuODQsMCwwLDEsMy4yMi0zLjgsMTYuNTEsMTYuNTEsMCwwLDEsNC42Mi0yLjY2QTE0Ljg4LDE0Ljg4LDAsMCwxLDY1NC4wOSw4ODMuMjJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik01ODkuODQsOTAzLjgzYTIuMywyLjMsMCwwLDEsLjMxLTEuODQsMi40LDIuNCwwLDAsMSwxLjUyLTEuMTUsMi43MywyLjczLDAsMCwxLDIuMTEuMzlsMTYuOTEsOS40Mi0yLjc4LTExLjExYTIuNzUsMi43NSwwLDAsMSwuMjQtMi4xMSwzLDMsMCwwLDEsMy44Ny0xLDIuNzQsMi43NCwwLDAsMSwxLjIsMS43Nmw2LDI0LjE1YTIuNTUsMi41NSwwLDAsMS0yLDMuMjksMi43MSwyLjcxLDAsMCwxLTIuMTQtLjI0LDIuNjUsMi42NSwwLDAsMS0xLjItMS43M2wtMi42NC0xMC41Ny0xMC4xNCwxNS43M2EyLjM5LDIuMzksMCwwLDEtMS41LDEuMTYsMi4zNSwyLjM1LDAsMCwxLTEuODUtLjMsMi4zOCwyLjM4LDAsMCwxLTEuMTQtMS40OSwyLjQ0LDIuNDQsMCwwLDEsLjM5LTEuOTNsOC41NS0xMi44OS0xNC41LThBMi41LDIuNSwwLDAsMSw1ODkuODQsOTAzLjgzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48cGF0aCBjbGFzcz0iY2xzLTEzIiBkPSJNNTY0LjUxLDkwNi40MWEyLjczLDIuNzMsMCwwLDEsMSwxLjg3bDMuNTYsMjQuNjRhMi41NywyLjU3LDAsMCwxLTIuMywzLjA3LDIuNzIsMi43MiwwLDAsMS0yLjEtLjQ1LDIuNjcsMi42NywwLDAsMS0xLTEuODRsLTMuNTUtMjQuNjRhMi43MiwyLjcyLDAsMCwxLC40NS0yLjA4LDIuNjYsMi42NiwwLDAsMSwxLjg4LTFBMi42MiwyLjYyLDAsMCwxLDU2NC41MSw5MDYuNDFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTAuNjkgLTU0Ljg2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMTMiIGQ9Ik01MDkuNjYsOTM5LjgzYTIuNzUsMi43NSwwLDAsMS0uNzctMS45NGwtMS0yNC44N2EyLjc4LDIuNzgsMCwwLDEsLjY0LTIsMi40NiwyLjQ2LDAsMCwxLDEuODQtLjg0LDIuNDEsMi40MSwwLDAsMSwyLjExLjlsMTYuMjUsMTkuNTItLjcxLTE4LjM1YTIuODksMi44OSwwLDAsMSwuNi0yLDIuNjYsMi42NiwwLDAsMSwzLjczLS4xNSwyLjg5LDIuODksMCwwLDEsLjc1LDJsMSwyNC44N2EyLjcyLDIuNzIsMCwwLDEtLjY0LDIsMi41NywyLjU3LDAsMCwxLTEuODguODIsMi4zOCwyLjM4LDAsMCwxLTIuMDctLjlMNTEzLjMsOTE5LjM5bC43MSwxOC4zYTIuNzUsMi43NSwwLDAsMS0uNjIsMiwyLjQyLDIuNDIsMCwwLDEtMS44MS44MUEyLjQ4LDIuNDgsMCwwLDEsNTA5LjY2LDkzOS44M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTQ1NS40MSw5MjMuMjJhMiwyLDAsMCwxLS40Ni0xLjU1bC44LTkuMDhhNS41Myw1LjUzLDAsMCwxLC43NS0yLjcsMy43NSwzLjc1LDAsMCwxLDIuMTktMS4xMywyMiwyMiwwLDAsMSw0LS41OCwyOS43NiwyOS43NiwwLDAsMSw0LjM0LDAsMTYuNjQsMTYuNjQsMCwwLDEsNy44MiwyLjUzLDEyLjIxLDEyLjIxLDAsMCwxLDQuNzEsNS43MSwxOS42LDE5LjYsMCwwLDEtMS40NCwxNi4zNSwxMi42MSwxMi42MSwwLDAsMS01LjU2LDQuODMsMTUuNzMsMTUuNzMsMCwwLDEtNy45NCwxLjE1LDE0LjY1LDE0LjY1LDAsMCwxLTkuNDctNC4wNywzLjMyLDMuMzIsMCwwLDEtLjY2LTEsMi4zNiwyLjM2LDAsMCwxLS4xMy0xLjEyLDIuNCwyLjQsMCwwLDEsLjY0LTEuNTEsMS41MiwxLjUyLDAsMCwxLDEuMjgtLjUzLDIuMzYsMi4zNiwwLDAsMSwuODMuMjIsNC40OSw0LjQ5LDAsMCwxLC44NS41NywxMy41OSwxMy41OSwwLDAsMCwzLjMsMi4xNCwxMS41NCwxMS41NCwwLDAsMCwzLjU5Ljg1YzMuMDcuMjcsNS40Ni0uNDMsNy4xOS0yLjExczIuNzQtNC4zMSwzLjA2LTcuODhxMS0xMS04LjY2LTExLjg0YTIxLjE3LDIxLjE3LDAsMCwwLTUuODIuM2wtLjY2LDcuNDgsNC43Ny40MmEyLjMxLDIuMzEsMCwwLDEsMS41NC42NCwyLjEsMi4xLDAsMCwxLS4yNSwyLjg4LDIuMzQsMi4zNCwwLDAsMS0xLjYzLjM2bC03LjQ4LS42NkEyLjE1LDIuMTUsMCwwLDEsNDU1LjQxLDkyMy4yMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MC42OSAtNTQuODYpIi8+PHBhdGggY2xhc3M9ImNscy0xMyIgZD0iTTM2NS4wNiw4OTUuMDhhMy4wNiwzLjA2LDAsMCwxLC4wNSwyLjQzLDMuMTIsMy4xMiwwLDAsMS0xLjYxLDEuODMsMy4wNiwzLjA2LDAsMCwxLTIuNDMuMDgsMywzLDAsMCwxLTEuNzktMS42MywzLjEzLDMuMTMsMCwwLDEtLjA2LTIuNDQsMy4wOCwzLjA4LDAsMCwxLDEuNjItMS44MiwzLjIyLDMuMjIsMCwwLDEsNC4yMiwxLjU1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUwLjY5IC01NC44NikiLz48L2c+PC9zdmc+" class="logo" alt="BC By Bike" />
+    <div class="header-text">
+      <h1>We Welcome Cyclists</h1>
+      <div class="tagline">BC's cycle tourism accreditation network</div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="view-toggle" id="view-toggle">
+    <button class="active" onclick="setView('category')">By Category</button>
+    <button onclick="setView('route')">By Route</button>
+    <button onclick="setView('all')">All Listings</button>
+  </div>
+  <div id="view-category">
+    <div class="category-nav" id="category-nav"></div>
+    <div class="card" id="criteria-card"></div>
+    <div class="card" id="examples-card"></div>
+  </div>
+  <div id="view-route" style="display:none">
+    <div class="route-selector" id="route-selector"></div>
+    <div class="card" id="route-card"></div>
+  </div>
+  <div id="view-all" style="display:none">
+    <div class="card" id="all-card"></div>
+  </div>
+  <div class="footer">
+    <span class="org">BC Cycle Tourism Society</span>
+  </div>
+</div>
+
+</div><!-- end wwc-root -->
+<div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal" id="modal-content"></div>
+</div>
+
+<script>
+var INFO_FIELDS = [
+  "Nearest bike repair option", "Nearest food / grocery option",
+  "Emergency care or emergency number", "Relevant local route or trail link",
+  "Fallback transportation where available", "Local hazards or access notes"
+];
+
+var categories = [
+  {
+    id: "hotel", tab: "Accommodation", name: "Accommodation",
+    description: "Hotels, motels, hostels, guesthouses, B&Bs, and inns.",
+    infoSheet: true,
+    required: [
+      { title: "Secure indoor bike storage", detail: "Locked room, garage, bikes in guest rooms, storage shed, or staff-controlled storage." },
+      { title: "Storage described in the listing", detail: "Cyclists know what to expect before they arrive." },
+      { title: "Staff know the bike procedure", detail: "Front desk staff know where bikes go and what to do with loaded touring bikes, e-bikes, or trailers." },
+      { title: "Cyclist Info Sheet available", detail: "" }
+    ],
+    optional: [
+      "Min-stay waived", "Laundry", "Drying area", "Early or packed breakfast",
+      "Nearby evening food", "Nearby grocery", "Vending machines", "Bikes in rooms",
+      "E-bike charging", "Device charging", "Luggage storage", "Pump",
+      "Basic tools", "Bike wash / hose", "Wi-Fi"
+    ],
+    examples: [
+      { name: "Sicamous Lakeview Motor Inn", location: "Sicamous (Shuswap)", badge: "accredited",
+        desc: "Family-run motel near the Shuswap–Columbia Trail junction. Locked bike room, 12 spaces.",
+        checked: [0,1,2,3,4,6,8,9,11,14], routes: ["Shuswap–Columbia Greenway", "Sicamous–Armstrong Rail Trail"],
+        detail: { address: "123 Main St, Sicamous, BC V0E 2V0", phone: "(250) 555-0142", url: "sicamouslakeview.ca", hours: "Check-in 3pm, year-round", source: "operator" },
+        notes: { 3: "Continental, 6:30–8:30am", 8: "Outdoor plug at bike room, 110V" } },
+      { name: "Nelson Heritage Guesthouse", location: "Nelson (Kootenays)", badge: "accredited",
+        desc: "Heritage B&B in downtown Nelson. Bikes in the locked garden shed or ground-floor hallway.",
+        checked: [0,2,4,5,8,9,10,14], routes: ["Galena Trail", "Great Trail – Nelson Section"],
+        detail: { address: "412 Victoria St, Nelson, BC V1L 4K5", url: "nelsonheritageguesthouse.ca", source: "osm" } },
+      { name: "Squamish Adventure Lodge", location: "Squamish (Sea to Sky)", badge: "accredited",
+        desc: "Hostel-style lodge popular with Sea to Sky Trail riders. Locked ski room doubles as bike storage.",
+        checked: [0,1,2,7,8,9,11,14], routes: ["Sea to Sky Trail"],
+        detail: { address: "38220 Cleveland Ave, Squamish, BC V8B 0A3", phone: "(604) 555-0134", url: "squamishadventurelodge.ca", hours: "Check-in 3pm, year-round", source: "operator" },
+        notes: { 7: "Ground floor rooms only", 11: "Shared pump in the gear room" } },
+      { name: "Cowichan River Inn", location: "Lake Cowichan (Cowichan Valley)", badge: "accredited",
+        desc: "Small riverside inn near the Cowichan Valley Trail. Garage storage, early breakfast, drying room.",
+        checked: [0,1,2,3,4,5,9,13,14], routes: ["Cowichan Valley Trail"],
+        detail: { address: "90 South Shore Rd, Lake Cowichan, BC V0R 2G0", phone: "(250) 555-0189", url: "cowichanriverinn.ca", source: "operator" } },
+      { name: "Salt Spring Harbour House", location: "Ganges, Salt Spring Island (Gulf Islands)", badge: "accredited",
+        desc: "Waterfront guesthouse in Ganges. Bikes stored in the covered carport. E-bike plug available.",
+        checked: [3,4,5,8,9,10,14], routes: ["Salt Spring Island Cycling Loop"],
+        detail: { address: "121 Upper Ganges Rd, Salt Spring Island, BC V8K 2S2", url: "harbourhousessi.ca", source: "operator" } },
+      { name: "Golden Kicking Horse Hostel", location: "Golden (Columbia Valley)", badge: "listed",
+        desc: "Editorial listing — hostel appears to offer secure indoor storage for touring cyclists.",
+        checked: [8,9,14], routes: ["Golden Triangle Touring Route"],
+        detail: { address: "518 Station Ave, Golden, BC V0A 1H0", source: "osm" } },
+      { name: "Hope Valley Inn", location: "Hope (Fraser Valley)", badge: "listed",
+        desc: "Editorial listing — appeared to meet basic bike storage criteria on inspection.",
+        checked: [8,9,14], routes: ["Hope–Princeton Connector"],
+        detail: { address: "655 Old Hope Princeton Way, Hope, BC V0X 1L4", source: "osm" } }
+    ]
+  },
+  {
+    id: "campground", tab: "Camping", name: "Campgrounds",
+    description: "Campgrounds, RV parks, group campsites, and backcountry sites with some services.",
+    infoSheet: true,
+    required: [
+      { title: "Space policy for cyclists", detail: "Must accommodate cyclists arriving by bike for one night — hiker/biker sites, overflow tenting, or similar. Groups up to six." },
+      { title: "Bike parking or tent-side policy", detail: "Cyclists need to know where to keep their bike overnight — rack near the gate, tent-side, or another clear arrangement." },
+      { title: "Staff know the arrival procedure", detail: "Staff can direct arriving cyclists to the right spot." },
+      { title: "Cyclist Info Sheet available", detail: "" }
+    ],
+    optional: [
+      "Min-stay waived", "Hiker/biker sites", "Potable water", "Showers",
+      "Food nearby", "Covered shelter", "Laundry", "Drying area",
+      "Bear-safe food storage", "Reservations accepted", "Cyclist discount", "Device charging",
+      "E-bike charging", "Vending machines", "Ice", "Pump", "Basic tools", "Camping fuel"
+    ],
+    examples: [
+      { name: "Greenway Campground", location: "Summerland (Okanagan)", badge: "accredited",
+        desc: "Orchard campground with dedicated hiker/biker site, no minimum stay. Popular KVR trail stopover.",
+        checked: [0,1,2,3,4,6,8,9,10,12,15,16], routes: ["Kettle Valley Rail Trail", "Okanagan Rail Trail"],
+        detail: { address: "14820 Lakeshore Dr S, Summerland, BC V0H 1Z8", phone: "(250) 555-0163", hours: "May–Oct, check-in 2pm", source: "operator" },
+        notes: { 1: "First come first served, max 2 tents", 3: "Coin-operated, $2", 8: "Bear box near hiker/biker site" } },
+      { name: "Kettle River Provincial Park", location: "Rock Creek (Boundary Country)", badge: "accredited",
+        desc: "Provincial park campground on the Trans Canada Trail. Hiker/biker sites, potable water, showers.",
+        checked: [1,2,3,4,8,9,14,17], routes: ["Trans Canada Trail – Boundary Section"],
+        detail: { address: "Hwy 33, Rock Creek, BC V0H 1Y0", url: "bcparks.ca/kettle-river", source: "osm" } },
+      { name: "Shuswap Lake Camp", location: "Sicamous (Shuswap)", badge: "accredited",
+        desc: "Lakeside campground near the Sicamous–Armstrong rail trail. Bear boxes, covered shelter, camp fuel.",
+        checked: [0,1,2,3,5,8,10,15,17], routes: ["Sicamous–Armstrong Rail Trail"],
+        detail: { address: "1100 Riverside Rd, Sicamous, BC V0E 2V0", phone: "(250) 555-0171", url: "shuswaplakecamp.ca", hours: "May 15–Sep 30", source: "operator" } },
+      { name: "Cowichan River Campground", location: "Lake Cowichan (Cowichan Valley)", badge: "accredited",
+        desc: "Small riverside campground popular with Cowichan Valley Trail riders. Showers, laundry, reservations.",
+        checked: [1,2,3,6,9,11,12], routes: ["Cowichan Valley Trail"],
+        detail: { address: "3 Greendale Rd, Lake Cowichan, BC V0R 2G0", phone: "(250) 555-0194", source: "operator" } },
+      { name: "Galiano Island Camp", location: "Galiano Island (Gulf Islands)", badge: "accredited",
+        desc: "Walk-in campground near the ferry terminal. Potable water, covered cooking shelter, no vehicle fee for cyclists.",
+        checked: [0,2,5,10,14], routes: ["Galiano Island Loop"],
+        detail: { address: "Montague Harbour Rd, Galiano Island, BC V0N 1P0", source: "osm" },
+        notes: { 2: "Apr–Oct only, well water", 5: "Covered cooking shelter, no walls" } },
+      { name: "Similkameen River Camp", location: "Keremeos (Similkameen)", badge: "listed",
+        desc: "BC Parks campground. Hiker/biker space, potable water, seasonal staff. Editorial listing.",
+        checked: [1,2,8,9,14], routes: ["Kettle Valley Rail Trail – Princeton Section"],
+        detail: { address: "Hwy 3A, Keremeos, BC V0X 1N0", source: "osm" } },
+      { name: "Princeton Municipal Park", location: "Princeton (Similkameen)", badge: "listed",
+        desc: "Town-run campground near the KVR trailhead. Basic facilities. Editorial listing.",
+        checked: [2,4,9], routes: ["Kettle Valley Rail Trail – Princeton Section"],
+        detail: { address: "2 Tulameen Ave, Princeton, BC V0X 1W0", source: "osm" } }
+    ]
+  },
+  {
+    id: "restaurant", tab: "Food & Drink", name: "Food & Drink",
+    description: "Restaurants, cafés, pubs, food trucks, bakeries, wineries, breweries, and tasting rooms.",
+    infoSheet: false,
+    required: [
+      { title: "Bike parking or bike visibility", detail: "Bike rack, public rack, patio visibility, window visibility, or staff-approved area. The listing describes which." },
+      { title: "Water bottle refill", detail: "" },
+      { title: "Washrooms during operating hours", detail: "" }
+    ],
+    optional: [
+      "Takeout", "Packed lunches", "Water without purchase",
+      "Vegetarian / vegan / GF", "Covered bike parking", "Patio bike visibility",
+      "Device charging", "E-bike charging", "Pump", "Wi-Fi"
+    ],
+    examples: [
+      { name: "The Pump House Kitchen", location: "Penticton (Okanagan)", badge: "accredited",
+        desc: "Café 100m from the Okanagan Rail Trail trailhead. Bike rack for 12, packed lunches, 7am opening.",
+        checked: [0,1,2,3,4,5,6,9], routes: ["Okanagan Rail Trail", "Kettle Valley Rail Trail"],
+        detail: { address: "456 Lakeshore Dr, Penticton, BC V2A 1B4", phone: "(250) 555-0198", url: "pumphousekitchen.ca", hours: "7am–3pm daily, Mar–Oct", source: "operator" },
+        notes: { 1: "Order by 9am for same-day pickup", 4: "Under awning, fits loaded touring bikes" } },
+      { name: "Kootenay Brewing Company", location: "Nelson (Kootenays)", badge: "accredited",
+        desc: "Craft brewery with patio bike visibility. Water without purchase. Good vegetarian menu.",
+        checked: [0,2,3,5,6,9], routes: ["Galena Trail"], network: "BC Ale Trail",
+        detail: { address: "310 Latimer St, Nelson, BC V1L 4T6", phone: "(250) 555-0227", url: "kootenaybrewing.ca", hours: "12–9pm daily", source: "operator" } },
+      { name: "Salmon Arm Pie Company", location: "Salmon Arm (Shuswap)", badge: "accredited",
+        desc: "Bakery and café on the Shuswap rail trail. Covered bike parking, packed lunches for the trail.",
+        checked: [0,1,2,4,6,9], routes: ["Shuswap–Columbia Greenway"],
+        detail: { address: "171 Hudson Ave NE, Salmon Arm, BC V1E 4N1", url: "salmonarmpie.ca", hours: "7am–4pm, Tue–Sun", source: "operator" } },
+      { name: "Merridale Cidery", location: "Cobble Hill (Cowichan Valley)", badge: "accredited",
+        desc: "Farm cidery with a bike-friendly patio on the Cowichan Valley Trail. Takeout platters available.",
+        checked: [0,2,3,5,9], routes: ["Cowichan Valley Trail"],
+        detail: { address: "1230 Merridale Rd, Cobble Hill, BC V0R 1L6", phone: "(250) 555-0245", url: "merridalecider.com", hours: "11am–5pm daily", source: "operator" } },
+      { name: "Whistler Brewing Co.", location: "Whistler (Sea to Sky)", badge: "accredited",
+        desc: "Brewpub near the Valley Trail. Window seating with bike visibility. GF options.",
+        checked: [0,3,5,6,7,9], routes: ["Sea to Sky Trail", "Valley Trail"], network: "BC Ale Trail",
+        detail: { address: "1045 Millar Creek Rd, Whistler, BC V8E 0S6", url: "whistlerbrewing.com", source: "osm" } },
+      { name: "Nakusp Waterfront Café", location: "Nakusp (Arrow Lakes)", badge: "listed",
+        desc: "Editorial listing — lakefront café with public rack visible from the street.",
+        checked: [0,2,9], routes: ["Galena Trail – Nakusp Section"],
+        detail: { address: "91 1st St NW, Nakusp, BC V0G 1R0", source: "osm" } },
+      { name: "New Denver Lunch Counter", location: "New Denver (Slocan Valley)", badge: "listed",
+        desc: "Editorial listing — small-town lunch spot on the Galena Trail. Bike rack out front.",
+        checked: [0,2], routes: ["Galena Trail"],
+        detail: { address: "6th Ave, New Denver, BC V0G 1S0", source: "osm" } }
+    ]
+  },
+  {
+    id: "grocery", tab: "Groceries", name: "Groceries & General Stores",
+    description: "Grocery stores, general stores, convenience stores, farm stands, and direct-sale farms.",
+    infoSheet: false,
+    required: [
+      { title: "Bike parking", detail: "A practical place for customers arriving by bike to park." },
+      { title: "Water bottle refill", detail: "" }
+    ],
+    optional: [
+      "Basic groceries", "Hot food", "Washrooms", "Outdoor water tap",
+      "Ice", "Vending machines", "Camping fuel", "Bike rack on site",
+      "Public rack nearby", "Covered bike parking", "Device charging", "E-bike charging", "Pump"
+    ],
+    examples: [
+      { name: "Kaslo General Store", location: "Kaslo (Kootenays)", badge: "accredited",
+        desc: "Historic general store on the Galena Trail. Camp fuel, groceries, ice. Covered bike parking.",
+        checked: [0,1,2,3,4,6,7,9,11,12], routes: ["Galena Trail"],
+        detail: { address: "413 Front St, Kaslo, BC V0G 1M0", phone: "(250) 555-0156", hours: "8am–7pm daily, summer; 9am–5pm winter", source: "operator" } },
+      { name: "Oyama General Store", location: "Oyama (Okanagan)", badge: "accredited",
+        desc: "Lakeside general store on the Okanagan Rail Trail. Hot food, outdoor tap, bike rack.",
+        checked: [0,1,2,3,7,12], routes: ["Okanagan Rail Trail"],
+        detail: { address: "14230 Oyama Rd, Oyama, BC V4V 2B4", hours: "8am–6pm daily", source: "osm" } },
+      { name: "Slocan Village Market", location: "Slocan (Slocan Valley)", badge: "accredited",
+        desc: "Small grocery serving Galena Trail cyclists. Basic supplies, ice, washrooms. Pump out front.",
+        checked: [0,2,4,7,12], routes: ["Galena Trail", "Slocan Valley Rail Trail"],
+        detail: { address: "801 Harold St, Slocan, BC V0G 2C0", phone: "(250) 555-0138", source: "operator" } },
+      { name: "Sicamous IGA", location: "Sicamous (Shuswap)", badge: "accredited",
+        desc: "Full grocery on the Trans Canada. Camping fuel, ice, outdoor water tap.",
+        checked: [0,1,2,3,4,5,6,7], routes: ["Sicamous–Armstrong Rail Trail"],
+        detail: { address: "446 Main St, Sicamous, BC V0E 2V0", phone: "(250) 555-0183", hours: "7am–9pm daily", source: "operator" } },
+      { name: "Salt Spring Saturday Market", location: "Ganges, Salt Spring Island (Gulf Islands)", badge: "accredited",
+        desc: "Seasonal farmers’ market in Ganges. Fresh produce, hot food, public bike racks.",
+        checked: [0,1,8], routes: ["Salt Spring Island Cycling Loop"], network: "BC Farmers’ Market Network",
+        detail: { address: "Centennial Park, Ganges, Salt Spring Island, BC", url: "saltspringmarket.com", hours: "Saturdays 9am–4pm, Apr–Oct", source: "operator" } },
+      { name: "Greenwood Pioneer Market", location: "Greenwood (Boundary Country)", badge: "listed",
+        desc: "Small-town grocery at the halfway point on a Kettle Valley ride. Editorial entry.",
+        checked: [0,2,3,8], routes: ["Trans Canada Trail – Boundary Section"],
+        detail: { address: "214 S Copper St, Greenwood, BC V0H 1J0", source: "osm" } },
+      { name: "Tulameen Corner Store", location: "Tulameen (Similkameen)", badge: "listed",
+        desc: "Tiny general store near the KVR trail. Basic supplies. Editorial listing.",
+        checked: [0,4], routes: ["Kettle Valley Rail Trail – Princeton Section"],
+        detail: { address: "Tulameen, BC V0X 2L0", source: "osm" } }
+    ]
+  },
+  {
+    id: "visitor", tab: "Attractions", name: "Visitor Centres & Attractions",
+    description: "Visitor centres, museums, heritage sites, libraries, rec centres, hot springs, and farmers’ markets.",
+    infoSheet: true,
+    required: [
+      { title: "Bike parking", detail: "" },
+      { title: "Water bottle refill during operating hours", detail: "" },
+      { title: "Washrooms available to cyclists", detail: "" },
+      { title: "Cyclist Info Sheet or equivalent local info", detail: "Local routes, repair options, emergency contacts, hazards, and fallback transport." }
+    ],
+    optional: [
+      "Washrooms", "Showers (drop-in or fee)", "Café or food on site",
+      "Water without admission", "Luggage / bag storage", "Vending machines",
+      "Covered bike parking", "Device charging", "Wi-Fi",
+      "E-bike charging", "Pump", "Discount for arriving by bike"
+    ],
+    examples: [
+      { name: "Kaslo Visitor Centre", location: "Kaslo (Kootenays)", badge: "accredited",
+        desc: "Well-organized visitor centre on the Galena Trail. Cyclist Info Sheet, pump, outdoor water tap.",
+        checked: [0,3,4,6,7,8,10], routes: ["Galena Trail"],
+        detail: { address: "324 Front St, Kaslo, BC V0G 1M0", phone: "(250) 555-0149", url: "kaslo.ca/visitor-centre", hours: "9am–5pm daily, May–Sep", source: "operator" } },
+      { name: "Kettle Valley Steam Railway", location: "Summerland (Okanagan)", badge: "accredited",
+        desc: "Heritage railway on the KVR. Covered bike parking, café, cyclist discount on admission.",
+        checked: [0,2,6,8,11], routes: ["Kettle Valley Rail Trail"],
+        detail: { address: "18404 Bathville Rd, Summerland, BC V0H 1Z0", phone: "(250) 555-0216", url: "kettlevalleyrail.org", hours: "Thu–Mon, 10am–4pm, May–Oct", source: "operator" } },
+      { name: "Ainsworth Hot Springs", location: "Ainsworth (Kootenays)", badge: "accredited",
+        desc: "Hot springs resort popular with Galena Trail cyclists. Showers, café, bag storage.",
+        checked: [0,1,2,4,6,8], routes: ["Galena Trail"],
+        detail: { address: "3609 Hwy 31, Ainsworth Hot Springs, BC V0G 1A0", phone: "(250) 555-0233", url: "ainsworthhotsprings.com", hours: "10am–9:30pm daily", source: "operator" } },
+      { name: "Duncan Totem Poles", location: "Duncan (Cowichan Valley)", badge: "accredited",
+        desc: "Open-air totem pole walking tour in downtown Duncan. Bike racks, water fountain, public washrooms.",
+        checked: [0,3,7,8], routes: ["Cowichan Valley Trail"],
+        detail: { address: "Canada Ave & Station St, Duncan, BC V9L 3R3", source: "osm" } },
+      { name: "Salmon Arm Visitor Centre", location: "Salmon Arm (Shuswap)", badge: "accredited",
+        desc: "Visitor centre at the Shuswap rail trail trailhead. Pump, maps, local cycling info.",
+        checked: [0,3,7,8,10], routes: ["Shuswap–Columbia Greenway"],
+        detail: { address: "20 Hudson Ave NE, Salmon Arm, BC V1E 4N2", phone: "(250) 555-0207", hours: "9am–5pm daily, summer", source: "operator" } },
+      { name: "Revelstoke Public Library", location: "Revelstoke (Columbia Valley)", badge: "listed",
+        desc: "Editorial listing. Washrooms, water fountain, bike rack, free Wi-Fi. Useful mid-ride stop.",
+        checked: [0,3,6,8], routes: ["Big Eddy Loop"],
+        detail: { address: "605 Campbell Ave, Revelstoke, BC V0E 2S0", hours: "10am–6pm Tue–Sat", source: "osm" } },
+      { name: "Penticton Art Gallery", location: "Penticton (Okanagan)", badge: "listed",
+        desc: "Editorial listing — downtown gallery with bike rack and water fountain. Near the rail trail.",
+        checked: [0,3,8], routes: ["Okanagan Rail Trail"],
+        detail: { address: "199 Marina Way, Penticton, BC V2A 1H5", url: "pentictonartgallery.com", source: "osm" } }
+    ]
+  },
+  {
+    id: "bikeshop", tab: "Bike Services", name: "Bike Shops & Guides",
+    description: "Bicycle retail and repair shops, outdoor gear shops with cycling services, and guide/tour operators.",
+    infoSheet: true,
+    required: [
+      { title: "Staff help with urgent mechanicals", detail: "Triage, air, basic advice, same-day help where possible, or a clear referral. A touring cyclist in trouble is not turned away." },
+      { title: "Pump available", detail: "A floor pump accessible to visiting cyclists." },
+      { title: "Cyclist Info Sheet available", detail: "" }
+    ],
+    optional: [
+      "Walk-in repairs", "Same-day urgent repairs", "Touring parts stocked",
+      "E-bike service", "Bike boxes / packing", "Shipping bikes",
+      "Bike rentals", "Shuttle / trip support", "Guided rides",
+      "DIY stand", "Washrooms", "Water bottle refill", "Device charging", "E-bike charging"
+    ],
+    examples: [
+      { name: "Okanagan Cycle Works", location: "Kelowna (Okanagan)", badge: "accredited",
+        desc: "Full-service shop near Mission Creek Greenway. Touring builds a specialty. DIY stand out front.",
+        checked: [0,1,2,3,5,6,9,10,11,12,13], routes: ["Okanagan Rail Trail", "Mission Creek Greenway"],
+        detail: { address: "2949 Pandosy St, Kelowna, BC V1Y 1W1", phone: "(250) 555-0162", url: "okanagancycleworks.ca", hours: "9am–5:30pm Mon–Sat", source: "operator" } },
+      { name: "Revelstoke Bike & Nordic", location: "Revelstoke (Columbia Valley)", badge: "accredited",
+        desc: "Year-round shop. Touring parts, same-day urgent repairs, bike shipping for end-of-trip tourists.",
+        checked: [0,1,2,3,4,5,10,11], routes: ["Big Eddy Loop", "Revelstoke–Mica Creek"],
+        detail: { address: "118 Mackenzie Ave, Revelstoke, BC V0E 2S0", phone: "(250) 555-0201", url: "revelstokebike.com", hours: "9am–5pm daily, summer; Tue–Sat winter", source: "operator" } },
+      { name: "Penticton Bike Barn", location: "Penticton (Okanagan)", badge: "accredited",
+        desc: "KVR trail specialist. Rentals, shuttle service to Naramata, touring parts stocked.",
+        checked: [0,1,2,6,7,9,10,11], routes: ["Kettle Valley Rail Trail", "Okanagan Rail Trail"],
+        partner: true,
+        detail: { address: "789 Main St, Penticton, BC V2A 5C2", phone: "(250) 555-0177", url: "pentictonbikebarn.ca", hours: "9am–5pm daily, Apr–Oct", source: "operator" },
+        notes: { 6: "Road, gravel, and e-bikes", 7: "Naramata shuttle daily at 9am, May–Oct" } },
+      { name: "Island Cycle Tours", location: "Salt Spring Island (Gulf Islands)", badge: "accredited",
+        desc: "Guided and self-guided island tours. E-bike rentals. Bike boxes and shipping available.",
+        checked: [3,4,5,6,8,11,13], routes: ["Salt Spring Island Cycling Loop", "Gulf Islands Hopper"],
+        partner: true,
+        detail: { phone: "(250) 555-0258", url: "islandcycletours.ca", source: "operator" } },
+      { name: "Squamish Bike Co.", location: "Squamish (Sea to Sky)", badge: "accredited",
+        desc: "Trail and touring shop on Cleveland Ave. Walk-in repairs, e-bike service, water refills.",
+        checked: [0,1,3,10,11,12,13], routes: ["Sea to Sky Trail"],
+        detail: { address: "38018 Cleveland Ave, Squamish, BC V8B 0A7", phone: "(604) 555-0119", url: "squamishbikeco.ca", hours: "10am–6pm daily", source: "operator" } },
+      { name: "Nelson Cycle Repair", location: "Nelson (Kootenays)", badge: "listed",
+        desc: "Editorial listing — small repair shop that appears to serve touring cyclists.",
+        checked: [0,1,10,11], routes: ["Galena Trail"],
+        detail: { address: "524 Baker St, Nelson, BC V1L 4H9", source: "osm" } },
+      { name: "Duncan Bike Hub", location: "Duncan (Cowichan Valley)", badge: "listed",
+        desc: "Editorial listing — community bike hub with pump, tools, and basic parts.",
+        checked: [0,2,9,11], routes: ["Cowichan Valley Trail"],
+        detail: { address: "330 Duncan St, Duncan, BC V9L 3W4", phone: "(250) 555-0271", source: "osm" } }
+    ]
+  },
+  {
+    id: "transport", tab: "Transport", name: "Transport & Shuttles",
+    description: "Buses, shuttles, ferries, taxis, luggage transfer, and bike transport services.",
+    infoSheet: false,
+    required: [
+      { title: "Accommodates bicycles", detail: "Transports cyclists with bikes, or handles luggage/unaccompanied bicycles. Listing explains capacity, booking, fees, and packaging." }
+    ],
+    optional: [
+      "Passenger + bike", "Walk-on bikes", "Advance booking required",
+      "Reservations", "Bike fee applies", "Unboxed bikes OK",
+      "Boxed bikes OK", "Bagged bikes OK", "E-bikes OK",
+      "Trailers OK", "Luggage transfer", "Unaccompanied bike transport",
+      "Interior transport", "Exterior rack"
+    ],
+    examples: [
+      { name: "Boundary Country Shuttle", location: "Grand Forks (Boundary Country)", badge: "accredited",
+        desc: "Point-to-point shuttle for KVR cyclists. Unboxed bikes on exterior trailer. Luggage transfer available.",
+        checked: [0,1,3,5,8,9,10,11,13], routes: ["Kettle Valley Rail Trail", "Trans Canada Trail – Boundary Section"],
+        detail: { phone: "(250) 555-0244", url: "boundarycountryshuttle.ca", hours: "By reservation, May–Oct", source: "operator" } },
+      { name: "Penticton Pedal Shuttle", location: "Penticton (Okanagan)", badge: "accredited",
+        desc: "Shuttle service running Penticton to Summerland and Naramata. Unboxed bikes, e-bikes welcome.",
+        checked: [0,1,5,8,13], routes: ["Kettle Valley Rail Trail", "Okanagan Rail Trail"],
+        partner: true,
+        detail: { address: "Penticton, BC", phone: "(250) 555-0211", url: "pedalpenticton.ca", hours: "By reservation, May–Oct", source: "operator" },
+        notes: { 0: "May–Oct only", 8: "Weight limit 25kg per e-bike", 13: "Thule rack, 4 bike max" } },
+      { name: "Cowichan Valley Bike Bus", location: "Duncan (Cowichan Valley)", badge: "accredited",
+        desc: "Seasonal shuttle connecting Duncan, Lake Cowichan, and the Cowichan Valley Trail. Reservations required.",
+        checked: [0,2,3,5,8,13], routes: ["Cowichan Valley Trail"],
+        detail: { phone: "(250) 555-0289", url: "cowichanbikebus.ca", hours: "Jun–Sep, departures 9am & 2pm", source: "operator" } },
+      { name: "Kootenay Lake Ferry", location: "Balfour / Kootenay Bay (Kootenays)", badge: "accredited",
+        desc: "Free government ferry. Walk-on bikes, no booking needed. Essential Kootenay Lake crossing.",
+        checked: [0,1,5,8], routes: ["Galena Trail"],
+        detail: { url: "gov.bc.ca/kootenaylakeferry", hours: "Hourly sailings, 6am–10pm", source: "osm" } },
+      { name: "Gulf Islands Water Taxi", location: "Salt Spring Island (Gulf Islands)", badge: "accredited",
+        desc: "Inter-island water taxi accepting bikes. Advance booking required. Seasonal schedule.",
+        checked: [0,1,2,4,8], routes: ["Gulf Islands Hopper"],
+        detail: { phone: "(250) 555-0267", url: "gulfislandswatertaxi.com", source: "operator" },
+        notes: { 0: "Jun–Sep only", 4: "$5 per bike", 8: "Call ahead for e-bikes over 25kg" } },
+      { name: "Arrow Lakes Ferry", location: "Galena Bay / Shelter Bay", badge: "listed",
+        desc: "Editorial listing — free cable ferry. Walk-on cyclists, no booking. Essential Galena Trail crossing.",
+        checked: [0,1,5,8], routes: ["Galena Trail"],
+        detail: { hours: "Every 30 min, 5am–10pm", source: "osm" } },
+      { name: "BC Ferries — Tsawwassen to Swartz Bay", location: "Tsawwassen / Swartz Bay", badge: "listed",
+        desc: "Editorial listing — major ferry route serving Gulf Islands and Vancouver Island cycling.",
+        checked: [0,1,4,5,8,12], routes: ["Gulf Islands Hopper", "Cowichan Valley Trail"],
+        detail: { url: "bcferries.com", source: "osm" } }
+    ]
+  }
+];
+
+var currentCatId = "hotel";
+var searchText = "";
+var activeFilters = [];
+var showDemo = true;
+
+function isDemo(ex) { return !ex.real; }
+
+function toggleDemo() {
+  showDemo = !showDemo;
+  document.querySelectorAll(".demo-cb").forEach(function(cb) { cb.checked = showDemo; });
+  var cat = getCat();
+  if (currentView === "category") { updateFilterPills(cat); updateListings(cat); }
+  if (currentView === "route") renderRouteCard();
+  if (currentView === "all") updateAllListings();
+  updateHash();
+}
+
+function setCat(id) {
+  currentCatId = id; searchText = ""; activeFilters = [];
+  document.querySelectorAll(".cat-btn").forEach(function(btn) { btn.classList.toggle("active", btn.dataset.cat === id); });
+  renderAll();
+  updateHash();
+}
+function getCat() { return categories.find(function(c) { return c.id === currentCatId; }); }
+
+function renderCategoryNav() {
+  document.getElementById("category-nav").innerHTML = categories.map(function(c) {
+    return '<button class="cat-btn' + (c.id === currentCatId ? ' active' : '') + '" data-cat="' + c.id + '" onclick="setCat(\x27' + c.id + '\x27)">' + c.tab + '</button>';
+  }).join("");
+}
+
+function renderAll() {
+  var cat = getCat();
+  document.getElementById("criteria-card").innerHTML = renderCriteria(cat);
+  renderExamplesCard(cat);
+  positionTooltips();
+}
+
+function positionTooltips() {
+  document.querySelectorAll(".tooltip-wrap").forEach(function(wrap) {
+    wrap.addEventListener("mouseenter", function() {
+      var tip = wrap.querySelector(".tooltip-text");
+      if (!tip) return;
+      var rect = wrap.getBoundingClientRect();
+      tip.style.left = Math.min(rect.left, window.innerWidth - 330) + "px";
+      tip.style.top = (rect.bottom + 6) + "px";
+    });
+  });
+}
+
+function renderCriteria(cat) {
+  var reqItems = cat.required.map(function(r) {
+    var tip = "";
+    if (r.title.indexOf("Info Sheet") !== -1 && cat.infoSheet) {
+      tip = '<span class="tooltip-text">A short local info sheet covering:<br><br>' + INFO_FIELDS.map(function(f) { return "• " + f; }).join("<br>") + '</span>';
+    } else if (r.detail) {
+      tip = '<span class="tooltip-text">' + r.detail + '</span>';
+    }
+    if (tip) return '<li class="required-item"><span class="req-check">✓</span><span class="tooltip-wrap">' + r.title + tip + '</span></li>';
+    return '<li class="required-item"><span class="req-check">✓</span><span class="req-title">' + r.title + '</span></li>';
+  }).join("");
+  var pills = cat.optional.map(function(o) { return '<span class="opt-pill">' + o + '</span>'; }).join("");
+  return '<div class="cat-header"><h2>' + cat.name + '</h2><p>' + cat.description + '</p></div>' +
+    '<div class="criteria-toggle" onclick="document.getElementById(\x27criteria-body\x27).classList.toggle(\x27open\x27);this.querySelector(\x27.arrow\x27).classList.toggle(\x27open\x27)">' +
+    '<span class="arrow">▸</span> View required criteria and optional amenities (' + cat.required.length + ' required, ' + cat.optional.length + ' optional)' +
+    '</div>' +
+    '<div class="criteria-body" id="criteria-body">' +
+      '<div class="two-col"><div class="col-left"><div class="section-label">Required <span class="count">· ' + cat.required.length + '</span></div>' +
+      '<ul class="required-list">' + reqItems + '</ul></div>' +
+      '<div class="col-right"><div class="section-label">Optional <span class="count">· ' + cat.optional.length + ' amenities</span></div>' +
+      '<div class="optional-pills">' + pills + '</div></div></div>' +
+    '</div>';
+}
+
+function renderExamplesCard(cat) {
+  var el = document.getElementById("examples-card");
+  el.innerHTML = '<div class="examples-toolbar"><h3>Listings</h3>' +
+    '<div class="legend">' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span><span class="legend-tip">Member of a sector partner network like the BC Ale Trail or BC Farmers' + "'" + ' Market Network. Their network has partnered with BC By Bike to co-brand cycle-friendly member businesses.</span></span>' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span><span class="legend-tip">Cycling industry business with an enhanced listing — logo, photos, and promoted placement. Supports BC By Bike through the industry partner program.</span></span>' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span><span class="legend-tip">Business has confirmed all required criteria and joined the We Welcome Cyclists program. Free to join.</span></span>' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Listed\x27)"><span class="badge badge-listed">Listed</span><span class="legend-tip">Editorial entry — meets basic criteria but hasn' + "'" + 't formally enrolled in the program yet.</span></span>' +
+    '</div></div>' +
+    '<div class="filter-bar"><div class="filter-bar-top"><label>Filter</label>' +
+    '<input type="text" id="search-box" class="search-input" placeholder="Search name, location, route, amenity, or badge…" oninput="onSearch(this.value)" />' +
+    '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
+    '</div><div class="filter-pills-row" id="filter-pills-row"></div></div>' +
+    '<div id="results-count-area"></div><div id="listings-area"></div>' +
+    '<div class="click-hint">Click a listing to see full details</div>';
+  updateFilterPills(cat);
+  updateListings(cat);
+}
+
+function updateFilterPills(cat) {
+  var pills = cat.optional.map(function(opt, idx) {
+    var a = activeFilters.indexOf(idx) !== -1;
+    return '<span class="filter-pill' + (a ? ' active' : '') + '" onclick="toggleFilter(' + idx + ')">' + opt + '</span>';
+  }).join("");
+  var clear = (activeFilters.length > 0 || searchText.length > 0) ? '<span class="clear-filters" onclick="clearAll()">Clear all</span>' : '';
+  document.getElementById("filter-pills-row").innerHTML = pills + clear;
+}
+
+function updateListings(cat) {
+  var filtered = getSortedFiltered(cat);
+  var hasF = activeFilters.length > 0 || searchText.length > 0;
+  document.getElementById("results-count-area").innerHTML = hasF ? '<div class="results-count">Showing ' + filtered.length + ' of ' + cat.examples.length + '</div>' : '';
+  if (filtered.length === 0) {
+    document.getElementById("listings-area").innerHTML = '<div class="no-results">No listings match your filters. <a onclick="clearAll()">Clear all</a></div>';
+    return;
+  }
+  document.getElementById("listings-area").innerHTML = '<div class="listings-body">' + filtered.map(function(ex) {
+    return renderListingCardHTML(cat, ex);
+  }).join("") + '</div>';
+}
+
+function getSortedFiltered(cat) {
+  var list = cat.examples.slice();
+  if (!showDemo) list = list.filter(function(ex) { return !isDemo(ex); });
+  if (activeFilters.length > 0) list = list.filter(function(ex) { return activeFilters.every(function(f) { return ex.checked.indexOf(f) !== -1; }); });
+  if (searchText.length > 0) {
+    var q = searchText.toLowerCase();
+    list = list.filter(function(ex) {
+      var amenityMatch = cat.optional.some(function(opt, i) {
+        return ex.checked.indexOf(i) !== -1 && opt.toLowerCase().indexOf(q) !== -1;
+      });
+      var badgeMatch = (ex.network && ex.network.toLowerCase().indexOf(q) !== -1) ||
+        (ex.partner && "industry partner".indexOf(q) !== -1) ||
+        (ex.badge && ex.badge.toLowerCase().indexOf(q) !== -1) ||
+        ((ex.network) && "sector partner".indexOf(q) !== -1);
+      return ex.name.toLowerCase().indexOf(q) !== -1 || ex.location.toLowerCase().indexOf(q) !== -1 || ex.desc.toLowerCase().indexOf(q) !== -1 || (ex.routes && ex.routes.some(function(r) { return r.toLowerCase().indexOf(q) !== -1; })) || amenityMatch || badgeMatch;
+    });
+  }
+  function sortRank(ex) { if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; return 3; }
+  list.sort(function(a, b) { var ra = sortRank(a), rb = sortRank(b); if (ra !== rb) return ra - rb; return a.name.localeCompare(b.name); });
+  return list;
+}
+
+function toggleFilter(idx) {
+  var p = activeFilters.indexOf(idx);
+  if (p === -1) activeFilters.push(idx); else activeFilters.splice(p, 1);
+  var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateHash();
+}
+function onSearch(val) { searchText = val; var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateHash(); }
+function filterByBadge(term) {
+  if (currentView === "category") {
+    searchText = (searchText === term) ? "" : term;
+    var box = document.getElementById("search-box"); if (box) box.value = searchText;
+    var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateHash();
+  } else if (currentView === "all") {
+    allSearchText = (allSearchText === term) ? "" : term;
+    var abox = document.getElementById("all-search-box"); if (abox) abox.value = allSearchText;
+    updateAllListings(); updateHash();
+  }
+}
+function clearAll() {
+  searchText = ""; activeFilters = [];
+  var box = document.getElementById("search-box"); if (box) box.value = "";
+  var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateHash();
+}
+
+function openModal(catId, exIdx) {
+  var cat = categories.find(function(c) { return c.id === catId; });
+  var ex = cat.examples[exIdx];
+  var badges = '';
+  if (ex.network) badges += '<span class="badge badge-sector">' + ex.network + '</span>';
+  if (ex.partner) badges += '<span class="badge badge-industry">Industry Partner</span>';
+  if (ex.badge === "accredited") badges += '<span class="badge badge-accredited">Accredited</span>';
+  else badges += '<span class="badge badge-listed">Listed</span>';
+
+  var detailHTML = '';
+  if (ex.detail) {
+    var sourceTag = ex.detail.source === "osm" ? '<div style="font-size:11px;color:#999;margin-top:10px;font-style:italic">Data via OpenStreetMap</div>' :
+      (ex.detail.source === "operator" ? '<div style="font-size:11px;color:#999;margin-top:10px;font-style:italic">Data from operator</div>' : '');
+    detailHTML = '<div class="modal-section"><div class="modal-section-title">Contact & Details</div><div class="modal-detail-grid">' +
+      (ex.detail.address ? '<div class="modal-detail-item"><div class="label">Address</div><div class="value">' + ex.detail.address + '</div></div>' : '') +
+      (ex.detail.phone ? '<div class="modal-detail-item"><div class="label">Phone</div><div class="value">' + ex.detail.phone + '</div></div>' : '') +
+      (ex.detail.url ? '<div class="modal-detail-item"><div class="label">Website</div><div class="value"><a href="#">' + ex.detail.url + '</a></div></div>' : '') +
+      (ex.detail.hours ? '<div class="modal-detail-item"><div class="label">Hours</div><div class="value">' + ex.detail.hours + '</div></div>' : '') +
+      '</div>' + sourceTag + '</div>';
+  }
+
+  var photoHTML = '';
+
+  var routesHTML = '';
+  if (ex.routes && ex.routes.length > 0) {
+    routesHTML = '<div class="modal-section"><div class="modal-section-title">Routes nearby</div><div class="modal-routes">' +
+      ex.routes.map(function(r) { return '<div class="route-tag">🚴 ' + r + '<span class="coming">Route detail coming soon</span></div>'; }).join("") +
+      '</div></div>';
+  }
+
+  var notesList = [];
+  var pills = cat.optional.map(function(opt, i) {
+    var has = ex.checked.indexOf(i) !== -1;
+    var star = '';
+    if (has && ex.notes && ex.notes[i]) { star = '<span class="note-star">*</span>'; notesList.push({ name: opt, note: ex.notes[i] }); }
+    return '<span class="' + (has ? 'modal-pill-yes' : 'modal-pill-no') + '">' + opt + star + '</span>';
+  }).join("");
+  var notesHTML = '';
+  if (notesList.length > 0) {
+    notesHTML = '<div class="modal-notes">' + notesList.map(function(n) {
+      return '<div class="modal-note-item"><strong>' + n.name + '</strong> — ' + n.note + '</div>';
+    }).join("") + '</div>';
+  }
+
+  var verifyHTML = '';
+  if (ex.badge !== "accredited" && ex.detail && ex.detail.source === "osm") {
+    verifyHTML = '<div class="verify-banner">Amenities assumed from location and public data. <a href="#">Confirm or update this listing</a></div>';
+  }
+
+  document.getElementById("modal-content").innerHTML =
+    '<div class="modal-header"><div class="modal-header-left">' +
+      '<div class="modal-title">' + ex.name + '</div>' +
+      '<div class="modal-location">' + ex.location + '</div>' +
+      (ex.network ? '<div class="modal-network">Member of ' + ex.network + '</div>' : '') +
+      '<div class="modal-badges">' + badges + '</div>' +
+    '</div><button class="modal-close" onclick="closeModal()">×</button></div>' +
+    '<div class="modal-body">' +
+      verifyHTML +
+      '<div class="modal-section"><div class="modal-section-title">Amenities</div><div class="modal-pills">' + pills + '</div>' + notesHTML + '</div>' +
+      photoHTML +
+      '<div class="modal-section"><div class="modal-section-title">About</div><div class="modal-desc">' + ex.desc + '</div></div>' +
+      detailHTML +
+      routesHTML +
+    '</div>';
+  document.getElementById("modal-overlay").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  document.getElementById("modal-overlay").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", function(e) { if (e.key === "Escape") closeModal(); });
+
+// ---- VIEW SWITCHING ----
+var currentView = "category";
+var currentRoute = "";
+var allSearchText = "";
+var allFilters = [];
+
+function setView(v) {
+  currentView = v;
+  document.querySelectorAll(".view-toggle button").forEach(function(btn, i) {
+    btn.classList.toggle("active", (i === 0 && v === "category") || (i === 1 && v === "route") || (i === 2 && v === "all"));
+  });
+  document.getElementById("view-category").style.display = v === "category" ? "" : "none";
+  document.getElementById("view-route").style.display = v === "route" ? "" : "none";
+  document.getElementById("view-all").style.display = v === "all" ? "" : "none";
+  if (v === "route") renderRouteView();
+  if (v === "all") renderAllView();
+  updateHash();
+}
+
+// ---- ROUTE VIEW ----
+function getRoutesWithCounts() {
+  var routeMap = {};
+  categories.forEach(function(cat) {
+    cat.examples.forEach(function(ex) {
+      if (ex.routes) ex.routes.forEach(function(r) { routeMap[r] = (routeMap[r] || 0) + 1; });
+    });
+  });
+  return Object.keys(routeMap).sort().map(function(r) { return { name: r, count: routeMap[r] }; });
+}
+
+function renderRouteView() {
+  var routes = getRoutesWithCounts();
+  if (!currentRoute) currentRoute = routes[0].name;
+  document.getElementById("route-selector").innerHTML =
+    '<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">' +
+    '<select class="route-select" onchange="currentRoute=this.value;renderRouteCard();updateHash()">' +
+    routes.map(function(r) { return '<option value="' + r.name + '"' + (r.name === currentRoute ? ' selected' : '') + '>' + r.name + ' (' + r.count + ')</option>'; }).join("") +
+    '</select>' +
+    '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
+    '</div>';
+  renderRouteCard();
+}
+
+function renderRouteCard() {
+  var groups = [];
+  categories.forEach(function(cat) {
+    var matches = cat.examples.filter(function(ex) {
+      if (!showDemo && isDemo(ex)) return false;
+      return ex.routes && ex.routes.indexOf(currentRoute) !== -1;
+    });
+    matches.sort(function(a, b) {
+      function rank(ex) { if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; return 3; }
+      var ra = rank(a), rb = rank(b); if (ra !== rb) return ra - rb; return a.name.localeCompare(b.name);
+    });
+    if (matches.length > 0) groups.push({ cat: cat, matches: matches });
+  });
+
+  var total = groups.reduce(function(s, g) { return s + g.matches.length; }, 0);
+  var header = '<div class="route-header"><h2>🚴 ' + currentRoute + '</h2>' +
+    '<p>' + total + ' listing' + (total !== 1 ? 's' : '') + ' along this route</p></div>';
+
+  var body = groups.map(function(g) {
+    var cards = g.matches.map(function(ex) {
+      return renderListingCardHTML(g.cat, ex);
+    }).join("");
+    return '<div class="route-cat-group"><div class="route-cat-label">' + g.cat.name + '</div>' + cards + '</div>';
+  }).join("");
+
+  document.getElementById("route-card").innerHTML = header + (body || '<div class="no-results">No listings found for this route.</div>');
+}
+
+// ---- ALL LISTINGS VIEW ----
+var allViewInitialized = false;
+function renderAllView() {
+  if (!allViewInitialized) { allViewInitialized = true; }
+  else { allSearchText = ""; allFilters = []; }
+  var el = document.getElementById("all-card");
+  el.innerHTML =
+    '<div class="examples-toolbar"><h3>All Listings</h3>' +
+    '<div class="legend">' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span></span>' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span></span>' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span></span>' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Listed\x27)"><span class="badge badge-listed">Listed</span></span>' +
+    '</div></div>' +
+    '<div class="filter-bar"><div class="filter-bar-top"><label>Filter</label>' +
+    '<input type="text" id="all-search-box" class="search-input" placeholder="Search name, location, route, amenity, or badge…" oninput="onAllSearch(this.value)" />' +
+    '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
+    '</div></div>' +
+    '<div id="all-count-area"></div><div id="all-listings-area"></div>';
+  updateAllListings();
+}
+
+function getAllListings() {
+  var all = [];
+  categories.forEach(function(cat) {
+    cat.examples.forEach(function(ex) {
+      if (!showDemo && isDemo(ex)) return;
+      all.push({ cat: cat, ex: ex });
+    });
+  });
+  if (allSearchText.length > 0) {
+    var q = allSearchText.toLowerCase();
+    all = all.filter(function(item) {
+      var ex = item.ex;
+      var amenityMatch = item.cat.optional.some(function(opt, i) {
+        return ex.checked.indexOf(i) !== -1 && opt.toLowerCase().indexOf(q) !== -1;
+      });
+      var badgeMatch = (ex.network && ex.network.toLowerCase().indexOf(q) !== -1) ||
+        (ex.partner && "industry partner".indexOf(q) !== -1) ||
+        (ex.badge && ex.badge.toLowerCase().indexOf(q) !== -1) ||
+        ((ex.network || ex.partner) && "sector partner".indexOf(q) !== -1 && ex.network);
+      return ex.name.toLowerCase().indexOf(q) !== -1 ||
+             ex.location.toLowerCase().indexOf(q) !== -1 ||
+             ex.desc.toLowerCase().indexOf(q) !== -1 ||
+             (ex.routes && ex.routes.some(function(r) { return r.toLowerCase().indexOf(q) !== -1; })) ||
+             item.cat.name.toLowerCase().indexOf(q) !== -1 ||
+             amenityMatch || badgeMatch;
+    });
+  }
+  all.sort(function(a, b) {
+    function rank(ex) { if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; return 3; }
+    var ra = rank(a.ex), rb = rank(b.ex); if (ra !== rb) return ra - rb; return a.ex.name.localeCompare(b.ex.name);
+  });
+  return all;
+}
+
+function updateAllListings() {
+  var all = getAllListings();
+  var totalAll = 0;
+  categories.forEach(function(c) { totalAll += c.examples.length; });
+  var hasF = allSearchText.length > 0;
+  document.getElementById("all-count-area").innerHTML = hasF ? '<div class="results-count">Showing ' + all.length + ' of ' + totalAll + '</div>' : '<div class="results-count">' + totalAll + ' listings across all categories</div>';
+  if (all.length === 0) {
+    document.getElementById("all-listings-area").innerHTML = '<div class="no-results">No listings match your search. <a onclick="clearAllSearch()">Clear</a></div>';
+    return;
+  }
+  document.getElementById("all-listings-area").innerHTML = '<div class="listings-body">' + all.map(function(item) {
+    return renderListingCardHTML(item.cat, item.ex, true);
+  }).join("") + '</div>';
+}
+
+function onAllSearch(val) { allSearchText = val; updateAllListings(); updateHash(); }
+function clearAllSearch() { allSearchText = ""; var box = document.getElementById("all-search-box"); if (box) box.value = ""; updateAllListings(); updateHash(); }
+
+// ---- SHARED LISTING CARD RENDERER ----
+function renderListingCardHTML(cat, ex, showCatTag) {
+  var idx = cat.examples.indexOf(ex);
+  var badges = '';
+  if (ex.network) badges += '<span class="badge badge-sector">' + ex.network + '</span>';
+  if (ex.partner) badges += '<span class="badge badge-industry">Industry Partner</span>';
+  if (ex.badge === "accredited") badges += '<span class="badge badge-accredited">Accredited</span>';
+  else badges += '<span class="badge badge-listed">Listed</span>';
+  var borderClass = ex.partner ? 'is-industry' : (ex.network ? 'is-sector' : (ex.badge === 'accredited' ? 'is-accredited' : 'is-listed'));
+  var catTag = showCatTag ? '<span class="cat-tag">' + cat.tab + '</span>' : '';
+  var demoTag = isDemo(ex) ? '<span class="demo-tag">demo</span>' : '';
+  var demoClass = isDemo(ex) ? ' is-demo' : '';
+  var pills = cat.optional.map(function(opt, i) {
+    var has = ex.checked.indexOf(i) !== -1;
+    var star = (ex.notes && ex.notes[i]) ? '<span class="note-star">*</span>' : '';
+    if (has) return '<span class="pill pill-yes">' + opt + star + '</span>';
+    return '<span class="pill pill-no">' + opt + '</span>';
+  }).join("");
+  return '<div class="listing-card ' + borderClass + demoClass + '" onclick="openModal(\x27' + cat.id + '\x27,' + idx + ')">' +
+    '<div class="listing-top"><div><div class="listing-name">' + ex.name + catTag + demoTag + '</div>' +
+    '<div class="listing-location">' + ex.location + '</div></div>' +
+    '<div class="listing-badges">' + badges + '</div></div>' +
+    '<div class="listing-desc">' + ex.desc + '</div>' +
+    '<div class="amenities-label">Amenities</div><div class="amenity-pills">' + pills + '</div></div>';
+}
+
+// ---- URL HASH STATE ----
+function updateHash() {
+  var parts = [];
+  parts.push("view=" + currentView);
+  if (!showDemo) parts.push("demo=0");
+  if (currentView === "category") {
+    parts.push("cat=" + currentCatId);
+    if (searchText) parts.push("q=" + encodeURIComponent(searchText));
+    if (activeFilters.length > 0) parts.push("f=" + activeFilters.join(","));
+  } else if (currentView === "route") {
+    if (currentRoute) parts.push("route=" + encodeURIComponent(currentRoute));
+  } else if (currentView === "all") {
+    if (allSearchText) parts.push("q=" + encodeURIComponent(allSearchText));
+  }
+  history.replaceState(null, "", "#" + parts.join("&"));
+}
+
+function readHash() {
+  var hash = location.hash.replace(/^#/, "");
+  if (!hash) return;
+  var params = {};
+  hash.split("&").forEach(function(pair) {
+    var kv = pair.split("=");
+    if (kv.length === 2) params[kv[0]] = decodeURIComponent(kv[1]);
+  });
+  if (params.view) currentView = params.view;
+  if (params.demo === "0") showDemo = false;
+  if (params.cat) currentCatId = params.cat;
+  if (params.route) currentRoute = params.route;
+  if (params.view === "category") {
+    if (params.q) searchText = params.q;
+    if (params.f) activeFilters = params.f.split(",").map(Number);
+  } else if (params.view === "all") {
+    if (params.q) allSearchText = params.q;
+  }
+}
+
+readHash();
+var _savedSearch = searchText;
+var _savedFilters = activeFilters.slice();
+var _savedAllSearch = allSearchText;
+renderCategoryNav();
+renderAll();
+setView(currentView);
+if (currentView === "category") {
+  searchText = _savedSearch;
+  activeFilters = _savedFilters;
+  var box = document.getElementById("search-box");
+  if (box) box.value = searchText;
+  var cat = getCat();
+  updateFilterPills(cat);
+  updateListings(cat);
+}
+if (currentView === "all") {
+  allSearchText = _savedAllSearch;
+  var abox = document.getElementById("all-search-box");
+  if (abox) abox.value = allSearchText;
+  updateAllListings();
+}
+</script>
+</body>
+</html>
