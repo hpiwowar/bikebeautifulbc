@@ -291,7 +291,7 @@ var categories = [
       { title: "Secure indoor bike storage", detail: "Locked room, garage, bikes in guest rooms, storage shed, or staff-controlled storage." },
       { title: "Storage described in the listing", detail: "Cyclists know what to expect before they arrive." },
       { title: "Staff know the bike procedure", detail: "Front desk staff know where bikes go and what to do with loaded touring bikes, e-bikes, or trailers." },
-      { title: "Cyclist Info Sheet available", detail: "" }
+      { title: "Cyclist Local Info Sheet available", detail: "" }
     ],
     optional: [
       "Min-stay waived", "Laundry", "Drying area", "Early or packed breakfast",
@@ -343,7 +343,7 @@ var categories = [
       { title: "Space policy for cyclists", detail: "Must accommodate cyclists arriving by bike for one night — hiker/biker sites, overflow tenting, or similar. Groups up to six." },
       { title: "Bike parking or tent-side policy", detail: "Cyclists need to know where to keep their bike overnight — rack near the gate, tent-side, or another clear arrangement." },
       { title: "Staff know the arrival procedure", detail: "Staff can direct arriving cyclists to the right spot." },
-      { title: "Cyclist Info Sheet available", detail: "" }
+      { title: "Cyclist Local Info Sheet available", detail: "" }
     ],
     optional: [
       "Min-stay waived", "Hiker/biker sites", "Potable water", "Showers",
@@ -494,7 +494,7 @@ var categories = [
       { title: "Bike parking", detail: "" },
       { title: "Water bottle refill during operating hours", detail: "" },
       { title: "Washrooms available to cyclists", detail: "" },
-      { title: "Cyclist Info Sheet or equivalent local info", detail: "Local routes, repair options, emergency contacts, hazards, and fallback transport." }
+      { title: "Cyclist Local Info Sheet or equivalent local info", detail: "Local routes, repair options, emergency contacts, hazards, and fallback transport." }
     ],
     optional: [
       "Washrooms", "Showers (drop-in or fee)", "Café or food on site",
@@ -542,7 +542,7 @@ var categories = [
     required: [
       { title: "Staff help with urgent mechanicals", detail: "Triage, air, basic advice, same-day help where possible, or a clear referral. A touring cyclist in trouble is not turned away." },
       { title: "Pump available", detail: "A floor pump accessible to visiting cyclists." },
-      { title: "Cyclist Info Sheet available", detail: "" }
+      { title: "Cyclist Local Info Sheet available", detail: "" }
     ],
     optional: [
       "Walk-in repairs", "Same-day urgent repairs", "Touring parts stocked",
@@ -722,7 +722,7 @@ function renderExamplesCard(cat) {
     '<div class="legend">' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span><span class="legend-tip">Member of a sector partner network like the BC Ale Trail or BC Farmers' + "'" + ' Market Network. Their network has partnered with BC Cycle Tourism Society to co-brand cycle-friendly member businesses.</span></span>' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span><span class="legend-tip">Cycling industry business with an enhanced listing — logo, photos, and promoted placement. Supports BC Cycle Tourism Society through the industry partner program.</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span><span class="legend-tip">Business has confirmed all required criteria and joined the We Welcome Cyclists program. Free to join.</span></span>' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span><span class="legend-tip">Business has confirmed all required criteria and joined the We Welcome Cyclists program. Free to join. Apply at apply.html</span></span>' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Listed\x27)"><span class="badge badge-listed">Listed</span><span class="legend-tip">Editorial entry — meets basic criteria but hasn' + "'" + 't formally enrolled in the program yet.</span></span>' +
     '</div></div>' +
     '<div class="filter-bar"><div class="filter-bar-top"><label>Filter</label>' +
@@ -730,7 +730,8 @@ function renderExamplesCard(cat) {
     '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
     '</div><div class="filter-pills-row" id="filter-pills-row"></div></div>' +
     '<div id="results-count-area"></div><div id="listings-area"></div>' +
-    '<div class="click-hint">Click a listing to see full details</div>';
+    '<div class="click-hint">Click a listing to see full details</div>' +
+    '<div style="text-align:center;padding:16px 36px 24px;"><a href="apply.html" style="font-size:13px;color:#2E8A36;font-weight:600;text-decoration:none;">Run a business on a cycling route? Apply for accreditation &rarr;</a></div>';
   updateFilterPills(cat);
   updateListings(cat);
 }
