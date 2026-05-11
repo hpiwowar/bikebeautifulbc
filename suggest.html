@@ -51,10 +51,8 @@ body {
 .req-section-title { font-size: 13px; font-weight: 600; color: #1F514C; margin-bottom: 4px; }
 .req-section-hint { font-size: 12px; color: #999; margin-bottom: 12px; }
 .req-question { padding: 10px 12px; background: #F8FBF9; border: 1px solid #E5E7EB; border-radius: 8px; margin-bottom: 8px; position: relative; }
-.req-question-text { font-size: 13px; color: #374151; margin-bottom: 6px; }
-.req-question .tip { display: none; position: absolute; right: 8px; top: 8px; background: #1F514C; color: white; font-size: 11px; padding: 6px 10px; border-radius: 6px; width: 220px; z-index: 100; line-height: 1.4; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-.req-question .tip-icon { color: #999; cursor: help; font-size: 14px; float: right; }
-.req-question .tip-icon:hover + .tip { display: block; }
+.req-question-text { font-size: 13px; color: #374151; margin-bottom: 2px; }
+.req-question-tip { font-size: 11px; color: #999; margin-bottom: 6px; font-style: italic; }
 .req-radios { display: flex; gap: 16px; }
 .req-radios label { font-size: 12px; color: #636363; display: flex; align-items: center; gap: 4px; cursor: pointer; }
 .req-radios input { accent-color: #1E7D96; }
@@ -159,7 +157,7 @@ body {
 
   <div class="field">
     <label>Notes</label>
-    <div class="hint">Anything else useful — hours, seasonal closures, tips, quirks, things we should know</div>
+    <div class="hint" id="notes-hint">Anything else useful — hours, seasonal closures, tips, quirks, things we should know</div>
     <textarea id="f-notes" placeholder="e.g. Only open May–October. Bike rack is around the side. The owner is super friendly to cyclists."></textarea>
   </div>
 
@@ -384,7 +382,8 @@ function updateAmenities() {
   reqSection.style.display = "";
   reqQuestions.innerHTML = catData[cat].required.map(function(r, i) {
     return '<div class="req-question">' +
-      '<div class="req-question-text">' + r.q + '<span class="tip-icon"> ℹ</span><span class="tip">' + r.tip + '</span></div>' +
+      '<div class="req-question-text">' + r.q + '</div>' +
+      '<div class="req-question-tip">' + r.tip + '</div>' +
       '<div class="req-radios">' +
         '<label><input type="radio" name="req-' + i + '" value="yes" /> Yes</label>' +
         '<label><input type="radio" name="req-' + i + '" value="no" /> No</label>' +
@@ -463,6 +462,8 @@ function submitForm() {
     document.getElementById("form-heading").textContent = "Update a listing";
     document.getElementById("form-subtext").textContent = "See something wrong or missing? Fill in what you know and we'll update the listing.";
     document.querySelector(".submit-btn").textContent = "Send update";
+    document.getElementById("notes-hint").textContent = "Anything to add or correct — hours, tips, things we got wrong. If something is listed that shouldn't be (e.g. Wi-Fi listed but there's no Wi-Fi), let us know here.";
+    document.getElementById("f-notes").placeholder = "e.g. They don't actually have Wi-Fi. Hours are wrong — they close at 3pm not 5pm. The bike rack was removed.";
   }
 })();
 </script>
