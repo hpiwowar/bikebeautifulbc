@@ -1060,7 +1060,7 @@ function renderListingCardHTML(cat, ex, showCatTag) {
   else badges += '<span class="badge badge-listed">Listed</span>';
   var borderClass = ex.partner ? 'is-industry' : (ex.network ? 'is-sector' : (ex.badge === 'accredited' ? 'is-accredited' : 'is-listed'));
   var catTag = showCatTag ? '<span class="cat-tag">' + cat.tab + '</span>' : '';
-  var demoTag = '';
+  var demoTag = isDemo(ex) ? '<span class="demo-tag">demo</span>' : '';
   var demoClass = isDemo(ex) ? ' is-demo' : '';
   var pills = cat.optional.map(function(opt, i) {
     var has = ex.checked.indexOf(i) !== -1;
