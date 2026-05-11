@@ -263,10 +263,12 @@ body {
 <div id="newsletter" class="newsletter reveal">
   <h2>Stay in the loop</h2>
   <p class="newsletter-sub">BC cycle tourism news, once a month. Routes, trail updates, and what's changing on the ground.</p>
-  <form class="newsletter-form" id="newsletter-form" onsubmit="return submitNewsletter()">
-    <input type="text" id="nl-name" placeholder="Name" />
-    <input type="email" id="nl-email" placeholder="name@example.com" required />
-    <textarea id="nl-interest" placeholder="If you'd like, tell us about your interest."></textarea>
+  <form class="newsletter-form" id="newsletter-form" onsubmit="return submitNewsletter(event)">
+    <input type="hidden" name="access_key" value="29835279-6e94-4385-a2bf-ad43dc8a418f" />
+    <input type="hidden" name="subject" value="Newsletter signup" />
+    <input type="text" name="name" id="nl-name" placeholder="Name" />
+    <input type="email" name="email" id="nl-email" placeholder="name@example.com" required />
+    <textarea name="interest" id="nl-interest" placeholder="If you'd like, tell us about your interest."></textarea>
     <button type="submit">Sign up</button>
   </form>
 </div>
@@ -278,12 +280,14 @@ body {
     <div class="contact-left">
       <div class="label">Contact us</div>
       <h2>Have ideas? We'd love to hear from you.</h2>
-      <form class="contact-form" id="contact-form" onsubmit="return submitContact()">
+      <form class="contact-form" id="contact-form" onsubmit="return submitContact(event)">
+        <input type="hidden" name="access_key" value="29835279-6e94-4385-a2bf-ad43dc8a418f" />
+        <input type="hidden" name="subject" value="Website contact form" />
         <div class="row">
-          <input type="text" id="ct-name" placeholder="Full Name" />
-          <input type="email" id="ct-email" placeholder="Email Address" required />
+          <input type="text" name="name" id="ct-name" placeholder="Full Name" />
+          <input type="email" name="email" id="ct-email" placeholder="Email Address" required />
         </div>
-        <textarea id="ct-message" placeholder="Thoughts?"></textarea>
+        <textarea name="message" id="ct-message" placeholder="Thoughts?"></textarea>
         <button type="submit">Submit &rarr;</button>
       </form>
     </div>
@@ -322,24 +326,35 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: 0.15 });
 document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
 
-function submitNewsletter() {
-  var name = document.getElementById('nl-name').value;
-  var email = document.getElementById('nl-email').value;
-  if (!email) return false;
-  var subject = 'Newsletter signup' + (name ? ' — ' + name : '');
-  var body = 'Name: ' + (name || '(not provided)') + String.fromCharCode(10) + 'Email: ' + email + String.fromCharCode(10) + 'Interest: ' + (document.getElementById('nl-interest').value || '(not provided)');
-  window.location.href = 'mailto:heather@bcbybike.ca?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+function submitForm(formEl, successHtml) {
+  var btn = formEl.querySelector('button[type=submit]');
+  btn.disabled = true; btn.textContent = 'Sending...';
+  var data = new FormData(formEl);
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
+    .then(function(r) { return r.json(); })
+    .then(function(res) {
+      if (res.success) {
+        formEl.innerHTML = successHtml;
+      } else {
+        btn.disabled = false; btn.textContent = 'Submit';
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Submit';
+    });
+}
+
+function submitNewsletter(e) {
+  e.preventDefault();
+  submitForm(document.getElementById('newsletter-form'),
+    '<div style="padding:40px 0;"><p style="font-family:Archivo,sans-serif;font-size:32px;font-weight:400;color:#0D2E1E;letter-spacing:-0.03em;margin-bottom:8px;">Thanks!</p><p style="font-size:17px;color:rgba(13,64,112,0.5);">You are signed up. We will be in touch.</p></div>');
   return false;
 }
 
-function submitContact() {
-  var name = document.getElementById('ct-name').value;
-  var email = document.getElementById('ct-email').value;
-  var message = document.getElementById('ct-message').value;
-  if (!email) return false;
-  var subject = 'Website contact' + (name ? ' — ' + name : '');
-  var body = 'From: ' + (name || '(not provided)') + ' (' + email + ')' + String.fromCharCode(10) + String.fromCharCode(10) + (message || '(no message)');
-  window.location.href = 'mailto:heather@bcbybike.ca?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+function submitContact(e) {
+  e.preventDefault();
+  submitForm(document.getElementById('contact-form'),
+    '<div style="padding:20px 0;"><p style="font-family:Archivo,sans-serif;font-size:28px;font-weight:400;color:white;letter-spacing:-0.03em;margin-bottom:6px;">Thanks!</p><p style="font-size:16px;color:rgba(255,255,255,0.7);">We will be in touch.</p></div>');
   return false;
 }
 </script>
