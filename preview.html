@@ -184,7 +184,7 @@ body {
 .criteria-toggle .arrow.open { transform: rotate(90deg); }
 .criteria-body { display: none; border-top: 1px solid #EEE; }
 .criteria-body.open { display: block; }
-.listing-card.is-demo { opacity: 0.75; }
+.listing-card.is-demo { opacity: 1; }
 .listing-card.is-demo:hover { opacity: 1; }
 
 .demo-toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #636363; cursor: pointer; user-select: none; }
@@ -1060,7 +1060,7 @@ function renderListingCardHTML(cat, ex, showCatTag) {
   else badges += '<span class="badge badge-listed">Listed</span>';
   var borderClass = ex.partner ? 'is-industry' : (ex.network ? 'is-sector' : (ex.badge === 'accredited' ? 'is-accredited' : 'is-listed'));
   var catTag = showCatTag ? '<span class="cat-tag">' + cat.tab + '</span>' : '';
-  var demoTag = isDemo(ex) ? '<span class="demo-tag">demo</span>' : '';
+  var demoTag = '';
   var demoClass = isDemo(ex) ? ' is-demo' : '';
   var pills = cat.optional.map(function(opt, i) {
     var has = ex.checked.indexOf(i) !== -1;
