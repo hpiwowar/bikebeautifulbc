@@ -127,6 +127,12 @@ body {
   </div>
 
   <div class="field">
+    <label>Email for cyclist enquiries</label>
+    <div class="hint">An email cyclists can use to ask about bike storage, availability, etc. This will be visible on your listing.</div>
+    <input type="email" id="a-public-email" placeholder="e.g. info@yourbusiness.ca" />
+  </div>
+
+  <div class="field">
     <label>Category *</label>
     <select id="a-category" required onchange="updateApplyForm()">
       <option value="">Select a category...</option>
@@ -188,12 +194,12 @@ body {
     <div class="field">
       <label>Getting out with a bike</label>
       <div class="hint">If a cyclist needed to leave the area with their bike — what are the options? Public bus, local taxi with a van, a neighbour who does runs to town, a shuttle service?</div>
-      <textarea id="a-cis-transport" style="min-height:60px;" placeholder="e.g. BC Transit bus at Main & Lakeshore (rack fits 2 bikes). Joe's Taxi has a van that fits bikes — (250) 555-1234. Or: honestly, not much — nearest bus is in town, 20 km from here."></textarea>
+      <textarea id="a-cis-transport" style="min-height:90px;" placeholder="e.g. BC Transit bus at Main & Lakeshore (rack fits 2 bikes). Joe's Taxi has a van that fits bikes — (250) 555-1234. Or: honestly, not much — nearest bus is in town, 20 km from here."></textarea>
     </div>
     <div class="field" style="margin-bottom:0;">
       <label>Insider knowledge — hazards, access, seasonal quirks</label>
       <div class="hint">Things a visiting cyclist wouldn't know but should. Trail closures, wildlife, road conditions, water sources, cell coverage, anything.</div>
-      <textarea id="a-cis-hazards" style="min-height:60px;" placeholder="e.g. Trail is muddy and slow after rain — wait a day. No cell service between here and Chute Lake. The shortcut through the orchard is private property — use the main road. Grab a slice of pie at Mary's before you head out, you won't regret it."></textarea>
+      <textarea id="a-cis-hazards" style="min-height:90px;" placeholder="e.g. Trail is muddy and slow after rain — wait a day. No cell service between here and Chute Lake. The shortcut through the orchard is private property — use the main road. Grab a slice of pie at Mary's before you head out, you won't regret it."></textarea>
     </div>
   </div>
 
@@ -298,6 +304,7 @@ function submitApply() {
     "Address: " + address + "\n" +
     "Phone: " + phone + "\n" +
     "Website: " + url + "\n" +
+    "Public email: " + (document.getElementById("a-public-email").value || "not provided") + "\n" +
     "Category: " + category + "\n" +
     "Description: " + desc + "\n\n" +
     "REQUIRED CRITERIA CONFIRMED:\n" + (confirmed.length > 0 ? confirmed.join("\n") : "none checked") + "\n\n" +
