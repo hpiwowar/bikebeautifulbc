@@ -38,17 +38,17 @@ body {
 }
 .hero-card {
   background: #0D4070; border-radius: 28px; overflow: hidden;
-  display: grid; grid-template-columns: 1fr 1fr; min-height: 440px;
+  display: grid; grid-template-columns: 1fr 1fr; min-height: 580px;
 }
 .hero-text {
-  padding: 64px 56px; display: flex; flex-direction: column; justify-content: center;
+  padding: 72px 64px; display: flex; flex-direction: column; justify-content: flex-start;
 }
 .hero-text h1 {
-  font-size: 52px; font-weight: 700; color: white; line-height: 1.1; margin-bottom: 18px;
+  font-size: 56px; font-weight: 500; color: #F5F0E8; line-height: 1.15; margin-bottom: 24px;
   letter-spacing: -0.04em;
 }
 .hero-text p {
-  font-size: 17px; color: rgba(255,255,255,0.7); max-width: 400px; margin-bottom: 28px;
+  font-size: 17px; color: rgba(245,240,232,0.65); max-width: 420px; margin-bottom: 32px;
   line-height: 1.5; letter-spacing: -0.01em;
 }
 .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
@@ -58,11 +58,11 @@ body {
 }
 .hero-btn-light { background: white; color: #0D4070; }
 .hero-btn-light:hover { background: #F5F0E8; transform: translateY(-1px); }
-.hero-btn-outline { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.35); }
-.hero-btn-outline:hover { border-color: rgba(255,255,255,0.7); transform: translateY(-1px); }
+.hero-btn-outline { background: transparent; color: rgba(245,240,232,0.7); border: 1.5px solid rgba(255,255,255,0.25); }
+.hero-btn-outline:hover { border-color: rgba(255,255,255,0.5); color: white; transform: translateY(-1px); }
 .hero-img {
   background: url('img/hero-road.jpg') center/cover;
-  border-radius: 20px; margin: 18px 18px 18px 0;
+  border-radius: 20px; margin: 20px 20px 20px 0;
 }
 
 .partners { text-align: center; padding: 48px 40px 24px; max-width: 1200px; margin: 0 auto; }
@@ -182,10 +182,10 @@ body {
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 800px) {
-  .hero-card { grid-template-columns: 1fr; border-radius: 20px; }
-  .hero-img { height: 240px; margin: 0; border-radius: 0 0 20px 20px; }
-  .hero-text { padding: 40px 28px; }
-  .hero-text h1 { font-size: 34px; }
+  .hero-card { grid-template-columns: 1fr; border-radius: 20px; min-height: auto; }
+  .hero-img { height: 280px; margin: 0; border-radius: 0 0 20px 20px; }
+  .hero-text { padding: 48px 28px 40px; }
+  .hero-text h1 { font-size: 38px; }
   .contact-inner { grid-template-columns: 1fr; }
   .contact-img { height: 240px; }
   .contact-left h2 { font-size: 28px; }
