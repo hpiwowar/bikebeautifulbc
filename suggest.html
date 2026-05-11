@@ -41,9 +41,23 @@ body {
 .field textarea { resize: vertical; min-height: 80px; }
 
 .amenity-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px; }
-.amenity-check { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 6px; font-size: 13px; color: #374151; cursor: pointer; }
+.amenity-check { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 6px; font-size: 13px; color: #374151; cursor: pointer; position: relative; }
 .amenity-check:hover { border-color: #1E7D96; background: #F5F9FB; }
-.amenity-check input { width: 16px; height: 16px; accent-color: #2E8A36; cursor: pointer; }
+.amenity-check input[type="checkbox"] { width: 16px; height: 16px; accent-color: #2E8A36; cursor: pointer; }
+.amenity-check .tip { display: none; position: absolute; left: 0; top: 100%; margin-top: 4px; background: #1F514C; color: white; font-size: 11px; padding: 6px 10px; border-radius: 6px; width: 240px; z-index: 100; line-height: 1.4; box-shadow: 0 4px 12px rgba(0,0,0,0.15); pointer-events: none; }
+.amenity-check:hover .tip { display: block; }
+
+.req-section { margin-bottom: 20px; }
+.req-section-title { font-size: 13px; font-weight: 600; color: #1F514C; margin-bottom: 4px; }
+.req-section-hint { font-size: 12px; color: #999; margin-bottom: 12px; }
+.req-question { padding: 10px 12px; background: #F8FBF9; border: 1px solid #E5E7EB; border-radius: 8px; margin-bottom: 8px; position: relative; }
+.req-question-text { font-size: 13px; color: #374151; margin-bottom: 6px; }
+.req-question .tip { display: none; position: absolute; right: 8px; top: 8px; background: #1F514C; color: white; font-size: 11px; padding: 6px 10px; border-radius: 6px; width: 220px; z-index: 100; line-height: 1.4; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.req-question .tip-icon { color: #999; cursor: help; font-size: 14px; float: right; }
+.req-question .tip-icon:hover + .tip { display: block; }
+.req-radios { display: flex; gap: 16px; }
+.req-radios label { font-size: 12px; color: #636363; display: flex; align-items: center; gap: 4px; cursor: pointer; }
+.req-radios input { accent-color: #1E7D96; }
 
 .divider { border: none; border-top: 1px solid #EEE; margin: 24px 0; }
 
@@ -131,6 +145,12 @@ body {
 
   <hr class="divider" />
 
+  <div id="req-section" style="display:none" class="req-section">
+    <div class="req-section-title">Does this business meet these criteria?</div>
+    <div class="req-section-hint">Answer what you can. It's fine to pick "Not sure" — we'll verify.</div>
+    <div id="req-questions"></div>
+  </div>
+
   <div class="field" id="amenities-section" style="display:none">
     <label>What did you see? Check what applies.</label>
     <div class="hint">Only check what you personally observed. It's OK to leave most unchecked.</div>
@@ -185,24 +205,197 @@ body {
 </div>
 
 <script>
-var catAmenities = {
-  "Accommodation": ['Min-stay waived', 'Laundry', 'Drying area', 'Early or packed breakfast', 'Nearby evening food', 'Nearby grocery', 'Vending machines', 'Bikes in rooms', 'E-bike charging', 'Device charging', 'Luggage storage', 'Pump', 'Basic tools', 'Bike wash / hose', 'Wi-Fi'],
-  "Camping": ['Min-stay waived', 'Hiker/biker sites', 'Potable water', 'Showers', 'Food nearby', 'Covered shelter', 'Laundry', 'Drying area', 'Bear-safe food storage', 'Reservations accepted', 'Cyclist discount', 'Device charging', 'E-bike charging', 'Vending machines', 'Ice', 'Pump', 'Basic tools', 'Camping fuel'],
-  "Food & Drink": ['Takeout', 'Packed lunches', 'Water without purchase', 'Vegetarian / vegan / GF', 'Covered bike parking', 'Patio bike visibility', 'Device charging', 'E-bike charging', 'Pump', 'Wi-Fi'],
-  "Groceries": ['Basic groceries', 'Hot food', 'Washrooms', 'Outdoor water tap', 'Ice', 'Vending machines', 'Camping fuel', 'Bike rack on site', 'Public rack nearby', 'Covered bike parking', 'Device charging', 'E-bike charging', 'Pump'],
-  "Attractions": ['Washrooms', 'Showers (drop-in or fee)', 'Cafe or food on site', 'Water without admission', 'Luggage / bag storage', 'Vending machines', 'Covered bike parking', 'Device charging', 'Wi-Fi', 'E-bike charging', 'Pump', 'Discount for arriving by bike'],
-  "Bike Services": ['Walk-in repairs', 'Same-day urgent repairs', 'Touring parts stocked', 'E-bike service', 'Bike boxes / packing', 'Shipping bikes', 'Bike rentals', 'Shuttle / trip support', 'Guided rides', 'DIY stand', 'Washrooms', 'Water bottle refill', 'Device charging', 'E-bike charging'],
-  "Transport": ['Passenger + bike', 'Walk-on bikes', 'Advance booking required', 'Reservations', 'Bike fee applies', 'Unboxed bikes OK', 'Boxed bikes OK', 'Bagged bikes OK', 'E-bikes OK', 'Trailers OK', 'Luggage transfer', 'Unaccompanied bike transport', 'Interior transport', 'Exterior rack']
+var catData = {
+  "Accommodation": {
+    required: [
+      { q: "Does this business have secure indoor bike storage?", tip: "Locked room, garage, bikes in guest rooms, storage shed, or staff-controlled area." },
+      { q: "Is the storage arrangement described clearly?", tip: "Cyclists should know what to expect before arriving — locked room, garage, bikes-in-rooms, etc." },
+      { q: "Do staff know the bike storage procedure?", tip: "Front desk knows where bikes go, who has access, and what to do with loaded touring bikes or e-bikes." },
+      { q: "Is a Cyclist Info Sheet available?", tip: "Covers nearest bike repair, grocery, emergency care, local routes, and fallback transport." }
+    ],
+    amenities: [
+      { name: "Min-stay waived", tip: "No minimum night requirement for cyclists passing through." },
+      { name: "Laundry", tip: "Washer/dryer available to guests — coin-op or included." },
+      { name: "Drying area", tip: "Somewhere to hang wet gear — a heated room, clothesline, or drying rack." },
+      { name: "Early or packed breakfast", tip: "Breakfast available before 7am, or they'll pack one for an early start." },
+      { name: "Nearby evening food", tip: "Restaurant or takeout within walking distance for dinner." },
+      { name: "Nearby grocery", tip: "Grocery or general store within walking/riding distance." },
+      { name: "Vending machines", tip: "On-site vending for drinks or snacks." },
+      { name: "Bikes in rooms", tip: "You can bring your bike into your room — not just stored elsewhere." },
+      { name: "E-bike charging", tip: "An outlet or charging station accessible for e-bike batteries." },
+      { name: "Device charging", tip: "Accessible power outlet for phones and devices." },
+      { name: "Luggage storage", tip: "Will hold bags before check-in or after checkout." },
+      { name: "Pump", tip: "Floor pump available to guests." },
+      { name: "Basic tools", tip: "Allen keys, tire levers, or a basic repair kit available." },
+      { name: "Bike wash / hose", tip: "Hose or wash area for cleaning a muddy bike." },
+      { name: "Wi-Fi", tip: "Internet access for guests." }
+    ]
+  },
+  "Camping": {
+    required: [
+      { q: "Do they have a space policy for cyclists?", tip: "Will accommodate self-contained cyclists arriving by bike for one night — hiker/biker sites, overflow, or similar." },
+      { q: "Is there a clear bike parking or tent-side policy?", tip: "Cyclists know where to keep their bike overnight — rack, tent-side, or another arrangement." },
+      { q: "Do staff know the cyclist arrival procedure?", tip: "Staff can direct arriving cyclists to the right spot." },
+      { q: "Is a Cyclist Info Sheet available?", tip: "Covers nearest bike repair, grocery, emergency care, local routes." }
+    ],
+    amenities: [
+      { name: "Min-stay waived", tip: "No minimum night requirement for cyclists." },
+      { name: "Hiker/biker sites", tip: "Dedicated small sites for people arriving on foot or by bike." },
+      { name: "Potable water", tip: "Safe drinking water available on site." },
+      { name: "Showers", tip: "Shower facilities — may be coin-operated." },
+      { name: "Food nearby", tip: "Restaurant, store, or food within riding distance." },
+      { name: "Covered shelter", tip: "A covered area for cooking or eating in rain." },
+      { name: "Laundry", tip: "Washer/dryer on site." },
+      { name: "Drying area", tip: "Somewhere to hang wet gear." },
+      { name: "Bear-safe food storage", tip: "Bear boxes, bear hangs, or a food locker." },
+      { name: "Reservations accepted", tip: "You can book a site in advance." },
+      { name: "Cyclist discount", tip: "Reduced fee or no vehicle fee for arriving by bike." },
+      { name: "Device charging", tip: "Accessible outlet for phones/devices." },
+      { name: "E-bike charging", tip: "Outlet accessible for e-bike batteries." },
+      { name: "Vending machines", tip: "On-site vending." },
+      { name: "Ice", tip: "Ice available for purchase." },
+      { name: "Pump", tip: "Floor pump available." },
+      { name: "Basic tools", tip: "Allen keys, tire levers, or similar." },
+      { name: "Camping fuel", tip: "White gas, propane canisters, or similar for sale." }
+    ]
+  },
+  "Food & Drink": {
+    required: [
+      { q: "Is there bike parking or bike visibility?", tip: "Bike rack, patio with line-of-sight, window seating, or a staff-approved spot." },
+      { q: "Is water bottle refill available?", tip: "Tap water available to customers." },
+      { q: "Are washrooms available during operating hours?", tip: "Customer washrooms accessible." }
+    ],
+    amenities: [
+      { name: "Takeout", tip: "Food available to take away." },
+      { name: "Packed lunches", tip: "Will prepare a lunch to take on the trail." },
+      { name: "Water without purchase", tip: "Tap water available even if you don't buy anything." },
+      { name: "Vegetarian / vegan / GF", tip: "Menu options for dietary restrictions." },
+      { name: "Covered bike parking", tip: "Bike parking that's sheltered from rain." },
+      { name: "Patio bike visibility", tip: "Outdoor seating where you can see your bike." },
+      { name: "Device charging", tip: "Accessible power outlet." },
+      { name: "E-bike charging", tip: "Outlet or station for e-bike batteries." },
+      { name: "Pump", tip: "Floor pump available to customers." },
+      { name: "Wi-Fi", tip: "Internet access." }
+    ]
+  },
+  "Groceries": {
+    required: [
+      { q: "Is there bike parking?", tip: "A practical place to park a bike while shopping." },
+      { q: "Is water bottle refill available?", tip: "Potable water refill for customers." }
+    ],
+    amenities: [
+      { name: "Basic groceries", tip: "Bread, fruit, cheese, snacks — enough to resupply for a day." },
+      { name: "Hot food", tip: "Prepared hot food available — deli, soup, sandwiches." },
+      { name: "Washrooms", tip: "Customer washrooms available." },
+      { name: "Outdoor water tap", tip: "A tap outside the building — accessible without going in." },
+      { name: "Ice", tip: "Bag or block ice for purchase." },
+      { name: "Vending machines", tip: "On-site vending." },
+      { name: "Camping fuel", tip: "White gas, propane canisters for sale." },
+      { name: "Bike rack on site", tip: "A dedicated bike rack at the building." },
+      { name: "Public rack nearby", tip: "A public bike rack within sight of the entrance." },
+      { name: "Covered bike parking", tip: "Sheltered bike parking." },
+      { name: "Device charging", tip: "Accessible power outlet." },
+      { name: "E-bike charging", tip: "Outlet for e-bike batteries." },
+      { name: "Pump", tip: "Floor pump available." }
+    ]
+  },
+  "Attractions": {
+    required: [
+      { q: "Is there bike parking?", tip: "On-site or at the entrance." },
+      { q: "Is water bottle refill available during operating hours?", tip: "Water fountain or tap accessible to visitors." },
+      { q: "Are washrooms available to cyclists?", tip: "Same washroom access as other visitors." },
+      { q: "Is a Cyclist Info Sheet or equivalent available?", tip: "Local routes, repair options, emergency contacts — or equivalent tourist info already on hand." }
+    ],
+    amenities: [
+      { name: "Washrooms", tip: "Public washrooms accessible." },
+      { name: "Showers (drop-in or fee)", tip: "Shower facilities open to visitors." },
+      { name: "Cafe or food on site", tip: "A café, canteen, or food service on the premises." },
+      { name: "Water without admission", tip: "Water tap accessible without paying admission." },
+      { name: "Luggage / bag storage", tip: "Will hold bags or panniers while you visit." },
+      { name: "Vending machines", tip: "On-site vending." },
+      { name: "Covered bike parking", tip: "Sheltered bike parking." },
+      { name: "Device charging", tip: "Accessible power outlet." },
+      { name: "Wi-Fi", tip: "Internet access." },
+      { name: "E-bike charging", tip: "Outlet for e-bike batteries." },
+      { name: "Pump", tip: "Floor pump available." },
+      { name: "Discount for arriving by bike", tip: "Reduced admission or a perk for cyclists." }
+    ]
+  },
+  "Bike Services": {
+    required: [
+      { q: "Will staff help with urgent mechanical issues?", tip: "Triage, air, advice, same-day help, or a referral. A touring cyclist in trouble is not turned away." },
+      { q: "Is a pump available?", tip: "Floor pump accessible to visiting cyclists." },
+      { q: "Is a Cyclist Info Sheet available?", tip: "Local routes, repair options, emergency contacts." }
+    ],
+    amenities: [
+      { name: "Walk-in repairs", tip: "Accepts repairs without an appointment." },
+      { name: "Same-day urgent repairs", tip: "Can fix an urgent problem the same day." },
+      { name: "Touring parts stocked", tip: "Carries parts common for touring — racks, panniers, tubes, cables." },
+      { name: "E-bike service", tip: "Can service e-bike motors, batteries, displays." },
+      { name: "Bike boxes / packing", tip: "Has bike boxes and can pack a bike for shipping or flying." },
+      { name: "Shipping bikes", tip: "Can ship or receive bikes." },
+      { name: "Bike rentals", tip: "Rents bikes — road, gravel, e-bike, etc." },
+      { name: "Shuttle / trip support", tip: "Offers shuttle service or trip logistics." },
+      { name: "Guided rides", tip: "Offers guided rides or tours." },
+      { name: "DIY stand", tip: "A public repair stand with tools outside the shop." },
+      { name: "Washrooms", tip: "Customer washrooms." },
+      { name: "Water bottle refill", tip: "Water available to visiting cyclists." },
+      { name: "Device charging", tip: "Accessible outlet." },
+      { name: "E-bike charging", tip: "Outlet or station for e-bike batteries." }
+    ]
+  },
+  "Transport": {
+    required: [
+      { q: "Does this service accommodate bicycles?", tip: "Transports cyclists with bikes, or handles luggage/unaccompanied bikes. Listing should explain capacity, booking, fees, packaging." }
+    ],
+    amenities: [
+      { name: "Passenger + bike", tip: "Carries both the cyclist and their bike." },
+      { name: "Walk-on bikes", tip: "Bikes can roll on without disassembly." },
+      { name: "Advance booking required", tip: "Must book bike space ahead of time." },
+      { name: "Reservations", tip: "General reservations accepted." },
+      { name: "Bike fee applies", tip: "Extra charge for bringing a bike." },
+      { name: "Unboxed bikes OK", tip: "Bikes accepted as-is, no packaging needed." },
+      { name: "Boxed bikes OK", tip: "Accepts bikes in a bike box." },
+      { name: "Bagged bikes OK", tip: "Accepts bikes in a soft bag." },
+      { name: "E-bikes OK", tip: "E-bikes accepted — check weight/battery rules." },
+      { name: "Trailers OK", tip: "Bike trailers accepted." },
+      { name: "Luggage transfer", tip: "Will transport luggage/panniers separately." },
+      { name: "Unaccompanied bike transport", tip: "Will ship a bike without the rider." },
+      { name: "Interior transport", tip: "Bikes stored inside the vehicle." },
+      { name: "Exterior rack", tip: "Bikes carried on an exterior rack or trailer." }
+    ]
+  }
 };
 
 function updateAmenities() {
   var cat = document.getElementById("f-category").value;
   var section = document.getElementById("amenities-section");
   var grid = document.getElementById("amenity-grid");
-  if (!cat || !catAmenities[cat]) { section.style.display = "none"; return; }
+  var reqSection = document.getElementById("req-section");
+  var reqQuestions = document.getElementById("req-questions");
+
+  if (!cat || !catData[cat]) {
+    section.style.display = "none";
+    reqSection.style.display = "none";
+    return;
+  }
+
+  // Required criteria
+  reqSection.style.display = "";
+  reqQuestions.innerHTML = catData[cat].required.map(function(r, i) {
+    return '<div class="req-question">' +
+      '<div class="req-question-text">' + r.q + '<span class="tip-icon"> ℹ</span><span class="tip">' + r.tip + '</span></div>' +
+      '<div class="req-radios">' +
+        '<label><input type="radio" name="req-' + i + '" value="yes" /> Yes</label>' +
+        '<label><input type="radio" name="req-' + i + '" value="no" /> No</label>' +
+        '<label><input type="radio" name="req-' + i + '" value="unsure" checked /> Not sure</label>' +
+      '</div></div>';
+  }).join("");
+
+  // Optional amenities
   section.style.display = "";
-  grid.innerHTML = catAmenities[cat].map(function(a, i) {
-    return '<label class="amenity-check"><input type="checkbox" name="amenity" value="' + a + '" /> ' + a + '</label>';
+  grid.innerHTML = catData[cat].amenities.map(function(a) {
+    return '<label class="amenity-check"><input type="checkbox" name="amenity" value="' + a.name + '" /> ' + a.name + '<span class="tip">' + a.tip + '</span></label>';
   }).join("");
 }
 
@@ -223,6 +416,16 @@ function submitForm() {
     checked.push(cb.value);
   });
 
+  var reqAnswers = [];
+  if (category && catData[category]) {
+    catData[category].required.forEach(function(r, i) {
+      var sel = document.querySelector('input[name="req-' + i + '"]:checked');
+      if (sel && sel.value !== "unsure") {
+        reqAnswers.push(r.q + " " + sel.value.toUpperCase());
+      }
+    });
+  }
+
   var isEdit = !!window._editMode;
   var subject = (isEdit ? "WWC Listing Edit: " : "WWC Listing Suggestion: ") + name;
   var body = "=== LISTING DATA (OK for AI processing) ===\n\n" +
@@ -230,6 +433,7 @@ function submitForm() {
     "Location: " + location + "\n" +
     "Category: " + category + "\n" +
     "Route: " + route + "\n" +
+    (reqAnswers.length > 0 ? "Required criteria: " + reqAnswers.join("; ") + "\n" : "") +
     "Amenities observed: " + (checked.length > 0 ? checked.join(", ") : "none checked") + "\n" +
     "Notes: " + notes + "\n" +
     (wantCredit ? "Credit as: " + (displayname || yourname || "anonymous") + "\n" : "") +
