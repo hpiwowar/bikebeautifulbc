@@ -159,8 +159,8 @@ body {
 .modal-detail-item a { color: #1E7D96; text-decoration: none; }
 .modal-detail-item a:hover { text-decoration: underline; }
 .modal-routes { display: flex; flex-direction: column; gap: 8px; }
-.route-tag { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: 8px; font-size: 13px; color: #1E7D96; font-weight: 500; }
-.route-tag .coming { font-size: 11px; color: #999; font-weight: 400; margin-left: auto; }
+.route-tag { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: 8px; font-size: 13px; color: #1E7D96; font-weight: 500; text-decoration: none; cursor: pointer; transition: background 0.12s; }
+.route-tag:hover { background: #E4F2F7; }
 .modal-pills { display: flex; flex-wrap: wrap; gap: 5px; }
 .modal-pill-yes { padding: 5px 12px; border-radius: 14px; font-size: 12px; font-weight: 500; background: #E8F5E9; color: #2E8A36; border: 1px solid #C8E6C9; }
 .modal-pill-yes .note-star { color: #1E7D96; font-weight: 800; font-size: 14px; }
@@ -812,7 +812,7 @@ function openModal(catId, exIdx) {
   var routesHTML = '';
   if (ex.routes && ex.routes.length > 0) {
     routesHTML = '<div class="modal-section"><div class="modal-section-title">Routes nearby</div><div class="modal-routes">' +
-      ex.routes.map(function(r) { return '<div class="route-tag">🚴 ' + r + '<span class="coming">Route detail coming soon</span></div>'; }).join("") +
+      ex.routes.map(function(r) { var slug = r.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); return '<a class="route-tag" href="route-' + slug + '.html" onclick="event.stopPropagation()">🚴 ' + r + '</a>'; }).join("") +
       '</div></div>';
   }
 
