@@ -880,7 +880,7 @@ function openModal(catId, exIdx) {
 
   document.getElementById("modal-content").innerHTML =
     '<div class="modal-header"><div class="modal-header-left">' +
-      '<div class="modal-title">' + ex.name + '</div>' +
+      '<div class="modal-title">' + ex.name + (isDemo(ex) ? '<span class="demo-tag">demo</span>' : '') + '</div>' +
       '<div class="modal-location">' + ex.location + '</div>' +
       (ex.network ? '<div class="modal-network">Member of ' + ex.network + '</div>' : '') +
       '<div class="modal-badges">' + badges + '</div>' +
