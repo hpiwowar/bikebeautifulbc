@@ -172,15 +172,6 @@ body {
     <div class="hint" style="margin-top:8px;">Don't fit neatly into a category? <a href="mailto:heather@bccycletourism.ca" style="color:#1E7D96;">Email us</a> and we'll figure it out together.</div>
   </div>
 
-  <div class="field">
-    <label>Route</label>
-    <div class="hint">Which route is this business on or near?</div>
-    <select id="f-route">
-      <option value="">Select a route (optional)...</option>
-      <option value="Okanagan Rail Trail">Okanagan Rail Trail</option><option value="KVR Myra Canyon">KVR Myra Canyon</option><option value="Sea to Sky Trail">Sea to Sky Trail</option><option value="Frog Peak Loop">Frog Peak Loop</option><option value="North Star + Chief Isadore Trail">North Star + Chief Isadore Trail</option><option value="Lac Du Bois Tranquility">Lac Du Bois Tranquility</option><option value="Seymour Valley + Lonsdale Brew Loop">Seymour Valley + Lonsdale Brew Loop</option><option value="Chilliwack Loops">Chilliwack Loops</option><option value="Tofino–Ucluelet">Tofino–Ucluelet</option><option value="Vancouver Crossing Loop">Vancouver Crossing Loop</option>
-      <option value="Other">Other / not sure</option>
-    </select>
-  </div>
 
   <hr class="divider" />
 
@@ -464,7 +455,7 @@ function submitSuggest(e) {
   var name = document.getElementById("f-name").value;
   var location = document.getElementById("f-location").value;
   var category = document.getElementById("f-category").value;
-  var route = document.getElementById("f-route").value;
+  var route = "";
   var notes = document.getElementById("f-notes").value;
   var yourname = document.getElementById("f-yourname").value;
   var youremail = document.getElementById("f-youremail").value;
