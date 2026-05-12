@@ -138,16 +138,38 @@ body {
 
   <div class="field">
     <label>Category *</label>
-    <select id="f-category" required onchange="updateAmenities()">
-      <option value="">Select a category...</option>
-      <option value="Accommodation">Accommodation</option>
-      <option value="Camping">Camping</option>
-      <option value="Food & Drink">Food & Drink</option>
-      <option value="Groceries">Groceries</option>
-      <option value="Attractions">Attractions</option>
-      <option value="Bike Services">Bike Services</option>
-      <option value="Transport">Transport</option>
-    </select>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
+        <input type="radio" name="f-cat-radio" value="Accommodation" required onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
+        <span><strong>Accommodation</strong> <span style="color:#999;font-size:12px;">— hotels, motels, hostels, guesthouses, B&Bs, inns</span></span>
+      </label>
+      <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
+        <input type="radio" name="f-cat-radio" value="Camping" onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
+        <span><strong>Camping</strong> <span style="color:#999;font-size:12px;">— campgrounds, RV parks, group campsites, backcountry sites</span></span>
+      </label>
+      <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
+        <input type="radio" name="f-cat-radio" value="Food & Drink" onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
+        <span><strong>Food & Drink</strong> <span style="color:#999;font-size:12px;">— restaurants, cafés, pubs, food trucks, bakeries, wineries, breweries</span></span>
+      </label>
+      <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
+        <input type="radio" name="f-cat-radio" value="Groceries" onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
+        <span><strong>Groceries</strong> <span style="color:#999;font-size:12px;">— grocery stores, general stores, convenience stores, farm stands</span></span>
+      </label>
+      <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
+        <input type="radio" name="f-cat-radio" value="Attractions" onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
+        <span><strong>Attractions</strong> <span style="color:#999;font-size:12px;">— visitor centres, museums, libraries, rec centres, hot springs, markets</span></span>
+      </label>
+      <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
+        <input type="radio" name="f-cat-radio" value="Bike Services" onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
+        <span><strong>Bike Services</strong> <span style="color:#999;font-size:12px;">— bike shops, repair, gear shops, rentals, guides, tour operators</span></span>
+      </label>
+      <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
+        <input type="radio" name="f-cat-radio" value="Transport" onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
+        <span><strong>Transport</strong> <span style="color:#999;font-size:12px;">— buses, shuttles, ferries, taxis, luggage transfer, bike transport</span></span>
+      </label>
+    </div>
+    <input type="hidden" id="f-category" value="" />
+    <div class="hint" style="margin-top:8px;">Don't fit neatly into a category? <a href="mailto:heather@bccycletourism.ca" style="color:#1E7D96;">Email us</a> and we'll figure it out together.</div>
   </div>
 
   <div class="field">
@@ -400,6 +422,11 @@ var catData = {
     ]
   }
 };
+
+function setCat(val) {
+  document.getElementById("f-category").value = val;
+  updateAmenities();
+}
 
 function updateAmenities() {
   var cat = document.getElementById("f-category").value;
