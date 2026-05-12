@@ -33,6 +33,7 @@ body {
 .badge-listed { background: #E5E7EB; color: #636363; }
 .badge-sector { background: #4A3C31; color: white; }
 .badge-industry { background: #1E7D96; color: white; }
+.badge-unwelcome { background: #DC2626; color: white; }
 
 .main { max-width: 1100px; margin: 0 auto; padding: 28px 28px 48px; }
 
@@ -100,7 +101,17 @@ body {
 .examples-toolbar { padding: 20px 36px 16px; border-bottom: 1px solid #EEE; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .examples-toolbar h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; }
 .examples-toolbar .legend { display: flex; gap: 12px; align-items: center; font-size: 12px; color: #636363; flex-wrap: wrap; }
-.examples-toolbar .legend .badge { font-size: 11px; padding: 3px 10px; }
+.examples-toolbar .legend .badge { font-size: 11px; padding: 3px 10px; border: 1.5px solid; transition: all 0.15s; }
+.examples-toolbar .legend .badge-sector { background: #FFFDF9; color: #4A3C31; border-color: #4A3C31; }
+.examples-toolbar .legend .badge-sector:hover { background: #4A3C31; color: white; }
+.examples-toolbar .legend .badge-industry { background: #FFFDF9; color: #1E7D96; border-color: #1E7D96; }
+.examples-toolbar .legend .badge-industry:hover { background: #1E7D96; color: white; }
+.examples-toolbar .legend .badge-accredited { background: #FFFDF9; color: #2E8A36; border-color: #2E8A36; }
+.examples-toolbar .legend .badge-accredited:hover { background: #2E8A36; color: white; }
+.examples-toolbar .legend .badge-listed { background: #FFFDF9; color: #636363; border-color: #CACACA; }
+.examples-toolbar .legend .badge-listed:hover { background: #E5E7EB; color: #636363; }
+.examples-toolbar .legend .badge-unwelcome { background: #FFFDF9; color: #DC2626; border-color: #DC2626; }
+.examples-toolbar .legend .badge-unwelcome:hover { background: #DC2626; color: white; }
 
 .filter-bar { padding: 16px 36px; border-bottom: 1px solid #EEE; background: #FFFDF9; }
 .filter-bar-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
@@ -123,6 +134,7 @@ body {
 .listing-card.is-listed { border-left: 4px solid #DDD; }
 .listing-card.is-sector { border-left: 4px solid #4A3C31; }
 .listing-card.is-industry { border-left: 4px solid #1E7D96; }
+.listing-card.is-unwelcome { border-left: 4px solid #DC2626; background: #FEF2F2; }
 
 .listing-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 8px; }
 .listing-badges { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; }
@@ -358,7 +370,17 @@ var categories = [
       { name: "Chilliwack Travelodge", location: "Chilliwack (Fraser Valley)", badge: "listed",
         desc: "Editorial listing — chain motel with interior corridor access for bike storage.",
         checked: [1,4,8,9,14], routes: ["Chilliwack Loops"],
-        detail: { address: "45466 Yale Rd, Chilliwack, BC V2R 3Z8", source: "osm" } }
+        detail: { address: "45466 Yale Rd, Chilliwack, BC V2R 3Z8", source: "osm" } },
+      { name: "Penticton Value Inn", location: "Penticton (Okanagan)", badge: "unwelcome",
+        desc: "Strict no-bikes-indoors policy. Staff will not allow bikes in rooms, hallways, or lobby. No outdoor bike storage provided. Grease on carpet cited as the reason.",
+        checked: [], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
+        detail: { address: "Penticton, BC", source: "osm" },
+        tips: "If you're stuck, the Naramata Village Motel (accredited) has locked bike storage and is on the KVR trailhead." },
+      { name: "Squamish Budget Motor Inn", location: "Squamish (Sea to Sky)", badge: "unwelcome",
+        desc: "No bikes allowed inside under any circumstances. No garage, no storage room, no covered area. Manager has turned away touring cyclists who asked to store bikes overnight.",
+        checked: [], routes: ["Sea to Sky Trail"],
+        detail: { address: "Squamish, BC", source: "osm" },
+        tips: "The Squamish Adventure Lodge (accredited) has a locked gear room for bikes and is popular with Sea to Sky riders." }
     ]
   },
   {
@@ -423,42 +445,48 @@ var categories = [
     ],
     optional: [
       "Takeout", "Packed lunches", "Water without purchase",
-      "Vegetarian / vegan / GF", "Covered bike parking", "Patio bike visibility",
+      "Vegetarian / vegan / GF", "Bike rack", "Bike rack visible from inside",
+      "Covered bike parking", "Public rack nearby", "Bike allowed inside/on patio",
       "Device charging", "E-bike charging", "Pump", "Wi-Fi"
     ],
     examples: [
       { name: "The Penticton Pedalhaus", location: "Penticton (Okanagan)", badge: "accredited",
         desc: "Café near the KVR trailhead. Bike rack for 12, packed lunches, 7am opening.",
-        checked: [0,1,2,3,4,5,6,9], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
+        checked: [0,1,2,3,4,5,6,9,12], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
         detail: { address: "456 Lakeshore Dr, Penticton, BC V2A 1B4", phone: "(250) 555-0198", url: "pedalhaus.ca", hours: "7am–3pm daily, Mar–Oct", source: "operator" },
-        notes: { 1: "Order by 9am for same-day pickup", 4: "Under awning, fits loaded touring bikes" } },
+        notes: { 1: "Order by 9am for same-day pickup", 6: "Under awning, fits loaded touring bikes" } },
       { name: "Whistler Brewing Co.", location: "Whistler (Sea to Sky)", badge: "accredited",
         desc: "Brewpub near the Valley Trail. Window seating with bike visibility. GF options.",
-        checked: [0,3,5,6,7,9], routes: ["Sea to Sky Trail"], network: "BC Ale Trail",
+        checked: [0,3,4,5,9,10,12], routes: ["Sea to Sky Trail"], network: "BC Ale Trail",
         detail: { address: "1045 Millar Creek Rd, Whistler, BC V8E 0S6", url: "whistlerbrewing.com", source: "osm" } },
       { name: "Nelson Brewing Company", location: "Nelson (West Kootenay)", badge: "accredited",
-        desc: "Craft brewery with patio bike visibility on Baker St. Water without purchase. Strong vegetarian menu.",
-        checked: [0,2,3,5,6,9], routes: ["Frog Peak Loop"], network: "BC Ale Trail",
+        desc: "Craft brewery with bike rack visible from patio on Baker St. Water without purchase. Strong vegetarian menu.",
+        checked: [0,2,3,4,5,9,12], routes: ["Frog Peak Loop"], network: "BC Ale Trail",
         detail: { address: "310 Latimer St, Nelson, BC V1L 4T6", phone: "(250) 555-0227", hours: "12–9pm daily", source: "operator" },
         tips: "Baker St is one-way and busy — walk your bike on the sidewalk. The Kootenay Co-op grocery is two blocks east if you need to resupply." },
       { name: "Crescent Valley River Café", location: "Crescent Valley (West Kootenay)", badge: "accredited",
         desc: "Cozy café above the Slocan River. Perfect final stop before Nelson on the Frog Peak Loop.",
-        checked: [0,2,3,5,9], routes: ["Frog Peak Loop"],
+        checked: [0,2,3,5,8,12], routes: ["Frog Peak Loop"],
         detail: { address: "1234 Crescent Valley Rd, Crescent Valley, BC V0G 1H0", hours: "8am–5pm daily, May–Oct", source: "operator" },
-        notes: { 5: "Patio overlooks the Slocan River" },
+        notes: { 8: "Bikes welcome on patio, lean against railing" },
         tips: "There's a swimming hole in the Slocan River right below the café — bring a towel. The guesthouse upstairs rents out if you want an extra night." },
       { name: "Kamloops Craft Brewing", location: "Kamloops (Thompson)", badge: "accredited",
         desc: "Downtown brewpub. Covered patio with bike rack. Post-ride fuel for Lac Du Bois riders.",
-        checked: [0,2,3,5,6,7,9], routes: ["Lac Du Bois Tranquility"], network: "BC Ale Trail",
+        checked: [0,2,3,4,5,6,9,10,12], routes: ["Lac Du Bois Tranquility"], network: "BC Ale Trail",
         detail: { address: "355 Lansdowne St, Kamloops, BC V2C 1X8", phone: "(250) 555-0388", hours: "11am–10pm daily", source: "operator" } },
       { name: "Steveston Fish Market", location: "Richmond (Metro Vancouver)", badge: "listed",
         desc: "Editorial listing — iconic waterfront fish spot on the Vancouver Crossing Loop. Bike racks at the pier.",
-        checked: [0,2,9], routes: ["Vancouver Crossing Loop"],
+        checked: [0,2,4,12], routes: ["Vancouver Crossing Loop"],
         detail: { address: "Bayview St, Steveston, Richmond, BC V7E 0A6", source: "osm" } },
       { name: "Greendale Farm Bistro", location: "Chilliwack (Fraser Valley)", badge: "listed",
         desc: "Editorial listing — farm-to-table restaurant near the Vedder Rotary Loop. Patio seating.",
-        checked: [0,2,3,5], routes: ["Chilliwack Loops"],
-        detail: { address: "Chilliwack, BC V2R 4M6", source: "osm" } }
+        checked: [0,2,3,5,8], routes: ["Chilliwack Loops"],
+        detail: { address: "Chilliwack, BC V2R 4M6", source: "osm" } },
+      { name: "Dave's Roadside Grill", location: "Summerland (Okanagan)", badge: "unwelcome",
+        desc: "Food truck near the KVR trailhead. Owner has been reported yelling at cyclists for leaning bikes against the truck and blocking the service window. Multiple community reports of hostile behaviour toward touring cyclists.",
+        checked: [], routes: ["KVR Myra Canyon"],
+        detail: { address: "Summerland, BC", source: "osm" },
+        tips: "The Penticton Pedalhaus (accredited) is 15 min down the trail and actually wants your business." }
     ]
   },
   {
@@ -471,33 +499,34 @@ var categories = [
     ],
     optional: [
       "Basic groceries", "Hot food", "Washrooms", "Outdoor water tap",
-      "Ice", "Vending machines", "Camping fuel", "Bike rack on site",
-      "Public rack nearby", "Covered bike parking", "Device charging", "E-bike charging", "Pump"
+      "Ice", "Vending machines", "Camping fuel", "Bike rack",
+      "Bike rack visible from inside", "Covered bike parking", "Public rack nearby",
+      "Bike allowed inside/on patio", "Device charging", "E-bike charging", "Pump"
     ],
     examples: [
       { name: "Oyama General Store", location: "Oyama (Okanagan)", badge: "accredited",
         desc: "Lakeside general store right on the Okanagan Rail Trail. Hot food, outdoor tap, bike rack.",
-        checked: [0,1,2,3,7,12], routes: ["Okanagan Rail Trail"],
+        checked: [0,1,2,3,7,8,14], routes: ["Okanagan Rail Trail"],
         detail: { address: "14230 Oyama Rd, Oyama, BC V4V 2B4", hours: "8am–6pm daily", source: "osm" },
         notes: { 1: "Sandwiches and wraps made to order" } },
       { name: "Naramata General Store", location: "Naramata (Okanagan)", badge: "accredited",
         desc: "Village store 16 km into the KVR ride from Penticton. Last resupply before Chute Lake climb.",
-        checked: [0,1,2,3,4,6,7], routes: ["KVR Myra Canyon"],
+        checked: [0,1,2,3,4,6,7,8], routes: ["KVR Myra Canyon"],
         detail: { address: "210 Robinson Ave, Naramata, BC V0H 1N0", phone: "(250) 555-0319", hours: "7:30am–7pm daily, summer", source: "operator" },
         notes: { 4: "Bag ice only" },
-        tips: "This is genuinely your last resupply before Chute Lake — fill your bottles and buy more food than you think you need. The climb is long. Naramata Bench wineries are nearby if you're done for the day." },
+        tips: "This is genuinely your last resupply before Chute Lake — fill your bottles and buy more food than you think you need. The climb is long. Naramata Bench wineries are nearby if you’re done for the day." },
       { name: "Winlaw Mini Mart", location: "Winlaw (West Kootenay)", badge: "accredited",
         desc: "Slocan Valley general store on the Frog Peak Loop. Basic supplies, produce, camp fuel.",
         checked: [0,1,2,6,7], routes: ["Frog Peak Loop"],
         detail: { address: "5672 Hwy 6, Winlaw, BC V0G 2J0", hours: "9am–6pm Mon–Sat", source: "osm" } },
       { name: "Kimberley City Market", location: "Kimberley (East Kootenay)", badge: "accredited",
         desc: "Full grocery near the Platzl. Outdoor water tap, covered bike parking under the awning.",
-        checked: [0,1,2,3,4,7,9,12], routes: ["North Star + Chief Isadore Trail"],
+        checked: [0,1,2,3,4,7,9,14], routes: ["North Star + Chief Isadore Trail"],
         detail: { address: "195 Spokane St, Kimberley, BC V1A 2E5", phone: "(250) 555-0356", hours: "8am–8pm daily", source: "operator" },
-        tips: "The Platzl is Kimberley's pedestrian area — good cafés, public washrooms, and a giant cuckoo clock. Worth a wander. The trail north back to Cranbrook starts from the far end of town." },
+        tips: "The Platzl is Kimberley’s pedestrian area — good cafés, public washrooms, and a giant cuckoo clock. Worth a wander. The trail north back to Cranbrook starts from the far end of town." },
       { name: "Kamloops Farmers Market", location: "Kamloops (Thompson)", badge: "accredited",
         desc: "Seasonal outdoor market downtown. Fresh produce, hot food, public bike racks.",
-        checked: [0,1,8], routes: ["Lac Du Bois Tranquility"], network: "BC Farmers’ Market Network",
+        checked: [0,1,10], routes: ["Lac Du Bois Tranquility"], network: "BC Farmers’ Market Network",
         detail: { address: "St Paul St, Kamloops, BC V2C 2J4", hours: "Saturdays 8am–1pm, May–Oct", source: "operator" },
         notes: { 1: "Multiple hot food vendors" } },
       { name: "Ucluelet Co-op", location: "Ucluelet (Pacific Rim)", badge: "listed",
@@ -523,39 +552,41 @@ var categories = [
     optional: [
       "Washrooms", "Showers (drop-in or fee)", "Café or food on site",
       "Water without admission", "Luggage / bag storage", "Vending machines",
-      "Covered bike parking", "Device charging", "Wi-Fi",
-      "E-bike charging", "Pump", "Discount for arriving by bike"
+      "Bike rack", "Bike rack visible from inside", "Covered bike parking",
+      "Public rack nearby", "Bike allowed inside/on patio",
+      "Device charging", "Wi-Fi", "E-bike charging", "Pump",
+      "Discount for arriving by bike"
     ],
     examples: [
       { name: "Kettle Valley Steam Railway", location: "Summerland (Okanagan)", badge: "accredited",
         desc: "Heritage railway on the KVR. Covered bike parking, café, cyclist discount on admission.",
-        checked: [0,2,6,8,11], routes: ["KVR Myra Canyon"],
+        checked: [0,2,6,8,12,15], routes: ["KVR Myra Canyon"],
         detail: { address: "18404 Bathville Rd, Summerland, BC V0H 1Z0", phone: "(250) 555-0216", url: "kettlevalleyrail.org", hours: "Thu–Mon, 10am–4pm, May–Oct", source: "operator" },
-        notes: { 11: "10% off with bike at the gate" } },
+        notes: { 15: "10% off with bike at the gate" } },
       { name: "Kamloops Museum & Archives", location: "Kamloops (Thompson)", badge: "accredited",
         desc: "Downtown museum with cyclist info, bike rack, water fountain. Good orientation stop before Lac Du Bois.",
-        checked: [0,3,6,7,8,10], routes: ["Lac Du Bois Tranquility"],
+        checked: [0,3,6,8,11,12,14], routes: ["Lac Du Bois Tranquility"],
         detail: { address: "207 Seymour St, Kamloops, BC V2C 2E7", phone: "(250) 555-0392", hours: "9:30am–4:30pm Tue–Sat", source: "operator" } },
       { name: "Nelson Public Library", location: "Nelson (West Kootenay)", badge: "accredited",
         desc: "Beautiful stone library on Baker St. Washrooms, Wi-Fi, water, bike rack. Great pre-ride stop.",
-        checked: [0,3,6,7,8,10], routes: ["Frog Peak Loop"],
+        checked: [0,3,6,8,11,12,14], routes: ["Frog Peak Loop"],
         detail: { address: "602 Stanley St, Nelson, BC V1L 1N4", hours: "10am–8pm Mon–Thu, 10am–5pm Fri–Sat", source: "osm" } },
       { name: "Pacific Rim Visitor Centre", location: "Ucluelet (Pacific Rim)", badge: "accredited",
         desc: "Parks Canada visitor centre between Tofino and Ucluelet. Maps, bear safety info, water, washrooms.",
-        checked: [0,3,6,7,8], routes: ["Tofino–Ucluelet"],
+        checked: [0,3,6,8,11,12], routes: ["Tofino–Ucluelet"],
         detail: { address: "2791 Pacific Rim Hwy, Ucluelet, BC V0R 3A0", url: "pc.gc.ca/pacificrim", hours: "10am–5pm daily, summer", source: "operator" },
         notes: { 3: "Outdoor tap at parking area, year-round" } },
       { name: "Cranbrook History Centre", location: "Cranbrook (East Kootenay)", badge: "accredited",
         desc: "Railway museum near the North Star trailhead. Bike racks, covered area, water.",
-        checked: [0,2,3,6,7,8], routes: ["North Star + Chief Isadore Trail"],
+        checked: [0,2,3,6,8,11,12], routes: ["North Star + Chief Isadore Trail"],
         detail: { address: "57 Van Horne St S, Cranbrook, BC V1C 4H9", phone: "(250) 555-0365", hours: "10am–5pm daily, May–Oct", source: "operator" } },
       { name: "Penticton Visitor Centre", location: "Penticton (Okanagan)", badge: "listed",
         desc: "Editorial listing — visitor centre with maps and cycling info. Near the Okanagan Rail Trail start.",
-        checked: [0,3,7,8], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
+        checked: [0,3,9,11,12], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
         detail: { address: "888 Westminster Ave W, Penticton, BC V2A 8R2", source: "osm" } },
       { name: "Chilliwack Visitor Centre", location: "Chilliwack (Fraser Valley)", badge: "listed",
         desc: "Editorial listing — visitor centre with regional cycling maps. Near Vedder Rotary Loop trailhead.",
-        checked: [0,3,7,8], routes: ["Chilliwack Loops"],
+        checked: [0,3,9,11,12], routes: ["Chilliwack Loops"],
         detail: { address: "44150 Luckakuck Way, Chilliwack, BC V2R 4A7", source: "osm" } }
     ]
   },
@@ -661,7 +692,32 @@ var categories = [
         desc: "Editorial listing — city buses with front bike racks. Access to Lac Du Bois trailheads.",
         checked: [0,5,13], routes: ["Lac Du Bois Tranquility"],
         detail: { url: "bctransit.com/kamloops", source: "osm" },
-        notes: { 13: "2-bike front rack, first come first served" } }
+        notes: { 13: "2-bike front rack, first come first served" } },
+      { name: "IslandLink Bus", location: "Nanaimo / Victoria", badge: "unwelcome",
+        desc: "Intercity bus between Nanaimo and Victoria. Does not carry bicycles in any form — boxed, bagged, or otherwise. No luggage bay space allocated for bikes.",
+        checked: [], routes: ["Vancouver Crossing Loop"],
+        detail: { url: "islandlinkbus.com", source: "operator" },
+        tips: "Use BC Transit or the Malahat shuttle instead. BC Ferries walk-on with bike is another option for getting between Nanaimo and Victoria areas." },
+      { name: "Cranbrook Taxi Co.", location: "Cranbrook (East Kootenay)", badge: "unwelcome",
+        desc: "Local taxi service. No vehicles large enough to carry a bicycle. Sedans only, no roof racks, no hatchbacks. Cannot transport a boxed or bagged bike either.",
+        checked: [], routes: ["North Star + Chief Isadore Trail"],
+        detail: { phone: "(250) 555-0490", source: "osm" },
+        tips: "If you need a lift with your bike, ask at the Cranbrook Heritage Inn — they sometimes know locals willing to shuttle." },
+      { name: "Kamloops Yellow Cab", location: "Kamloops (Thompson)", badge: "unwelcome",
+        desc: "Local taxi service. Sedan fleet only. Cannot fit a bicycle in any configuration. No rack-equipped vehicles available.",
+        checked: [], routes: ["Lac Du Bois Tranquility"],
+        detail: { phone: "(250) 555-0511", source: "osm" },
+        tips: "Kamloops Transit buses have front bike racks and serve most of the city." },
+      { name: "Penticton Cabs", location: "Penticton (Okanagan)", badge: "unwelcome",
+        desc: "Local taxi service. All-sedan fleet, no capacity for bicycles. Uber and Lyft have no XL vehicles available in the Penticton area either.",
+        checked: [], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
+        detail: { phone: "(250) 555-0523", source: "osm" },
+        tips: "The Penticton Pedal Shuttle (accredited) runs Penticton to Naramata and Summerland with full bike transport, May–Oct." },
+      { name: "Harbour Air — Tofino", location: "Tofino (Pacific Rim)", badge: "unwelcome",
+        desc: "Float plane service connecting Tofino to Vancouver. No capacity for bicycles. Strict baggage limits and small cargo holds cannot accommodate bikes in any form.",
+        checked: [], routes: ["Tofino–Ucluelet"],
+        detail: { url: "harbourair.com", source: "operator" },
+        tips: "The Tofino Bus (accredited) takes bagged bikes to Nanaimo, where you can connect to BC Ferries or other transit." }
     ]
   }
 ];
@@ -748,6 +804,7 @@ function renderExamplesCard(cat) {
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span><span class="legend-tip">Cycling industry business with an enhanced listing — logo, photos, and promoted placement. Supports BC Cycle Tourism Society through the industry partner program.</span></span>' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span><span class="legend-tip">Business has confirmed all required criteria and joined the We Welcome Cyclists program. Free to join. Apply at apply.html</span></span>' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Listed\x27)"><span class="badge badge-listed">Listed</span><span class="legend-tip">Editorial entry — meets basic criteria but hasn' + "'" + 't formally enrolled in the program yet.</span></span>' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span><span class="legend-tip">This business or service does not accommodate cyclists or bicycles. Listed so you know before you show up.</span></span>' +
     '</div></div>' +
     '<div class="filter-bar"><div class="filter-bar-top"><label>Filter</label>' +
     '<input type="text" id="search-box" class="search-input" placeholder="Search name, location, route, amenity, or badge…" oninput="onSearch(this.value)" />' +
@@ -755,7 +812,8 @@ function renderExamplesCard(cat) {
     '</div><div class="filter-pills-row" id="filter-pills-row"></div></div>' +
     '<div id="results-count-area"></div><div id="listings-area"></div>' +
     '<div class="click-hint">Click a listing to see full details</div>' +
-    '<div style="text-align:center;padding:16px 36px 24px;"><a href="apply.html" style="font-size:13px;color:#2E8A36;font-weight:600;text-decoration:none;">Want to welcome cyclists? Apply for accreditation &rarr;</a></div>';
+    '<div style="text-align:center;padding:16px 36px 24px;"><a href="apply.html" style="font-size:13px;color:#2E8A36;font-weight:600;text-decoration:none;">Want to welcome cyclists? Apply for accreditation &rarr;</a></div>' +
+    '<div style="text-align:center;padding:0 36px 28px;font-size:13px;color:#636363;max-width:500px;margin:0 auto;">See a <span class="badge badge-unwelcome" style="font-size:11px;padding:2px 8px;vertical-align:1px;">Bikes Unwelcome</span> listing that' + "'" + 's wrong? We' + "'" + 'd love to be wrong. <a href="suggest.html" style="color:#1E7D96;font-weight:600;">Let us know</a> and we' + "'" + 'll correct it ASAP.</div>';
   updateFilterPills(cat);
   updateListings(cat);
 }
@@ -795,11 +853,12 @@ function getSortedFiltered(cat) {
       var badgeMatch = (ex.network && ex.network.toLowerCase().indexOf(q) !== -1) ||
         (ex.partner && "industry partner".indexOf(q) !== -1) ||
         (ex.badge && ex.badge.toLowerCase().indexOf(q) !== -1) ||
+        (ex.badge === "unwelcome" && "bikes unwelcome".indexOf(q) !== -1) ||
         ((ex.network) && "sector partner".indexOf(q) !== -1);
       return ex.name.toLowerCase().indexOf(q) !== -1 || ex.location.toLowerCase().indexOf(q) !== -1 || ex.desc.toLowerCase().indexOf(q) !== -1 || (ex.routes && ex.routes.some(function(r) { return r.toLowerCase().indexOf(q) !== -1; })) || amenityMatch || badgeMatch;
     });
   }
-  function sortRank(ex) { if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; return 3; }
+  function sortRank(ex) { if (ex.badge === "unwelcome") return 4; if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; return 3; }
   list.sort(function(a, b) { var ra = sortRank(a), rb = sortRank(b); if (ra !== rb) return ra - rb; return a.name.localeCompare(b.name); });
   return list;
 }
@@ -831,10 +890,14 @@ function openModal(catId, exIdx) {
   var cat = categories.find(function(c) { return c.id === catId; });
   var ex = cat.examples[exIdx];
   var badges = '';
-  if (ex.network) badges += '<span class="badge badge-sector">' + ex.network + '</span>';
-  if (ex.partner) badges += '<span class="badge badge-industry">Industry Partner</span>';
-  if (ex.badge === "accredited") badges += '<span class="badge badge-accredited">Accredited</span>';
-  else badges += '<span class="badge badge-listed">Listed</span>';
+  if (ex.badge === "unwelcome") {
+    badges = '<span class="badge badge-unwelcome">Bikes Unwelcome</span>';
+  } else {
+    if (ex.network) badges += '<span class="badge badge-sector">' + ex.network + '</span>';
+    if (ex.partner) badges += '<span class="badge badge-industry">Industry Partner</span>';
+    if (ex.badge === "accredited") badges += '<span class="badge badge-accredited">Accredited</span>';
+    else badges += '<span class="badge badge-listed">Listed</span>';
+  }
 
   var detailHTML = '';
   if (ex.detail) {
@@ -856,22 +919,26 @@ function openModal(catId, exIdx) {
       '</div></div>';
   }
 
-  var notesList = [];
-  var pills = cat.optional.map(function(opt, i) {
-    var has = ex.checked.indexOf(i) !== -1;
-    var star = '';
-    if (has && ex.notes && ex.notes[i]) { star = '<span class="note-star">*</span>'; notesList.push({ name: opt, note: ex.notes[i] }); }
-    return '<span class="' + (has ? 'modal-pill-yes' : 'modal-pill-no') + '">' + opt + star + '</span>';
-  }).join("");
-  var notesHTML = '';
-  if (notesList.length > 0) {
-    notesHTML = '<div class="modal-notes">' + notesList.map(function(n) {
-      return '<div class="modal-note-item"><strong>' + n.name + '</strong> — ' + n.note + '</div>';
-    }).join("") + '</div>';
+  var amenitySectionHTML = '';
+  if (ex.badge !== "unwelcome") {
+    var notesList = [];
+    var pills = cat.optional.map(function(opt, i) {
+      var has = ex.checked.indexOf(i) !== -1;
+      var star = '';
+      if (has && ex.notes && ex.notes[i]) { star = '<span class="note-star">*</span>'; notesList.push({ name: opt, note: ex.notes[i] }); }
+      return '<span class="' + (has ? 'modal-pill-yes' : 'modal-pill-no') + '">' + opt + star + '</span>';
+    }).join("");
+    var notesHTML = '';
+    if (notesList.length > 0) {
+      notesHTML = '<div class="modal-notes">' + notesList.map(function(n) {
+        return '<div class="modal-note-item"><strong>' + n.name + '</strong> — ' + n.note + '</div>';
+      }).join("") + '</div>';
+    }
+    amenitySectionHTML = '<div class="modal-section"><div class="modal-section-title">Amenities</div><div class="modal-pills">' + pills + '</div>' + notesHTML + '</div>';
   }
 
   var verifyHTML = '';
-  if (ex.badge !== "accredited" && ex.detail && ex.detail.source === "osm") {
+  if (ex.badge !== "accredited" && ex.badge !== "unwelcome" && ex.detail && ex.detail.source === "osm") {
     verifyHTML = '<div class="verify-banner">Amenities assumed from location and public data. <a href="suggest.html#edit=' + encodeURIComponent(ex.name) + '">Confirm or update this listing</a></div>';
   }
 
@@ -884,13 +951,15 @@ function openModal(catId, exIdx) {
     '</div><button class="modal-close" onclick="closeModal()">×</button></div>' +
     '<div class="modal-body">' +
       verifyHTML +
-      '<div class="modal-section"><div class="modal-section-title">Amenities</div><div class="modal-pills">' + pills + '</div>' + notesHTML + '</div>' +
+      amenitySectionHTML +
       (ex.tips ? '<div class="modal-tips"><strong>Good to know</strong>' + ex.tips + '</div>' : '') +
       photoHTML +
       '<div class="modal-section"><div class="modal-section-title">About</div><div class="modal-desc">' + ex.desc + '</div></div>' +
       detailHTML +
       routesHTML +
-      '<div style="text-align:center;margin-top:20px;padding-top:16px;border-top:1px solid #EEE;"><a href="suggest.html#edit=' + encodeURIComponent(ex.name) + '" style="font-size:13px;color:#1E7D96;text-decoration:none;">Suggest an edit to this listing</a></div>' +
+      (ex.badge === "unwelcome"
+        ? '<div style="text-align:center;margin-top:20px;padding:16px 20px;border-top:1px solid #EEE;background:#FEF2F2;border-radius:0 0 12px 12px;"><div style="font-size:14px;font-weight:600;color:#DC2626;margin-bottom:4px;">Are we wrong? We' + "'" + 'd love to be wrong!</div><div style="font-size:13px;color:#4b5563;">If you do welcome bikes, <a href="suggest.html#edit=' + encodeURIComponent(ex.name) + '" style="color:#1E7D96;font-weight:600;">let us know</a> and we' + "'" + 'll get it corrected ASAP.</div></div>'
+        : '<div style="text-align:center;margin-top:20px;padding-top:16px;border-top:1px solid #EEE;"><a href="suggest.html#edit=' + encodeURIComponent(ex.name) + '" style="font-size:13px;color:#1E7D96;text-decoration:none;">Suggest an edit to this listing</a></div>') +
     '</div>';
   document.getElementById("modal-overlay").classList.add("open");
   document.body.style.overflow = "hidden";
@@ -954,7 +1023,7 @@ function renderRouteCard() {
       return ex.routes && ex.routes.indexOf(currentRoute) !== -1;
     });
     matches.sort(function(a, b) {
-      function rank(ex) { if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; return 3; }
+      function rank(ex) { if (ex.badge === "unwelcome") return 4; if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; return 3; }
       var ra = rank(a), rb = rank(b); if (ra !== rb) return ra - rb; return a.name.localeCompare(b.name);
     });
     if (matches.length > 0) groups.push({ cat: cat, matches: matches });
@@ -987,6 +1056,7 @@ function renderAllView() {
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span></span>' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span></span>' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Listed\x27)"><span class="badge badge-listed">Listed</span></span>' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span></span>' +
     '</div></div>' +
     '<div class="filter-bar"><div class="filter-bar-top"><label>Filter</label>' +
     '<input type="text" id="all-search-box" class="search-input" placeholder="Search name, location, route, amenity, or badge…" oninput="onAllSearch(this.value)" />' +
@@ -1014,6 +1084,7 @@ function getAllListings() {
       var badgeMatch = (ex.network && ex.network.toLowerCase().indexOf(q) !== -1) ||
         (ex.partner && "industry partner".indexOf(q) !== -1) ||
         (ex.badge && ex.badge.toLowerCase().indexOf(q) !== -1) ||
+        (ex.badge === "unwelcome" && "bikes unwelcome".indexOf(q) !== -1) ||
         ((ex.network || ex.partner) && "sector partner".indexOf(q) !== -1 && ex.network);
       return ex.name.toLowerCase().indexOf(q) !== -1 ||
              ex.location.toLowerCase().indexOf(q) !== -1 ||
@@ -1024,7 +1095,7 @@ function getAllListings() {
     });
   }
   all.sort(function(a, b) {
-    function rank(ex) { if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; return 3; }
+    function rank(ex) { if (ex.badge === "unwelcome") return 4; if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; return 3; }
     var ra = rank(a.ex), rb = rank(b.ex); if (ra !== rb) return ra - rb; return a.ex.name.localeCompare(b.ex.name);
   });
   return all;
@@ -1052,26 +1123,34 @@ function clearAllSearch() { allSearchText = ""; var box = document.getElementByI
 function renderListingCardHTML(cat, ex, showCatTag) {
   var idx = cat.examples.indexOf(ex);
   var badges = '';
-  if (ex.network) badges += '<span class="badge badge-sector">' + ex.network + '</span>';
-  if (ex.partner) badges += '<span class="badge badge-industry">Industry Partner</span>';
-  if (ex.badge === "accredited") badges += '<span class="badge badge-accredited">Accredited</span>';
-  else badges += '<span class="badge badge-listed">Listed</span>';
-  var borderClass = ex.partner ? 'is-industry' : (ex.network ? 'is-sector' : (ex.badge === 'accredited' ? 'is-accredited' : 'is-listed'));
+  if (ex.badge === "unwelcome") {
+    badges = '<span class="badge badge-unwelcome">Bikes Unwelcome</span>';
+  } else {
+    if (ex.network) badges += '<span class="badge badge-sector">' + ex.network + '</span>';
+    if (ex.partner) badges += '<span class="badge badge-industry">Industry Partner</span>';
+    if (ex.badge === "accredited") badges += '<span class="badge badge-accredited">Accredited</span>';
+    else badges += '<span class="badge badge-listed">Listed</span>';
+  }
+  var borderClass = ex.badge === 'unwelcome' ? 'is-unwelcome' : (ex.partner ? 'is-industry' : (ex.network ? 'is-sector' : (ex.badge === 'accredited' ? 'is-accredited' : 'is-listed')));
   var catTag = showCatTag ? '<span class="cat-tag">' + cat.tab + '</span>' : '';
   var demoTag = isDemo(ex) ? '<span class="demo-tag">demo</span>' : '';
   var demoClass = isDemo(ex) ? ' is-demo' : '';
-  var pills = cat.optional.map(function(opt, i) {
-    var has = ex.checked.indexOf(i) !== -1;
-    var star = (ex.notes && ex.notes[i]) ? '<span class="note-star">*</span>' : '';
-    if (has) return '<span class="pill pill-yes">' + opt + star + '</span>';
-    return '<span class="pill pill-no">' + opt + '</span>';
-  }).join("");
+  var pillsHTML = '';
+  if (ex.badge !== "unwelcome") {
+    var pills = cat.optional.map(function(opt, i) {
+      var has = ex.checked.indexOf(i) !== -1;
+      var star = (ex.notes && ex.notes[i]) ? '<span class="note-star">*</span>' : '';
+      if (has) return '<span class="pill pill-yes">' + opt + star + '</span>';
+      return '<span class="pill pill-no">' + opt + '</span>';
+    }).join("");
+    pillsHTML = '<div class="amenities-label">Amenities</div><div class="amenity-pills">' + pills + '</div>';
+  }
   return '<div class="listing-card ' + borderClass + demoClass + '" onclick="openModal(\x27' + cat.id + '\x27,' + idx + ')">' +
     '<div class="listing-top"><div><div class="listing-name">' + ex.name + catTag + demoTag + '</div>' +
     '<div class="listing-location">' + ex.location + '</div></div>' +
     '<div class="listing-badges">' + badges + '</div></div>' +
     '<div class="listing-desc">' + ex.desc + '</div>' +
-    '<div class="amenities-label">Amenities</div><div class="amenity-pills">' + pills + '</div></div>';
+    pillsHTML + '</div>';
 }
 
 // ---- URL HASH STATE ----
