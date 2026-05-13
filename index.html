@@ -25,15 +25,15 @@ body {
 .demo-banner strong { font-weight: 700; }
 
 .top-nav {
-  display: flex; align-items: center; justify-content: space-between; padding: 18px 40px;
+  display: flex; align-items: center; gap: 64px; padding: 18px 40px;
   max-width: 1200px; margin: 0 auto;
 }
 .top-nav-left { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .top-nav-left img { width: 44px; height: 44px; }
 .top-nav-left span { font-size: 15px; font-weight: 700; color: #1F514C; letter-spacing: -0.01em; }
-.top-nav-right { display: flex; gap: 24px; align-items: center; }
-.top-nav-right a { font-size: 14px; color: rgba(13,64,112,0.5); text-decoration: none; transition: color 0.2s; }
-.top-nav-right a:hover { color: #0D4070; }
+.top-nav-right { display: flex; gap: 28px; align-items: center; }
+.top-nav-right a { font-size: 16px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
+.top-nav-right a:hover { color: #1E7D96; }
 
 .hero-section {
   max-width: 1200px; margin: 0 auto; padding: 0 40px 48px;
@@ -57,13 +57,13 @@ body {
 }
 .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-btn {
-  padding: 12px 24px; border-radius: 20px; font-size: 14px; font-weight: 600;
+  padding: 16px 32px; border-radius: 24px; font-size: 16px; font-weight: 500;
   text-decoration: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.hero-btn-light { background: #FFFDF9; color: #0D4070; }
-.hero-btn-light:hover { background: #FFFDF9; transform: translateY(-1px); }
-.hero-btn-outline { background: transparent; color: rgba(245,240,232,0.7); border: 1.5px solid rgba(255,255,255,0.25); }
-.hero-btn-outline:hover { border-color: rgba(255,255,255,0.5); color: white; transform: translateY(-1px); }
+.hero-btn-light { background: #FFFDF9; color: #2C4C3B; }
+.hero-btn-light:hover { background: #2C4C3B; color: #FFFDF9; transform: translateY(-1px); }
+.hero-btn-outline { background: transparent; color: white; border: 2px solid white; }
+.hero-btn-outline:hover { background: white; color: #0D4070; transform: translateY(-1px); }
 .hero-img {
   background: url('img/hero-road.jpg') center/cover;
   border-radius: 20px; margin: 20px 20px 20px 0;
