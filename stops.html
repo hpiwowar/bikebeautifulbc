@@ -1155,7 +1155,7 @@ function renderListingCardHTML(cat, ex, showCatTag) {
 function updateHash() {
   var parts = [];
   parts.push("view=" + currentView);
-  if (!showDemo) parts.push("demo=0");
+  if (showDemo) parts.push("demo=1");
   if (currentView === "category") {
     parts.push("cat=" + currentCatId);
     if (searchText) parts.push("q=" + encodeURIComponent(searchText));
@@ -1177,7 +1177,7 @@ function readHash() {
     if (kv.length === 2) params[kv[0]] = decodeURIComponent(kv[1]);
   });
   if (params.view) currentView = params.view;
-  if (params.demo === "0") showDemo = false;
+  if (params.demo === "1") showDemo = true;
   if (params.cat) currentCatId = params.cat;
   if (params.route) currentRoute = params.route;
   if (params.view === "category") {
