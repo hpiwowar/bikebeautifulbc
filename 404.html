@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<title>Land Acknowledgement — BC Cycle Tourism Society</title>
+<title>Page Not Found — BC Cycle Tourism Society</title>
 <style>
 @font-face { font-family: "Archivo"; src: url("fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Archivo"; src: url("fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
@@ -78,13 +78,11 @@ body {
     </div>
   </div>
 </div>
-<div class="g-main">
+<div class="g-main" style="text-align:center; padding-top:80px; padding-bottom:80px;">
 
-<h2>Land Acknowledgement</h2>
-
-<p>The cycling routes and communities featured on this website are located throughout what is now British Columbia, on many First Nations territories, including unceded and treaty lands. We acknowledge the enduring relationships, rights, laws, cultures, and stewardship responsibilities of First Nations in these places.</p>
-
-<p>As this network grows, we are committed to listening and building respectful relationships with Indigenous communities whose territories and priorities are connected to cycle tourism in B.C. We're also committed to deepening our understanding of the history and present-day stories of the peoples whose lands we ride through, and we encourage our readers to do the same. Tools such as <a href="https://native-land.ca">Native Land</a> and <a href="https://www.whose.land">Whose Land</a> can be useful starting points.</p>
+<h2>Wrong turn?</h2>
+<p style="max-width:480px; margin:0 auto 24px;">This page doesn't exist. Maybe the URL changed, or maybe it was never here.</p>
+<p><a href="routes" style="color:#1E7D96; font-weight:600;">Browse routes</a> &nbsp;&middot;&nbsp; <a href="/" style="color:#1E7D96; font-weight:600;">Go home</a></p>
 
 </div>
 <div class="g-footer">
@@ -107,6 +105,12 @@ body {
     </div>
   </div>
 </div>
+<script>
+window.addEventListener('load', () => {
+  const path = window.location.pathname;
+  fathom.trackEvent('404: ' + path);
+});
+</script>
 <script>
 window.addEventListener('load', (event) => {
   document.querySelectorAll('a').forEach(item => {
