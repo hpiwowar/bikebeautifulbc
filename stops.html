@@ -189,7 +189,7 @@ body {
 .modal-pill-no { padding: 5px 12px; border-radius: 14px; font-size: 12px; font-weight: 500; background: #FFFDF9; color: #D1D5DB; border: 1px solid #F3F4F6; text-decoration: line-through; }
 .click-hint { font-size: 11px; color: #BBB; text-align: center; padding: 8px 36px 20px; font-style: italic; }
 
-.demo-tag { font-size: 13px; font-style: normal; color: rgba(13,64,112,0.55); font-weight: 500; margin-left: 16px; letter-spacing: 0.03em; text-transform: uppercase; }
+.demo-tag { font-size: 11px; font-style: normal; color: #000; font-weight: 700; margin-left: 12px; letter-spacing: 0.05em; text-transform: uppercase; background: #FDE68A; border: 2px solid #000; padding: 2px 8px; }
 
 .criteria-toggle { padding: 14px 36px; cursor: pointer; user-select: none; font-size: 14px; color: #1E7D96; border-top: 1px solid #EEE; }
 .criteria-toggle:hover { background: #F8F4ED; }
@@ -200,8 +200,9 @@ body {
 .listing-card.is-demo { opacity: 1; }
 .listing-card.is-demo:hover { opacity: 1; }
 
-.demo-toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #636363; cursor: pointer; user-select: none; }
-.demo-toggle input { width: 16px; height: 16px; accent-color: #1E7D96; cursor: pointer; }
+.demo-toggle { display: flex; align-items: center; gap: 10px; font-size: 15px !important; color: #000 !important; font-weight: 700 !important; text-transform: none !important; letter-spacing: 0 !important; cursor: pointer; user-select: none; margin-left: 24px; }
+.demo-toggle input { width: 20px; height: 20px; accent-color: #000; cursor: pointer; }
+.demo-toggle-note { font-weight: 400; font-size: 13px; color: #000; }
 
 .modal-tips { margin-top: 16px; padding: 14px 16px; background: #FFFDF9; border-radius: 8px; font-size: 13px; color: #4A3C31; line-height: 1.5; }
 .modal-tips strong { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; display: block; margin-bottom: 6px; color: #92400E; }
@@ -345,49 +346,49 @@ var categories = [
       "Basic tools", "Bike wash / hose", "Wi-Fi"
     ],
     examples: [
-      { name: "Squamish Adventure Lodge", location: "Squamish (Sea to Sky)", badge: "accredited",
+      { name: "Trailhead Lodge", location: "Squamish (Sea to Sky)", badge: "accredited",
         desc: "Hostel-style lodge popular with Sea to Sky Trail riders. Locked ski room doubles as bike storage.",
         checked: [0,1,2,7,8,9,11,14], routes: ["Sea to Sky Trail"],
-        detail: { address: "38220 Cleveland Ave, Squamish, BC V8B 0A3", phone: "(604) 555-0134", url: "squamishadventurelodge.ca", hours: "Check-in 3pm, year-round", source: "operator" },
+        detail: { address: "38220 Cleveland Ave, Squamish, BC V8B 0A3", phone: "(604) 555-0134", url: "trailheadlodge.ca", hours: "Check-in 3pm, year-round", source: "operator" },
         notes: { 7: "Ground floor rooms only", 11: "Shared pump in the gear room" },
         tips: "The gear room has a basic workstand and tools — ask at the front desk. There's a great Thai place two doors down that does takeout until 9pm." },
-      { name: "Nelson Heritage Guesthouse", location: "Nelson (West Kootenay)", badge: "accredited",
+      { name: "Riverside Guesthouse", location: "Nelson (West Kootenay)", badge: "accredited",
         desc: "Heritage B&B in downtown Nelson. Bikes in the locked garden shed or ground-floor hallway.",
         checked: [0,2,4,5,8,9,10,14], routes: ["Frog Peak Loop"],
-        detail: { address: "412 Victoria St, Nelson, BC V1L 4K5", url: "nelsonheritageguesthouse.ca", source: "osm" } },
-      { name: "Naramata Village Motel", location: "Naramata (Okanagan)", badge: "accredited",
+        detail: { address: "412 Victoria St, Nelson, BC V1L 4K5", url: "riversideguesthouse.ca", source: "osm" } },
+      { name: "Orchard View Motel", location: "Naramata (Okanagan)", badge: "accredited",
         desc: "Small motel at the KVR trailhead in Naramata. Locked garage for bikes, early breakfast available.",
         checked: [0,1,3,4,5,8,9,14], routes: ["KVR Myra Canyon"],
         detail: { address: "225 Robinson Ave, Naramata, BC V0H 1N0", phone: "(250) 555-0312", source: "operator" },
         notes: { 3: "Continental, 7–9am" } },
-      { name: "Cranbrook Heritage Inn", location: "Cranbrook (East Kootenay)", badge: "accredited",
+      { name: "Valley Gateway Inn", location: "Cranbrook (East Kootenay)", badge: "accredited",
         desc: "Downtown hotel near the North Star Trail trailhead. Locked storage room, e-bike charging in lobby.",
         checked: [0,1,4,5,6,8,9,10,14], routes: ["North Star + Chief Isadore Trail"],
-        detail: { address: "1019 Cranbrook St N, Cranbrook, BC V1C 3R5", phone: "(250) 555-0341", url: "cranbrookheritageinn.ca", source: "operator" } },
-      { name: "Tofino Surf Lodge", location: "Tofino (Pacific Rim)", badge: "accredited",
+        detail: { address: "1019 Cranbrook St N, Cranbrook, BC V1C 3R5", phone: "(250) 555-0341", url: "valleygatewayinn.ca", source: "operator" } },
+      { name: "Westcoast Beach Lodge", location: "Tofino (Pacific Rim)", badge: "accredited",
         desc: "Beach lodge with covered bike storage in the surf shed. Popular with Pacific Rim corridor cyclists.",
         checked: [0,1,2,4,7,8,9,14], routes: ["Tofino–Ucluelet"],
         detail: { address: "311 Main St, Tofino, BC V0R 2Z0", phone: "(250) 555-0377", source: "operator" },
         notes: { 7: "Shared dorm rooms only", 8: "Plug in the surf shed" },
         tips: "They rent surfboards too — ride to Ucluelet in the morning, surf Long Beach in the afternoon. The Co-op in Ucluelet is cheaper for groceries than Tofino." },
-      { name: "Kamloops Plaza Hotel", location: "Kamloops (Thompson)", badge: "listed",
+      { name: "Sagebrush Hotel", location: "Kamloops (Thompson)", badge: "listed",
         desc: "Editorial listing — downtown hotel with locked underground parking suitable for bikes.",
         checked: [4,8,9,14], routes: ["Lac Du Bois Tranquility"],
         detail: { address: "405 Victoria St, Kamloops, BC V2C 2A9", source: "osm" } },
-      { name: "Chilliwack Travelodge", location: "Chilliwack (Fraser Valley)", badge: "listed",
+      { name: "Fraser View Motor Inn", location: "Chilliwack (Fraser Valley)", badge: "listed",
         desc: "Editorial listing — chain motel with interior corridor access for bike storage.",
         checked: [1,4,8,9,14], routes: ["Chilliwack Loops"],
         detail: { address: "45466 Yale Rd, Chilliwack, BC V2R 3Z8", source: "osm" } },
-      { name: "Penticton Value Inn", location: "Penticton (Okanagan)", badge: "unwelcome",
+      { name: "Lakeshore Budget Inn", location: "Penticton (Okanagan)", badge: "unwelcome",
         desc: "Strict no-bikes-indoors policy. Staff will not allow bikes in rooms, hallways, or lobby. No outdoor bike storage provided. Grease on carpet cited as the reason.",
         checked: [], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
         detail: { address: "Penticton, BC", source: "osm" },
-        tips: "If you're stuck, the Naramata Village Motel (accredited) has locked bike storage and is on the KVR trailhead." },
-      { name: "Squamish Budget Motor Inn", location: "Squamish (Sea to Sky)", badge: "unwelcome",
+        tips: "If you're stuck, the Orchard View Motel (accredited) has locked bike storage and is on the KVR trailhead." },
+      { name: "Mountain View Motor Inn", location: "Squamish (Sea to Sky)", badge: "unwelcome",
         desc: "No bikes allowed inside under any circumstances. No garage, no storage room, no covered area. Manager has turned away touring cyclists who asked to store bikes overnight.",
         checked: [], routes: ["Sea to Sky Trail"],
         detail: { address: "Squamish, BC", source: "osm" },
-        tips: "The Squamish Adventure Lodge (accredited) has a locked gear room for bikes and is popular with Sea to Sky riders." }
+        tips: "The Trailhead Lodge (accredited) has a locked gear room for bikes and is popular with Sea to Sky riders." }
     ]
   },
   {
@@ -405,37 +406,37 @@ var categories = [
       "E-bike charging", "Vending machines", "Ice", "Pump", "Basic tools", "Camping fuel"
     ],
     examples: [
-      { name: "Summerland Orchard Campground", location: "Summerland (Okanagan)", badge: "accredited",
+      { name: "Orchard Flats Campground", location: "Summerland (Okanagan)", badge: "accredited",
         desc: "Orchard campground with dedicated hiker/biker site, no minimum stay. Popular KVR trail stopover.",
         checked: [0,1,2,3,4,6,8,9,10,12,15,16], routes: ["KVR Myra Canyon"],
         detail: { address: "14820 Lakeshore Dr S, Summerland, BC V0H 1Z8", phone: "(250) 555-0163", hours: "May–Oct, check-in 2pm", source: "operator" },
         notes: { 1: "First come first served, max 2 tents", 3: "Coin-operated, $2", 8: "Bear box near hiker/biker site" } },
-      { name: "Alice Lake Provincial Park", location: "Squamish (Sea to Sky)", badge: "accredited",
+      { name: "Cedar Lake Campground", location: "Squamish (Sea to Sky)", badge: "accredited",
         desc: "Provincial park 13 km north of Squamish. Hiker/biker sites, showers, bear-safe storage.",
         checked: [1,2,3,5,8,9,14,15], routes: ["Sea to Sky Trail"],
         detail: { address: "Hwy 99, Squamish, BC V8B 0A1", url: "bcparks.ca/alice-lake", source: "osm" },
         notes: { 1: "Walk-in sites near entrance, first come first served", 3: "Coin-operated, $1" } },
-      { name: "Paul Lake Provincial Park", location: "Kamloops (Thompson)", badge: "accredited",
+      { name: "Grasslands Edge Campground", location: "Kamloops (Thompson)", badge: "accredited",
         desc: "Lakeside campground 25 min from downtown Kamloops. Closest camping to the Lac Du Bois grasslands.",
         checked: [1,2,3,4,8,9,14,17], routes: ["Lac Du Bois Tranquility"],
         detail: { address: "Paul Lake Rd, Kamloops, BC V2H 1R8", url: "bcparks.ca/paul-lake", source: "osm" },
         notes: { 17: "Firewood available at gate" },
         tips: "The road from Kamloops to Paul Lake has a solid shoulder but a steep climb — consider it a warmup for the grasslands. Cell service disappears about halfway up." },
-      { name: "Jimsmith Lake Campground", location: "Cranbrook (East Kootenay)", badge: "accredited",
+      { name: "Pine Bluff Campground", location: "Cranbrook (East Kootenay)", badge: "accredited",
         desc: "Small provincial park campground near the North Star trailhead. Potable water, no showers.",
         checked: [0,1,2,8,14,15], routes: ["North Star + Chief Isadore Trail"],
         detail: { address: "Jimsmith Lake Rd, Cranbrook, BC V1C 7E5", source: "osm" } },
-      { name: "Green Point Campground", location: "Pacific Rim (Vancouver Island)", badge: "accredited",
+      { name: "Rainforest Point Campground", location: "Pacific Rim (Vancouver Island)", badge: "accredited",
         desc: "Parks Canada campground in Pacific Rim National Park. Between Tofino and Ucluelet. Reservable hiker/biker sites.",
         checked: [1,2,3,5,8,9,14], routes: ["Tofino–Ucluelet"],
         detail: { url: "reservation.pc.gc.ca", hours: "Mid-Mar–mid-Oct", source: "osm" },
         notes: { 1: "Reservable, book early for summer", 8: "Bear boxes at each loop" },
         tips: "Walk-in bike sites are much cheaper than drive-in. The beach trail to Long Beach starts right from the campground — 10 min walk. Raccoons are bold here, use the bear boxes for everything." },
-      { name: "Vedder River Campground", location: "Chilliwack (Fraser Valley)", badge: "listed",
+      { name: "River Bend Campground", location: "Chilliwack (Fraser Valley)", badge: "listed",
         desc: "Editorial listing — riverside campground near the Vedder Rotary Loop trail.",
         checked: [1,2,4,9], routes: ["Chilliwack Loops"],
         detail: { address: "Vedder Rd, Chilliwack, BC V2R 4G4", source: "osm" } },
-      { name: "Goldstream Provincial Park", location: "Langford (Greater Victoria)", badge: "listed",
+      { name: "Mossy Creek Campground", location: "Langford (Greater Victoria)", badge: "listed",
         desc: "Editorial listing — campground on the Vancouver Crossing Loop near the Malahat summit.",
         checked: [1,2,3,8,9], routes: ["Vancouver Crossing Loop"],
         detail: { address: "2930 Trans-Canada Hwy, Langford, BC V9B 6H6", source: "osm" } }
@@ -457,43 +458,43 @@ var categories = [
       "Device charging", "E-bike charging", "Pump", "Wi-Fi"
     ],
     examples: [
-      { name: "The Penticton Pedalhaus", location: "Penticton (Okanagan)", badge: "accredited",
+      { name: "The Pedalhaus", location: "Penticton (Okanagan)", badge: "accredited",
         desc: "Café near the KVR trailhead. Bike rack for 12, packed lunches, 7am opening.",
         checked: [0,1,2,3,4,5,6,9,12], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
         detail: { address: "456 Lakeshore Dr, Penticton, BC V2A 1B4", phone: "(250) 555-0198", url: "pedalhaus.ca", hours: "7am–3pm daily, Mar–Oct", source: "operator" },
         notes: { 1: "Order by 9am for same-day pickup", 6: "Under awning, fits loaded touring bikes" } },
-      { name: "Whistler Brewing Co.", location: "Whistler (Sea to Sky)", badge: "accredited",
+      { name: "Summit Brewing Co.", location: "Whistler (Sea to Sky)", badge: "accredited",
         desc: "Brewpub near the Valley Trail. Window seating with bike visibility. GF options.",
         checked: [0,3,4,5,9,10,12], routes: ["Sea to Sky Trail"], network: "BC Ale Trail",
         detail: { address: "1045 Millar Creek Rd, Whistler, BC V8E 0S6", url: "whistlerbrewing.com", source: "osm" } },
-      { name: "Nelson Brewing Company", location: "Nelson (West Kootenay)", badge: "accredited",
+      { name: "Kootenay Ale Works", location: "Nelson (West Kootenay)", badge: "accredited",
         desc: "Craft brewery with bike rack visible from patio on Baker St. Water without purchase. Strong vegetarian menu.",
         checked: [0,2,3,4,5,9,12], routes: ["Frog Peak Loop"], network: "BC Ale Trail",
         detail: { address: "310 Latimer St, Nelson, BC V1L 4T6", phone: "(250) 555-0227", hours: "12–9pm daily", source: "operator" },
         tips: "Baker St is one-way and busy — walk your bike on the sidewalk. The Kootenay Co-op grocery is two blocks east if you need to resupply." },
-      { name: "Crescent Valley River Café", location: "Crescent Valley (West Kootenay)", badge: "accredited",
+      { name: "River Bend Café", location: "Crescent Valley (West Kootenay)", badge: "accredited",
         desc: "Cozy café above the Slocan River. Perfect final stop before Nelson on the Frog Peak Loop.",
         checked: [0,2,3,5,8,12], routes: ["Frog Peak Loop"],
         detail: { address: "1234 Crescent Valley Rd, Crescent Valley, BC V0G 1H0", hours: "8am–5pm daily, May–Oct", source: "operator" },
         notes: { 8: "Bikes welcome on patio, lean against railing" },
         tips: "There's a swimming hole in the Slocan River right below the café — bring a towel. The guesthouse upstairs rents out if you want an extra night." },
-      { name: "Kamloops Craft Brewing", location: "Kamloops (Thompson)", badge: "accredited",
+      { name: "Overlander Brewing", location: "Kamloops (Thompson)", badge: "accredited",
         desc: "Downtown brewpub. Covered patio with bike rack. Post-ride fuel for Lac Du Bois riders.",
         checked: [0,2,3,4,5,6,9,10,12], routes: ["Lac Du Bois Tranquility"], network: "BC Ale Trail",
         detail: { address: "355 Lansdowne St, Kamloops, BC V2C 1X8", phone: "(250) 555-0388", hours: "11am–10pm daily", source: "operator" } },
-      { name: "Steveston Fish Market", location: "Richmond (Metro Vancouver)", badge: "listed",
+      { name: "Dockside Fish & Chips", location: "Richmond (Metro Vancouver)", badge: "listed",
         desc: "Editorial listing — iconic waterfront fish spot on the Vancouver Crossing Loop. Bike racks at the pier.",
         checked: [0,2,4,12], routes: ["Vancouver Crossing Loop"],
         detail: { address: "Bayview St, Steveston, Richmond, BC V7E 0A6", source: "osm" } },
-      { name: "Greendale Farm Bistro", location: "Chilliwack (Fraser Valley)", badge: "listed",
+      { name: "Valley Farm Bistro", location: "Chilliwack (Fraser Valley)", badge: "listed",
         desc: "Editorial listing — farm-to-table restaurant near the Vedder Rotary Loop. Patio seating.",
         checked: [0,2,3,5,8], routes: ["Chilliwack Loops"],
         detail: { address: "Chilliwack, BC V2R 4M6", source: "osm" } },
-      { name: "Dave's Roadside Grill", location: "Summerland (Okanagan)", badge: "unwelcome",
+      { name: "Roadside Grill", location: "Summerland (Okanagan)", badge: "unwelcome",
         desc: "Food truck near the KVR trailhead. Owner has been reported yelling at cyclists for leaning bikes against the truck and blocking the service window. Multiple community reports of hostile behaviour toward touring cyclists.",
         checked: [], routes: ["KVR Myra Canyon"],
         detail: { address: "Summerland, BC", source: "osm" },
-        tips: "The Penticton Pedalhaus (accredited) is 15 min down the trail and actually wants your business." }
+        tips: "The Pedalhaus (accredited) is 15 min down the trail and actually wants your business." }
     ]
   },
   {
@@ -511,36 +512,36 @@ var categories = [
       "Bike allowed inside/on patio", "Device charging", "E-bike charging", "Pump"
     ],
     examples: [
-      { name: "Oyama General Store", location: "Oyama (Okanagan)", badge: "accredited",
+      { name: "Hilltop General Store", location: "Oyama (Okanagan)", badge: "accredited",
         desc: "Lakeside general store right on the Okanagan Rail Trail. Hot food, outdoor tap, bike rack.",
         checked: [0,1,2,3,7,8,14], routes: ["Okanagan Rail Trail"],
         detail: { address: "14230 Oyama Rd, Oyama, BC V4V 2B4", hours: "8am–6pm daily", source: "osm" },
         notes: { 1: "Sandwiches and wraps made to order" } },
-      { name: "Naramata General Store", location: "Naramata (Okanagan)", badge: "accredited",
+      { name: "Benchland General Store", location: "Naramata (Okanagan)", badge: "accredited",
         desc: "Village store 16 km into the KVR ride from Penticton. Last resupply before Chute Lake climb.",
         checked: [0,1,2,3,4,6,7,8], routes: ["KVR Myra Canyon"],
         detail: { address: "210 Robinson Ave, Naramata, BC V0H 1N0", phone: "(250) 555-0319", hours: "7:30am–7pm daily, summer", source: "operator" },
         notes: { 4: "Bag ice only" },
         tips: "This is genuinely your last resupply before Chute Lake — fill your bottles and buy more food than you think you need. The climb is long. Naramata Bench wineries are nearby if you’re done for the day." },
-      { name: "Winlaw Mini Mart", location: "Winlaw (West Kootenay)", badge: "accredited",
+      { name: "Valley Mini Mart", location: "Winlaw (West Kootenay)", badge: "accredited",
         desc: "Slocan Valley general store on the Frog Peak Loop. Basic supplies, produce, camp fuel.",
         checked: [0,1,2,6,7], routes: ["Frog Peak Loop"],
         detail: { address: "5672 Hwy 6, Winlaw, BC V0G 2J0", hours: "9am–6pm Mon–Sat", source: "osm" } },
-      { name: "Kimberley City Market", location: "Kimberley (East Kootenay)", badge: "accredited",
+      { name: "Alpine City Market", location: "Kimberley (East Kootenay)", badge: "accredited",
         desc: "Full grocery near the Platzl. Outdoor water tap, covered bike parking under the awning.",
         checked: [0,1,2,3,4,7,9,14], routes: ["North Star + Chief Isadore Trail"],
         detail: { address: "195 Spokane St, Kimberley, BC V1A 2E5", phone: "(250) 555-0356", hours: "8am–8pm daily", source: "operator" },
         tips: "The Platzl is Kimberley’s pedestrian area — good cafés, public washrooms, and a giant cuckoo clock. Worth a wander. The trail north back to Cranbrook starts from the far end of town." },
-      { name: "Kamloops Farmers Market", location: "Kamloops (Thompson)", badge: "accredited",
+      { name: "Thursday Farmers Market", location: "Kamloops (Thompson)", badge: "accredited",
         desc: "Seasonal outdoor market downtown. Fresh produce, hot food, public bike racks.",
         checked: [0,1,10], routes: ["Lac Du Bois Tranquility"], network: "BC Farmers’ Market Network",
         detail: { address: "St Paul St, Kamloops, BC V2C 2J4", hours: "Saturdays 8am–1pm, May–Oct", source: "operator" },
         notes: { 1: "Multiple hot food vendors" } },
-      { name: "Ucluelet Co-op", location: "Ucluelet (Pacific Rim)", badge: "listed",
+      { name: "Westcoast Co-op", location: "Ucluelet (Pacific Rim)", badge: "listed",
         desc: "Editorial listing — full grocery at the south end of the Tofino–Ucluelet corridor.",
         checked: [0,1,2,7], routes: ["Tofino–Ucluelet"],
         detail: { address: "1556 Peninsula Rd, Ucluelet, BC V0R 3A0", source: "osm" } },
-      { name: "Squamish IGA", location: "Squamish (Sea to Sky)", badge: "listed",
+      { name: "Mountain Grocery", location: "Squamish (Sea to Sky)", badge: "listed",
         desc: "Editorial listing — full grocery near Cleveland Ave. Resupply before heading north on the S2S.",
         checked: [0,1,2,3,7], routes: ["Sea to Sky Trail"],
         detail: { address: "38551 Loggers Ln, Squamish, BC V8B 0H2", hours: "7am–10pm daily", source: "osm" } }
@@ -565,33 +566,33 @@ var categories = [
       "Discount for arriving by bike"
     ],
     examples: [
-      { name: "Kettle Valley Steam Railway", location: "Summerland (Okanagan)", badge: "accredited",
+      { name: "Heritage Steam Railway", location: "Summerland (Okanagan)", badge: "accredited",
         desc: "Heritage railway on the KVR. Covered bike parking, café, cyclist discount on admission.",
         checked: [0,2,6,8,12,15], routes: ["KVR Myra Canyon"],
         detail: { address: "18404 Bathville Rd, Summerland, BC V0H 1Z0", phone: "(250) 555-0216", url: "kettlevalleyrail.org", hours: "Thu–Mon, 10am–4pm, May–Oct", source: "operator" },
         notes: { 15: "10% off with bike at the gate" } },
-      { name: "Kamloops Museum & Archives", location: "Kamloops (Thompson)", badge: "accredited",
+      { name: "Regional Museum & Archives", location: "Kamloops (Thompson)", badge: "accredited",
         desc: "Downtown museum with cyclist info, bike rack, water fountain. Good orientation stop before Lac Du Bois.",
         checked: [0,3,6,8,11,12,14], routes: ["Lac Du Bois Tranquility"],
         detail: { address: "207 Seymour St, Kamloops, BC V2C 2E7", phone: "(250) 555-0392", hours: "9:30am–4:30pm Tue–Sat", source: "operator" } },
-      { name: "Nelson Public Library", location: "Nelson (West Kootenay)", badge: "accredited",
+      { name: "Heritage Public Library", location: "Nelson (West Kootenay)", badge: "accredited",
         desc: "Beautiful stone library on Baker St. Washrooms, Wi-Fi, water, bike rack. Great pre-ride stop.",
         checked: [0,3,6,8,11,12,14], routes: ["Frog Peak Loop"],
         detail: { address: "602 Stanley St, Nelson, BC V1L 1N4", hours: "10am–8pm Mon–Thu, 10am–5pm Fri–Sat", source: "osm" } },
-      { name: "Pacific Rim Visitor Centre", location: "Ucluelet (Pacific Rim)", badge: "accredited",
+      { name: "Coastal Visitor Centre", location: "Ucluelet (Pacific Rim)", badge: "accredited",
         desc: "Parks Canada visitor centre between Tofino and Ucluelet. Maps, bear safety info, water, washrooms.",
         checked: [0,3,6,8,11,12], routes: ["Tofino–Ucluelet"],
         detail: { address: "2791 Pacific Rim Hwy, Ucluelet, BC V0R 3A0", url: "pc.gc.ca/pacificrim", hours: "10am–5pm daily, summer", source: "operator" },
         notes: { 3: "Outdoor tap at parking area, year-round" } },
-      { name: "Cranbrook History Centre", location: "Cranbrook (East Kootenay)", badge: "accredited",
+      { name: "Pioneer History Centre", location: "Cranbrook (East Kootenay)", badge: "accredited",
         desc: "Railway museum near the North Star trailhead. Bike racks, covered area, water.",
         checked: [0,2,3,6,8,11,12], routes: ["North Star + Chief Isadore Trail"],
         detail: { address: "57 Van Horne St S, Cranbrook, BC V1C 4H9", phone: "(250) 555-0365", hours: "10am–5pm daily, May–Oct", source: "operator" } },
-      { name: "Penticton Visitor Centre", location: "Penticton (Okanagan)", badge: "listed",
+      { name: "Lakeside Visitor Centre", location: "Penticton (Okanagan)", badge: "listed",
         desc: "Editorial listing — visitor centre with maps and cycling info. Near the Okanagan Rail Trail start.",
         checked: [0,3,9,11,12], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
         detail: { address: "888 Westminster Ave W, Penticton, BC V2A 8R2", source: "osm" } },
-      { name: "Chilliwack Visitor Centre", location: "Chilliwack (Fraser Valley)", badge: "listed",
+      { name: "Valley Visitor Centre", location: "Chilliwack (Fraser Valley)", badge: "listed",
         desc: "Editorial listing — visitor centre with regional cycling maps. Near Vedder Rotary Loop trailhead.",
         checked: [0,3,9,11,12], routes: ["Chilliwack Loops"],
         detail: { address: "44150 Luckakuck Way, Chilliwack, BC V2R 4A7", source: "osm" } }
@@ -613,37 +614,37 @@ var categories = [
       "DIY stand", "Washrooms", "Water bottle refill", "Device charging", "E-bike charging"
     ],
     examples: [
-      { name: "Penticton Bike Barn", location: "Penticton (Okanagan)", badge: "accredited",
+      { name: "Spoke & Chain Bikes", location: "Penticton (Okanagan)", badge: "accredited",
         desc: "KVR trail specialist. Rentals, shuttle service to Naramata, touring parts stocked.",
         checked: [0,1,2,6,7,9,10,11], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
         partner: true,
         detail: { address: "789 Main St, Penticton, BC V2A 5C2", phone: "(250) 555-0177", url: "pentictonbikebarn.ca", hours: "9am–5pm daily, Apr–Oct", source: "operator" },
         notes: { 6: "Road, gravel, and e-bikes", 7: "Naramata shuttle daily at 9am, May–Oct" } },
-      { name: "Squamish Bike Co.", location: "Squamish (Sea to Sky)", badge: "accredited",
+      { name: "Trail Town Bikes", location: "Squamish (Sea to Sky)", badge: "accredited",
         desc: "Trail and touring shop on Cleveland Ave. Walk-in repairs, e-bike service, water refills.",
         checked: [0,1,3,10,11,12,13], routes: ["Sea to Sky Trail"],
         detail: { address: "38018 Cleveland Ave, Squamish, BC V8B 0A7", phone: "(604) 555-0119", url: "squamishbikeco.ca", hours: "10am–6pm daily", source: "operator" } },
-      { name: "Gerick Cycle & Sports", location: "Nelson (West Kootenay)", badge: "accredited",
+      { name: "Backcountry Cycle & Sports", location: "Nelson (West Kootenay)", badge: "accredited",
         desc: "Baker St bike shop serving West Kootenay touring cyclists. Walk-ins welcome, touring parts stocked.",
         checked: [0,1,2,3,6,9,10,11], routes: ["Frog Peak Loop"],
         detail: { address: "702 Baker St, Nelson, BC V1L 4J5", phone: "(250) 555-0284", hours: "9am–5:30pm Mon–Sat", source: "operator" },
         notes: { 6: "Touring, gravel, and fat bikes" } },
-      { name: "Kamloops Bike Hub", location: "Kamloops (Thompson)", badge: "accredited",
+      { name: "Desert Bike Hub", location: "Kamloops (Thompson)", badge: "accredited",
         desc: "Community bike shop downtown. Walk-in repairs, pump, DIY stand. Good pre-ride tuneup for Lac Du Bois.",
         checked: [0,1,2,9,10,11,12], routes: ["Lac Du Bois Tranquility"],
         detail: { address: "428 Tranquille Rd, Kamloops, BC V2B 3G9", phone: "(250) 555-0401", hours: "10am–5pm Tue–Sat", source: "operator" } },
-      { name: "Tofino Bike Co.", location: "Tofino (Pacific Rim)", badge: "accredited",
+      { name: "Raincoast Bikes", location: "Tofino (Pacific Rim)", badge: "accredited",
         desc: "Beach cruiser and e-bike rentals. Touring repairs by appointment. Bike boxes for flying out.",
         checked: [3,4,6,8,11,13], routes: ["Tofino–Ucluelet"],
         partner: true,
         detail: { address: "660 Sharp Rd, Tofino, BC V0R 2Z0", phone: "(250) 555-0382", url: "tofinobikeco.ca", hours: "9am–6pm daily, Apr–Oct", source: "operator" },
         notes: { 6: "Beach cruisers, e-bikes, and gravel bikes", 8: "Guided rides to Ucluelet, Sat mornings" } },
-      { name: "Cranbrook Cycle", location: "Cranbrook (East Kootenay)", badge: "listed",
+      { name: "Rockies Cycle Shop", location: "Cranbrook (East Kootenay)", badge: "listed",
         desc: "Editorial listing — downtown shop near the North Star trailhead. Pump visible out front.",
         checked: [0,1,2,10,11], routes: ["North Star + Chief Isadore Trail"],
         detail: { address: "926 Baker St, Cranbrook, BC V1C 1A5", source: "osm" } },
-      { name: "Reckless Bike Stores", location: "North Vancouver (Metro Vancouver)", badge: "listed",
-        desc: "Editorial listing — Lonsdale location near the SeaBus terminal. Pump and tools outside.",
+      { name: "Northshore Bike Co.", location: "North Vancouver (Metro Vancouver)", badge: "listed",
+        desc: "Editorial listing — Lonsdale location near the Harbour Ferry terminal. Pump and tools outside.",
         checked: [0,1,9,11], routes: ["Seymour Valley + Lonsdale Brew Loop"],
         detail: { address: "110 Lonsdale Ave, North Vancouver, BC V7M 2E6", source: "osm" } }
     ]
@@ -663,68 +664,68 @@ var categories = [
       "Interior transport", "Exterior rack"
     ],
     examples: [
-      { name: "Penticton Pedal Shuttle", location: "Penticton (Okanagan)", badge: "accredited",
+      { name: "Pedal Shuttle", location: "Penticton (Okanagan)", badge: "accredited",
         desc: "Shuttle running Penticton to Summerland and Naramata. Unboxed bikes, e-bikes welcome.",
         checked: [0,1,5,8,13], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
         partner: true,
         detail: { address: "Penticton, BC", phone: "(250) 555-0211", url: "pedalpenticton.ca", hours: "By reservation, May–Oct", source: "operator" },
         notes: { 0: "May–Oct only", 8: "Weight limit 25kg per e-bike", 13: "Thule rack, 4 bike max" } },
-      { name: "SeaBus", location: "Vancouver / North Vancouver", badge: "accredited",
+      { name: "Harbour Ferry", location: "Vancouver / North Vancouver", badge: "accredited",
         desc: "Passenger ferry across Burrard Inlet. Bikes roll on, no fee. Start of the Seymour Valley route.",
         checked: [0,1,5,8], routes: ["Seymour Valley + Lonsdale Brew Loop", "Vancouver Crossing Loop"],
         detail: { url: "translink.ca", hours: "Every 15 min, 6am–1am", source: "osm" },
         notes: { 0: "Bikes roll on with passengers, no extra fee" } },
-      { name: "BC Ferries — Horseshoe Bay to Nanaimo", location: "West Vancouver / Nanaimo", badge: "accredited",
+      { name: "Coastal Ferry — Bay to Island", location: "West Vancouver / Nanaimo", badge: "accredited",
         desc: "Major ferry crossing for the Vancouver Crossing Loop. Bikes walk on, no reservation needed.",
         checked: [0,1,4,5,8,12], routes: ["Vancouver Crossing Loop"],
         detail: { url: "bcferries.com", hours: "8+ sailings daily", source: "osm" },
         notes: { 4: "$1 bike surcharge", 1: "Line up early in summer — bike spaces aren't guaranteed" } },
-      { name: "Tofino Bus", location: "Tofino / Ucluelet / Nanaimo", badge: "accredited",
+      { name: "Westcoast Coach Lines", location: "Tofino / Ucluelet / Nanaimo", badge: "accredited",
         desc: "Intercity bus connecting Tofino, Ucluelet, and Nanaimo. Bikes in luggage bay, bagged.",
         checked: [0,2,4,7,8], routes: ["Tofino–Ucluelet"],
         detail: { url: "tofinobus.com", hours: "2 departures daily, year-round", source: "operator" },
         notes: { 7: "Soft bag or box required", 4: "$10 per bike", 8: "Battery must be removable" },
         tips: "Buy a cheap soft bike bag from Amazon before your trip — the bus is strict about bagging. You can leave the bag at your accommodation in Tofino and pick it up for the return trip." },
-      { name: "Nelson Transit", location: "Nelson (West Kootenay)", badge: "accredited",
+      { name: "Kootenay Transit", location: "Nelson (West Kootenay)", badge: "accredited",
         desc: "Local bus with front bike rack. Useful for getting from Nelson to Crescent Valley trailhead.",
         checked: [0,5,8,13], routes: ["Frog Peak Loop"],
         detail: { url: "bctransit.com/nelson", hours: "Mon–Sat, limited Sunday", source: "osm" },
         notes: { 13: "Front rack fits 2 bikes, first come first served" } },
-      { name: "BC Ferries — Tsawwassen to Swartz Bay", location: "Delta / Sidney", badge: "listed",
+      { name: "Coastal Ferry — Delta to Peninsula", location: "Delta / Sidney", badge: "listed",
         desc: "Editorial listing — major ferry route connecting Metro Vancouver to Vancouver Island.",
         checked: [0,1,4,5,8,12], routes: ["Vancouver Crossing Loop"],
         detail: { url: "bcferries.com", source: "osm" },
         notes: { 4: "$1 bike surcharge" } },
-      { name: "Kamloops Transit", location: "Kamloops (Thompson)", badge: "listed",
+      { name: "Thompson Transit", location: "Kamloops (Thompson)", badge: "listed",
         desc: "Editorial listing — city buses with front bike racks. Access to Lac Du Bois trailheads.",
         checked: [0,5,13], routes: ["Lac Du Bois Tranquility"],
         detail: { url: "bctransit.com/kamloops", source: "osm" },
         notes: { 13: "2-bike front rack, first come first served" } },
-      { name: "IslandLink Bus", location: "Nanaimo / Victoria", badge: "unwelcome",
+      { name: "Island Coach Lines", location: "Nanaimo / Victoria", badge: "unwelcome",
         desc: "Intercity bus between Nanaimo and Victoria. Does not carry bicycles in any form — boxed, bagged, or otherwise. No luggage bay space allocated for bikes.",
         checked: [], routes: ["Vancouver Crossing Loop"],
         detail: { url: "islandlinkbus.com", source: "operator" },
         tips: "Use BC Transit or the Malahat shuttle instead. BC Ferries walk-on with bike is another option for getting between Nanaimo and Victoria areas." },
-      { name: "Cranbrook Taxi Co.", location: "Cranbrook (East Kootenay)", badge: "unwelcome",
+      { name: "Valley Cab Co.", location: "Cranbrook (East Kootenay)", badge: "unwelcome",
         desc: "Local taxi service. No vehicles large enough to carry a bicycle. Sedans only, no roof racks, no hatchbacks. Cannot transport a boxed or bagged bike either.",
         checked: [], routes: ["North Star + Chief Isadore Trail"],
         detail: { phone: "(250) 555-0490", source: "osm" },
-        tips: "If you need a lift with your bike, ask at the Cranbrook Heritage Inn — they sometimes know locals willing to shuttle." },
-      { name: "Kamloops Yellow Cab", location: "Kamloops (Thompson)", badge: "unwelcome",
+        tips: "If you need a lift with your bike, ask at the Valley Gateway Inn — they sometimes know locals willing to shuttle." },
+      { name: "Thompson Taxi", location: "Kamloops (Thompson)", badge: "unwelcome",
         desc: "Local taxi service. Sedan fleet only. Cannot fit a bicycle in any configuration. No rack-equipped vehicles available.",
         checked: [], routes: ["Lac Du Bois Tranquility"],
         detail: { phone: "(250) 555-0511", source: "osm" },
-        tips: "Kamloops Transit buses have front bike racks and serve most of the city." },
-      { name: "Penticton Cabs", location: "Penticton (Okanagan)", badge: "unwelcome",
+        tips: "Thompson Transit buses have front bike racks and serve most of the city." },
+      { name: "Lakeside Cabs", location: "Penticton (Okanagan)", badge: "unwelcome",
         desc: "Local taxi service. All-sedan fleet, no capacity for bicycles. Uber and Lyft have no XL vehicles available in the Penticton area either.",
         checked: [], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
         detail: { phone: "(250) 555-0523", source: "osm" },
-        tips: "The Penticton Pedal Shuttle (accredited) runs Penticton to Naramata and Summerland with full bike transport, May–Oct." },
-      { name: "Harbour Air — Tofino", location: "Tofino (Pacific Rim)", badge: "unwelcome",
+        tips: "The Pedal Shuttle (accredited) runs Penticton to Naramata and Summerland with full bike transport, May–Oct." },
+      { name: "Bay Air — Westcoast", location: "Tofino (Pacific Rim)", badge: "unwelcome",
         desc: "Float plane service connecting Tofino to Vancouver. No capacity for bicycles. Strict baggage limits and small cargo holds cannot accommodate bikes in any form.",
         checked: [], routes: ["Tofino–Ucluelet"],
         detail: { url: "harbourair.com", source: "operator" },
-        tips: "The Tofino Bus (accredited) takes bagged bikes to Nanaimo, where you can connect to BC Ferries or other transit." }
+        tips: "The Westcoast Coach Lines (accredited) takes bagged bikes to Nanaimo, where you can connect to BC Ferries or other transit." }
     ]
   }
 ];
@@ -732,7 +733,7 @@ var categories = [
 var currentCatId = "hotel";
 var searchText = "";
 var activeFilters = [];
-var showDemo = true;
+var showDemo = false;
 
 function isDemo(ex) { return !ex.real; }
 
@@ -815,7 +816,7 @@ function renderExamplesCard(cat) {
     '</div></div>' +
     '<div class="filter-bar"><div class="filter-bar-top"><label>Filter</label>' +
     '<input type="text" id="search-box" class="search-input" placeholder="Search name, location, route, amenity, or badge…" oninput="onSearch(this.value)" />' +
-    '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
+    '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show sample listings (not real businesses)</label>' +
     '</div><div class="filter-pills-row" id="filter-pills-row"></div></div>' +
     '<div id="results-count-area"></div><div id="listings-area"></div>' +
     '<div class="click-hint">Click a listing to see full details</div>' +
@@ -951,7 +952,7 @@ function openModal(catId, exIdx) {
 
   document.getElementById("modal-content").innerHTML =
     '<div class="modal-header"><div class="modal-header-left">' +
-      '<div class="modal-title">' + ex.name + (isDemo(ex) ? '<span class="demo-tag">demo</span>' : '') + '</div>' +
+      '<div class="modal-title">' + ex.name + (isDemo(ex) ? '<span class="demo-tag">SAMPLE — NOT A REAL LISTING</span>' : '') + '</div>' +
       '<div class="modal-location">' + ex.location + '</div>' +
       (ex.network ? '<div class="modal-network">Member of ' + ex.network + '</div>' : '') +
       '<div class="modal-badges">' + badges + '</div>' +
@@ -1017,7 +1018,7 @@ function renderRouteView() {
     '<select class="route-select" onchange="currentRoute=this.value;renderRouteCard();updateHash()">' +
     routes.map(function(r) { return '<option value="' + r.name + '"' + (r.name === currentRoute ? ' selected' : '') + '>' + r.name + ' (' + r.count + ')</option>'; }).join("") +
     '</select>' +
-    '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
+    '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show sample listings (not real businesses)</label>' +
     '</div>';
   renderRouteCard();
 }
@@ -1067,7 +1068,7 @@ function renderAllView() {
     '</div></div>' +
     '<div class="filter-bar"><div class="filter-bar-top"><label>Filter</label>' +
     '<input type="text" id="all-search-box" class="search-input" placeholder="Search name, location, route, amenity, or badge…" oninput="onAllSearch(this.value)" />' +
-    '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
+    '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show sample listings (not real businesses)</label>' +
     '</div></div>' +
     '<div id="all-count-area"></div><div id="all-listings-area"></div>';
   updateAllListings();
@@ -1140,7 +1141,7 @@ function renderListingCardHTML(cat, ex, showCatTag) {
   }
   var borderClass = ex.badge === 'unwelcome' ? 'is-unwelcome' : (ex.partner ? 'is-industry' : (ex.network ? 'is-sector' : (ex.badge === 'accredited' ? 'is-accredited' : 'is-listed')));
   var catTag = showCatTag ? '<span class="cat-tag">' + cat.tab + '</span>' : '';
-  var demoTag = isDemo(ex) ? '<span class="demo-tag">demo</span>' : '';
+  var demoTag = isDemo(ex) ? '<span class="demo-tag">SAMPLE — NOT A REAL LISTING</span>' : '';
   var demoClass = isDemo(ex) ? ' is-demo' : '';
   var pillsHTML = '';
   if (ex.badge !== "unwelcome") {
