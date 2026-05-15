@@ -305,7 +305,7 @@ body {
       </div>
       <div style="display:flex;flex-direction:column;gap:12px;">
         <a href="/about" style="font-size:17px;color:rgba(13,64,112,0.45);text-decoration:none;">About</a>
-        <a href="/field-note" style="font-size:17px;color:rgba(13,64,112,0.45);text-decoration:none;">Field Notes</a>
+        <a href="/field-notes" style="font-size:17px;color:rgba(13,64,112,0.45);text-decoration:none;">Field Notes</a>
         <a href="/donation" style="font-size:17px;color:rgba(13,64,112,0.45);text-decoration:none;">Donation</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px;">
@@ -924,7 +924,7 @@ function openModal(catId, exIdx) {
   var routesHTML = '';
   if (ex.routes && ex.routes.length > 0) {
     routesHTML = '<div class="modal-section"><div class="modal-section-title">Routes nearby</div><div class="modal-routes">' +
-      ex.routes.map(function(r) { var slug = r.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); return '<a class="route-tag" href="route-' + slug + '" onclick="event.stopPropagation()">🚴 ' + r + '</a>'; }).join("") +
+      ex.routes.map(function(r) { var slug = r.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); return '<a class="route-tag" href="/route/' + slug + '" onclick="event.stopPropagation()">🚴 ' + r + '</a>'; }).join("") +
       '</div></div>';
   }
 
