@@ -70,21 +70,26 @@ body {
 .difficulty-heading-moderate { color: #C17900; }
 .difficulty-heading-ambitious { color: #C13B00; }
 .route-card {
+  display: flex; gap: 24px; align-items: flex-start;
   background: transparent; border: none; border-radius: 18px;
-  padding: 24px 28px; margin-bottom: 4px; cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; display: block; color: inherit;
+  padding: 20px 24px; margin-bottom: 4px; cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; color: inherit;
 }
-.route-card-img { width: 100%; height: 120px; border-radius: 12px; overflow: hidden; margin-bottom: 16px; }
+.route-card:hover { background: rgba(13,64,112,0.04); }
+.route-card-img { width: 160px; height: 120px; border-radius: 10px; overflow: hidden; flex-shrink: 0; }
 .route-card-img img { width: 100%; height: 100%; object-fit: cover; }
 .route-card-img.placeholder { background: #B8E0EC; }
-.route-card:hover { background: rgba(13,64,112,0.04); }
-.route-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+.route-card-body { flex: 1; min-width: 0; }
+.route-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
 .route-name { font-family: "Archivo", sans-serif; font-size: 20px; font-weight: 400; color: #1F514C; letter-spacing: -0.02em; }
 .route-region { font-size: 13px; color: rgba(13,64,112,0.45); }
 .route-desc { font-size: 16px; color: #4b5563; line-height: 1.5; margin-bottom: 12px; }
 .route-meta { display: flex; flex-wrap: wrap; gap: 8px; }
 .meta-tag { display: inline-flex; align-items: center; gap: 5px; padding: 5px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; }
 .meta-surface { background: #FFFDF9; color: #4b5563; border: 1px solid #E5E7EB; }
+@media (max-width: 700px) {
+  .route-card { flex-direction: column; gap: 12px; }
+}
 </style>
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
 </head>
@@ -114,107 +119,137 @@ body {
 
 <div class="difficulty-group"><div class="difficulty-heading difficulty-heading-easy">Easier rides</div>
 <a class="route-card" href="/route/okanagan-rail-trail">
-  <div class="route-top">
-    <div class="route-name">Okanagan Rail Trail</div>
-    <div class="route-region">Okanagan — Coldstream to Kelowna · ~55 km</div>
-  </div>
-  <div class="route-desc">A smooth, flat rail trail through orchards and vineyards along the shore of Kalamalka and Wood Lakes. Family-friendly, well-serviced, and close to Vernon and Kelowna. The gateway ride for the Okanagan.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-surface">Paved / crushed gravel</span>
+  <div class="route-card-img"><img src="img/Okanagan Rail Trail use this one58-IMG_5815.jpg" alt="Okanagan Rail Trail" /></div>
+  <div class="route-card-body">
+    <div class="route-top">
+      <div class="route-name">Okanagan Rail Trail</div>
+      <div class="route-region">Okanagan — Coldstream to Kelowna · ~55 km</div>
+    </div>
+    <div class="route-desc">A smooth, flat rail trail through orchards and vineyards along the shore of Kalamalka and Wood Lakes. Family-friendly, well-serviced, and close to Vernon and Kelowna. The gateway ride for the Okanagan.</div>
+    <div class="route-meta">
+      <span class="meta-tag meta-surface">Paved / crushed gravel</span>
+    </div>
   </div>
 </a>
 <a class="route-card" href="/route/north-star-chief-isadore">
-  <div class="route-top">
-    <div class="route-name">North Star + Chief Isadore Trail</div>
-    <div class="route-region">East Kootenay — Cranbrook to Kimberley · ~72 km</div>
-  </div>
-  <div class="route-desc">A relaxed rail trail through the Rocky Mountain Trench. Flat, wide, well-maintained, with mountain views the whole way. Cranbrook and Kimberley have everything you need at each end.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-surface">Crushed gravel / packed earth</span>
+  <div class="route-card-img"><img src="img/North Star Al Scucas Photo.jpg" alt="North Star + Chief Isadore Trail" /></div>
+  <div class="route-card-body">
+    <div class="route-top">
+      <div class="route-name">North Star + Chief Isadore Trail</div>
+      <div class="route-region">East Kootenay — Cranbrook to Kimberley · ~72 km</div>
+    </div>
+    <div class="route-desc">A relaxed rail trail through the Rocky Mountain Trench. Flat, wide, well-maintained, with mountain views the whole way. Cranbrook and Kimberley have everything you need at each end.</div>
+    <div class="route-meta">
+      <span class="meta-tag meta-surface">Crushed gravel / packed earth</span>
+    </div>
   </div>
 </a>
 <a class="route-card" href="/route/chilliwack-loops">
-  <div class="route-top">
-    <div class="route-name">Chilliwack Loops</div>
-    <div class="route-region">Fraser Valley — Vedder River and Canyon to Coast · ~40 km combined</div>
-  </div>
-  <div class="route-desc">Two easy loops bundled together: the Vedder Rotary Loop along the river, and the Chilliwack section of Canyon to Coast. Farm roads, craft breweries, lavender fields, and riverside trails close to Vancouver.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-surface">Paved / packed gravel</span>
+  <div class="route-card-img"><img src="img/Chilliwack.jpg" alt="Chilliwack Loops" /></div>
+  <div class="route-card-body">
+    <div class="route-top">
+      <div class="route-name">Chilliwack Loops</div>
+      <div class="route-region">Fraser Valley — Vedder River and Canyon to Coast · ~40 km combined</div>
+    </div>
+    <div class="route-desc">Two easy loops bundled together: the Vedder Rotary Loop along the river, and the Chilliwack section of Canyon to Coast. Farm roads, craft breweries, lavender fields, and riverside trails close to Vancouver.</div>
+    <div class="route-meta">
+      <span class="meta-tag meta-surface">Paved / packed gravel</span>
+    </div>
   </div>
 </a>
 <a class="route-card" href="/route/tofino-ucluelet">
-  <div class="route-top">
-    <div class="route-name">Tofino–Ucluelet</div>
-    <div class="route-region">Pacific Rim — west coast Vancouver Island · ~40 km</div>
-  </div>
-  <div class="route-desc">A paved corridor through Pacific Rim National Park connecting Tofino and Ucluelet. Rainforest, Long Beach, surf culture. Easy riding with ocean views. Passes through Tla-o-qui-aht and Ucluelet First Nation communities.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-surface">Paved</span>
+  <div class="route-card-img"><img src="img/Tofino Ucluelet LetsGoBiking Cycling IMG_7590.jpeg" alt="Tofino–Ucluelet" /></div>
+  <div class="route-card-body">
+    <div class="route-top">
+      <div class="route-name">Tofino–Ucluelet</div>
+      <div class="route-region">Pacific Rim — west coast Vancouver Island · ~40 km</div>
+    </div>
+    <div class="route-desc">A paved corridor through Pacific Rim National Park connecting Tofino and Ucluelet. Rainforest, Long Beach, surf culture. Easy riding with ocean views. Passes through Tla-o-qui-aht and Ucluelet First Nation communities.</div>
+    <div class="route-meta">
+      <span class="meta-tag meta-surface">Paved</span>
+    </div>
   </div>
 </a>
 </div>
 <div class="difficulty-group"><div class="difficulty-heading difficulty-heading-moderate">Moderate rides</div>
 <a class="route-card" href="/route/kvr-myra-canyon">
-  <div class="route-top">
-    <div class="route-name">KVR Myra Canyon</div>
-    <div class="route-region">Okanagan — Penticton to Myra Canyon trestles · ~60 km one-way</div>
-  </div>
-  <div class="route-desc">The iconic Kettle Valley Rail Trail climb from Penticton through wine-country Naramata to the historic Myra Canyon trestles. Steady uphill, stunning views, unforgettable bridges. The ride people come to BC for.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-surface">Packed gravel / rail grade</span>
+  <div class="route-card-img"><img src="img/Myra Canyon CherylPapovePhoto P1140440.jpg" alt="KVR Myra Canyon" /></div>
+  <div class="route-card-body">
+    <div class="route-top">
+      <div class="route-name">KVR Myra Canyon</div>
+      <div class="route-region">Okanagan — Penticton to Myra Canyon trestles · ~60 km one-way</div>
+    </div>
+    <div class="route-desc">The iconic Kettle Valley Rail Trail climb from Penticton through wine-country Naramata to the historic Myra Canyon trestles. Steady uphill, stunning views, unforgettable bridges. The ride people come to BC for.</div>
+    <div class="route-meta">
+      <span class="meta-tag meta-surface">Packed gravel / rail grade</span>
+    </div>
   </div>
 </a>
 <a class="route-card" href="/route/seymour-valley-lonsdale-brew-loop">
-  <div class="route-top">
-    <div class="route-name">Seymour Valley + Lonsdale Brew Loop</div>
-    <div class="route-region">North Vancouver — urban to wilderness · ~35 km loop</div>
-  </div>
-  <div class="route-desc">SeaBus from downtown Vancouver to Lonsdale Quay, then ride the LSCR Trailway through eastern North Van breweries into the Seymour Valley conservation reserve. Urban start, wilderness middle, beers at the end.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-surface">Paved / optional gravel</span>
+  <div class="route-card-img"><img src="img/Seymour Valley LetsGoBiking_.jpg" alt="Seymour Valley + Lonsdale Brew Loop" /></div>
+  <div class="route-card-body">
+    <div class="route-top">
+      <div class="route-name">Seymour Valley + Lonsdale Brew Loop</div>
+      <div class="route-region">North Vancouver — urban to wilderness · ~35 km loop</div>
+    </div>
+    <div class="route-desc">SeaBus from downtown Vancouver to Lonsdale Quay, then ride the LSCR Trailway through eastern North Van breweries into the Seymour Valley conservation reserve. Urban start, wilderness middle, beers at the end.</div>
+    <div class="route-meta">
+      <span class="meta-tag meta-surface">Paved / optional gravel</span>
+    </div>
   </div>
 </a>
 <a class="route-card" href="/route/vancouver-crossing-loop">
-  <div class="route-top">
-    <div class="route-name">Vancouver Crossing Loop</div>
-    <div class="route-region">Multi-region — Vancouver, Sunshine Coast, Vancouver Island · ~360 km</div>
-  </div>
-  <div class="route-desc">A multi-day, multi-ferry adventure loop: Vancouver to Nanaimo by ferry, down the island through Cowichan Valley and Victoria, ferry to Tsawwassen, back to Vancouver. Stanley Park, Gulf Islands, Goldstream — the best of the south coast in one ride.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-surface">Mixed — paved / trail / gravel</span>
+  <div class="route-card-img"><img src="img/vancouver_loop_dbc_Small-1200px-29289.jpg" alt="Vancouver Crossing Loop" /></div>
+  <div class="route-card-body">
+    <div class="route-top">
+      <div class="route-name">Vancouver Crossing Loop</div>
+      <div class="route-region">Multi-region — Vancouver, Sunshine Coast, Vancouver Island · ~360 km</div>
+    </div>
+    <div class="route-desc">A multi-day, multi-ferry adventure loop: Vancouver to Nanaimo by ferry, down the island through Cowichan Valley and Victoria, ferry to Tsawwassen, back to Vancouver. Stanley Park, Gulf Islands, Goldstream — the best of the south coast in one ride.</div>
+    <div class="route-meta">
+      <span class="meta-tag meta-surface">Mixed — paved / trail / gravel</span>
+    </div>
   </div>
 </a>
 </div>
 <div class="difficulty-group"><div class="difficulty-heading difficulty-heading-ambitious">More remote or ambitious rides</div>
 <a class="route-card" href="/route/sea-to-sky-trail">
-  <div class="route-top">
-    <div class="route-name">Sea to Sky Trail</div>
-    <div class="route-region">Sea to Sky — Squamish to Whistler · ~105 km</div>
-  </div>
-  <div class="route-desc">A rugged bikepacking corridor through the Coast Mountains. Mostly unpaved singletrack and forest road, with river crossings and big elevation. Squamish and Whistler bookend the wild middle.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-surface">Singletrack / forest road</span>
+  <div class="route-card-img"><img src="img/sea_to_sky_needs_cropping.jpg" alt="Sea to Sky Trail" /></div>
+  <div class="route-card-body">
+    <div class="route-top">
+      <div class="route-name">Sea to Sky Trail</div>
+      <div class="route-region">Sea to Sky — Squamish to Whistler · ~105 km</div>
+    </div>
+    <div class="route-desc">A rugged bikepacking corridor through the Coast Mountains. Mostly unpaved singletrack and forest road, with river crossings and big elevation. Squamish and Whistler bookend the wild middle.</div>
+    <div class="route-meta">
+      <span class="meta-tag meta-surface">Singletrack / forest road</span>
+    </div>
   </div>
 </a>
 <a class="route-card" href="/route/frog-peak-loop">
-  <div class="route-top">
-    <div class="route-name">Frog Peak Loop</div>
-    <div class="route-region">West Kootenay — Nelson and Slocan Valley · ~106 km</div>
-  </div>
-  <div class="route-desc">A beginner-friendly bikepacking loop through the Slocan Valley, over the Bonnington and Pulpit ridge climbs, and back to Nelson. Riverside cafés, hot springs nearby, and the best small-town vibes in BC.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-surface">Gravel / forest road / pavement</span>
+  <div class="route-card-img"><img src="img/fog_peak_winlaw_Small-1200px-27248.jpg" alt="Frog Peak Loop" /></div>
+  <div class="route-card-body">
+    <div class="route-top">
+      <div class="route-name">Frog Peak Loop</div>
+      <div class="route-region">West Kootenay — Nelson and Slocan Valley · ~106 km</div>
+    </div>
+    <div class="route-desc">A beginner-friendly bikepacking loop through the Slocan Valley, over the Bonnington and Pulpit ridge climbs, and back to Nelson. Riverside cafés, hot springs nearby, and the best small-town vibes in BC.</div>
+    <div class="route-meta">
+      <span class="meta-tag meta-surface">Gravel / forest road / pavement</span>
+    </div>
   </div>
 </a>
 <a class="route-card" href="/route/lac-du-bois-tranquility">
-  <div class="route-top">
-    <div class="route-name">Lac Du Bois Tranquility</div>
-    <div class="route-region">Thompson — Kamloops grasslands · ~80 km (estimated)</div>
-  </div>
-  <div class="route-desc">A gravel bikepacking loop through BC's grasslands above Kamloops. Rolling sagebrush hills, big sky, and almost nobody else. Starts and ends in Kamloops — the city is your base camp.</div>
-  <div class="route-meta">
-    <span class="meta-tag meta-surface">Gravel / dirt / ranch road</span>
+  <div class="route-card-img"><img src="img/Lac Du Bois LetsGoBiking.jpg" alt="Lac Du Bois Tranquility" /></div>
+  <div class="route-card-body">
+    <div class="route-top">
+      <div class="route-name">Lac Du Bois Tranquility</div>
+      <div class="route-region">Thompson — Kamloops grasslands · ~80 km (estimated)</div>
+    </div>
+    <div class="route-desc">A gravel bikepacking loop through BC's grasslands above Kamloops. Rolling sagebrush hills, big sky, and almost nobody else. Starts and ends in Kamloops — the city is your base camp.</div>
+    <div class="route-meta">
+      <span class="meta-tag meta-surface">Gravel / dirt / ranch road</span>
+    </div>
   </div>
 </a>
 </div>
