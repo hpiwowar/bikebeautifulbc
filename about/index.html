@@ -88,7 +88,7 @@ body {
 
 <p>We are a new nonprofit provincial cycle tourism organization working to build the marketing, standards, partnerships, and policy environment that can help cycle tourism and bikepacking thrive across British Columbia. Our goal is to grow cycle tourism as a meaningful economic opportunity for rural communities, tourism organizations, local businesses, and BC as a whole.</p>
 
-<p>BC Cycle Tourism Society grew out of five organizations already working to make cycling, trails, and active transportation stronger in British Columbia: HUB Cycling, The BC Cycling Coalition, Trails BC, GoByBike BC, and Let's Go Biking. Each founding organization holds a seat on the Board of Directors, bringing regional knowledge, sector experience, and accountability into the Society from the start.</p>
+<p>BC Cycle Tourism Society grew out of five organizations already working to make cycling, trails, and active transportation stronger in British Columbia: HUB Cycling, The BC Cycling Coalition, Trails BC, GoByBike BC, and Let's Go Biking. Each founding organization participates in the Advisory Council, bringing regional knowledge, sector experience, and accountability into the Society from the start.</p>
 
 <p>We look to places like New Zealand and Qu&eacute;bec as models: jurisdictions that invested in coordinated route networks, destination development, and visitor information, and built cycle tourism into a recognized economic driver.</p>
 
@@ -98,16 +98,20 @@ body {
 
 <div class="bio">
   <strong>Heather Piwowar</strong> <em>| Founding Director</em>
-  <p>Heather Piwowar is a Vancouver-based cyclist with 25 years of touring experience. She is an Adventure Cycling Association tour leader and planner behind all the family bike trips. She joined the founding working group in 2025 as a Director of Trails BC and proposed the organizational model that became the Society.</p>
+  <p>Heather Piwowar is a Vancouver-based cyclist with 25 years of touring experience. She is an Adventure Cycling Association tour leader and the planner behind all the family bike trips. She joined the founding working group in 2025 as a Director of Trails BC and proposed the business model that became the Society.</p>
   <p>Before founding the BC Cycle Tourism Society, Heather co-founded OurResearch, a nonprofit that builds open research infrastructure. Unpaywall and OpenAlex, two of its core tools, are used by millions of people across research, journalism, and public-interest communities. Heather holds a BS and MEng from MIT and a PhD in Biomedical Informatics.</p>
 </div>
 
+<p><em style="color:#999;">More bios coming soon, directors still being confirmed.</em></p>
+
+<h3>Advisory Council</h3>
+
 <div class="bio">
-  <strong>Colleen MacDonald</strong> <em>| Board Director</em>
+  <strong>Colleen MacDonald</strong>
   <p>Colleen MacDonald is the author of the <a href="https://letsgobiking.net">Let's Go Biking</a> website and three BC cycling guidebooks: <em>Vancouver</em>, <em>Okanagan</em>, and <em>Vancouver Island</em>. A Board Director with the BC Cycling Coalition, she is passionate about promoting cycle tourism across British Columbia. She loves exploring and discovering great places to ride, walk and roll — in BC and around the world.</p>
 </div>
 
-<p><em style="color:#999;">More bios coming soon, board members still being confirmed.</em></p>
+<p><em style="color:#999;">More bios coming soon, advisors still being confirmed.</em></p>
 
 <hr class="section-divider">
 
@@ -119,11 +123,13 @@ body {
 
 <p>We believe in giving back, both to build trust and to help others learn from and build on what we've done. We will be making our documents, data, and code open as we go. If something would help you that you don't see here, please reach out.</p>
 
+<p>If you are a cycle tourism coordination organization, or are interested in getting something like BC Cycle Tourism Society running in your province/state/country, <a href="/#contact">say hello</a>, let's share tips!</p>
+
 <h3>We are on Indigenous land</h3>
 <p>The cycling routes and communities featured on this website are located throughout what is now British Columbia, on many First Nations territories, including unceded and treaty lands. We acknowledge the enduring relationships, rights, laws, cultures, and stewardship responsibilities of First Nations in these places. <a href="/land-acknowledgement">Read our full land acknowledgement →</a></p>
 
 <h3>We want to hear from you</h3>
-<p>BC Cycle Tourism Society is in its founding phase. We're looking to connect with communities, tourism organizations, cycling advocates, route stewards, Indigenous partners, businesses, and others who see the potential for cycle tourism and bikepacking in BC.</p>
+<p>BC Cycle Tourism Society is incorporating as a BC Society in spring 2026. We're looking to connect with communities, tourism organizations, cycling advocates, route stewards, Indigenous partners, businesses, and others who see the potential for cycle tourism and bikepacking in BC.</p>
 <p>If you want to be part of this, we'd love to hear from you.</p>
 <p><a href="mailto:hello@bccycletourism.ca">hello@bccycletourism.ca</a></p>
 
@@ -151,5 +157,20 @@ body {
     </div>
   </div>
 </div>
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let linkUrl = new URL(item.getAttribute('href'), window.location.href);
+      let currentHostname = window.location.hostname;
+      if (linkUrl.hostname !== currentHostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
