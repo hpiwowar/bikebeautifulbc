@@ -103,10 +103,12 @@ body {
 .subscribe-form button:hover { background: #0a3359; }
 .section-rule { border: none; border-top: 1px solid #E5E7EB; margin: 0.5rem 0 1.5rem; }
 .dispatch-section { background: #F8F4ED; border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
-.dispatch-title { font-size: 16px; font-weight: 500; color: #1a1a1a; margin: 0 0 0.25rem; display: flex; align-items: center; gap: 8px; }
+.dispatch-title { font-size: 19px; font-weight: 600; color: #1a1a1a; margin: 0 0 0.25rem; display: flex; align-items: center; gap: 8px; }
 .live-badge { font-size: 11px; font-weight: 500; background: #FEF3C7; color: #92400E; padding: 2px 8px; border-radius: 99px; }
-.dispatch-sub { font-size: 13px; color: #666; margin: 0 0 1rem; }
-.dispatch-item { border-top: 1px solid #ddd; padding: 0.75rem 0; display: flex; flex-direction: column; gap: 3px; }
+.dispatch-sub { font-size: 13px; color: #666; margin: 0; }
+.dispatch-items-wrap { margin-top: 1rem; padding-left: 1.25rem; border-left: 3px solid #d0c9bf; }
+.dispatch-item { border-top: 1px solid #e0dbd4; padding: 0.65rem 0; display: flex; flex-direction: column; gap: 3px; }
+.dispatch-item:first-child { border-top: none; padding-top: 0; }
 .dispatch-item-date { font-size: 11px; color: #aaa; }
 .dispatch-item-text { font-size: 13px; color: #1a1a1a; line-height: 1.5; }
 .dispatch-item-text a { color: #1E7D96; text-decoration: none; }
@@ -235,8 +237,8 @@ body {
   <div id="normal-dispatch">
     <div class="dispatch-section">
       <p class="dispatch-title">Building the June 2026 dispatch <span class="live-badge">In progress</span></p>
-      <p class="dispatch-sub">Added as news comes in. Finalized and emailed at month end.</p>
-      <div class="dispatch-item">
+      <p class="dispatch-sub">Added as news comes in. Finalized and emailed about once a month.</p>
+      <div class="dispatch-items-wrap"><div class="dispatch-item">
         <span class="dispatch-item-date">May 15</span>
         <p class="dispatch-item-text">Province confirmed it will not sell the CN Rail Sea to Sky corridor — but nobody in the Legislature has raised cycling or trail use yet. <a href="#">Farnworth's Hansard commitments &rarr;</a></p>
       </div><div class="dispatch-item">
@@ -245,10 +247,9 @@ body {
       </div><div class="dispatch-item">
         <span class="dispatch-item-date">May 10</span>
         <p class="dispatch-item-text">The Narwhal covers the KVR decommissioning as "the first permanent break in the Trans Canada Trail." <a href="#">Read the piece &rarr;</a></p>
-      </div>
+      </div></div>
     </div>
-    <p class="section-heading" style="margin-top:1.5rem;">Past dispatches</p>
-    <div class="dispatch-archive"><a class="dispatch-archive-link" href="#">May 2026</a></div>
+    
   </div>
 </div>
 
