@@ -78,29 +78,29 @@ body {
 .fn-card.hidden { display: none; }
 .fn-card-img { width: 100%; height: 90px; background: #B8E0EC; border-radius: 6px; margin-bottom: 2px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .fn-card-img img { width: 100%; height: 100%; object-fit: cover; }
-.fn-card-title { font-family: "Archivo", sans-serif; font-size: 15px; font-weight: 500; color: #1E7D96; line-height: 1.4; margin: 0; }
-.fn-card-teaser { font-size: 13px; color: #666; line-height: 1.55; margin: 0; }
-.fn-card-date { font-size: 12px; color: #aaa; margin-top: auto; padding-top: 4px; }
+.fn-card-title { font-family: "Archivo", sans-serif; font-size: 17px; font-weight: 500; color: #1E7D96; line-height: 1.4; margin: 0; }
+.fn-card-teaser { font-size: 15px; color: #666; line-height: 1.55; margin: 0; }
+.fn-card-date { font-size: 13px; color: #aaa; margin-top: auto; padding-top: 4px; }
 .no-results-notes { font-size: 14px; color: #aaa; padding: 0.5rem 0 1rem; display: none; }
 .dispatch-results { margin: 1.25rem 0 2rem; display: none; }
 .dispatch-results-heading { font-size: 13px; font-weight: 500; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 0.75rem; }
 .dispatch-result-item { border-top: 1px solid #E5E7EB; padding: 0.7rem 0; display: flex; gap: 1rem; align-items: baseline; }
 .dispatch-result-item.hidden { display: none; }
-.dispatch-result-date { font-size: 11px; color: #aaa; white-space: nowrap; min-width: 80px; }
-.dispatch-result-text { font-size: 13px; color: #1a1a1a; line-height: 1.5; }
+.dispatch-result-date { font-size: 12px; color: #aaa; white-space: nowrap; min-width: 80px; }
+.dispatch-result-text { font-size: 14px; color: #1a1a1a; line-height: 1.5; }
 .dispatch-result-text a { color: #1E7D96; text-decoration: none; }
-.dispatch-result-source { font-size: 11px; color: #aaa; margin-top: 2px; }
+.dispatch-result-source { font-size: 12px; color: #aaa; margin-top: 2px; }
 .no-dispatch-results { font-size: 13px; color: #aaa; padding: 0.5rem 0; display: none; border-top: 1px solid #E5E7EB; }
 .placeholder-notice { background: #FEF3C7; border: 2px solid #F59E0B; border-radius: 12px; padding: 16px 20px; margin-bottom: 1.5rem; font-size: 14px; color: #92400E; font-weight: 600; text-align: center; }
 .subscribe-strip { background: #1E7D96; border-radius: 12px; padding: 1.75rem 2rem; margin: 1.5rem 0 2rem; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
-.subscribe-strip-text { flex: 1; min-width: 200px; }
+.subscribe-strip-text { flex: 1; min-width: 200px; max-width: 560px; }
 .subscribe-strip-text p { margin: 0; font-size: 18px; font-weight: 600; color: #fff; max-width: none; }
-.subscribe-strip-text span { font-size: 14px; color: #B8E0EC; }
-.subscribe-form { display: flex; gap: 10px; }
+.subscribe-strip-text span { font-size: 16px; color: #B8E0EC; }
+.subscribe-form { display: flex; gap: 10px; flex: 0 0 340px; }
 .subscribe-form input { font-size: 15px; padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.1); color: #fff; width: 240px; outline: none; font-family: inherit; }
 .subscribe-form input::placeholder { color: rgba(255,255,255,0.5); }
-.subscribe-form button { font-size: 15px; font-weight: 600; padding: 10px 20px; border-radius: 8px; border: none; background: #0D4070; color: #fff; cursor: pointer; font-family: inherit; }
-.subscribe-form button:hover { background: #0a3359; }
+.subscribe-form button { font-size: 15px; font-weight: 600; padding: 10px 20px; border-radius: 8px; border: none; background: #0D4070; color: #fff; cursor: pointer; font-family: inherit; transition: background 0.15s; width: 120px; }
+.subscribe-form button:hover { background: #fff; color: #0D4070; }
 .section-rule { border: none; border-top: 1px solid #E5E7EB; margin: 0.5rem 0 1.5rem; }
 .dispatch-section { background: #F8F4ED; border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
 .dispatch-title { font-size: 19px; font-weight: 600; color: #1a1a1a; margin: 0 0 0.25rem; display: flex; align-items: center; gap: 8px; }
@@ -109,15 +109,15 @@ body {
 .dispatch-items-wrap { margin-top: 1rem; padding-left: 1.25rem; border-left: 3px solid #d0c9bf; }
 .dispatch-item { border-top: 1px solid #e0dbd4; padding: 0.65rem 0; display: flex; flex-direction: column; gap: 3px; }
 .dispatch-item:first-child { border-top: none; padding-top: 0; }
-.dispatch-item-date { font-size: 11px; font-weight: 500; color: #666; }
-.dispatch-item-heading .dispatch-item-date { font-size: 13px; font-weight: 600; color: #1a1a1a; }
-.dispatch-item-heading { font-size: 13px; font-weight: 600; color: #1a1a1a; margin: 2px 0 2px; }
-.dispatch-item-text { font-size: 13px; color: #1a1a1a; line-height: 1.5; }
+.dispatch-item-date { font-size: 12px; font-weight: 500; color: #666; }
+.dispatch-item-heading .dispatch-item-date { font-size: 15px; font-weight: 600; color: #1a1a1a; }
+.dispatch-item-heading { font-size: 15px; font-weight: 600; color: #1a1a1a; margin: 2px 0 2px; }
+.dispatch-item-text { font-size: 16px; color: #1a1a1a; line-height: 1.5; }
 .dispatch-item-text a { color: #1E7D96; text-decoration: none; }
 .dispatch-archive { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 0.5rem; }
 .dispatch-archive-link { font-size: 13px; color: #666; background: #fff; border: 1px solid #E5E7EB; border-radius: 8px; padding: 4px 12px; text-decoration: none; }
 .dispatch-archive-link:hover { border-color: #1E7D96; color: #1E7D96; }
-.section-heading { font-size: 13px; font-weight: 500; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 1rem; }
+.section-heading { font-family: "Archivo", sans-serif; font-size: 28px; font-weight: 400; color: #1F514C; margin: 0 0 1rem; letter-spacing: -0.03em; }
 @media (max-width: 900px) {
   .fn-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -164,32 +164,26 @@ body {
       <div class="fn-card-img"></div>
       <p class="fn-card-title">Could BC have a no turn-away policy for cyclists?</p>
       <p class="fn-card-teaser">Washington State Parks have had a formal policy since 2000. BC has something less reliable — and it shows.</p>
-      <p class="fn-card-date">May 14, 2026</p>
     </a><a class="fn-card" href="/field-note/tourist-arriving-by-bike" data-search="the tourist your town actually wants is probably arriving by bike cycle tourists older higher income spend more per day economics demographics">
       <div class="fn-card-img"></div>
       <p class="fn-card-title">The tourist your town actually wants is probably arriving by bike</p>
       <p class="fn-card-teaser">Cycle tourists skew older, higher-income, and spend significantly more per day than average tourists. The data is surprising.</p>
-      <p class="fn-card-date">May 8, 2026</p>
     </a><a class="fn-card" href="/field-note/kvr-whats-open" data-search="kvr kettle valley railway whats open whats closed what it means cycle tourism infrastructure corridor trail decommissioning trans canada">
       <div class="fn-card-img"></div>
       <p class="fn-card-title">The KVR: what's open, what's closed, and what it means</p>
       <p class="fn-card-teaser">The most comprehensive current picture of the Kettle Valley Railway and its implications for cycle tourism.</p>
-      <p class="fn-card-date">April 29, 2026</p>
     </a><a class="fn-card" href="/field-note/getting-your-bike-around-bc" data-search="getting your bike around bc buses ferries floatplanes bagging rules carriers routes practical trip planning transport">
       <div class="fn-card-img"></div>
       <p class="fn-card-title">Getting your bike around BC: buses, ferries, and floatplanes</p>
       <p class="fn-card-teaser">Nobody has written this well for BC. Bagging rules, which carriers, which routes.</p>
-      <p class="fn-card-date">April 20, 2026</p>
     </a><a class="fn-card" href="/field-note/wild-camping-bc" data-search="wild camping bc cyclists rec sites right to roam crown land scotland new zealand scandinavia practical trip planning overnight">
       <div class="fn-card-img"></div>
       <p class="fn-card-title">Wild camping in BC for cyclists</p>
       <p class="fn-card-teaser">Can you do it, where, and how? What are rec sites? How BC's rules compare to Scotland and New Zealand.</p>
-      <p class="fn-card-date">April 11, 2026</p>
     </a><a class="fn-card" href="/field-note/founding" data-search="founding bc has world class routes no one telling that story at scale bc cycle tourism society mission board">
       <div class="fn-card-img"></div>
       <p class="fn-card-title">Founding: BC has world-class routes and no one telling that story at scale</p>
       <p class="fn-card-teaser">What BC Cycle Tourism Society is, why it exists, and what we're building.</p>
-      <p class="fn-card-date">April 1, 2026</p>
     </a>
   </div>
   <p class="no-results-notes" id="no-results-notes">No Field Notes match that search.</p>
@@ -200,89 +194,89 @@ body {
       <span class="dispatch-result-date">May 2</span>
       <div>
         <p class="dispatch-result-text">Alberni Pacific Railway extended service along Port Alberni's Quay-to-Quay Railside corridor, with renewed participation from Tseshaht and Hupacasath First Nations. <a href="https://hashilthsa.com/news/2026-05-02/port-albernis-railway-service-expands-renewed-first-nations-participation">Read here &rarr;</a></p>
-        <p class="dispatch-result-source">May 2026 dispatch (in progress)</p>
+        <p class="dispatch-result-source">May 2026 Dispatch (in progress)</p>
       </div>
     </div><div class="dispatch-result-item" data-search="kvr kettle valley railway narwhal decommissioning trans canada trail bc parks maintenance backlog">
       <span class="dispatch-result-date">May 10</span>
       <div>
         <p class="dispatch-result-text">The Narwhal reports that KVR decommissioning would create the first permanent break in the Trans Canada Trail, placing it in the broader context of BC Parks' maintenance backlog. <a href="https://thenarwhal.ca/trans-canada-trail-closure-kettle-valley/">Read the piece &rarr;</a></p>
-        <p class="dispatch-result-source">May 2026 dispatch (in progress)</p>
+        <p class="dispatch-result-source">May 2026 Dispatch (in progress)</p>
       </div>
     </div><div class="dispatch-result-item" data-search="cn rail sea to sky corridor province hansard farnworth will not sell dismantle">
       <span class="dispatch-result-date">May 15</span>
       <div>
         <p class="dispatch-result-text">Province confirmed in Hansard that it will not sell or dismantle the CN Rail Sea to Sky corridor. <a href="https://www.leg.bc.ca/hansard-content/Debates/43rd2nd/20260506pm-CommitteeA-Blues.htm">Farnworth's Hansard commitments &rarr;</a></p>
-        <p class="dispatch-result-source">May 2026 dispatch (in progress)</p>
+        <p class="dispatch-result-source">May 2026 Dispatch (in progress)</p>
       </div>
     </div><div class="dispatch-result-item" data-search="go by bike week may june celebration station rides prizes gobybikebc hub cycling">
       <span class="dispatch-result-date">May 30–June 5</span>
       <div>
         <p class="dispatch-result-text">Go by Bike Week runs May 30–June 5. Log rides, win prizes, and find a Celebration Station near you. <a href="https://gobybikebc.ca/">GoByBike BC &rarr;</a> and <a href="https://bikehub.ca/bike-events/go-by-bike-week/spring-2026-go-bike-week-media-kit">HUB Cycling &rarr;</a></p>
-        <p class="dispatch-result-source">May 2026 dispatch (in progress)</p>
+        <p class="dispatch-result-source">May 2026 Dispatch (in progress)</p>
       </div>
     </div><div class="dispatch-result-item" data-search="okanagan rail trail closure kick willie road kekuli bay provincial park erosion rdno">
       <span class="dispatch-result-date">June 1–19</span>
       <div>
         <p class="dispatch-result-text">A section of the Okanagan Rail Trail between Kick Willie Road and Kekuli Bay Provincial Park will be closed for erosion-prevention work. <a href="https://www.rdno.ca/our-communities/rdno-news/temporary-closure-okanagan-rail-trail-rescheduled">RDNO notice &rarr;</a></p>
-        <p class="dispatch-result-source">May 2026 dispatch (in progress)</p>
+        <p class="dispatch-result-source">May 2026 Dispatch (in progress)</p>
       </div>
     </div><div class="dispatch-result-item" data-search="velo canada bikes pedal poll sondo velo national bike count micromobility cycling infrastructure canada">
       <span class="dispatch-result-date">June 2–7</span>
       <div>
         <p class="dispatch-result-text">Vélo Canada Bikes is running Pedal Poll / Sondo Vélo — a national bike and micromobility count to help build the case for safer cycling infrastructure across Canada. <a href="https://velocanadabikes.org/pedalpoll/">Pedal Poll &rarr;</a></p>
-        <p class="dispatch-result-source">May 2026 dispatch (in progress)</p>
+        <p class="dispatch-result-source">May 2026 Dispatch (in progress)</p>
       </div>
     </div><div class="dispatch-result-item" data-search="revelstoke bikepacking weekend cycling association revy outdoors beginner campout social">
       <span class="dispatch-result-date">June 5–7</span>
       <div>
         <p class="dispatch-result-text">Revelstoke Cycling Association and Revy Outdoors are hosting a beginner-friendly bikepacking weekend, with an in-town social Friday and an overnight campout Saturday–Sunday. <a href="https://www.bikerevelstoke.org/campout">Register &rarr;</a></p>
-        <p class="dispatch-result-source">May 2026 dispatch (in progress)</p>
+        <p class="dispatch-result-source">May 2026 Dispatch (in progress)</p>
       </div>
     </div>
     <p class="no-dispatch-results" id="no-dispatch-results">No dispatch items match that search.</p>
   </div>
 
+  <hr class="section-rule">
+  <p class="section-heading" id="dispatch-section-heading">The Field Notes Dispatch</p>
+  <div id="normal-dispatch">
+    <div class="dispatch-section">
+      <p class="dispatch-title">Building the May 2026 Dispatch <span class="live-badge">In progress</span></p>
+      <p class="dispatch-sub">Added as news comes in. Finalized and emailed about once a month.</p>
+      <div class="dispatch-items-wrap"><div class="dispatch-item">
+        <p class="dispatch-item-heading"><span class="dispatch-item-date">May 2</span>&nbsp;&nbsp;&nbsp;&nbsp;Port Alberni rail-with-trail</p>
+        <p class="dispatch-item-text">Alberni Pacific Railway extended service along Port Alberni's Quay-to-Quay Railside corridor, with renewed participation from Tseshaht and Hupacasath First Nations. <a href="https://hashilthsa.com/news/2026-05-02/port-albernis-railway-service-expands-renewed-first-nations-participation">Read here &rarr;</a></p>
+      </div><div class="dispatch-item">
+        <p class="dispatch-item-heading"><span class="dispatch-item-date">May 10</span>&nbsp;&nbsp;&nbsp;&nbsp;KVR / The Narwhal</p>
+        <p class="dispatch-item-text">The Narwhal reports that KVR decommissioning would create the first permanent break in the Trans Canada Trail, placing it in the broader context of BC Parks' maintenance backlog. <a href="https://thenarwhal.ca/trans-canada-trail-closure-kettle-valley/">Read the piece &rarr;</a></p>
+      </div><div class="dispatch-item">
+        <p class="dispatch-item-heading"><span class="dispatch-item-date">May 15</span>&nbsp;&nbsp;&nbsp;&nbsp;CN Rail Sea to Sky corridor</p>
+        <p class="dispatch-item-text">Province confirmed in Hansard that it will not sell or dismantle the CN Rail Sea to Sky corridor. <a href="https://www.leg.bc.ca/hansard-content/Debates/43rd2nd/20260506pm-CommitteeA-Blues.htm">Farnworth's Hansard commitments &rarr;</a></p>
+      </div><div class="dispatch-item">
+        <p class="dispatch-item-heading"><span class="dispatch-item-date">May 30–June 5</span>&nbsp;&nbsp;&nbsp;&nbsp;Go by Bike Week</p>
+        <p class="dispatch-item-text">Go by Bike Week runs May 30–June 5. Log rides, win prizes, and find a Celebration Station near you. <a href="https://gobybikebc.ca/">GoByBike BC &rarr;</a> and <a href="https://bikehub.ca/bike-events/go-by-bike-week/spring-2026-go-bike-week-media-kit">HUB Cycling &rarr;</a></p>
+      </div><div class="dispatch-item">
+        <p class="dispatch-item-heading"><span class="dispatch-item-date">June 1–19</span>&nbsp;&nbsp;&nbsp;&nbsp;Okanagan Rail Trail closure</p>
+        <p class="dispatch-item-text">A section of the Okanagan Rail Trail between Kick Willie Road and Kekuli Bay Provincial Park will be closed for erosion-prevention work. <a href="https://www.rdno.ca/our-communities/rdno-news/temporary-closure-okanagan-rail-trail-rescheduled">RDNO notice &rarr;</a></p>
+      </div><div class="dispatch-item">
+        <p class="dispatch-item-heading"><span class="dispatch-item-date">June 2–7</span>&nbsp;&nbsp;&nbsp;&nbsp;National Bike Count / Pedal Poll</p>
+        <p class="dispatch-item-text">Vélo Canada Bikes is running Pedal Poll / Sondo Vélo — a national bike and micromobility count to help build the case for safer cycling infrastructure across Canada. <a href="https://velocanadabikes.org/pedalpoll/">Pedal Poll &rarr;</a></p>
+      </div><div class="dispatch-item">
+        <p class="dispatch-item-heading"><span class="dispatch-item-date">June 5–7</span>&nbsp;&nbsp;&nbsp;&nbsp;Revelstoke Bikepacking Weekend</p>
+        <p class="dispatch-item-text">Revelstoke Cycling Association and Revy Outdoors are hosting a beginner-friendly bikepacking weekend, with an in-town social Friday and an overnight campout Saturday–Sunday. <a href="https://www.bikerevelstoke.org/campout">Register &rarr;</a></p>
+      </div></div>
+    </div>
+    
+  </div>
+
   <div class="subscribe-strip">
     <div class="subscribe-strip-text">
-      <p>Ride along with us</p>
-      <span>Monthly dispatch: policy news, trail updates, and new Field Notes from across BC.</span>
+      <p>Ride along with us!</p>
+      <span>Monthly Dispatch: hot news and deep dives on cycling infrastructure, policy, and BC's path to becoming a world-class cycle touring destination.</span>
     </div>
     <form class="subscribe-form" id="fn-subscribe" onsubmit="return submitSubscribe(event)">
       <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required>
       <button type="submit">Subscribe</button>
     </form>
-  </div>
-
-  <hr class="section-rule">
-  <p class="section-heading" id="dispatch-section-heading">The dispatch</p>
-  <div id="normal-dispatch">
-    <div class="dispatch-section">
-      <p class="dispatch-title">Building the May 2026 dispatch <span class="live-badge">In progress</span></p>
-      <p class="dispatch-sub">Added as news comes in. Finalized and emailed about once a month.</p>
-      <div class="dispatch-items-wrap"><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">May 2</span> — Port Alberni rail-with-trail</p>
-        <p class="dispatch-item-text">Alberni Pacific Railway extended service along Port Alberni's Quay-to-Quay Railside corridor, with renewed participation from Tseshaht and Hupacasath First Nations. <a href="https://hashilthsa.com/news/2026-05-02/port-albernis-railway-service-expands-renewed-first-nations-participation">Read here &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">May 10</span> — KVR / The Narwhal</p>
-        <p class="dispatch-item-text">The Narwhal reports that KVR decommissioning would create the first permanent break in the Trans Canada Trail, placing it in the broader context of BC Parks' maintenance backlog. <a href="https://thenarwhal.ca/trans-canada-trail-closure-kettle-valley/">Read the piece &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">May 15</span> — CN Rail Sea to Sky corridor</p>
-        <p class="dispatch-item-text">Province confirmed in Hansard that it will not sell or dismantle the CN Rail Sea to Sky corridor. <a href="https://www.leg.bc.ca/hansard-content/Debates/43rd2nd/20260506pm-CommitteeA-Blues.htm">Farnworth's Hansard commitments &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">May 30–June 5</span> — Go by Bike Week</p>
-        <p class="dispatch-item-text">Go by Bike Week runs May 30–June 5. Log rides, win prizes, and find a Celebration Station near you. <a href="https://gobybikebc.ca/">GoByBike BC &rarr;</a> and <a href="https://bikehub.ca/bike-events/go-by-bike-week/spring-2026-go-bike-week-media-kit">HUB Cycling &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">June 1–19</span> — Okanagan Rail Trail closure</p>
-        <p class="dispatch-item-text">A section of the Okanagan Rail Trail between Kick Willie Road and Kekuli Bay Provincial Park will be closed for erosion-prevention work. <a href="https://www.rdno.ca/our-communities/rdno-news/temporary-closure-okanagan-rail-trail-rescheduled">RDNO notice &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">June 2–7</span> — National Bike Count / Pedal Poll</p>
-        <p class="dispatch-item-text">Vélo Canada Bikes is running Pedal Poll / Sondo Vélo — a national bike and micromobility count to help build the case for safer cycling infrastructure across Canada. <a href="https://velocanadabikes.org/pedalpoll/">Pedal Poll &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">June 5–7</span> — Revelstoke Bikepacking Weekend</p>
-        <p class="dispatch-item-text">Revelstoke Cycling Association and Revy Outdoors are hosting a beginner-friendly bikepacking weekend, with an in-town social Friday and an overnight campout Saturday–Sunday. <a href="https://www.bikerevelstoke.org/campout">Register &rarr;</a></p>
-      </div></div>
-    </div>
-    
   </div>
 </div>
 
