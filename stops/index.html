@@ -1185,12 +1185,13 @@ function renderListingCardHTML(cat, ex, showCatTag) {
     }).join("");
     pillsHTML = '<div class="amenities-label">Amenities</div><div class="amenity-pills">' + pills + '</div>';
   }
+  var demoBanner = isDemo(ex) ? '<div style="margin-top:10px;padding:8px 12px;background:#FEF3C7;border:1px solid #F59E0B;border-radius:6px;font-size:12px;color:#92400E;font-weight:600;">Sample data — not a real listing. For illustration only.</div>' : '';
   return '<div class="listing-card ' + borderClass + demoClass + '" onclick="openModal(\x27' + cat.id + '\x27,' + idx + ')">' +
     '<div class="listing-top"><div><div class="listing-name">' + ex.name + catTag + demoTag + '</div>' +
     '<div class="listing-location">' + ex.location + '</div></div>' +
     '<div class="listing-badges">' + badges + '</div></div>' +
     '<div class="listing-desc">' + ex.desc + '</div>' +
-    pillsHTML + '</div>';
+    demoBanner + pillsHTML + '</div>';
 }
 
 // ---- URL HASH STATE ----
