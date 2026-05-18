@@ -899,7 +899,7 @@ function getSortedFiltered(cat) {
     });
   }
   function sortRank(ex) { if (ex.badge === "unwelcome") return 4; if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; return 3; }
-  list.sort(function(a, b) { var ra = sortRank(a), rb = sortRank(b); if (ra !== rb) return ra - rb; return a.name.localeCompare(b.name); });
+  list.sort(function(a, b) { var ra = sortRank(a), rb = sortRank(b); if (ra !== rb) return ra - rb; var ca = (a.checked || []).length, cb = (b.checked || []).length; if (ca !== cb) return cb - ca; return a.name.localeCompare(b.name); });
   return list;
 }
 
@@ -946,7 +946,7 @@ function openModal(catId, exIdx) {
     detailHTML = '<div class="modal-section"><div class="modal-section-title">Contact & Details</div><div class="modal-detail-grid">' +
       (ex.detail.address ? '<div class="modal-detail-item"><div class="label">Address</div><div class="value">' + ex.detail.address + '</div></div>' : '') +
       (ex.detail.phone ? '<div class="modal-detail-item"><div class="label">Phone</div><div class="value">' + ex.detail.phone + '</div></div>' : '') +
-      (ex.detail.url ? '<div class="modal-detail-item"><div class="label">Website</div><div class="value"><a href="#">' + ex.detail.url + '</a></div></div>' : '') +
+      (ex.detail.url ? '<div class="modal-detail-item"><div class="label">Website</div><div class="value"><a href="' + ex.detail.url + '" target="_blank" rel="noopener">' + ex.detail.url + '</a></div></div>' : '') +
       '</div>' + sourceTag + '</div>';
   }
 
