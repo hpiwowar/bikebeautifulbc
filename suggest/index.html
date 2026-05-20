@@ -116,7 +116,7 @@ body {
 </head>
 <body>
 
-<div class="g-banner"><strong>PRE-LAUNCH PREVIEW</strong> — This site is still in development. <a href="/#contact" style="color:#92400E;font-weight:600;">Contact us</a> if you have questions or ideas!</div>
+<div class="g-banner"><strong>PRE-LAUNCH PREVIEW</strong> — <a href="/#contact" style="color:#92400E;font-weight:600;">Contact us</a> if you have questions or ideas!</div>
 <div class="g-header">
   <div class="g-header-inner">
     <a href="/" class="g-header-left">
@@ -161,7 +161,11 @@ body {
     <label>Category *</label>
     <div style="display:flex;flex-direction:column;gap:4px;">
       <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
-        <input type="radio" name="f-cat-radio" value="Accommodation" required onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
+        <input type="radio" name="f-cat-radio" value="Attractions" required onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
+        <span><strong>Attractions</strong> <span style="color:#999;font-size:12px;">— visitor centres, museums, libraries, rec centres, hot springs, markets</span></span>
+      </label>
+      <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
+        <input type="radio" name="f-cat-radio" value="Accommodation" onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
         <span><strong>Accommodation</strong> <span style="color:#999;font-size:12px;">— hotels, motels, hostels, guesthouses, B&Bs, inns</span></span>
       </label>
       <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
@@ -175,10 +179,6 @@ body {
       <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
         <input type="radio" name="f-cat-radio" value="Groceries" onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
         <span><strong>Groceries</strong> <span style="color:#999;font-size:12px;">— grocery stores, general stores, convenience stores, farm stands</span></span>
-      </label>
-      <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
-        <input type="radio" name="f-cat-radio" value="Attractions" onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
-        <span><strong>Attractions</strong> <span style="color:#999;font-size:12px;">— visitor centres, museums, libraries, rec centres, hot springs, markets</span></span>
       </label>
       <label style="display:flex;align-items:baseline;gap:8px;cursor:pointer;padding:4px 0;font-size:14px;">
         <input type="radio" name="f-cat-radio" value="Bike Services" onchange="setCat(this.value)" style="accent-color:#1E7D96;margin-top:2px;" />
@@ -331,7 +331,7 @@ var catData = {
     required: [
       { q: "Is there bike parking or bike visibility?", tip: "Bike rack, public rack, patio visibility, window visibility, or staff-approved area. The listing describes which." },
       { q: "Is water bottle refill available?", tip: "Potable water refill available to customers, or staff can refill a bottle on request." },
-      { q: "Are washrooms available during operating hours?", tip: "For food trucks, kiosks, farm stands, and takeout-only businesses, list the nearest public washrooms." }
+      { q: "Are washrooms available?", tip: "For food trucks, kiosks, farm stands, and takeout-only businesses, list the nearest public washrooms." }
     ],
     amenities: [
       { name: "Takeout", tip: "Food available to take away." },
@@ -375,8 +375,8 @@ var catData = {
   "Attractions": {
     required: [
       { q: "Is there bike parking?", tip: "" },
-      { q: "Is water bottle refill available during operating hours?", tip: "Potable water refill available to customers, or staff can refill a bottle on request." },
-      { q: "Are washrooms available to cyclists?", tip: "" },
+      { q: "Is water bottle refill available?", tip: "Potable water refill available to customers, or staff can refill a bottle on request." },
+      { q: "Are washrooms available?", tip: "" },
       { q: "Do they keep a We Welcome Cyclists Local Knowledge Sheet, or equivalent, available for staff?", tip: "Local routes, repair options, emergency contacts, hazards, and fallback transport." }
     ],
     amenities: [

@@ -931,7 +931,7 @@ function renderExamplesCard(cat) {
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span><span class="legend-tip">Member of a sector partner network like the BC Ale Trail or BC Farmers' + "'" + ' Market Network. Their network has partnered with BC Cycle Tourism Society to co-brand cycle-friendly member businesses.</span></span>' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span><span class="legend-tip">Cycling industry business with an enhanced listing — logo, photos, and promoted placement. Supports BC Cycle Tourism Society through the industry partner program.</span></span>' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span><span class="legend-tip">Business has confirmed all required criteria and joined the We Welcome Cyclists program. Free to join. Apply at /apply</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Qualified\x27)"><span class="badge badge-qualified">Qualified</span><span class="legend-tip">Editorial entry — meets basic criteria but hasn' + "'" + 't formally enrolled in the program yet.</span></span>' +
+      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Qualified\x27)"><span class="badge badge-qualified">Welcoming</span><span class="legend-tip">Editorial entry — meets basic criteria but hasn' + "'" + 't formally enrolled in the program yet.</span></span>' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span><span class="legend-tip">Useful reference — doesn' + "'" + 't fully meet required criteria but worth knowing about.</span></span>' +
       '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span><span class="legend-tip">This business or service does not accommodate cyclists or bicycles. Listed so you know before you show up.</span></span>' +
     '</div></div>' +
@@ -1060,7 +1060,7 @@ function openModal(catId, exIdx) {
     if (ex.network) badges += '<span class="badge badge-sector">' + ex.network + '</span>';
     if (ex.partner) badges += '<span class="badge badge-industry">Industry Partner</span>';
     if (ex.badge === "accredited") badges += '<span class="badge badge-accredited">Accredited</span>';
-    else if (ex.badge === "qualified") badges += '<span class="badge badge-qualified">Qualified</span>';
+    else if (ex.badge === "qualified") badges += '<span class="badge badge-qualified">Welcoming</span>';
     else badges += '<span class="badge badge-info">Info</span>';
   }
 
@@ -1239,7 +1239,7 @@ function renderAllView() {
         '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span></span>' +
         '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span></span>' +
         '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span></span>' +
-        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Qualified\x27)"><span class="badge badge-qualified">Qualified</span></span>' +
+        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Qualified\x27)"><span class="badge badge-qualified">Welcoming</span></span>' +
         '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span></span>' +
         '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span></span>' +
       '</div>' +
@@ -1355,7 +1355,7 @@ function renderListingCardHTML(cat, ex, showCatTag) {
     if (ex.network) badges += '<span class="badge badge-sector">' + ex.network + '</span>';
     if (ex.partner) badges += '<span class="badge badge-industry">Industry Partner</span>';
     if (ex.badge === "accredited") badges += '<span class="badge badge-accredited">Accredited</span>';
-    else if (ex.badge === "qualified") badges += '<span class="badge badge-qualified">Qualified</span>';
+    else if (ex.badge === "qualified") badges += '<span class="badge badge-qualified">Welcoming</span>';
     else badges += '<span class="badge badge-info">Info</span>';
   }
   var borderClass = ex.badge === 'unwelcome' ? 'is-unwelcome' : (ex.partner ? 'is-industry' : (ex.network ? 'is-sector' : (ex.badge === 'accredited' ? 'is-accredited' : (ex.badge === 'qualified' ? 'is-qualified' : 'is-info'))));
