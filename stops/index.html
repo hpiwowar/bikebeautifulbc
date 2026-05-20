@@ -190,6 +190,11 @@ body {
 .filter-bar-top label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #999; flex-shrink: 0; }
 .search-input { padding: 6px 12px; border: 1px solid #DDD; border-radius: 6px; font-size: 13px; color: #141414; background: #FFFFFF; width: 240px; max-width: 100%; }
 .search-input::placeholder { color: #BBB; }
+.all-listings-title-area { display: flex; flex-direction: column; gap: 2px; }
+.all-count-subtitle { font-size: 14px; color: #4b5563; }
+.all-search-wrap { position: relative; flex: 1; max-width: 380px; }
+.all-search-wrap svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; stroke: #AAA; fill: none; stroke-width: 2; stroke-linecap: round; pointer-events: none; }
+.all-search-wrap .search-input { padding-left: 32px; width: 100%; box-sizing: border-box; }
 .filter-pills-row { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
 .subcat-select { font-size: 12px; padding: 5px 24px 5px 10px; border: 1px solid #D6EDF3; border-radius: 6px; background: #FFFFFF; color: #1E7D96; cursor: pointer; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%231E7D96'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 7px center; flex-shrink: 0; }
 .filter-pill { display: inline-block; padding: 4px 10px; background: #F8F4ED; color: #4A9BB0; border: 1px solid #D6EDF3; border-radius: 14px; font-size: 11px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.12s; }
@@ -1228,21 +1233,24 @@ function renderAllView() {
   else { allSearchText = ""; allFilters = []; allCatFilter = ""; }
   var el = document.getElementById("all-card");
   el.innerHTML =
-    '<div class="examples-toolbar"><h3>All Listings</h3>' +
-    '<div class="legend">' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Qualified\x27)"><span class="badge badge-qualified">Qualified</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span></span>' +
-    '</div></div>' +
-    '<div class="filter-bar"><div class="filter-bar-top"><label>Filter</label>' +
-    '<input type="text" id="all-search-box" class="search-input" placeholder="Search name, location, route, amenity, or badge…" oninput="onAllSearch(this.value)" />' +
+    '<div class="examples-toolbar">' +
+      '<div class="all-listings-title-area"><h3>All Listings</h3><div id="all-count-area" class="all-count-subtitle"></div></div>' +
+      '<div class="legend">' +
+        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span></span>' +
+        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span></span>' +
+        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span></span>' +
+        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Qualified\x27)"><span class="badge badge-qualified">Qualified</span></span>' +
+        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span></span>' +
+        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span></span>' +
+      '</div>' +
+    '</div>' +
+    '<div class="filter-bar"><div class="filter-bar-top">' +
+    '<div class="all-search-wrap"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>' +
+    '<input type="text" id="all-search-box" class="search-input" placeholder="Search name, location, route, amenity…" oninput="onAllSearch(this.value)" /></div>' +
     '<select class="subcat-select" id="all-cat-select" onchange="setAllCatFilter(this.value)"><option value="">All categories</option></select>' +
     // '<label class="demo-toggle" style="margin-left:auto"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
     '</div></div>' +
-    '<div id="all-count-area"></div><div id="all-listings-area"></div>';
+    '<div id="all-listings-area"></div>';
   buildAllCatDropdown();
   updateAllListings();
 }
@@ -1324,7 +1332,7 @@ function updateAllListings() {
   var totalAll = 0;
   categories.forEach(function(c) { totalAll += c.examples.filter(function(ex) { return showDemo || !isDemo(ex); }).length; });
   var hasF = allSearchText.length > 0 || allCatFilter.length > 0;
-  document.getElementById("all-count-area").innerHTML = hasF ? '<div class="results-count">Showing ' + all.length + ' of ' + totalAll + '</div>' : '<div class="results-count">' + totalAll + ' listings across all categories</div>';
+  document.getElementById("all-count-area").textContent = hasF ? 'Showing ' + all.length + ' of ' + totalAll : totalAll + ' listings across all categories';
   if (all.length === 0) {
     document.getElementById("all-listings-area").innerHTML = '<div class="no-results">No listings match your search. <a onclick="clearAllSearch()">Clear</a></div>';
     return;
