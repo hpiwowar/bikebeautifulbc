@@ -695,57 +695,6 @@ var categories = [
     ]
   },
   {
-    id: "visitor", tab: "Attractions", name: "Visitor Centres & Attractions",
-    description: "Visitor centres, museums, heritage sites, libraries, rec centres, hot springs, and farmers’ markets.",
-    infoSheet: true,
-    required: [
-      { title: "Bike parking", detail: "" },
-      { title: "Water bottle refill", detail: "Potable water refill available to customers, or staff can refill a bottle on request." },
-      { title: "Washrooms", detail: "" },
-      { title: "We Welcome Cyclists Local Knowledge Sheet or equivalent local info", detail: "Local routes, repair options, emergency contacts, hazards, and fallback transport." }
-    ],
-    optional: [
-      "Showers (drop-in or fee)", "Café or food on site",
-      "Water without admission", "Luggage / bag storage", "Vending machines",
-      "Bike rack", "Bike rack visible from inside", "Covered bike parking",
-      "Public rack nearby", "Bike allowed inside/on patio",
-      "Device charging", "Wi-Fi", "E-bike charging", "Pump",
-      "Discount for arriving by bike"
-    ],
-    examples: [
-      { name: "Kettle Valley Steam Railway", location: "Summerland (Okanagan)", badge: "accredited", subcategory: "Activity / Experience",
-        desc: "Heritage railway on the KVR. Covered bike parking, café, cyclist discount on admission.",
-        checked: [0,2,6,8,12,15], routes: ["KVR Myra Canyon"],
-        detail: { address: "18404 Bathville Rd, Summerland, BC V0H 1Z0", phone: "(250) 555-0216", url: "kettlevalleyrail.org", hours: "Thu–Mon, 10am–4pm, May–Oct", source: "operator" },
-        notes: { 15: "10% off with bike at the gate" } },
-      { name: "Kamloops Museum & Archives", location: "Kamloops (Thompson)", badge: "accredited", subcategory: "Museum / Gallery",
-        desc: "Downtown museum with cyclist info, bike rack, water fountain. Good orientation stop before Lac Du Bois.",
-        checked: [0,3,6,8,11,12,14], routes: ["Lac Du Bois Tranquility"],
-        detail: { address: "207 Seymour St, Kamloops, BC V2C 2E7", phone: "(250) 555-0392", hours: "9:30am–4:30pm Tue–Sat", source: "operator" } },
-      { name: "Nelson Public Library", location: "Nelson (West Kootenay)", badge: "accredited", subcategory: "Library",
-        desc: "Beautiful stone library on Baker St. Washrooms, Wi-Fi, water, bike rack. Great pre-ride stop.",
-        checked: [0,3,6,8,11,12,14], routes: ["Frog Peak Loop"],
-        detail: { address: "602 Stanley St, Nelson, BC V1L 1N4", hours: "10am–8pm Mon–Thu, 10am–5pm Fri–Sat", source: "osm" } },
-      { name: "Pacific Rim Visitor Centre", location: "Ucluelet (Pacific Rim)", badge: "accredited", subcategory: "Visitor Centre",
-        desc: "Parks Canada visitor centre between Tofino and Ucluelet. Maps, bear safety info, water, washrooms.",
-        checked: [0,3,6,8,11,12], routes: ["Tofino–Ucluelet"],
-        detail: { address: "2791 Pacific Rim Hwy, Ucluelet, BC V0R 3A0", url: "pc.gc.ca/pacificrim", hours: "10am–5pm daily, summer", source: "operator" },
-        notes: { 3: "Outdoor tap at parking area, year-round" } },
-      { name: "Cranbrook History Centre", location: "Cranbrook (East Kootenay)", badge: "accredited", subcategory: "Museum / Gallery",
-        desc: "Railway museum near the North Star trailhead. Bike racks, covered area, water.",
-        checked: [0,2,3,6,8,11,12], routes: ["North Star + Chief Isadore Trail"],
-        detail: { address: "57 Van Horne St S, Cranbrook, BC V1C 4H9", phone: "(250) 555-0365", hours: "10am–5pm daily, May–Oct", source: "operator" } },
-      { name: "Penticton Visitor Centre", location: "Penticton (Okanagan)", badge: "qualified", subcategory: "Visitor Centre",
-        desc: "Editorial listing — visitor centre with maps and cycling info. Near the Okanagan Rail Trail start.",
-        checked: [0,3,9,11,12], routes: ["KVR Myra Canyon", "Okanagan Rail Trail"],
-        detail: { address: "888 Westminster Ave W, Penticton, BC V2A 8R2", source: "osm" } },
-      { name: "Chilliwack Visitor Centre", location: "Chilliwack (Fraser Valley)", badge: "qualified", subcategory: "Visitor Centre",
-        desc: "Editorial listing — visitor centre with regional cycling maps. Near Vedder Rotary Loop trailhead.",
-        checked: [0,3,9,11,12], routes: ["Chilliwack Loops"],
-        detail: { address: "44150 Luckakuck Way, Chilliwack, BC V2R 4A7", source: "osm" } }
-    ]
-  },
-  {
     id: "bikeshop", tab: "Bike Services", name: "Bike Shops & Guides",
     description: "Bicycle retail and repair shops, outdoor gear shops with cycling services, and guide/tour operators.",
     infoSheet: true,
