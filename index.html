@@ -222,14 +222,19 @@ body {
 
 @media (max-width: 800px) {
   .hero-card { grid-template-columns: 1fr; border-radius: 20px; min-height: auto; }
-  .hero-img { height: 280px; margin: 0; border-radius: 0 0 20px 20px; }
+  .hero-img { height: 280px; min-height: 280px; margin: 0; border-radius: 0 0 20px 20px; }
+  .hero-img-wrap { margin: 0; }
   .hero-text { padding: 48px 28px 40px; }
   .hero-text h1 { font-size: 38px; }
   .contact-inner { grid-template-columns: 1fr; }
   .contact-img { height: 240px; }
   .contact-left h2 { font-size: 32px; }
+  .questions { padding: 48px 20px; }
   .questions p, .questions .answer { font-size: 28px; }
+  .partners { padding: 40px 20px; }
+  .newsletter-wrap { padding: 48px 20px; }
   .newsletter h2 { font-size: 28px; }
+  .network { padding: 40px 20px; }
   .network p, .network .types { font-size: 26px; }
   .hero-section { padding: 0 16px 32px; }
   .contact-form .row { flex-direction: column; }
@@ -267,7 +272,7 @@ body {
         <a class="hero-btn hero-btn-outline" href="/stops">Plan your stops</a>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;margin:20px 20px 20px 0;">
+    <div class="hero-img-wrap" style="display:flex;flex-direction:column;margin:20px 20px 20px 0;">
       <div class="hero-img" style="flex:1;margin:0;"></div>
       <div style="text-align:right;padding:3px 4px 0;font-size:11px;color:rgba(255,255,255,0.4);font-style:italic;">Little Tunnel, Kettle Valley Rail Trail, Naramata BC</div>
     </div>
@@ -275,7 +280,7 @@ body {
 </div>
 
 <div class="partners reveal">
-  <p>The BC Cycle Tourism Society is in the process of being formed<br>as a BC nonprofit society, with founding partners</p>
+  <p>The BC Cycle Tourism Society is in the process of being formed as a BC nonprofit society, with founding partners</p>
   <div class="partner-logos">
     <span>HUB Cycling</span>
     <span>BC Cycling Coalition</span>
@@ -295,7 +300,7 @@ body {
 <div class="newsletter-wrap">
 <div id="newsletter" class="newsletter reveal">
   <h2>Ride along with us!</h2>
-  <p class="newsletter-sub"><a href="/field-notes" style="color:#1E7D96;">Field Notes Dispatch</a>: hot news and deep dives on<br>cycling infrastructure, policy, and BC's path to becoming<br>a world-class cycle touring destination. Monthly.</p>
+  <p class="newsletter-sub"><a href="/field-notes" style="color:#1E7D96;">Field Notes Dispatch</a>: hot news and deep dives on cycling infrastructure, policy, and BC's path to becoming a world-class cycle touring destination. Monthly.</p>
   <form class="newsletter-form" id="newsletter-form" onsubmit="return submitNewsletter(event)">
     <input type="hidden" name="access_key" value="08edf2bd-6961-4cb9-90fe-d16d45c82bb1" />
     <input type="hidden" name="subject" value="Home Page Newsletter signup" />
