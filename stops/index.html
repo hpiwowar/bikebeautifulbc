@@ -54,7 +54,7 @@ body {
 .bio p { font-size: 14px; margin-top: 6px; }
 @media (max-width: 700px) {
   .g-banner { padding: 6px 14px; font-size: 11px; }
-  .g-header { padding: 12px 16px; position: relative; }
+  .g-header { padding: 12px 16px; position: relative; z-index: 300; }
   .g-header-inner { gap: 0; }
   .g-main { padding: 24px 14px 16px; }
   .g-hamburger { display: block; }
@@ -1192,6 +1192,7 @@ function getRoutesWithCounts() {
   var routeMap = {};
   categories.forEach(function(cat) {
     cat.examples.forEach(function(ex) {
+      if (!showDemo && isDemo(ex)) return;
       if (ex.routes) ex.routes.forEach(function(r) { routeMap[r] = (routeMap[r] || 0) + 1; });
     });
   });
@@ -1418,7 +1419,7 @@ function renderListingCardHTML(cat, ex, showCatTag) {
 function updateHash() {
   var parts = [];
   parts.push("view=" + currentView);
-  parts.push(showDemo ? "demo=1" : "demo=0");
+  if (showDemo) parts.push("demo=1");
   if (currentView === "category") {
     parts.push("cat=" + currentCatId);
     if (searchText) parts.push("q=" + encodeURIComponent(searchText));
