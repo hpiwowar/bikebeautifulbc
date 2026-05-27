@@ -451,6 +451,9 @@ var INFO_FIELDS = [
   "Fallback transportation where available", "Local hazards or access notes"
 ];
 
+// Exact-match badge labels — when the search box contains one of these, we filter by badge only (not free-text).
+var BADGE_TERMS = ["accredited", "welcoming", "info", "bikes unwelcome", "sector partner", "industry partner"];
+
 var categories = [
   {
     id: "visitor", tab: "Attractions", name: "Visitor Centres & Attractions",
@@ -1041,15 +1044,17 @@ function getSortedFiltered(cat) {
   if (activeFilters.length > 0) list = list.filter(function(ex) { return activeFilters.every(function(f) { return ex.checked.indexOf(f) !== -1; }); });
   if (searchText.length > 0) {
     var q = searchText.toLowerCase();
+    var isBadgeTerm = BADGE_TERMS.indexOf(q) !== -1;
     list = list.filter(function(ex) {
       var amenityMatch = cat.optional.some(function(opt, i) {
         return ex.checked.indexOf(i) !== -1 && opt.toLowerCase().indexOf(q) !== -1;
       });
       var badgeMatch = (ex.network && ex.network.toLowerCase().indexOf(q) !== -1) ||
         (ex.partner && "industry partner".indexOf(q) !== -1) ||
-        (ex.badge && ex.badge.toLowerCase().indexOf(q) !== -1) ||
-        (ex.badge === "unwelcome" && "bikes unwelcome".indexOf(q) !== -1) ||
-        ((ex.network) && "sector partner".indexOf(q) !== -1);
+        (ex.badge && ex.badge.toLowerCase() === q) ||
+        (ex.badge === "unwelcome" && q === "bikes unwelcome") ||
+        ((ex.network) && q === "sector partner");
+      if (isBadgeTerm) return badgeMatch;
       return ex.name.toLowerCase().indexOf(q) !== -1 || ex.location.toLowerCase().indexOf(q) !== -1 || ex.desc.toLowerCase().indexOf(q) !== -1 || (ex.routes && ex.routes.some(function(r) { return r.toLowerCase().indexOf(q) !== -1; })) || amenityMatch || badgeMatch;
     });
   }
@@ -1340,6 +1345,7 @@ function getAllListings() {
   }
   if (allSearchText.length > 0) {
     var q = allSearchText.toLowerCase();
+    var isBadgeTerm = BADGE_TERMS.indexOf(q) !== -1;
     all = all.filter(function(item) {
       var ex = item.ex;
       var amenityMatch = item.cat.optional.some(function(opt, i) {
@@ -1347,10 +1353,10 @@ function getAllListings() {
       });
       var badgeMatch = (ex.network && ex.network.toLowerCase().indexOf(q) !== -1) ||
         (ex.partner && "industry partner".indexOf(q) !== -1) ||
-        (ex.badge && ex.badge.toLowerCase().indexOf(q) !== -1) ||
-        (ex.badge === "unwelcome" && "bikes unwelcome".indexOf(q) !== -1) ||
-        (ex.badge === "info" && "info".indexOf(q) !== -1) ||
-        ((ex.network || ex.partner) && "sector partner".indexOf(q) !== -1 && ex.network);
+        (ex.badge && ex.badge.toLowerCase() === q) ||
+        (ex.badge === "unwelcome" && q === "bikes unwelcome") ||
+        ((ex.network) && q === "sector partner");
+      if (isBadgeTerm) return badgeMatch;
       return ex.name.toLowerCase().indexOf(q) !== -1 ||
              ex.location.toLowerCase().indexOf(q) !== -1 ||
              ex.desc.toLowerCase().indexOf(q) !== -1 ||
