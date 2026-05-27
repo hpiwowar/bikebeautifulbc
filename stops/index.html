@@ -87,7 +87,7 @@ body {
 
 .badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.2px; white-space: nowrap; }
 .badge-accredited { background: #2E8A36; color: white; }
-.badge-welcoming { background: #FFFBEE; color: #92400E; }
+.badge-welcoming { background: #FEF3C7; color: #92400E; }
 .badge-info { background: #E5E7EB; color: #636363; }
 .badge-sector { background: #4A3C31; color: white; }
 .badge-industry { background: #1E7D96; color: white; }
@@ -192,6 +192,12 @@ body {
 .examples-toolbar .legend .badge-info:hover { background: #E5E7EB; color: #636363; }
 .examples-toolbar .legend .badge-unwelcome { background: #FFFDF9; color: #DC2626; border-color: #DC2626; }
 .examples-toolbar .legend .badge-unwelcome:hover { background: #DC2626; color: white; }
+.examples-toolbar .legend .legend-badge-wrap.active .badge-sector { background: #4A3C31; color: white; }
+.examples-toolbar .legend .legend-badge-wrap.active .badge-industry { background: #1E7D96; color: white; }
+.examples-toolbar .legend .legend-badge-wrap.active .badge-accredited { background: #2E8A36; color: white; }
+.examples-toolbar .legend .legend-badge-wrap.active .badge-welcoming { background: #F59E0B; color: white; }
+.examples-toolbar .legend .legend-badge-wrap.active .badge-info { background: #E5E7EB; color: #636363; }
+.examples-toolbar .legend .legend-badge-wrap.active .badge-unwelcome { background: #DC2626; color: white; }
 
 .filter-bar { padding: 16px 36px; border-bottom: 1px solid #EEE; background: #FFFDF9; }
 .filter-bar-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
@@ -262,7 +268,12 @@ body {
 .card-inner { flex: 1; min-width: 0; }
 .card-icon-circle { width: 48px; height: 48px; border-radius: 50%; background: #EDF3F4; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #1E7D96; margin-top: 2px; }
 .card-icon-circle svg { width: 22px; height: 22px; }
-.listing-name-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 2px; }
+.listing-card.is-accredited .card-icon-circle { background: #E8F5E9; }
+.listing-card.is-welcoming .card-icon-circle { background: #FEF3C7; }
+.listing-card.is-info .card-icon-circle { background: #E5E7EB; }
+.listing-card.is-unwelcome .card-icon-circle { background: #FEE2E2; }
+.listing-name-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 2px; }
+.listing-name-row .listing-name { flex: 1 1 auto; min-width: 0; }
 .view-details-wrap { margin-top: auto; padding-top: 12px; }
 .view-details-link { font-size: 13px; color: #1E7D96; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 2px; }
 .view-details-link:hover { text-decoration: underline; }
@@ -431,6 +442,7 @@ body {
     <div class="card" id="examples-card"></div>
   </div>
   <div id="view-route" style="display:none">
+    <div class="category-nav" id="route-category-nav"></div>
     <div class="route-selector" id="route-selector"></div>
     <div class="card" id="route-card"></div>
   </div>
@@ -960,10 +972,10 @@ function renderExamplesCard(cat) {
       // HIDDEN — no partners yet. Restore the two lines below to bring back the Sector Partner / Industry Partner pills.
       // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span><span class="legend-tip">Member of a sector partner network like the BC Ale Trail or BC Farmers' + "'" + ' Market Network. Their network has partnered with BC Cycle Tourism Society to co-brand cycle-friendly member businesses.</span></span>' +
       // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span><span class="legend-tip">Cycling industry business with an enhanced listing — logo, photos, and promoted placement. Supports BC Cycle Tourism Society through the industry partner program.</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span><span class="legend-tip">Business has confirmed all required criteria and joined the We Welcome Cyclists program. Free to join. Apply at /apply</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Welcoming\x27)"><span class="badge badge-welcoming">Welcoming</span><span class="legend-tip">Editorial entry — meets basic criteria but hasn' + "'" + 't formally enrolled in the program yet.</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span><span class="legend-tip">Useful reference — doesn' + "'" + 't fully meet required criteria but worth knowing about.</span></span>' +
-      '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span><span class="legend-tip">This business or service does not accommodate cyclists or bicycles. Listed so you know before you show up.</span></span>' +
+      '<span class="legend-badge-wrap" data-badge-term="Accredited" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span><span class="legend-tip">Business has confirmed all required criteria and joined the We Welcome Cyclists program. Free to join. Apply at /apply</span></span>' +
+      '<span class="legend-badge-wrap" data-badge-term="Welcoming" onclick="filterByBadge(\x27Welcoming\x27)"><span class="badge badge-welcoming">Welcoming</span><span class="legend-tip">Editorial entry — meets basic criteria but hasn' + "'" + 't formally enrolled in the program yet.</span></span>' +
+      '<span class="legend-badge-wrap" data-badge-term="Info" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span><span class="legend-tip">Useful reference — doesn' + "'" + 't fully meet required criteria but worth knowing about.</span></span>' +
+      '<span class="legend-badge-wrap" data-badge-term="Bikes Unwelcome" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span><span class="legend-tip">This business or service does not accommodate cyclists or bicycles. Listed so you know before you show up.</span></span>' +
     '</div></div>' +
     '<div class="filter-bar"><div class="filter-bar-top">' +
     '<input type="text" id="search-box" class="search-input" placeholder="Search name, location, route, amenity, or badge…" oninput="onSearch(this.value)" />' +
@@ -976,6 +988,7 @@ function renderExamplesCard(cat) {
   renderSubcatGrid(cat);
   updateFilterPills(cat);
   updateListings(cat);
+  updateBadgeLegendActive();
 }
 
 function renderSubcatGrid(cat) {
@@ -1011,7 +1024,7 @@ function updateFilterPills(cat) {
   var reqPills = cat.required.map(function(r, idx) {
     var a = activeReqFilters.indexOf(idx) !== -1;
     var label = r.title.replace(/^We Welcome Cyclists Local Knowledge Sheet.*/, 'Local Knowledge Sheet');
-    return '<span class="filter-pill-req' + (a ? ' active' : '') + '" onclick="toggleReqFilter(' + idx + ')">✓ ' + label + '</span>';
+    return '<span class="filter-pill-req' + (a ? ' active' : '') + '" onclick="toggleReqFilter(' + idx + ')">' + label + '</span>';
   }).join("");
   var optPills = cat.optional.map(function(opt, idx) {
     var a = activeFilters.indexOf(idx) !== -1;
@@ -1073,22 +1086,33 @@ function toggleReqFilter(idx) {
   if (p === -1) activeReqFilters.push(idx); else activeReqFilters.splice(p, 1);
   var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateHash();
 }
-function onSearch(val) { searchText = val; var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateHash(); }
+function onSearch(val) { searchText = val; var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateBadgeLegendActive(); updateHash(); }
 function filterByBadge(term) {
   if (currentView === "category") {
     searchText = (searchText === term) ? "" : term;
     var box = document.getElementById("search-box"); if (box) box.value = searchText;
-    var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateHash();
+    var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateBadgeLegendActive(); updateHash();
   } else if (currentView === "all") {
     allSearchText = (allSearchText === term) ? "" : term;
     var abox = document.getElementById("all-search-box"); if (abox) abox.value = allSearchText;
-    updateAllListings(); updateHash();
+    updateAllListings(); updateBadgeLegendActive(); updateHash();
   }
+}
+
+function updateBadgeLegendActive() {
+  var term = (currentView === "all") ? allSearchText : searchText;
+  var q = (term || "").toLowerCase();
+  var isBadge = BADGE_TERMS.indexOf(q) !== -1;
+  document.querySelectorAll(".legend-badge-wrap").forEach(function(w) {
+    var dt = (w.getAttribute("data-badge-term") || "").toLowerCase();
+    if (isBadge && dt === q) w.classList.add("active");
+    else w.classList.remove("active");
+  });
 }
 function clearAll() {
   searchText = ""; activeFilters = []; activeReqFilters = []; activeSubcat = null;
   var box = document.getElementById("search-box"); if (box) box.value = "";
-  var cat = getCat(); renderSubcatGrid(cat); updateFilterPills(cat); updateListings(cat); updateHash();
+  var cat = getCat(); renderSubcatGrid(cat); updateFilterPills(cat); updateListings(cat); updateBadgeLegendActive(); updateHash();
 }
 
 function openModal(catId, exIdx) {
@@ -1226,9 +1250,27 @@ function getRoutesWithCounts() {
   return Object.keys(routeMap).sort().map(function(r) { return { name: r, count: routeMap[r] }; });
 }
 
+var routeCatFilter = null;
+
+function renderRouteCategoryNav() {
+  document.getElementById("route-category-nav").innerHTML = categories.map(function(c) {
+    var icon = CAT_ICONS[c.id] || '';
+    var isActive = routeCatFilter === c.id;
+    return '<button class="cat-btn' + (isActive ? ' active' : '') + '" data-cat="' + c.id + '" onclick="setRouteCat(\x27' + c.id + '\x27)">' + icon + c.tab + '</button>';
+  }).join("");
+}
+
+function setRouteCat(id) {
+  routeCatFilter = (routeCatFilter === id) ? null : id;
+  renderRouteCategoryNav();
+  renderRouteCard();
+  updateHash();
+}
+
 function renderRouteView() {
   var routes = getRoutesWithCounts();
   if (!currentRoute) currentRoute = routes[0].name;
+  renderRouteCategoryNav();
   document.getElementById("route-selector").innerHTML =
     '<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">' +
     '<select class="route-select" onchange="currentRoute=this.value;renderRouteCard();updateHash()">' +
@@ -1240,33 +1282,32 @@ function renderRouteView() {
 }
 
 function renderRouteCard() {
-  var groups = [];
+  var items = [];
   categories.forEach(function(cat) {
-    var matches = cat.examples.filter(function(ex) {
-      if (!showDemo && isDemo(ex)) return false;
-      return ex.routes && ex.routes.indexOf(currentRoute) !== -1;
+    if (routeCatFilter && cat.id !== routeCatFilter) return;
+    cat.examples.forEach(function(ex) {
+      if (!showDemo && isDemo(ex)) return;
+      if (!ex.routes || ex.routes.indexOf(currentRoute) === -1) return;
+      items.push({ cat: cat, ex: ex });
     });
-    matches.sort(function(a, b) {
-      function rank(ex) { if (ex.badge === "unwelcome") return 5; if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; if (ex.badge === "welcoming") return 3; return 4; }
-      var ra = rank(a), rb = rank(b); if (ra !== rb) return ra - rb; var ca = amenityCount(a), cb = amenityCount(b); if (ca !== cb) return cb - ca; return a.name.localeCompare(b.name);
-    });
-    if (matches.length > 0) groups.push({ cat: cat, matches: matches });
   });
 
-  var total = groups.reduce(function(s, g) { return s + g.matches.length; }, 0);
+  function rank(ex) { if (ex.badge === "unwelcome") return 5; if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; if (ex.badge === "welcoming") return 3; return 4; }
+  items.sort(function(a, b) {
+    var ra = rank(a.ex), rb = rank(b.ex); if (ra !== rb) return ra - rb;
+    var ca = amenityCount(a.ex), cb = amenityCount(b.ex); if (ca !== cb) return cb - ca;
+    return a.ex.name.localeCompare(b.ex.name);
+  });
+
+  var total = items.length;
   var routeSlug = (typeof routeSlugs !== 'undefined' && routeSlugs[currentRoute]) || currentRoute.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  var scopeNote = routeCatFilter ? ' in this category' : '';
   var header = '<div class="route-header"><h2>🚴 ' + currentRoute + '</h2>' +
-    '<p>' + total + ' listing' + (total !== 1 ? 's' : '') + ' along this route &nbsp;·&nbsp; <a href="/route/' + routeSlug + '/" style="color:#1E7D96;">View route page ›</a></p></div>';
+    '<p>' + total + ' listing' + (total !== 1 ? 's' : '') + ' along this route' + scopeNote + ' &nbsp;·&nbsp; <a href="/route/' + routeSlug + '/" style="color:#1E7D96;">View route page ›</a></p></div>';
 
-  var body = groups.map(function(g) {
-    var cards = g.matches.map(function(ex) {
-      return renderListingCardHTML(g.cat, ex);
-    }).join("");
-    var icon = CAT_ICONS[g.cat.id] || '';
-    return '<div class="route-cat-group"><div class="route-cat-section-header"><div class="route-cat-icon-sm">' + icon + '</div><span class="route-cat-name">' + g.cat.name + '</span></div>' + cards + '</div>';
-  }).join("");
+  var body = items.map(function(it) { return renderListingCardHTML(it.cat, it.ex); }).join("");
 
-  document.getElementById("route-card").innerHTML = header + (body || '<div class="no-results">No listings found for this route.</div>');
+  document.getElementById("route-card").innerHTML = header + (body || '<div class="no-results">No listings found for this route' + (routeCatFilter ? ' in this category.' : '.') + '</div>');
 }
 
 // ---- ALL LISTINGS VIEW ----
@@ -1282,10 +1323,10 @@ function renderAllView() {
         // HIDDEN — no partners yet. Restore the two lines below to bring back the Sector Partner / Industry Partner pills.
         // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span></span>' +
         // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span></span>' +
-        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span></span>' +
-        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Welcoming\x27)"><span class="badge badge-welcoming">Welcoming</span></span>' +
-        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span></span>' +
-        '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span></span>' +
+        '<span class="legend-badge-wrap" data-badge-term="Accredited" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span></span>' +
+        '<span class="legend-badge-wrap" data-badge-term="Welcoming" onclick="filterByBadge(\x27Welcoming\x27)"><span class="badge badge-welcoming">Welcoming</span></span>' +
+        '<span class="legend-badge-wrap" data-badge-term="Info" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span></span>' +
+        '<span class="legend-badge-wrap" data-badge-term="Bikes Unwelcome" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span></span>' +
       '</div>' +
     '</div>' +
     '<div class="filter-bar"><div class="filter-bar-top">' +
@@ -1297,6 +1338,7 @@ function renderAllView() {
     '<div id="all-listings-area"></div>';
   buildAllCatDropdown();
   updateAllListings();
+  updateBadgeLegendActive();
 }
 
 function buildAllCatDropdown() {
@@ -1387,8 +1429,8 @@ function updateAllListings() {
   }).join("") + '</div>';
 }
 
-function onAllSearch(val) { allSearchText = val; updateAllListings(); updateHash(); }
-function clearAllSearch() { allSearchText = ""; allCatFilter = ""; var box = document.getElementById("all-search-box"); if (box) box.value = ""; buildAllCatDropdown(); updateAllListings(); updateHash(); }
+function onAllSearch(val) { allSearchText = val; updateAllListings(); updateBadgeLegendActive(); updateHash(); }
+function clearAllSearch() { allSearchText = ""; allCatFilter = ""; var box = document.getElementById("all-search-box"); if (box) box.value = ""; buildAllCatDropdown(); updateAllListings(); updateBadgeLegendActive(); updateHash(); }
 
 // ---- SHARED LISTING CARD RENDERER ----
 function renderListingCardHTML(cat, ex, showCatTag) {
@@ -1410,12 +1452,13 @@ function renderListingCardHTML(cat, ex, showCatTag) {
   var pillsHTML = '';
   if (ex.badge !== "unwelcome") {
     var pills = cat.optional.map(function(opt, i) {
-      var has = ex.checked.indexOf(i) !== -1;
+      if (ex.checked.indexOf(i) === -1) return '';
       var star = (ex.notes && ex.notes[i]) ? '<span class="note-star">*</span>' : '';
-      if (has) return '<span class="pill pill-yes">' + opt + star + '</span>';
-      return '<span class="pill pill-no">' + opt + '</span>';
+      return '<span class="pill pill-yes">' + opt + star + '</span>';
     }).join("");
-    pillsHTML = '<div class="amenities-label">Amenities</div><div class="amenity-pills">' + pills + '</div>';
+    if (pills) {
+      pillsHTML = '<div class="amenities-label">Amenities</div><div class="amenity-pills">' + pills + '</div>';
+    }
   }
   var demoBanner = isDemo(ex) ? '<div style="margin-top:10px;padding:8px 12px;background:#FEF3C7;border:1px solid #F59E0B;border-radius:6px;font-size:12px;color:#92400E;font-weight:600;">Sample data — not a real listing. For illustration only.</div>' : '';
   var cardReqHTML = '';
@@ -1456,6 +1499,7 @@ function updateHash() {
     if (activeFilters.length > 0) parts.push("f=" + activeFilters.join(","));
   } else if (currentView === "route") {
     if (currentRoute) parts.push("route=" + encodeURIComponent(currentRoute));
+    if (routeCatFilter) parts.push("rcf=" + routeCatFilter);
   } else if (currentView === "all") {
     if (allSearchText) parts.push("q=" + encodeURIComponent(allSearchText));
     if (allCatFilter) parts.push("acf=" + encodeURIComponent(allCatFilter));
@@ -1475,6 +1519,7 @@ function readHash() {
   if (params.demo === "0") showDemo = false; else if (params.demo === "1") showDemo = true;
   if (params.cat) currentCatId = params.cat;
   if (params.route) currentRoute = params.route;
+  if (params.rcf) routeCatFilter = params.rcf;
   if (params.view === "category") {
     if (params.q) searchText = params.q;
     if (params.f) activeFilters = params.f.split(",").map(Number);
