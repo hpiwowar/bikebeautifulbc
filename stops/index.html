@@ -1227,8 +1227,9 @@ function renderRouteCard() {
   });
 
   var total = groups.reduce(function(s, g) { return s + g.matches.length; }, 0);
+  var routeSlug = currentRoute.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   var header = '<div class="route-header"><h2>🚴 ' + currentRoute + '</h2>' +
-    '<p>' + total + ' listing' + (total !== 1 ? 's' : '') + ' along this route</p></div>';
+    '<p>' + total + ' listing' + (total !== 1 ? 's' : '') + ' along this route &nbsp;·&nbsp; <a href="/route/' + routeSlug + '/" style="color:#1E7D96;">View route page ›</a></p></div>';
 
   var body = groups.map(function(g) {
     var cards = g.matches.map(function(ex) {
