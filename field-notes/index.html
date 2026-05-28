@@ -75,8 +75,20 @@ body {
 .search-wrap input { width: 100%; padding: 8px 12px 8px 34px; font-size: 14px; border: 1px solid #E5E7EB; border-radius: 8px; background: #fff; color: #1a1a1a; outline: none; box-sizing: border-box; font-family: inherit; }
 .search-wrap input:focus { border-color: #1E7D96; }
 .search-wrap input::placeholder { color: #bbb; }
-.fn-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 280px)); gap: 16px; margin-bottom: 0.5rem; }
-.fn-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 0.9rem 1rem 1.35rem; display: flex; flex-direction: column; gap: 6px; cursor: pointer; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; }
+.fn-grid-wrap { position: relative; margin-bottom: 0.5rem; }
+.fn-grid { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 4px 2px 4px; }
+.fn-grid::-webkit-scrollbar { display: none; }
+.fn-card { flex: 0 0 280px; scroll-snap-align: start; background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 0.9rem 1rem 1.35rem; display: flex; flex-direction: column; gap: 6px; cursor: pointer; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; box-sizing: border-box; }
+.fn-grid-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; border: 1px solid #E5E7EB; background: #fff; color: #1E7D96; font-size: 16px; font-weight: 700; cursor: pointer; z-index: 2; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.15s; padding: 0; }
+.fn-grid-nav:hover { background: #1E7D96; color: #fff; border-color: #1E7D96; }
+.fn-grid-nav:disabled { opacity: 0.3; cursor: default; box-shadow: none; }
+.fn-grid-nav:disabled:hover { background: #fff; color: #1E7D96; border-color: #E5E7EB; }
+.fn-grid-nav-prev { left: -14px; }
+.fn-grid-nav-next { right: -14px; }
+.fn-card-coming { background: #FFFBEE; border: 1.5px dashed #d4c6a2; }
+.fn-card-coming .fn-card-title { color: #6b5a2c; }
+.fn-card-coming .fn-card-teaser { color: #5a4e2c; }
+.fn-card-coming-img { width: 100%; height: 160px; background: rgba(212, 198, 162, 0.18); border-radius: 6px; margin-bottom: 2px; display: flex; align-items: center; justify-content: center; font-size: 56px; color: #d4c6a2; font-weight: 200; line-height: 1; user-select: none; }
 .fn-card:hover { border-color: #1E7D96; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .fn-card.hidden { display: none; }
 .fn-card-img { width: 100%; height: 160px; background: #B8E0EC; border-radius: 6px; margin-bottom: 2px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
@@ -125,13 +137,11 @@ body {
 .issue-link, .issue-link:visited { font-size: 14px; color: #1E7D96; background: #fff; border: 1px solid #E5E7EB; border-radius: 8px; padding: 7px 14px; text-decoration: none; font-weight: 600; transition: all 0.15s; }
 .issue-link:hover { border-color: #1E7D96; background: #F5F0E8; color: #1E7D96; }
 .section-heading { font-family: "Archivo", sans-serif; font-size: 28px; font-weight: 400; color: #1F514C; margin: 0 0 1rem; letter-spacing: -0.03em; }
-@media (max-width: 760px) {
-  .fn-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
 @media (max-width: 500px) {
   .fn-main { padding: 24px 14px 16px; }
-  .fn-grid { grid-template-columns: 1fr; }
   .fn-title { font-size: 24px; }
+  .fn-card { flex: 0 0 260px; }
+  .fn-grid-nav { display: none; }
   .subscribe-strip { flex-direction: column; align-items: flex-start; }
 }
 </style>
@@ -173,8 +183,10 @@ body {
     <input type="text" id="search" placeholder="Search Field Notes and dispatches…" oninput="doSearch(this.value)" aria-label="Search Field Notes and dispatches">
   </div>
 
-  <div class="fn-grid" id="fn-grid">
-    <a class="fn-card" href="/field-note/hello" data-search="hello calling everyone who loves exploring bc by bike subscribe tell us what you know listening founding invitation newsletter contributors openstreetmap">
+  <div class="fn-grid-wrap">
+    <button class="fn-grid-nav fn-grid-nav-prev" id="fn-prev" aria-label="Previous articles" disabled>&larr;</button>
+    <div class="fn-grid" id="fn-grid">
+      <a class="fn-card" href="/field-note/hello" data-search="hello calling everyone who loves exploring bc by bike subscribe tell us what you know listening founding invitation newsletter contributors openstreetmap">
       <div class="fn-card-img"><img src="/img/field_notes/202605/seymour_conservation_north_vancouver.jpg" alt="" /></div>
       <p class="fn-card-title">Calling everyone who loves exploring BC by bike!</p>
       <p class="fn-card-teaser">We're starting by listening. Subscribe, tell us what you know, and help us build BC into one of the best places in the world to explore by bike.</p>
@@ -186,7 +198,13 @@ body {
       <div class="fn-card-img"><img src="/img/field_notes/202605/coach_bus/IMG_20260518_072232478.jpg" alt="" /></div>
       <p class="fn-card-title">HOW TO: Take your bike on a coach bus</p>
       <p class="fn-card-teaser">Coach buses are one of BC's most underrated tools for cycle tourists — economical, low-carbon, and they usually accept bikes. Here's how to pack and ride along.</p>
-    </a>
+    </a><div class="fn-card fn-card-coming" data-search="coming soon workbench upcoming kvr bus ferry floatplane wild camping no turn-away policy bikepacking tourist economics">
+  <div class="fn-card-coming-img">+</div>
+  <p class="fn-card-title">On the workbench</p>
+  <p class="fn-card-teaser">Topics we're working on: KVR status, getting your bike around BC by bus and ferry, wild camping, a no-turn-away policy, cycle tourism economics. Subscribe to be notified.</p>
+</div>
+    </div>
+    <button class="fn-grid-nav fn-grid-nav-next" id="fn-next" aria-label="More articles">&rarr;</button>
   </div>
   <p class="no-results-notes" id="no-results-notes">No Field Notes match that search.</p>
 
@@ -323,6 +341,29 @@ body {
 </div>
 
 <script>
+(function() {
+  var grid = document.getElementById('fn-grid');
+  var prev = document.getElementById('fn-prev');
+  var next = document.getElementById('fn-next');
+  if (!grid || !prev || !next) return;
+  function step() {
+    var card = grid.querySelector('.fn-card');
+    if (!card) return 296;
+    return card.offsetWidth + 16;
+  }
+  function updateButtons() {
+    var atStart = grid.scrollLeft <= 4;
+    var atEnd = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 4;
+    prev.disabled = atStart;
+    next.disabled = atEnd;
+  }
+  prev.addEventListener('click', function() { grid.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function() { grid.scrollBy({ left: step(), behavior: 'smooth' }); });
+  grid.addEventListener('scroll', updateButtons);
+  window.addEventListener('resize', updateButtons);
+  setTimeout(updateButtons, 50);
+})();
+
 function doSearch(query) {
   var q = query.toLowerCase().trim();
   var cards = document.querySelectorAll('.fn-card');
