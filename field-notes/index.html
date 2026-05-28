@@ -75,11 +75,11 @@ body {
 .search-wrap input { width: 100%; padding: 8px 12px 8px 34px; font-size: 14px; border: 1px solid #E5E7EB; border-radius: 8px; background: #fff; color: #1a1a1a; outline: none; box-sizing: border-box; font-family: inherit; }
 .search-wrap input:focus { border-color: #1E7D96; }
 .search-wrap input::placeholder { color: #bbb; }
-.fn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 0.5rem; }
-.fn-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.1rem 1.25rem; display: flex; flex-direction: column; gap: 8px; cursor: pointer; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; }
+.fn-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 280px)); gap: 16px; margin-bottom: 0.5rem; }
+.fn-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 0.9rem 1rem 1.35rem; display: flex; flex-direction: column; gap: 6px; cursor: pointer; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; }
 .fn-card:hover { border-color: #1E7D96; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .fn-card.hidden { display: none; }
-.fn-card-img { width: 100%; height: 90px; background: #B8E0EC; border-radius: 6px; margin-bottom: 2px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.fn-card-img { width: 100%; height: 160px; background: #B8E0EC; border-radius: 6px; margin-bottom: 2px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .fn-card-img img { width: 100%; height: 100%; object-fit: cover; }
 .fn-card-title { font-family: "Archivo", sans-serif; font-size: 17px; font-weight: 500; color: #1E7D96; line-height: 1.4; margin: 0; }
 .fn-card-teaser { font-size: 15px; color: #666; line-height: 1.55; margin: 0; }
@@ -121,10 +121,10 @@ body {
 .dispatch-archive-link { font-size: 13px; color: #666; background: #fff; border: 1px solid #E5E7EB; border-radius: 8px; padding: 4px 12px; text-decoration: none; }
 .dispatch-archive-link:hover { border-color: #1E7D96; color: #1E7D96; }
 .section-heading { font-family: "Archivo", sans-serif; font-size: 28px; font-weight: 400; color: #1F514C; margin: 0 0 1rem; letter-spacing: -0.03em; }
-@media (max-width: 900px) {
-  .fn-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 760px) {
+  .fn-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .fn-main { padding: 24px 14px 16px; }
   .fn-grid { grid-template-columns: 1fr; }
   .fn-title { font-size: 24px; }
@@ -164,38 +164,20 @@ body {
   <h1 class="fn-title">Field Notes from the BC Cycle Tourism Society</h1>
   <p class="fn-desc">Deep dives on cycling infrastructure, policy, and BC's path to becoming a world-class cycle touring destination.</p>
 
-  <div class="placeholder-notice">The articles below are placeholders: real content coming soon. Sign up to receive the first Dispatch!</div>
-
   <div class="search-wrap">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
     <input type="text" id="search" placeholder="Search Field Notes and dispatches…" oninput="doSearch(this.value)" aria-label="Search Field Notes and dispatches">
   </div>
 
   <div class="fn-grid" id="fn-grid">
-    <a class="fn-card" href="/field-note/no-turn-away-policy" data-search="could bc have a no turn-away policy for cyclists washington state parks formal policy since 2000 less reliable campgrounds camping overnight">
-      <div class="fn-card-img"></div>
-      <p class="fn-card-title">Could BC have a no turn-away policy for cyclists?</p>
-      <p class="fn-card-teaser">Washington State Parks have had a formal policy since 2000. BC has something less reliable — and it shows.</p>
-    </a><a class="fn-card" href="/field-note/tourist-arriving-by-bike" data-search="the tourist your town actually wants is probably arriving by bike cycle tourists older higher income spend more per day economics demographics">
-      <div class="fn-card-img"></div>
-      <p class="fn-card-title">The tourist your town actually wants is probably arriving by bike</p>
-      <p class="fn-card-teaser">Cycle tourists skew older, higher-income, and spend significantly more per day than average tourists. The data is surprising.</p>
-    </a><a class="fn-card" href="/field-note/kvr-whats-open" data-search="kvr kettle valley railway whats open whats closed what it means cycle tourism infrastructure corridor trail decommissioning trans canada">
-      <div class="fn-card-img"></div>
-      <p class="fn-card-title">The KVR: what's open, what's closed, and what it means</p>
-      <p class="fn-card-teaser">The most comprehensive current picture of the Kettle Valley Railway and its implications for cycle tourism.</p>
-    </a><a class="fn-card" href="/field-note/getting-your-bike-around-bc" data-search="getting your bike around bc buses ferries floatplanes bagging rules carriers routes practical trip planning transport">
-      <div class="fn-card-img"></div>
-      <p class="fn-card-title">Getting your bike around BC: buses, ferries, and floatplanes</p>
-      <p class="fn-card-teaser">Nobody has written this well for BC. Bagging rules, which carriers, which routes.</p>
-    </a><a class="fn-card" href="/field-note/wild-camping-bc" data-search="wild camping bc cyclists rec sites right to roam crown land scotland new zealand scandinavia practical trip planning overnight">
-      <div class="fn-card-img"></div>
-      <p class="fn-card-title">Wild camping in BC for cyclists</p>
-      <p class="fn-card-teaser">Can you do it, where, and how? What are rec sites? How BC's rules compare to Scotland and New Zealand.</p>
-    </a><a class="fn-card" href="/field-note/founding" data-search="founding bc has world class routes no one telling that story at scale bc cycle tourism society mission board">
-      <div class="fn-card-img"></div>
-      <p class="fn-card-title">Founding: BC has world-class routes and no one telling that story at scale</p>
-      <p class="fn-card-teaser">What BC Cycle Tourism Society is, why it exists, and what we're building.</p>
+    <a class="fn-card" href="/field-note/hello" data-search="hello calling everyone who loves exploring bc by bike subscribe tell us what you know listening founding invitation newsletter contributors openstreetmap">
+      <div class="fn-card-img"><img src="/img/field_notes/seymour_conservation_north_vancouver.jpg" alt="" /></div>
+      <p class="fn-card-title">Calling everyone who loves exploring BC by bike!</p>
+      <p class="fn-card-teaser">We're starting by listening. Subscribe, tell us what you know, and help us build BC into one of the best places in the world to explore by bike.</p>
+    </a><a class="fn-card" href="/field-note/we-welcome-cyclists" data-search="we welcome cyclists wwc directory certification accreditation sea to sky trail whistler squamish hostel bike storage skylynx connector bus bagging quebec bienvenue cyclistes ontario by bike">
+      <div class="fn-card-img"><img src="/img/field_notes/whistler_bc_fam_bus_loop.jpg" alt="" /></div>
+      <p class="fn-card-title">Every BC bike trip starts with the same questions. Not anymore.</p>
+      <p class="fn-card-teaser">Quebec and Ontario figured this out. BC hadn't — until now. <strong>We Welcome Cyclists</strong> is a business directory built for what touring cyclists actually need to know.</p>
     </a>
   </div>
   <p class="no-results-notes" id="no-results-notes">No Field Notes match that search.</p>
