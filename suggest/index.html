@@ -126,6 +126,7 @@ body {
   .main { padding: 20px 14px 40px; }
   .form-card { padding: 20px; }
   .amenity-grid { grid-template-columns: 1fr; }
+  .field input[type="text"], .field input[type="email"], .field input[type="url"], .field input[type="tel"], .field textarea, .field select, #f-displayname { font-size: 16px; }
 }
 </style>
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
@@ -255,7 +256,6 @@ body {
   <hr class="divider" />
 
   <div class="field">
-    <div class="hint" style="margin-bottom:12px;">We use AI tools to help process listing suggestions. Your listing data (business name, location, amenities) will be processed with AI assistance. Your name and email will not be shared with AI tools unless you opt in below.</div>
     <label class="amenity-check" style="margin-bottom:8px;">
       <input type="checkbox" id="f-credit" onchange="document.getElementById('f-displayname-row').style.display=this.checked?'':'none'" />
       Credit me on our contributors page — we'd love to thank you publicly!
@@ -263,10 +263,6 @@ body {
     <div id="f-displayname-row" style="display:none;margin-left:24px;margin-bottom:8px;">
       <input type="text" id="f-displayname" placeholder="Display name (full name, just first name, trail handle)" style="width:100%;padding:8px 12px;border:1.5px solid #DDD;border-radius:8px;font-size:13px;" />
     </div>
-    <label class="amenity-check">
-      <input type="checkbox" id="f-ai-consent" />
-      OK to process my contact info with AI tools
-    </label>
   </div>
 
   <button type="submit" class="submit-btn">Send suggestion</button>
@@ -352,7 +348,6 @@ function submitSuggest(e) {
   var youremail = document.getElementById("f-youremail").value;
   var wantCredit = document.getElementById("f-credit").checked;
   var displayname = document.getElementById("f-displayname").value;
-  var aiConsent = document.getElementById("f-ai-consent").checked;
 
   var checked = [];
   document.querySelectorAll('input[name="amenity"]:checked').forEach(function(cb) {
@@ -372,13 +367,13 @@ function submitSuggest(e) {
   var isEdit = !!window._editMode;
   var NL = String.fromCharCode(10);
   var listing = "Business: " + name + NL + "Location: " + location + NL + "Category: " + category + NL + "Route: " + route + NL + (reqAnswers.length > 0 ? "Required criteria: " + reqAnswers.join("; ") + NL : "") + "Amenities observed: " + (checked.length > 0 ? checked.join(", ") : "none checked") + NL + "Notes: " + notes + (wantCredit ? NL + "Credit as: " + (displayname || yourname || "anonymous") : "");
-  var personal = "Submitted by: " + (yourname || "anonymous") + NL + "Email: " + (youremail || "not provided") + NL + "Wants contributor credit: " + (wantCredit ? "yes" : "no") + NL + "AI consent for contact info: " + (aiConsent ? "yes" : "no");
+  var personal = "Submitted by: " + (yourname || "anonymous") + NL + "Email: " + (youremail || "not provided") + NL + "Wants contributor credit: " + (wantCredit ? "yes" : "no");
 
   var formData = new FormData();
   formData.append("access_key", "bc6a6806-190b-4ca7-a66c-301e321188fb");
   formData.append("subject", (isEdit ? "WWC Listing Edit: " : "WWC Listing Suggestion: ") + name);
   formData.append("Listing Data", listing);
-  formData.append("Personal Info" + (aiConsent ? " (AI consent given)" : " (NO AI consent)"), personal);
+  formData.append("Personal Info", personal);
 
   var btn = document.querySelector('#suggest-form button[type=submit]');
   btn.disabled = true; btn.textContent = 'Sending...';

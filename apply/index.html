@@ -117,6 +117,7 @@ body {
   .main { padding: 20px 14px 40px; }
   .form-card { padding: 20px; }
   .amenity-grid { grid-template-columns: 1fr; }
+  .field input[type="text"], .field input[type="email"], .field input[type="url"], .field input[type="tel"], .field textarea, .field select, #f-displayname { font-size: 16px; }
 }
 </style>
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
@@ -307,14 +308,6 @@ body {
   <hr class="divider" />
 
   <div class="field">
-    <div class="hint" style="margin-bottom:12px;">We use AI tools to help process applications. Your business details will be processed with AI assistance. Your personal contact information will not be shared with AI tools unless you opt in below.</div>
-    <label class="amenity-check">
-      <input type="checkbox" id="a-ai-consent" />
-      OK to process my contact info with AI tools
-    </label>
-  </div>
-
-  <div class="field">
     <label class="confirm-item" style="background:#F0FDF4;border-color:#C8E6C9;">
       <input type="checkbox" id="a-agree" required />
       <div>I confirm that our business meets all required criteria for our category, and I agree to a check-in in two years to confirm our listing is still accurate.</div>
@@ -392,7 +385,6 @@ function submitApply(e) {
   var contact = document.getElementById("a-contact").value;
   var email = document.getElementById("a-email").value;
   var role = document.getElementById("a-role").value;
-  var aiConsent = document.getElementById("a-ai-consent").checked;
 
   var confirmed = [];
   document.querySelectorAll('input[name="confirm"]:checked').forEach(function(cb) { confirmed.push(cb.value); });
@@ -409,13 +401,13 @@ function submitApply(e) {
 
   var NL = String.fromCharCode(10);
   var business = "Business: " + name + NL + "Address: " + address + NL + "Phone: " + phone + NL + "Website: " + url + NL + "Public email: " + (document.getElementById("a-public-email").value || "not provided") + NL + "Category: " + category + NL + "Description: " + desc + NL + NL + "REQUIRED CRITERIA CONFIRMED:" + NL + (confirmed.length > 0 ? confirmed.join(NL) : "none checked") + NL + NL + "OPTIONAL AMENITIES:" + NL + (amenities.length > 0 ? amenities.join(", ") : "none checked") + NL + "Amenity details: " + (document.getElementById("a-amenity-notes").value || "none") + NL + "General notes: " + (document.getElementById("a-general-notes").value || "none") + NL + NL + "CYCLIST INFO SHEET:" + NL + (cis.length > 0 ? cis.join(NL) : "none filled in");
-  var personal = "Contact: " + contact + NL + "Email: " + email + NL + "Role: " + role + NL + "AI consent for contact info: " + (aiConsent ? "yes" : "no");
+  var personal = "Contact: " + contact + NL + "Email: " + email + NL + "Role: " + role;
 
   var formData = new FormData();
   formData.append("access_key", "7f92c51f-f7bb-4918-af94-a362655a3e01");
   formData.append("subject", "WWC Accreditation Application: " + name);
   formData.append("Business Details", business);
-  formData.append("Personal Info" + (aiConsent ? " (AI consent given)" : " (NO AI consent)"), personal);
+  formData.append("Personal Info", personal);
 
   var btn = document.querySelector('#apply-form button[type=submit]');
   btn.disabled = true; btn.textContent = 'Sending...';
