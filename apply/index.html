@@ -315,6 +315,7 @@ body {
   </div>
 
   <button type="submit" class="submit-btn">Submit application</button>
+  <div id="apply-error" style="display:none;margin-top:12px;font-size:14px;color:#B91C1C;">That didn't send. Please email <a href="mailto:heather@bccycletourism.ca" style="color:#1E7D96;font-weight:600;">heather@bccycletourism.ca</a> and we'll sort it out.</div>
 
 </form>
 </div>
@@ -419,10 +420,12 @@ function submitApply(e) {
         document.querySelector('.form-card').innerHTML = '<div style="padding:40px 0;text-align:center;"><p style="font-family:Archivo,sans-serif;font-size:28px;font-weight:400;color:#0D2E1E;letter-spacing:-0.03em;margin-bottom:8px;">Application received!</p><p style="font-size:16px;color:rgba(13,64,112,0.5);">We review applications ourselves and aim to respond within two weeks.</p></div>';
       } else {
         btn.disabled = false; btn.textContent = 'Submit application';
+        document.getElementById('apply-error').style.display = '';
       }
     })
     .catch(function() {
       btn.disabled = false; btn.textContent = 'Submit application';
+      document.getElementById('apply-error').style.display = '';
     });
   return false;
 }
