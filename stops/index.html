@@ -572,7 +572,7 @@ function renderCriteria(cat) {
   var icon = CAT_ICONS[cat.id] || '';
   return '<div class="cat-header"><div class="cat-icon-circle">' + icon + '</div>' +
     '<div class="cat-header-text">' +
-    '<h2>' + cat.name + ' Listings <span style="font-weight:400;color:#6b7280;font-size:18px;">(' + cat.examples.filter(function(ex) { return !isDemo(ex); }).length + ')</span></h2>' +
+    '<h2>' + cat.tab + ' Listings <span style="font-weight:400;color:#6b7280;font-size:18px;">(' + cat.examples.filter(function(ex) { return !isDemo(ex); }).length + ')</span></h2>' +
     '<div class="criteria-inline">Criteria: ' + cat.required.length + ' required &middot; ' + cat.optional.length + ' optional &nbsp;<span class="criteria-link" id="criteria-view-link" onclick="toggleCriteria()">View criteria ›</span></div>' +
     '</div></div>' +
     '<div class="criteria-body" id="criteria-body">' +
