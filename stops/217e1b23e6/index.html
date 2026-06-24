@@ -98,9 +98,20 @@ body {
 .req-no .req-sym { color: #DC2626; }
 .req-null .req-sym { color: #9CA3AF; }
 .seo-pills { display: flex; flex-wrap: wrap; gap: 6px; }
-.seo-pill { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #374151; }
+.seo-pill-yes { background: #ECFDF5; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #065F46; }
+.seo-pill-no { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #9CA3AF; }
+.seo-amenity-note { font-size: 12px; color: #6B7280; margin-top: 8px; line-height: 1.6; }
+.seo-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
+.seo-verify a { color: #1E7D96; }
+.seo-routes { display: flex; flex-wrap: wrap; gap: 8px; }
+.seo-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
+.seo-route-tag:hover { background: #DBEAFE; }
+.seo-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .seo-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .seo-attribution a { color: #9CA3AF; }
+.seo-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
+.seo-suggest a { color: #1E7D96; }
+.seo-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
 
 </style>
 </head>
@@ -134,10 +145,13 @@ body {
 <h1 class="seo-h1">Mattone</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Ocean Grove  ·  Casual</div>
 <p class="seo-desc">Mattone is a family-owned modern Italian restaurant situated at Salmon Point Resort on the Old Island Highway south of Campbell River, offering a 180-degree oceanfront view over the Salish Sea. The casual counter-service kitchen is helmed by Ryan Gark, a Chopped Canada champion, and his wife Katrina, whose Italian heritage informs dishes like Nonna&#x27;s meatballs and house-made focaccia. A reviewer specifically recommends it to cyclists winding up the Old Island Highway.</p>
+<div class="seo-verify">Amenities assumed from location and public data. <a href="/suggest#edit=Mattone">Confirm or update this listing →</a></div>
 <div class="seo-section"><div class="seo-section-title">Contact</div><div class="seo-detail-row"><strong>Address:</strong> 2176 Salmon Point Road, Campbell River, BC</div><div class="seo-detail-row"><strong>Phone:</strong> (250) 914-8866</div><div class="seo-detail-row"><strong>Website:</strong> <a href="https://www.mattoneitaliankitchen.com/" rel="noopener">https://www.mattoneitaliankitchen.com/</a></div></div>
 <div class="seo-section"><div class="seo-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>Bike parking or bike visibility</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Water bottle refill</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Washrooms</span></div></div>
-<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill">Takeout</span><span class="seo-pill">Vegetarian / vegan / GF</span></div></div>
-<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.</div>
+<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill-yes">Takeout*</span><span class="seo-pill-no">Packed lunches</span><span class="seo-pill-no">Water without purchase</span><span class="seo-pill-yes">Vegetarian / vegan / GF*</span><span class="seo-pill-no">Bike rack visible from inside</span><span class="seo-pill-no">Covered bike parking</span><span class="seo-pill-no">Public rack nearby</span><span class="seo-pill-no">Bike allowed inside/on patio</span><span class="seo-pill-no">Device charging</span><span class="seo-pill-no">E-bike charging</span><span class="seo-pill-no">Pump</span><span class="seo-pill-no">Wi-Fi</span></div><div class="seo-amenity-note"><div><strong>Takeout:</strong> Menu note states oysters are &#x27;NOT AVAILABLE FOR TAKEOUT&#x27;, implying takeout is available for other menu items.</div><div><strong>Vegetarian / vegan / GF:</strong> Menu key lists &#x27;(GF) Gluten Friendly, (GFO) Gluten Friendly Option Available, (VO) Vegan Option Available&#x27; with multiple items labelled accordingly throughout.</div></div></div>
+
+<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="seo-sources">Data: AI sources with manual review</div></div>
+<div class="seo-suggest"><a href="/suggest#edit=Mattone">Suggest an edit to this listing</a></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">

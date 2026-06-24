@@ -98,9 +98,20 @@ body {
 .req-no .req-sym { color: #DC2626; }
 .req-null .req-sym { color: #9CA3AF; }
 .seo-pills { display: flex; flex-wrap: wrap; gap: 6px; }
-.seo-pill { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #374151; }
+.seo-pill-yes { background: #ECFDF5; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #065F46; }
+.seo-pill-no { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #9CA3AF; }
+.seo-amenity-note { font-size: 12px; color: #6B7280; margin-top: 8px; line-height: 1.6; }
+.seo-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
+.seo-verify a { color: #1E7D96; }
+.seo-routes { display: flex; flex-wrap: wrap; gap: 8px; }
+.seo-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
+.seo-route-tag:hover { background: #DBEAFE; }
+.seo-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .seo-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .seo-attribution a { color: #9CA3AF; }
+.seo-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
+.seo-suggest a { color: #1E7D96; }
+.seo-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
 
 </style>
 </head>
@@ -134,10 +145,13 @@ body {
 <h1 class="seo-h1">Hostelling International</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Hostel  ·  Tofino (Pacific Rim)  ·  Rock-bottom</div>
 <p class="seo-desc">Whaler&#x27;s Guesthouse &amp; Tofino Hostel is a boutique waterfront hostel and guesthouse perched on the edge of Clayoquot Sound with views of Meares Island and Lone Cone Mountain. Operating under the Hostelling International brand, it offers both private ocean-view rooms and shared hostel rooms steps from downtown Tofino&#x27;s restaurants and amenities. The property rents bikes and surfboards on-site, making it a natural base for exploring Pacific Rim National Park.</p>
+<div class="seo-verify">Amenities assumed from location and public data. <a href="/suggest#edit=Hostelling International">Confirm or update this listing →</a></div>
 <div class="seo-section"><div class="seo-section-title">Contact</div><div class="seo-detail-row"><strong>Address:</strong> 81 West Street, Tofino, V0R 2Z0</div><div class="seo-detail-row"><strong>Phone:</strong> +1-250-725-3443</div><div class="seo-detail-row"><strong>Website:</strong> <a href="https://www.tofinohostel.com/" rel="noopener">https://www.tofinohostel.com/</a></div></div>
 <div class="seo-section"><div class="seo-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>Secure overnight bike storage</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>Staff know the bike procedure</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>We Welcome Cyclists Local Knowledge Sheet or equivalent available</span></div></div>
-<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill">Nearby evening food</span><span class="seo-pill">Wi-Fi</span></div></div>
-<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.</div>
+<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill-no">Min-stay waived</span><span class="seo-pill-no">Laundry</span><span class="seo-pill-no">Drying area</span><span class="seo-pill-no">Early or packed breakfast</span><span class="seo-pill-yes">Nearby evening food*</span><span class="seo-pill-no">Nearby grocery</span><span class="seo-pill-no">Vending machines</span><span class="seo-pill-no">Bikes in rooms</span><span class="seo-pill-no">E-bike charging</span><span class="seo-pill-no">Device charging</span><span class="seo-pill-no">Luggage storage</span><span class="seo-pill-no">Pump</span><span class="seo-pill-no">Basic tools</span><span class="seo-pill-no">Bike wash / hose</span><span class="seo-pill-yes">Wi-Fi*</span></div><div class="seo-amenity-note"><div><strong>Nearby evening food:</strong> Website states property is &#x27;within steps of Tofino&#x27;s best restaurants, coffee shops and amenities.&#x27;</div><div><strong>Wi-Fi:</strong> Website explicitly lists &#x27;Free Wi-Fi&#x27; as a room highlight under private rooms amenities.</div></div></div>
+<div class="seo-section"><div class="seo-section-title">Routes nearby</div><div class="seo-routes"><a class="seo-route-tag" href="/route/tofino-ucluelet/">🚴 Tofino–Ucluelet</a></div></div>
+<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="seo-sources">Data: AI sources with manual review</div></div>
+<div class="seo-suggest"><a href="/suggest#edit=Hostelling International">Suggest an edit to this listing</a></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">

@@ -98,9 +98,20 @@ body {
 .req-no .req-sym { color: #DC2626; }
 .req-null .req-sym { color: #9CA3AF; }
 .seo-pills { display: flex; flex-wrap: wrap; gap: 6px; }
-.seo-pill { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #374151; }
+.seo-pill-yes { background: #ECFDF5; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #065F46; }
+.seo-pill-no { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #9CA3AF; }
+.seo-amenity-note { font-size: 12px; color: #6B7280; margin-top: 8px; line-height: 1.6; }
+.seo-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
+.seo-verify a { color: #1E7D96; }
+.seo-routes { display: flex; flex-wrap: wrap; gap: 8px; }
+.seo-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
+.seo-route-tag:hover { background: #DBEAFE; }
+.seo-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .seo-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .seo-attribution a { color: #9CA3AF; }
+.seo-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
+.seo-suggest a { color: #1E7D96; }
+.seo-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
 
 </style>
 </head>
@@ -134,10 +145,13 @@ body {
 <h1 class="seo-h1">Robson River Campground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Mount Robson</div>
 <p class="seo-desc">Full-amenity frontcountry campground in Mount Robson Park along Highway 16, with the highest peak in the Canadian Rockies overhead; showers, e-bike charging, and potable water on site, but seasonal park gates mean summer-only access.</p>
+<div class="seo-verify">Amenities assumed from location and public data. <a href="/suggest#edit=Robson River Campground">Confirm or update this listing →</a></div>
 <div class="seo-section"><div class="seo-section-title">Contact</div><div class="seo-detail-row"><strong>Website:</strong> <a href="https://bcparks.ca/mount-robson-park/" rel="noopener">https://bcparks.ca/mount-robson-park/</a></div></div>
 <div class="seo-section"><div class="seo-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>No turn-away policy for cyclists</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>We Welcome Cyclists Local Knowledge Sheet or equivalent available</span></div></div>
-<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill">Potable water</span><span class="seo-pill">Showers</span><span class="seo-pill">Washrooms</span><span class="seo-pill">Flush toilets</span><span class="seo-pill">Reservations accepted</span><span class="seo-pill">Device charging</span><span class="seo-pill">E-bike charging</span></div></div>
+<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill-no">Min-stay waived</span><span class="seo-pill-no">Hiker/biker sites</span><span class="seo-pill-yes">Potable water</span><span class="seo-pill-yes">Showers</span><span class="seo-pill-yes">Washrooms</span><span class="seo-pill-yes">Flush toilets</span><span class="seo-pill-no">Pit/outhouse toilet</span><span class="seo-pill-no">Food nearby</span><span class="seo-pill-no">Covered shelter</span><span class="seo-pill-no">Laundry</span><span class="seo-pill-no">Drying area</span><span class="seo-pill-no">Animal-safe food storage</span><span class="seo-pill-yes">Reservations accepted</span><span class="seo-pill-no">Cyclist discount</span><span class="seo-pill-yes">Device charging</span><span class="seo-pill-yes">E-bike charging</span><span class="seo-pill-no">Vending machines</span><span class="seo-pill-no">Ice</span><span class="seo-pill-no">Pump</span><span class="seo-pill-no">Basic tools</span><span class="seo-pill-no">Camping fuel</span></div></div>
+
 <div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.</div>
+<div class="seo-suggest"><a href="/suggest#edit=Robson River Campground">Suggest an edit to this listing</a></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">

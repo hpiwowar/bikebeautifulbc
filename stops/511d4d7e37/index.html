@@ -98,9 +98,20 @@ body {
 .req-no .req-sym { color: #DC2626; }
 .req-null .req-sym { color: #9CA3AF; }
 .seo-pills { display: flex; flex-wrap: wrap; gap: 6px; }
-.seo-pill { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #374151; }
+.seo-pill-yes { background: #ECFDF5; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #065F46; }
+.seo-pill-no { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #9CA3AF; }
+.seo-amenity-note { font-size: 12px; color: #6B7280; margin-top: 8px; line-height: 1.6; }
+.seo-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
+.seo-verify a { color: #1E7D96; }
+.seo-routes { display: flex; flex-wrap: wrap; gap: 8px; }
+.seo-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
+.seo-route-tag:hover { background: #DBEAFE; }
+.seo-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .seo-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .seo-attribution a { color: #9CA3AF; }
+.seo-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
+.seo-suggest a { color: #1E7D96; }
+.seo-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
 
 </style>
 </head>
@@ -134,10 +145,13 @@ body {
 <h1 class="seo-h1">Meadow Creek Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Meadow Creek</div>
 <p class="seo-desc">Meadow Creek Store is a classic general store nestled in the remote Lardeau Valley between Kootenay Lake and Duncan Lake, serving a wide network of small communities along Highway 31. Under the ownership of Mark and Kris Healy since 2003, the store stocks groceries (with fresh deliveries three times a week), local and organic products, beer and liquor, and automotive supplies alongside fuel (gas, diesel, propane). An associated on-site Bakery, Bar &amp; Grill offers homemade meals, baked goods, and freshly made sandwiches — making this a significant resupply and rest stop for cyclists touring one of BC&#x27;s more isolated corridors.</p>
+<div class="seo-verify">Amenities assumed from location and public data. <a href="/suggest#edit=Meadow Creek Store">Confirm or update this listing →</a></div>
 <div class="seo-section"><div class="seo-section-title">Contact</div><div class="seo-detail-row"><strong>Address:</strong> 13312 Highway 31, Meadow Creek, V0G 1N0</div><div class="seo-detail-row"><strong>Phone:</strong> +1-250-366-4216</div><div class="seo-detail-row"><strong>Website:</strong> <a href="https://www.meadowcreekstore.ca/" rel="noopener">https://www.meadowcreekstore.ca/</a></div></div>
 <div class="seo-section"><div class="seo-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>Bike parking</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>Water bottle refill</span></div></div>
-<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill">Basic groceries</span><span class="seo-pill">Hot food</span><span class="seo-pill">Camping fuel</span></div></div>
-<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.</div>
+<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill-yes">Basic groceries*</span><span class="seo-pill-yes">Hot food*</span><span class="seo-pill-no">Washrooms</span><span class="seo-pill-no">Outdoor water tap</span><span class="seo-pill-no">Ice</span><span class="seo-pill-no">Vending machines</span><span class="seo-pill-yes">Camping fuel*</span><span class="seo-pill-no">Bike rack visible from inside</span><span class="seo-pill-no">Covered bike parking</span><span class="seo-pill-no">Public rack nearby</span><span class="seo-pill-no">Bike allowed inside/on patio</span><span class="seo-pill-no">Device charging</span><span class="seo-pill-no">E-bike charging</span><span class="seo-pill-no">Pump</span></div><div class="seo-amenity-note"><div><strong>Basic groceries:</strong> Website lists &#x27;Groceries and Produce&#x27; with fresh deliveries three times per week, plus local produce, organic items, gourmet items, and specialty beer and wine.</div><div><strong>Hot food:</strong> Website lists &#x27;Coffee to Go and Homemade Baking&#x27; and &#x27;Freshly Made Sandwiches &amp; Salads&#x27;; associated Meadow Creek Bakery, Bar &amp; Grill offers homemade meals on-site.</div><div><strong>Camping fuel:</strong> Website explicitly lists &#x27;Gas, Diesel, Propane, &amp; Air&#x27; under store products; OSM amenity=fuel corroborates.</div></div></div>
+
+<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="seo-sources">Data: AI sources with manual review</div></div>
+<div class="seo-suggest"><a href="/suggest#edit=Meadow Creek Store">Suggest an edit to this listing</a></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">

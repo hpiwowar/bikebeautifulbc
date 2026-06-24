@@ -98,9 +98,20 @@ body {
 .req-no .req-sym { color: #DC2626; }
 .req-null .req-sym { color: #9CA3AF; }
 .seo-pills { display: flex; flex-wrap: wrap; gap: 6px; }
-.seo-pill { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #374151; }
+.seo-pill-yes { background: #ECFDF5; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #065F46; }
+.seo-pill-no { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #9CA3AF; }
+.seo-amenity-note { font-size: 12px; color: #6B7280; margin-top: 8px; line-height: 1.6; }
+.seo-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
+.seo-verify a { color: #1E7D96; }
+.seo-routes { display: flex; flex-wrap: wrap; gap: 8px; }
+.seo-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
+.seo-route-tag:hover { background: #DBEAFE; }
+.seo-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .seo-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .seo-attribution a { color: #9CA3AF; }
+.seo-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
+.seo-suggest a { color: #1E7D96; }
+.seo-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
 
 </style>
 </head>
@@ -134,10 +145,13 @@ body {
 <h1 class="seo-h1">L&#x27; Hermitage</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Hotel / Motel  ·  Vancouver (North Shore)  ·  Luxury</div>
 <p class="seo-desc">L&#x27;Hermitage is a 60-room luxury boutique hotel at the corner of Robson and Richards Streets in the heart of downtown Vancouver, blending European chic with West Coast sophistication. It offers a range of rooms and suites, including studio units with fully equipped Eggersmann kitchens and in-unit washer/dryers, alongside a rooftop heated outdoor pool, 24-hour fitness studio, and the on-site L&#x27;Orangerie dining room and lounge. The property caters primarily to business and leisure travelers seeking a high-end boutique experience in a central urban location.</p>
+<div class="seo-verify">Amenities assumed from location and public data. <a href="/suggest#edit=L&#x27; Hermitage">Confirm or update this listing →</a></div>
 <div class="seo-section"><div class="seo-section-title">Contact</div><div class="seo-detail-row"><strong>Address:</strong> 788 Richards Street, Vancouver, BC V6B 3A4</div><div class="seo-detail-row"><strong>Phone:</strong> +1-778-327-4100</div><div class="seo-detail-row"><strong>Website:</strong> <a href="https://www.lhermitagevancouver.com/" rel="noopener">https://www.lhermitagevancouver.com/</a></div></div>
 <div class="seo-section"><div class="seo-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>Secure overnight bike storage</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>Staff know the bike procedure</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>We Welcome Cyclists Local Knowledge Sheet or equivalent available</span></div></div>
-<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill">Laundry</span><span class="seo-pill">Nearby evening food</span><span class="seo-pill">Wi-Fi</span></div></div>
-<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.</div>
+<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill-no">Min-stay waived</span><span class="seo-pill-yes">Laundry*</span><span class="seo-pill-no">Drying area</span><span class="seo-pill-no">Early or packed breakfast</span><span class="seo-pill-yes">Nearby evening food*</span><span class="seo-pill-no">Nearby grocery</span><span class="seo-pill-no">Vending machines</span><span class="seo-pill-no">Bikes in rooms</span><span class="seo-pill-no">E-bike charging</span><span class="seo-pill-no">Device charging</span><span class="seo-pill-no">Luggage storage</span><span class="seo-pill-no">Pump</span><span class="seo-pill-no">Basic tools</span><span class="seo-pill-no">Bike wash / hose</span><span class="seo-pill-yes">Wi-Fi*</span></div><div class="seo-amenity-note"><div><strong>Laundry:</strong> Boutique Solarium Room and kitchen-equipped suites include a full-size stacked washer/dryer combo in-unit.</div><div><strong>Nearby evening food:</strong> L&#x27;Orangerie Dining Room &amp; Lounge is on-site; in-room dining also available.</div><div><strong>Wi-Fi:</strong> OSM tags internet_access=wlan and internet_access:fee=no; website references high-speed internet in boardroom and business centre.</div></div></div>
+<div class="seo-section"><div class="seo-section-title">Routes nearby</div><div class="seo-routes"><a class="seo-route-tag" href="/route/seymour-valley-lonsdale-brew-loop/">🚴 Seymour Valley + Lonsdale Brew Loop</a></div></div>
+<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="seo-sources">Data: AI sources with manual review</div></div>
+<div class="seo-suggest"><a href="/suggest#edit=L&#x27; Hermitage">Suggest an edit to this listing</a></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">

@@ -98,9 +98,20 @@ body {
 .req-no .req-sym { color: #DC2626; }
 .req-null .req-sym { color: #9CA3AF; }
 .seo-pills { display: flex; flex-wrap: wrap; gap: 6px; }
-.seo-pill { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #374151; }
+.seo-pill-yes { background: #ECFDF5; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #065F46; }
+.seo-pill-no { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #9CA3AF; }
+.seo-amenity-note { font-size: 12px; color: #6B7280; margin-top: 8px; line-height: 1.6; }
+.seo-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
+.seo-verify a { color: #1E7D96; }
+.seo-routes { display: flex; flex-wrap: wrap; gap: 8px; }
+.seo-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
+.seo-route-tag:hover { background: #DBEAFE; }
+.seo-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .seo-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .seo-attribution a { color: #9CA3AF; }
+.seo-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
+.seo-suggest a { color: #1E7D96; }
+.seo-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
 
 </style>
 </head>
@@ -134,10 +145,13 @@ body {
 <h1 class="seo-h1">Red Tree Lodge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Hotel / Motel  ·  Fernie  ·  Budget</div>
 <p class="seo-desc">Red Tree Lodge is a 43-room hotel in Fernie, BC, situated on Highway 3 near downtown and a short drive from Fernie Alpine Resort in the Canadian Rockies. The lodge explicitly caters to cyclists with a dedicated bike amenities program, bike storage, and tuning tools alongside a heated boot room, indoor pool, hot tub, sauna, and fully equipped guest kitchen. Staff are described as outdoor enthusiasts with strong local knowledge of activities in the area.</p>
+<div class="seo-verify">Amenities assumed from location and public data. <a href="/suggest#edit=Red Tree Lodge">Confirm or update this listing →</a></div>
 <div class="seo-section"><div class="seo-section-title">Contact</div><div class="seo-detail-row"><strong>Address:</strong> 1101 7th Avenue, Fernie BC, Canada</div><div class="seo-detail-row"><strong>Phone:</strong> 1-250-423-4622</div><div class="seo-detail-row"><strong>Website:</strong> <a href="https://www.redtreelodge.com/" rel="noopener">https://www.redtreelodge.com/</a></div></div>
 <div class="seo-section"><div class="seo-section-title">Required Criteria</div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Secure overnight bike storage</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>Staff know the bike procedure</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>We Welcome Cyclists Local Knowledge Sheet or equivalent available</span></div></div>
-<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill">Nearby grocery</span><span class="seo-pill">Basic tools</span><span class="seo-pill">Wi-Fi</span></div></div>
-<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.</div>
+<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill-no">Min-stay waived</span><span class="seo-pill-no">Laundry</span><span class="seo-pill-no">Drying area</span><span class="seo-pill-no">Early or packed breakfast</span><span class="seo-pill-no">Nearby evening food</span><span class="seo-pill-yes">Nearby grocery*</span><span class="seo-pill-no">Vending machines</span><span class="seo-pill-no">Bikes in rooms</span><span class="seo-pill-no">E-bike charging</span><span class="seo-pill-no">Device charging</span><span class="seo-pill-no">Luggage storage</span><span class="seo-pill-no">Pump</span><span class="seo-pill-yes">Basic tools*</span><span class="seo-pill-no">Bike wash / hose</span><span class="seo-pill-yes">Wi-Fi*</span></div><div class="seo-amenity-note"><div><strong>Nearby grocery:</strong> Directions page states &#x27;We are located opposite the Red Apple Store on Highway #3&#x27; — Red Apple is a BC grocery/convenience chain.</div><div><strong>Basic tools:</strong> Website front page amenity list includes &#x27;Bike Storage &amp; Tuning Tools&#x27;.</div><div><strong>Wi-Fi:</strong> Website front page amenity list includes &#x27;Free WIFI&#x27;.</div></div></div>
+
+<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="seo-sources">Data: AI sources with manual review</div></div>
+<div class="seo-suggest"><a href="/suggest#edit=Red Tree Lodge">Suggest an edit to this listing</a></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">

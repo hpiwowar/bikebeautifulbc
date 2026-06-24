@@ -98,9 +98,20 @@ body {
 .req-no .req-sym { color: #DC2626; }
 .req-null .req-sym { color: #9CA3AF; }
 .seo-pills { display: flex; flex-wrap: wrap; gap: 6px; }
-.seo-pill { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #374151; }
+.seo-pill-yes { background: #ECFDF5; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #065F46; }
+.seo-pill-no { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #9CA3AF; }
+.seo-amenity-note { font-size: 12px; color: #6B7280; margin-top: 8px; line-height: 1.6; }
+.seo-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
+.seo-verify a { color: #1E7D96; }
+.seo-routes { display: flex; flex-wrap: wrap; gap: 8px; }
+.seo-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
+.seo-route-tag:hover { background: #DBEAFE; }
+.seo-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .seo-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .seo-attribution a { color: #9CA3AF; }
+.seo-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
+.seo-suggest a { color: #1E7D96; }
+.seo-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
 
 </style>
 </head>
@@ -134,10 +145,13 @@ body {
 <h1 class="seo-h1">Double Happiness</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Trail  ·  Casual</div>
 <p class="seo-desc">Double Happiness is a beloved family-run restaurant in Trail, BC, owned by Amy and Michael Lam since 1995, specializing in Cantonese and Vietnamese cuisine. It is particularly renowned for its Calgary-style Ginger Beef, a recipe Michael spent decades perfecting, and also offers Pho, Pad Thai, and a rotating buffet with over 30 items. The restaurant has a warm, small-town atmosphere that has made it a Kootenays landmark for over three decades.</p>
+<div class="seo-verify">Amenities assumed from location and public data. <a href="/suggest#edit=Double Happiness">Confirm or update this listing →</a></div>
 <div class="seo-section"><div class="seo-section-title">Contact</div><div class="seo-detail-row"><strong>Address:</strong> 1420 Bay Avenue, Trail, BC V1R 4B1</div><div class="seo-detail-row"><strong>Phone:</strong> +1-250-368-5662</div><div class="seo-detail-row"><strong>Website:</strong> <a href="http://www.doublehappinesstrail.com/" rel="noopener">http://www.doublehappinesstrail.com/</a></div></div>
 <div class="seo-section"><div class="seo-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>Bike parking or bike visibility</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Water bottle refill</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Washrooms</span></div></div>
-<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill">Vegetarian / vegan / GF</span></div></div>
-<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.</div>
+<div class="seo-section"><div class="seo-section-title">Amenities</div><div class="seo-pills"><span class="seo-pill-no">Takeout</span><span class="seo-pill-no">Packed lunches</span><span class="seo-pill-no">Water without purchase</span><span class="seo-pill-yes">Vegetarian / vegan / GF*</span><span class="seo-pill-no">Bike rack visible from inside</span><span class="seo-pill-no">Covered bike parking</span><span class="seo-pill-no">Public rack nearby</span><span class="seo-pill-no">Bike allowed inside/on patio</span><span class="seo-pill-no">Device charging</span><span class="seo-pill-no">E-bike charging</span><span class="seo-pill-no">Pump</span><span class="seo-pill-no">Wi-Fi</span></div><div class="seo-amenity-note"><div><strong>Vegetarian / vegan / GF:</strong> Menu explicitly lists &#x27;Deep Fried Spring Rolls (2) (Pork or Vegetarian)&#x27; as a labelled vegetarian option.</div></div></div>
+
+<div class="seo-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="seo-sources">Data: AI sources with manual review</div></div>
+<div class="seo-suggest"><a href="/suggest#edit=Double Happiness">Suggest an edit to this listing</a></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">

@@ -750,6 +750,11 @@ function clearAll() {
   var cat = getCat(); renderSubcatGrid(cat); updateFilterPills(cat); updateListings(cat); updateBadgeLegendActive(); updateHash();
 }
 
+function navigateOrModal(el, catId, exIdx) {
+  var k = el.dataset.key;
+  if (k) { window.location = '/stops/' + k + '/'; } else { openModal(catId, exIdx); }
+}
+
 function openModal(catId, exIdx) {
   var cat = categories.find(function(c) { return c.id === catId; });
   var ex = cat.examples[exIdx];
@@ -1139,7 +1144,8 @@ function renderListingCardHTML(cat, ex, showCatTag) {
     cardReqHTML = '<div class="card-body-right"><div class="card-req-label">Required Basics</div><div class="card-req-list">' + cardReqItems + '</div><div class="view-details-wrap"><span class="view-details-link">View all details ›</span></div></div>';
   }
   var icon = CAT_ICONS[cat.id] || '';
-  return '<div class="listing-card ' + borderClass + demoClass + '" onclick="openModal(\x27' + cat.id + '\x27,' + idx + ')">' +
+  var _cardKey = ex.key ? ' data-key="' + ex.key + '"' : '';
+  return '<div class="listing-card ' + borderClass + demoClass + '"' + _cardKey + ' onclick="navigateOrModal(this,\x27' + cat.id + '\x27,' + idx + ')">' +
     '<div class="card-outer"><div class="card-icon-circle">' + icon + '</div>' +
     '<div class="card-inner">' +
     '<div class="listing-name-row"><span class="listing-name">' + ex.name + catTag + demoTag + '</span><div class="listing-badges">' + badges + '</div></div>' +
