@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tumbleweed Lounge</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Kamloops (Thompson)  ·  Casual</div>
 <p class="seo-desc">Tumbleweed Lounge is a restaurant and lounge located on Victoria Street in downtown Kamloops, BC. Kamloops sits at the confluence of the Thompson Rivers and is a common stop on several major cycling routes through the BC Interior. Beyond its OSM listing and Facebook presence, no further details about the establishment&#x27;s character or offerings could be retrieved.</p>

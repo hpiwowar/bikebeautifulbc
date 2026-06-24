@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sidewinders Coffee Co</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Nelson (West Kootenay)  ·  Cheap eats</div>
 <p class="seo-desc">SideWinders is a cafe in Nelson, BC, a well-known Kootenay cycling hub at the confluence of mountain biking and touring routes. Beyond its OSM classification as a cafe, no substantive detail about its offerings, setting, or atmosphere could be retrieved from public sources. A visiting cyclist would need to verify on the ground whether it serves the needs of a touring stop.</p>

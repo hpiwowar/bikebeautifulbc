@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">McDonald&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Burnaby  ·  Cheap eats</div>
 <p class="seo-desc">This McDonald&#x27;s occupies a two-level building on Lougheed Highway in Burnaby&#x27;s Brentwood corridor, a major east-west arterial connecting communities across the lower mainland. It offers both indoor and outdoor seating, making it a practical rest stop for cyclists passing through. Vegetarian menu items are available, and the location supports delivery via multiple third-party platforms.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Schubert Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Vernon (Okanagan)</div>
 <p class="seo-desc">The Schubert Centre is a volunteer-run community hub in Vernon primarily serving seniors, offering social and recreational programs, a drop-in coffee shop, thrift store, Meals on Wheels, and several rentable event spaces ranging from intimate meeting rooms to a 300-person hall. It receives no provincial or federal funding and relies on its food services, catering, and donations to keep the doors open. A touring cyclist could stop in for a break at the social café, which is open to the public.</p>

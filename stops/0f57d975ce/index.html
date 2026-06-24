@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cumberland Grind Espresso &amp; Smoothie Bar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Cumberland  ·  Cheap eats</div>
 <p class="seo-desc">Cumberland Grind is an espresso and smoothie bar situated in Cumberland, a small Vancouver Island village with a strong mountain biking culture and a reputation as a cycling destination. The café offers both takeout and outdoor seating, making it a natural pit stop for riders rolling through the Comox Valley. It accepts a wide range of payment methods including tap and mobile pay.</p>

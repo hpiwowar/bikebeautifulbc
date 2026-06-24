@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Donegal&#x27;s Irish House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Surrey (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Founded in 1978 by the Allen and Green families, Donegal&#x27;s Irish House is an independently owned, family-operated neighborhood pub in Surrey with nearly five decades of community history. It hosts regular live music events and serves a broad menu of pub classics alongside a creative cocktail list. Cyclists stopping in will find a genuinely welcoming atmosphere shaped by Irish hospitality tradition rather than corporate formula.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Liberty Wines</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Winery / Cidery  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Liberty Wine Merchants is a Vancouver institution founded in 1986, built on a mission to source rare and artisan wines from small-batch producers worldwide rather than mass-market labels. The Granville Island location places it within one of Vancouver&#x27;s most-visited waterfront destinations and a natural stop on the seawall cycling route. The shop carries an extensive range of wine, spirits, beer, cider, and sake.</p>

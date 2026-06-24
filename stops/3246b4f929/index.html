@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Union Latino&#x27;s Food</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Surrey</div>
 <p class="seo-desc">Union Latino&#x27;s Restaurant is a Colombian restaurant and party venue with locations in Surrey and Vancouver, offering authentic dishes such as bandeja paisa, empanadas, and whole fried tilapia alongside cocktails and a full bar. The venue also hosts regular Latin events including salsa and bachata classes, karaoke nights, and themed parties. A &#x27;Market&#x27; section sells frozen Colombian food items (empanadas, plantain dishes) for take-home preparation.</p>

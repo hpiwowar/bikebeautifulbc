@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kimberley Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Kimberley  ·  Free</div>
 <p class="seo-desc">The Kimberley Public Library has served the community since 1927 and has operated from its dedicated building since 1980. Beyond books, it offers borrowable Outdoor Adventure Kits and hiking backpacks — a genuinely useful service for touring cyclists exploring the East Kootenays. It also hosts regular community programs and provides access to digital resources including e-books and online learning platforms.</p>

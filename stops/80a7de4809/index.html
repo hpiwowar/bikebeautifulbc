@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">CPL: Poirier Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Coquitlam  ·  Free</div>
 <p class="seo-desc">The CPL Poirier Branch is a single-storey civic library operated by Coquitlam Public Library, providing free access to books, digital resources, computers, and community programming. As a no-admission-required public facility in the Tri-Cities area, it offers a welcoming rest environment for touring cyclists passing through Coquitlam. The branch is fully wheelchair accessible and runs a broad range of programs for adults, teens, and children.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Co&#x27;m Vietnamese</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Co&#x27;m Vietnamese is a Richmond restaurant that blends family-style Vietnamese cuisine with modern preparations, offering an extensive menu spanning pho, banh mi, fresh rolls, congee, and chef&#x27;s specials. The restaurant features a dedicated vegetarian section alongside cocktails and traditional Vietnamese dishes. Located in a commercial plaza on Alderbridge Way, it offers a substantial sit-down dining option for cyclists exploring the Richmond area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Samuel and Frances Belzberg Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Vancouver (North Shore)  ·  Free</div>
 <p class="seo-desc">The Samuel and Frances Belzberg Library is the downtown Vancouver branch of Simon Fraser University Library, situated in the Harbour Centre building at the heart of the city&#x27;s core. It offers study spaces, 18 desktop computers, and an equipment lending program to SFU affiliates, while community members can obtain guest passes for limited computer access. Its central location on West Hastings Street makes it a potential urban waypoint for touring cyclists navigating downtown Vancouver.</p>

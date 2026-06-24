@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Summit Lake Recreation Site</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Provincial / Regional Park  ·  McMurdo</div>
 <p class="seo-desc">A single remote campsite on a small Kootenays lake, set just past a beaver pond deep in the forest service road network; the rough access road crosses a waterway with no turnarounds, and the recommended approach is to park at the creek and walk the last stretch to the lake.</p>

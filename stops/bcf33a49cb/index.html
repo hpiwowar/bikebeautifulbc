@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Beans &amp; Leaves</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Abbotsford  ·  Cheap eats</div>
 <p class="seo-desc">Beans &amp; Leaves is a cafe in Chilliwack, BC. Beyond its OSM classification as a cafe located at Unit 5 in Chilliwack, no verified details about its offerings or character are available, as the discovered website belongs to an unrelated business of the same name in Staten Island, New York.</p>

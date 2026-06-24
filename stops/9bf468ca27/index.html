@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Britannia Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Britannia Sushi is a Japanese sushi restaurant on Commercial Drive, one of Vancouver&#x27;s most active cycling corridors. The restaurant serves a range of sushi rolls and offers takeout and delivery alongside dine-in service. Cyclists passing through the Commercial Drive neighbourhood will find a straightforward, no-frills sushi stop open seven days a week.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">JJang Korean BBQ and Social House</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">JJang Korean BBQ &amp; Social House is a Korean barbecue restaurant in Richmond&#x27;s Hollybridge development, offering a &#x27;social house&#x27; dining format. The restaurant manages both reservations and a live waitlist, reflecting consistent demand from the local community. It is a sit-down establishment that could serve as a substantial meal stop for cyclists in the area.</p>

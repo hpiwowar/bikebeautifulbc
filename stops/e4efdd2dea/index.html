@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Clydesdale Inn</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Cloverdale  ·  Casual</div>
 <p class="seo-desc">Clydesdale Inn (also listed in OSM as Clydesdale Coverdale) is a pub located in the Fraser Valley area of Surrey, BC. It sits along 56 Avenue in the Lower Mainland, a region with active cycling corridors. Beyond its pub identity, no further details about its character, seating, or cycling-relevant features could be confirmed at this time.</p>

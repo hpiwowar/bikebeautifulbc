@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sapporo Kitchen</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Tsawwassen (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Sapporo Kitchen is a Japanese restaurant in Ladner (Delta), BC, serving dine-in and online takeout orders through its own app with a loyalty rewards program. The OSM record notes vegan and vegetarian options are available, making it a useful stop for cyclists with dietary restrictions. The restaurant is in a commercial strip in the Tsawwassen/Ladner area, convenient to cyclists travelling the South Delta corridor.</p>

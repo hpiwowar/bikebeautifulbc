@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Semiahmoo Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Surrey  ·  Free</div>
 <p class="seo-desc">Semiahmoo Branch is a large public library spanning 22,100 square feet over three floors in Surrey&#x27;s South Surrey/White Rock area, certified LEED Silver for environmental sustainability. It offers free Wi-Fi, public computers, self-checkout stations, a bookable quiet study room, and rotating local art installations. The fully accessible building sits near the White Rock Centre Exchange transit hub, making it a convenient rest stop for cyclists moving through the region.</p>

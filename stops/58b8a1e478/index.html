@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Carnivore Meats &amp; More</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Specialty / Health Food  ·  Sidney (Metro Vancouver)</div>
 <p class="seo-desc">Carnivore Meats &amp; More is a specialty butcher shop sourcing grass-fed, antibiotic- and hormone-free meats exclusively from farms within 100 miles of the shop. Whole animals are broken down and hand-cut in-house, making it a standout stop for cyclists looking to pick up quality local protein on the Saanich Peninsula. The passionate owner is known for educating customers about sustainable, ethical farming practices.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushi Town</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Coquitlam  ·  Casual</div>
 <p class="seo-desc">Sushi Town is a Japanese restaurant on the Barnet Highway corridor in Coquitlam offering traditional sushi, sashimi, specialty rolls, teriyaki, udon, and tempura dishes. The restaurant provides both dine-in service with table reservations and online delivery across multiple distance zones. Touring cyclists passing through Coquitlam on Barnet Highway will find a full sit-down Japanese meal available here.</p>

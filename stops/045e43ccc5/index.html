@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Vassili&#x27;s Bread Shop</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Courtenay</div>
 <p class="seo-desc">Vassili&#x27;s Bread Shop is a bakery located at 556 5th Street in the Comox Valley area of Vancouver Island. As a bread-focused shop, it would offer freshly baked goods suitable for restocking a touring cyclist&#x27;s supply. Very limited public information is available beyond its OSM entry.</p>

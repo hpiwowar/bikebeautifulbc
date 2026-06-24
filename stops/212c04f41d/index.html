@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Atomic Bike Shop</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Atomic Bike Shop is a repair-first bicycle shop in Vancouver, situated at the south end of the Granville Bridge and celebrating 20 years in business. Operated by a specialist named Steve, it handles everything from road and mountain bikes to BMX, cargo, and folding bikes with a focus on quality workmanship over retail sales. Touring cyclists will find a full repair and tune-up service, custom builds, and the ability to have bikes boxed up for travel.</p>

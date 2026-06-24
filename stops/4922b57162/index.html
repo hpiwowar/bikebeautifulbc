@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Turning Point</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Golden  ·  Casual</div>
 <p class="seo-desc">The Turning Point is a family-style restaurant in Golden, BC that has been a local institution for over 35 years. The menu is wide-ranging, spanning pizzas (including the locally celebrated Terminator Ridge), burgers, pasta dishes, butter chicken, and fish and chips, with weekly specials and a kids&#x27; menu. For touring cyclists rolling through the Columbia Valley, it offers a solid sit-down meal with the option to order online for pickup.</p>

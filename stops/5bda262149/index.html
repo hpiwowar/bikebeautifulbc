@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bridge Brewing Company</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  North Vancouver (North Shore)</div>
 <p class="seo-desc">Bridge Brewing Company is a North Vancouver craft brewery operating a taproom and tasting room at its original Charlotte Road location, one of three Bridge Brewing venues across the North Shore. The taproom pours a rotating lineup of core and seasonal house beers, and the site also hosts a playful &#x27;Bridge Arcade&#x27; experience. A keg rental program and private event space at a sister location round out the brewery&#x27;s community presence.</p>

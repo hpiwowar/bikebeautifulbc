@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kootenay Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Elkford</div>
 <p class="seo-desc">Kootenay Market is a supermarket serving Elkford, a small coal-mining town in the Elk Valley of the BC Kootenays. Elkford sits at the gateway to the Elk Lakes Provincial Park and along remote touring routes, making a full grocery resupply here strategically important for cycle tourists. As the apparent main grocery option in an isolated community, it likely stocks a broad range of provisions for multi-day trips.</p>

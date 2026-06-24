@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Charles Bailey Theatre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  West Trail  ·  Moderate</div>
 <p class="seo-desc">The Bailey Theatre is the primary performing arts venue for Trail and the surrounding Kootenays region, with a seating capacity of 721 and an intimate atmosphere where all seats have good sightlines. Operated by the Trail &amp; District Arts Council, it hosts a wide range of events from major touring acts to classical and jazz series. A smaller adjacent space, the Muriel Griffiths Recital Room, accommodates 80–100 people for chamber performances, meetings, and community events.</p>

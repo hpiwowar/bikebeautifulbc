@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Illecillewaet Campground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Glacier</div>
 <p class="seo-desc">A Parks Canada frontcountry campground sitting in the heart of Rogers Pass within Glacier National Park, with easy Trans-Canada Highway access and dramatic glaciated peaks all around; bear-country food protocols are strictly enforced and the site is summer-only at this elevation.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bean Around The World Coffees</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  North Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Bean Around The World Coffees is a BC-based independent coffee chain with over 35 years of history, roasting its own beans from a North Vancouver roastery. The Ambleside location sits on Marine Drive in West Vancouver, making it a natural stop for cyclists riding the coastal route between West Vancouver and North Vancouver. The brand sells coffee drinks, retail beans, brewing gear, and apparel alongside its in-store café experience.</p>

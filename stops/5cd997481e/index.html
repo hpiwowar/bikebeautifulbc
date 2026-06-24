@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tam&#x27;s Takeout</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Qualicum Bay  ·  Casual</div>
 <p class="seo-desc">Tam&#x27;s Takeout is a takeout restaurant located in the Vancouver Island and Gulf Islands region of British Columbia. Its name suggests a quick-service, grab-and-go format that could suit cyclists looking for a fast meal without a long sit-down wait. Beyond the name and OSM location pin, details about the menu or facilities are not currently available.</p>

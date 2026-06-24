@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Go To Shop</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Logan Lake</div>
 <p class="seo-desc">Go To Shop is a small department/general store located in Logan Lake, a compact mining and ranching community in BC&#x27;s Nicola Valley. OSM records it as a department store with limited hours, suggesting it serves as a general-purpose shop for local residents. For a touring cyclist, it appears to be the kind of catch-all community store that may stock a range of basic goods in an otherwise remote stretch of the Thompson Highlands.</p>

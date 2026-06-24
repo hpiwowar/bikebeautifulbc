@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">TransLink</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Bus / Public Transit</div>
 <p class="seo-desc">Greater Vancouver regional transit. Bikes accepted on all modes: buses (exterior front rack, 2-bike max), SeaBus (up to 6 bikes at peak), SkyTrain Canada Line (1 bike/car, all times), Expo and Millennium lines (2 bikes/car), and West Coast Express (2 bikes/car). No bike fee on any mode.</p>

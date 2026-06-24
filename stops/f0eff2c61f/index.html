@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gibsons Curling Club</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Gibsons  ·  Low</div>
 <p class="seo-desc">The Gibsons Curling Club is a non-profit community curling facility on the Sunshine Coast, founded in 1976 and now celebrating its 50th anniversary with over 200 members across seven leagues. Beyond the curling season, the club hosts summer flea markets, bonspiels, and venue rentals including a licensed lounge and commercial kitchen. It operates entirely through volunteers and keeps fees low to remain accessible to the whole community.</p>

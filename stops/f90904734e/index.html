@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Rock City Cycles</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Rock City Cycles is a full-service bicycle shop on the Island Highway North in Nanaimo, BC, carrying a broad range of bikes from road and gravel to electric and children&#x27;s models alongside a full parts and accessories catalog. Touring cyclists will find purpose-built touring stock readily available, including panniers, racks, frame bags, handlebar bags, fenders, and hydration systems. The shop runs a service department and offers Canada-wide parts shipping.</p>

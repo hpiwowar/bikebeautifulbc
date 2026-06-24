@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">McDonald&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Aldergrove  ·  Cheap eats</div>
 <p class="seo-desc">A McDonald&#x27;s fast food location on Fraser Highway in the Lower Mainland/Fraser Valley, offering burgers, fries, McCafé beverages, and drive-through service. As a franchise of Canada&#x27;s largest fast food chain, it provides takeout and drive-through options for travellers on this busy highway corridor. The corporate website offers no location-specific details about amenities relevant to touring cyclists.</p>

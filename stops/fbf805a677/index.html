@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ocean Palace</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Delta (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Ocean Palace is a long-established Chinese restaurant in the heart of Tsawwassen, serving authentic dishes for over 28 years with an emphasis on fresh ingredients and high standards. The extensive menu spans seafood, pork, poultry, beef, and vegetarian options, with popular items including special fried rice, chicken chow mein, and ginger beef. No-MSG preparation is available on request, and dinner combo packages cater to groups of varying sizes.</p>

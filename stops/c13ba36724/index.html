@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BPL: McGill Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Burnaby (North Shore)  ·  Free</div>
 <p class="seo-desc">McGill is a branch of Burnaby Public Library situated at the corner of Albert Street and Alpha Street, near the Willingdon Urban Trail and Trans Canada Trail cycling corridors. The branch hosts rotating art exhibitions from the Burnaby Art Gallery and houses the City of Burnaby Archives, which holds municipal records dating back to 1892. For touring cyclists, it offers fully accessible public washrooms, free Wi-Fi, and public computers in a welcoming public space.</p>

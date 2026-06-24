@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Harbour Air Seaplanes</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Flight</div>
 <p class="seo-desc">Floatplane service connecting Vancouver, Victoria, Nanaimo, Salt Spring Island, and other coastal BC destinations. Bike transport on space-available basis only; advance booking required; 50 lb weight limit; no trailers. Contact before booking.</p>

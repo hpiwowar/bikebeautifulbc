@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">JJ Bean</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">JJ Bean Coffee Roasters is a Vancouver-born independent specialty coffee brand established in 1996, roasting high-quality single-origin and blended coffees in small batches daily across multiple Metro Vancouver cafés. The Cambie Street location is a full-service café offering all-day breakfast and lunch made fresh in-house alongside its renowned coffee program, with outdoor seating for customers.</p>

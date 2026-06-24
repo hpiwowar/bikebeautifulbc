@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Freshslice Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Maple Ridge  ·  Cheap eats</div>
 <p class="seo-desc">Freshslice Pizza is a BC-based pizza chain known for its any-toppings-included slice model, with this location inside Valley Fair Mall in the Fraser Valley. Touring cyclists stopping here can grab a quick, filling slice or a full pie for takeout. The chain also offers delivery, catering, and a rewards app for frequent visitors.</p>

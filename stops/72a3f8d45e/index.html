@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Starbucks</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">A Starbucks Coffee location on Southwest Marine Drive in south Vancouver, part of the international chain that notably expanded from Seattle to Vancouver in the late 1980s. The store sits on a busy arterial corridor with outdoor seating, making it a recognizable waypoint for cyclists traveling through this part of the city. A full menu of espresso drinks, seasonal Refreshers, and light food items is available.</p>

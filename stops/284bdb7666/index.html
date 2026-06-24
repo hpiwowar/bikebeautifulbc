@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lulu Island Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Lulu Island Liquor Store is a retail alcohol shop located in Richmond on Lulu Island, the main landmass of the municipality. For touring cyclists passing through the Richmond area, it offers a convenient stop to pick up beverages. The OSM record notes no drive-through, suggesting a standard walk-in retail format.</p>

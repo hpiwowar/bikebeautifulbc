@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Funky Monkey Food Corp.</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Port Moody  ·  Cheap eats</div>
 <p class="seo-desc">The Funky Monkey Food Corp. is a sandwich-focused cafe on Murray Street in Port Moody, BC. It operates as a compact neighbourhood lunch spot with no outdoor seating. Touring cyclists passing through Port Moody&#x27;s waterfront corridor may find it a convenient midday stop.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Popeyes</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Burnaby  ·  Cheap eats</div>
 <p class="seo-desc">Popeyes Louisiana Kitchen is a national fried-chicken fast food chain located on Kingsway in Burnaby. This dine-in and takeout location seats 36 guests and sits along a busy urban corridor that connects several cycling routes across the city. For a touring cyclist, it offers a quick hot meal stop without a drive-through queue.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Great Bear Pub &amp; Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Burnaby</div>
 <p class="seo-desc">The Great Bear Pub is a progressive neighborhood pub on Kingsway in Burnaby, offering a modern pub menu with live entertainment six nights a week. It features a games room with Darts Live and a pool table that can be booked for private events, and it hosts regular community programming including karaoke, trivia, and open jam nights. Online ordering for pickup and takeout is available.</p>

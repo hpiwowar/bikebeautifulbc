@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Silvery Slocan Museum</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  New Denver  ·  Free</div>
 <p class="seo-desc">The Silvery Slocan Museum occupies the historic former Bank of Montreal building on Main Street in New Denver, a community landmark for over 100 years. It showcases the Slocan Lake District&#x27;s mining, logging, and agricultural heritage, highlighted by a recently restored Lancet motor launch. The museum also co-hosts the local Chamber of Commerce Visitor Info Centre, making it a natural cultural stop for cyclists passing through the Slocan Valley.</p>

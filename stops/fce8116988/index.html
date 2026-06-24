@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Thai Cook</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Nanaimo (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Thai Cook is an authentic Thai restaurant on Victoria Crescent in downtown Nanaimo, serving dine-in, takeout, and delivery. The menu spans curries, noodles, stir-fries, and appetizers with spice levels ranging from mild to Thai hot. Many dishes are gluten-free, and multiple tofu and vegetable protein options appear throughout both the lunch and dinner menus.</p>

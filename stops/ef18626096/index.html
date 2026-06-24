@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">One Saigon</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">One Saigon is a Vietnamese fast food spot at 979 Hornby Street in downtown Vancouver, serving pho, salad rolls, banh mi baguettes, and rice vermicelli dishes. The restaurant offers online ordering with 15-minute pickup, making it a practical fuel stop for cyclists navigating the city core. The focused menu includes several vegetarian choices across multiple categories.</p>

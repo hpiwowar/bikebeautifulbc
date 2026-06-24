@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wang&#x27;s Shanghai Cuisine</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">Wang&#x27;s Shanghai Cuisine is a no-frills Kingsway institution serving handmade Shanghainese dumplings, pan-fried pork buns, and dan dan noodles to a loyal local following. The kitchen turns orders fast and the atmosphere evokes the casual energy of a street-food stall. Cash is the only accepted payment method, so cyclists should come prepared.</p>

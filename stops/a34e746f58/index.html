@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Belfry Theatre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Victoria (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The Belfry Theatre is a professional theatre company housed in a beautifully restored 19th-century heritage church in Victoria&#x27;s eclectic Fernwood neighbourhood. Now celebrating its 50th anniversary, it produces contemporary plays from the international repertoire with a focus on new Canadian work. The intimate venue places every audience member no more than 8 metres (25 feet) from the stage, making for an unusually close and engaging experience.</p>

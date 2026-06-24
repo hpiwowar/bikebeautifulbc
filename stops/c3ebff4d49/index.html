@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Burns Lake Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Burns Lake  ·  Free</div>
 <p class="seo-desc">Burns Lake Public Library is the community library serving Burns Lake and the surrounding Lakes District in BC&#x27;s Central Interior. It offers public computers, printing, photocopying, exam invigilation, meeting room rentals, and an extensive digital media collection. For touring cyclists, it represents a potential rest stop in a smaller community that sits along routes through the Central Interior.</p>

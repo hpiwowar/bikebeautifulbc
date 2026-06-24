@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">HUB Co. Brewing</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Chilliwack  ·  Cheap eats</div>
 <p class="seo-desc">HUB Co. Brewing is a craft brewery with an expansive tasting room situated on the historic North Railway Avenue in downtown Mission, BC. The venue pours its own house-brewed beers alongside a food menu, and regularly hosts community events including trivia nights, gaming evenings, and creative workshops. Cyclists passing through the Fraser Valley corridor will find it a lively local gathering spot with a distinctly neighbourhood feel.</p>

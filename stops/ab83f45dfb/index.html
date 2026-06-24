@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Damiko Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Damiko Sushi is a Japanese restaurant occupying a retail unit on King George Boulevard in Surrey, BC. It is the sole remaining open location following the permanent closure of the Langley branch, and offers both dine-in service and online ordering. Touring cyclists riding the King George corridor will find it a convenient stop for a sushi meal.</p>

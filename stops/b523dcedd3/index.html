@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Newton Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Tsawwassen (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Newton Pizza is a local pizza chain with several locations across the Surrey and North Delta area of British Columbia, built on a reputation for fresh ingredients and house-perfected recipes. The Surrey/North Delta outlet on 128 Street serves the surrounding community with dine-in and online ordering. Touring cyclists passing through the area will find it a straightforward stop for a quick hot meal.</p>

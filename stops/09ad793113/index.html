@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Free Bird Beer &amp; Wine Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Winery / Cidery  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Free Bird Table &amp; Bar is a Southern-inspired restaurant in Richmond serving fried chicken, comfort food, and a full happy hour menu in a rustic, welcoming setting. The venue also hosts weddings and large events. A second location operates in Squamish. The OSM record tags this address as a beer/wine store (shop=alcohol), which may reflect a separate but co-branded liquor retail operation adjacent to the restaurant.</p>

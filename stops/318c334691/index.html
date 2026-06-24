@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Coal Harbour Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Coal Harbour Liquor Store is a licensed wine and spirits retailer (BC Liquor License 195427) in the Coal Harbour neighbourhood of downtown Vancouver. The shop operates both a walk-in retail location and a Shopify-based online delivery service, with a curated focus on wine. Touring cyclists passing through the area could stop to pick up beverages, though the business&#x27;s public-facing identity centres strongly on home delivery.</p>

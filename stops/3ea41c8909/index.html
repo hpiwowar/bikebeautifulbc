@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pho &amp; Roll by Wooden Fish</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Pho &amp; Roll by Wooden Fish is a Vietnamese restaurant on Cambie Street in Vancouver, offering dine-in with table reservations and takeout pickup. The restaurant presents itself as a taste-forward Vietnamese experience, and also offers catering services. It sits on a busy arterial street convenient to several cycling routes in the Cambie corridor.</p>

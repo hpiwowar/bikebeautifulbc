@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mayne Island Camping</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Sidney (Metro Vancouver)</div>
 <p class="seo-desc">A tenter-only walk-in campground on Mayne Island with 15 sites strung along 1,800 ft of sand-and-pebble beach and undeveloped forest overlooking Miners Bay; outhouses only (plus a celebrated outdoor tree shower), a 1–4 minute carry from the car park, and ferry access required to reach the island. Open April to October, with groceries and a pub 1 km away.</p>

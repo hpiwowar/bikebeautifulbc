@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Outpost Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Yennadon</div>
 <p class="seo-desc">The Outpost Liquor Store is a retail liquor shop in Maple Ridge operated by Springs Group, a regional hospitality company running 13+ liquor stores and several brew pubs across the Lower Mainland and Fraser Valley. The store stocks a hand-picked selection of cold beer, wine, and spirits and offers online ordering with curbside pickup and delivery. It sits on Dewdney Trunk Road, a common cycling corridor through Maple Ridge.</p>

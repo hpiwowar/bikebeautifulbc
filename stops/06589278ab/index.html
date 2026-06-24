@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hope Mountain Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Hope  ·  Cheap eats</div>
 <p class="seo-desc">Hope Mountain Cafe is a breakfast and lunch destination in Hope, BC, founded in 2018 with a menu inspired by global flavors and fresh, sustainable ingredients. The cafe serves specialty coffee, all-day breakfast, sandwiches, and desserts, positioning itself as a solid full-meal stop for cyclists moving through the Fraser Canyon corridor. Online ordering and takeout are available for those who need to eat on the move.</p>

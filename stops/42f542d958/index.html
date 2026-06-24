@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Junction</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">The Junction is an LGBTQ-primary pub situated on Davie Street in Vancouver&#x27;s West End, the heart of the city&#x27;s queer village. It operates as a full-service bar with a food menu, lounge drinks, and a regular events program including a guestlist system for special occasions. The venue is smoke-free, wheelchair accessible, and offers both indoor and outdoor seating.</p>

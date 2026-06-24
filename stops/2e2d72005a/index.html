@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Esquimalt Roasting Company</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Esquimalt (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">A small-batch specialty coffee roastery with an on-site cafe nestled in the heart of Esquimalt on Vancouver Island. Coffee is roasted locally with a focus on single-origin and blended beans sourced from Rwanda, Guatemala, Colombia, and Ethiopia. They recently opened a second location called ERC Gateway on Esquimalt Road.</p>

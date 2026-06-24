@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">River Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">River Sushi is a Japanese restaurant on West Broadway serving a broad menu of sushi, sashimi, nigiri, and tempura in both dine-in and takeout formats. The restaurant emphasizes fresh ingredients and authentic Japanese cuisine, and has built a local following in the Vancouver community. Touring cyclists heading along the Broadway corridor will find a wide variety of options including vegetarian-friendly rolls and bento-style rice bowls.</p>

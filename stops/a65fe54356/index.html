@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mansons Landing Community Hall</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Mansons Landing</div>
 <p class="seo-desc">Mansons Hall is a historic community centre on southern Cortes Island that has served as a gathering place since 1922. The hall houses a main performance/event space, a commercial kitchen, a cafe room, a yoga studio, a free public computer station, a retail boutique, and several community organizations including a post office and community radio station. Touring cyclists reaching Cortes Island will find it a lively hub with weekly markets, live music, free community lunches, and a skate park on the grounds.</p>

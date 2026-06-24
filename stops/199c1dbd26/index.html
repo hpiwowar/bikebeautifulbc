@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Delight Street Eats</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Delta (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Delight Street Eats is an Indian street food restaurant in Delta serving an extensive menu of chaat, biryani, thalis, and Asian fusion items from breakfast through late night. The kitchen accommodates vegetarian, vegan, gluten-free, dairy-free, and nut-free diets with menu filters available on their online ordering platform. Dine-in, pickup, and delivery within 15 km are all supported.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Best Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">The Best Grill is a casual American-style diner in Langley Township serving all-day breakfast alongside a broad menu of homemade burgers, eggs benedicts, and sandwiches. The extensive made-from-scratch menu — including multiple burger builds and a full eggs benedict lineup — makes it a solid refuelling stop for cyclists riding the Fraser Valley. Online ordering and delivery are available through the Focal Eats platform.</p>

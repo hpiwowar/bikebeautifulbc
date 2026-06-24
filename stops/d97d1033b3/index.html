@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Flavor Balance Espresso Bar</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  New Westminster (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Flavour Balance Espresso Bar is a neighbourhood café on Belmont Street in North Vancouver offering espresso drinks and vegetarian-friendly food, with both indoor and outdoor seating. The no-smoking policy and patio make it a potentially pleasant rest stop for cyclists passing through the area.</p>

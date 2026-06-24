@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Japolo</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">Pho Japolo is a proudly family-run Vietnamese and Japanese fusion restaurant in business since 1995, now with four locations across Metro Vancouver. The North Vancouver spot on Marine Drive serves classic pho in multiple configurations alongside inventive sushi creations like sushi pizza and sushi burgers that have made it a long-standing neighbourhood favourite. Generous portions and a welcoming, homey atmosphere make it a solid stop for a substantial meal after a ride.</p>

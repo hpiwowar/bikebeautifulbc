@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Milestones</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Coquitlam  ·  Casual</div>
 <p class="seo-desc">Milestones is a Canadian bar-and-grill chain offering familiar North American cuisine with a refined twist, operating out of a two-storey retail building on Barnet Highway in Coquitlam. The restaurant features a full sit-down dining room and bar, making it a reasonable stop for a meal after a ride through the Tri-Cities area. Online ordering and delivery are supported, indicating takeout is also an option.</p>

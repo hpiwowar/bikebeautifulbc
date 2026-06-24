@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">McDonald&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Chilliwack  ·  Cheap eats</div>
 <p class="seo-desc">A McDonald&#x27;s Canada franchise location in Chilliwack on Clearbrook Road, offering burgers, chicken, McCafé beverages, and breakfast. The site includes a drive-through lane for cyclists wanting quick service without dismounting. As a national chain with an in-app rewards program, it offers a reliable calorie stop on routes through the Fraser Valley.</p>

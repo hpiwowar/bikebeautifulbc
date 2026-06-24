@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Browns Crafthouse</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Fort St. John  ·  Casual</div>
 <p class="seo-desc">Browns Crafthouse is a casual sit-down restaurant and craft beer bar in Fort St. John, part of the BC-based Browns Restaurant Group chain. The Fort St. John location sits in one of Northern BC&#x27;s larger service centres along the Alaska Highway corridor, making it a natural resupply stop for touring cyclists passing through the Peace River region. The menu spans full food service and an extensive beer selection, with weekend brunch also available.</p>

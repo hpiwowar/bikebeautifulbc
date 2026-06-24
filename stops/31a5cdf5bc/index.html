@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Country Grocer</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Country Grocer is a family-owned supermarket chain founded on Vancouver Island in the 1980s, now operating eleven stores across Greater Victoria, Salt Spring, and the Cowichan Valley. The Esquimalt location is a full-service store with deli, bakery, seafood, and fresh produce departments, emphasizing locally sourced BC products. It is a dependable resupply stop for touring cyclists riding through the Greater Victoria area.</p>

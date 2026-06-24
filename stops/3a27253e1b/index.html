@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Azure Play Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Azure Play Cafe is a dessert-focused cafe located in a unit at 9100 Garden City Road in Richmond, BC. The space is wheelchair accessible and sits within a larger commercial complex. Cyclists in the Garden City area could use it as a sweet-treat stop, though the indoor-only seating (no outdoor seating confirmed via OSM) may limit bike visibility.</p>

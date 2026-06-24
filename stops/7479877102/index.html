@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Grizzli Winery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Winery / Cidery  ·  Kelowna</div>
 <p class="seo-desc">A family-owned estate winery in the heart of West Kelowna&#x27;s wine country, housed in an architecturally award-winning building with a year-round art gallery. The on-site restaurant 31 Charkay serves contemporary Canadian cuisine with vineyard views, making it a rewarding stop along Boucherie Road for touring cyclists exploring the Okanagan wine routes.</p>

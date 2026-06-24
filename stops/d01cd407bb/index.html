@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Cumberland</div>
 <p class="seo-desc">BC Liquor Store is a provincially owned and operated retail liquor outlet, part of the BCLIQUOR chain of 198 stores across British Columbia. This single-storey location on Dunsmuir Avenue stocks a broad range of wine, beer, spirits, coolers, and ciders. It is wheelchair accessible and accepts cash, credit, and debit, making it a convenient resupply stop for touring cyclists needing to pick up beverages.</p>

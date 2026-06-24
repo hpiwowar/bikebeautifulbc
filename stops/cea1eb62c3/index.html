@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Threefold Brewery</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  North Vancouver (North Shore)</div>
 <p class="seo-desc">Threefold is a brewery collective on Powell Street in East Vancouver, bringing three independent craft breweries together under one roof alongside Neapolitan pizza. The taproom pours a rotating tap list of craft beers and other drinks, with a food menu that gives cyclists the chance to sample multiple local producers in a single stop. The menu includes a wide range of vegetarian, vegan, and gluten-free options alongside more conventional fare.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Boston Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Boston Pizza Broadway is a Canadian chain family restaurant and sports bar located on West Broadway in Vancouver, celebrating 60 years as Canada&#x27;s largest casual dining brand. The menu spans gourmet pizzas, pasta, wings, sandwiches, and shareables, with vegan and GlutenWise® options available. Touring cyclists will find a full sit-down dining experience alongside takeout and delivery service on a busy urban corridor.</p>

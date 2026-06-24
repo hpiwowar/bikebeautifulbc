@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Green Leaf Sushi Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">Green Leaf Sushi is a Japanese-focused restaurant chain with four Lower Mainland locations; the North Vancouver branch is situated in the Lonsdale neighbourhood. The menu spans what the restaurant describes as traditional favourites and innovative creations. Indoor seating is available and phone-in takeout orders are accepted.</p>

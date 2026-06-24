@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Heritage Asian Eatery</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Heritage Asian Eatery is a casual downtown Vancouver spot in the Financial District serving classic Chinese comfort food with local ingredients in a communal, laid-back setting. The Pender Street location seats up to 60 guests and also accommodates private event bookings. It offers dine-in, takeout, and a relaxed vibe suited to a quick refuel stop.</p>

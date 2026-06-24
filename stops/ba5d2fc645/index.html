@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Farm to Table</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Farm to Table is a full-service grocery store in downtown Vancouver&#x27;s Richards Street corridor, offering an extensive range of conventional and plant-based groceries, fresh produce, dairy, meat, deli, and bakery products. It operates as both a physical retail store and an online store (currently directing online orders through third-party delivery apps). Its broad product range — including organic produce, specialty items, and ready-to-eat meals — makes it a useful resupply stop for touring cyclists passing through the city.</p>

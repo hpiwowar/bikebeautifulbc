@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Thai Food Near Me</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Thai Food Near Me is an authentic Thai restaurant on Fort Street in downtown Victoria, serving a broad menu of traditional appetizers, curries, stir-fries, and noodle dishes prepared with fresh ingredients and classic techniques. The restaurant emphasizes communal, family-style dining rooted in Thailand&#x27;s regional culinary heritage, and also offers online ordering for takeout and delivery.</p>

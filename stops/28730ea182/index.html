@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Khao San Thai Street Food</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Khao San Thai Street Food is a Thai street-food restaurant on Commercial Drive, one of Vancouver&#x27;s most vibrant and cycling-friendly main streets. The name references Bangkok&#x27;s famous Khao San Road, suggesting a focus on casual, street-style Thai dishes. Commercial Drive is well-served by bike lanes and is a natural stop on any urban cycling route through East Vancouver.</p>

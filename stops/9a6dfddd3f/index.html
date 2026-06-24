@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Legion</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Lillooet  ·  Casual</div>
 <p class="seo-desc">The Royal Canadian Legion Lillooet Branch #66 is a community hub serving veterans and the broader public in Lillooet. As part of the BC/Yukon Command&#x27;s network of 145 branches, it functions as a social club with a bar and meeting facilities. Cyclists passing through Lillooet may find it a welcoming local stop, though amenities for touring cyclists are unconfirmed.</p>

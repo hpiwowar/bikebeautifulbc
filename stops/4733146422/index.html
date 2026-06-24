@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">TBC Indoor Racing</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Richmond (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">TBC Indoor Racing is Greater Vancouver&#x27;s longest-running indoor go-kart facility, operating since 2000 in a Richmond warehouse. It claims the distinction of being the last venue in the Lower Mainland to offer real gas-powered racing, with karts reaching 75 km/hr on an F1-inspired 11-turn track. Private banquet halls, meeting rooms, and on-site pizza make it a self-contained event venue popular for corporate outings and celebrations.</p>

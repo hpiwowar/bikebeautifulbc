@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wild Coast Nature Refuge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Vancouver (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The Wild Coast Nature Refuge is a 32-acre waterfront conservation area on Bowen Island at Cape Roger Curtis, acquired by the Bowen Island Conservancy in December 2020. It protects a rare coast bluff ecosystem where whales can be spotted just offshore from lichen-covered cliffs, and a Conservation Covenant ensures permanent protection of its biological diversity. Public access is limited to a loop walking trail connecting viewpoints on the coastal bluffs.</p>

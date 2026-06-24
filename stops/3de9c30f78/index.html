@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Modo Car Share</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Car Share / Rental</div>
 <p class="seo-desc">Co-operative car share with hundreds of home locations across the Lower Mainland (Vancouver, Burnaby, Surrey, Richmond, Coquitlam and more), Victoria area (including Esquimalt, Oak Bay, Saanich, Sidney), Nanaimo, Squamish, and Kelowna. Also at major BC Ferries terminals. Open to non-BC residents — N licence or equivalent from any jurisdiction required. Some vehicles have exterior bike racks; SUVs and minivans available for carrying bikes inside.</p>

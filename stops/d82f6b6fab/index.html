@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Rum Island</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Sidney</div>
 <p class="seo-desc">Rum Island (Isle-de-Lis Marine Provincial Park) is a small Gulf Islands park near Sidney, reachable only by boat or kayak; there is no road or trail access, making it effectively off-limits for loaded touring cyclists.</p>

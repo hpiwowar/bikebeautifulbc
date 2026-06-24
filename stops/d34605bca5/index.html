@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mid-Island Liquor</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Mid Island Liquor is part of Mid Island Co-op, a locally-owned co-operative with 18 locations serving communities across Vancouver Island and the Gulf Islands. This Nanaimo location on Haliburton Street offers a retail selection of beer, wine, and spirits from a co-operative that emphasizes local products and community involvement. Touring cyclists will find it a convenient stop for resupply in central Nanaimo.</p>

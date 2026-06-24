@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ohana&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Sun Peaks</div>
 <p class="seo-desc">Ohana Deli is a locally owned deli and grocery market in Sun Peaks Village, founded by resident Bobbe Lyall and inspired by the Hawaiian concept of extended family. The store carries daily essentials alongside a curated selection of local and international fine foods, house-made take-and-bake meals, fresh salads, and sharing platters. It is a practical resupply stop for cyclists passing through the resort, offering both quick hot meals and groceries.</p>

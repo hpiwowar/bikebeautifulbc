@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mantu</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Mantu is an Afghan cuisine restaurant in downtown Victoria serving traditional dishes including grilled kebabs, bolani (stuffed pastries), and the eponymous mantu dumplings. The menu spans meat, vegetarian, and vegan options and is available for online ordering. The restaurant also offers catering services for events.</p>

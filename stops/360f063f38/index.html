@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Heritage Park</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Terrace  ·  Low</div>
 <p class="seo-desc">Heritage Park Museum is a living history museum set on nearly 2 acres overlooking the City of Terrace, featuring several historical log buildings and artifacts drawn from across the region. Exhibits weave together themes of mining, telegraph lines, logging, pioneer life, and farming, representing the area&#x27;s history up to 1950. The museum offers guided public tours, audio tours in English and French, and a full range of accessibility-focused options including wheelchair-accessible and sensory-friendly tours.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Umi Sushi Express</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Kelowna (Okanagan)  ·  Cheap eats</div>
 <p class="seo-desc">Umi Sushi Express is a quick-service Japanese restaurant inside Orchard Park Shopping Centre, Kelowna&#x27;s major indoor mall hosting over 170 stores and services. The concept is built around fresh, healthy Japanese cuisine for customers on the move, making it a practical stop for a cyclist passing through the Harvey Avenue corridor.</p>

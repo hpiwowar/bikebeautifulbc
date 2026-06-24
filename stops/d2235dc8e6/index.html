@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ricky&#x27;s Country Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Chilliwack  ·  Casual</div>
 <p class="seo-desc">Ricky&#x27;s Country Restaurant is a sit-down family-style diner operating under the ABC Country Restaurants brand, a chain known for comfort-food classics and a homey atmosphere. The Mission-area location sits along a highway corridor that touring cyclists on the Fraser Valley route may pass through. The chain emphasises fresh ingredients and generous portions in a relaxed, all-day dining setting.</p>

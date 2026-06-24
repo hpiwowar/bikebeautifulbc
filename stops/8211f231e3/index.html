@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">AfterShock Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Bella Bella  ·  Cheap eats</div>
 <p class="seo-desc">AfterShock Cafe is a coffee shop located in the remote North Coast and Haida Gwaii region of British Columbia, a part of the province with very limited services for touring cyclists. Situated at 69 Upns Avenue, it offers a potential rest stop in an area where cafes are rare. Its Facebook presence suggests an active local establishment, though details about its offerings are unconfirmed.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Yale Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Yale  ·  Free</div>
 <p class="seo-desc">Yale Library is a small public branch of the Fraser Valley Regional Library system, situated in the historic village of Yale along the Fraser Canyon — a corridor popular with touring cyclists. Part of a 25-branch regional network, it offers free public computers and WiFi alongside a children&#x27;s space and accessible facilities. For cyclists passing through this otherwise sparse stretch of Highway 1, it provides a rare opportunity for a rest, connectivity, and a 24-hour item return drop box.</p>

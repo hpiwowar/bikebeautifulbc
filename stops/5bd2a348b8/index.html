@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Treehouse Health</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Specialty / Health Food  ·  Hope</div>
 <p class="seo-desc">A locally owned health food and wellness shop that has been operating in downtown Hope, BC for 30 years. The store carries a wide variety of spices, loose and bagged herbal teas, a refillery station for soaps and essential oils, and specialty items like Darn Tough socks and hand-woven African baskets. Located on the Trans-Canada corridor, it offers a distinctive browsing stop though it is more of a specialty wellness shop than a conventional grocery.</p>

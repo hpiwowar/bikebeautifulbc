@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Global Supermarket</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Oliver</div>
 <p class="seo-desc">A multicultural grocery store in the southern Okanagan sourcing fresh produce from local farms and stocking global ingredients to serve the region&#x27;s diverse community. The store is family-owned and positions itself as a neighbourhood anchor in the Oliver-to-Penticton corridor — a stretch of Highway 97 popular with touring cyclists. Riders will find a full-range grocery offering suitable for resupply in a part of BC better known for wineries than supermarkets.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kakai Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Kakai Sushi is a Japanese restaurant with two Greater Vancouver locations, offering dine-in and online ordering at its East Broadway location near Commercial Drive. The restaurant focuses on authentic Japanese cuisine with contemporary atmosphere and table reservations available. Cyclists on the Broadway corridor will find it a convenient stop for a sit-down meal or takeout.</p>

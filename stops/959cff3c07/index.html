@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Victoria Sushi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  New Westminster  ·  Casual</div>
 <p class="seo-desc">Victoria Sushi is a Japanese and Asian restaurant tucked into the Victoria Hill neighbourhood of New Westminster, billing itself as &#x27;The Friendly Neighborhood Sushi Restaurant.&#x27; It offers fresh, shareable plates made with Japanese ingredients alongside sake, beer, and wine. Takeaway and online ordering are available, making it a practical food stop for cyclists moving through New Westminster.</p>

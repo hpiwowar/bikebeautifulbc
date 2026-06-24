@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lee Garden Seafood Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Lee Garden Seafood Restaurant is a Chinese seafood restaurant on Kingsway in Burnaby, serving dim sum, lunch specials, and a full Chinese-Asian menu, with a second location in Coquitlam. The restaurant offers indoor air-conditioned dining with reservations accepted, providing a comfortable sit-down meal option for cyclists in the Burnaby area. Pickup orders are also available for those continuing on the road.</p>

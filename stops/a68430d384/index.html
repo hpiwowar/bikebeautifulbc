@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Glenora Community Hall</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Duncan (Metro Vancouver)</div>
 <p class="seo-desc">A heritage community hall built in 1924 in the Cowichan Valley, four minutes southwest of Duncan on Vancouver Island. The hall sits near the Cowichan Valley Trail (part of the Trans-Canada Trail) in a rural area known for vineyards, farms, and artisan studios. It is managed by the Glenora Community Association and used for community social events and private rentals.</p>

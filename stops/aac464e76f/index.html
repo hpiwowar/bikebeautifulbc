@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushi Giwa</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">Sushi Giwa is a Japanese sushi restaurant on Hastings Street in Burnaby serving a full menu from late morning through the evening seven days a week. The restaurant offers online ordering and occasional promotional deals. It sits along a busy commercial corridor that touring cyclists travelling the Hastings Street corridor may find convenient for a sit-down meal.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Springwater Lodge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Mayne Island (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Springwater Lodge is a pub located on what appears to be Mayne Island in British Columbia&#x27;s Gulf Islands, based on its coordinates and Facebook URL. As a pub on a Gulf Islands ferry route, it would likely serve as a natural stop for cycle tourists travelling between islands. No additional detail about the venue could be confirmed due to the Facebook page being inaccessible during prefetch.</p>

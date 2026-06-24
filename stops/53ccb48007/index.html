@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Patricia Bay Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Visitor Centre  ·  Sidney (Metro Vancouver)</div>
 <p class="seo-desc">The Patricia Bay Visitor Centre is operated by the Saanich Peninsula Chamber of Commerce and serves as a tourism information office on the Patricia Bay Highway corridor between Victoria and the Swartz Bay ferry terminal. It is a practical first or last stop for cyclists arriving or departing via the BC Ferries route, offering regional orientation for Sidney, North Saanich, and Central Saanich. The Chamber has served the peninsula since 1912 and represents over 250 local businesses.</p>

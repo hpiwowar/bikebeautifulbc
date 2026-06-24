@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Emerald Taxi Ltd.</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Taxi / Ridehail  ·  Prince George</div>
 <p class="seo-desc">Emerald Taxi is a 24/7 on-demand taxi service based in Prince George, BC, serving the city, local airports, hotels, and other destinations. No bike policy is stated on their website, though accessible vans are in the fleet.</p>

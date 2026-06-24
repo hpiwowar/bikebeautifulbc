@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Everything Wine</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Winery / Cidery  ·  North Vancouver (North Shore)</div>
 <p class="seo-desc">Everything Wine is a BC-based specialty wine and spirits retailer offering a broad selection of wines by region and varietal, beer, cider, and spirits. The North Vancouver location is part of a multi-store chain that also runs a wine club, corporate gifting, and event consultation services. Touring cyclists exploring the North Shore could stop here to pick up local BC wines or craft beverages for the road.</p>

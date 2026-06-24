@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Liberty Wine Merchants</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Winery / Cidery  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Liberty Wine Merchants is one of the largest independent private fine wine retail chains in Western Canada, operating since 1986 with six Metro Vancouver locations. The Commercial Drive shop sits on one of Vancouver&#x27;s most vibrant and cycling-friendly corridors, stocking an extensive selection of wines, spirits, craft beer, cider, and sake. Cyclists exploring East Van could stop in for a BC bottle to take back to camp or a local accommodation.</p>

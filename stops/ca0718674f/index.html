@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Black Pearl Bakery &amp; Pizzeria</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Lazo</div>
 <p class="seo-desc">The Black Pearl Bakery &amp; Pizzeria is a combined bakery and pizzeria on Ryan Road East on Vancouver Island, offering baked goods alongside pizza. For a touring cyclist, it represents a convenient roadside food stop where a hot meal or fresh baked snack can break up a long day in the saddle. The dual bakery-and-pizzeria format suggests varied food options beyond what a standard convenience stop would offer.</p>

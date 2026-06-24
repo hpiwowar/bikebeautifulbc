@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Subway</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Crescent Valley  ·  Cheap eats</div>
 <p class="seo-desc">This Subway franchise sits on Columbia Avenue in Castlegar and offers the full lineup of Footlong and 6&quot; sandwiches, wraps, and salads alongside breakfast options. It features a drive-through lane and supports multiple ordering modes including in-restaurant dining, curbside pickup, and delivery. A convenient calorie stop for cyclists passing through the Castlegar corridor on a long touring day.</p>

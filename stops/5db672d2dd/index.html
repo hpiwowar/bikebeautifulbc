@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tom&#x27;s Food Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Surrey</div>
 <p class="seo-desc">Tom&#x27;s Food Market is a convenience and food market on 148 Street in the Surrey area of Metro Vancouver. As a neighbourhood food market, it could serve as a basic resupply point for cyclists travelling through this urban corridor. Very little detail about the store&#x27;s offerings is publicly available.</p>

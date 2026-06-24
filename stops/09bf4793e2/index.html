@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sidney Museum and Archives</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Sidney (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The Sidney Museum and Archives, established in 1971, preserves and displays historical artifacts and archival materials from Sidney, North Saanich, and the Saanich Peninsula. Located in the Lower Level of the Olde Post Office Building on Beacon Avenue, it features rotating exhibits including a current travelling show on Chinese Canadian history co-produced with the Chinese Canadian Museum. Admission is by donation, making it an accessible cultural stop for touring cyclists passing through Sidney.</p>

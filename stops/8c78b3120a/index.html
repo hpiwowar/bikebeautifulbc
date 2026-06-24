@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fuggles Beer Co.</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Fuggles Beer Co. is Richmond&#x27;s only brewery, producing award-winning craft beers served fresh in their tasting room. The venue features both indoor and outdoor reservable space, a hot food menu, and a dog-friendly patio — a natural gathering point for cyclists exploring the Richmond dyke trail network. Takeout is also available via DoorDash.</p>

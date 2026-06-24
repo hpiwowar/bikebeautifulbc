@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fluffle Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Fluffle Cafe is a cafe located in a commercial unit on Cambie Road in Richmond, BC. With only an Instagram presence and no dedicated website, details about its offerings are limited, but it operates in a multi-unit commercial building that may serve a surrounding business or residential community. Touring cyclists passing through Richmond&#x27;s Cambie Road corridor may find it a convenient stop.</p>

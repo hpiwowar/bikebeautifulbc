@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Banana Grove Market &amp; Deli</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Vancouver</div>
 <p class="seo-desc">Banana Grove Market &amp; Deli is a full-service neighbourhood grocery store in East Vancouver, offering fresh produce, a deli counter, and a dedicated meat department with weekly specials. The store operates seven days a week and stocks a broad range of pantry staples alongside fresh and prepared deli items. It serves as a solid resupply point for touring cyclists passing through the Renfrew-Collingwood area of Vancouver.</p>

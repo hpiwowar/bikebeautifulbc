@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Coast Gravity Bike Park</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Selma Park  ·  Low</div>
 <p class="seo-desc">Coast Gravity Park is a dedicated mountain bike park in Sechelt, BC, on BC&#x27;s Sunshine Coast, purpose-built for gravity-oriented trail riding. The park offers bike rentals, enabling visitors who arrive without their own equipment to participate, and runs private bookings and organized events in addition to regular day passes. It is one of the few ticketed MTB bike parks on the Sunshine Coast, making it a notable destination for cycling tourists in the region.</p>

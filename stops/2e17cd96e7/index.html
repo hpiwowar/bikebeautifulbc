@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Osmow&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Surrey (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Osmow&#x27;s is a Canadian fast-food chain founded by Egyptian immigrant Sam Osmow, now operating over 215 locations across Canada and the United States. The Surrey location serves Mediterranean-inspired shawarma wraps, plates, and salads with a range of proteins. It is a quick and filling stop for touring cyclists passing through the 88 Avenue corridor in Surrey.</p>

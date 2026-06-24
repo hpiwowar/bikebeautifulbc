@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Earl of Sandwich</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Langley  ·  Cheap eats</div>
 <p class="seo-desc">Earl of Sandwich is a quick-service sandwich chain with a Langley location inside Willoughby Town Centre. The chain is known for hot, freshly baked sandwiches and has earned repeated recognition on TripAdvisor&#x27;s Top 10 Best Quick Bite list. Online ordering for pick-up or delivery is available, making it a convenient fuel stop for cyclists passing through the area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Moon Wok</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Kamloops  ·  Casual</div>
 <p class="seo-desc">Moon Wok is a family-owned Chinese restaurant operating three locations across Kamloops, with the Valleyview location on Oriole Road. The menu spans over 100 items including appetizers, entrees, and combo dinners, with vegetarian and gluten-free options available. The restaurant offers dine-in, takeout, delivery, and full catering services, making it a versatile meal stop for cyclists of varying group sizes.</p>

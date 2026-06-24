@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Black Swan Pub</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Duncan (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Black Swan Pub is a two-generation family-owned neighbourhood pub and liquor store nestled in the village of Shawnigan Lake on Vancouver Island. It offers a full English pub experience with a daily kitchen, weekly food specials, and an on-site liquor store with delivery service. As a long-standing community institution, it provides a welcoming sit-down meal option for touring cyclists passing through the Shawnigan Lake area.</p>

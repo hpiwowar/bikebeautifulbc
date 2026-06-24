@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Co-op Tappen Food Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Tappen</div>
 <p class="seo-desc">Co-op Tappen Food Store is a locally-owned, member-governed co-operative grocery on the Trans-Canada Highway in the small community of Tappen, BC, part of the Federated Co-operatives network. Non-members are explicitly welcome to shop alongside member-owners. Its Trans-Canada location makes it a natural resupply point for cyclists travelling through the Shuswap corridor.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Red Burrito</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Red Burrito is a locally rooted Vancouver Mexican restaurant that has been making fresh burritos, tacos, and handmade tamales since opening in 2006 on Commercial Drive. The Alberni Street location sits in Vancouver&#x27;s West End and is one of three active locations in the city. Food is made fresh daily in-house using a short, focused menu of classic Mexican staples.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Yopo Sweet Mandarin</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Yopo Sweet Mandarin is a Chinese restaurant in downtown Vancouver serving a broad menu of dim sum, seafood, noodles, curry, and rice dishes. The restaurant is a short ride from the Seawall and False Creek cycling routes, making it a convenient urban refuelling stop. It recently reopened after a closure and offers delivery and phone-ahead pickup through several platforms.</p>

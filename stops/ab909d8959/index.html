@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chuck E. Cheese</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Langley  ·  Cheap eats</div>
 <p class="seo-desc">Chuck E. Cheese is a large chain children&#x27;s entertainment venue combining an arcade, trampoline zone, and pizza restaurant, operating in Langley as part of a nearly 50-year-old North American franchise. The venue is oriented around kids&#x27; birthday parties, group events, and family arcade play with digital ticket redemption. It offers pizza for dine-in, pickup, and delivery.</p>

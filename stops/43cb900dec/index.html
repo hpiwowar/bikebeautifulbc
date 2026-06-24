@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Meat &amp; Bread</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Meat &amp; Bread is a beloved Vancouver sandwich chain built around a small, focused menu of chef-crafted sandwiches anchored by their signature porchetta, carved fresh to order from whole-roasted pork. The West Broadway location also serves breakfast sandwiches and sides, making it a versatile stop for cyclists on the busy Broadway corridor. The interior is wheelchair accessible and offers indoor seating.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Francisco&#x27;S Café &amp; Catering</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Abbotsford  ·  Cheap eats</div>
 <p class="seo-desc">Francisco&#x27;s Café &amp; Catering is a café and catering operation in Chilliwack, BC. The &#x27;Catering&#x27; component of the name suggests it may offer prepared food beyond typical café service, which could be useful for groups of touring cyclists. Very little verifiable detail is available from public sources.</p>

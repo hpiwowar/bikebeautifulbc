@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bose Lake Recreation Site</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Provincial / Regional Park  ·  Logan Lake</div>
 <p class="seo-desc">Small free lakeside rec site with 5 first-come sites, accessed by forest service roads near Highland Valley Copper Mine; the lake is a known fishing draw but no drinking water is mentioned.</p>

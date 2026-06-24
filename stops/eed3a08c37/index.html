@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Keg</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  West Vancouver (North Shore)  ·  Upscale</div>
 <p class="seo-desc">The Keg Steakhouse + Bar at Park Royal is a Canadian steakhouse chain located on the south side of Park Royal Mall in West Vancouver, known for aged beef, a full bar, and a covered heated patio. The location is wheelchair accessible and includes a semi-private dining room suitable for groups. Takeout and DoorDash delivery are available for those who want a meal on the go.</p>

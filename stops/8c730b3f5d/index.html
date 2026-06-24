@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Brunch Club &amp; Coffee Bar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Creston  ·  Cheap eats</div>
 <p class="seo-desc">The Brunch Club &amp; Coffee Bar is a cafe and brunch spot on Canyon Street in Creston, in the heart of the Kootenay region. It offers a drinks menu alongside its food offerings and supports online ordering. Creston sits on a main touring corridor between the Rockies and the Okanagan, making a brunch stop here a natural fit for cyclists passing through.</p>

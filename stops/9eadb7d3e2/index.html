@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Glowbal</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Upscale</div>
 <p class="seo-desc">Glowbal is an upscale contemporary restaurant in the heart of downtown Vancouver, part of the well-established Glowbal Restaurant Group. The menu celebrates West Coast ingredients with dishes like fresh spot prawns, tableside prime rib, and Vancouver Island oysters. Both indoor and outdoor seating are available, and the restaurant offers a full bar alongside a seasonal, ingredient-driven menu.</p>

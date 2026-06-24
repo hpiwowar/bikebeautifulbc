@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bloo bby Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  North Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Bloo Lounge is a modern shisha and hookah bar on Hastings Street in Burnaby that also serves food and drinks in a lounge setting. The menu spans appetizers, pizza, desserts, and a full drinks list alongside an extensive hookah selection. It bills itself as a social destination where guests can relax, celebrate, and enjoy an immersive sensory atmosphere.</p>

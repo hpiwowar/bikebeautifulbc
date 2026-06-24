@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Quesnel Bakery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Quesnel</div>
 <p class="seo-desc">Quesnel Bakery is a local bakery serving the Quesnel area in BC&#x27;s Cariboo region. For touring cyclists passing through this stretch of the interior, it represents a potential stop for fresh baked goods on a route that can be remote between larger centres. The OSM record was verified as recently as August 2023.</p>

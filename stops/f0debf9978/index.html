@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">West Coast Liquor Company</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">West Coast Liquor Company is a multi-location BC liquor retailer operating under Gibson Hospitality, with this branch serving the Burnaby Royal Oak neighbourhood. The store offers hundreds of local craft and international wine, beer, spirits, coolers, and ciders, and supports online ordering with delivery. It is one of three Lower Mainland locations alongside Vancouver Fraser Street and Kerrisdale.</p>

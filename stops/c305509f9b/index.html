@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Labyrinth</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Abbotsford  ·  Free</div>
 <p class="seo-desc">A public garden labyrinth maintained by the Labyrinths of Hope Society at Mill Lake Park in Abbotsford, covering approximately 7,500 sq ft with indigenous plantings and a wheelchair-accessible platform bridge. The society designs and builds labyrinths as outdoor meeting places for caregivers and others experiencing secondary trauma, offering a quiet, meditative walking experience. A second labyrinth is maintained at Kwomais Point Park in South Surrey.</p>

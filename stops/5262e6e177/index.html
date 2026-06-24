@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Plain Jane Ice Cream</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Plain Jane is a New Zealand-style ice cream shop that opened in the summer of 2024 in Vancouver&#x27;s Hastings-Sunrise neighbourhood. They blend real frozen fruit to order into organic French vanilla ice cream base using a New Zealand technique, with a short, rotating seasonal menu. A dairy-free coconut ice cream (Nora&#x27;s) is available for those avoiding dairy.</p>

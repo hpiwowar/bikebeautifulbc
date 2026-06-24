@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Caspian Flame</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Upscale</div>
 <p class="seo-desc">Caspian Flame is a Turkish restaurant on West Broadway in Vancouver, serving döner wraps, börek, and Mediterranean staples. The chicken döner is slow-roasted on a vertical rotisserie and served in warm lavash — a satisfying, high-calorie option for cyclists. It offers both dine-in and online ordering with pickup and delivery.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">EBus</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Bus / Public Transit</div>
 <p class="seo-desc">Intercity bus service connecting Chilliwack, Abbotsford, Kelowna, Kamloops, and other BC communities. Bikes accepted in the under-bus luggage hold; must be boxed or wrapped in cloth (plastic wrap not accepted). Fee: $30 per bike. E-bike and trailer policy unconfirmed — call before travelling: 1-877-769-3287.</p>

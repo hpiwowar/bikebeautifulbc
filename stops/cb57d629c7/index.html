@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Revelstoke</div>
 <p class="seo-desc">A liquor retail store in the Okanagan &amp; Thompson region of BC, tagged in OpenStreetMap as a shop selling alcohol. If it is a BCLIQUOR branch, it would be one of 198 provincial government-operated stores offering wine, beer, spirits, ciders, and coolers. Touring cyclists passing through the region could use it as a resupply point for beverages.</p>

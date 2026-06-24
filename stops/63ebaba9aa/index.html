@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lucky Horse Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Lucky Horse Restaurant is a Chinese restaurant in Surrey serving dine-in and delivery. The website references a newer Guildford-area location at 14783 108 Ave., suggesting the business has relocated from the address recorded in OSM. A touring cyclist passing through Surrey&#x27;s suburban commercial corridors could stop here for a sit-down Chinese meal.</p>

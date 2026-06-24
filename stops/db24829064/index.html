@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">T.J. Beans</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Duncan  ·  Cheap eats</div>
 <p class="seo-desc">TJ Beans is a local coffee shop situated in the heart of Ganges, the main village on Salt Spring Island. It serves coffee and hot lunches in a relaxed, device-friendly environment well suited to travellers. The shop touts five charging ports and free Wi-Fi, making it a practical stop for cyclists crossing to or around the island.</p>

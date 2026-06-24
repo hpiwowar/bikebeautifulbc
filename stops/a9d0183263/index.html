@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ban Bu Xian Szechuan</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Ban Bu Xian Szechuan is a Chinese restaurant specializing in Szechuan cuisine, located on Robson Street in downtown Vancouver. The OSM record confirms both indoor and outdoor seating, giving cyclists the option to sit outside after a ride. Robson Street is a busy, pedestrian-friendly corridor popular with both locals and visitors exploring the West End.</p>

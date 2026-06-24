@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">HWY 16 Eatery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Prince George  ·  Casual</div>
 <p class="seo-desc">Bednesti Lake Resort is a seasonal, gated RV park situated on Bednesti Lake, 30 minutes west of Prince George along Hwy 16 west. The resort offers waterfront sites, fishing, and beach access in a scenic Central Interior setting. OSM tags suggest a restaurant and convenience store may be located on-site, but this is not corroborated by the resort&#x27;s own website.</p>

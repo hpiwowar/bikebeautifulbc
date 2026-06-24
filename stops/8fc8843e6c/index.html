@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Creston Valley Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Creston  ·  Free</div>
 <p class="seo-desc">The Creston Valley Public Library is a full-service community library serving the Creston Valley on the traditional homelands of the Yaqan Nukiy People of the K&#x27;tunaxa Nation. It offers public computer and internet access, a robust digital collection including streaming films and e-books, and a lively year-round events program. For a touring cyclist passing through Creston, it provides a quiet indoor space to rest, research onward routes, and connect online.</p>

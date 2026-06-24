@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wicked Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Wicked Cafe is a coffee-focused cafe on West 7th Avenue in Vancouver, offering both indoor and outdoor seating. The business operates on a cashless-only basis, accepting credit and debit cards. Its location in a residential-commercial neighbourhood on the west side of Vancouver makes it a convenient stop for cyclists riding the nearby routes.</p>

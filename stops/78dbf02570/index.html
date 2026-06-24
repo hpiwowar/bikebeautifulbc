@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Asian Avenue</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vernon (Okanagan)  ·  Casual</div>
 <p class="seo-desc">Asian Avenue is Vernon&#x27;s long-standing Chinese restaurant situated on Highway 97, a key cycling corridor through BC&#x27;s interior. The restaurant offers dine-in, takeout, and delivery, with a private banquet hall seating up to 100 guests equipped with audio/visual equipment. Its highway-side location makes it a convenient stop for touring cyclists passing through Vernon.</p>

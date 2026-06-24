@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Lazy Gecko</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Sooke  ·  Casual</div>
 <p class="seo-desc">The Lazy Gecko is a Mexican restaurant in Sooke&#x27;s Seabreeze Business Centre, billing itself as serving the &#x27;Largest Burritos on the Island.&#x27; It sits on Sooke Road — the main cycling corridor connecting Greater Victoria to the southern tip of Vancouver Island — making it a natural meal stop for touring cyclists passing through Sooke. The restaurant also operates a bar.</p>

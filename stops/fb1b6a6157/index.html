@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Simply Delicious</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Simply Delicious is a Chinese restaurant on Main Street in Vancouver serving a loyal neighbourhood crowd. It offers a daily happy hour and positions itself as a late-night dining destination. The &#x27;SD FAM&#x27; sign-off on the website suggests a tight-knit, community-oriented vibe.</p>

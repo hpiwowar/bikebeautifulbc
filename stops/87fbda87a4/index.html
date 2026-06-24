@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hot Delivery</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Hot Delivery is a Cantonese-style Chinese restaurant on Cambie Street in Vancouver offering an extensive menu of chow mein, fried rice, chop suey, seafood, and dim sum. The restaurant operates primarily as a pickup and dine-in spot with an active online ordering system, making it straightforward for cyclists to order ahead. Indoor seating is available according to OSM tags.</p>

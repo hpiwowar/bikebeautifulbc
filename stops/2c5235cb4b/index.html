@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">D&#x27;eoro Coffee Lounge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Lillooet  ·  Cheap eats</div>
 <p class="seo-desc">Deoro Coffee Lounge is a café and espresso bar in Lillooet serving specialty coffees, freshly baked pastries, and locally sourced wraps and sandwiches. The space doubles as a private event venue for meetings and small celebrations, with both indoor and outdoor seating. A gift shop corner featuring local products adds an extra reason to linger.</p>

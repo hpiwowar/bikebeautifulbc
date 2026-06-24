@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Abaco Health</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Specialty / Health Food  ·  Kelowna (Okanagan)</div>
 <p class="seo-desc">Abaco Health is a locally and family-owned natural health products retailer in Kelowna that has been serving the community since 2005, with qualified nutritionists on staff. The store stocks an extensive range of vitamins, minerals, supplements, sports nutrition products (electrolytes, protein powders, amino acids), and natural snacks that could be of interest to cyclists looking to restock on energy and recovery products. It operates both a physical storefront and an online shop.</p>

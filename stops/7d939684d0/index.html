@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Hive</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  North Vancouver  ·  Moderate</div>
 <p class="seo-desc">The Hive is a multi-location indoor climbing gym chain with a Port Coquitlam outpost inside a village-style retail complex. It offers bouldering and roped climbing in a community-focused environment, making it a natural rest-day destination for cyclists touring the Tri-Cities area. Waivers are required for all visitors and can be signed online before arrival.</p>

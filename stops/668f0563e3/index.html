@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hello Toast</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Kamloops (Thompson)  ·  Casual</div>
 <p class="seo-desc">Hello Toast is a funky, bustling breakfast and lunch spot in downtown Kamloops that has been a community fixture for over 20 years. Run by friends and family, it serves all-day breakfast and house-made lunch plates using locally sourced meats and produce. Cyclists will find a welcoming, casual atmosphere with a sidewalk-side patio and a menu ranging from creative egg dishes to hearty grain bowls.</p>

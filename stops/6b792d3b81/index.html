@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bonny&#x27;S Taxi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Taxi / Ridehail  ·  Burnaby</div>
 <p class="seo-desc">On-demand taxi service based in Burnaby, BC, available 24/7. Most website subpages are unavailable (404), so service area, fleet, and bike policy are unknown.</p>

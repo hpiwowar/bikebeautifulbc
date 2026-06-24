@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Jack&#x27;s Spot</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Jack&#x27;s Spot is a small, independently operated cafe on Kingsway in East Vancouver, offering coffee, matcha, sandwiches, bread, and pastries. Its Instagram-only web presence gives it a distinctly local, community-facing character on this busy commercial corridor. Cyclists passing through the Kingsway strip will find it a compact neighbourhood spot for a quick coffee and bite.</p>

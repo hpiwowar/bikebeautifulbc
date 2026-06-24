@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Westbank Museum</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Kelowna</div>
 <p class="seo-desc">The Westbank Museum in West Kelowna preserves the cultural heritage of the Westbank area—spanning pioneer families, forestry, farming, Indigenous history, and regional conflicts—on the traditional territory of the Syilx/Okanagan Peoples. It also functions as a Visitor Information Centre, making it a practical stop for route advice as well as history. A working miniature sawmill is a standout exhibit, and admission is by donation.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">J &amp; L Drive-In</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Alberni  ·  Cheap eats</div>
 <p class="seo-desc">J &amp; L Drive-In is a classic burger drive-in located in Port Alberni on Vancouver Island, serving quick meals in the traditional curbside style. The no-smoking policy (confirmed via OSM) makes it a comfortable roadside stop for cyclists moving through the Alberni Valley. Drive-in format means quick service without a long sit-down commitment.</p>

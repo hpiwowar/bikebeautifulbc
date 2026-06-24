@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chilliwack Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Chilliwack (Fraser Valley)</div>
 <p class="seo-desc">The Chilliwack Visitor Centre is operated by Tourism Chilliwack and serves as the official gateway for trip planning in the Fraser Valley region. It offers downloadable guides, local event listings, and connections to outdoor adventure, farm experiences, and arts and culture. For a touring cyclist passing through Chilliwack, it is a practical first stop for maps, local knowledge, and regional cycling routes.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Hangar Climbing Lounge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Sechelt  ·  Low</div>
 <p class="seo-desc">The Hangar is a bouldering-only climbing gym on the Sunshine Coast in Sechelt, founded in 2017 as a community hub for active locals and visitors. It features thick foam flooring, weekly route setting, and a self-serve snack and drinks bar, positioning itself as much a social hangout as a climbing facility. Touring cyclists on the popular Sunshine Coast route may enjoy it as a rest-day activity or rainy-day diversion.</p>

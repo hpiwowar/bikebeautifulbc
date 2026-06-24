@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Siegel&#x27;s Bagels</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Siegel&#x27;s Bagels is an authentic Montreal-style bagel shop with a location inside Granville Island Public Market, one of Vancouver&#x27;s most-visited culinary destinations. The shop serves bagels in-store and also offers home delivery, national shipping, and catering. Its setting within the Public Market makes it a natural food stop for cyclists exploring the Granville Island area.</p>

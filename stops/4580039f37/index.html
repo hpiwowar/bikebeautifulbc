@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mykonos Pizza and Spaghetti House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Penticton  ·  Casual</div>
 <p class="seo-desc">Mykonos Pizza and Spaghetti House is a sit-down restaurant in Penticton, BC, offering pizza and pasta in a retail-building setting. It sits near the heart of Penticton, a popular hub on the Kettle Valley Rail Trail and Okanagan cycling routes, making it a convenient stop for touring cyclists passing through town.</p>

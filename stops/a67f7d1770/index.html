@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Capones</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Sun Peaks  ·  Casual</div>
 <p class="seo-desc">Capones Italian Kitchen is a seasonal dinner restaurant set within Sun Peaks Resort in BC&#x27;s Thompson-Okanagan region, offering Italian cuisine alongside a curated selection of BC wines. The restaurant is known for its mountain and village views and caters to both intimate reservations and large group family-style dinners. It operates as a sister property to Cahilty Creek Kitchen &amp; Taproom, also at Sun Peaks.</p>

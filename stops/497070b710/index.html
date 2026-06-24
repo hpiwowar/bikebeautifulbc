@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Daikichi Sushi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Daikichi Sushi is a compact Japanese restaurant on Burrard Street in Vancouver offering a broad menu of sushi rolls, sashimi, ramen, teriyaki bowls, and tempura. The shop supports online ordering with a pickup window, making it a practical quick-stop option. Vegetarian diners are well accommodated with dedicated tofu, vegetable, and plant-based menu items throughout the menu.</p>

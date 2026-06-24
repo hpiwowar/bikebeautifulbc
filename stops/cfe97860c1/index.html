@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Stag&#x27;s Head Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Kamloops (Thompson)</div>
 <p class="seo-desc">Stag&#x27;s Head Liquor Store is a retail bottle shop situated inside City View Centre along the Princeton-Kamloops Highway on the eastern edge of Kamloops. It carries a broad selection of beer, wine, spirits, coolers, ciders, and snacks, including specialty items available on request. Delivery is offered through Skip the Dishes for those staying nearby.</p>

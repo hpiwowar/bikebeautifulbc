@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Saigon Ivy</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  New Westminster (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Saigon Ivy is a Vietnamese restaurant in downtown New Westminster, an area well-suited to cycling stop-offs on the Central Valley Greenway and nearby routes. OSM records place its founding before 1948, making it one of the older eateries in the community. Indoor seating is noted in OSM tags, offering a sit-down meal option for cyclists passing through New Westminster.</p>

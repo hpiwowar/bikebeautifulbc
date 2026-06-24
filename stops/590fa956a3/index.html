@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">River Road Café</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">River Road Café is a family-run Brazilian café in Richmond bringing authentic flavours — from street-food pastels and party snacks to imported Brazilian goods — to the table. Founded by a Brazilian couple and their team, the café offers dine-in meals, an online shop with home delivery for frozen and imported products, and catering services. It sits along River Road, a popular cycling corridor on the south arm of the Fraser River.</p>

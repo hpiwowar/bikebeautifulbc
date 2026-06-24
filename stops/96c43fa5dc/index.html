@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Oomomo Japan Living</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Oomomo Japan Living is a Japanese lifestyle variety store on Robson Street carrying a wide range of imported Japanese goods including health and beauty products, stationery, kitchenware, houseware, apparel, and collectibles. It also stocks a selection of Japanese food and drinks — snacks, candy, tea, coffee, and seasonings — making it a useful stop for specialty provisions. The store is wheelchair accessible according to OSM.</p>

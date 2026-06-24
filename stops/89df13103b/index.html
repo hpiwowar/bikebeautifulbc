@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">North Delta Centre for the Arts</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Delta (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">North Delta Centre for the Arts is a municipal arts facility operated by the City of Delta, located in the North Delta neighbourhood. It serves the local community as a venue for arts and cultural programming. Touring cyclists exploring the Fraser Delta region may find it a worthwhile cultural stop.</p>

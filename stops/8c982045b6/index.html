@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bears Den</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Chase</div>
 <p class="seo-desc">Bears Den is a Canco-branded gas station and convenience store situated on the Trans-Canada Highway in Chase, BC. Part of the Canco independent Canadian fuel and retail chain, it operates as a &#x27;One Stop by Canco&#x27; combining fuel, in-store convenience shopping, and loyalty programs. Its highway location makes it a natural resupply stop for touring cyclists travelling through the Thompson River corridor.</p>

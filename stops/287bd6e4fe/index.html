@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gabriola Taxi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Taxi / Ridehail  ·  Gabriola</div>
 <p class="seo-desc">On-demand taxi serving Gabriola Island only, operating daily 9am–7pm with a small electric-vehicle fleet. No bike policy stated; useful for cyclists needing a ride around the island after arriving by ferry.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushi Hama</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Qualicum Beach  ·  Casual</div>
 <p class="seo-desc">Sushi Hama is a Japanese fusion restaurant in downtown Qualicum Beach, where Chef Peter offers a menu blending traditional sushi with creatively inspired items. The casual, family-friendly atmosphere makes it a welcoming stop for cyclists exploring the Qualicum Beach area. Takeout is available via a regularly updated menu.</p>

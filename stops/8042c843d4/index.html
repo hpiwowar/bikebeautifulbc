@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kagura Hand Roll Bar</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Kagura Hand Roll Bar is a Japanese restaurant in Vancouver&#x27;s Kitsilano neighbourhood on West 4th Avenue, specializing in hand rolls (temaki sushi). It sits along a busy cycling corridor popular with riders heading toward the Arbutus Greenway and foreshore routes. A touring cyclist passing through Kitsilano would find it a compact, likely counter-style spot for a quick Japanese meal.</p>

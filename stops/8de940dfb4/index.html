@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wasuta Pasta</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Wasuta Pasta is a Japanese-Italian fusion restaurant situated along the Fraser River waterfront in Richmond, making it a naturally scenic stop for cyclists riding the River Road dyke route. The kitchen produces handmade pasta and desserts daily, blending Italian technique with Japanese flavour profiles. Both dine-in and takeout options are available, and the waterfront setting is marketed as a destination cafe experience.</p>

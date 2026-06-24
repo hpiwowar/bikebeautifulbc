@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pho Dundas</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Pho Dundas is a Vietnamese noodle restaurant in East Vancouver specializing in traditional pho broth soups alongside specialty sate varieties and fresh appetizers like salad rolls and bao sliders. The kitchen accommodates a range of diets with dedicated vegan and gluten-free menu sections. Online ordering with pickup and Uber Delivery options makes it a convenient stop for cyclists passing through the area.</p>

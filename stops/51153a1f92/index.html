@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gathering Place</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Gathering Place is a City of Vancouver–operated community centre located in the downtown core on Helmcken Street. It serves as a publicly accessible gathering and recreation hub in one of Vancouver&#x27;s densest urban neighbourhoods. A touring cyclist passing through downtown Vancouver could use it as a rest and services stop.</p>

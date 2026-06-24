@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fujiya</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Fujiya is a Japanese grocery and deli chain celebrating over 50 years in BC, with the Victoria location on Shelbourne Street open since 1991. Operating as a takeout-only shop, it offers prepared Japanese foods including sushi sets, individual rolls, and grocery items. It is a compact, community-oriented stop well-suited to cyclists looking for a quick and distinctive Japanese meal to go.</p>

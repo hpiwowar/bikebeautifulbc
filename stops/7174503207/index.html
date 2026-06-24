@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Stock Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Specialty / Health Food  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">The Stock Market has operated from stall 147 in Vancouver&#x27;s Granville Island Public Market since 1986, selling freshly made soups, stocks, pestos, sauces, and dressings crafted from local ingredients. It is a well-known local institution in one of BC&#x27;s most popular cycling-accessible urban destinations. Touring cyclists exploring Granville Island will find it tucked in the far east corner of the Public Market.</p>

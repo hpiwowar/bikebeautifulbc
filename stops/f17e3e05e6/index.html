@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Osaka Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Osaka Sushi is a Japanese restaurant on West King Edward Avenue in Vancouver offering an extensive menu spanning traditional nigiri, sashimi, maki rolls, teriyaki, curry rice, and donburi. Online ordering with 15-minute pickup makes it a practical quick stop for cyclists moving through the area. The menu covers a wide range of Japanese dishes and includes clearly marked vegetarian options across most categories.</p>

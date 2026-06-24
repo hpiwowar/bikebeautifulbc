@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Trail Museum &amp; Archives</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Trail  ·  Free</div>
 <p class="seo-desc">The Trail Museum &amp; Archives is a free municipal museum opened in 2018 inside the Riverfront Centre, a shared civic facility that also houses the city library and visitor centre. It features three galleries, extensive archival holdings, and a gift shop developed in partnership with the Trail Historical Society, bringing local Kootenay history and heritage to life. For touring cyclists, it offers a no-cost cultural stop in central Trail with the added convenience of co-located visitor services.</p>

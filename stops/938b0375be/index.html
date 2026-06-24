@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Karma Indian Bistro</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Karma Indian Bistro is a locally loved sit-down restaurant in Vancouver&#x27;s Kitsilano neighbourhood serving authentic Indian cuisine with a modern twist — from tandoori specialties to rich curries and vegetarian dishes. The restaurant is listed on the Michelin Guide and has a heated outdoor patio for al fresco dining. Located on West 4th Avenue, a popular cycling corridor connecting central Vancouver to the waterfront.</p>

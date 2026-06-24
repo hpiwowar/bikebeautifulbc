@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Junctions Coffee House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Cache Creek</div>
 <p class="seo-desc">Junctions Coffee House is a coffee shop situated on the Trans-Canada Highway in Cache Creek, BC, at the historic junction of Highways 1 and 97 — a natural stopping point for cyclists travelling between the Interior and the coast. The name itself reflects this crossroads character, making it a logical rest stop for route-connecting touring riders. OSM records it as a dedicated coffee shop with Wi-Fi noted.</p>

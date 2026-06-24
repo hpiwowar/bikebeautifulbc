@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dao Field Noodle House</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Dao Field Noodle House is a Chinese noodle restaurant located in a unit along Westminster Highway in Richmond, BC. It occupies a strip-mall style address in a part of Richmond well-served by Chinese cuisine options, suggesting a focus on noodle dishes typical of regional Chinese cooking. Touring cyclists passing through Richmond&#x27;s commercial corridors would find it a potential stop for a hot noodle meal.</p>

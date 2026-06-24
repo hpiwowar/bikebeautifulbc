@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cedar Cafe at CMTN</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Kallum  ·  Cheap eats</div>
 <p class="seo-desc">Cedar Cafe at CMTN is a weekday campus cafe serving Coast Mountain College in Terrace, BC, catering primarily to students and staff. Located on a post-secondary college campus, it offers a coffee shop experience in a busy educational setting. Touring cyclists passing through Terrace on Highway 16 may find it a convenient stop during college operating hours.</p>

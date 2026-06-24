@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hoodoos</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Activity / Experience  ·  Leanchoil  ·  Free</div>
 <p class="seo-desc">The Hoodoos are a natural geological formation within Yoho National Park, a UNESCO World Heritage Site straddling the western slopes of the Canadian Rockies near Field, BC. These distinctive erosion pillars are a compelling roadside attraction for cyclists riding the Trans-Canada Highway corridor through the park. The surrounding landscape features glaciers, waterfalls, and world-renowned Burgess Shale fossil sites, making this stretch a highlight of any Rocky Mountain touring route.</p>

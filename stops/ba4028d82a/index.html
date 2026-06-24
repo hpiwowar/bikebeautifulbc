@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Stallones Kitchen + Bar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Hope  ·  Casual</div>
 <p class="seo-desc">Stallones Kitchen + Bar is a gourmet comfort-food restaurant and cocktail bar in Hope, BC, a natural rest stop for cyclists riding the Fraser Valley corridor. The menu leans on locally sourced, seasonal ingredients with dishes like char-grilled ribeye and garlic prawns alongside craft cocktails and small-batch spirits. The atmosphere is described as rustic and high-energy, aimed at an elevated sit-down dining experience.</p>

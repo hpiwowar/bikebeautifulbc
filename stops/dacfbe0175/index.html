@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Kitchen Dada</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">The Kitchen Dada is a sushi bar and grill on Alma Street in Vancouver&#x27;s Point Grey neighbourhood, close to the Vancouver Crossing Loop route. The restaurant posts daily takeout specials and offers online ordering and delivery alongside dine-in service. It is an accessible neighbourhood spot for a quick sushi meal mid-ride.</p>

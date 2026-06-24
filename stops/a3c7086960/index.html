@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Alouette Campground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Silver Valley</div>
 <p class="seo-desc">One of three large campgrounds in Golden Ears Provincial Park, set in coastal western hemlock forest a short walk from Alouette Lake about an hour east of Vancouver; extremely popular in summer with no cell service in camp.</p>

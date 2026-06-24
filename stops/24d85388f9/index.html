@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushi Nova</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Sushi Nova is a Japanese restaurant nestled in Kitsilano, steps from West 4th Avenue and within easy walking distance of Kits Beach. The restaurant offers a broad menu spanning classic rolls, specialty hand rolls, robata, donburi, and sashimi, with a dedicated takeout menu and online ordering. Reviewers consistently highlight fresh ingredients, friendly service, and an inviting atmosphere with good decor.</p>

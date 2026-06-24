@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Honour Roll</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Honour Roll is a fresh modern sushi spot operated by the AMS inside The Nest on UBC&#x27;s Vancouver campus, offering maki rolls, nigiri, donburi bowls, and bento boxes. The restaurant holds Ocean Wise™ certification for responsible seafood sourcing. Takeout is served in fully compostable and recyclable containers, making it a tidy option for cyclists on the go.</p>

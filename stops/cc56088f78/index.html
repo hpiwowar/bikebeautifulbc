@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mediterranean Donair House</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  North Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Mediterranean Donair House is a takeout-focused fast food spot on Sixth Street in North Vancouver serving Greek and donair cuisine. With outdoor seating and no indoor dining, it offers an al fresco stop for cyclists passing through the area. The Greek-donair combination makes it a distinctive quick-eat option in the neighbourhood.</p>

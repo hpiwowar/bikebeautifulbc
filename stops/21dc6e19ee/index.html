@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Zeballos Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Zeballos  ·  Free</div>
 <p class="seo-desc">Zeballos Library is a branch of the Vancouver Island Regional Library system serving this small, remote community at the end of a logging road on northern Vancouver Island. For touring cyclists making the long journey to Zeballos, it stands as one of the few public facilities in a community otherwise defined by its wilderness setting and limited services. As a public library, it offers a quiet indoor space in an area where such amenities are rare.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Varsha Indian Kitchen</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Varsha Indian Kitchen is a modern Indian restaurant on Government Street in downtown Victoria, billing itself as Victoria&#x27;s finest Indian restaurant. The menu blends traditional tandoor cooking — fish, prawns, paneer tikka, seekh kebab — with Indo-Chinese fusion dishes and a strong vegetarian lineup. Catering is also available, and online ordering and takeout make it convenient for cyclists passing through the inner harbour area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kimshaker Resto</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Burnaby  ·  Casual</div>
 <p class="seo-desc">Kimshaker Resto is a Filipino restaurant on Kingsway, one of Burnaby&#x27;s main commercial corridors and a well-travelled urban cycling route connecting Vancouver and the eastern suburbs. The restaurant offers both indoor and outdoor seating, making it a flexible stop for cyclists regardless of weather. Its location on a busy high-street strip puts it within easy reach of amenities and transit for touring cyclists moving through Metro Vancouver.</p>

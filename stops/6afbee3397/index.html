@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kootenay co-op</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Nelson (West Kootenay)</div>
 <p class="seo-desc">Kootenay Co-op is a community-owned grocery store in Nelson with a strong focus on local and organic products, featuring a &quot;True Local&quot; program highlighting items made or grown within 160km. The store hosts community classes and taste tours, and supports local farmers, artisans, and sustainability initiatives. A solid resupply option for touring cyclists passing through the West Kootenay.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tom Hopkins Ravine Park</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Surrey (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">Tom Hopkins Ravine Park protects over 6.5 hectares of sensitive second-growth forest ravine ecosystem in Surrey, with more than 1 km of Delta Creek running through it. Natural area trails in the west section of the park offer a quiet forest walk, with a pedestrian bridge crossing Delta Creek. Access is from 98A or 99 Avenue, and most of the ravine interior is inaccessible to protect the sensitive habitat.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bon Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Bon Sushi is a neighbourhood sushi restaurant in Oak Bay, Victoria, serving a broad menu of Japanese fare including specialty rolls, sashimi, rice bowls, bento boxes, and party platters. Located on Hampshire Road, it is a full sit-down restaurant emphasizing fresh ingredients and house-favourite rolls like the Dragon Roll and TNT Roll. It would make a convenient stop for touring cyclists exploring the Oak Bay area.</p>

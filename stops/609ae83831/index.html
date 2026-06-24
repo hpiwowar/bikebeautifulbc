@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chong Lee Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Chong Lee Market is a long-running Chinese and Asian grocery store that has served Vancouver since 1987, with this Fraserview location on Victoria Drive open since 2003. It stocks a wide range of fresh produce, seafood, Chinese BBQ, and multicultural pantry products, and also serves fresh-made Banh Mi at this location. A loyalty card program and weekly flyers make it a practical neighbourhood resupply stop.</p>

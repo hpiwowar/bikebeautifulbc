@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Whistler Village Host</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Visitor Centre  ·  Whistler (Sea to Sky)</div>
 <p class="seo-desc">A small tourism information kiosk in Whistler Village, tagged as a hut-style building on OpenStreetMap. It appears to be one of the informal host stations where visitors can ask questions about the area, distinct from the larger Whistler Visitor Centre on Gateway Drive.</p>

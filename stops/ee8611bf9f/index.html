@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pho 99</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Pho 99 is a Vietnamese noodle house in Surrey&#x27;s Fleetwood area serving a broad menu of pho, grilled meats, rice plates, and Vietnamese submarine rolls. The restaurant emphasizes traditional balance of flavours using fish sauce, fresh herbs, and rice-based dishes. Table reservations and online ordering are available, making it a convenient full-service stop for cyclists passing through the area.</p>

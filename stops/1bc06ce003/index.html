@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mountain View Bakery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Alberni</div>
 <p class="seo-desc">Mountain View Bakery is a local bakery on Vancouver Island operating Tuesday through Saturday, making it a potential stop for touring cyclists passing through the area. As a neighbourhood bakery it would typically offer fresh baked goods that could fuel a day on the road. The OSM record notes wi-fi access on site.</p>

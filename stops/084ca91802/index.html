@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Off The Hook</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Nanaimo (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Off The Hook is a lively, casual contemporary seafood restaurant in Nanaimo specializing in fish and chips, smokery dishes, and global-inspired seafood. The entire food menu is 100% gluten-free, making it a notable stop for cyclists with dietary restrictions. The restaurant offers both dine-in with outdoor seating and online ordering for takeout, and accommodates large groups.</p>

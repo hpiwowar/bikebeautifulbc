@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lodge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Manning Park  ·  Casual</div>
 <p class="seo-desc">The Lodge is the central accommodation building at Manning Park Resort, a major year-round destination in the Cascade Mountains drawing over one million visitors annually. It sits within a full-service resort offering cabins, chalets, camping, and the Pinewoods Restaurant serving comfort food in a mountain setting. For touring cyclists, it represents one of the few substantial service stops along Highway 3 through Manning Provincial Park.</p>

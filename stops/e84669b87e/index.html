@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Rustic Bread Bakery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  North Vancouver</div>
 <p class="seo-desc">Rustic Bread Bakery is a bakery operated by Urban Deli Inc, located in a unit at 7487 Edmonds Street. As a neighbourhood bakery it would offer freshly baked breads and likely pastries to locals and passing cyclists. Its strip-mall unit format is typical of community bakeries in the greater Vancouver area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dockside F&amp;C</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Queen Charlotte  ·  Cheap eats</div>
 <p class="seo-desc">Dockside F&amp;C is a fish and chips restaurant located in Haida Gwaii, one of British Columbia&#x27;s most remote and dramatically beautiful cycling destinations, accessible only by ferry or floatplane. Operating seasonally, it offers a classic coastal meal to visitors exploring the islands. For touring cyclists making the journey to Haida Gwaii, a hot dockside fish supper is a memorable reward.</p>

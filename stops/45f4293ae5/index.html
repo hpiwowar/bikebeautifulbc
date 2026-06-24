@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Melville Café</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Melville Café is listed in OSM as a café at 1170 Melville Street in Vancouver, BC. The website associated with this OSM record, however, describes a distinct establishment operating inside the University of Waterloo School of Architecture in Cambridge, Ontario, overlooking the Grand River. Whether a real café operates at the Vancouver address cannot be determined from the available evidence.</p>

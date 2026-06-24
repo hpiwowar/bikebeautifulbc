@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bean Around The World</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Bean Around The World is a long-running BC coffee roaster with over 30 years of history, operating a cafe at the UBC campus area on Thunderbird Boulevard. The company sources organic and ethically traded beans from around the world and roasts daily in small batches. Cyclists riding the UBC loop or Spanish Banks routes would find this a recognizable chain stop with outdoor seating noted in OSM.</p>

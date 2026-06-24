@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cowichan Regional Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Duncan (Metro Vancouver)</div>
 <p class="seo-desc">The Cowichan Regional Visitor Centre is operated by the Duncan Cowichan Chamber of Commerce and serves as the primary tourism information hub for the Cowichan Valley region. Staffed by accredited travel counsellors, it helps visitors discover local experiences including hiking, biking, kayaking, whale-watching, and the Cowichan wine trail. Located on the Trans-Canada Highway adjacent to the BC Forest Discovery Centre, it also stocks local artisanal products and regional merchandise.</p>

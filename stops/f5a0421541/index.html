@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Town Pantry</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Sandwick</div>
 <p class="seo-desc">This is an On the Run convenience store and restaurant operating at a Chevron station in Courtenay, BC, open around the clock every day of the week. It offers fuel, a convenience store, and a restaurant under one roof, making it a reliable all-hours resupply stop on Vancouver Island. Touring cyclists will find food, washrooms, and a compressed-air station on site.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Beaver Valley Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Fruitvale  ·  Free</div>
 <p class="seo-desc">The Beaver Valley Public Library is a community public library serving the Beaver Valley area of the Kootenays, located on traditional Indigenous territory. Beyond books, it offers a notable Library of Things collection that includes items like hiking backpacks, food dehydrators, and an egg incubator — a practical resource for adventurous visitors. Touring cyclists passing through Fruitvale will find free computer and internet access as well as a range of digital and in-person programming.</p>

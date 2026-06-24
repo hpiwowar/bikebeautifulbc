@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Paint Pots</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Activity / Experience  ·  Kootenay Rockies  ·  Free</div>
 <p class="seo-desc">The Paint Pots are a series of vivid ochre-coloured mineral springs in Kootenay National Park, reached by a short trail off Highway 93. The iron-rich deposits hold deep cultural significance for Indigenous peoples and have been a gathering place for thousands of years. Touring cyclists riding the Kootenay Parkway pass close by and can make a quick detour to see one of the most distinctive geological features in the Canadian Rockies.</p>

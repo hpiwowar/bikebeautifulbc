@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Glacier Creek</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Whistler (Sea to Sky)  ·  Casual</div>
 <p class="seo-desc">Glacier Creek is an on-mountain restaurant at Whistler Blackcomb, one of North America&#x27;s largest ski and bike resorts. Its coordinates place it mid-mountain on Whistler, making it a natural stop for riders using the Whistler Mountain Bike Park during summer operations. The building is a dedicated structure serving the mountain&#x27;s dining needs across seasons.</p>

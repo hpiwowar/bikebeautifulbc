@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Taco Bell</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">A Taco Bell franchise location in Surrey offering Tex-Mex fast food including tacos, burritos, and the Crunchwrap Supreme. The location features both dine-in and drive-thru service, making it accessible for cyclists who prefer not to lock up and enter. A dedicated Veggie Cravings Menu offers vegetarian options for plant-based riders.</p>

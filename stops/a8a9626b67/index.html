@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tumbler Ridge Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Tumbler Ridge  ·  Free</div>
 <p class="seo-desc">Tumbler Ridge Public Library is a community library located inside the TR Community Centre, serving both residents and all visitors to this small northeastern BC town. It offers free Wi-Fi and internet access along with a Telus 4G smart hub loan program for connectivity outside the building. Unique offerings like a seed library, STEAM kits, and a noise-dampening meeting pod make this a well-resourced small-town library well beyond the basics.</p>

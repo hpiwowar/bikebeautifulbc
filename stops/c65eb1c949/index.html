@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Big Bang Sushi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Big Bang Sushi is a Japanese restaurant established in 2016 with two locations in Metro Vancouver, including this Richmond outpost in the Commerce Parkway commercial area. The menu spans traditional nigiri and sashimi to specialty rolls, donburi, udon, and teriyaki, with online ordering available for carryout. Vegetarian options are explicitly listed on the menu alongside a broad selection of sushi combinations and party trays.</p>

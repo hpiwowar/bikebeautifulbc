@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Los Guerreros</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Langley</div>
 <p class="seo-desc">Los Guerreros is a Latin American specialty grocery store that has been serving the Langley and Fraser Valley community for about a decade, representing the chain&#x27;s first expansion from its original Vancouver flagship. The store stocks a curated selection of Latin American staples including fresh tortillas, imported snacks, pantry essentials, and beverages from brands like Jarritos and Electrolit. It is part of a three-location BC chain with stores also in Vancouver and Delta.</p>

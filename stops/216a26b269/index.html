@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Poke N Chat</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Poke N Chat is a casual Gastown eatery specializing in poke bowls, ramen, and bubble tea, situated steps from the historic Steam Clock on Water Street. It is known for fresh ingredients and a cozy atmosphere with views of this Vancouver landmark. Cyclists exploring the waterfront or Gastown can order online for pickup or opt for delivery.</p>

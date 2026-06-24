@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Foxglove Floral Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Abbotsford  ·  Cheap eats</div>
 <p class="seo-desc">Foxglove Floral Cafe is a dual-concept business in Abbotsford combining a working florist shop with a cafe, opened in March 2024. The business also runs workshops, likely floral arranging, adding a creative dimension beyond the typical cafe stop. For a touring cyclist, it offers a distinctive rest point on Montrose Avenue in a commercial unit.</p>

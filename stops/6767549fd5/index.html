@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gold Train Express Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Gold Train Express is a Vietnamese restaurant on Kingsway in East Vancouver offering an extensive menu of pho, rice dishes, banh mi, spring rolls, and Vietnamese drinks. It has built a loyal local following over the years, with 28 reviews consistently praising the pho broth and lemongrass chicken. Online ordering with fast pickup makes it a practical meal stop for cyclists passing through this busy corridor.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sumi Korean Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Sumi Korean Restaurant is a sit-down Korean eatery on Victoria Drive in Vancouver, open six days a week. Located on a busy commercial strip in the Victoria-Fraserview neighbourhood, it offers a convenient stop for cyclists riding the Victoria Drive corridor through the east side of the city. The Korean cuisine focus suggests hearty, carb-rich meals well-suited to refuelling after a long ride.</p>

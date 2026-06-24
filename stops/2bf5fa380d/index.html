@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Guffo Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Guffo Cafe is a cafe situated on Robson Street in the heart of downtown Vancouver, one of the city&#x27;s most walkable and heavily trafficked retail corridors. Its Instagram-only web presence suggests a small, independently run establishment. OSM records confirm it is wheelchair accessible and accepts both credit and debit cards.</p>

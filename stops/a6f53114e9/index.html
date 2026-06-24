@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Iron Road Brewing</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Kamloops (Thompson)  ·  Casual</div>
 <p class="seo-desc">Iron Road Brewing is an award-winning craft brewery in Kamloops, BC, founded by two geologists who teamed up with an award-winning brewer to produce a rotating lineup of balanced, flavourful beers. The 60-person, family-friendly taproom is steps from Thompson Rivers University and serves food alongside the house-brewed lineup. Cyclists may catch a live band or watch the brewing process up close.</p>

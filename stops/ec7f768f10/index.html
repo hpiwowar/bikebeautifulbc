@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Bike Barn</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Penticton</div>
 <p class="seo-desc">The Bike Barn is a full-service bicycle shop in Penticton, BC, sitting at the heart of a region the shop itself describes as home to outstanding mountain, gravel, and road riding. They sell new and used bikes, run tiered professional service packages from basic tune-ups to complete frame-level overhauls, and carry e-bikes — making them a well-rounded stop for touring cyclists passing through the Okanagan.</p>

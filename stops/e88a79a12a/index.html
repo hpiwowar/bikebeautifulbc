@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Broadway Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Broadway Liquor Store is a full-service private liquor store on Vancouver&#x27;s West Broadway corridor stocking a broad range of beer, wines, and spirits, including rotating craft beer selections. The store caters to special occasions and offers delivery through Uber Eats and Skip the Dishes. For a touring cyclist, it represents a convenient urban stop for resupply of beverages along a major east-west cycling route.</p>

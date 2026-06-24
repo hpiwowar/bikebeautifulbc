@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mezbaan Indian &amp; Indo Chinese Food</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Mezbaan is an Indian and Indo-Chinese restaurant located on 96 Avenue in Surrey, BC. It offers a dual cuisine format blending South Asian and Indo-Chinese cooking traditions, a combination popular with diners seeking dishes like Manchurian and chilli preparations alongside traditional curries. Its position on a busy suburban arterial makes it a potential refuelling stop for cyclists passing through the Surrey corridor.</p>

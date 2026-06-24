@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lynn Valley Bikes</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  North Vancouver (North Shore)</div>
 <p class="seo-desc">Lynn Valley Bikes is a full-service North Vancouver bike shop strategically located minutes from the trail networks of Mount Fromme and Mount Seymour on the North Shore. The shop runs a dedicated service centre staffed by experienced mechanics who handle everything from quick tune-ups to complete suspension rebuilds on trail, DH, road, and electric bikes. Touring cyclists will find a wide parts and accessories inventory, an active rental program, and a team that explicitly welcomes drop-in service visits.</p>

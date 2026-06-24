@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Victoria Chinatown Museum</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Victoria (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">A museum dedicated to the history and culture of Chinese Canadians, housed in the Hoy Sun Ning Yung Benevolent Association building on Fan Tan Alley — North America&#x27;s narrowest commercial street. Located in Canada&#x27;s oldest surviving Chinatown (est. 1858), it features rotating exhibits, artifacts, and community programming. Free admission makes it an easy stop for touring cyclists passing through downtown Victoria.</p>

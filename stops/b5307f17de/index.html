@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Il Centro</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Activity / Experience  ·  Vancouver</div>
 <p class="seo-desc">Il Centro is Vancouver&#x27;s Italian Cultural Centre, a vibrant civic hub operating since 1977 that brings together culture, cuisine, and community under one roof. The complex houses a museum with rotating art exhibitions, a library, Italian language school, and multiple event venues including a grand ballroom and outdoor piazza. Touring cyclists can dine at Osteria al Centro, browse the current gallery exhibition, or catch one of the year-round cultural events and festivals.</p>

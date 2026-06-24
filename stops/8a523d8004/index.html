@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Greek Corner</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Greek Corner is a locally owned, award-winning Greek restaurant in Surrey serving traditional dishes such as souvlaki, moussaka, spanakopita, and slow-roasted lamb. The restaurant offers licensed liquor service with Greek wines and cocktails alongside a full dine-in experience in a Mediterranean-inspired atmosphere. Their catering arm handles events from small gatherings up to 700 guests, reflecting an established presence in the community.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Teco Taxi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Taxi / Ridehail  ·  Mission</div>
 <p class="seo-desc">Teco Taxi is a Fort St. John on-demand taxi service operating 24/7/365, with stated coverage spanning Prince George to Fort Nelson. Fleet includes regular and wheelchair-accessible cabs; no bike policy mentioned.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Accommodation</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Accommodation</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hotel Willo</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Hotel / Motel  ·  Vancouver (North Shore)  ·  Budget</div>
 <p class="seo-desc">Hotel Willo (formerly YWCA Hotel Vancouver) is a social enterprise hotel in downtown Vancouver where every stay funds YWCA BC programs supporting women and families. The hotel offers a wide range of room types, from budget singles with hallway bathrooms to multi-bed family suites, plus shared kitchens and laundry facilities in common areas. It sits steps from BC Place, Rogers Arena, and SkyTrain connections, making it a practical base for exploring the city.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Starbucks</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Surrey  ·  Cheap eats</div>
 <p class="seo-desc">Starbucks is a globally recognized coffeehouse chain founded in Seattle in 1971, offering espresso drinks, teas, Frappuccinos, and a rotating seasonal menu alongside pastries and light food items. This Surrey location on 96 Avenue sits in a standalone building and is a familiar, consistent stop for touring cyclists seeking a caffeine fix or a place to sit. Orders can be placed in-store, via the app, or for delivery.</p>

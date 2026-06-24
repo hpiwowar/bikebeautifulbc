@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fish Lake North Recreation Site</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Provincial / Regional Park  ·  Dog Creek</div>
 <p class="seo-desc">A free, 3-unit BC Forest Recreation Site on a small lake with a cartop boat launch — ideal for a quiet paddle or fishing stop, accessed via 3.5 km of Forest Service road off Hwy 27.</p>

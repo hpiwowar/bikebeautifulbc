@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Maple Grove Pool</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Maple Grove Pool is a seasonal outdoor public swimming pool in Vancouver&#x27;s Kerrisdale neighbourhood, operated by the Vancouver Parks Board. Open only in the summer months, it serves the surrounding residential community and draws visitors to the area near the Fraser River foreshore trails. As a fee-based public facility, it offers a refreshing stop for cyclists exploring this part of the city.</p>

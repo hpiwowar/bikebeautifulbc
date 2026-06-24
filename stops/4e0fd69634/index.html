@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Signature Indian Cuisine</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Courtenay  ·  Casual</div>
 <p class="seo-desc">Signature Indian Cuisine is a sit-down Indian restaurant in Courtenay on Vancouver Island, offering a broad menu of traditional and contemporary dishes including tandoori specialties from a clay oven, exotic curries, biryanis, and a full vegetarian section. The kitchen emphasises fresh ingredients, authentic spices, and time-honoured cooking methods with a contemporary Indian twist. Catering for special occasions is also available.</p>

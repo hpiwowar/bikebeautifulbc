@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Whole Foods Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  West Vancouver (North Shore)</div>
 <p class="seo-desc">Whole Foods Market in West Vancouver is a large natural and organic supermarket carrying a wide selection of organic produce, sustainable seafood, and specialty grocery items. The store houses multiple in-house eateries including a coffee bar, pizza counter, burrito bar, juice bar, made-to-order sandwich counter, and a sushi bar, making it a convenient one-stop resupply point. As an Amazon-affiliated location, it also offers grocery pickup and delivery for Prime members.</p>

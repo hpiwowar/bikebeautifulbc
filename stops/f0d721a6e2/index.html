@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Duncan (Metro Vancouver)</div>
 <p class="seo-desc">A Walmart Supercenter (Store 3025) in Duncan, BC, offering a full range of groceries alongside electronics, clothing, furniture, and baby products. As one of the larger retail anchors in the Cowichan Valley, it represents a comprehensive resupply stop for touring cyclists passing through the region. The store is tagged wheelchair accessible in OSM.</p>

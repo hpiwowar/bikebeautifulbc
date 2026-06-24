@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mikonos Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Port Hardy  ·  Casual</div>
 <p class="seo-desc">Mikonos Cafe is a restaurant located in Port Hardy, BC, at the northern tip of Vancouver Island — a key waypoint for cyclists completing the Island or completing a ferry crossing. The Greek-inflected name suggests a Mediterranean-style menu, though no further detail is verifiable from available sources.</p>

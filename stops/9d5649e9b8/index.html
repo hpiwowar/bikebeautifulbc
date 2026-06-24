@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Market at Big White</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Big White</div>
 <p class="seo-desc">The Market at Big White is a full-service mid-mountain grocery, deli bistro, and liquor store located in the heart of Big White ski village. The grocery section carries fresh produce, meat and seafood, dairy, and baked goods, while the deli bistro offers made-daily sandwiches, soups, pizza slices, and hot savoury pastries. The on-site liquor store boasts Okanagan wines and ciders alongside a broad spirits and beer selection.</p>

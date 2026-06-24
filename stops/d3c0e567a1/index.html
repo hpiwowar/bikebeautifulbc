@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Our Community Bikes</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Non-profit community bike shop on Main Street, run by PEDAL Society. Full-service repairs and tune-ups, refurbished bikes, and new and used parts. DIY workspace for cyclists who want to fix their own bikes or learn how, plus mechanics workshops and clinics.</p>

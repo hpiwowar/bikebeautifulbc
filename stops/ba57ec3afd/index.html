@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pura Vida</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Duncan  ·  Cheap eats</div>
 <p class="seo-desc">Pura Vida is an ice cream business in the Duncan/Salt Spring Island area that offers vegan-friendly options. The Instagram handle &#x27;puravidasaltspring&#x27; points to Salt Spring Island as the likely home base, though the OSM record places it near Duncan. It is tagged as an ice cream shop with confirmed vegan offerings, making it a worthwhile stop for plant-based touring cyclists.</p>

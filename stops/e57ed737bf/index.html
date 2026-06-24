@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fountain Diner</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Langford (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Langfords Fountain Diner is a restaurant in the Langford area west of Victoria, situated along Bryn Maur Road. The diner-style name suggests a casual, approachable eatery that could be a convenient refuelling stop for cyclists travelling through the western communities of Greater Victoria.</p>

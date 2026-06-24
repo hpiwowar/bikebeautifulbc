@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Boston Bar Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Boston Bar  ·  Free</div>
 <p class="seo-desc">The Boston Bar Library is a small community branch of the Fraser Valley Regional Library, the largest public library system in British Columbia, serving the Boston Bar and surrounding Nlaka&#x27;pamux territory. Cyclists passing through this remote Fraser Canyon community can stop in for free WiFi, public computers, and copying/printing/scanning services. The branch offers outdoor bike racks, making it a practical rest stop on an otherwise isolated stretch of highway.</p>

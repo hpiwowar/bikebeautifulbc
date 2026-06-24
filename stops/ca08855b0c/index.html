@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">ORL: Oliver Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Oliver  ·  Free</div>
 <p class="seo-desc">The Oliver Branch is part of the Okanagan Regional Library, one of Canada&#x27;s 16 largest library systems serving over 399,000 people across 30 branches. Located inside a mall building in Oliver, BC, this branch offers public computers, Wi-Fi, and a novel lock-and-charge station where visitors can securely store and charge their devices. A touring cyclist rolling through the South Okanagan wine country would find it a useful stop for connectivity, rest, and community programming.</p>

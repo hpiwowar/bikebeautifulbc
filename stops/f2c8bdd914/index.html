@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Krishna&#x27;s Dosa Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Krishna&#x27;s Dosa Grill is a South Indian restaurant on Scott Road specializing in dosas, the crispy fermented rice-and-lentil crepes that are a staple of South Indian cuisine. The restaurant serves the Scott Road corridor, a densely commercial stretch straddling Surrey and North Delta. A touring cyclist stopping here would find Indian cuisine in a full-service restaurant setting.</p>

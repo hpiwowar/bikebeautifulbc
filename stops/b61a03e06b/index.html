@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">West Vancouver Memorial Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  North Vancouver (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The West Vancouver Memorial Library is a national and international award-winning public library, opened November 11, 1950 as a living War Memorial dedicated to those who served in the Second World War. Situated in the Ambleside neighbourhood directly across from Memorial Park and steps from the waterfront, it offers an art gallery, live music events, technology programs, and extensive research databases. For touring cyclists passing through West Vancouver, it represents a well-located community hub in a scenic seaside neighbourhood.</p>

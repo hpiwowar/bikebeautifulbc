@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Shinobi Japanese Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Haney  ·  Casual</div>
 <p class="seo-desc">Shinobi Sushi is a Japanese restaurant group with two Maple Ridge locations — a downtown sit-down spot on 224 St and a smaller express outlet on 240 St. The menu is sushi-focused and the business supports online ordering with local delivery. It sits in a suburban commercial area of Maple Ridge convenient to the Haney Bypass cycling corridor.</p>

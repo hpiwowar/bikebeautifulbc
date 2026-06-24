@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Revelstoke</div>
 <p class="seo-desc">The Revelstoke BC Liquor Store is a government-operated retail outlet carrying wine, spirits, beer, coolers, and ciders, including BC VQA wines and BC craft beers. It is one of 198 BCLIQUOR locations across the province, offering knowledgeable staff recommendations and in-store container recycling. Touring cyclists passing through Revelstoke can resupply with local and import beverages here.</p>

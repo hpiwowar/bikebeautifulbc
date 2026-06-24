@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cask Whisky Vault</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Cask Whisky Vault is a whisky-focused bar located in a unit on West Road in Richmond. The name suggests a curated vault-style offering of cask whiskies, likely appealing to enthusiasts seeking a specialist spirits experience. A touring cyclist passing through Richmond&#x27;s West Road corridor might stop here for a post-ride dram.</p>

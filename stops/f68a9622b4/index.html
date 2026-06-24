@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Port Moody Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  North Vancouver</div>
 <p class="seo-desc">Port Moody Liquor Store is part of the Neighbourhood Liquor chain and carries a broad, ever-changing selection of wine, beer, and spirits with a focus on niche and craft products. Staff offer knowledgeable recommendations and the store hosts weekly in-store tastings covering beer, wine, coolers, and spirits. A touring cyclist stopping in will find complementary cookies on weekends and dog treats on request.</p>

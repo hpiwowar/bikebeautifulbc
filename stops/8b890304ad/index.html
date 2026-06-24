@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cariboo Bowling Lanes</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Williams Lake  ·  Low</div>
 <p class="seo-desc">Cariboo Bowl is a 5-pin bowling alley serving the Williams Lake area of BC&#x27;s Cariboo interior, offering public open bowling, a full slate of adult and youth leagues, and Friday-night Cosmic Bowl. The facility accommodates up to six bowlers per lane and accepts group and birthday-party bookings by reservation. For touring cyclists passing through the region, it provides a social indoor activity option, particularly useful during inclement weather.</p>

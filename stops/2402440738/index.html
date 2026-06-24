@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Thirsty Duck Pub</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  New Westminster (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Thirsty Duck is a long-established neighbourhood pub in New Westminster that has been serving locals since 1981, now under new ownership. It offers a full sit-down menu with daily themed specials, pool tables, and comprehensive sports coverage including NHL and NFL packages. Both indoor and outdoor seating are available, making it a social stop for groups passing through the New Westminster area.</p>

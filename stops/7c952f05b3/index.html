@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Delta Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Delta Pizza is a vegetarian-only pizza restaurant in Surrey operating under the tagline &#x27;Think Vegetarian.&#x27; The menu leans heavily on South Asian-inspired flavours, with options like Veggie-Paneer, Punjabi-Style Veggie, and Roasted Garlic Paneer alongside more familiar western pies. It is a takeout-focused spot that accepts cash and debit only.</p>

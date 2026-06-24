@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Seaside Village Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  West Vancouver / Horseshoe Bay, Coast and Mountains (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Seaside Village is tagged in OpenStreetMap as a cafe on Royal Avenue in North Vancouver. No further detail about its character, cuisine, or offerings could be confirmed due to the inaccessibility of its website. Its name could refer to a community hub, a neighbourhood café, or a development amenity.</p>

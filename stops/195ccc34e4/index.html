@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Devonshire Farm</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Sandwick</div>
 <p class="seo-desc">Devonshire Farm is a working farm market along the North Island Highway in Courtenay, selling fresh vegetables and fruits year-round from their own fields. The farm is a seasonal destination for U-pick strawberries each spring and summer, drawing both locals and passing travellers to pick directly from the rows. For a touring cyclist riding the Island Highway corridor, it offers a genuine farm-gate produce stop in a rural setting just off the main route.</p>

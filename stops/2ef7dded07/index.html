@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Royal Wok</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Salmon Arm  ·  Casual</div>
 <p class="seo-desc">Royal Wok is a Chinese food and sushi restaurant in Salmon Arm, situated directly on the Trans-Canada Highway. The kitchen prides itself on sourcing fresh ingredients from local farmers&#x27; markets, and a chef with 20 years of fine-dining experience leads the menu. The restaurant offers dine-in buffet alongside takeout and delivery, and can accommodate private events ranging from weddings to business luncheons.</p>

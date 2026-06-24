@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Baba Sweets &amp; Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">Baba Sweets &amp; Restaurant is an Indian food establishment in North Vancouver offering outdoor seating in a no-smoking environment. With no indoor seating per OSM, it likely operates as a primarily outdoor or takeout-oriented spot. The combination of sweets and restaurant fare suggests a South Asian sweets shop with prepared food, a format common to the Lower Mainland&#x27;s South Asian food scene.</p>

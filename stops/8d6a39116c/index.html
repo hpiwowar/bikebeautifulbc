@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Leieve Tea</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  White Rock  ·  Cheap eats</div>
 <p class="seo-desc">Leieve Tea is a bright and cheerful tea café on Marine Drive in White Rock, offering an extensive menu of hot and cold teas, bubble teas, slush drinks, and smoothies. It is located on the scenic waterfront strip that draws cyclists exploring White Rock&#x27;s beachside promenade. The café has been operating since 2016 and is listed as a dining destination by the local tourism association.</p>

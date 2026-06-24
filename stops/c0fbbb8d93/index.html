@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Salt Spring Island Visitor Information Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Visitor Centre  ·  Ganges, Salt Spring Island</div>
 <p class="seo-desc">The Salt Spring Visitor Centre is operated by the Salt Spring Island Chamber of Commerce and serves as the main information hub for visitors to Salt Spring Island in the Southern Gulf Islands. Located in Ganges, it is a natural first stop for touring cyclists arriving by ferry who need local maps, trail information, and recommendations for food, lodging, and attractions across the island.</p>

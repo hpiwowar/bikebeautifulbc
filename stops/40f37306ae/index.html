@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Grace Lake Campground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Chilliwack</div>
 <p class="seo-desc">Small 10-site year-round recreation site directly beside Grace Lake, with a floating dock for fishing and outhouse facilities; cash-only and first-come first-served, sharing a staging area with motorized-trail users from the West Harrison Riding Area.</p>

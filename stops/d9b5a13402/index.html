@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Granisle Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Granisle  ·  Free</div>
 <p class="seo-desc">Granisle Public Library is a small community library serving the remote village of Granisle on Babine Lake in northern BC. It functions as a local hub offering digital resources, programs, and a community history archive. For cyclists passing through this isolated stretch of northern BC, the library provides free WiFi that extends into its parking lot, along with public computers and printing.</p>

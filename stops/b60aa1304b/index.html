@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tom&#x27;s Kitchen</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Alberni  ·  Casual</div>
 <p class="seo-desc">Tom&#x27;s Kitchen is a restaurant situated on River Road in the Port Alberni area of Vancouver Island, a region popular with touring cyclists travelling the Island&#x27;s interior routes. The OSM record places it in what appears to be a semi-rural riverside setting. Touring cyclists passing through the area may find it a useful meal stop, though specific offerings remain unverified.</p>

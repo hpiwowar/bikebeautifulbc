@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Admiralty Point Lands (Parks Canada)</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Port Moody  ·  Free</div>
 <p class="seo-desc">Admiralty Point Lands is a nature reserve on Indian Arm in the Belcarra area of North Vancouver, part of the broader Belcarra Regional Park managed by Metro Vancouver. The waterfront lands offer coastal forest and shoreline habitat. Despite the OSM name crediting Parks Canada, the area appears to fall under Metro Vancouver Regional Parks stewardship.</p>

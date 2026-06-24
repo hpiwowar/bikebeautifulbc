@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cache Creek Visitor Information Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Cache Creek</div>
 <p class="seo-desc">The Cache Creek Visitor Information Centre is the official tourism office for the Village of Cache Creek, a small community at the junction of Highways 1 and 97 in the Thompson region of BC. Situated at a major crossroads for trans-provincial travel, it serves as a natural stop for cyclists riding either the Trans-Canada or the Cariboo Highway corridor. As a municipal information office it would typically provide local area maps, attraction guides, and trip-planning assistance.</p>

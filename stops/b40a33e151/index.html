@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Elvis Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Surrey  ·  Cheap eats</div>
 <p class="seo-desc">Elvis Pizza is a family-owned Surrey institution operating since 1977, serving pizza, pasta, wings, and salads for pickup and delivery from its North Surrey–Guildford location. Known for making dough, pizza sauce, and meat sauce entirely on-premise with 100% real mozzarella, it has built a loyal local following over nearly five decades. Late-night availability makes it a potential stop for cyclists finishing a long day on the road.</p>

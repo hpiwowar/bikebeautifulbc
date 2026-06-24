@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Beach Ave Bar &amp; Grill</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Beach Ave Bar &amp; Grill is a full-service bar and restaurant situated on Beach Avenue in Vancouver, steps from the English Bay waterfront and the popular Seawall cycling corridor. The restaurant offers both indoor and outdoor seating, making it a natural rest stop for cyclists riding the waterfront route. The menu spans food and drinks with a dedicated weekend brunch program.</p>

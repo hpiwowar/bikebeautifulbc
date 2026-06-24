@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mama Panda</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Fort St. John  ·  Casual</div>
 <p class="seo-desc">Mama Panda is a Chinese restaurant located in Fort St. John, BC, serving the northeastern corner of the province. Fort St. John sits along the Alaska Highway and is a key service stop for cyclists touring through the Peace River region. The restaurant offers a sit-down dining option in a community that sees long distances between food stops.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Abbotsford Recreation Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Abbotsford</div>
 <p class="seo-desc">The Abbotsford Recreation Centre (ARC) is a large City of Abbotsford–operated multi-sport facility offering a broad range of fitness and recreation programming to residents and visitors. Located in the heart of Abbotsford, it is a typical municipal recreation complex that touring cyclists might use as a rest and refresh stop. The facility is wheelchair accessible and tagged in OSM as supporting multiple sports.</p>

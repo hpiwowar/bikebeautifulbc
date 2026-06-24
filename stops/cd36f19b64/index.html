@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Urban Thai Bistro</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Urban Thai Bistro is a Thai restaurant in Vancouver&#x27;s Yaletown neighbourhood, operated by the Thai House Restaurant Group, which has been serving authentic Thai cuisine in BC since 1986. The group has won multiple consecutive Best Thai and Best Asian awards from publications including Vancouver Magazine and the Georgia Straight. Dishes span traditional Thai street food and signature fusion creations, with most items available in vegetarian preparation on request.</p>

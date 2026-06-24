@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Surrey Nature Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Surrey</div>
 <p class="seo-desc">The Surrey Nature Centre is a hands-on interpretive facility nestled beside Green Timbers Urban Forest, where visitors can borrow activity backpacks and fishing rods for self-guided outdoor exploration. Inside, a Birds of Green Timbers exhibit introduces local species and the centre maintains a library of field guides alongside a family reading nook with a puppet theatre. Touring cyclists passing through Surrey&#x27;s trail network may find it a worthwhile stop for a nature-themed break.</p>

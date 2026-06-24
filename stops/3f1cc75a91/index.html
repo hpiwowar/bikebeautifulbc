@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Le Petit Belge</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Le Petit Belge is a Belgian-inspired cafe on Robson Street in downtown Vancouver, serving bagels, breakfast items, pastries, and coffee. With both indoor and outdoor seating, it offers a comfortable stop along one of the city&#x27;s busiest pedestrian corridors. The name and cuisine suggest a European cafe atmosphere with a focus on baked goods and brunch fare.</p>

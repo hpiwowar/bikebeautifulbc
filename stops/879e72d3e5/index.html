@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mud Sharks Coffee Bar</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Courtenay  ·  Cheap eats</div>
 <p class="seo-desc">Mud Sharks Coffee Bar is a downtown Courtenay café known for fresh, healthy food and 49th Parallel specialty coffee. It stands out for its explicit commitment to gluten-free and plant-based menu options, making it a welcoming stop for diet-conscious touring cyclists passing through the Comox Valley. The café operates under a fast, friendly service model and offers online ordering via Square.</p>

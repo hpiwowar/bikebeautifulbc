@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kimberley Aquatic Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Kimberley (East Kootenay)</div>
 <p class="seo-desc">The Kimberley Aquatic Centre is a municipally operated public swimming facility run by the City of Kimberley in the East Kootenays. In addition to a pool, OSM records indicate it offers a hot tub and steam room, making it a potentially appealing recovery stop for cyclists finishing a day on the region&#x27;s renowned trail network. It is one of the main indoor recreation facilities serving the Kimberley community.</p>

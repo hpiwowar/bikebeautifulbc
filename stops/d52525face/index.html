@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Maple Palace</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Sidney (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Maple Palace Restaurant is a Chinese restaurant in Sidney, BC, run under new management and helmed by a chef born and raised in China with over 20 years of experience. The dining room is decorated with hand-painted murals and offers a unique view of aircraft taking off from nearby Victoria International Airport. The menu spans classic Cantonese staples through Szechuan and Mongolian dishes, with both dine-in and takeout available.</p>

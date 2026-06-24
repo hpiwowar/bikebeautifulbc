@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Heartland Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  McBride  ·  Casual</div>
 <p class="seo-desc">Heartland Restaurant is a diner in McBride, BC, situated in the Robson Valley along the Yellowhead Highway (Highway 16). McBride is a small but key community on the cycling corridor connecting Prince George to Jasper, Alberta, making local food service stops valuable for self-supported touring cyclists. The restaurant is one of the sit-down dining options in this remote stretch of the Interior.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Yuan Coffee</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Yuan Coffee is a specialty coffee shop on Clark Drive in Vancouver, operating as a small-format café focused on quality coffee. Its Instagram-only web presence and modest OSM footprint suggest an independent, community-oriented spot. Touring cyclists passing through East Vancouver will find a washroom available to customers.</p>

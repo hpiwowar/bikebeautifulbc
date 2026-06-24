@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Triumph Coffee</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Vernon (Okanagan)  ·  Cheap eats</div>
 <p class="seo-desc">Triumph Coffee is an independent café in Vernon, BC, branding itself around &#x27;outstanding coffee.&#x27; It offers online ordering through its website, suggesting a takeout-friendly model well suited to cyclists passing through the Okanagan. Its location on 30 Avenue puts it within reach of the Vernon town centre and surrounding cycling routes.</p>

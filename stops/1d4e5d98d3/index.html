@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">La Cucina</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Sidney  ·  Casual</div>
 <p class="seo-desc">La Cucina is a small, family-style Italian restaurant on Saturna Island specializing in authentic Neapolitan pizzas and fresh pasta made with quality ingredients. It operates on a limited weekly schedule, making it one of the very few dining destinations on this quiet and lightly travelled Gulf Island. The warm, cozy atmosphere and reservation-based seating give it a distinctly local character that sets it apart from mainland dining stops.</p>

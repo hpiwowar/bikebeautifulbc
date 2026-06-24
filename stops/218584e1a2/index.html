@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Westview Fresh Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  North Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Westview Fresh Pizza is a neighbourhood pizza spot on the North Shore committed to fresh, locally sourced ingredients and what they describe as authentic Canadian pizza. The business operates primarily as a takeout and online-order operation and has drawn praise for attentive owner-led customer service. Touring cyclists passing through North Vancouver could use it as a convenient food stop, though cyclist-specific facilities are unconfirmed.</p>

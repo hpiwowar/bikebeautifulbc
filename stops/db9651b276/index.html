@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mariner Brewing</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  North Vancouver</div>
 <p class="seo-desc">Mariner Brewing is a craft brewery and taproom in Coquitlam specializing in a rotating lineup of house beers. The taproom includes a full kitchen focused on smash burgers, plus an outdoor patio that welcomes dogs. It hosts community events and actively donates to local causes, giving it a neighbourhood-hub character that touring cyclists passing through the Tri-Cities area may find welcoming.</p>

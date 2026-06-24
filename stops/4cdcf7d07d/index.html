@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Canco Gas &amp; One Stop Convenience</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Kamloops</div>
 <p class="seo-desc">Canco Gas &amp; One Stop Convenience is a combined fuel station and convenience store on Westsyde Road in the north end of Kamloops. Operating under the Canco banner, it positions itself as a single-stop destination for road travellers needing fuel, snacks, and convenience items. For cyclists riding the Westsyde corridor or heading toward Clearwater, it represents a practical resupply point in a stretch with limited services.</p>

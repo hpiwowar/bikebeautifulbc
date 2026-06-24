@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Squamish (Sea to Sky)</div>
 <p class="seo-desc">Walmart Supercenter (Store #1015) in Squamish serves as a one-stop shop for touring cyclists needing to restock on groceries, clothing, camping supplies, and general merchandise. As a large-format supercenter, it carries a broad range of food and household goods that make it a practical resupply stop on routes through the Sea-to-Sky corridor. The store is located in Squamish&#x27;s commercial district off Discovery Way.</p>

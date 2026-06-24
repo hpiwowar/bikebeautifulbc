@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">M.E Concept Cakes</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">M.E Concept Cakes is a specialty bakery on Granville Street in Vancouver focused on cakes and desserts. The OSM record was field-verified as recently as October 2025, suggesting the business is actively operating. A touring cyclist stopping along Granville could pick up baked goods here, though this is a niche confectionery rather than a general provisioning stop.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Aldergrove Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Aldergrove  ·  Free</div>
 <p class="seo-desc">The Aldergrove Library is a branch of the Fraser Valley Regional Library, Canada&#x27;s largest public library system by geographic coverage, serving over 800,000 residents across 25 community locations. As a publicly accessible civic facility in a small community, it offers a quiet stop for touring cyclists passing through Aldergrove in the Langley area. FVRL branches typically offer public computers, printing, and community programming.</p>

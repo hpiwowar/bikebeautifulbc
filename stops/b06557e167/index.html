@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Yummy Deli &amp; Coffee</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Yummy Deli &amp; Coffee is a sandwich-focused fast-food deli and café located on Westminster Highway in Richmond. It sits along a busy arterial corridor that connects cycling routes through the city. Touring cyclists passing through the area may find it a convenient stop for a quick meal.</p>

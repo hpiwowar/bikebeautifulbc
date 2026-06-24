@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pinky&#x27;s On Main</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Pinky&#x27;s On Main is a bar on Vancouver&#x27;s Main Street, one of the city&#x27;s most active and cyclist-friendly commercial corridors. The 2400 block sits in a dense mixed-use neighbourhood well-served by bike routes and close to transit. No business-specific web presence was accessible beyond an Instagram handle.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kootenay River Theatre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Creston  ·  Low</div>
 <p class="seo-desc">The Kootenay River Theatre is a community performing arts venue housed in the southwest corner of the Kootenay River Secondary School building in Creston, BC. It is supported by the Creston Community Auditorium Society, which fundraises for equipment upgrades and manages online ticket sales independently from School District #8. Touring cyclists passing through the Kootenays could catch a live performance here as a cultural stop in the region.</p>

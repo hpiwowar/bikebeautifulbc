@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Witch Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Maple Ridge</div>
 <p class="seo-desc">The Witch Liquor Store is one of 13 Springs Group retail locations across British Columbia, situated on Dewdney Trunk Road in Maple Ridge. It stocks an extensive range of ice-cold beer, coolers, ciders, fine wines, and spirits, with curbside pickup and home delivery also available. Frequent promotional deals and knowledgeable staff make it a well-regarded neighbourhood liquor stop for anyone riding through the Maple Ridge area.</p>

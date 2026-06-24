@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">gallery2</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Grand Forks  ·  Low</div>
 <p class="seo-desc">A public art gallery housed in a handsome 1911 Edwardian provincial courthouse in downtown Grand Forks, operating since 1984 and featuring exhibitions by local, regional, and national artists. The building also hosts the Grand Forks Visitor Centre, where touring cyclists can pick up maps, guides, and trip-planning help for the Boundary–Kootenay region. There is a gift shop on site and the gallery offers a rotating program of exhibitions and community art events.</p>

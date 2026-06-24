@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Taco Shell</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Sidney (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Taco Shell is a home-style Mexican restaurant on Sidney&#x27;s main commercial strip, Beacon Avenue, serving tacos, burritos, enchiladas, and quesadillas. It has been voted the Peninsula&#x27;s Favourite Mexican Restaurant, reflecting strong local community support. Touring cyclists passing through Sidney will find a range of satisfying, customizable meals including gluten-free and vegan options.</p>

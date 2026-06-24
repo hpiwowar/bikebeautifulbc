@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">SURA Korean BBQ</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">SURA Korean BBQ is a full-service Korean restaurant located inside Aberdeen Centre mall in Richmond, offering tableside Korean BBQ alongside traditional dishes including soups, stews, and hot pots. The restaurant emphasizes premium ingredients and authentic flavours prepared by seasoned chefs. It has earned recognition from the Vancouver Magazine Restaurant Awards, Georgia Straight Golden Plates, and WE Vancouver&#x27;s Best of the City Dining.</p>

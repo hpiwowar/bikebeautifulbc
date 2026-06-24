@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Chopped Leaf</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">The Chopped Leaf is a Canadian chain founded in 2009, specializing in fresh salads, wraps, bowls, and sandwiches with a focus on making greens feel like comfort food. This location is on Willowbrook Drive in Langley, convenient for cyclists passing through the Township. The menu emphasizes customizable, produce-forward meals that could appeal to riders looking for a lighter, nutritious stop.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Daves&#x27; Bakery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Ocean Grove</div>
 <p class="seo-desc">Daves&#x27; Bakery is a well-regarded artisan bakery on Vancouver Island, recognized with a 2023 Restaurant Guru award, offering fresh-baked bread alongside coffee, tea, and cold drinks. The shop runs both a walk-in storefront and an online pre-order store. For a touring cyclist, it is a convenient food stop with baked goods and beverages available.</p>

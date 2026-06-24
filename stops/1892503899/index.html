@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Insadong</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Coquitlam  ·  Casual</div>
 <p class="seo-desc">Insadong is a Korean BBQ and grill restaurant in Coquitlam offering authentic Korean dishes in a themed interior designed to evoke the Insadong district of Seoul. The menu spans appetizers, BBQ, noodles, hot pot, and Korean cuisine, with the kitchen emphasising fresh, high-quality meats. Online ordering and table reservations are available through the restaurant&#x27;s own website.</p>

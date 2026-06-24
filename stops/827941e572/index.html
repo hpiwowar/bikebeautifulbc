@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushi Wow</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Sushi Wow is a Japanese restaurant on Granville Street in South Vancouver offering a broad menu spanning specialty rolls, sashimi, nigiri, donburi, ramen, and combination platters. The restaurant is notable for its wide range of vegetarian-friendly options alongside seafood-forward classics and large sharing trays. Indoor seating and online ordering make it a flexible stop for cyclists riding the Granville corridor.</p>

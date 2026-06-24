@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dinakis Mediterranean Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">Dinakis Mediterranean Grill is a sit-down Greek and Mediterranean restaurant in Port Coquitlam specializing in slow-roasted lamb, souvlaki, and fresh Greek salads made from traditional recipes. The restaurant positions itself as an authentic cultural dining experience with a warm, welcoming atmosphere. Online ordering is available for cyclists who want to call ahead or grab takeout.</p>

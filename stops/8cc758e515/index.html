@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Roxy</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Victoria (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">The Roxy is an independent neighbourhood movie theatre in Victoria&#x27;s North Park area, screening a mix of new releases, classic films, Studio Ghibli retrospectives, and community events like talent show socials. Its eclectic programming and intimate single-screen format make it a distinctive cultural stop for visitors exploring the city by bike.</p>

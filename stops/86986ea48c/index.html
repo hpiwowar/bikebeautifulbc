@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Foody World</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Foody World is a large-format Chinese supermarket spanning roughly 60,000 sq ft with ten departments and over 40,000 product varieties, offering a comprehensive one-stop grocery experience. Originally founded in 2001 and headquartered in Toronto, this Richmond BC location operates under its own website and serves the broader Metro Vancouver area. Touring cyclists will find an unusually wide selection of Asian and mainstream groceries at a single stop open every day of the year.</p>

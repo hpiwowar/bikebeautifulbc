@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gwaii Taxi And Tours</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Shuttle  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Scheduled daily airport shuttle between Sandspit Airport and Daajing Giids/Skidegate on Haida Gwaii, timed to Air Canada flights and BC Ferries connections; also operates taxi service and vehicle rentals. No bike policy stated.</p>

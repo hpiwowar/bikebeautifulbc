@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Glass Foundry</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Salt Spring Island  ·  Free</div>
 <p class="seo-desc">The Glass Foundry is a working glassblowing studio and gallery on Salt Spring Island that recycles scrap glass into wholesale giftware while producing unique blown, cast, and fused art pieces. Visitors are welcome to watch glassmaking in progress and can participate in drop-in workshops or adult classes. The studio is set on a rural farming acreage just outside Ganges village, making it a distinctive craft destination for cyclists exploring the island.</p>

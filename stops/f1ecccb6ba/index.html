@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Country Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Polley</div>
 <p class="seo-desc">The Country Store is a grocery store, Return-It bottle depot, and freight forwarding location serving Lillooet, BC, operating seven days a week. It is a rare multi-function stop in a small interior community along cycling routes through the Lillooet area. Touring cyclists will find it a practical resupply point with grocery shopping and beverage container returns under one roof.</p>

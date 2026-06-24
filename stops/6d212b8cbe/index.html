@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">ORL: Princeton Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Princeton  ·  Free</div>
 <p class="seo-desc">A branch of the Okanagan Regional Library system located on Vermilion Avenue in Princeton. The library offers public computers, a seed library for gardeners, and a puzzle exchange alongside its lending collection. A water cooler is available for visitors to refill their bottles.</p>

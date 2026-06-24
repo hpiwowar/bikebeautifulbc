@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Zio&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Zio&#x27;s is a pizza counter in the food court of River Rock Casino Resort, a large casino resort complex in Richmond, BC. As a fast-food outlet inside a major entertainment venue, it offers a dining option for cyclists in the area. Be aware that entry to River Rock Casino now requires government-issued photo ID under BC casino regulations.</p>

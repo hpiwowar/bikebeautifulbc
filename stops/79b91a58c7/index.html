@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Euro Food &amp; Deli</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Specialty / Health Food  ·  Maple Ridge</div>
 <p class="seo-desc">Euro Food &amp; Deli is an Eastern European specialty deli offering imported products from Hungary, Romania, Russia, Ukraine, and other countries, alongside house-made items like perogies, cabbage rolls, and borscht. The Maple Ridge location is one of three Lower Mainland stores (also in Port Moody and Burnaby). It is a distinctive stop for cyclists looking for something beyond standard convenience fare in the Fraser Valley.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hot House Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Hot House Pizza is a multi-location BC pizza chain with a Gordon Head outpost on Shelbourne Street in Victoria. The menu covers specialty, chicken, veggie, and classic pizzas in three sizes, with crust choices that include gluten-free and dairy-free options. Online ordering with cart checkout is available, making advance pickup straightforward for cyclists passing through the area.</p>

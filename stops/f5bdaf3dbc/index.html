@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chef Big D&#x27;s Restaurant &amp; Grill</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Squamish (Sea to Sky)  ·  Casual</div>
 <p class="seo-desc">Chef Big D&#x27;s is a restaurant on Cleveland Avenue in Squamish, BC&#x27;s main commercial corridor. OSM records it as a sit-down establishment with indoor seating. Very little additional detail is publicly available about its menu or character.</p>

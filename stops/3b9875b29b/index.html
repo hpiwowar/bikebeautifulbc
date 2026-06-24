@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">East Garden Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">East Garden Chinese Restaurant is a neighbourhood Chinese restaurant on Belmont Avenue in Victoria serving a broad menu of Cantonese-influenced dishes including chow mein, fried rice, sweet and sour, and tofu specialties. The restaurant has an active online ordering system with pickup available, making it convenient for cyclists passing through the area. With 128 customer reviews it appears to be an established local dining option.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">New West Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">New West Pizza is a neighbourhood pizza counter in Coquitlam, BC, formerly operating as Pizza One, that has built a local following for its fresh daily dough and traditional recipes. The menu spans classic and specialty pizzas, pasta, Italian dishes, chicken wings, and salads, with several vegetarian-friendly options. It operates as a pickup-only spot, making it a straightforward and filling pitstop for cyclists moving through the Como Lake corridor.</p>

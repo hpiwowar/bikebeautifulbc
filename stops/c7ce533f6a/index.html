@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Dawson Creek</div>
 <p class="seo-desc">A Walmart Supercenter located in Dawson Creek, BC — the southern terminus of the Alaska Highway and a major resupply hub for long-distance cyclists heading north. As a full-format Supercenter, it carries a broad grocery selection alongside general merchandise. For touring cyclists tackling the Alaska Highway corridor, this is one of the last large-format stores before entering more remote stretches of northern BC.</p>

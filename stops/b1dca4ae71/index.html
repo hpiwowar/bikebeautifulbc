@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">And Drinks</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">And Drinks is a bubble tea cafe tucked inside a commercial complex at 3700 Number 3 Road in Richmond. Specializing in beverages in the style of contemporary Asian-influenced drink shops, it sits at ground level within a larger retail environment. For cyclists riding through Richmond&#x27;s central corridor, it offers a convenient stop for a cold or hot drink.</p>

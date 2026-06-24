@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Taqueria Playa Tropical</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  New Westminster (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Taqueria Playa Tropical is a Mexican restaurant and bar in New Westminster&#x27;s 6th Street corridor, offering both dine-in and takeout with indoor and outdoor seating. The combination of a full bar and vegetarian menu options makes it a flexible stop for mixed groups. OSM records it as smoke-free with a check date of November 2024.</p>

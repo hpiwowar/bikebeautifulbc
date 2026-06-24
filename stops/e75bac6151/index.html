@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Websters Corner Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Websters Corners</div>
 <p class="seo-desc">Websters Corner Store is a family-run convenience store on Dewdney Trunk Road in Maple Ridge, known for its friendly service and a small in-house deli. Reviewers single out house-made egg salad sandwiches and beef samosas as standout items. It sits on a busy road through the Fraser Valley, making it a potential resupply stop for cyclists riding the Dewdney Trunk corridor.</p>

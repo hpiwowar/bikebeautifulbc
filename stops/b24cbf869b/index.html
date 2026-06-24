@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Grind + Filter Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Maple Ridge  ·  Cheap eats</div>
 <p class="seo-desc">Grind + Filter Cafe is a café in the Lower Mainland &amp; Fraser Valley region of British Columbia, with a name suggesting a specialty coffee focus. It sits at ground level (OSM level=0), likely in a mixed-use or commercial setting. No further detail about its interior, menu, or cyclist-specific offerings could be verified.</p>

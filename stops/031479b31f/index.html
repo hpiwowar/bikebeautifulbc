@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Katsu Heaven</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Penticton  ·  Casual</div>
 <p class="seo-desc">Katsu Heaven is a Japanese cutlet restaurant in downtown Penticton specializing in tonkatsu-style dishes. It offers a focused menu of breaded cutlets in the Japanese tradition, making it a distinctive dining option in BC&#x27;s Okanagan wine country. A touring cyclist passing through Penticton will find it a compact, sit-down spot a short roll from the main corridor through town.</p>

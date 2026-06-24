@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Likely Lodge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Likely  ·  Casual</div>
 <p class="seo-desc">Likely Lodge is a combined hotel, restaurant, and pub in the tiny, remote community of Likely, BC, deep in the Cariboo region near Quesnel Lake. It serves American cuisine and operates a separate pub, making it a rare full-service stop in an otherwise sparsely serviced stretch of the Cariboo backroads. The lodge also functions as a hub for area information on circle tours, hiking, and fishing.</p>

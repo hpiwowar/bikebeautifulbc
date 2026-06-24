@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Red Diamond Family Restaurant &amp; Bed &amp; Breakfast</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Golden  ·  Casual</div>
 <p class="seo-desc">Red Diamond is a Chinese family restaurant located in the Kootenays region of British Columbia. With a multilingual name tag in OSM suggesting it may serve an international clientele, it could offer a welcome sit-down meal for cyclists passing through the area. Beyond its cuisine type, no further details about the dining experience could be confirmed.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">IGA</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Naramata</div>
 <p class="seo-desc">A full-service IGA supermarket serving the Summerland/Naramata area of BC&#x27;s Okanagan, stocking a wide range of fresh produce, deli, bakery, and packaged goods. Located on Prairie Valley Road, it sits in prime wine country cycling territory and offers a convenient resupply point for touring cyclists exploring the Naramata Bench and Kettle Valley Rail Trail. The store operates as a standard neighbourhood IGA with in-store pickup available.</p>

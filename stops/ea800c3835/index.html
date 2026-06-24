@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushi Boss</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Coquitlam  ·  Cheap eats</div>
 <p class="seo-desc">Sushi Boss is a sushi restaurant recorded in North Vancouver offering made-to-order rolls, bowls, and takeout. Its OSM record is sparse, and the only website found under this name operates exclusively in Indianapolis, Indiana, raising serious doubts about whether the two are the same business. A touring cyclist considering a stop here should verify the location independently before relying on this listing.</p>

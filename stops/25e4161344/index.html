@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">White Moose Resort</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Loon Lake</div>
 <p class="seo-desc">A seasonal fishing and hunting resort on the shore of Loon Lake, open May long weekend through October, with tent and RV campsites, boat rentals, and deliberately no WiFi or reliable cell service. Access is via Loon Lake Rd off Hwy 97; phone reservations recommended as sites fill fast.</p>

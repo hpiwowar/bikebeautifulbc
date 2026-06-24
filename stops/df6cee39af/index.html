@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: City of Langley Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Langley  ·  Free</div>
 <p class="seo-desc">The City of Langley branch of the Fraser Valley Regional Library is a full-service public library operated by FVRL, one of the largest regional library systems in British Columbia. Located in the heart of the City of Langley, it offers a range of programs, digital collections, and community services. For touring cyclists, public libraries are classic rest stops offering shelter, internet access, and often public washrooms, though specific amenity details are not confirmed on the website.</p>

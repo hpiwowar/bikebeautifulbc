@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushiro</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Maple Ridge  ·  Casual</div>
 <p class="seo-desc">Sushiro is a Japanese restaurant in Maple Ridge serving fresh sushi, sashimi, salads, and noodles, with all items prepared to order from quality ingredients. Located on the Lougheed Highway, it positions itself as a local favourite and offers both dine-in and takeout, including third-party delivery. A touring cyclist passing through Maple Ridge would find a full sit-down meal option with a broad Japanese menu.</p>

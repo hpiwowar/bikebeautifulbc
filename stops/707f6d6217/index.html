@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Aldergrove Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Aldergrove</div>
 <p class="seo-desc">A government-operated BCLIQUOR retail store in Aldergrove, one of 198 locations run by the BC Liquor Distribution Branch across the province. It carries the full BCLIQUOR range of wine, beer, spirits, coolers, and ciders. Touring cyclists passing through Aldergrove may find it a practical stop for resupply before a campsite or overnight.</p>

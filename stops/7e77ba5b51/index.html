@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Oceanside Convenience Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Tsawwassen</div>
 <p class="seo-desc">Oceanside Convenience Store is a neighbourhood convenience shop on Marine Drive in Tsawwassen, situated in a coastal community near the BC Ferries Tsawwassen terminal. For cyclists riding the South Fraser or ferry-connection routes, it represents a potential resupply point close to the water. The store&#x27;s proximity to the terminal approach road could make it a useful last stop before boarding or a first stop after arriving by ferry.</p>

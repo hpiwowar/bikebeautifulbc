@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Barking Parrot</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Penticton  ·  Casual</div>
 <p class="seo-desc">The Barking Parrot Bar is a waterfront bar and restaurant situated within the Penticton Lakeside Resort, just steps from Okanagan Lake. It serves food, cocktails, and draft beer, and bills itself as Penticton&#x27;s most popular bar. Regular events include wing nights, smash burger specials on weekends, and a daily Flappy Hour promotion.</p>

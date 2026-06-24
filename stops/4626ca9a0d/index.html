@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Nagomi Sushi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Golden  ·  Cheap eats</div>
 <p class="seo-desc">Nagomi Sushi is a takeaway-only Japanese restaurant in Golden, BC, a popular stop on the Trans-Canada cycling corridor between Banff and Revelstoke. As a takeout-only spot, it offers a quick and convenient meal option for cyclists passing through town without needing to linger at a table.</p>

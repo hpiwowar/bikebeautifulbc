@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hope Pizza Place</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Hope  ·  Cheap eats</div>
 <p class="seo-desc">Hope Pizza Place is a family-run pizzeria established in 2010 that has become a local favourite in Hope, BC. The restaurant prides itself on fresh, never-frozen ingredients and offers both pick-up and delivery. Hope sits at a key junction on cycling routes through the Fraser Valley and into the Interior, making this a convenient refuel stop.</p>

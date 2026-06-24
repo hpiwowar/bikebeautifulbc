@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Prince George Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Prince George</div>
 <p class="seo-desc">The Prince George Visitor Information Centre is the official tourism hub for the city, offering expert travel advice, maps, and local recommendations to help visitors explore the region. Run by Tourism Prince George, it also features a gift shop stocked with locally made products and exclusive souvenirs. For touring cyclists passing through central BC, it serves as a useful resource for route planning and discovering local experiences.</p>

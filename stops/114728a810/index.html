@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Haney</div>
 <p class="seo-desc">This Walmart Supercenter in Maple Ridge is a large-format big-box store carrying groceries alongside electronics, clothing, and general merchandise. As one of the larger retail destinations in the area, it offers a broad grocery selection that could serve touring cyclists resupplying for longer routes in the Fraser Valley or Pitt Meadows corridor. The multi-level store (OSM level tags: 0,1) is a substantial facility with wheelchair accessibility confirmed in OSM.</p>

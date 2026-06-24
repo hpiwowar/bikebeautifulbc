@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Momo Tea</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Momo Tea is a bubble tea café on Yates Street in downtown Victoria. It sits in a walkable, cycling-friendly part of the city close to the Inner Harbour area. A touring cyclist passing through would find it a convenient stop for a cold or hot tea drink.</p>

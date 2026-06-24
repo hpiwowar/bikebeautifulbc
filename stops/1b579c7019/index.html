@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Thai-Isaan</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Tsawwassen (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Thai-Isaan is a small, family-run restaurant in Tsawwassen serving authentic homestyle Thai and Isaan cuisine made with fresh, locally sourced ingredients. The cozy, welcoming space is filled with traditional decorations and is well-suited to a solo dinner or a group meal after a day on the bike. Takeout is available for cyclists who need to eat on the go.</p>

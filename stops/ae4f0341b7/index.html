@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Stewart Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Stewart  ·  Free</div>
 <p class="seo-desc">Stewart Public Library is the community hub of one of BC&#x27;s most remote towns, situated at the end of Portland Canal roughly 350 km from the nearest large urban centre. The library serves both residents and visitors, offering internet access, an extensive digital collection, and a warm gathering space in a town known for its wildlife and dramatic scenery. A touring cyclist reaching Stewart will find this a rare opportunity for connectivity and a quiet rest in a very isolated corner of the province.</p>

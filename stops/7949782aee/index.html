@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pizza64</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Pizza64 is a Canadian pizza chain founded in 2010 as a family business, with 20+ locations across British Columbia. Each location makes its sauce and dough fresh on-site, and the menu spans specialty, signature, and gourmet pizzas alongside wings, pasta, and sides. Online ordering is available, making it a convenient quick-stop for cyclists needing a calorie-dense meal.</p>

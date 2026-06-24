@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Royal Canadian Legion</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Golden</div>
 <p class="seo-desc">Golden Branch #122 of the Royal Canadian Legion is a veterans&#x27; community organisation serving the Golden area. As part of the BC/Yukon Command&#x27;s 145-branch network, it supports veterans, ex-service personnel, and the broader community. Like many small-town Legion halls, it may serve as an informal community gathering point for visitors passing through Golden.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tempest Bistro</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Campbell River  ·  Casual</div>
 <p class="seo-desc">Tempest Bistro is a casual counter-service bistro on Shoppers Row in Campbell River offering all-day breakfast alongside daily hot sandwiches and house-made soups. The menu leans toward fresh, made-to-order items including breakfast bowls, paninis, and chili with cornbread, making it a satisfying refuelling stop. Online ordering for pickup is available through their Square site.</p>

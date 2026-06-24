@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Northern Lights Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Port McNeill  ·  Casual</div>
 <p class="seo-desc">Northern Lights Restaurant is a sit-down restaurant on northern Vancouver Island, operating under the evocative tagline &#x27;Dine Under the Borealis.&#x27; It sits in a stretch of the Island Highway corridor that sees long-distance cycle tourists heading toward Port Hardy and the BC Ferries terminal. Its website offers almost no detail about the experience, leaving the specifics of cuisine and atmosphere undocumented.</p>

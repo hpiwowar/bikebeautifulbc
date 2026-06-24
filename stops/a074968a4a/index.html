@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sandspit Campground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Nelson</div>
 <p class="seo-desc">Sandspit campground anchors Kokanee Creek Park&#x27;s kilometre of sandy Kootenay Lake beach, 19 km east of Nelson on paved Hwy 3A, with full amenities including showers and e-bike charging. It&#x27;s the park&#x27;s most popular campground — expect crowds in summer, offset by beach swimming, canyon trails through old-growth cedar, and a kokanee spawning channel.</p>

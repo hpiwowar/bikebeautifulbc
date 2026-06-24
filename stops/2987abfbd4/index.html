@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">A provincial government-operated retail liquor store in Victoria&#x27;s Cedar Hill neighbourhood, carrying wine, spirits, beer, coolers, and ciders. Part of the BCLIQUOR chain of 198 stores across British Columbia, it offers a broad product selection including BC craft beers that might appeal to a touring cyclist looking to pick up local beverages. Staff are described as knowledgeable on product recommendations.</p>

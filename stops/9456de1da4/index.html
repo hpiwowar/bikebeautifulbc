@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Willow Point Greenway</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Campbell River  ·  Free</div>
 <p class="seo-desc">Willow Point Greenway is a linear nature reserve corridor in the Willow Point neighbourhood of Campbell River on Vancouver Island, providing a traffic-free green passage for cyclists and pedestrians. It forms part of the City of Campbell River&#x27;s municipal parkland network and sits within easy reach of the Discovery Passage coastline. Touring cyclists passing through Campbell River can use it as a quieter off-road route through the southern part of the city.</p>

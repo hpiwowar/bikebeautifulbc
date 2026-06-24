@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Columbia Bakery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Columbia Bakery is a family-owned European specialty bakery operating in Nanaimo since 1972, known for high-quality breads, pastries, and baked German classics like Bee-sting cake. Cyclists stopping in can grab a fresh daily soup or sandwich for a satisfying mid-ride meal. Located at the corner of Bowen and Northfield Road, it is a well-established local institution with decades of community presence.</p>

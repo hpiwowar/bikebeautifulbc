@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Star Lake Chinese Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">Star Lake Chinese Restaurant is a well-reviewed Chinese restaurant in a Langley strip mall, popular for dishes like crispy ginger beef, pineapple sweet and sour pork, and a broad selection of chow mein and fried rice. They offer both dine-in and pickup service, making it a convenient refuelling stop for cyclists passing through the Langley area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fishboat</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  White Rock  ·  Cheap eats</div>
 <p class="seo-desc">Fishboat — also known as Fishboat Fish &amp; Chippery — is a fish and chips eatery on White Rock&#x27;s Marine Drive waterfront that has been operating since 2009. It sits on a popular recreational and touring cycling corridor along the Semiahmoo shoreline, with outdoor seating available. The seafront setting makes it a fitting food stop for cyclists exploring the White Rock waterfront and promenade.</p>

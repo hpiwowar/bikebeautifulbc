@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cycles West</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Cycles West is a family-owned bicycle shop in Victoria, BC, operating since 2006, offering new and used bike sales alongside full mechanical service for all styles of bikes from commuters to gravel and e-bikes. With Shimano-certified staff and decades of combined experience, the shop caters to a wide range of cyclists including those preparing for bikepacking adventures and touring rides. Custom builds are also available, and the shop participates in a tire stewardship recycling program.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Salt Spring Island Public Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Ganges  ·  Free</div>
 <p class="seo-desc">A modern public library in Ganges village on Salt Spring Island, featuring an Indigenous Learning Area with names gifted by local Language Keepers, a FabLab Makerspace with assistive device program, and a pop-up recording studio. For touring cyclists arriving via BC Ferries, it offers a free, air-conditioned rest stop with computers, printing services, and community information about the island.</p>

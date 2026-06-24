@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chinese Canadian Museum</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Vancouver (North Shore)  ·  Moderate</div>
 <p class="seo-desc">The Chinese Canadian Museum is permanently housed in the Wing Sang Building (1889), the oldest brick structure in Vancouver&#x27;s Chinatown, originally built by merchant Yip Sang. Opened July 1, 2023, it honours the history, contributions, and heritage of Chinese Canadians through rotating exhibitions and public programs. Its Dream Factory: CantoPop MandoPop exhibition won a 2025 Canadian Museums Association Award for Outstanding Achievement.</p>

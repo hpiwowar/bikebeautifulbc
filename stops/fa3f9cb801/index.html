@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Haney Public House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Maple Ridge  ·  Casual</div>
 <p class="seo-desc">Originally The Haney Public House, this Maple Ridge venue has rebranded as SPURS Country Bar, a community-focused country bar featuring live music, line-dancing nights, and comfort food. It operates as a lively nightlife destination on Lougheed Highway in the heart of Maple Ridge. A touring cyclist rolling through town on a weekend evening would find cold drinks, hearty food, and a welcoming local crowd.</p>

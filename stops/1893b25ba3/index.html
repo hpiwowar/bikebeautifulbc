@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Bayside Restaurant &amp; Lounge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Parksville  ·  Casual</div>
 <p class="seo-desc">The Bayside Restaurant &amp; Lounge is the signature dining room of the Bayside Oceanfront Resort, a full-service oceanfront hotel in Parksville. The kitchen spotlights local ingredients through a rotating seasonal menu supported by an extensive cocktail and wine program. Weekend evenings feature free live music, and a dedicated Sunday brunch service makes it a sociable stop for cyclists passing through town.</p>

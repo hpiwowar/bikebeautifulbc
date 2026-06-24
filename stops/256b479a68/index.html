@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Nordic Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  North Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Nordic Cafe is a small grab-and-go food counter at Cypress Mountain ski resort, tucked in the Nordic Area behind the Ticket Office at the entrance to the Nordic trails. It serves hot dogs, bagels, and baked goods sourced from Hollyburn Lodge — a convenient quick-bite stop for snowshoers and tubers. The cafe is a winter-only seasonal operation and is closed during the summer months.</p>

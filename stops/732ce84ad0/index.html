@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Penticton Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Penticton  ·  Free</div>
 <p class="seo-desc">The Penticton Public Library is a full-service community library on Main Street in the heart of Penticton, offering free public Wi-Fi, computers, printing, scanning, and a makerspace. It runs a &#x27;Library of Things&#x27; lending program that includes outdoor exploration gear alongside tech items like Nintendo Switch consoles. For touring cyclists, it serves as a practical downtown hub for connectivity, rest, and trip planning.</p>

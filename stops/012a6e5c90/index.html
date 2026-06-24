@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">West B Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">West B Pizza is a Vancouver pizzeria on West Broadway serving a creative lineup of pies including fusion options like Paneer Masala and Vietnamese Chilli Chicken alongside classics and pasta dishes. The shop offers indoor seating and online ordering, making it a convenient stop for cyclists along the busy Broadway corridor. A range of vegetarian options and sides like peri peri wings and fries round out the menu.</p>

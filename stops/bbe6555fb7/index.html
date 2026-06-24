@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Alberni Valley Museum</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Alberni  ·  Free</div>
 <p class="seo-desc">Praised by Lonely Planet as one of Vancouver Island&#x27;s best community museums, the Alberni Valley Museum documents the richly diverse history of the Alberni Valley through collections spanning First Nations culture, industrial history, and folk art. Its distinctive Visible Storage system makes the entire collection accessible to visitors at all times, accompanied by easy-to-use catalogue books. The museum also presents a rotating program of temporary exhibits and operates a museum shop.</p>

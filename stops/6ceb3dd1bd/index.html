@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bauhaus</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Burnaby (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">A Chinese dumpling restaurant on Kingsway in Burnaby, likely operating under the name &#x27;Baohaus&#x27; (the OSM entry appears to have a transcription error). Situated along a busy arterial corridor, it offers a quick dumpling fix for cyclists passing through the Burnaby stretch of Kingsway.</p>

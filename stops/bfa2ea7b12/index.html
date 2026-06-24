@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cafe Overflow</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  North Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Cafe Overflow is a North Vancouver café blending Korean cuisine with brunch and coffee-shop offerings — an unusual combination that could make it a compelling stop for touring cyclists looking for something beyond standard cafe fare. Its location in North Vancouver places it near popular cycling routes on the North Shore.</p>

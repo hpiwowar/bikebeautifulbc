@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bene Sushi Lounge</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  West Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Bene Sushi is a sit-down sushi restaurant on Marine Drive in North Vancouver, a corridor popular with cyclists riding between West Vancouver and the North Shore. The restaurant offers indoor seating in a no-smoking environment. Its location on a busy cycling route makes it a potential meal stop, though current operating status is uncertain.</p>

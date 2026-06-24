@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Maritime Museum of British Columbia</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Victoria (Metro Vancouver)  ·  Moderate</div>
 <p class="seo-desc">The Maritime Museum of BC is Victoria&#x27;s dedicated institution for the province&#x27;s nautical history and ocean sciences, housed near the Inner Harbour. It holds an extensive collection of objects, archives, photographs, and historic vessels, and runs rotating exhibits alongside programs for adults and children. The museum is currently partnering with Lekwungen Peoples on the Future of History project, a significant redevelopment in the Inner Harbour.</p>

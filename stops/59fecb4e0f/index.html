@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Whole Foods Market</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Whole Foods Market&#x27;s Robson Street location is a full-service natural and organic supermarket in Vancouver&#x27;s West End, steps from Stanley Park. The store features in-house eateries including a coffee bar, juice bar, sandwich counter, and a hot and salad bar — making it a solid stop for cyclists looking to restock or grab a hot meal. Grocery delivery via Instacart and Amazon Prime savings are also available.</p>

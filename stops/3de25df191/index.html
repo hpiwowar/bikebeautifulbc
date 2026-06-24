@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Compass Customer Service</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Compass Customer Service is TransLink&#x27;s in-person office for Metro Vancouver&#x27;s transit fare card, located inside Waterfront Station — the main interchange hub for SkyTrain, SeaBus, and West Coast Express. Cyclists who plan to combine riding with transit can pick up or manage a Compass card here, or get system-wide trip planning assistance. The office is staffed by TransLink agents and can provide service in over 300 languages via a third-party interpreter line.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ritual</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Prince George</div>
 <p class="seo-desc">Ritual Coffeeworks is a community-oriented coffee shop in Prince George, BC, describing itself as a &#x27;third space&#x27; for connecting with others, doing remote work, or simply taking a moment to yourself. Located in a commercial unit on 3rd Avenue in the heart of the city, it offers a welcoming urban stop for cyclists passing through the Cariboo and Central Interior region.</p>

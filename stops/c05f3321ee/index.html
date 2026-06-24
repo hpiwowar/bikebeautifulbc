@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Subway</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Subway at 1568 Fort St is a franchise sandwich shop located in the Stadacona Centre Building in Victoria&#x27;s Fernwood neighbourhood, offering Footlongs, 6&quot; sandwiches, wraps, and salads. Breakfast service is available, and orders can be placed in-restaurant, online, via pickup, delivery, or curbside. All locations are independently owned and operated.</p>

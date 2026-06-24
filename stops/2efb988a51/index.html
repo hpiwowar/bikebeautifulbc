@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tap and Barrel</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Burnaby  ·  Cheap eats</div>
 <p class="seo-desc">Tap and Barrel Brentwood is part of a seven-location BC restaurant group with a strong focus on local craft beer, BC wine, and comfort food made with seasonal ingredients. Located in the Brentwood neighbourhood of Burnaby, the restaurant offers both indoor and outdoor seating. The group is known for its extensive BC-only tap selections and rotating menus developed in partnership with local breweries and wineries.</p>

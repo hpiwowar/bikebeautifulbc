@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pender Islands Museum</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Pender Island (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">A local history museum housed in a restored 1908 &#x27;kit house&#x27; farmstead within the Gulf Islands National Park Reserve on Pender Island. The museum tells stories of the W̱SÁNEĆ People and settler families through artifacts including an ancient sandstone whale carving. The waterfront location features a heritage orchard with picnic tables and trail access to Ella Bay at low tide.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Ground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Masset  ·  Cheap eats</div>
 <p class="seo-desc">The Ground is a cafe and coffee house in British Columbia&#x27;s North Coast and Haida Gwaii region, a remote and strikingly scenic destination for touring cyclists. Its Facebook presence suggests it doubles as a gallery space, making it a cultural as well as culinary stop. Cyclists passing through this area will find few services, making this kind of community-oriented cafe a notable waypoint.</p>

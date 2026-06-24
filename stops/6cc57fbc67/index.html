@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Park Drive</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Park Drive is a bar and restaurant on Commercial Drive in Vancouver that also operates The Gemm, a cocktail lounge on the same premises. The menu ranges from craft cocktails and local draft beer to eclectic pub fare including Detroit-style pizza and bao buns. It sits on one of Vancouver&#x27;s busiest and most cycle-traveled urban streets.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Otter Co-op</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Convenience Store  ·  Bradner</div>
 <p class="seo-desc">Otter Co-op is a locally-owned co-operative serving communities across the Lower Mainland, Fraser Valley, and Okanagan, offering food, fuel, pharmacy, feed, and liquor under one roof. As a member-owned organization, it is part of a long-standing BC co-operative tradition. The breadth of services makes it a practical resupply stop for touring cyclists passing through the Langley/Aldergrove area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pamir Diner Afghan Cuisine</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Delta (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Pamir Diner is an Afghan restaurant in Delta, BC, serving traditional dishes including handcrafted mantu dumplings, slow-cooked lamb, and mixed kebab platters using family recipes. The menu draws on generations of Afghan culinary tradition with an emphasis on fresh, daily-prepared ingredients. Online ordering is available for pickup and delivery, making it a practical refuelling stop for cyclists riding through the area.</p>

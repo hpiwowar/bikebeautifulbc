@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cropthorne Farm</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Cropthorne Farm is a Certified Organic family farm on Westham Island, accessible via a century-old wooden bridge where the Fraser River meets the Salish Sea. The year-round farm stand is stocked with fresh-picked organic vegetables and seasonal flowers grown on-site across 24 acres. It is a genuine farm-gate stop with a rural, wildlife-rich setting that touring cyclists exploring the Westham Island loop would find rewarding.</p>

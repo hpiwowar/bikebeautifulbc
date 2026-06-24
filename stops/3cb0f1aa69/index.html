@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushi Han</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Sushi Han is a Japanese restaurant tucked into Blundell Centre in Richmond, offering an extensive menu that spans aburi oshi, sashimi, nigiri, specialty rolls, ramen, robata BBQ, and bento boxes. The breadth of the menu — from casual rolls to full donburi and hot dishes — makes it a satisfying option for touring cyclists wanting a substantial sit-down or takeout Japanese meal in south Richmond.</p>

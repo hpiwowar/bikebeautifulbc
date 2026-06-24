@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Nanaimo Aquatic Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Nanaimo (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">The Nanaimo Aquatic Centre is a City of Nanaimo-operated public swimming facility on Third Street in central Nanaimo. As a municipal aquatic centre it serves the full range of recreational swimmers, from drop-in lane swimmers to programmed lessons. Touring cyclists passing through Nanaimo may find it a useful urban stop for a swim or to access public facilities after a long ride.</p>

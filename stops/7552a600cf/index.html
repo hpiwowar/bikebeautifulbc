@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">K &amp; H Seafood Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">K &amp; H Seafood Restaurant is a Chinese seafood dining destination on Kingsway, one of Vancouver&#x27;s main east-west arterials and a common cycling corridor. The restaurant sits in a dense commercial strip in East Vancouver that serves a large Chinese-Canadian community. Touring cyclists passing through on Kingsway or nearby routes will find a full-service sit-down option for seafood and Chinese cuisine.</p>

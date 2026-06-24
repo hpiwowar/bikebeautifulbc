@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Choices Market</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Choices Market is a 100% BC-owned and operated natural and organic grocery chain that has anchored the Kitsilano neighbourhood since 1990. The store specialises in local, organic, and specialty food items—including thousands of Canadian-sourced products—making it a well-stocked resupply point for cyclists travelling through Vancouver&#x27;s west side. An in-store Nutrition Team of Registered Dietitians offers free personalised consultations and guided store tours.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">On the Run</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Fort St. John</div>
 <p class="seo-desc">On the Run is a 24-hour Chevron-affiliated convenience store on Alaska Road North in Fort Saint John, a key route for cyclists heading into or out of northeastern BC. The store offers convenience goods alongside fuel (94 octane and diesel), making it a practical resupply stop in a region where services can be sparse. It accepts cash, credit, debit, and contactless payment.</p>

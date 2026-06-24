@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pemberton Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Whistler  ·  Low</div>
 <p class="seo-desc">The Pemberton &amp; District Community Centre is a municipally operated recreation hub serving Pemberton and the surrounding district, offering fitness classes, drop-in activities, and programs for all ages. It houses a fitness centre and is the primary indoor recreation facility for the community at the base of the Sea-to-Sky corridor north of Whistler. Accessible recreation programming is listed as a service, and the OSM record notes wheelchair accessibility.</p>

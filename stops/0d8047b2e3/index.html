@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Domino&#x27;s Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Elphinstone  ·  Cheap eats</div>
 <p class="seo-desc">Domino&#x27;s Pizza in Gibsons is a franchise location on the Sunshine Coast, serving pizza, cheesy bread, chicken, and desserts with both delivery and carryout options. It sits along the main Sunshine Coast Highway corridor that touring cyclists traverse between Langdale Ferry and Sechelt. The store accepts cards and cash and carries vegetarian pizza options.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Evelyne Saller Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">The Evelyne Saller Centre is a City of Vancouver community centre located in the Downtown Eastside neighbourhood at 404 Alexander Street. Operated by Vancouver Parks, Recreation and Culture, it serves as a community hub for the surrounding area. A touring cyclist passing through the DTES would find it a publicly accessible municipal facility in a central urban location.</p>

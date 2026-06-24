@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Coombs Corner Convenience</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Coombs</div>
 <p class="seo-desc">Coombs Corner Convenience is a convenience store on the Alberni Highway in Coombs, a small Vancouver Island community sitting between Parksville and Port Alberni. It occupies a natural rest point for cyclists riding the highway corridor toward Pacific Rim National Park or the Comox Valley. As a corner store on a touring route, it offers the kind of quick resupply stop that matters when the next town is many kilometres away.</p>

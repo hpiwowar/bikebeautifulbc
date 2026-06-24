@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ha Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">Ha Cafe is a Vietnamese restaurant that has been serving Burnaby since 2006, located directly across from Metrotown on Kingsway. It specializes in pho and freshly cooked Vietnamese cuisine, built on a family kitchen tradition of rich broths and herbs. The restaurant offers both a full dine-in experience and a takeout menu including banh mi, rice, vermicelli, and vegetarian dishes.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fujiya</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Fujiya is a Japanese grocery and food retailer founded in 1977 by Shigeru Hirai in Vancouver&#x27;s Japantown, now celebrating 50 years of operation with multiple Lower Mainland and Vancouver Island locations. The downtown W Pender store stocks Japanese ingredients and carries ready-to-go prepared foods including sushi made in Fujiya&#x27;s own kitchens. It is a long-standing community institution for Japanese-Canadian food culture in the city.</p>

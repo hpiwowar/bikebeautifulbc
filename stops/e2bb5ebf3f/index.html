@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">High five diner</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Little Fort  ·  Casual</div>
 <p class="seo-desc">High five diner is a restaurant located in or near Little Fort, a small community along Highway 24 in BC&#x27;s North Thompson region. The area sits at a crossroads used by cyclists travelling between the Thompson Valley and the Cariboo, making a diner stop here a practical option for touring riders. Beyond its OSM listing as a restaurant, details about the menu or facilities are not publicly available without a Facebook account.</p>

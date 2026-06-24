@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Brookswood Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Langley  ·  Free</div>
 <p class="seo-desc">Brookswood Library is a community branch of the Fraser Valley Regional Library system serving the Brookswood neighbourhood of Langley, BC. It offers public computers, printing services, and an extensive digital library catalogue to residents and visitors alike. For a touring cyclist, it provides a quiet spot to rest, access free internet resources, and connect with local community services in the Township of Langley.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Yoga Chef Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Port Coquitlam  ·  Casual</div>
 <p class="seo-desc">The Yoga Chef is a chef-led artisan catering company based in Port Coquitlam, serving corporate, wedding, private, and film productions across Metro Vancouver and the Sea to Sky corridor. The business emphasizes seasonal, locally sourced ingredients and visually considered menus. With over 300 Google reviews, it is an established presence in the Lower Mainland catering scene.</p>

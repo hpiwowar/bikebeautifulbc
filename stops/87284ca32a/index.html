@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Masthead Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Duncan (Metro Vancouver)</div>
 <p class="seo-desc">The Masthead Restaurant is a waterfront dining destination in Cowichan Bay on Vancouver Island, historically known for seafood and regional cuisine in a harbour-side setting. It sits along the Vancouver Crossing Loop route, making it a potential stop for touring cyclists exploring the Cowichan Valley. Its current operating status is unclear based on prominent closure notices on its website.</p>

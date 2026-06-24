@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Duncan Garage</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Duncan (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Duncan Garage Cafe &amp; Bakery is an organic vegetarian cafe and bakery housed in a charming historic building in the heart of downtown Duncan. The menu leans heavily on fresh, locally sourced and seasonal ingredients, with extensive vegan and gluten-free options across breakfast, lunch, and a dedicated cakes program. Cyclists will find a full cafe bar, grab-and-go items, and frozen meals available throughout the day.</p>

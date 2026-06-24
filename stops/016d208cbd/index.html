@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">面子 Menz Noodle House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">面子 Menz Noodle House is a Japanese noodle restaurant located in a unit at 2940 King George Boulevard in Surrey. The bilingual name — combining Chinese characters (面子) and English — suggests a menu rooted in East Asian noodle traditions. It sits along a major arterial corridor in South Surrey, making it a potential refuelling stop for cyclists riding the King George Boulevard route.</p>

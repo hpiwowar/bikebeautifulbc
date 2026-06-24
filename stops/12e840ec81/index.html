@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pinetree Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  North Vancouver</div>
 <p class="seo-desc">Pinetree Community Centre is a City of Coquitlam municipal recreation facility offering group fitness classes, a weight room, multi-sport drop-in activities, youth programming, and rental meeting space. The centre is fully accessible with power-operated entrances, accessible washrooms, and elevator access. It is served by four bus routes and the Millennium SkyTrain line, making it convenient for cyclists moving through northeast Coquitlam.</p>

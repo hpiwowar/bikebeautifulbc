@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Finest Cup</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Surrey  ·  Cheap eats</div>
 <p class="seo-desc">Finest Cup is a specialty Ethiopian coffee bean retailer with a small retail outlet in a Surrey strip mall. Founded by Dereje and Mengo, the business focuses on directly connecting small-holder Ethiopian farmers with independent roasters, selling green beans, small-batch roasted beans, and traditional clay roaster kits. It operates primarily as an online Shopify store with a physical storefront for local pickup.</p>

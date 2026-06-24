@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gong Cha</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Coquitlam  ·  Cheap eats</div>
 <p class="seo-desc">Gong Cha is a globally recognized bubble tea franchise originating in Taiwan, offering highly customizable tea-based drinks with a choice of toppings, sugar levels, and ice levels. The Coquitlam location operates as a takeout-focused shop inside a commercial unit with no outdoor seating. For a touring cyclist, it offers a quick cold drink stop but has no confirmed cycling-specific infrastructure.</p>

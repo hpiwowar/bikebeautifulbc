@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fat Jack&#x27;s Homestyle Diner</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Martinson  ·  Cheap eats</div>
 <p class="seo-desc">Fat Jack&#x27;s Homestyle Diner is a diner-style eatery located in the Okanagan &amp; Thompson region of British Columbia. The Facebook URL slug suggests it may double as a pub, offering a combination of casual dining and drinks. Touring cyclists passing through the area would find it a likely stop for a hearty, home-cooked style meal.</p>

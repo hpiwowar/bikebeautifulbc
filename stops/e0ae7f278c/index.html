@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hyack Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  New Westminster (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Hyack Sushi is a Japanese restaurant in downtown New Westminster offering sushi, sashimi, aburi nigiri, rice and noodle dishes, and hot pot. The menu highlights globally sourced fresh ingredients with specialty rolls including lobster, volcano, and mango tango variations. Online ordering is available, making it a potential pickup stop for cyclists passing through the area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Jang Mo Jib</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Jang Mo Jib is a Korean restaurant located on the second floor of 808 Bute Street in Vancouver&#x27;s West End, with a sizeable indoor dining room and outdoor seating. With a listed capacity of 200, it is a substantial sit-down establishment serving traditional Korean cuisine. The restaurant offers both delivery and takeout, making it a flexible stop for cyclists passing through the neighbourhood.</p>

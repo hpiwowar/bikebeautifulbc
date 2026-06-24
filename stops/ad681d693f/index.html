@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Roseland Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Chilliwack  ·  Casual</div>
 <p class="seo-desc">Roseland Restaurant has been a fixture of the Abbotsford community since 1990, serving a broad menu of Western-style breakfast, lunch, and dinner in a cozy, flower-decorated dining room with a mini lounge and leather booth seating. The restaurant operates as a full-service restaurant and bar and accommodates groups and large parties. Pickup and delivery options are available alongside the sit-down experience.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sunset Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Sunset Community Centre is a City of Vancouver municipal recreation facility serving the Sunset neighbourhood in South Vancouver. Community centres of this type typically offer drop-in fitness, recreation programs, and public amenities in a civic building setting. Touring cyclists in the area may find it a useful stop for restrooms and basic facilities.</p>

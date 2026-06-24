@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Observatory Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver  ·  Fine dining</div>
 <p class="seo-desc">The Observatory is a fine-dining restaurant housed in a mountaintop chalet at the Peak of Grouse Mountain, with panoramic windows overlooking the city lights of Vancouver. Guests reach the restaurant via the Blue Grouse Gondola or Red Skyride, with mountain access complimentary for diners holding advance reservations. The menu features multi-course West Coast cuisine paired with Okanagan wines, alongside a dedicated vegan tasting menu offered on selected Thursday evenings.</p>

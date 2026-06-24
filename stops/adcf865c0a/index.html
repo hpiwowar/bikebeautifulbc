@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Alouette Taxi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Taxi / Ridehail  ·  Maple Ridge</div>
 <p class="seo-desc">On-demand taxi serving Maple Ridge, Pitt Meadows, and surrounding communities, with runs to Vancouver Airport, Tsawwassen ferry terminal, and Horseshoe Bay. Fleet includes sedans and accessible vans; no stated bike policy.</p>

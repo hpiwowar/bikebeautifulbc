@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ming&#x27;s Garden</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Ming&#x27;s Garden is an established Chinese restaurant on Marine Drive in North Vancouver, serving authentic Cantonese, Szechuan, and Hong Kong-style cuisine in a fully licensed dine-in setting. Located near Capilano Mall with parking available at the rear, it sits on a key arterial route through the North Shore. Touring cyclists will find a solid sit-down meal option with takeout and delivery also available.</p>

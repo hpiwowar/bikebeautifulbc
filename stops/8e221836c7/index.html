@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Circle Wellness Spa</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Activity / Experience  ·  Vancouver (Metro Vancouver)  ·  Premium</div>
 <p class="seo-desc">Circle Wellness is a private, self-guided thermal spa on Granville Island that blends ancient rituals with modern technology in individual &#x27;WellPod&#x27; suites. It bills itself as the first experience of its kind in the world, with a second location coming soon in Seattle. Located in one of Vancouver&#x27;s most bike-accessible neighbourhoods, it could serve as a recovery stop for touring cyclists.</p>

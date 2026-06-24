@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">SpringTide Whale Tours &amp; Charters</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Victoria (Metro Vancouver)  ·  Premium</div>
 <p class="seo-desc">Family-owned whale and wildlife watching company operating out of Victoria&#x27;s Inner Harbour for over 33 years. Tours head into the Salish Sea to see orcas, humpbacks, sea lions, and eagles aboard either a comfortable ocean cruiser or high-speed zodiacs. They run a 95%+ whale sighting success rate with a come-back-free guarantee if no whales are spotted.</p>

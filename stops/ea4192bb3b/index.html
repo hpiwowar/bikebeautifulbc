@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cawston Marketplace</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Cawston</div>
 <p class="seo-desc">Cawston Marketplace is a supermarket serving the small rural community of Cawston in BC&#x27;s Similkameen Valley, a corridor well-traveled by touring cyclists on routes between the Okanagan and the coast. As what appears to be the primary grocery outlet in this small community, it would be a natural resupply stop for cyclists passing through.</p>

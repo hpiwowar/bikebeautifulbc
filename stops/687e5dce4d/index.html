@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Surrey Archives</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Surrey  ·  Low</div>
 <p class="seo-desc">Surrey Archives is the City of Surrey&#x27;s official repository for historical municipal records, documents, photographs, and maps relating to the history of Surrey and its communities. Operated by the City of Surrey under its Arts &amp; Culture umbrella, it serves researchers, genealogists, and history enthusiasts seeking primary source materials. For a touring cyclist, it offers a window into the region&#x27;s past and is a quiet, air-conditioned stop in a civic facility.</p>

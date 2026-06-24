@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fernwood Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Fernwood Community Centre, operated by the Fernwood Neighbourhood Resource Group Society (Fernwood NRG), is a vibrant charitable non-profit hub in Victoria&#x27;s Fernwood neighbourhood. The centre offers an eclectic mix of programming including weekly community meals, bike polo, yoga, queer boxing, and community gardens, alongside licensed childcare and affordable housing. It also hosts the annual FernFest, a free neighbourhood celebration with live music, food, and an artisan market.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Neptune Eats</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Neptune Eats is a Cantonese-style restaurant in Vancouver&#x27;s Kerrisdale neighbourhood, specializing in Hong Kong-style cuisine with a menu spanning breakfast through dinner and seafood feasts. The restaurant operates bilingually in English and Chinese and offers both dine-in and online ordering with pickup. It sits on West 41st Avenue, a quiet residential commercial strip popular with local cyclists.</p>

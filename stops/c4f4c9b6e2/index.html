@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Basic</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Basic Eats is a casual all-day breakfast and lunch spot with three Vancouver locations, emphasizing affordable prices, generous portions, and locally sourced ingredients. The Main Street location sits in one of Vancouver&#x27;s most bicycle-friendly corridors, making it a practical refuelling stop for cyclists. The menu leans heavily on egg dishes, griddle items, and Eggs Benedict variations, with a solid selection of vegetarian options throughout.</p>

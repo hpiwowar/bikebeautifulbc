@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tim Hortons</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Sparwood  ·  Cheap eats</div>
 <p class="seo-desc">Tim Hortons is a major Canadian quick-service chain serving freshly brewed coffee, baked goods, soups, and full breakfast and lunch options. This Sparwood location is a convenient stop for touring cyclists passing through the Elk Valley, offering dine-in seating and a full food menu. The location also features a drive-through and WiFi.</p>

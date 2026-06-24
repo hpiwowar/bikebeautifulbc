@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tourism Sun Peaks</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Sun Peaks</div>
 <p class="seo-desc">Tourism Sun Peaks is the visitor and member services office for Sun Peaks Resort, BC&#x27;s second-largest four-season mountain resort. Located in the village, it serves as the central information hub for a resort spanning three mountains with an extensive bike park, hiking network, golf, and alpine skiing. Touring cyclists riding into the area can use it as a first stop for local trail conditions, event information, and resort orientation.</p>

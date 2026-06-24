@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Penang Szechuan Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  White Rock  ·  Casual</div>
 <p class="seo-desc">Penang Szechuan Cuisine Restaurant is a Szechuan Chinese restaurant in White Rock praised by reviewers for bold, authentic flavors including kung pao chicken, mapo tofu, dan dan noodles, and spicy fish fillet. It offers dine-in with a cozy atmosphere as well as online ordering and takeout, making it a practical meal stop for cyclists exploring the South Surrey and White Rock waterfront area.</p>

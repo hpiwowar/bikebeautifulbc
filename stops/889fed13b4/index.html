@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Moon Wok</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Kamloops (Thompson)  ·  Casual</div>
 <p class="seo-desc">Moon Wok is a family-owned Chinese restaurant group with three Kamloops locations (North Shore, South Shore, and Valleyview), all fully licensed. The restaurant is well-known locally for fresh ingredients, no added MSG, and a broad menu including vegetarian and gluten-free options. Cyclists can order take-out, dine in, or arrange catering for group events.</p>

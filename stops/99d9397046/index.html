@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Belmont Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Prince Rupert</div>
 <p class="seo-desc">The Belmont is a combined pub and liquor store in Prince Rupert, a key North Coast hub for cyclists beginning or ending ferry journeys to Haida Gwaii or Alaska. The store advertises cold beer sold at government liquor store prices. Prince Rupert is a notable waypoint on remote northern touring routes, making a liquor resupply stop potentially relevant to multi-day cyclists.</p>

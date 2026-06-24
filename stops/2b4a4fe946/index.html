@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">IGA</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">IGA on Robson Street is a full-service neighborhood supermarket in the heart of downtown Vancouver, stocking a broad range of fresh produce, deli and prepared meals, meat, dairy, bakery goods, and household supplies. It is one of the more centrally located grocery resupply points for cyclists touring Vancouver&#x27;s downtown core. The store accepts cash, credit, and debit cards and is tagged as wheelchair accessible in OSM.</p>

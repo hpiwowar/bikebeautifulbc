@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Victoria Distillers</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Winery / Cidery  ·  Sidney (Metro Vancouver)</div>
 <p class="seo-desc">A small-batch craft distillery on the Sidney waterfront, producing award-winning gins including the well-known Empress 1908 Indigo Gin. The retail space offers complimentary tastings and bottle purchases, making it a worthwhile stop for cyclists riding through the Saanich Peninsula. The copper pot stills and waterfront setting give the visit a sense of place beyond a typical liquor store.</p>

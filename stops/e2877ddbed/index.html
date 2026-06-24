@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Queens Cross</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  North Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Queens Cross is a neighborhood pub on Lonsdale Avenue in North Vancouver, serving a full kitchen menu alongside a cold beer and wine store. The pub broadcasts live sports across 14+ screens and a projector, covering NFL, CFL, NHL, and golf. Families with minors are welcome until 8:30 PM, making it a practical stop for cycling groups of mixed ages.</p>

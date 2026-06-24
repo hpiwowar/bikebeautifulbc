@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Spice Cart Indian Cuisine</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Port Coquitlam  ·  Casual</div>
 <p class="seo-desc">Spice Cart Indian Cuisine is an authentic Indian restaurant in Port Coquitlam specializing in fresh curries, tandoori dishes, and biryani made with traditional spices and high-quality ingredients. The menu features both meat and vegetarian options prepared with time-tested cooking methods. Cyclists can dine in or order for pickup, with delivery also available.</p>

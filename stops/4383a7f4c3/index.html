@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tourism Victoria Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Visitor Centre  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">The official visitor centre for Destination Greater Victoria, situated in the heart of the Inner Harbour on Wharf Street. It serves as the city&#x27;s primary trip-planning hub, offering local expertise, maps, and guidance across accommodations, tours, and outdoor activities in the Greater Victoria region. Touring cyclists stopping here can tap into the same resources used by visitors arriving by any mode, with the city&#x27;s cycling-friendly downtown and accessible waterfront just outside the door.</p>

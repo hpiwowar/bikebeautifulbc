@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">HellCrust Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">HellCrust Pizza is a pizza chain operating on Vancouver&#x27;s busy Main Street corridor, offering online and app-based ordering. The franchise model and &#x27;Locations&#x27; page on their website suggest multiple outlets across the region. For a touring cyclist, it is a convenient hot-meal stop on a well-travelled urban route.</p>

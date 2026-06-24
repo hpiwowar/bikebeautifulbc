@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pemberton Station Pub</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  North Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Pemberton Station Neighbourhood Pub is a full-service neighbourhood pub in North Vancouver with a beer and wine store on-site and a loyalty rewards program. The venue caters to sports fans with dedicated sport pools and a TV guide section. Online ordering is available, making it a convenient stop for cyclists passing through the area.</p>

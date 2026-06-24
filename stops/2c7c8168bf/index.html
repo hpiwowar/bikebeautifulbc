@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Small Axe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Enderby  ·  Casual</div>
 <p class="seo-desc">The Small Axe Roadhouse is a lively restaurant and bar in Enderby, BC, billing itself as a cult-classic favourite for great food, drinks, and live music. Owned by Sarah and Carina, the venue hosts a rotating calendar of events including drag brunches, karaoke, trivia nights, and punk festivals. It operates as an explicitly inclusive space and offers a main menu, drinks menu, and a weekend brunch menu.</p>

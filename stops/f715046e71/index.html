@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hidden Chapel Winery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Winery / Cidery  ·  Oliver</div>
 <p class="seo-desc">A small boutique winery on the northern edge of the Great Basin Desert near Oliver, producing about 18,000 bottles per year. Wines are aged in a unique underground cellar overlooked by the namesake hidden chapel, and the tasting room is set among pines and gardens. Located only 5 km outside Oliver and 3 km from the District Wine Village, making it a feasible side trip for cyclists touring the South Okanagan wine country.</p>

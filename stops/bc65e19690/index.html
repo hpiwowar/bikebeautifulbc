@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Valleycliffe General Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Squamish (Sea to Sky)</div>
 <p class="seo-desc">Valleycliffe General Store is a neighbourhood convenience store serving the Valleycliffe area of Squamish, a gateway community to world-class mountain biking and road cycling. As a general store in a residential district, it offers a local alternative to the larger grocery chains in central Squamish. Cyclists passing through or based in the area would find it a convenient stop for resupply.</p>

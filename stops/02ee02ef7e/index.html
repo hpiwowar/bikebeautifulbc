@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cat&#x27;s Coffee &amp; Cake</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Cat&#x27;s Coffee &amp; Cake is a café situated on Douglas Street in downtown Victoria, BC. Its central location on a major arterial street makes it a potentially convenient stop for cyclists passing through the city core. No further details about the business could be confirmed due to the inaccessibility of its website.</p>

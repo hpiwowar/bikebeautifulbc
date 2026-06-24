@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lighthouse Pub</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Sechelt / Sunshine Coast  ·  Casual</div>
 <p class="seo-desc">Established in 1988, the Lighthouse Pub is a long-running waterfront pub on Wharf Avenue in Sechelt offering views of the Sechelt Inlet. It pours from 18 taps featuring local craft and house brews by Foamers&#x27; Folly, and serves a food menu ranging from daily seafood features to its well-known wings.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">King Kabob</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Chilliwack  ·  Casual</div>
 <p class="seo-desc">King Kabob is a halal Persian grill restaurant on South Fraser Way in Abbotsford, billing itself as the first dedicated kabob house in the Fraser Valley. The menu centres on flame-broiled kebabs marinated with saffron, dried limes, and traditional Middle Eastern spices, served with basmati rice. The restaurant holds BCMA halal certification and offers both dine-in and online pickup/delivery ordering.</p>

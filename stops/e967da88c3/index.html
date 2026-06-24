@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wings</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vernon  ·  Casual</div>
 <p class="seo-desc">Wings Vernon is a branch of a BC-based chain known for award-winning chicken wings in 28 globally inspired flavours. Designated as &#x27;food primary, all ages welcome,&#x27; it operates as a full sit-down restaurant with an extensive menu of burgers, pastas, salads, and a full bar. Located in a commercial strip at Anderson Way, it would make a convenient refuelling stop for cyclists passing through Vernon.</p>

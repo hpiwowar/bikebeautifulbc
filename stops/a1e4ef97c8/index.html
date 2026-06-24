@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chase Groceteria</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Chase</div>
 <p class="seo-desc">Chase Groceteria is a convenience and grocery store located in Chase, a small town in BC&#x27;s Thompson-Nicola region along the South Thompson River corridor. Situated on Second Avenue in the town centre, it serves as a resupply point for touring cyclists travelling the Trans-Canada Highway route between Kamloops and Shuswap Lake. Its &#x27;Groceteria&#x27; name reflects the traditional BC general-store format common in small Interior communities.</p>

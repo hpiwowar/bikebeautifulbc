@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Freddie&#x27;s Pub</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Campbell River  ·  Casual</div>
 <p class="seo-desc">Freddie&#x27;s Pub is a neighbourhood pub on South Island Highway in the Vancouver Island &amp; Gulf Islands region of British Columbia. The OSM record includes a building footprint and a BC-area-code phone number, suggesting an established, physical venue. No further details about the interior, offerings, or cyclist facilities are available from verified sources at this time.</p>

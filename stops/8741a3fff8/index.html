@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lizard Lake Recreation Site</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Provincial / Regional Park  ·  Port Renfrew</div>
 <p class="seo-desc">A treed lakeside rec site sitting directly on the Pacific Circle Route, with lake swimming, a stocked trout fishing dock, and a separated beach day-use area; cash only with on-site supervision.</p>

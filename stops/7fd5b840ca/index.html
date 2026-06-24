@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kozak Ukrainian Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">Kozak is a Ukrainian restaurant and cafe in Langley serving homemade Ukrainian food. It presents itself as an authentic destination for traditional Ukrainian cuisine in the Fraser Valley. Online ordering is available, suggesting the kitchen can accommodate both dine-in and takeout customers.</p>

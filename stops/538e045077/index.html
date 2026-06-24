@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Accommodation</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Accommodation</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Airport Inn</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Hotel / Motel  ·  Fort Rupert  ·  Budget</div>
 <p class="seo-desc">Airport Inn is a renovated motel situated just minutes from the Port Hardy Airport and the BC Ferries terminal — a critical gateway for cyclists completing a Vancouver Island tour or connecting to Prince Rupert. The property offers a range of room types including kitchenette units suited for extended stays, along with an on-site restaurant, liquor store, and meeting rooms. Its location near the northern terminus of Island cycling routes makes it a strategically important stop in an area with limited accommodation options.</p>

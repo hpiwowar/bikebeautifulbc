@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  College Heights</div>
 <p class="seo-desc">A Walmart Supercenter located in Prince George, BC, offering a broad range of groceries alongside general merchandise including electronics, clothing, toys, and furniture. As one of the larger retail destinations in the Central Interior, it serves as a convenient resupply point for touring cyclists passing through Prince George. The supercenter format means a full grocery section is available alongside household goods and other supplies.</p>

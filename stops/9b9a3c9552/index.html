@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hunter Gatherer</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Whistler (Sea to Sky)  ·  Casual</div>
 <p class="seo-desc">Hunter Gather is a casual counter-order eatery and taphouse that has anchored Whistler&#x27;s Main Street since 2017, serving breakfast, lunch, and dinner with locally sourced ingredients. The venue doubles as a community hub, regularly hosting fundraising events for local organizations. Walk-ins of all group sizes are welcome, making it a natural pit stop for cyclists passing through the valley.</p>

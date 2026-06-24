@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Agassiz Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Agassiz (Fraser Valley)  ·  Free</div>
 <p class="seo-desc">The Agassiz Library is a branch of the Fraser Valley Regional Library, serving the small community of Agassiz at the eastern end of the Fraser Valley. It is a fully accessible, ground-level building with automatic doors, making it an easy and welcoming indoor rest stop for touring cyclists passing through the area. The library is part of a regional system spanning numerous communities across the Fraser Valley.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Orion</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Dawson Creek  ·  Upscale</div>
 <p class="seo-desc">Orion Chinese Restaurant has been a community fixture in Dawson Creek for over 30 years, serving authentic Chinese cuisine including signature dishes like crispy ginger beef and hot and sour soup. Family-owned and operated, it offers both dine-in and takeout and sits in the heart of Dawson Creek, making it a convenient stop for cyclists passing through Northern BC.</p>

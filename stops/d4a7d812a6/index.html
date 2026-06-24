@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ravensong Aquatic Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Qualicum Beach</div>
 <p class="seo-desc">Ravensong Aquatic Centre is a public aquatic and sports facility operated by the Regional District of Nanaimo, serving Qualicum Beach and the surrounding communities on Vancouver Island&#x27;s east coast. As a civic swimming centre, it is a known community anchor in a popular cycling corridor between Parksville and Courtenay. Touring cyclists may find it a worthwhile stop for a swim or to refresh after a ride along the Oceanside Route.</p>

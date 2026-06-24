@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Squamish Shred Shuttle</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Shuttle  ·  Garibaldi Highlands</div>
 <p class="seo-desc">Squamish-based shuttle running scheduled mountain bike uplift at Diamondhead trails and a seasonal weekend bus between Squamish and Whistler. Bikes carried on racks; e-bikes permitted but loaded by rider at their own risk.</p>

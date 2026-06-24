@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wilson&#x27;s Transportation (BC Connector)</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Bus / Public Transit</div>
 <p class="seo-desc">Scheduled coach network on southern Vancouver Island and the Victoria to Vancouver corridor, operating as BC Connector / Island Connector.</p>

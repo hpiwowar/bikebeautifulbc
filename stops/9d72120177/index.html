@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Twig &amp; Berry Trading Company</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Parson</div>
 <p class="seo-desc">Twig &amp; Berry Trading Company, also known as the Parson General Store, is a convenience shop located along Highway 95 in the Kootenays. Sitting in the small community of Parson, it likely serves as a community hub and supply point for travellers passing through this relatively remote stretch of the Columbia Valley. For touring cyclists riding the Columbia Valley route, it may represent one of few resupply options in the area.</p>

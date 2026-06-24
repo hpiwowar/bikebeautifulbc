@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Green Man Bikes Shop</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Repair Shop  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Green Man Bikes is a family-owned, service-oriented bike shop positioned just metres from the Galloping Goose Trail at the intersection of Sooke Road and Happy Valley Road — the last repair stop on the trail before Sooke. The shop carries Brodie and Genesis gravel, touring, and hybrid bikes, and also specialises in vintage bike restoration and custom builds. Staff hand out free trail maps and invite cyclists to stop in for a safety check before heading into or out of town.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Ruby on Douglas</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Ruby is a locally owned scratch brunch restaurant with three Victoria locations, open since 2015 and built around relationships with local suppliers. It offers a refined take on eclectic southern brunch fare paired with the city&#x27;s best vinyl collection and warmly attentive service. A touring cyclist arriving hungry would find generous, hearty dishes with strong vegan and gluten-free options well-suited to refuelling.</p>

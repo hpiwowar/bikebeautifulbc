@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Cook Shack</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Alert Bay  ·  Cheap eats</div>
 <p class="seo-desc">The Cook Shack is a fast-food eatery in Alert Bay on Cormorant Island, a small community accessible by ferry from Port McNeill on northern Vancouver Island. It operates most days of the week and appears to be one of the limited dining options in this remote island village. For cyclists making the detour to Alert Bay, it represents a practical meal stop in an area with few alternatives.</p>

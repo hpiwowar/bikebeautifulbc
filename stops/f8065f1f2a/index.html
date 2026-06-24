@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Cheese​ Man</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  North Vancouver (North Shore)</div>
 <p class="seo-desc">The Cheese Man is a specialty cheese retailer tucked behind Capilano Mall on the south side of West 3rd Street in North Vancouver — self-described as &#x27;not easy to find but definitely worth the trip.&#x27; The shop carries a curated selection of cheeses and accepts cash only. It is a worthwhile provisions stop for touring cyclists seeking quality artisan food rather than a full grocery run.</p>

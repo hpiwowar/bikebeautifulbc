@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Silver Creek Cookhouse</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Fort St. John  ·  Cheap eats</div>
 <p class="seo-desc">Silver Creek Cookhouse is a casual diner on Alaska Road North in Fort St. John, serving breakfast, coffee, burgers, and sandwiches — the kind of hearty, no-frills fuel a touring cyclist needs after grinding through northeastern BC. It sits along the Alaska Highway corridor, making it a natural waypoint for riders heading north toward Dawson Creek or beyond. Air conditioning provides a welcome break on hot summer days in the Peace River region.</p>

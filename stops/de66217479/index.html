@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bridge Brewing Tasting Room</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  North Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Bridge Brewing is a North Vancouver craft brewery whose Charlotte Road tasting room pours core and seasonal house beers in a venue with outdoor seating. The operation spans multiple North Shore locations and includes an on-site &#x27;Bridge Arcade&#x27; with interactive experiences such as Bridge Pong and Brewery Dash. Its position near North Shore cycling corridors makes it a natural social stop for touring cyclists.</p>

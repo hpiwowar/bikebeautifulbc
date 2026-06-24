@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Abyssinia</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">Abyssinia is a family-run Ethiopian restaurant in south Burnaby specializing in traditional dishes like injera-based watt stews, kitfo, and doro wot. The restaurant emphasizes the communal Ethiopian dining tradition of eating from a shared plate, with an extensive menu spanning beef, lamb, chicken, and vegetarian preparations. Both indoor and outdoor seating are available, making it a welcoming stop for a substantial, flavourful meal.</p>

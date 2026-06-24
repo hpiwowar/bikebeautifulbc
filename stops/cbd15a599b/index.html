@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Beach House Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Qualicum Beach  ·  Casual</div>
 <p class="seo-desc">Beach House Restaurant is a Chinese restaurant situated along the West Island Highway on Vancouver Island, a corridor popular with touring cyclists. The name and highway location suggest it serves travellers passing through this stretch of the island&#x27;s east coast. Beyond the OSM record, limited verified detail is available.</p>

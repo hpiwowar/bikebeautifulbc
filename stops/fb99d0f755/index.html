@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Surrey Arts Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Surrey  ·  Free</div>
 <p class="seo-desc">Surrey Arts Centre is a City of Surrey arts hub that brings together the Surrey Art Gallery, Surrey Civic Theatres&#x27; Main Stage and Studio Theatre, and the SPARK Stages weekend programming for kids and families. Visitors can explore contemporary and permanent art exhibitions, attend live performances by actors, dancers, and musicians, or take art classes. Many gallery events and tours are free, making it a low-barrier cultural stop for cyclists passing through the area.</p>

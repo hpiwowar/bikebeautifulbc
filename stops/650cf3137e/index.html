@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Supreme Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Supreme Pizza is a neighbourhood pizzeria on Victoria Drive in East Vancouver offering handcrafted classic and specialty pizzas alongside pasta, chicken wings, and salads. The menu includes a dedicated Veggie Pizza and multiple specialty pies, with ordering available direct, through Skip the Dishes, Uber Eats, and DoorDash. It is a pickup and delivery-focused operation serving the residential neighbourhood.</p>

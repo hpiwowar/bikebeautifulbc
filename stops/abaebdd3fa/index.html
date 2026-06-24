@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Woking Dragon Chop Suey House</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Maple Ridge  ·  Casual</div>
 <p class="seo-desc">Woking Dragon Chop Suey House is a family-owned Chinese restaurant chain operating since 2003, offering modern western-style Chinese cuisine with a nod to traditional recipes. The Maple Ridge location sits on Dewdney Trunk Road and is one of three Lower Mainland locations. It has earned recognition as a favourite Chinese restaurant in the Tri-Cities area.</p>

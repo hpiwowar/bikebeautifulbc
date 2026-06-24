@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mia Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Thornhill  ·  Cheap eats</div>
 <p class="seo-desc">Mia Pizza is a pizza restaurant located in Thornhill, the community just south of Terrace on the Old Lakelse Lake Drive corridor. It sits along a route cyclists travelling the Skeena Valley or heading toward Lakelse Lake Provincial Park may pass through. As a local pizza spot in a small community with limited dining options, it could serve as a useful resupply or meal stop for touring riders in the area.</p>

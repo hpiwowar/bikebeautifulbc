@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hong Kong Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Revelstoke  ·  Casual</div>
 <p class="seo-desc">Hong Kong Restaurant is a Revelstoke institution, serving authentic Cantonese cuisine continuously since 1981 and now a recognized stop for both locals and touring visitors. The restaurant offers dine-in service including a popular weekend dinner buffet with 18-plus hot items, as well as a full takeout menu. It has formal partnerships with travel agencies and regularly hosts large tourist groups passing through Revelstoke.</p>

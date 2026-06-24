@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dan Sharrers Aquatic Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Hope  ·  Low</div>
 <p class="seo-desc">The Dan Sharrers Aquatic Centre is the pool facility within the Hope Recreation Centre, featuring a 25-metre lap pool with diving boards, a leisure pool with spray features and a rapids channel, plus a hot tub, sauna, and steam room. Located in Hope at the confluence of the Fraser and Coquihalla rivers, it offers touring cyclists a welcome place to soak tired muscles after riding through the Fraser Valley or over the Coquihalla corridor.</p>

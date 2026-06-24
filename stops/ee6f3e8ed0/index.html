@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Or Gallery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Vancouver (North Shore)  ·  Free</div>
 <p class="seo-desc">Or Gallery is a non-profit artist-run centre founded in 1983, known for championing emerging, conceptual, and experimental contemporary art by local, national, and international artists. The gallery has presented formative exhibitions by major figures in Canadian contemporary art including Stan Douglas, Jeff Wall, and Brian Jungen, and operates an onsite bookstore for publications and artist editions. Located in Vancouver&#x27;s East End, it also hosts public events, artist talks, and community programming.</p>

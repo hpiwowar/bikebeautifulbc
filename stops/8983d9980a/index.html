@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Subway</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Fort St. John  ·  Cheap eats</div>
 <p class="seo-desc">This Subway franchise sits on 97th Avenue in Fort St. John, a Highway 97 corridor city that serves as a major service hub for cyclists on the Alaska Highway route. As an independently owned and operated franchise, it offers sandwiches, wraps, and salads with options for pickup, delivery, and curbside service. Its practical location in a commercial strip makes it a potential quick resupply stop for northbound or southbound touring cyclists.</p>

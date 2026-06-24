@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bridgeview Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Trail  ·  Cheap eats</div>
 <p class="seo-desc">Bridgeview Cafe is a Kootenays cafe serving coffee, bagels, and wraps with outdoor seating. The Facebook handle &#x27;thebridgeviewcafetrail&#x27; suggests a connection to nearby trail infrastructure, hinting that it may already serve an active-travel clientele. It appears to be a compact, weekday-oriented stop in an area with limited services.</p>

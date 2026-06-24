@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bandra Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  White Rock  ·  Casual</div>
 <p class="seo-desc">Bandra Cafe is an Indian cafe on White Rock&#x27;s Marine Drive that pays homage to the street food culture and Irani cafes of Mumbai&#x27;s Bandra neighbourhood. The menu spans Mumbai classics like Pav Bhaji, Pan Rolls, and Iranian-style Biryani alongside an extensive chai and coffee program. The cafe is fully licensed and has a second location on Scott Road in Surrey.</p>

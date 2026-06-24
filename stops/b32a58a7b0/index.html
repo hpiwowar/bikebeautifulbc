@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Beach Grove Golf Club Lounge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Tsawwassen (Metro Vancouver)  ·  Upscale</div>
 <p class="seo-desc">Beach Grove Golf Club is a private, member-owned coastal club near Boundary Bay in Tsawwassen, operating for nearly a century. The clubhouse hosts two dining venues—the Grille and the Bistro—serving chef-inspired menus using fresh, local, and sustainable ingredients. Guests are welcome for dining and private events, making the clubhouse accessible to non-members passing through the area.</p>

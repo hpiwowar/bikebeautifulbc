@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Rossland Outdoor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Rossland</div>
 <p class="seo-desc">Rossland Outdoor is a locally owned gear shop founded by Jason and Erik, two industry veterans with over 30 years of experience each, focused on mountain biking and skiing in the Monashee Mountains. The shop carries Specialized and Norco bikes and offers full bike service and repair for riders tackling Rossland&#x27;s renowned singletrack and the Seven Summits trail system. Touring cyclists will find knowledgeable staff with genuine firsthand experience on local trails.</p>

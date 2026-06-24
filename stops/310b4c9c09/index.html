@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushiwa</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Chilliwack (Fraser Valley)  ·  Casual</div>
 <p class="seo-desc">Sushiwa is a Japanese sushi restaurant located in the Promontory neighbourhood of Chilliwack, offering both à la carte and all-you-can-eat menus. The restaurant is open seven days a week, making it a consistent option for touring cyclists passing through the area. Its suburban Promontory Road location sits away from the main cycling corridors through central Chilliwack.</p>

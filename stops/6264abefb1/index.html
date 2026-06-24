@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Handi-Mart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Williams Lake</div>
 <p class="seo-desc">Handi-Mart is a convenience store in BC&#x27;s Cariboo, Chilcotin and Central Interior region, an area where services can be few and far between on long touring routes. An on-site ATM is noted in OSM, which could be useful for cyclists needing cash in a remote corridor. Beyond these basics, little verified detail is available about the store&#x27;s current offerings.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Isami Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">Isami Sushi is a family-run Japanese restaurant that has served the Burnaby community near Metrotown since 1991, growing from a small family kitchen into a multi-generational neighborhood fixture. Located at basement level along Kingsway, it offers a curated menu built on over 30 years of culinary experience. Free underground parking is available on site.</p>

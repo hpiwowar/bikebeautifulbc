@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Subway</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Surrey  ·  Cheap eats</div>
 <p class="seo-desc">A Subway franchise located inside Semiahmoo Shopping Centre in Surrey, offering the chain&#x27;s full lineup of Footlong sandwiches, 6&quot; subs, wraps, salads, and breakfast items. Cycling tourists will find it a reliable, quick stop with multiple ordering options including curbside pickup and delivery. The location accepts major credit cards and is operated independently under the Subway brand.</p>

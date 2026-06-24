@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Milk Shed</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Kelowna  ·  Cheap eats</div>
 <p class="seo-desc">Milk Shed is a neighbourhood coffeehouse tucked into the Mission area of Kelowna, right along the Lakeshore Road corridor that many cyclists use to tour the Okanagan&#x27;s lake edge. It operates as a compact cafe with outdoor seating, offering a low-key stop to regroup between winery visits or longer rides south of downtown Kelowna.</p>

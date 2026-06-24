@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Trail &amp; District Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Trail  ·  Free</div>
 <p class="seo-desc">The Trail &amp; District Public Library is a busy community hub in Trail, BC, serving residents of all ages with programs ranging from STEAM labs and drum circles to tech coaching and senior yoga. It runs a &#x27;Book Bike&#x27; outreach program, signalling a genuine connection to active and low-barrier community access. The library explicitly commits to being a welcoming, safe, and inclusive space under the Accessible BC Act, which bodes well for drop-in visitors.</p>

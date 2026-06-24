@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bluefin Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  New Westminster  ·  Casual</div>
 <p class="seo-desc">Bluefin Sushi is a Japanese fusion restaurant in New Westminster&#x27;s Columbia Street corridor, specializing in fresh sushi made from seafood, meat, and produce the kitchen describes as the finest available. The restaurant offers indoor seating and online ordering, making it a straightforward lunch or dinner stop for cyclists moving through the Lower Mainland.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">JanesTea</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Jane&#x27;s Tea Garden is a specialty tea shop in Richmond offering premium loose-leaf teas sourced from traditional Chinese tea-growing regions, alongside hand-crafted ceramic teaware. The shop operates both as an online retailer and a physical location where visitors can taste teas and explore Chinese tea culture in person. It is a niche destination for tea enthusiasts rather than a full-service café.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fraser Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  North Vancouver  ·  Free</div>
 <p class="seo-desc">Fraser Library is the Surrey branch of Simon Fraser University Library, located inside SFU&#x27;s Central City campus in the heart of Surrey&#x27;s city centre. It serves the SFU Surrey community with research resources, study spaces, and technology access, and is open to the public per OSM access tags. A touring cyclist could stop here for Wi-Fi, a quiet indoor rest, and proximity to the Central City transit hub.</p>

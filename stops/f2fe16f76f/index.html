@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mahek Restaurant &amp; Lounge</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Surrey (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Mahek is an Indian restaurant in Surrey serving a broad menu of North Indian cuisine including tandoor-grilled dishes, curries, seafood, and lamb preparations. The restaurant offers both a full dinner menu and a lunch menu, with dedicated vegetarian selections spanning paneer, dal, and vegetable curries. Online ordering with 15-minute pickup is available, making it a practical stop for a quick meal on a ride.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pizza Factory</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Langley  ·  Cheap eats</div>
 <p class="seo-desc">Pizza Factory is a locally run pizza restaurant that has been serving the Langley area for 25 years, operating across multiple locations including Langley/Brookswood, Murrayville, and Cloverdale. The menu has expanded to 16 specialty pizzas with a notably broad range of vegetarian and Indian-inspired options alongside traditional meat varieties. Online ordering is available, making it convenient for a quick takeout stop on a cycling route.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bottoms Bar &amp; Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Sun Peaks  ·  Casual</div>
 <p class="seo-desc">Bottoms Bar &amp; Grill is a classic ski-hill saloon positioned in the heart of Sun Peaks village, billing itself as &#x27;the locals&#x27; living room.&#x27; The bar leans into old-school mountain culture with craft beers, big cocktails, and hearty food — a natural gathering spot for anyone arriving by trail or road after a day in the hills.</p>

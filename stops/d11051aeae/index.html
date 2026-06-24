@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Discovery Foods</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Ocean Grove</div>
 <p class="seo-desc">Discovery Foods is a 100% locally owned and operated grocery chain with two Vancouver Island locations; this listing covers the newly renovated Willow Point store in Campbell River on the South Island Highway. The store features a full-service deli with hot case foods, sushi, freshly made sandwiches and wraps, alongside fresh produce, meats, and an in-store bakery. An ATM is available on site, and the business actively supports local Vancouver Island farmers and small producers.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Taqueria Jalisco Mexican Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Taqueria Jalisco Mexican Restaurant is a Mexican eatery located on King George Boulevard in Surrey, BC, a busy commercial corridor in the Fraser Valley. Beyond the OSM tag indicating Mexican cuisine, no verified details about the business&#x27;s offerings, layout, or amenities are available due to an inaccessible website. Touring cyclists passing through Surrey may find it worth investigating directly, but confirmation of its current operation is advised.</p>

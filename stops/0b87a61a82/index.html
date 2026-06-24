@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Super Grocer</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Super Grocer is a long-standing neighbourhood supermarket in Richmond&#x27;s Steveston area, serving the community since at least the 1970s. It stocks groceries, dairy, meats, and produce, and shares the building complex with an in-house pharmacy and flower shop. Its location between Moncton and Chatham Streets makes it a convenient supply stop for cyclists touring the Steveston waterfront.</p>

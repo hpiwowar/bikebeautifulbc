@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kin&#x27;s Farm Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farmers&#x27; Market  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Kin&#x27;s Farm Market is a family-founded, 100% Canadian-owned specialty produce retailer that grew from an 8-foot table at Granville Island Market in 1983 to 23 locations across the Lower Mainland. The Williams Road location in Richmond is part of a chain known for locally-grown BC fruits and vegetables alongside global produce. It is a practical fresh-food resupply stop for cyclists touring the Richmond area.</p>

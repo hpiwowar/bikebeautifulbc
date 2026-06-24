@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">McDonald&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Surrey  ·  Cheap eats</div>
 <p class="seo-desc">This McDonald&#x27;s on 152 Street in Surrey is a drive-through fast food location serving burgers, breakfast, and McCafé coffee to go. It sits in a busy commercial corridor and is wheelchair accessible, making it a convenient roadside stop for touring cyclists cutting through the Fraser Valley region. The broad menu and takeout-friendly format make it a reliable resupply point for calories on the road.</p>

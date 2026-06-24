@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ono&#x27;s of Japan</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Abbotsford  ·  Cheap eats</div>
 <p class="seo-desc">ono&#x27;s of Japan is a Japanese fast-food outlet listed in OSM at a unit in the 32900 South Fraser Way commercial area of Abbotsford. It appears to offer Japanese cuisine, potentially including sushi, in an indoor mall-style setting. Verification of current operation and amenities is not possible from available sources.</p>

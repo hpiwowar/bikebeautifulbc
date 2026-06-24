@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Coquitlam</div>
 <p class="seo-desc">Walmart is a large-format Supercenter on Barnet Highway in Coquitlam, offering a full grocery section alongside general merchandise including clothing, electronics, and household goods. It sits on a major arterial corridor connecting Port Moody and central Coquitlam, making it a practical resupply point for cyclists touring the eastern Metro Vancouver area. As a supercenter-format store, it stocks a broader range of goods than a typical grocery stop.</p>

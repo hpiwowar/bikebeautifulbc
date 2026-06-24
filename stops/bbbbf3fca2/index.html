@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fat Boy Kitchen</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Fat Boy Kitchen is a neighbourhood restaurant on Victoria Drive in east Vancouver, a commercial corridor popular with local cyclists. The name suggests hearty, filling fare, and the business offers takeaway service — handy for cyclists looking to grab a meal on the go. It sits in the Sunset neighbourhood, a residential area well-connected to Vancouver&#x27;s cycling network.</p>

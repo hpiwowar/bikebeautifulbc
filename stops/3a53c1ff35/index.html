@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Summit Bar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Summit Bar is a casual sports bar located on the first level of Cascades Casino Delta in Delta, BC, within a full-service gaming and hotel resort complex. It offers a food menu and multiple HD big screens for watching live sports, with a pub atmosphere suited for a quick meal or a longer stay. Touring cyclists passing through the Ladner/Delta area would find it a convenient stop for food and drinks in a lively indoor setting.</p>

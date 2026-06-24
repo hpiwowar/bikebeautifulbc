@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pholicious</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Pholicious is a Vietnamese café on West Pender Street in downtown Vancouver specializing in pho, noodle soups, salad rolls, and bánh mì-style subs. The menu is notably cyclist-friendly in its breadth, offering a dedicated vegetarian and vegan section alongside meat and seafood options. Online ordering with pickup is available, making it a convenient stop for riders passing through the downtown core.</p>

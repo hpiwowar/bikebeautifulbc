@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Circle K</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Surrey / Vancouver, Coast and Mountains</div>
 <p class="seo-desc">Circle K is a large international convenience store chain operating 24/7 at this Surrey location, offering snacks, beverages, and fresh food alongside fuel. The chain has rolled out EV charging infrastructure across many locations. As a 24/7 stop with restrooms, it serves as a practical resupply point for cyclists needing food and water along 108 Avenue.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Indian Zaika</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Maple Ridge  ·  Casual</div>
 <p class="seo-desc">Indian Zaika is an Indian restaurant in Maple Ridge serving a broad menu of authentic subcontinental cuisine, including tandoori specialties, curries, and Indo-Chinese fusion dishes. The restaurant offers both dine-in table reservations and online ordering. Touring cyclists will find a generous selection of vegetarian dishes alongside meat and seafood options.</p>

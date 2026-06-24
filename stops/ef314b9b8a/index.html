@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">be love</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Be love is a plant-based vegetarian restaurant in downtown Victoria with a seasonal menu sourced from local farms and the surrounding wilds. Everything on the menu is wheat, gluten, dairy, and processed sugar free, making it a rare all-inclusive stop for cyclists with dietary restrictions. The restaurant emphasizes health, sustainability, and scratch cooking, and offers both dine-in with reservations and takeout including DoorDash delivery.</p>

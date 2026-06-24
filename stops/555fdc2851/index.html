@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Leland on the Lake Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Nakusp  ·  Casual</div>
 <p class="seo-desc">The Leland Hotel is a historic establishment founded in 1892, perched in the West Kootenays overlooking Arrow Lake and ringed by mountains. The attached restaurant and bar feature a large seasonal patio and expansive windows with lake views, making it a scenic stop in any season. It sits walking distance from local shops and the beach, and roughly 25 minutes from Nakusp and Halcyon Hot Springs.</p>

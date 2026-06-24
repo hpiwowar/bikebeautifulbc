@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Whistler Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Whistler (Sea to Sky)</div>
 <p class="seo-desc">Whistler Liquor Store is a community-focused alcohol retailer offering a wide selection of boutique wines, craft beer and cider, and spirits. Staff will source specific products on request and help with selections for special occasions. For touring cyclists, it is a convenient stop to pick up local and craft beverages while passing through Whistler.</p>

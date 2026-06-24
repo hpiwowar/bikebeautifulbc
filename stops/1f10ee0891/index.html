@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lighthouse Liquor</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Sechelt</div>
 <p class="seo-desc">Lighthouse Liquor Store is a private liquor retailer located in Trail Bay Centre in Sechelt, open 365 days a year. It stocks a wide selection of BC VQA wines, craft beers from BC breweries, and spirits from local distilleries alongside national and international brands. Touring cyclists resupplying on the Sunshine Coast will find it a convenient one-stop shop for beverages.</p>

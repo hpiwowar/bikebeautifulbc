@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Parthenon Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Parthenon Pizza is a Greek-inspired pizza restaurant in Esquimalt with 45 years of culinary experience behind its signature pies. The menu features seven named Greek pizzas — from the all-meat Spartan to the Athens Vegetarian — alongside wings, salads, and 16-flavour ice cream. Cyclists can eat in or order for pickup, with delivery also available.</p>

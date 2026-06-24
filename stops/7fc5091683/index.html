@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kitchen on the Ridge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Maple Ridge  ·  Cheap eats</div>
 <p class="seo-desc">Kitchen on the Ridge is a family-owned restaurant that has been serving Maple Ridge and Pitt Meadows since 2005, offering a full dine-in menu alongside weekend Dim Sum service. Situated on the Lougheed Highway, it is a convenient meal stop for cyclists traveling through the Fraser Valley corridor.</p>

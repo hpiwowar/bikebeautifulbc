@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  East Osoyoos  ·  Cheap eats</div>
 <p class="seo-desc">The Market is a convenience-style café associated with Spirit Ridge, a Hyatt Unbound Collection resort in the Okanagan near Osoyoos. Tagged as both a café and a convenience shop, it likely offers grab-and-go provisions alongside café fare within the resort grounds. Its Okanagan location puts it close to popular wine-country cycling routes.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sagewood winery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Winery / Cidery  ·  Kamloops</div>
 <p class="seo-desc">Sagewood Winery is a small estate winery on the outskirts of Kamloops producing a broad range of whites, reds, rosé, and sparkling wines from their own vineyard. The operation emphasizes sustainable practices including biodiversity, drip irrigation, and organic methods in the vineyard. The property is dog-friendly and welcomes visitors for tastings, making it an appealing rural stop for touring cyclists exploring Thompson Valley wine country.</p>

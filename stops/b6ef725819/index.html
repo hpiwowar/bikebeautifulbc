@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bird Cages Confectionery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Bird Cages Confectionery is a convenience and confectionery shop on Victoria&#x27;s main tourist thoroughfare, Government Street, steps from the Inner Harbour. The name likely nods to the historic &#x27;Bird Cages&#x27; — the nickname given to BC&#x27;s original colonial government buildings. Its location on one of Victoria&#x27;s busiest streets makes it a natural stop for cyclists exploring the city core.</p>

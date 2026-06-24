@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pizza Factory</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Port Hammond  ·  Cheap eats</div>
 <p class="seo-desc">Pizza Factory is a locally focused pizza restaurant on Lougheed Highway in Maple Ridge, offering an extensive menu of specialty and create-your-own pizzas alongside pasta, wings, and salads. The menu covers a wide range of dietary preferences, including vegetarian, vegan, and gluten-free options. Online ordering with pickup makes it a straightforward refuelling stop for cyclists passing through the Fraser Valley corridor.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wholesale Club</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Vancouver</div>
 <p class="seo-desc">Wholesale Club is a Canadian bulk and wholesale grocery chain operated by Loblaws, catering to both businesses and value-focused shoppers with a wide selection of foodservice and household staples. The Kingsway location in Burnaby/Vancouver carries grocery, produce, meat, dairy, frozen, bakery, and snack categories, making it a practical large-format resupply stop on a busy arterial route. Membership is available but the no-fee business membership option makes access relatively straightforward.</p>

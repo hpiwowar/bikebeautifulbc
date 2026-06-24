@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">White Elephant Thai</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Parksville  ·  Casual</div>
 <p class="seo-desc">White Elephant Thai is a locally owned Thai restaurant in Parksville serving a broad menu of classic Thai dishes including Pad Thai, curries, satay, and fresh salad rolls. The menu accommodates multiple dietary preferences with dedicated tofu and vegetable options across nearly every category. For cyclists touring the east coast of Vancouver Island, it offers a full sit-down meal in a town well-positioned along the Island&#x27;s main cycling corridors.</p>

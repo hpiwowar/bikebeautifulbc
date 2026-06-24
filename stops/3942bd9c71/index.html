@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Artusi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  New Westminster (Metro Vancouver)  ·  Upscale</div>
 <p class="seo-desc">Artusi is a contemporary rustic Italian restaurant in New Westminster named after Pellegrino Artusi, the 19th-century author considered the father of modern Italian cuisine. The kitchen draws on all regions of Italy, offering handmade pasta, porchetta, and seafood dishes alongside a full drinks menu. Both indoor and outdoor seating are available, and the restaurant offers a takeout option for cyclists looking to eat on the move.</p>

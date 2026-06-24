@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">HiFive Chicken</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Burnaby  ·  Cheap eats</div>
 <p class="seo-desc">HiFive Chicken is a BC-born fast food chain established in 2016, now operating over 11 locations across the Lower Mainland. The Burnaby Hastings Street location serves freshly marinated fried and roasted chicken, sandwiches, sides, and desserts prepared in-house. A loyalty app with cashback rewards is available for regular customers.</p>

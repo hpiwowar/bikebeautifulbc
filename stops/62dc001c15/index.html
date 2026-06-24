@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Swirlies</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Langley  ·  Cheap eats</div>
 <p class="seo-desc">Swirlies is an ice cream shop located on 66 Avenue in the Lower Mainland/Fraser Valley region of BC. Tagged in OpenStreetMap as an ice cream vendor, it is the kind of sweet stop that touring cyclists often seek out on a warm day. Details about offerings and facilities could not be confirmed from available sources.</p>

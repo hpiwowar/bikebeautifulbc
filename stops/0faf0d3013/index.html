@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sector 7 Kitchen + Bar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Sector 7 Kitchen + Bar is a full-service restaurant and bar in Richmond&#x27;s arts and culture district, offering an extensive menu of creative craft cocktails alongside a burger-focused food menu. The restaurant emphasizes community connection, local and sustainable sourcing, and an atmosphere where food and art intersect. It also accommodates corporate events, private events, and catering, making it a versatile dining destination.</p>

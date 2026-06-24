@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Centre of the Universe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Victoria (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">The Centre of the Universe is the visitor centre of the Dominion Astrophysical Observatory, a National Historic Site perched on a hill about 20 minutes from downtown Victoria. At its heart is the 1.8-metre Plaskett Telescope, in continuous use since 1918 and once the largest operational telescope in the world. Visitors can explore interactive exhibits, attend a planetarium show, and experience guided telescope access — a genuinely singular destination for a cycling day trip.</p>

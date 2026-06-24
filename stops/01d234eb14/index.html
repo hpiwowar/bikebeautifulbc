@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Revelstoke Curling Club</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Revelstoke  ·  Low</div>
 <p class="seo-desc">The Revelstoke Curling Club is a community sports club at 1100 Vernon Avenue offering curling, lounge facilities, and ice rentals for private and group events. It hosts the Annual Revelstoke Open Bonspiel, an event with over 70 years of history that is open to members and non-members alike. Touring cyclists passing through Revelstoke can find a welcoming, locally-rooted gathering spot here.</p>

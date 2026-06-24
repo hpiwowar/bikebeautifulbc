@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Qualicum Beach Visitor Information and Chamber of Commerce</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Qualicum Beach</div>
 <p class="seo-desc">The Qualicum Beach Chamber of Commerce has served as the voice of local business since at least the 1920s, acting as the town&#x27;s primary visitor information hub on the east coast of Vancouver Island. Cycling tourists passing through can use it as a starting point to discover local restaurants, accommodations, shops, and community events. The organization also promotes Qualicum Beach as a tourism destination and maintains an active local business directory.</p>

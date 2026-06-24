@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Royal</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Nelson (West Kootenay)  ·  Casual</div>
 <p class="seo-desc">The Royal Grill is a restaurant located on Baker Street in Nelson, BC, a cycling-friendly downtown corridor. Beyond its OSM listing as a restaurant, no current details about cuisine, atmosphere, or cyclist-specific features can be confirmed, as the business&#x27;s registered domain has been taken over by unrelated gambling content. A visit or direct call would be needed to assess its suitability for touring cyclists.</p>

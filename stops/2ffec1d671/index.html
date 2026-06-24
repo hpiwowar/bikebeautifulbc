@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Golden Panda Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Cheap eats</div>
 <p class="seo-desc">Golden Panda Restaurant is a Chinese restaurant located in Surrey, BC, offering dine-in as well as online ordering for pickup and delivery within a 4-mile radius. The website presents a straightforward neighbourhood restaurant with a focus on takeout convenience. A touring cyclist passing through the area would find it a practical meal stop, though cycling-specific amenities are not advertised.</p>

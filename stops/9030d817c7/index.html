@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Valley Farmers Market / Mandair Farms</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farmers&#x27; Market  ·  South Poplar</div>
 <p class="seo-desc">Mandair Farms is a multi-generational family farm operation based in Abbotsford&#x27;s Fraser Valley, growing and selling fresh berries, vegetables, and flowers. The farm stand at 889 Clearbrook Road serves as their home base, with the family also attending numerous farmers markets across the Lower Mainland and Okanagan. A touring cyclist passing through Abbotsford could stop here for fresh local produce straight from the field.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Prata-Man Singapore Cuisine</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Prata-Man Singapore Cuisine is a Singaporean restaurant in Richmond, BC, specializing in Hainanese Chicken, Roti/Prata bread, Laksa, Mee Goreng, and other Southeast Asian staples presented in a bilingual English-Chinese menu. The restaurant offers online ordering for quick pickup, making it a convenient stop for cyclists passing through the Capstan Way area of Richmond.</p>

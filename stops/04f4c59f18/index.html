@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ali Baba Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Ali Baba Pizza is a Vancouver Island pizza chain with its original Victoria location on Fort Street in the downtown core. The menu spans classic and premium pizzas, donairs, wings, salads, and a dedicated vegan pizza line, giving cyclists with varied dietary needs solid options. Online ordering with delivery across central Victoria neighbourhoods makes it a convenient refuelling stop after a ride.</p>

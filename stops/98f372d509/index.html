@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wild Ambition Tasting Room</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Kelowna (Okanagan)  ·  Casual</div>
 <p class="seo-desc">Wild Ambition is a craft microbrewery and tasting room in Kelowna, operating since December 2018. The tasting room doubles as a retail alcohol outlet, meaning visitors can sample on-site and purchase packaged beer to go. It is an air-conditioned indoor venue — a welcome stop for cyclists navigating the Okanagan in summer heat.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hayat Supermarket</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Hayat Supermarket is a retail grocery store located in Richmond, BC, tagged in OpenStreetMap as a full supermarket. Its position along Number 1 Road places it on a route accessible to cyclists travelling through the Richmond area. Touring cyclists would find it a potential stop for provisioning along this flat, cycling-friendly corridor.</p>

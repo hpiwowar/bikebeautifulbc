@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Urban Gate Supermarket</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  North Vancouver</div>
 <p class="seo-desc">Urban Gate is a family-owned Persian specialty market that has operated since 2010, offering a full-service butcher, daily-fresh produce, and a bakery producing Persian pastries alongside custom cakes. It also runs a takeout kitchen serving classic Persian grilled dishes and stews. Touring cyclists will find a well-stocked boutique grocery stop with a notably broad selection of specialty and organic items beyond standard supermarket fare.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Port Hardy Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Port Hardy</div>
 <p class="seo-desc">Port Hardy Visitor Centre is a year-round tourism information office on the waterfront of Hardy Bay, staffed by professional visitor services personnel who help travellers plan trips across the North Island region. Port Hardy sits at the northern end of Vancouver Island and is the departure point for the BC Ferries Northern Expedition route to Prince Rupert, making it a natural waypoint for touring cyclists heading up-island or connecting to the mainland. The centre offers local knowledge on transportation, accommodation, attractions, and day trips.</p>

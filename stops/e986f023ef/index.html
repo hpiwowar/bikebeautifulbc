@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">SL: Newton Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Surrey (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">Newton Branch is a 15,800 sq ft public library operated by Surrey Libraries in the Newton neighbourhood of Surrey. The branch is fully accessible and offers free public Wi-Fi, computers, a scanner, and mobile printing services. A 24-hour book return is available, and the branch hosts local artists and regularly scheduled community programs.</p>

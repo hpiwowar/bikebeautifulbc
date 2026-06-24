@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">BC Liquor Store Harbour Centre is a provincial government-operated retail outlet in downtown Vancouver selling wine, spirits, beer, ciders, and non-alcoholic beverages. It is one of 198 BCLIQUOR stores across British Columbia and carries an expanded selection typical of urban Signature-format locations. A touring cyclist passing through downtown Vancouver could stop to pick up local BC VQA wines or BC craft beer for an evening at camp.</p>

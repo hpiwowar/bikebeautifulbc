@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Golden River</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">Golden River Express is a Chinese takeout counter on Fraser Hwy in Langley offering a broad Cantonese and Szechuan menu spanning chicken, beef, pork, seafood, noodles, fried rice, and soups. It operates as an express pickup spot with online ordering and a 15-minute pickup window. Cyclists passing through the Fraser Valley corridor would find a wide range of filling, affordable Chinese dishes including dedicated vegetarian options.</p>

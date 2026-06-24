@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Specialty / Health Food  ·  North Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">BC Market is a specialty deli focused on Arabic and Mediterranean foods, operating out of a retail building on Twelfth Street. It offers a niche selection likely to appeal to cyclists looking for something beyond standard convenience store fare. The shop is small-format and community-oriented in character.</p>

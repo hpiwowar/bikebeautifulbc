@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Samurai Sushi &amp; Teriyaki</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Parksville  ·  Casual</div>
 <p class="seo-desc">Samurai Sushi &amp; Teriyaki is an authentic Japanese restaurant in Parksville on the east coast of Vancouver Island, located directly on the East Island Highway — a primary cycling corridor. It serves sushi and teriyaki for both dine-in and takeout, making it a convenient stop for cyclists travelling the Island Route.</p>

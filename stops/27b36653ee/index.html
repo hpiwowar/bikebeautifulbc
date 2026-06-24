@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BaBa Gannouj</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Campbell River  ·  Casual</div>
 <p class="seo-desc">BaBa Gannouj is a small restaurant in the Campbell River area of Vancouver Island. Despite the Middle Eastern name, OSM lists it as serving Indian cuisine, suggesting a diverse menu. It occupies a unit in what appears to be a strip mall or commercial building.</p>

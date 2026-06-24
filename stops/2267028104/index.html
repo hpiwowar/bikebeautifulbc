@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mountain Mart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Golden</div>
 <p class="seo-desc">Mountain Mart is a convenience store in or near Golden, BC, a gateway community to Yoho and Kootenay National Parks and a key waypoint on cycling routes through the Columbia Valley. The OSM tag discouraging large vehicles suggests a compact, accessible site well-suited to arriving by bike. For touring cyclists, it represents a potential resupply stop in a region where services can be spread thin.</p>

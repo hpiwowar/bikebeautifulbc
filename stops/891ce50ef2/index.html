@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ribbon</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Burnaby</div>
 <p class="seo-desc">Market Ribbon is a Korean supermarket on Kingsway in Burnaby offering a wide range of Korean groceries, house-brand kimchi, seafood, and pantry staples under its &#x27;Club Ribbon&#x27; label. The in-store deli section carries ready-to-eat Korean items including Triangle Kimbap and Tteokbokki. The store has a second location in Coquitlam and is currently undergoing a rebranding.</p>

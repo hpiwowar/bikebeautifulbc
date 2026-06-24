@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ryan&#x27;s Pizzeria</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Campbellton  ·  Cheap eats</div>
 <p class="seo-desc">Ryan&#x27;s Pizzeria is a fast-food pizza outlet located on Vancouver Island in the Campbell River area, occupying unit A of its building. It offers a quick, informal stop for cyclists traveling the Island Highway corridor who need a hot meal without a long sit-down wait.</p>

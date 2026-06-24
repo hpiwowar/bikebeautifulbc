@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mumbai Masala</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  North Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Mumbai Masala is a family-owned Indian restaurant located in the Park and Tilford complex in North Vancouver, serving authentic Indian cuisine since 2005. It offers a full dine-in experience with courteous table service alongside online ordering for delivery or pickup, plus catering. The menu spans appetizers, mains, and desserts with both vegetarian and non-vegetarian options.</p>

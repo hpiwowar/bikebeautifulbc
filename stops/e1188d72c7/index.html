@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">QV Coffee House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">QV Coffee House is a neighbourhood cafe on Fort Street in Victoria, open seven days a week and serving the Oak Bay Avenue corridor — a popular cycling route connecting downtown to the seaside communities to the east. The retail-building setting and consistent hours suggest a small independent coffee shop well-positioned for cyclists passing through the area.</p>

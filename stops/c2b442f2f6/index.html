@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Steveston Built Local Taphouse</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Steveston Built Local Taphouse is a neighbourhood pub situated near the historic Steveston waterfront in Richmond, an area well-travelled by cyclists on the dike trails and coastal routes. The taphouse bills itself as locally focused, with its menu available as a PDF download from the website. It occupies a unit in a mixed-use development at the edge of the Steveston community.</p>

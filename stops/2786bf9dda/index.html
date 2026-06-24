@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pizza24</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Aberdeen  ·  Cheap eats</div>
 <p class="seo-desc">Pizza24 is a Fraser Valley pizza chain operating since 2010, and this Abbotsford location sits inside a Co-op Gas Station on Blueridge Drive. The menu spans dozens of specialty and vegetarian pizzas, pasta, wings, and salads available for delivery or pick-up. A drive-through window is available for late-night orders, making it a practical stop for cyclists on an evening route.</p>

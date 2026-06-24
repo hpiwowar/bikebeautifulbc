@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Five Roads Brewing</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Langley  ·  Casual</div>
 <p class="seo-desc">Five Roads Brewing is a craft brewery and taproom located in Langley, BC, producing a range of Canadian craft beers including IPAs, sours, and lagers. The taproom also carries ciders from their sister brand Daisy Chain Cider Co. and hosts regular events with a reservations option, making it a destination rather than just a pit stop.</p>

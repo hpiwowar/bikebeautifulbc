@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Shree Supermarket</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Burnaby</div>
 <p class="seo-desc">Shree Supermarket is a South Asian grocery store specializing in Indian vegetables, fresh fruit, spices, snacks, and pantry staples, aiming to bring authentic Indian flavors to Canadian kitchens. The store operates a Square online storefront offering local delivery of products including basmati rice, fresh produce, and packaged Indian goods. The physical store&#x27;s exact location is uncertain, as the website URL references Burnaby while the OSM record places it in North Vancouver.</p>

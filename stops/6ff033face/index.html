@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Free Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Hornby Island</div>
 <p class="seo-desc">The Free Store is a thriving community institution run entirely by volunteers as part of the Hornby Island Recycling Depot, one of BC&#x27;s pioneering recycling programs dating to 1978. Visiting cyclists can browse a constantly rotating selection of donated clothing, books, furniture, kitchen equipment, toys, and gardening tools — all free for the taking. The building&#x27;s south-facing roof even hosts a demonstration grid-tied solar panel project, making it a small showcase for island sustainability.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Olive Tree Mediterranean Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Fort St. John  ·  Casual</div>
 <p class="seo-desc">Olive Tree Mediterranean Grill is a sit-down Mediterranean restaurant in Fort St. John, best known for its donairs and Greek-style dishes. The restaurant is licensed, allowing cyclists to enjoy a cold beer alongside their meal. Self-service kiosks are available alongside counter service in a clean, single-storey dining room.</p>

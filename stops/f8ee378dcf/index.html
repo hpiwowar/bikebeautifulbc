@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Levantine</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Levantine is a Syrian Middle Eastern restaurant in Victoria dedicated to authentic cuisine, from shawarma and kebabs to traditional breakfast plates and freshly made pastries. The menu spans a wide range of dishes rooted in Syrian culinary heritage, making it a satisfying and distinctive stop for cyclists seeking a substantial meal. Warm hospitality and a focus on genuine flavours set it apart from generic Mediterranean spots.</p>

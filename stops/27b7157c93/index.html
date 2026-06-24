@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Rex Bakery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  North Vancouver (North Shore)</div>
 <p class="seo-desc">Rex Bakery is a bakery located in North Vancouver&#x27;s central area, operating under the Facebook identity &#x27;rexcakes&#x27;. It sits along West 16th Street, a corridor accessible to cyclists exploring the North Shore. Touring cyclists would likely find baked goods and potentially light provisions here.</p>

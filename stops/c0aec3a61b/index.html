@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Merritt</div>
 <p class="seo-desc">Walmart Supercenter (store #1036) is a large-format retailer on Crawford Avenue in Merritt, BC, offering a full grocery department alongside general merchandise including clothing, electronics, and household goods. For a touring cyclist passing through the interior of BC, it is one of the most comprehensive one-stop resupply points on the Coquihalla corridor. The Supercenter format typically includes a pharmacy, vision centre, and photo department inside a single large building.</p>

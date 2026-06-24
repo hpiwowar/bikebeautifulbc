@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Chalet</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Kitimat  ·  Casual</div>
 <p class="seo-desc">The Chalet is a long-established restaurant and inn nestled in the heart of Kitimat, BC, with deep roots in the local community and a reputation as a go-to venue for celebrations and gatherings. The property appears to encompass both a lodging component (&#x27;Chalet Inn&#x27;) and a dedicated restaurant, making it a notable full-service stop in a region with limited amenities for touring cyclists.</p>

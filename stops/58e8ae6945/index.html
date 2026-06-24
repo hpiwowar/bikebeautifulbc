@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">BC Liquor Store Richmond Seafair is a provincial government-operated retail outlet selling wine, beer, spirits, coolers, and ciders, part of the 198-store BCLIQUOR chain across British Columbia. The store is located in a strip-mall unit at Seafair in Richmond. It offers a broad product selection and accepts multiple payment methods including cash, debit, Visa, Mastercard, and American Express.</p>

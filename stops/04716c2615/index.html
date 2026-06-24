@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bramasole Restaurant &amp; Wine Bar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Fernie  ·  Casual</div>
 <p class="seo-desc">Bramasole is an Italian-inspired restaurant and wine bar in downtown Fernie, known for its curated BC wine list, charcuterie and tapas, and an enchanting backyard garden patio. The kitchen stays open late and the venue regularly features live music, making it a memorable dinner destination in the Elk Valley. Reservations are encouraged and gift certificates are available.</p>

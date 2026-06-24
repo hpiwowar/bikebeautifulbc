@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Seaport City Seafood Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Upscale</div>
 <p class="seo-desc">Seaport City Seafood Restaurant is a contemporary Chinese fine dining destination on Cambie Street in Vancouver, specializing in premium seafood dishes made with carefully hand-picked fresh ingredients. The bilingual (English and Chinese) establishment aims to deliver a multisensory dining experience that blends the soul of traditional Chinese seafood cuisine with a modern, upscale atmosphere.</p>

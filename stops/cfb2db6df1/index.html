@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Royston General Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Royston</div>
 <p class="seo-desc">Royston General Store is a convenience and general store on the South Island Highway in the small coastal community of Royston, operated by the Wayne Procter Group, a multi-division Vancouver Island retail company. It sits on a key cycling corridor connecting Courtenay and Comox to points south, making it a natural resupply stop for touring cyclists on this stretch of the Island. The operator runs a network of similar general stores across Vancouver Island under its Omni Foods and Gas N Go umbrella.</p>

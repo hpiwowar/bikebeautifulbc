@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">GVPL: Nellie McClung Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Victoria (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The Nellie McClung Branch is a neighborhood branch of the Greater Victoria Public Library system, located on Shelbourne Street in Victoria and named after the celebrated Canadian suffragist and author. It offers the full range of GVPL physical and digital collections, public computers, and programming. As a free public institution, it provides a quiet indoor stop for touring cyclists passing through the Shelbourne corridor.</p>

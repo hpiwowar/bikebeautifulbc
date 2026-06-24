@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Panorama Pizza and Curry</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Tsawwassen (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Panorama Pizza and Curry is a Surrey restaurant serving both pizza and Indian curry dishes, catering to a broad range of tastes under one roof. Cyclists can order ahead online and pick up a hot meal without waiting, or take advantage of the delivery service. The dual-cuisine menu makes it an unusual and practical stop for groups with mixed preferences.</p>

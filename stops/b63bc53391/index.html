@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Keg</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Port Hammond  ·  Upscale</div>
 <p class="seo-desc">The Keg Maple Ridge is a sit-down steakhouse and bar located on Dewdney Trunk Road just off 207th Street, part of a well-established Canadian chain known for prime steaks and a relaxed upscale atmosphere. The location features a full dining room, lounge, bar, and patio, making it a potential post-ride dinner destination. Takeout is also available for cyclists wanting a meal on the go.</p>

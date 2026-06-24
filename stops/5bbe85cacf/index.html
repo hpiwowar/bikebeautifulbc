@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart Supercentre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">A large-format Walmart Supercentre located in Richmond, BC, offering a full grocery department alongside electronics, clothing, toys, and household goods. As a three-level Supercentre it is one of the larger Walmart formats in the Lower Mainland, giving touring cyclists access to a wide range of resupply options under one roof. Accepts cash, credit, and debit.</p>

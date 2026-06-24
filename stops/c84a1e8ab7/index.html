@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fish on 5th</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Sidney (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Fish on 5th is a family-owned fish and chips restaurant in Sidney, BC, operating for over 20 years and known locally as a favourite. The menu features fresh, locally sourced seafood alongside a dedicated vegan menu — an unusual combination that has earned it regional press coverage. The restaurant also offers catering and private event hosting.</p>

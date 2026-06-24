@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Anne Maries Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Chilliwack  ·  Casual</div>
 <p class="seo-desc">Ann Marie&#x27;s Cafe is a well-regarded diner in Abbotsford that has been voted Best Breakfast in the city, serving classics like burgers, sandwiches, and breakfast dishes. It offers both dine-in and takeout with online ordering for pickup. Sitting on George Ferguson Way, it makes a practical and popular refueling stop for cyclists riding through the Fraser Valley.</p>

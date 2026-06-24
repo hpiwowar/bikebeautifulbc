@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Vancouver Tourism Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Visitor Centre  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Operated by Destination Vancouver (the Metro Vancouver Convention and Visitors Bureau), this is the official visitor information office for Vancouver, located in the heart of downtown at 200 Burrard Street. Staff can help touring cyclists and other visitors plan trips, find accommodations, and navigate the city&#x27;s neighbourhoods, trails, and attractions. The centre serves as a gateway to resources covering everything from accessible travel to Indigenous cultural experiences across the region.</p>

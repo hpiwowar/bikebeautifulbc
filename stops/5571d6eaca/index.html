@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hyde Creek Nature Reserve</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  North Vancouver  ·  Free</div>
 <p class="seo-desc">Hyde Creek Nature Reserve is a protected natural area in Port Coquitlam managed by the City, offering access to riparian habitat and natural trails. It appears in the city&#x27;s parks directory alongside the Traboulay PoCo Trail, suggesting it may be accessible as part of a broader trail network. Touring cyclists passing through the Tri-Cities area may find it a worthwhile natural detour, though facility details are unconfirmed.</p>

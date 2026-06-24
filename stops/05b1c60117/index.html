@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Liquor World</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Liquor World is a liquor store located inside Lansdowne Mall (next to JYSK) in Richmond, offering a curated selection of wines, spirits, and local and imported beers. The store positions itself as quality-focused, sourcing products from local BC brewers and wineries alongside international spirits. A touring cyclist passing through Richmond&#x27;s busy No. 3 Road corridor would find a well-stocked stop for provisions.</p>

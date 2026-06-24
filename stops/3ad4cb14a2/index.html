@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">McDonald&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Langley  ·  Cheap eats</div>
 <p class="seo-desc">A McDonald&#x27;s fast food restaurant in the Willowbrook area of the Lower Mainland, offering burgers, chicken, McCafé beverages, and breakfast items. It includes a drive-through and takeout service, making it a convenient stop for cyclists passing through the Fraser Valley corridor. The MyMcDonald&#x27;s Rewards app offers additional value for repeat visits.</p>

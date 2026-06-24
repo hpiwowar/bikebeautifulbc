@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Grand Crystal Seafood</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">Grand Crystal is a Chinese seafood restaurant and wedding banquet venue located in Burnaby&#x27;s Kingsway corridor. It serves dim sum and dinner, and also functions as an event space for large gatherings. Touring cyclists riding through the Burnaby stretch of Kingsway would find it a substantial stop for a full sit-down meal.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chartwell Garden</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  French Creek  ·  Free</div>
 <p class="seo-desc">The Xeriscape Garden is a public demonstration garden operated by the Regional District of Nanaimo, showcasing water-wise, drought-tolerant landscaping techniques suited to Vancouver Island conditions. Located on Yambury Road, it is a free community resource intended to educate residents about outdoor water conservation. Touring cyclists in the Parksville/Qualicum area may find it a pleasant stop, though on-site cyclist services are unconfirmed.</p>

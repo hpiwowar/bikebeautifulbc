@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Donair Express</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Donair Express is a fast-casual wrap and bowl restaurant on Goldstream Avenue serving Lebanese, Halifax, and Caribbean-style donairs alongside rice bowls and sides. Chicken, beef, and vegetarian falafel are available across the entire menu, making it a flexible stop for mixed groups. The Goldstream Avenue location sits on a well-travelled cycling corridor connecting Victoria&#x27;s western neighbourhoods.</p>

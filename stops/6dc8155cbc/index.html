@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Country Grocer</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Country Grocer is a family-owned Vancouver Island supermarket chain founded in 1984, now operating eleven stores serving communities from Victoria to Nanaimo with a strong commitment to local BC farmers and producers. The Nanaimo location offers full supermarket departments including deli, sushi, bakery, and seafood. The company sponsors the annual Cycle of Life tour benefiting Vancouver Island hospices, signalling a community connection that touring cyclists may appreciate.</p>

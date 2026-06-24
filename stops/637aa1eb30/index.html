@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Lillooet</div>
 <p class="seo-desc">The Lillooet branch of BC Liquor Store is a government-operated retail outlet on Main Street offering wine, beer, spirits, coolers, and ciders. Located in a remote Interior BC community along the Duffey Lake Road and Fraser Canyon cycling corridors, it is one of the few places in the area to resupply on beverages. The store carries both BC VQA wines and a broad national and import selection.</p>

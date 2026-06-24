@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wesburn Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Vancouver</div>
 <p class="seo-desc">Wesburn Community Centre is a City of Burnaby–operated facility nestled within Wesburn Park, notable for a large outdoor mural co-created by over 200 community members as an expression of neighbourhood identity. The surrounding park offers a spray park, covered picnic tables, basketball court, and baseball diamond—making it a potential outdoor rest point on a ride through Burnaby. However, the building operates without regular staff hours and offers no onsite registration or payments, so indoor services are not reliably accessible.</p>

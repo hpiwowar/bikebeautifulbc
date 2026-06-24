@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">H2O Adventure and Fitness Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Kelowna  ·  Low</div>
 <p class="seo-desc">Kelowna&#x27;s major municipal waterpark and fitness centre, owned by the City and operated by the YMCA of Southern Interior BC. Features include wave pool, lazy river, waterslides, FlowRider, diving boards, hot tub, steam room, and a full fitness area with cardio, conditioning, and cycle studio. Drop-in access is available for non-members.</p>

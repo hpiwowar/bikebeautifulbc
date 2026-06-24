@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Islands Bar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Chilliwack  ·  Casual</div>
 <p class="seo-desc">Islands Bar — branded on the website as Islands Patio &amp; Lounge — is the casual outdoor bar and lounge at Harrison Hot Springs Resort &amp; Spa. It serves a relaxed food menu alongside a wide selection of wine, beer, and specialty cocktails on a patio overlooking the resort grounds. For touring cyclists exploring the Harrison Hot Springs area, it offers a scenic spot to wind down after a ride.</p>

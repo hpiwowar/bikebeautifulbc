@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Esso</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Dawson Creek</div>
 <p class="seo-desc">An Esso fuel and convenience station in Dawson Creek, a key service node on the Alaska Highway corridor in northeastern BC. The station features an air tower, making it a practical stop for cyclists needing to inflate tires, as well as an ATM on site. As a full-service fuel stop with a convenience store, it is one of the more useful resupply points for long-distance tourers passing through town.</p>

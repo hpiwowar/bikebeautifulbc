@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mile 0 Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Lillooet  ·  Cheap eats</div>
 <p class="seo-desc">Mile 0 Pizza is a pizza restaurant located at 1149 Main Street in the Okanagan &amp; Thompson region of BC. The name &#x27;Mile 0&#x27; suggests a possible connection to a local trail or route milestone, which may make it a natural stop for touring cyclists passing through the area. Beyond its pizza focus, details about the dining experience and cyclist-specific amenities are not available from current sources.</p>

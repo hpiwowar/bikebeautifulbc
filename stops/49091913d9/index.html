@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Day Lodge Café – Whistler Olympic Park</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Whistler  ·  Casual</div>
 <p class="seo-desc">Brandywine Restaurant is an OSM-tagged restaurant situated near Brandywine Falls Provincial Park in the Callaghan Valley, a remote stretch of the Sea-to-Sky corridor roughly 20 minutes south of Whistler Village. Its location along a route popular with touring cyclists and outdoor recreationalists makes it a potentially useful food stop in an area with limited services. Very little detail is publicly available about its current operations or offerings.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gordon Ramsay Steak</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Upscale</div>
 <p class="seo-desc">Gordon Ramsay Steak is an upscale steakhouse in Richmond, BC, part of the global restaurant empire of Michelin-starred celebrity chef Gordon Ramsay. Situated at 8811 River Rd, it offers a fine-dining experience with table reservations and takeout. Touring cyclists looking for a high-end dinner option in the Richmond area will find this a notable stop.</p>

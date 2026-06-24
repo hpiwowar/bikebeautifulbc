@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">NWPL: New Westminster Public Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  North Vancouver (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The New Westminster Public Library holds the distinction of being the first public library established in British Columbia, giving it genuine historical significance for visitors. Located in the heart of New Westminster across from Royal City Centre, it offers public computers, Wi-Fi, and a surprisingly eclectic collection that includes a seed library and ukulele lending. A touring cyclist can drop in to get connected, rest, and explore the community programming on offer.</p>

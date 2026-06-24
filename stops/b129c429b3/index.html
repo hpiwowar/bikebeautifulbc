@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bolacco Caffé</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Sun Peaks  ·  Cheap eats</div>
 <p class="seo-desc">Bolacco Caffé is a family-owned espresso bar and café in Sun Peaks village that has been operating since 1996. It bakes its pastries in-house throughout the day and offers a full sandwich menu alongside a wide range of hot and cold coffee drinks. Situated at the heart of a popular four-season mountain resort, it is a natural gathering point for cyclists riding in the Sun Peaks area.</p>

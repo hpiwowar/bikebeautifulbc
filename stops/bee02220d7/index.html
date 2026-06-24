@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Austin Fish &amp; Chips</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Maple Ridge  ·  Cheap eats</div>
 <p class="seo-desc">Austin Fish &amp; Chips is a fish-and-chips restaurant in Maple Ridge, BC, located along the Lougheed Highway in the Fraser Valley. It offers both dine-in and takeout service, making it a practical roadside stop for cyclists passing through the corridor. The menu centres on classic fish-and-chips fare with a range of food and beverage options.</p>

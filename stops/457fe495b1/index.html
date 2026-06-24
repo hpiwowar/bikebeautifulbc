@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushi House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Duncan (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Sushi House is a Japanese restaurant in Duncan on the Trans-Canada Highway offering sushi, teriyaki, sashimi, and Korean dishes made from fresh, globally sourced ingredients. The restaurant positions itself as a relaxed dine-in destination and also offers online ordering with pickup. Its highway location makes it a convenient stop for cyclists passing through the Cowichan Valley.</p>

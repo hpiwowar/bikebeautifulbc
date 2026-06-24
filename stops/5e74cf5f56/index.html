@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Maruhachi Ra-men</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Maruhachi Ra-men is a ramen restaurant chain with a West End Vancouver branch on Bidwell Street, a short ride from Stanley Park and the Seawall. It is part of Maruhachi Ra-men Canada and offers pickup ordering in addition to dine-in service. The West End location puts it within easy reach of several popular urban cycling routes.</p>

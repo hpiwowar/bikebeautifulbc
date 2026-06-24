@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">CRDL: Wells Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Wells  ·  Free</div>
 <p class="seo-desc">The Wells Branch is a small community library serving the historic gold-rush town of Wells in BC&#x27;s Cariboo region, operating as part of the 15-branch Cariboo Regional District Library network. Staffed by a community librarian, it offers borrowing services, digital resources including e-books and databases, and serves as a local community gathering point. For touring cyclists exploring this remote stretch of central BC, it provides a quiet stop with internet and community information resources.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gibsons Tapworks</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Gibsons</div>
 <p class="seo-desc">A community-focused craft brewpub on the Sunshine Coast, brewing award-winning beers inspired by the coastal lifestyle since 2017. The patio overlooks Howe Sound and has been voted best patio by the Sunshine Coast People&#x27;s Choice Awards. The on-site Burger Shack serves food seven days a week, making it a reliable refuelling stop for touring cyclists on the Sunshine Coast.</p>

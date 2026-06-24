@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bridgemans</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Port Renfrew  ·  Casual</div>
 <p class="seo-desc">Bridgemans is a family of bistro-style restaurants tied to marinas in the Mill Bay and North Pender Island areas, operated under the Mill Bay Marine Group. The concept pays homage to hard-working blue-collar culture, offering imaginative comfort-food dishes and drinks in waterfront settings. A touring cyclist passing through either Mill Bay or Pender Island would find a sit-down meal experience with a local, community-oriented feel.</p>

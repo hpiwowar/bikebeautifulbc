@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Salt Spring Brewing Co.</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Salt Spring Island</div>
 <p class="seo-desc">Salt Spring Brewing Co. is a craft brewery tucked into the woods of Salt Spring Island, offering a tasting room and outdoor patio where visitors can sample core and seasonal beers. The brewery bills itself as &#x27;a gem hidden in the woods&#x27; and hosts events including an annual Oktoberfest celebration. For cyclists touring the island, it serves as a scenic off-the-beaten-path destination to rest and enjoy locally made beer.</p>

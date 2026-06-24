@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ice Arena | West Vancouver</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  West Vancouver (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">The West Vancouver Ice Arena is a municipally operated ice rink serving the North Shore community. Located in a residential neighbourhood near Ambleside, it offers public skating and hockey programming. For touring cyclists, it is a publicly accessible recreation facility in a scenic waterfront community.</p>

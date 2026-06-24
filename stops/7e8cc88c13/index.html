@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kari House Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Kari House Restaurant is a Malaysian cuisine spot tucked inside Steveston Village, the historic waterfront fishing village at the southwestern tip of Richmond. The menu draws on the complex spices and layered flavors of Malaysian cooking, with influences from Indian, Chinese, and Thai traditions. Cyclists riding the Steveston Dyke or the River Road corridor will find it a convenient and distinctive lunch or dinner stop, with outdoor patio seating available.</p>

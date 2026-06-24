@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chase River Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Chase River Liquor Store is a retail liquor outlet located in Nanaimo&#x27;s Chase River area (unit 10 of a multi-unit property). As a licensed alcohol retailer, it stocks beer, wine, and spirits for off-premise consumption. It is a routine convenience stop rather than a destination hospitality venue for touring cyclists.</p>

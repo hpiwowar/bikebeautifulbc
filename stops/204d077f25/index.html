@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hanks</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Hanks is a small, independently operated restaurant on Douglas Street in downtown Victoria, built around an ever-changing menu sourced directly from local farmers and fishers. The kitchen leans into flavour combinations you don&#x27;t typically encounter, served in a casual, deliberately loud setting. A touring cyclist rolling into the city centre would find a neighbourhood spot with a strong local identity and a rotating selection of ingredient-driven dishes.</p>

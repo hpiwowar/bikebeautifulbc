@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Mad Italian Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">The Mad Italian Pizza is a neighbourhood Italian restaurant in Langley&#x27;s Willoughby Town Centre, crafting pizzas from scratch with local ingredients alongside a curated selection of cocktails and local craft beers on tap. The venue has outdoor seating and hosts live music, making it a lively community gathering spot. Takeout is available, and the menu includes multiple vegetarian options.</p>

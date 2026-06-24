@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">New Market Foods</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  New Denver</div>
 <p class="seo-desc">New Market Foods is a community-anchored grocery store in New Denver opened in 2011, with management born and raised in the area and a strong commitment to locally sourced products. The store actively gives back to the community, supporting the local volunteer fire department and nearby school fundraisers. For cyclists touring the Kootenays, it is the accessible full-service food stop in this small Slocan Valley town.</p>

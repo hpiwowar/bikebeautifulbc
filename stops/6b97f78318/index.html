@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Famous Chicken</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Abbotsford  ·  Cheap eats</div>
 <p class="seo-desc">Famous Chicken (formerly known as Lee&#x27;s Famous Recipe Chicken) is a fried-chicken fast food outlet on Marshall Road in Abbotsford. Fraser Health Authority inspection records covering 2012–2019 show a consistent low hazard rating, indicating a history of meeting food safety standards. The operation specializes in chicken with sides including gravy and fries served hot-held at the counter.</p>

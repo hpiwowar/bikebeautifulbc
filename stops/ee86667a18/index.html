@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Panhandle Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Burns Lake  ·  Casual</div>
 <p class="seo-desc">The Pan Handle Restaurant is a casual dining spot on Highway 16 in Burns Lake, a small service town in BC&#x27;s central interior Cariboo region. Reviews describe a warm, rustic atmosphere and hearty comfort-food dishes including homemade meatloaf, salmon, burgers, and cheesecake. Its position on the Yellowhead Highway makes it a natural meal stop for cyclists traversing this remote corridor.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Ferries</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Ferry</div>
 <p class="seo-desc">Vehicle and passenger ferry operator serving coastal BC. Key routes for cyclists: Horseshoe Bay to Nanaimo (Departure Bay and Duke Point), Tsawwassen to Swartz Bay and Duke Point, and routes to the Sunshine Coast, Gulf Islands, and Vancouver Island.</p>

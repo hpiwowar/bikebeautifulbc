@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pita Pit</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  College Heights  ·  Cheap eats</div>
 <p class="seo-desc">Pita Pit is a national fast-food chain franchise located in Prince George&#x27;s College Heights neighbourhood, serving customizable pita wraps, salads, and rice bowls made to order from a wide range of ingredients. It offers both takeout and delivery, making it a convenient quick-service stop for cyclists moving through the north end of Prince George. A loyalty rewards app is available for frequent visitors.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Starbucks</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Langley  ·  Cheap eats</div>
 <p class="seo-desc">A Starbucks Coffee location in Langley, BC, occupying a retail unit at 8840 210 Street in what appears to be a shopping centre. The store offers the full Starbucks menu of hot and cold beverages and food items with both indoor and outdoor seating areas. Touring cyclists passing through Langley can expect public-access washrooms and free Wi-Fi.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sabai Thai Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Sabai Thai Restaurant is a Thai cuisine restaurant in Surrey, BC. The OSM record indicates the premises are wheelchair accessible and smoke-free. No further detail about the restaurant&#x27;s character or offerings can be confirmed, as the website URL in OSM leads to an unrelated restaurant of the same name in Ottawa, Ontario.</p>

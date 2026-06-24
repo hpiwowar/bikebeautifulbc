@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Thai by Thai</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Thai by Thai is a sit-down and pickup Thai restaurant on Scott Road (120 St) in Surrey, offering an extensive menu of curries, noodle dishes, and stir-fries alongside lunch specials. The restaurant has earned 209 customer reviews and operates a fully functional online ordering system for pickup. Cyclists riding the Surrey/Delta corridor will find it a convenient stop for a hot meal or a quick takeout order.</p>

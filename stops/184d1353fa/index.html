@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Discovery Coffee</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Discovery Coffee is a locally rooted Victoria specialty coffee roaster operating multiple cafe locations across the city, including this Oak Bay Avenue outpost. The company runs its own roastery on Rock Bay Avenue and partners with Yonni&#x27;s Doughnuts, making it a notable stop for coffee and baked goods. Touring cyclists will find it a convenient neighbourhood cafe in the heart of Oak Bay.</p>

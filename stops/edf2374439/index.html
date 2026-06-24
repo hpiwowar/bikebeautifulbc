@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FLUX Media Gallery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Victoria (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">FLUX Media Gallery is a contemporary media arts centre operated by MediaNet, a registered non-profit in Victoria, BC. It exhibits innovative media art works by local, national, and international artists, serving as a community gathering place for dialogue on media arts practice. MediaNet also provides access to specialized video and post-production equipment and runs public augmented-reality art projects across Victoria&#x27;s public spaces.</p>

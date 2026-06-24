@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">No Frills</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">No Frills is a Canadian discount supermarket chain owned by Loblaws, known for no-frills pricing and a wide selection of everyday groceries under the PC and no name brands. The 310 West Broadway location sits in a two-storey retail building in Vancouver&#x27;s Broadway corridor, convenient for cyclists passing through the area. It accepts cash and debit and is air-conditioned, making it a practical resupply stop on a city ride or touring route.</p>

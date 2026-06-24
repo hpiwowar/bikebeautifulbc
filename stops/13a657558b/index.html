@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ridgeway Spirits</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Haney</div>
 <p class="seo-desc">Ridgeway Spirits is a private liquor store on Lougheed Highway at the corner of Laity Street in Maple Ridge, operated by the Springs Group network of 13-plus BC liquor stores and brew pubs. The store focuses on craft beer, wine, and spirits with a stated emphasis on quality selection and community service. Curbside pickup and home delivery are available in addition to in-store shopping.</p>

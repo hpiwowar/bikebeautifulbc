@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mug &amp; Muffin</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Vernon (Okanagan)  ·  Cheap eats</div>
 <p class="seo-desc">Mug &amp; Muffin is a cafe and coffee shop in Vernon, BC, in the Okanagan region that sees significant cycling traffic. The name suggests a focus on coffee drinks and baked goods, making it a likely pit-stop for touring cyclists moving through the area. No further details about the cafe&#x27;s character or offerings could be confirmed from accessible sources.</p>

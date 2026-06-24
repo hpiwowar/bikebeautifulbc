@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Alert Bay Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Alert Bay</div>
 <p class="seo-desc">The Alert Bay Visitor Centre is a Destination BC visitor information office located on Cormorant Island, accessible by ferry. Alert Bay is known as the &#x27;Home of the Killer Whale&#x27; and features rich First Nations cultural heritage, including the &#x27;Namgis Big House and an ecological park with boardwalk trails. A touring cyclist arriving by ferry would find this a useful first stop for local information and orientation.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Crystal Lake Recreation Site</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Provincial / Regional Park  ·  Bridge Lake</div>
 <p class="seo-desc">A 13-site rec site on the northern shore of Crystal Lake, popular with anglers; a boat launch and fishing dock are on-site, reached via a short RV-accessible gravel spur off Highway 24 with a modest nightly fee.</p>

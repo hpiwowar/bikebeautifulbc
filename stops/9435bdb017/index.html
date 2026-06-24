@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gold &amp; Jade Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Princeton  ·  Casual</div>
 <p class="seo-desc">Gold &amp; Jade Restaurant is a family-owned, Western-style Chinese restaurant in the heart of Princeton, BC, a common stop on the Similkameen cycling corridor. The restaurant accepts all Canadian credit cards and has an updated menu as of June 2025. Princeton sits at the confluence of the Similkameen and Tulameen rivers and is a key resupply point for cyclists on multi-day tours through the region.</p>

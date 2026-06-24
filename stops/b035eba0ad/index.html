@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">McDonald&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  North Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">A McDonald&#x27;s fast-food restaurant on Powell Street in East Vancouver offering drive-through, curbside pickup, and delivery alongside dine-in service. The location provides a familiar, affordable food stop with breakfast through late-night options. Touring cyclists passing through Vancouver&#x27;s east side will find multiple ordering channels including a mobile app with contactless payment.</p>

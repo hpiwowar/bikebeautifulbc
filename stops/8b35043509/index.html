@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Baoguette Vietnamese Bistro</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Baoguette Vietnamese Bistro is a sit-down restaurant in Vancouver&#x27;s Kerrisdale neighbourhood serving authentic Vietnamese dishes including pho, bánh mì, spring rolls, and vermicelli bowls. The bistro also operates a second location in Richmond, and its playful name nods to the Vietnamese baguette sandwich that anchors the menu.</p>

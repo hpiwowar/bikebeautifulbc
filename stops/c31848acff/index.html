@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">HellCrust Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">HellCrust Pizza is a fast-food pizza franchise located inside Metrotown shopping mall in Burnaby, operating from unit E9 on the mall&#x27;s upper level. It offers both delivery and carry-out ordering, making it a quick stop for a slice on the go. The surrounding Metrotown complex is a major transit and commercial hub along Kingsway.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Departure Bay Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Nanaimo (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Departure Bay Pizza is a local pizza shop in north Nanaimo serving a full menu of specialty and custom pizzas, appetizers, pasta, salads, and desserts. The shop offers both online ordering and in-store pickup, with a fresh-slices window available during the day. It sits on Departure Bay Road, a corridor that touring cyclists arriving via the Departure Bay ferry terminal frequently travel.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Phở Hòa</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Phở Hòa is a long-running Vietnamese pho franchise founded in 1983, now with over 60 locations across six countries. This Surrey location seats up to 50 guests and specialises in traditional pho prepared with lean, quality meat cuts for a lighter broth. The menu spans beef, chicken, seafood, and vegetarian pho alongside rice plates and vermicelli bowls, with a rewards app available for frequent visitors.</p>

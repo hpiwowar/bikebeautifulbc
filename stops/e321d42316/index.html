@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Amoka</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">AMOKA Coffee &amp; Bites is a neighborhood café and bakery in Vancouver&#x27;s West End, serving handcrafted espresso drinks alongside freshly baked croissants, pastries, and savory breakfast sandwiches on Davie Street. The shop bakes fresh daily and never resells day-old items, making it a reliable morning fuel stop. Dine-in, pickup, and delivery are all available.</p>

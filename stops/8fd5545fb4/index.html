@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Rolla Community Hall</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Rolla</div>
 <p class="seo-desc">Rolla Community Hall, operating since 1962, is the civic heart of the small rural community of Rolla in northeastern BC. It functions as a rentable community gathering space and event venue, available for private bookings. For touring cyclists on remote roads in the Peace region, it represents a rare community landmark and potential rest point.</p>

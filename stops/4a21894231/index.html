@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Furlong Bay Campground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Lakelse Lake</div>
 <p class="seo-desc">Furlong Bay is the main section of Lakelse Lake Provincial Park, set on a sandy lakeshore framed by the Kitimat Mountain Range and surrounded by old-growth cedar, hemlock, and Sitka spruce; showers, device charging, and on-site kayak and SUP rentals make it a well-equipped summer base. Access is straightforward via paved Highway 37 about 20 km south of Terrace.</p>

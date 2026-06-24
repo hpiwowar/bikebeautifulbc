@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Prince Chinese Seafood Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">Prince Chinese Seafood Restaurant (王子海鮮酒家) is a full-service Chinese seafood restaurant on Grandview Highway in East Vancouver, offering dim sum, dinner service, and banquet facilities. The restaurant operates in a smoke-free indoor environment with no outdoor seating. It sits along a major east-west arterial route and could serve as a meal stop for cyclists, though no cycling-specific amenities have been confirmed.</p>

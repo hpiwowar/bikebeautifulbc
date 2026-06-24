@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hana Sushi Japanese Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Abbotsford  ·  Casual</div>
 <p class="seo-desc">Hana Sushi is a fully licensed, family-run Japanese-Korean fusion restaurant in Abbotsford&#x27;s Mt Lehman area, staffed by chefs trained in both culinary traditions. The menu spans traditional sushi, Korean BBQ skewers, and a variety of vegetarian options, all served in a casual atmosphere.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Skeena Bar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Terrace  ·  Casual</div>
 <p class="seo-desc">The Skeena Bar is a bar located on Greig Avenue in the North Coast region of British Columbia. Situated along the Skeena River corridor, it serves a community that touring cyclists travelling Highway 16 (the Yellowhead Route) would pass through. As a local bar in a remote northern BC community, it may offer a welcome stop for cyclists looking for refreshment after long stretches of riding.</p>

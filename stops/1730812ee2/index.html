@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Uphill Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Nelson (West Kootenay)</div>
 <p class="seo-desc">The Uphill Market is a historic corner store and café in the Uphill neighbourhood of Nelson that has operated at the same location since 1902. It stocks daily household essentials including high-quality meats, dry goods, local farm-fresh eggs, vegetables, frozen foods, and ice cream in summer, alongside café service. As the only store in Uphill Nelson, it serves as a genuine community anchor and a convenient stop for visitors passing through.</p>

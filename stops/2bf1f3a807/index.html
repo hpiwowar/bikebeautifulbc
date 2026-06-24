@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Merville Community Hall</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Merville</div>
 <p class="seo-desc">Known locally as &#x27;the Big Yellow Hall,&#x27; the Merville Community Hall is a rural gathering place in the Comox Valley countryside, operated by the Merville Community Association. It hosts live music, contra dances, community fairs, and other events, drawing visitors from across Vancouver Island. For touring cyclists on the Old Island Highway corridor, it is a recognizable landmark and potential stop in an otherwise sparsely served rural stretch.</p>

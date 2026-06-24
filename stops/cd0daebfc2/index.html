@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">GVPL: Esquimalt Branch</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Victoria (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The Esquimalt Branch is part of the Greater Victoria Public Library network, operated by the public Greater Victoria Public Library system serving multiple municipalities in the Capital Region. It is notable for housing a self-serve digitization space where patrons can preserve old photographs and documents—a unique feature within the GVPL system. Touring cyclists passing through Esquimalt will find a welcoming public space with public computers and a broad physical and digital collection.</p>

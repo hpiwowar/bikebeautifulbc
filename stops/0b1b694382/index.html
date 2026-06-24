@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Princeton Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Princeton</div>
 <p class="seo-desc">A year-round visitor information office in the heart of downtown Princeton, serving as a hub for the lower Similkameen Valley. It features a Virtual Reality Room where visitors can virtually kayak the Similkameen River, and staff can direct you to gold panning spots, hikes, dining, and accommodations. The centre also provides guides for the Bronze Sculpture walking tour through Princeton, known as the Bronze Statue Capital of Canada.</p>

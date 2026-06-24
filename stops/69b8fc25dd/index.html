@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Stages Bistro &amp; Lounge</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Stages Bistro &amp; Lounge is a full-service restaurant and lounge situated on the lobby floor of the Holiday Inn Vancouver-Centre on West Broadway. It offers an extensive menu spanning breakfast, lunch, and dinner, plus a Friday seafood lunch buffet and a daily happy hour with discounted cocktails and appetizers. The Broadway location makes it a convenient stop for cyclists moving through central Vancouver.</p>

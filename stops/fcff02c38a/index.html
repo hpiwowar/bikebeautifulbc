@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Guangzhou Garden</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Duncan (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Guangzhou Garden is an authentic Chinese restaurant in Duncan, BC, serving traditional dishes including dim sum, dumplings, and wonton soup prepared without MSG. The dining room seats up to 125 people, making it a practical stop for cycling clubs or larger tour groups passing through the Cowichan Valley. A weekly lunch and dinner buffet runs Tuesday through Sunday alongside regular dine-in, takeout, and delivery options.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Cumberland Brewing Company</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Cumberland</div>
 <p class="seo-desc">A community-focused craft brewery on Dunsmuir Avenue in the village of Cumberland, a renowned mountain biking destination in the Comox Valley. Founded in 2014, it follows a hyper-local model with no distribution outside Cumberland, so the only way to taste their house-brewed beers is to visit in person. The globally inspired food menu and outdoor dog-friendly patio make it a natural gathering spot after a day on the trails.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Java Shack</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Campbell River  ·  Cheap eats</div>
 <p class="seo-desc">The Java Shack is a café located on Shoppers Row in Campbell River, BC, a main commercial street in this Vancouver Island city that serves as a hub for cyclists exploring the region. Its central downtown location makes it a plausible stop for touring cyclists passing through Campbell River on the Discovery Route or nearby trails.</p>

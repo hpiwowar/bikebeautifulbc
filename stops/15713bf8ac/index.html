@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Clover Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Clover Sushi is a Japanese-focused restaurant in a commercial unit on Admirals Road in the Esquimalt/View Royal area of Greater Victoria, blending traditional sushi techniques with creative rolls, premium sashimi, and a few Korean-inspired dishes like bibimbap. The restaurant offers both a dine-in experience in what it describes as an elegant yet comfortable setting, and a pickup option through their mobile ordering service.</p>

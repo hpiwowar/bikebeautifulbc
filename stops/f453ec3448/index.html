@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sechelt Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Sechelt  ·  Free</div>
 <p class="seo-desc">Sechelt Public Library is a community public library located on Cowrie Street in downtown Sechelt on the Sunshine Coast. It offers a broad range of in-library services including WiFi, computer and internet access, and print/copy/fax/scan facilities. The library also maintains strong ties to local Indigenous and community organizations, making it a useful orientation stop for visiting cyclists exploring the region.</p>

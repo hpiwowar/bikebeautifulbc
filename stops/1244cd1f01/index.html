@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Locavore Bar &amp; Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Squamish (Sea to Sky)  ·  Cheap eats</div>
 <p class="seo-desc">Locavore Food Truck is a takeout food truck based in Squamish, BC, with a focus on local cuisine. Food trucks like this are a welcome stop for touring cyclists looking for a quick, freshly made meal along the Sea-to-Sky corridor. No address is listed in OSM, suggesting the truck operates from a rotating or seasonal location.</p>

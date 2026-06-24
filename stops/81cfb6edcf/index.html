@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tomi&#x27;s Home Cookin</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Port Renfrew  ·  Casual</div>
 <p class="seo-desc">Tomi&#x27;s Home Cookin is a restaurant on Baird Road in the Port Renfrew area of southern Vancouver Island, a remote community that sits at the terminus of several popular cycling routes including the south island coastal loop. The area is known as a turning-point or overnight stop for touring cyclists, making a local home-cooking restaurant a potentially welcome find after long days in the saddle.</p>

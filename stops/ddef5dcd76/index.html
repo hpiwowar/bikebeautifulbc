@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">VanDusen Botanical Garden</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Vancouver (Metro Vancouver)  ·  Moderate</div>
 <p class="seo-desc">A named garden area within VanDusen Botanical Garden, a 55-acre oasis in the heart of Vancouver featuring over 7,500 plant species and varieties from around the world. VanDusen offers guided walking and cart tours, a fine dining restaurant, a garden café, a gift shop, and seasonal floral installations. A worthwhile stop for touring cyclists exploring Vancouver&#x27;s quieter Shaughnessy neighbourhood.</p>

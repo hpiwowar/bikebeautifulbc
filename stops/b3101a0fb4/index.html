@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Home Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Maple Ridge  ·  Casual</div>
 <p class="seo-desc">Home Restaurant is a long-established homestyle diner on the Lougheed Highway in Maple Ridge&#x27;s West Central neighbourhood, part of a small BC chain with four locations. It has served the community for over 20 years, with a menu centred on all-day breakfast, comfort classics, and house-made pies. Pickup and third-party delivery are both available, making it a flexible stop for cyclists on the Lougheed corridor.</p>

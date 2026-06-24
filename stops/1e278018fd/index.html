@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mason&#x27;s Kitchen + Bar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Kamloops  ·  Casual</div>
 <p class="seo-desc">Mason&#x27;s Kitchen + Bar is a full-service restaurant and bar set on the edge of the Big Horn Golf Course in Kamloops, offering patio dining with views of the surrounding landscape. The menu focuses on locally inspired, handmade dishes suited to everything from casual lunches to group gatherings. Online table reservations and a catering menu are available.</p>

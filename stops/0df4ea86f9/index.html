@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Upper Ganges Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Chemainus</div>
 <p class="seo-desc">A full-service liquor store on Salt Spring Island operated under the Voyage Liquor brand, part of a locally owned Vancouver Island and Salt Spring Island chain serving communities since 2006. The location also functions as a Canada Post partner outlet, making it a useful stop for cyclists needing to ship or receive packages. Same-day delivery is available for orders placed online.</p>

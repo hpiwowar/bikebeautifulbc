@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hazelton District Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Hazelton  ·  Free</div>
 <p class="seo-desc">A small-town public library housed in the historic Library and Pioneer Museum Building in Hazelton, in the Upper Skeena region. Beyond books, it features a Pioneer Museum, an art collection, and a local history reference collection that document the area&#x27;s heritage. Touring cyclists will find free Wi-Fi, computer access, and a welcoming rest stop in a remote stretch of northern BC.</p>

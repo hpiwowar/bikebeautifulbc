@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kings Links Clubhouse</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Tsawwassen (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Kings Links Clubhouse is the restaurant at Kings Links Golf Course, a seaside par-72 championship links course in Tsawwassen recognized by Golf Canada as one of Canada&#x27;s best links-style courses. The clubhouse features a patio with spectacular views of the golf course, Coast Mountains, Mount Baker, and the Gulf Islands. The restaurant is explicitly open to the public, not just members or golfers.</p>

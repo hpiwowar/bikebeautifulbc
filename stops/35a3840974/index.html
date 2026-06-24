@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Red Cliff Farm</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Kamloops</div>
 <p class="seo-desc">Red Cliff Farm is a small organic farm on the outskirts of Kamloops selling farm-fresh eggs and organically grown vegetables, including garlic varieties such as Red Russian and Music. The farm is home to free-ranging chickens and operates as a direct-to-consumer farm stand. Notably, it accepts Bitcoin payments via Lightning and on-chain, making it an unusual and locally distinctive stop for cyclists seeking fresh, organic food.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bonjour Vietnam Bistro</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Bonjour Vietnam Bistro is a Vietnamese restaurant and cocktail bar on Fraser Street in Vancouver, blending traditional dishes like Beef Pho, Bánh Xèo, and fresh rolls with a curated cocktail menu featuring both classic and creative originals. The space accommodates up to 60 guests and hosts private events and parties. Online ordering is available alongside dine-in service.</p>

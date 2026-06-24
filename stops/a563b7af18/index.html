@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Otaru Japanese Kitchen</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Otaru Japanese Kitchen is a Japanese restaurant in Richmond, BC serving authentic dishes including sushi, rolls, udon, and tempura. The restaurant positions itself as striving to be the best in Richmond and offers both dine-in and pickup ordering. A touring cyclist passing through Richmond&#x27;s No. 2 Road corridor would find it a convenient stop for a full Japanese meal.</p>

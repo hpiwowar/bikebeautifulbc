@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Red Baron Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Surrey (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Red Baron Restaurant is a family-owned seaside eatery at Crescent Beach in Surrey serving fish and chips, ice cream, and frozen yogurt. Situated beside the beach, it offers a quiet atmosphere with outdoor seating, making it a natural pit stop for cyclists riding the coastal routes. The shop carries a wide variety of ice cream flavors and accepts U.S. currency.</p>

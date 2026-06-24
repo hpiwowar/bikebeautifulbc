@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Tsawwassen (Metro Vancouver)</div>
 <p class="seo-desc">Walmart Supercenter in Tsawwassen is a large-format general merchandise and full grocery store close to the BC Ferries Tsawwassen terminal, making it a convenient resupply point for cyclists arriving from or heading to Vancouver Island or the Gulf Islands. The Supercenter format means touring cyclists can source groceries, clothing, camping basics, and other supplies under one roof. It is one of the larger retail options in the South Delta area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kostas</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Langley  ·  Cheap eats</div>
 <p class="seo-desc">Kostas Greek Restaurant has been serving authentic, homemade Greek cuisine in the Langley area for nearly 20 years, founded by Bozena and Kostas Pappas and now continued by Canadian-born Harman. The menu features classics like souvlaki, calamari, and lamb dinners, all made with fresh ingredients. The business is transitioning to a cloud kitchen model, focusing on takeout and delivery.</p>

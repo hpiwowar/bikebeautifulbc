@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bazaar Smoke &amp; Convenience</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Bazaar Convenience and Smoke Shop is a compact urban convenience store in downtown Vancouver&#x27;s West Hastings corridor, stocking snacks, exotic drinks, tobacco products, vapes, and smoking accessories. Located near the heart of the city, it caters to pedestrians and passersby looking for a quick snack or convenience item. Touring cyclists riding through downtown Vancouver will find it a handy spot to grab drinks and snacks.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">VIU Permaculture Club Garden</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Nanaimo (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">A small permaculture demonstration garden on the Vancouver Island University Nanaimo campus, located on the north side of the campus library. Founded in 2008 as the Community Peace Garden, it is now run by the VIU Students&#x27; Union Permaculture Club and focuses on food growing, seed saving, plant medicine, and traditional ecological knowledge. It functions primarily as a student learning and gathering space rather than a formal public attraction.</p>

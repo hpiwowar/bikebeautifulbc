@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cit-E Cycles</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  North Vancouver</div>
 <p class="seo-desc">Cit-E Cycles is BC&#x27;s largest e-bike retailer, founded in 2011 from a single Langley shop and now operating six locations across the province. Their North Vancouver store carries 300+ models from 20+ premium brands spanning urban, cargo, mountain, and touring styles. Touring cyclists will find one of the broadest e-bike selections in Canada, with in-store test rides and dedicated service support.</p>

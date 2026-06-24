@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Houston Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Houston  ·  Free</div>
 <p class="seo-desc">The Houston Public Library is a community public library serving the small town of Houston in BC&#x27;s Central Interior, offering books, digital resources, computer and internet access, meeting room rentals, and office services including printing, copying, faxing, and scanning. For touring cyclists passing through this remote stretch of highway, it provides a sheltered stop with free internet access and a range of community resources. The library also curates local community information links, making it a useful orientation point for visitors unfamiliar with the region.</p>

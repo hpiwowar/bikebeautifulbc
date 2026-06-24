@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kiku Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">Kiku Sushi is a Japanese restaurant at Metrotown in Burnaby, one of two Lower Mainland locations, serving sushi, rolls, grilled entrees, noodles, and kitchen appetizers. The restaurant describes a large dining hall with a cozy interior and a broad menu designed to suit varied tastes. A touring cyclist riding the Kingsway corridor would find a full sit-down meal option here with online ordering also available.</p>

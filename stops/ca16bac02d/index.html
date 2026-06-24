@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fujiya</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Fujiya is a long-running Japanese grocery chain with its Richmond location opened in 1989, offering a wide selection of Japanese food products for home cooking and ready-to-go prepared items including sushi. Founded in Vancouver&#x27;s Japantown in 1977, Fujiya has become a staple of Japanese-Canadian food culture across BC. A touring cyclist would find this a useful stop for specialty Japanese groceries, packaged snacks, and catering-style prepared sushi available for pickup.</p>

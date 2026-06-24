@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">La Galleria Fine Foods</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Specialty / Health Food  ·  North Vancouver (North Shore)</div>
 <p class="seo-desc">La Galleria Fine Foods is an award-winning Italian deli and specialty food shop located in Edgemont Village on the North Shore. It offers a broad menu of freshly made sandwiches, soups, chowders, lasagna, salads, and antipasto alongside a curated selection of packaged Italian pantry staples. For a touring cyclist passing through North Vancouver, it is a strong stop for a hearty sandwich or soup and resupply of packaged provisions.</p>

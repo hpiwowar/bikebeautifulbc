@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Blue Ox Pub</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Coldstream  ·  Casual</div>
 <p class="seo-desc">The Blue Ox Pub is a classic neighbourhood pub in Lumby, BC, serving pub food and drinks in a cozy, welcoming atmosphere. Open seven days a week, it is a solid stop for touring cyclists passing through the North Okanagan on routes connecting Vernon and the Monashee corridor. The pub hosts regular events and draws a local crowd, giving visiting riders an authentic taste of small-town BC.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tim Hortons</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Nanaimo (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Tim Hortons is a Canadian quick-service chain institution on Northfield Road in Nanaimo, offering coffee, baked goods, soups, and breakfast wraps with both dine-in and drive-thru options. For a touring cyclist, it provides a reliable, familiar stop for a hot drink and a quick meal at the northern edge of the city. The location supports mobile ordering and a loyalty rewards program.</p>

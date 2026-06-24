@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Golden Flour Bakery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Creston</div>
 <p class="seo-desc">Golden Flour Bakery is a scratch bakery in Creston, BC that uses local ingredients and produces fresh baked goods daily in-store. Beyond pastries and elaborately decorated cakes and cookies, it also serves hot breakfast and lunch, making it a practical food stop for cyclists riding through the southern Kootenays. Free WiFi is available for customers dining in.</p>

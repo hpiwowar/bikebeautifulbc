@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Art Department</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Tsawwassen (Metro Vancouver)</div>
 <p class="seo-desc">The Art Department is a community arts centre in Tsawwassen founded by local visual artist Mike, offering drop-in and registered classes in pottery, painting, drawing, and jewelry alongside special events and parties. The studio was built around a mission of fostering curiosity, creativity, and community in one shared creative space. Touring cyclists exploring the Tsawwassen area could experience a pottery class, attend a paint-and-wine evening, or pick up a gift card as a memorable souvenir from their ride.</p>

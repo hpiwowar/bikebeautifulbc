@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Happy Veggie World</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Happy Veggie World (operating as Global Vegetarian Foods Corp) is a Richmond-based plant-based meat alternatives brand that has been crafting vegan faux-meat products for over 25 years, including heat-and-serve meals and drumstick and bacon analogues. The company sells directly to food-service partners and through its own retail store. Touring cyclists with vegan or vegetarian diets may find specialty plant-based proteins here, though this is not a full-range grocery outlet.</p>

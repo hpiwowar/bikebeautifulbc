@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Hub on Martin</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Penticton  ·  Casual</div>
 <p class="seo-desc">The Hub on Martin is downtown Penticton&#x27;s neighbourhood pub and live music venue, hosting Okanagan cover bands every Friday and Saturday night. It offers lunch, dinner, a late-night menu, and weekend brunch, with themed specials running throughout the week. A lively, centrally located stop in the heart of Penticton&#x27;s cycling corridor.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Monck Park</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Quilchena</div>
 <p class="seo-desc">Monck Park is a BC provincial campground on the shore of Nicola Lake in the Thompson region, offering a wide range of recreational activities including camping, swimming, boating, fishing, and hiking in a hot, dry setting. The park protects a Ponderosa pine and bunchgrass ecosystem alongside a volcanic rock cliff landscape, making it an ecologically distinctive stop. Touring cyclists are permitted on park roads, and the park is described as a very popular family-oriented destination.</p>

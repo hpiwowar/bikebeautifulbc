@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chicken Box</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  North Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Chicken Box is a locally grown BC fast-food chain focused on fried chicken and burgers, with three locations across Metro Vancouver and the Fraser Valley. The North Vancouver outpost on 2nd Street East is compact and quick-service, making it a practical calorie stop for cyclists passing through the Lower Lonsdale area. Online ordering is available for both pickup options.</p>

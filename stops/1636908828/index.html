@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Papa John&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Alberni  ·  Cheap eats</div>
 <p class="seo-desc">Papa John&#x27;s is a national pizza chain offering delivery and takeout at this Port Alberni location on Vancouver Island. Touring cyclists passing through the Alberni Valley will find a familiar option for a quick pizza order or takeout meal. The location is part of the broader chain network serving British Columbia.</p>

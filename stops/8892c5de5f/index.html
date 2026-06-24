@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Buy-Low Foods</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Surrey</div>
 <p class="seo-desc">Buy-Low Foods is a full-service supermarket chain operated under the Pattison Food Group, with this location in Surrey&#x27;s Whalley neighbourhood. It offers a broad range of groceries under both national brands and the chain&#x27;s own Western Family and Only Goodness private labels. The store carries a loyalty rewards program (More Rewards) redeemable for groceries and other perks, making it a practical resupply stop for touring cyclists passing through the area.</p>

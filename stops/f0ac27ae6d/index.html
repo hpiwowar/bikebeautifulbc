@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Ruby</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Ruby on Johnson is a locally owned breakfast and brunch restaurant open since 2015, located inside the Best Western Carlton Plaza Hotel on Johnson Street in Victoria. It offers a refined take on brunch blending eclectic southern-inspired fare with scratch cooking and locally sourced ingredients. The restaurant is part of a small Victoria-based group with two additional locations and is known for its vinyl record collection and emphasis on staff wellbeing.</p>

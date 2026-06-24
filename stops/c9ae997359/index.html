@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kingyo</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Upscale</div>
 <p class="seo-desc">Kingyo is a Japanese izakaya on Denman Street in Vancouver&#x27;s West End, just steps from the Stanley Park seawall cycling network. The restaurant offers a full cocktail program alongside its Japanese menu and runs seasonal omakase courses. It shares ownership with a family of related Japanese concepts across Vancouver, Toronto, and Seattle.</p>

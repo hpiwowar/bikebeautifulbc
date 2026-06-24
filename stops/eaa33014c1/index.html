@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chilliwack Cultural Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Chilliwack (Fraser Valley)  ·  Free</div>
 <p class="seo-desc">The Chilliwack Cultural Centre is the Fraser Valley&#x27;s primary performing arts and creative hub, featuring two performance theatres, an art gallery, 21 music studios, and four arts and crafts studios on the traditional territory of the Stó:lō Coast Salish People. It presents live theatre, concerts, gallery exhibitions, and creative classes year-round, making it a significant cultural stop for cyclists passing through Chilliwack.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bikes For All</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  North Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Bikes For All is a full-service bicycle shop operating two Lower Mainland locations, with this branch in New Westminster. Experienced mechanics can work on any brand of bicycle, and the shop stocks an unusually broad range of touring-oriented inventory including bags, panniers, racks, and a dedicated Touring/Bike Packing category in both new and used bikes. A rentals offering and e-bike service round out what is available to cyclists passing through.</p>

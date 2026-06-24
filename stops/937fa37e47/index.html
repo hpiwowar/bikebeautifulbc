@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Green Lake Station</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Whistler (Sea to Sky)</div>
 <p class="seo-desc">Green Lake Station is a café and Chevron fuel stop on Crazy Canuck Drive near Green Lake in Whistler, open seven days a week. It serves an all-day breakfast kitchen, pizza, burgers, and paninis alongside BC-roasted drip coffee and espresso drinks, with a patio and a live-edge wooden communal table inside. The shop also stocks souvenirs and gifts, rounding out its appeal as a rest stop for anyone rolling through the area.</p>

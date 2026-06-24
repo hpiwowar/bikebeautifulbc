@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Block Victoria</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Upscale</div>
 <p class="seo-desc">Block Kitchen and Bar is a global-fusion restaurant and cocktail bar located in Victoria&#x27;s Old Town, serving shareable small plates drawing from Japanese, Korean, and other Asian culinary traditions. The space is described as dynamic and vibrant, with a strong focus on craft cocktails alongside the food program. Catering and private group bookings are also available for events of 12 or more.</p>

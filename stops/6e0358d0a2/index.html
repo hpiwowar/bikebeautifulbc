@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mission Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Chilliwack</div>
 <p class="seo-desc">The Mission Visitor Centre is a tourism information office operated by Tourism Mission on the Lougheed Highway, serving as a gateway resource for visitors to the Mission area. Located along a major through-route in the Fraser Valley, it would be a natural stop for touring cyclists seeking local route information and area orientation. The operator Tourism Mission is distinct from the City of Mission municipal government.</p>

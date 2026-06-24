@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Robinhood Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Surrey (Metro Vancouver)</div>
 <p class="seo-desc">Robinhood Liquor Store is a neighbourhood retail liquor store on 72nd Avenue in Surrey carrying beer, wine, and spirits with monthly rotating specials and a loyalty program through More Rewards. The store offers delivery via Skip the Dishes and DoorDash in addition to in-person shopping. A touring cyclist could stop here to resupply on beverages, though no cycling-specific amenities are advertised on the website.</p>

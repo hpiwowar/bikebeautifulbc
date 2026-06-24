@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Meridian Farm Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farmers&#x27; Market  ·  Maple Ridge</div>
 <p class="seo-desc">Meridian Farm Market is a farm-focused grocery store in Maple Ridge offering a wide range of locally sourced and craft products including grass-fed beef, free-run chicken, fresh produce, artisan cheese, and baked goods. It operates as both a physical retail location and an online ordering service with delivery across the Lower Mainland. Touring cyclists passing through Maple Ridge would find it a well-stocked stop for resupply across most food categories.</p>

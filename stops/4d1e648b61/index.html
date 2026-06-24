@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Deroche General Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Chilliwack</div>
 <p class="seo-desc">Deroche General Store is a small convenience/general store serving the rural community of Deroche in the Fraser Valley, situated along the Lougheed Highway corridor. For touring cyclists passing through this sparsely serviced stretch between Mission and Agassiz, it likely represents one of the few resupply points in the area. The &#x27;General Store&#x27; name suggests a traditional country store offering a mix of everyday goods to a small rural community.</p>

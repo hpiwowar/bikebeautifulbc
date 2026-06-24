@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mountain Pantry Grocery &amp; Liquor</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Cokato</div>
 <p class="seo-desc">The Mountain Pantry is a grocery and liquor store situated in the pedestrian village at Fernie Alpine Resort, stocking a broad range of supplies including fresh produce, dairy, frozen meals, wines, spirits, and over-the-counter pharmacy items — making it a practical resupply point for cyclists in the Elk Valley. The store also features a Coffee Bar serving Starbucks and carries locally hand-crafted products and Rocky Mountain Chocolate Factory goods.</p>

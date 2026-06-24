@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">16th Street Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  West Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">16th Street Liquor Store is a neighbourhood alcohol retail shop in West Vancouver, serving the residential and recreational corridor along 16th Street on the North Shore. For touring cyclists riding the Sea-to-Sky or North Shore routes, it offers a convenient stop to pick up beer, wine, or spirits. The store is categorized in OSM as a standard alcohol shop serving the local community.</p>

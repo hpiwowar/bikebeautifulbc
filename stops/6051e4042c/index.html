@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">MNT Takao Café</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Campbell River  ·  Cheap eats</div>
 <p class="seo-desc">MNT Takao Café is a café located at 1265 Ironwood Street on Vancouver Island, in the Campbell River area. The name suggests a Japanese-influenced theme, and the unit address indicates a multi-tenant commercial setting. Touring cyclists passing through the area may find it a useful stop for refreshments.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushi Wara</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Delta (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Sushi Wara is a Japanese sushi restaurant located in Delta in the Greater Vancouver area, offering dine-in, takeout, and online ordering. The restaurant notably calls out its Delta location to distinguish itself from a similarly named place in Comox. A touring cyclist passing through the Scott Road corridor would find a full sit-down Japanese meal or a quick takeout option here.</p>

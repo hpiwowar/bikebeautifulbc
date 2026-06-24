@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Main Street Noodles</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Whistler (Sea to Sky)  ·  Cheap eats</div>
 <p class="seo-desc">Main St Noodles is an Asian fusion noodle shop in Whistler village offering a customizable menu of globally-inspired noodle dishes — from Pad Thai to Korean-style udon to Malaysian coconut curry. Cyclists can choose their own spice level and protein, making it easy to fuel up exactly as needed. Contactless takeout and delivery make it a practical quick stop after a ride.</p>

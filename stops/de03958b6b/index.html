@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">True Confections</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">True Confections is a long-established Vancouver dessert destination that has been making all of its cakes, pies, cheesecakes, and baked goods from scratch using pure ingredients for over 35 years. The shop operates two locations and offers an extensive menu including gluten-free and vegan options, catering, and high tea. For a touring cyclist, it represents a notable sweet-stop on the West Broadway corridor.</p>

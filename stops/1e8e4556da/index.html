@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Little Mexico Cantina</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Little Mexico Cantina is a full-service Mexican restaurant and bar in the Steveston village area of Richmond, offering house-made tortillas, a wide taco selection, and a full bar with daily happy hour. The Chatham Street location puts it within easy reach of cyclists riding the popular Fraser River dyke trail network. A broad appetizer menu and online ordering make it a flexible stop for groups of varying sizes.</p>

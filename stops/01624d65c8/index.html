@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Windermere Valley Museum</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Invermere  ·  Free</div>
 <p class="seo-desc">The Windermere Valley Museum is an outdoor heritage complex managed by the Windermere District Historical Society, featuring eight historic buildings relocated to a single site including a CPR train station, pioneer cabins, a schoolhouse, and an implement shed. Visitors follow a self-guided tour through grassy, shaded grounds with views of Windermere Lake, the Columbia River, and the surrounding mountains. Admission is by donation, and the grounds with outside displays are accessible at any time.</p>

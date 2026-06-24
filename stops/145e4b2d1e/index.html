@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Maya&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  White Rock  ·  Cheap eats</div>
 <p class="seo-desc">Maya&#x27;s is a seasonal ice cream and gelato shop on White Rock&#x27;s scenic Marine Drive, right along a popular seaside cycling route. The shop was born from the owners&#x27; international travels and offers handcrafted gelato, creative soft serve sundaes, floats, paninis, and a full espresso bar. Online ordering is available for pint pickup and local delivery.</p>

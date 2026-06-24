@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">D-Plus Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">D-Plus Pizza is a locally owned Lower Mainland chain blending classic pizza with Indian-inspired dishes — butter chicken, fish pakora, paneer pizza, and donairs all share the menu. The business grew from a single Fraser Valley shop called D Hut Pizza into five locations across Surrey and Delta, and is known for generous portion deals. A passing cyclist would find quick, filling, affordable food available for pickup.</p>

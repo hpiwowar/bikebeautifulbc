@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pearl Ellis Gallery</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Comox  ·  Low</div>
 <p class="seo-desc">Pearl Ellis Gallery is a non-profit, volunteer-run art gallery located in the heart of Comox, founded in 1977 as the Comox Arts Society and renamed in 2005 to honour one of its founders. The gallery showcases rotating exhibitions of local painters, sculptors, and photographers, with new shows opening every few weeks throughout the year. Entry is by donation, making it an easy and low-barrier cultural stop for cyclists passing through the Comox Valley.</p>

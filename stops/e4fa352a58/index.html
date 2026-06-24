@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Albion Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Maple Ridge</div>
 <p class="seo-desc">A single-storey municipal community centre in the Albion neighbourhood of Maple Ridge, operated by the City. It serves as a cultural centre, community hall, events venue, and meeting space with designated wheelchair accessibility. For touring cyclists passing through Maple Ridge, it offers a public civic facility with washroom access.</p>

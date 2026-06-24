@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">GVPL: Saanich Centennial Library Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Victoria (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The GVPL Saanich Centennial Library Branch is part of the Greater Victoria Public Library system, which operates branches across the greater Victoria region on southern Vancouver Island. Public libraries offer a quiet, climate-controlled environment with public computers and programming open to all visitors. This branch is wheelchair accessible and serves the broader Saanich community.</p>

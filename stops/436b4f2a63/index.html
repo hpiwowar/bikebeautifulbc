@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Vancouver Art Gallery</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Vancouver (North Shore)  ·  Moderate</div>
 <p class="seo-desc">Major not-for-profit art gallery founded in 1931, housed in a landmark building in downtown Vancouver. Known for its extensive Emily Carr collection and rotating international exhibitions. A natural rest stop for cyclists on the downtown seawall loop, with on-site dining and a gallery shop.</p>

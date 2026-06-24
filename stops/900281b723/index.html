@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Thunderbird Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Vancouver</div>
 <p class="seo-desc">Thunderbird Community Centre is a neighbourhood facility jointly operated by the Vancouver Board of Parks and Recreation and the Thunderbird Neighbourhood Association, providing recreational, educational, and social programs for residents of all ages in East Vancouver. The centre includes a fitness facility, licensed childcare, gymnasium, and multi-purpose rooms available for rental. Touring cyclists passing through the Hastings-Sunrise corridor may find it a functional rest point, though it is oriented primarily toward local community use.</p>

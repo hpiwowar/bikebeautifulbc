@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Everything Wine</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Winery / Cidery  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Everything Wine is a large-format specialty beverage retailer with multiple BC locations, offering an extensive range of wines from around the world alongside beer, cider, and spirits. This Vancouver outlet is located in the River District, a relatively new mixed-use development along the Fraser River. The store also runs a wine club, educational content, and event consultation services, catering to casual shoppers and serious enthusiasts alike.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Davie Village</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Activity / Experience  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Gay Village (commonly called Davie Village) is Vancouver&#x27;s historic LGBTQ+ neighbourhood, centered on Davie Street in the West End. Known for its rainbow-painted crosswalks, welcoming bars and restaurants, and strong community identity, it is both a cultural landmark and a lively destination for visitors. Its location near the Stanley Park Seawall and other major cycling routes makes it a natural waypoint for touring cyclists passing through central Vancouver.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Gallery at Queen&#x27;s Park</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  North Vancouver  ·  Free</div>
 <p class="seo-desc">The Gallery at Queen&#x27;s Park is a public art gallery housed in the historic Centennial Lodge inside Queen&#x27;s Park, operated by Arts New West on behalf of the City of New Westminster since 1985. It hosts twelve exhibitions per year featuring two- and three-dimensional works by emerging and established artists from across Metro Vancouver. The park setting makes it a pleasant cultural detour for cyclists passing through New Westminster.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Malakwa Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Malakwa  ·  Casual</div>
 <p class="seo-desc">Malakwa Cafe is a small local restaurant in the community of Malakwa, situated along the Trans-Canada Highway corridor between Salmon Arm and Revelstoke—a stretch popular with cycle tourers on long-distance routes. OSM records outdoor seating, suggesting a relaxed stop in a rural setting. As one of few food-service options in this small community, it may serve as a key resupply point for cyclists passing through.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Subway</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Campbell River  ·  Cheap eats</div>
 <p class="seo-desc">Subway at Mariner Square Shopping Centre is a full-service fast-food sandwich shop serving Footlongs, 6&quot; subs, wraps, and salads in Campbell River. It accepts multiple major credit cards and offers in-restaurant dining, pickup, curbside, and delivery. For touring cyclists passing through Campbell River, it is a reliable mid-route calorie stop with flexible ordering options.</p>

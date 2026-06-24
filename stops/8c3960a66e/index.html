@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Brandts Creek Neighborhood Pub</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Kelowna (Okanagan)  ·  Casual</div>
 <p class="seo-desc">Brandt&#x27;s Creek Neighbourhood Pub has been a Kelowna fixture since 1990, offering a country-style interior with vaulted ceilings and a large summer patio. The kitchen spans classic pub comfort food, rotating seasonal dishes, and weekend brunch service. It is a 19+ venue with a full-size parking lot and overflow parking next door.</p>

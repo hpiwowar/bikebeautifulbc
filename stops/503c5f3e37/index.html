@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Quarterway Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Quarterway Liquor Store operates alongside the Quarterway Pub on Bowen Road in Nanaimo, a common BC arrangement where a licensed liquor store shares a building with a full-service pub. For touring cyclists passing through Nanaimo, it offers a convenient stop for supplies along a central arterial road. The adjacent pub provides food and drink service.</p>

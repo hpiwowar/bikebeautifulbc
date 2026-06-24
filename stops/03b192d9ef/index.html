@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Indian Masala Express</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Squamish (Sea to Sky)  ·  Casual</div>
 <p class="seo-desc">Indian Masala Express is an Indian fine dining restaurant in Squamish offering Northern and Southern Indian cuisine alongside modern Mumbai fusion dishes, all prepared with house-blended herbs and spices. The restaurant operates its own Kismet wine label and offers curated Indian food and wine pairings, which sets it apart from typical Indian restaurants. Cyclists can dine in on the patio or order takeout and Doordash delivery.</p>

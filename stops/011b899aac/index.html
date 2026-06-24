@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cowichan Garry Oak Preserve</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Duncan  ·  Free</div>
 <p class="seo-desc">The Cowichan Garry Oak Preserve is a protected natural area near Duncan on Vancouver Island, managed by the Nature Conservancy of Canada. It safeguards Garry oak ecosystems, one of the most endangered habitat types in Canada, which are found in the Cowichan Valley and support a rich diversity of plants and wildlife. Touring cyclists passing through the Cowichan Valley would find this a compelling stop to experience a rare and distinctive coastal BC landscape.</p>

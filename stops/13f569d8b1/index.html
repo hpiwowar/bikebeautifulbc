@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">GVPL: Juan de Fuca Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Victoria (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The Juan de Fuca Branch is part of the Greater Victoria Public Library system, serving the western communities of the Capital Regional District along the Island Highway corridor. As a public library it offers a welcoming, climate-controlled indoor space with public computers and digital collections. It is operated by the Greater Victoria Public Library, which maintains a network of branches across the greater Victoria area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Unicorn Sparkles</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Upscale</div>
 <p class="seo-desc">Unicorn Sparkles is a fine dining restaurant in downtown Victoria from the team behind acclaimed local spots hanks, nowhere, ate, and somewhere. It represents the group&#x27;s attempt to bring together everything they&#x27;ve learned across those award-winning projects into a single new venture. Touring cyclists passing through the heart of Victoria will find it at unit G4 on Douglas Street, with reservations recommended.</p>

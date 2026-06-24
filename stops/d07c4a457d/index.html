@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Galiano Island Community Transportation Society</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Bus / Public Transit  ·  Galiano Island</div>
 <p class="seo-desc">Community-run electric minibus service on Galiano Island operating scheduled transit on Friday afternoons and Saturday mornings, meeting arriving ferries. No bike policy stated.</p>

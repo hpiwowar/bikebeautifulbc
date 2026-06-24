@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Deville Coffee Bernard</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Kelowna (Okanagan)  ·  Cheap eats</div>
 <p class="seo-desc">Deville Coffee Bernard is a specialty coffee chain cafe situated on Bernard Avenue, Kelowna&#x27;s main downtown thoroughfare and a natural waypoint for cyclists exploring the city core. The chain operates across Western Canada with a focus on quality coffee and a streamlined cafe experience. An order-ahead option makes it a quick stop for riders who want to minimize time off the bike.</p>

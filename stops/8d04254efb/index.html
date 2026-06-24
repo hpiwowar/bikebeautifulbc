@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fairway Market</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Fairway Market is a Vancouver Island–owned grocery chain founded in 1963, now operating 9 locations including this Langford store at Goldstream Village. The store carries a broad range of departments — deli, meat, produce, dairy, bakery, floral, an Asian kitchen, and a sushi counter — making it a well-stocked resupply point for touring cyclists. The company emphasizes local BC and Island producers alongside an extensive international product selection.</p>

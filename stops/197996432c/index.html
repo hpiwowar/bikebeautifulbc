@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bainbridge Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  North Vancouver</div>
 <p class="seo-desc">Bainbridge Liquor Store is a neighbourhood bottle shop situated at the corner of Bainbridge Avenue and the Lougheed Highway in Burnaby. It bills itself as a destination for wine, beer, and spirit enthusiasts with a frequently rotating selection that includes hard-to-find products. Touring cyclists passing along the Lougheed corridor can pick up beverages for camp or a rest stop, with UberEats delivery also available.</p>

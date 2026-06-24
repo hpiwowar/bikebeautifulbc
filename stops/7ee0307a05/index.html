@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chicko Chicken</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  North Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Chicko Chicken is a Canadian fast-food chain specializing in fried chicken with multiple Lower Mainland locations, including this Lonsdale Avenue outpost in North Vancouver. The Lonsdale corridor is a busy cycling route connecting the waterfront to upper North Van, making this a convenient quick-stop option for riders. Orders are fulfilled as pickup, making it a fast refueling option mid-ride.</p>

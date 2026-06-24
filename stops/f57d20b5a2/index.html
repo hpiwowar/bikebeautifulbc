@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Port Coquitlam Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Port Coquitlam</div>
 <p class="seo-desc">The Port Coquitlam Community Centre is a municipally operated recreation complex serving the City of Port Coquitlam. The broader city recreation network includes aquatics, skating, fitness, and arts programming, making this a multi-use destination for residents and visitors alike. For touring cyclists, it sits in a community with dedicated cycling infrastructure including the Traboulay PoCo Trail.</p>

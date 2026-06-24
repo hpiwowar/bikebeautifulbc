@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushi Taku</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">Sushi Taku is a Japanese restaurant steps from Joyce SkyTrain Station in Vancouver&#x27;s East Side, offering dine-in and takeout with a menu of maki rolls, nigiri, sashimi, and combo platters. The kitchen also caters group meals and school hot lunches for parties of ten or more. The space is air-conditioned and non-smoking with indoor seating.</p>

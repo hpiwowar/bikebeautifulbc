@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fondue Stube</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Sun Peaks  ·  Upscale</div>
 <p class="seo-desc">Fondue Stube is a cozy European-themed fondue restaurant located in the Studio Building of Sun Peaks Lodge, operating during the winter ski season only. It specializes in classic Swiss cheese, Canadian meat, seafood, and chocolate fondues paired with BC and international wines. Touring cyclists visiting Sun Peaks in summer will find this restaurant closed, but the Lodge itself offers bike rental and a full suite of warm-season mountain activities.</p>

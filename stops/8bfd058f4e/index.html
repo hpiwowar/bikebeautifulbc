@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tofino Distillery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Winery / Cidery  ·  Tofino (Pacific Rim)</div>
 <p class="seo-desc">A small-batch craft distillery in Tofino&#x27;s industrial area, handcrafting certified organic spirits from BC grain and Meares Island watershed water. The tasting room offers mini-cocktail samplers from a rotating lineup that includes gin, vodka, absinthe, whiskey, and limoncello, plus grab-and-go kombucha and craft tonics.</p>

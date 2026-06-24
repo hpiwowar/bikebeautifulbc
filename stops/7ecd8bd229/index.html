@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Visitor Center</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Whistler</div>
 <p class="seo-desc">The Whistler Visitor Centre is Whistler&#x27;s official in-resort information hub, staffed by knowledgeable Tourism Whistler employees who can assist with accommodation, activity bookings, transit schedules, and broader BC travel planning. Located adjacent to the bus and taxi loop at 4230 Gateway Drive, it is a natural stopping point for anyone arriving by public transit or exploring the valley. Touring cyclists would find it particularly useful for local maps, event listings, and regional destination information.</p>

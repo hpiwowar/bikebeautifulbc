@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hannam Supermarket</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Langley</div>
 <p class="seo-desc">Hannam Supermarket is Western Canada&#x27;s leading Korean grocery chain, founded in Burnaby in 1998 and now operating six locations across Metro Vancouver. The Langley store, opened in 2019, carries over 11,000 Korean food products and household items alongside fresh Asian produce and premium Asian housewares. It is the primary Korean and Asian grocery destination for the Fraser Valley corridor, drawing over 3,500 customers daily across all locations.</p>

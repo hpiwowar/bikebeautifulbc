@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Library Square Public House</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Library Square Public House is a craft-focused downtown Vancouver pub steps from Rogers Arena and the Vancouver Central Library, featuring 24 rotating taps from BC craft breweries and cider producers alongside inventive pub fare. The venue offers both indoor and a sunny-days patio experience. During major sporting events it transforms into a large-scale indoor/outdoor viewing venue, making it a lively stop in the heart of the city.</p>

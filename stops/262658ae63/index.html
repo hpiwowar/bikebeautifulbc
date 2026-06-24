@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Subway</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">A Subway franchise on the busy Kingsway corridor in Burnaby offering customizable footlong sandwiches, wraps, and salads with fresh-cut vegetables and freshly baked bread. The restaurant features indoor seating with air conditioning and is wheelchair accessible. Cyclists passing through the Kingsway area can order in-restaurant, for pickup, or via delivery.</p>

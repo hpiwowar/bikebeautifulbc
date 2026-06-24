@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Sidney (Metro Vancouver)</div>
 <p class="seo-desc">This government-operated BCLIQUOR retail store sits on Sidney&#x27;s main commercial strip, Beacon Avenue, offering wine, spirits, beer, ciders, and non-alcoholic products. As one of 198 provincial locations, it provides a wide selection and knowledgeable staff for food and beverage pairings. A touring cyclist passing through Sidney could use it as a resupply point for evening camp or accommodation beverages.</p>

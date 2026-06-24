@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Friends &amp; Family Bake</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Friends &amp; Family Bake is a bakery located in Victoria, BC, operating from a below-ground-level space (OSM level -1). As a local bakery, it offers a stop for touring cyclists seeking fresh baked goods. The business was verified as open as recently as August 2025 per OSM check_date.</p>

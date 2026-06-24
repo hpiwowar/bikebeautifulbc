@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Big White Ski Resort</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Big White  ·  Premium</div>
 <p class="seo-desc">Big White is a major four-season mountain resort in the Okanagan Highlands east of Kelowna, primarily known as a ski destination but operating a summer bike park and guided eBike tours through alpine terrain. The resort village is largely self-contained, with restaurants, food trucks, a market, medical services, shopping, and a range of accommodation. For cycling tourists, it functions as a destination attraction with lift-accessed mountain biking and organized eBike experiences.</p>

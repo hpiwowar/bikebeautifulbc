@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Streats</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Abbotsford  ·  Cheap eats</div>
 <p class="seo-desc">Streats is a BC-based fast-casual chain serving globally-inspired street foods — think internationally flavoured quick-service dishes made from fresh ingredients. The Abbotsford outlet is located in a unit-style setting (H218, likely a mall or food court) and is part of a growing franchise with an online ordering platform. The brand emphasises sustainability and community charity partnerships alongside its eclectic street-food menu.</p>

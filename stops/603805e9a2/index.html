@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Baan Thai</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Baan Thai is a multi-location Thai restaurant group with a long-standing presence in Victoria, holding the Thai SELECT certification from the Royal Thai Government as a mark of authentic Thai cuisine. The downtown Victoria location sits on Blanshard Street near the inner harbour, surrounded by shopping and attractions. The restaurant has been voted Best of the City for ten consecutive years (2013–2023) and emphasizes locally sourced ingredients from BC farms and breweries.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dastaan modern Indian Café and Bistro</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  White Rock  ·  Casual</div>
 <p class="seo-desc">Dastaan is a modern Indian café and bistro on Marine Drive in White Rock, situated directly across from Canada&#x27;s longest pier with sweeping Pacific Ocean views. The menu weaves together regional Indian culinary traditions — Delhi street food, Goa coastal flavours — with contemporary technique, including handcrafted cocktails. Its waterfront location on a popular cycling corridor makes it a distinctive scenic dining stop.</p>

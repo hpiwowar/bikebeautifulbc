@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">BC Liquor Store is a provincial government-operated retail outlet at Nanaimo&#x27;s Port Place mall, part of the 198-store BCLIQUOR chain run by the Liquor Distribution Branch. It carries an extensive selection of wine, beer, spirits, coolers, and ciders. Cycling tourists passing through could stop to purchase beverages for the road, though it functions as a retail shop rather than a hospitality venue.</p>

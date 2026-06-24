@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">ZUBU Ramen</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  West Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">ZUBU Ramen is a Japanese ramen chain with four Lower Mainland locations, including a Park Royal outpost in West Vancouver. Executive Chef William Cao trained at the Kitchen Hyodo Ramen School in Oyama, Japan, and sources ingredients both locally from Pacific West Coast farms and directly from Japan. Beyond ramen, the menu spans fresh temaki, handmade gyoza, rice bowls, and Japanese-inspired cocktails.</p>

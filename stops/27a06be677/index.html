@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Wine Cellar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Winery / Cidery  ·  Big White</div>
 <p class="seo-desc">The Wine Cellar is a liquor and wine retail shop located within the village at Big White Ski Resort, one of Canada&#x27;s largest ski resorts situated above Kelowna in the Okanagan. It forms part of a combined market and liquor operation serving resort guests and visitors year-round when the resort is open. Cyclists passing through or staying at Big White can stock up on wine and spirits here during the summer operating season.</p>

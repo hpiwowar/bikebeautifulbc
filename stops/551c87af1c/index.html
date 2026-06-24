@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Regard Coffee Roasters</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Nanaimo (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Regard Coffee Roasters is a Nanaimo-based coffee roaster with an e-commerce presence offering coffee subscriptions, merchandise, and wholesale supply. OSM identifies a physical location on Bowen Road tagged as a cafe, which may serve as a retail counter or tasting space alongside the roasting operation. The nature and scale of walk-in service are unclear from available evidence.</p>

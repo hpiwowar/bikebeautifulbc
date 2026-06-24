@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dragon&#x27;s Chop Suey House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">A casual Cantonese restaurant tucked in a strip mall at Fraser Highway and 160A Street in Surrey. The kitchen specializes in Guangdong-style cooking with fresh garlic, ginger, and vegetables, plus Szechwan dishes for those wanting heat. Both dine-in and takeout are available, making it a practical refuelling stop along the Fraser Highway corridor.</p>

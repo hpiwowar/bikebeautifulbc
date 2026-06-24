@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Noodlebox</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  New Westminster  ·  Cheap eats</div>
 <p class="seo-desc">Noodlebox is a Canadian fast-casual franchise serving Asian-inspired wok-fired noodle and rice bowls, with a wide range of sauces from Pad Thai to Cambodian Jungle Curry. The New Westminster location is one of many BC outlets, offering dine-in and online ordering. Touring cyclists will appreciate the broad dietary accommodation, with dishes readily adaptable to vegan and gluten-friendly requirements.</p>

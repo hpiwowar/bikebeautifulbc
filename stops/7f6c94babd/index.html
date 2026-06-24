@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Witch&#x27;s Brew Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Alberni  ·  Cheap eats</div>
 <p class="seo-desc">Witch&#x27;s Brew Cafe (also styled as Witch&#x27;s Brew Cafe Bakeshop on Facebook) is a cafe located on Vancouver Island, BC. It appears to be a locally operated establishment offering cafe and baked goods. Touring cyclists riding routes along the island would find it a potential stop for refreshments.</p>

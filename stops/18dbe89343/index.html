@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Greenwood Museum</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Greenwood  ·  Low</div>
 <p class="seo-desc">The Greenwood Museum Archives &amp; Visitor Centre sits in Greenwood, BC, recognized as the smallest city in Canada, making it a singular cultural stop along a cycling route through the Boundary Country. The museum covers local mining, forestry, and Japanese-Canadian history, and offers a self-guided Heritage Walking Tour with maps available at the front desk. It also serves as the regional visitor centre, stocking provincial and local publications useful for cyclists planning onward routes.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Liquor Plus</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Liquor Plus is a Vancouver Island–owned chain of full-service liquor stores founded in 2002, with eight locations across the island including this Nanaimo outpost. The stores carry an extensive selection of local and international wines, spirits, beer, and cider, with a noted emphasis on craft beer and everyday competitive pricing. For touring cyclists, it is a convenient stop to stock up on beverages in central Nanaimo.</p>

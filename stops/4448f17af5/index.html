@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">My Sushi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Fort St. John  ·  Casual</div>
 <p class="seo-desc">My Sushi is a Japanese-inspired restaurant in Fort St. John serving sushi rolls, miso soup, and pho. Located on 100 Street in the city centre, it offers both dine-in and online ordering with pickup and delivery. The menu blends Japanese staples with Vietnamese dishes, giving touring cyclists a solid hot-meal option in the Peace River region.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Prairie Inn Neighbourhood Pub</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Sidney (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Prairie Inn Neighbourhood Pub is a community-oriented pub on East Saanich Road in the Saanich Peninsula, serving pub fare centred on burgers. Sitting along a popular cycling corridor connecting Sidney to Central Saanich, it offers a familiar neighbourhood atmosphere that touring cyclists passing through the area are likely to appreciate.</p>

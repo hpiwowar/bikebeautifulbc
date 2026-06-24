@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Grey Fox Brewery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Lake Country (Okanagan)</div>
 <p class="seo-desc">Grey Fox Brewing is a dedicated gluten-free brewery located in Lake Country (Winfield), BC, making it a notable stop for cyclists with celiac disease or gluten sensitivities. The brewery has an online shop and a beer-finder page, suggesting both taproom presence and wider distribution. Touring cyclists in the Okanagan wine and orchard corridor will find it a distinctive craft beverage destination.</p>

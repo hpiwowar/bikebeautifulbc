@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Akedo Showten Ramen+Gyoza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">Akedo Showten is a Japanese ramen and gyoza restaurant in Langley, BC, established in 2018, known for creative seasonal and limited-edition bowls including wagyu-truffle, uni, and matcha ramen. The restaurant emphasizes quality, hospitality, and community, positioning itself as a gathering place for family and friends. Online pickup ordering and a virtual waitlist are available for convenience.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Galiano Island Community Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Tsawwassen (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The Galiano Island Community Library is a small volunteer-supported public library on Galiano Island, part of the Southern Gulf Islands Community Libraries consortium. Located near Sturdies Bay — the main ferry terminal — it serves as a community hub offering books, digital resources, and internet access. For touring cyclists arriving by ferry, it is one of the few publicly accessible facilities close to the landing point.</p>

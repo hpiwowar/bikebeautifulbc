@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ness Lake Regional Park</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Reid Lake  ·  Free</div>
 <p class="seo-desc">Ness Lake Regional Park is a 14-hectare day-use park managed by the Regional District of Fraser-Fort George, situated on a lake 30 km north of Prince George. The park offers 1.2 km of natural trails and a sandy beach suitable for canoeing, swimming, and winter ice fishing. For touring cyclists passing through Central BC, it provides a scenic lakeside rest stop with picnic tables and fire pits.</p>

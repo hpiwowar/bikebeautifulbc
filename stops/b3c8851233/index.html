@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Aqui es Mexico</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Madeira Park  ·  Casual</div>
 <p class="seo-desc">Aqui es Mexico serves authentic Mexican food on BC&#x27;s Sunshine Coast in the small community of Madeira Park on the Sechelt Peninsula. The menu features classics like enchiladas, burritos, chile rellenos, and huevos rancheros with a choice of chicken, beef, pork, or veggie fillings. Both dine-in and takeout are available, with online ordering supported during restaurant hours.</p>

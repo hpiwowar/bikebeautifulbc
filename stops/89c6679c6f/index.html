@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dragon Bowl</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Burnaby  ·  Cheap eats</div>
 <p class="seo-desc">Dragon Bowl is a modern Chinese restaurant chain founded in 2022, with a Burnaby outpost on Kingsway specializing in rice bowls, noodle dishes, and bento-style meals made with natural, seasonal ingredients. The restaurant blends traditional Chinese flavours with a health-focused approach, including vegetarian choices and customizable meal combinations. Online ordering and corporate catering round out an offering aimed at quick, satisfying meals.</p>

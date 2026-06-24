@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Coffee On The Moon</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Duncan (Metro Vancouver)</div>
 <p class="seo-desc">Coffee on the Moon is a community gathering place in downtown Duncan that has been serving the Cowichan Valley since 1997, with two locations in the area. Beyond specialty coffee, smoothies, and fresh-baked food, the cafe doubles as a rotating gallery for local and regional artists. Cyclists stopping in will find a welcoming, linger-worthy atmosphere with vegetarian, vegan, and gluten-free menu options.</p>

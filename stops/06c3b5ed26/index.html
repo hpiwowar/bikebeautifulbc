@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lee Garden</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Lee Garden Seafood is a Chinese dim sum and seafood restaurant located in Coquitlam&#x27;s Pinetree Way area, serving both traditional dim sum and a full all-day menu with items like crystal prawn dumplings and sticky rice lotus leaf wraps. It is one of two Lower Mainland locations and offers online ordering with pickup. A touring cyclist passing through Coquitlam would find it a substantial sit-down meal option.</p>

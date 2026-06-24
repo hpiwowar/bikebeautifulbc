@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">R.A.D. Cycles</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">R.A.D. Cycles is an East Vancouver bike shop established in 2016 in the Mount Pleasant neighbourhood, built around a mission of being the friendliest shop in the city for cyclists of all levels. They offer repair services ranging from flat fixes and tune-ups to accident repair, along with personal bike fitting for new and used bicycles. Touring cyclists will appreciate the standing free-air-and-oil policy and the no-charge repair estimates.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fresgo Inn</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Fresgo Inn is an American-cuisine restaurant located on King George Boulevard, a major arterial road through Surrey. It has operated under the Fresgo Inn name and is tagged in OSM as a sit-down restaurant. Cyclists passing through the King George corridor may find it a convenient meal stop, though current operating status should be verified before visiting.</p>

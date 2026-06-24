@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Dean Drysdale Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Langley  ·  Free</div>
 <p class="seo-desc">A branch of the Fraser Valley Regional Library system located in Langley&#x27;s Walnut Grove neighbourhood. The library offers public computers, free Wi-Fi, and a fully accessible ground-level facility with outdoor bike racks — a handy stop for touring cyclists needing a rest, a charge, or a read.</p>

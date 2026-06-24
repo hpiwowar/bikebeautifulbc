@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FSJ Community Garden</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Fort St. John  ·  Free</div>
 <p class="seo-desc">FSJ Community Garden is a publicly accessible community garden in Fort Saint John in Northern BC. Community gardens in this region offer touring cyclists a quiet green space to rest and connect with local growing culture. The garden has hosted public events including a garden tour, suggesting it is an active community asset.</p>

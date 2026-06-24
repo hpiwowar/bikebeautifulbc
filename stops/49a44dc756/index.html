@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Andes Latin Foods</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Specialty / Health Food  ·  North Vancouver</div>
 <p class="seo-desc">Andes Latin Foods is a Venezuelan-family-owned Latin mini market and coffee shop serving the Port Moody community. Their menu spans multiple South American countries, offering Colombian, Peruvian, Argentine, and Venezuelan empanadas alongside tequeños, pão de queijo, and fresh-pressed fruit juices. A touring cyclist stopping here will find a culturally distinctive spot for a hot snack or coffee with a genuine Latin American flavour.</p>

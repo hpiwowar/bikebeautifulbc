@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Osaka Kitchen</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Osaka Kitchen is a Japanese restaurant in Surrey&#x27;s Guildford Village Shopping Centre serving sashimi, sushi, and noodle dishes made with fresh ingredients. It sits inside a large strip-mall complex on 104 Avenue, making it a convenient stop for cyclists passing through the Guildford area. The menu covers a broad range of Japanese cuisine styles, and online ordering for takeout is available.</p>

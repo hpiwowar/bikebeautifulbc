@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cream Pony</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  North Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Cream Pony is a North Vancouver favourite specialising in fried chicken and handmade donuts, tucked into the Shipyards District off Lolo Lane behind East 1st Street. The shop has earned a devoted local following for its glazed donuts and juicy chicken sandwiches, and also offers catering. It is a second location alongside a Vancouver outpost in Mount Pleasant.</p>

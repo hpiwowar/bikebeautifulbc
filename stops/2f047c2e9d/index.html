@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">La Pache Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">La Pache Pizza is a proudly Canadian, multi-location pizzeria specializing in authentic Neapolitan-style handmade pizza with dough made fresh from scratch daily. The New Westminster location on East Columbia Street is one of several Lower Mainland outposts, offering meat, vegetable, and vegan pizza options available for online ordering and takeout. A straightforward stop for a hot meal mid-ride.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Zen Japanese Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Zen Japanese Restaurant is a contemporary sushi and Japanese cuisine destination on Marine Drive in West Vancouver, offering a sleek dining room with views of magnificent sunsets along the water. The menu spans sushi, sashimi, tempura, robata, and specialty rolls, with dine-in, pickup, and home delivery all available. It sits along a popular waterfront cycling corridor between West and North Vancouver, making it a natural meal stop for touring cyclists.</p>

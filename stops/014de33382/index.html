@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pioneer&#x27;s Pub</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Pioneer&#x27;s Pub has been a Richmond community institution since 1977, offering pub food, cold beer, and a warm neighbourhood atmosphere. The venue features 10 large screens with DAZN and FUBO for sports viewing, and also operates an adjacent Pioneer Liquor Store. It doubles as a private event space, accommodating fundraisers, corporate gatherings, and large parties.</p>

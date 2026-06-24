@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gage Mini Mart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Gage Market is a self-checkout convenience market inside the Walter Gage Residence complex on the UBC Vancouver campus, open to the general public. It carries sandwiches, sushi, snacks, beverages, and personal sundries. Entry is via a credit or debit card swipe to open a secure gate, with items automatically tallied upon exit — cash is not accepted.</p>

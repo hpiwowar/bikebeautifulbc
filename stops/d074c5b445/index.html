@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Akari Japanese Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Delta (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Akari is a Japanese restaurant in Delta&#x27;s Scott 72 Centre that has been serving fine Japanese cuisine since 1996 and is consistently voted best Japanese restaurant in the neighbourhood. The menu spans sushi and rolls, tempura prepared by a 20-year tempura master, rice and noodle dishes, and a dedicated vegetarian section. Online ordering for pickup and delivery is available, and the restaurant also handles catering and private events.</p>

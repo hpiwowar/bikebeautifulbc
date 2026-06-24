@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bubby&#x27;s Mechanic Service</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Coombs</div>
 <p class="seo-desc">Bubby&#x27;s Bicycle Service Ltd. is a full-service independent bike shop in Errington on central Vancouver Island, run by mechanic Chris. The shop offers a comprehensive repair menu from basic tune-ups to full overhauls, stocks parts from an extensive brand catalogue, and sells used and consignment bikes. A pickup-and-delivery service means cyclists who can&#x27;t transport their bike can still get it serviced.</p>

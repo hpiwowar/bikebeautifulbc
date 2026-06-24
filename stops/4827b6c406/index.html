@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cranbrook Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Cranbrook (East Kootenay)  ·  Free</div>
 <p class="seo-desc">Cranbrook Public Library is a full-service public library in downtown Cranbrook offering a broad range of collections, digital resources, and an Idea Lab equipped with a 3D printer, recording studio, digitization station, and other creative technology. It hosts regular community programs and events for all ages and provides meeting room rentals. For a touring cyclist, it is a welcoming downtown public space to access local information, rest indoors, and connect digitally.</p>

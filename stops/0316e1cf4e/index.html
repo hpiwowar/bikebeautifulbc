@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Haslam Creek Berry Farm</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Ladysmith (Metro Vancouver)</div>
 <p class="seo-desc">Haslam Creek Berry Farm is a certified organic U-pick blueberry operation on Rugby Road outside Nanaimo, offering two varieties of blueberries — Chandler and Draper — during the summer and early fall picking season. The farm operates on a seasonal schedule with weekend picking days during harvest, making it a potential detour for cyclists passing through the Nanaimo area seeking fresh local produce. Cash and e-transfer are the only accepted payment methods.</p>

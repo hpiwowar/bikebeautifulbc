@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Taka&#x27;s Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  White Rock  ·  Fine dining</div>
 <p class="seo-desc">Taka&#x27;s Sushi is a Japanese sushi restaurant in the coastal community of White Rock, offering both lunch and dinner service with online ordering. The restaurant also accepts Omakase reservation requests by phone or email for a curated chef&#x27;s-choice dining experience. Its location on Pacific Avenue puts it within easy reach of cyclists exploring the South Surrey and White Rock waterfront.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BreatheBikes</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Merritt</div>
 <p class="seo-desc">Breathe Bikes is Merritt&#x27;s full-service local bike shop, stocking quality bikes from children&#x27;s balance bikes to electric road, mountain, and hybrid models alongside a wide range of parts, accessories, and cycling apparel. Professional technicians handle everything from minor adjustments to major overhauls, with free estimates available on arrival. The shop also offers bike rentals, making it a practical resupply and service point for touring cyclists passing through the Nicola Valley.</p>

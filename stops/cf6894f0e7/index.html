@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Egg Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Chilliwack</div>
 <p class="seo-desc">The Egg Store is a family-owned farm retail shop selling farm-fresh eggs picked daily and brought directly from local farms. It carries multiple varieties including freerange, organic, double yolkers, and enriched white eggs in bulk and by the dozen. A standout feature for passing cyclists is the on-site &#x27;Eggspress&#x27; egg vending machine, stocked daily with fresh eggs for after-hours purchases.</p>

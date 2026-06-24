@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fernie Aquatic Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Fernie</div>
 <p class="seo-desc">The Fernie Aquatic Centre is a City of Fernie-operated indoor aquatic facility featuring a six-lane 25-metre competitive pool, a warm leisure pool for young children, a 25-person hot tub, and a steam room. The centre includes a full-service retail swimming boutique and a comprehensive suite of accessibility features including a pool lift and ramp access. A shower-only access option makes it a practical stop for touring cyclists wanting to freshen up mid-route.</p>

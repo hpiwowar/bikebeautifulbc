@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dosa Club Indian Kitchen &amp; Bar</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Chilliwack  ·  Casual</div>
 <p class="seo-desc">Dosa Club is a modern South Indian restaurant in Chilliwack offering elevated takes on dosas, tandoori, biryani, and street-food-inspired dishes. The restaurant blends authentic South Indian culinary heritage with a contemporary dining space and attentive service. It accepts online orders and table reservations, serving both the Chilliwack and Abbotsford communities.</p>

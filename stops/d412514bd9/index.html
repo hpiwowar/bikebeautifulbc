@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Historic Hat Creek Ranch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Cache Creek</div>
 <p class="seo-desc">Historic Hat Creek Ranch is a BC heritage site designated since 1981, encompassing roughly 130 hectares of farmyards, fields, and rangeland along with approximately twenty historic wooden buildings dating from 1861 into the early 20th century. Located near Cache Creek on the Gold Rush Trail, it offers a rare glimpse into the era of roadhouse travel and early BC ranching. Touring cyclists passing through the Interior could find it a compelling cultural stop along a route that follows historic wagon roads.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Float30</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Float30 is a seafood and fish-and-chips restaurant situated at Reed Point Marina in Port Moody, offering panoramic waterfront views. The kitchen serves fresh daily seafood alongside a full scratch breakfast menu, making it a substantial meal stop on the Inlet waterfront route. A covered, heated patio lets cyclists eat outside in variable west-coast weather.</p>

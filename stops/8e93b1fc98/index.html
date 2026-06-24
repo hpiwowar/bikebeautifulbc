@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kingswood Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Kingswood Liquor Store is a community-serving independent liquor retailer on No 5 Road in Richmond, stocking spirits, wines, coolers, beer, snacks, and tobacco with a large cold single-beer and cooler section. The store advertises competitive pricing below government rates and offers delivery through SkipTheDishes and Fantuan. Free on-site parking makes it an easy stop for cyclists passing through the area.</p>

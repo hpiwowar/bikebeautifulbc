@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fraser Lake Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Fraser Lake  ·  Free</div>
 <p class="seo-desc">Fraser Lake Public Library is a small public library serving the village of Fraser Lake, incorporated in 1970, situated along Highway 16 in BC&#x27;s remote Central Interior. It offers computer and internet services, community programming, and acts as a community hub that also hosts a local community calendar. For touring cyclists on the long Highway 16 corridor, it represents one of the few public amenity stops between larger centres.</p>

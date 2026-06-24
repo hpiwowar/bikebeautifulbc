@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sechelt Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Sechelt</div>
 <p class="seo-desc">The Sechelt Visitor Centre is the primary tourism information office for the Sunshine Coast community of Sechelt, BC, offering regional travel guidance to visitors arriving by ferry from Vancouver. Located in the heart of Sechelt, it serves as the gateway for exploring the Sunshine Coast&#x27;s coastline, trails, and communities. OSM indicates the facility is wheelchair accessible.</p>

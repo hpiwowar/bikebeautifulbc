@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Barbara</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Fine dining</div>
 <p class="seo-desc">Barbara is a small, intimate reservation-only restaurant on East Pender Street in Vancouver, serving a creative tasting menu in a space limited to parties of four. The kitchen highlights Pacific Northwest ingredients — spot prawns, arctic char, duck hearts, seasonal vegetables — in a multi-course format. Walk-ins are welcomed at two standing tables for cocktails or wine, and the restaurant offers an inventive zero-proof drinks programme alongside its full bar.</p>

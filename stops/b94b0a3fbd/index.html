@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dragon City</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Ladysmith (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Dragon City is a Chinese restaurant located on Esplanade Avenue in Ladysmith, a small Vancouver Island community on the Trans Canada Trail cycling corridor. It offers a sit-down dining option in a town with limited food choices for passing cycle tourists. Its location on the main street makes it a convenient stop for riders seeking a hot meal.</p>

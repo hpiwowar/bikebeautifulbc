@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ambar Surrey Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  White Rock  ·  Casual</div>
 <p class="seo-desc">Ambar Surrey Restaurant is a multi-cuisine dining destination on White Rock&#x27;s Marine Drive, blending Indian, Chinese, and Western flavors in dishes such as tandoori platters, kebab specials, and Indo-Chinese fusion thalis. The restaurant operates two Lower Mainland locations and also runs a full catering operation with live cooking stations. Reviewers highlight the broad menu, generous portions, and welcoming atmosphere.</p>

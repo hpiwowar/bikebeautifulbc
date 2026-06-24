@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dove Creek Produce Farm</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Sandwick</div>
 <p class="seo-desc">Dove Creek Produce Farm is a family-run u-pick and direct-sale farm on Dove Creek Road just minutes from downtown Courtenay, BC, growing strawberries, melons, asparagus, garlic, and corn. The farm has an active following and draws steady crowds during u-pick sessions, making it a lively seasonal stop. For touring cyclists in the Comox Valley, it offers a chance to stock up on fresh local produce straight from the field.</p>

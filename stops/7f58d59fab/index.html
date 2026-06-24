@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sip of Life</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Sip of Life is a family-owned coffee house on West Broadway in Vancouver, offering a full range of espresso drinks, brewed coffee, frappes, smoothies, and a tea bar alongside non-coffee options. The café emphasizes sustainability through locally-sourced organic ingredients and eco-friendly practices, with a plant-adorned interior intended as a community gathering spot. It sits on a busy commercial corridor well-travelled by cyclists crossing the city.</p>

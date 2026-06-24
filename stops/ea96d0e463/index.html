@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Yoko Sushi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Fleetwood  ·  Casual</div>
 <p class="seo-desc">Yoko Sushi &amp; Noodle is a Japanese restaurant in Surrey&#x27;s Fraser Valley serving sushi and noodle dishes. Located in a strip-mall unit on 56 Ave, it offers dine-in and online ordering. Touring cyclists passing through Surrey&#x27;s suburban corridors will find it a convenient lunch or dinner stop.</p>

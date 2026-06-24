@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Banette</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  North Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Banette is a bakery and brunch spot occupying a small unit on Sixth Street, operating in a space that was formerly Peace Convenience Store. It offers indoor seating and no outdoor seating per OSM data, suggesting a cozy interior-focused experience. Cyclists stopping here would be looking for baked goods and a sit-down break rather than a full supply stop.</p>

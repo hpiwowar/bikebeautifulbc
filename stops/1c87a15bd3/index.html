@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Blend Bites</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  West Kelowna  ·  Cheap eats</div>
 <p class="seo-desc">Blend Bites is a quick-service cafe in West Kelowna offering bubble tea, smoothies, and sandwiches. The shop operates an online ordering portal through Clover, making it easy for cyclists to pre-order before arriving. It sits in a commercial unit on Dobbin Road, a corridor with several shops and services.</p>

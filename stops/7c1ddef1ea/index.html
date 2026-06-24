@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Beary Waffles</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  North Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Beary Waffles is an outdoor-only cafe in North Vancouver serving waffles, with no indoor seating. The playful bear-themed name suggests a casual, fun identity likely appealing to a younger or family crowd. Touring cyclists passing through North Vancouver may find it a worthwhile sweet-stop, though details about the menu and full offering are limited.</p>

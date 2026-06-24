@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Surrey Farms</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Tsawwassen (Metro Vancouver)</div>
 <p class="seo-desc">Surrey Farms is a family-operated farm market established in 1989, now farming over 400 acres and operating two retail locations in Surrey. The business is best known for its exceptional fresh berries—strawberries, blueberries, raspberries, and blackberries—alongside seasonal Okanagan fruit and local vegetables. The popular U-Pick fields draw visitors from across the Lower Mainland, making this a distinctive stop for cyclists seeking fresh, locally grown produce.</p>

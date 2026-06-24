@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gon Sushi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Chilliwack (Fraser Valley)  ·  Casual</div>
 <p class="seo-desc">Gon Sushi is a Japanese restaurant in Chilliwack serving sushi rolls, sashimi, tempura, teriyaki, and Korean-influenced dishes such as bulgogi bibimbob. It offers both pickup and delivery, making it a practical meal stop for cyclists travelling the Vedder Road corridor. The menu spans appetizers through specialty rolls and full rice plates.</p>

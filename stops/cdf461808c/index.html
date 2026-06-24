@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Four Winds</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Four Winds Brewing is a BC craft brewery focused on bold West Coast and European-style beers, operating a full taproom in the Tilbury industrial area of Delta. The taproom doubles as a taco shop and casual restaurant, making it a solid mid-ride destination for cyclists looking for a meal alongside a pint. A second Beach House location in Tsawwassen offers another option for cyclists riding the south Delta and Tsawwassen routes.</p>

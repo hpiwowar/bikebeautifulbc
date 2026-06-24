@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Basic Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Basic Cafe is a vegetarian-friendly café in Victoria, BC, tagged in OpenStreetMap as a neighbourhood café. With its Instagram presence under @basicviccafe, it appears to be an independent, community-oriented spot. Touring cyclists passing through Victoria may find it a useful stop for a plant-based meal or coffee.</p>

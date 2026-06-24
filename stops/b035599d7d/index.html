@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bar Olo</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  West Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Bar Olo is a casual Italian restaurant situated in the Dundarave neighbourhood of West Vancouver, steps from Marine Drive. The menu centres on house-made pasta alongside fresh seafood, locally sourced salads, and butcher-quality meats. The restaurant features both indoor and outdoor seating, plus a private upstairs dining room for up to 12 guests.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Vancouver Aquatic Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Vancouver (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">The Vancouver Aquatic Centre is a City of Vancouver-operated indoor public pool situated on Beach Avenue at the edge of English Bay, one of the most scenically located aquatic facilities in the city. It offers lap swimming and diving programs and sits directly along the popular Seaside Cycling Route and Seawall corridor. For touring cyclists riding the downtown waterfront, it is a natural urban stopover point with full recreational facilities.</p>

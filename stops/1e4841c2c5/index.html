@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mona&#x27;s Shop</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  North Vancouver</div>
 <p class="seo-desc">Mona&#x27;s Shop is a general store in North Vancouver described in OSM as an African multicultural bazaar, suggesting a curated selection of goods from African and multicultural communities. It is tagged as wheelchair accessible. Touring cyclists riding through North Vancouver may find it a distinctive stop for specialty or imported pantry items.</p>

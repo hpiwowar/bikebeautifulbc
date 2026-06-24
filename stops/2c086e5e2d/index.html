@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hornby Creative</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Hornby Island</div>
 <p class="seo-desc">Hornby Creative is an artisan boutique nestled inside the Ringside Market on Hornby Island, showcasing a curated mix of local arts, crafts, unique goods, and naturally-made products from the surrounding community. Run by Tamara Lamont, it aims to balance fine local artistry with quality West Coast merchandise. For a touring cyclist exploring Hornby Island, it offers a taste of the island&#x27;s creative culture in a single browsable stop.</p>

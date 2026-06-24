@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Coastal Cookery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Powell River  ·  Casual</div>
 <p class="seo-desc">Coastal Cookery is a West Coast restaurant and bar on Marine Avenue in Powell River, open since 2014 and part of the Point Group Hospitality group. The interior features a Redwood Cedar bar, Alder and Fir finishing, and views of the Strait of Malaspina. The kitchen focuses on locally sourced ingredients presented with globally inspired flavours.</p>

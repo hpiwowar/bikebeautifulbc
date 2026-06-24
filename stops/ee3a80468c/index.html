@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Naramata Taxi Co.</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Taxi / Ridehail  ·  Naramata (Okanagan)</div>
 <p class="seo-desc">Naramata-based metered taxi offering on-demand rides across the Naramata Bench plus airport shuttles to Kelowna and Penticton; bikes accepted inside the van (up to three, quick-release front wheels required).</p>

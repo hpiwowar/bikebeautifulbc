@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Halston Pub &amp; Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Kamloops (Thompson)</div>
 <p class="seo-desc">Halston Pub &amp; Liquor Store is a combined neighbourhood pub and off-sale liquor retailer in Kamloops, BC. The dual format means touring cyclists can grab a meal or drink on-site and stock up on take-home beverages in one stop. Its commercial building footprint suggests a full-service venue rather than a kiosk or pop-up.</p>

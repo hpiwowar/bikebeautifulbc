@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Subway</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Penticton  ·  Cheap eats</div>
 <p class="seo-desc">A Subway franchise on Main Street in Penticton serving made-to-order footlongs, 6&quot; sandwiches, wraps, and salads with fresh-cut vegetables and fresh-baked bread. This independently owned and operated location offers in-restaurant dining, curbside pickup, and delivery, making it a quick and flexible stop for cyclists passing through town. Breakfast items are also available.</p>

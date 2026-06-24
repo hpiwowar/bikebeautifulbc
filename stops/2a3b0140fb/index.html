@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Terry Fox Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  North Vancouver  ·  Free</div>
 <p class="seo-desc">Terry Fox Library is a branch of the Fraser Valley Regional Library system, the largest public library network in British Columbia serving over 800,000 people across 25 community locations. Situated in Port Coquitlam, it offers a welcoming public space with outdoor bike racks, free WiFi, public computers, and accessible all-gender restrooms. A touring cyclist can drop in to rest, recharge devices, and access the internet in a comfortable, inclusive environment.</p>

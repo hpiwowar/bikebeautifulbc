@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fruiticana</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Richmond</div>
 <p class="seo-desc">Fruiticana is a South Asian-focused grocery chain founded in 1994, now one of Western Canada&#x27;s largest independent grocers with over 23 locations across BC and Alberta. The store specializes in fresh fruits, vegetables, and spices, sourced both locally and internationally, with a strong emphasis on authentic flavours under its own Indican spice brand. A touring cyclist would find a well-stocked selection of fresh produce and specialty ingredients at this suburban supermarket.</p>

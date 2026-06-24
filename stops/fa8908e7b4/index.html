@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wings Port Moody</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">Wings Port Moody is a location of the WINGS Restaurants chain, known for award-winning wings offered in 28 globally inspired flavours. It is a full-service restaurant and bar on St. Johns Street serving wings, burgers, pizza, pasta, and salads. Note that it is a liquor-primary establishment, so minors under 19 must be accompanied by a parent or guardian.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Co-op Skidegate Food Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Skidegate</div>
 <p class="seo-desc">Co-op Skidegate Food Store is a member-owned grocery co-operative in Skidegate on Haida Gwaii, part of the Haida Gwaii Co-op network that also serves Masset. In this remote island community, it serves as one of the primary food resupply points for cyclists exploring the archipelago. No membership is required to shop — anyone can walk in as a regular customer.</p>

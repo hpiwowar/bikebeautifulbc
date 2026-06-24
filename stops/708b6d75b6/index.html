@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mackenzie Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Mackenzie  ·  Free</div>
 <p class="seo-desc">A public library housed inside the Mackenzie Recreation Centre, serving a small northern BC community of about 3,300 near Williston Lake — the largest man-made reservoir in North America. The library offers free computer and internet access, a seed library, a Library of Things with equipment and technology lending, and serves as a community hub with local event listings and information for the area.</p>

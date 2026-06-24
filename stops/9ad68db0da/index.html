@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kilin Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  McBride  ·  Casual</div>
 <p class="seo-desc">Kilin Restaurant is a Chinese restaurant located in McBride, a small community in BC&#x27;s Robson Valley along the Yellowhead Highway corridor. It serves the local community and passing travellers in a region where dining options are limited, making it a notable stop for cyclists touring through the interior. The restaurant offers sit-down Chinese cuisine in a part of BC that sees long stretches between services.</p>

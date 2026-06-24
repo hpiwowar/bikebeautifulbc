@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Hub</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Scotch Creek  ·  Casual</div>
 <p class="seo-desc">The Hub is a community gathering restaurant and entertainment venue in Scotch Creek on Shuswap Lake, hosting live music, comedy shows, dinner theatre, and seasonal events. The kitchen turns out a broad menu including house-smoked brisket, hand-crafted beverages, and a plant-based burger option, with indoor and outdoor spaces suited to the lakeside setting. A shuttle service is available for patrons needing a safe ride to and from the venue.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Axum Ethiopian Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Axum Ethiopian Restaurant serves traditional Ethiopian cuisine — spiced stews, injera-based communal plates, and a robust vegetarian selection — from its East Hastings Street location in Vancouver. The restaurant offers full sit-down dining alongside online ordering, private event hosting, and catering packages for all occasions. It is a lively neighborhood destination known for both hearty meat dishes and a wide range of entirely plant-based options.</p>

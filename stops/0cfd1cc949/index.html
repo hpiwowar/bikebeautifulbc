@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ukrainian Cultural Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">A community hub operated by the Ukrainian-Canadian Cultural Society of Vancouver Island, dedicated to preserving and celebrating Ukrainian-Canadian heritage on Vancouver Island. The centre hosts cultural events, Ukrainian supper nights with homemade perogies and cabbage rolls, a Ukrainian library, gift shop, dance programs, and choirs. Located on Douglas Street in Victoria, it doubles as a licensed event venue with a spacious hall, stage, and kitchen facilities.</p>

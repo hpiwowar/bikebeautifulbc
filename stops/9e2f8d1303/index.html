@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Value on Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Value on Liquor Store is an independent liquor retailer that has operated since 2012, marketing itself on prices that beat BC government liquor stores. It is notable for housing what it claims is BC&#x27;s longest cooler, stocking a broad selection of cold beer, ciders, wine, spirits, and sake. Free on-site parking and a curbside pickup option make it a convenient stop for cyclists traveling along Southwest Marine Drive.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Beaches Grocery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Tofino (Pacific Rim)</div>
 <p class="seo-desc">Beaches Grocery is a small but well-positioned convenience and general store located right beside Chesterman Beach, one of Tofino&#x27;s most popular stretches of coastline. It offers a compact selection of groceries and general goods to beachgoers, surfers, and visitors exploring the outer edges of Tofino. For touring cyclists, it represents a practical resupply point on the southern end of town near the beach access roads.</p>

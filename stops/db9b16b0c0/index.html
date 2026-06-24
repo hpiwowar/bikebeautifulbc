@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kozak Ukraїnian Eatery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">Kozak is a Ukrainian homestyle eatery on Vancouver&#x27;s Victoria Drive serving scratch-made traditional dishes. The neighbourhood spot has an active online ordering presence through Square, suggesting food is available for takeaway as well as dine-in. It is a community-rooted business in a cycling-friendly corridor of East Vancouver.</p>

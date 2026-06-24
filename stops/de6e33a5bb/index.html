@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Roberts Creek Community Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Roberts Creek  ·  Free</div>
 <p class="seo-desc">Known locally as &#x27;The Reading Room,&#x27; this volunteer-run community library is operated by the Roberts Creek Community Association and serves as a quiet neighbourhood institution on the Sunshine Coast. Membership is free and the collection spans fiction, non-fiction, and children&#x27;s books with an emphasis on Canadian authors. A cycle tourist stopping in Roberts Creek will find a welcoming, low-key spot to browse books and connect with the community.</p>

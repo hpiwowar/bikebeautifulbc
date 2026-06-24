@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">UBC Life Building</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">The Life Building (formerly the UBC Student Union Building) is the main hub of student life at UBC Vancouver, operated by the Alma Mater Society — Canada&#x27;s largest student union. It houses multiple food venues, shops, services, bookable study rooms, and event spaces spread across a purpose-built facility at the heart of the UBC campus. Touring cyclists riding through the UBC endowment lands can use this as a central rest stop with access to food and services.</p>

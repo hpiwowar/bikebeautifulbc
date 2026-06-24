@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  New Denver</div>
 <p class="seo-desc">The New Denver Visitor Centre is a tourism information office situated in the small historic village of New Denver on the western shore of Slocan Lake in the West Kootenay region. New Denver anchors a scenic cycling corridor through the Slocan Valley and is home to the nationally significant Nikkei Internment Memorial Centre, making it a culturally rich stop on any touring itinerary. The village also offers access to local trails, Centennial Park, and the Kohan Reflection Garden.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gah Lok Dim Sum</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Gah Lok Dim Sum is BC&#x27;s first frozen dim sum manufacturer, operating since 1986 under its original name Happy Family Dim Sum. The company hand-wraps all its dumplings and produces a wide range of products including har gow, shu mai, wontons, and xiao long bao for restaurants, hotels, and catering companies. Retail customers can purchase directly at the Powell Street location or a newer Richmond store.</p>

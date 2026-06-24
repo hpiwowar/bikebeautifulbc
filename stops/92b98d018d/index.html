@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BC Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">The Gorge &amp; Tillicum BC Liquor Store is a government-operated retail outlet — one of 198 BCLIQUOR stores across British Columbia run by the provincial Liquor Distribution Branch. It sells wine, beer, spirits, coolers, ciders, and non-alcoholic beverages. A touring cyclist passing through Victoria&#x27;s Gorge–Tillicum neighbourhood might stop here to purchase packaged beverages for the road.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pho Galaxy</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">Pho Galaxy is a Vietnamese restaurant in Langley, BC, specializing in traditional pho, rice dishes, vermicelli bowls, and fresh appetizers made with premium ingredients. The warm, family-friendly dining room and a dedicated vegetarian pho menu make it a welcoming stop for cyclists with varied dietary needs. Online ordering and pickup are available for those who prefer a quick grab-and-go meal.</p>

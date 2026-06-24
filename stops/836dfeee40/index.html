@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Subway</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Nanaimo (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Subway Port Place Shopping Centre is a franchise sandwich shop inside Nanaimo&#x27;s Port Place Shopping Centre, offering the full Subway lineup of footlongs, wraps, and salads. Orders can be placed in-store, online, via the app, through delivery, or curbside pickup. The location is independently owned and operated and serves breakfast in addition to the standard menu.</p>

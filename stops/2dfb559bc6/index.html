@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  North Vancouver</div>
 <p class="seo-desc">This is a Walmart Supercenter (Store 1112) in Port Coquitlam, BC, offering a large-format retail experience spanning groceries, electronics, clothing, furniture, toys, and baby goods under one roof. As a Supercenter format, it typically includes a full grocery section, making it a practical resupply stop for touring cyclists passing through the Tri-Cities area. No address or phone number is recorded in OSM for this location.</p>

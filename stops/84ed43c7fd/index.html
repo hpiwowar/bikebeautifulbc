@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Albion Pizzeria</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Albion  ·  Cheap eats</div>
 <p class="seo-desc">Albion Pizzeria is a locally-operated pizza shop in Maple Ridge that makes its dough fresh in-house daily and sources ingredients locally. The business explicitly markets itself as a refuelling stop for cyclists heading to or from Albion Park, and sits in a central unit plaza making it a convenient mid-ride stop. The menu spans classic and creative pizzas, chicken, wings, and ice cream, with online ordering and local delivery available.</p>

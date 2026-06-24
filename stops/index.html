@@ -752,7 +752,13 @@ function clearAll() {
 
 function navigateOrModal(el, catId, exIdx) {
   var k = el.dataset.key;
-  if (k) { window.location = '/stops/' + k + '/'; } else { openModal(catId, exIdx); }
+  if (k) {
+    try {
+      var _lbl = currentView === 'route' ? currentRoute : (currentView === 'all' ? 'All listings' : getCat().name);
+      sessionStorage.setItem('_wwc_from', JSON.stringify({ key: k, label: _lbl }));
+    } catch(e) {}
+    window.location = '/stops/' + k + '/';
+  } else { openModal(catId, exIdx); }
 }
 
 function openModal(catId, exIdx) {
@@ -1145,7 +1151,8 @@ function renderListingCardHTML(cat, ex, showCatTag) {
   }
   var icon = CAT_ICONS[cat.id] || '';
   var _cardKey = ex.key ? ' data-key="' + ex.key + '"' : '';
-  return '<div class="listing-card ' + borderClass + demoClass + '"' + _cardKey + ' onclick="navigateOrModal(this,\x27' + cat.id + '\x27,' + idx + ')">' +
+  var _cardId = ex.key ? ' id="c-' + ex.key + '"' : '';
+  return '<div class="listing-card ' + borderClass + demoClass + '"' + _cardId + _cardKey + ' onclick="navigateOrModal(this,\x27' + cat.id + '\x27,' + idx + ')">' +
     '<div class="card-outer"><div class="card-icon-circle">' + icon + '</div>' +
     '<div class="card-inner">' +
     '<div class="listing-name-row"><span class="listing-name">' + ex.name + catTag + demoTag + '</span><div class="listing-badges">' + badges + '</div></div>' +
@@ -1227,6 +1234,20 @@ if (currentView === "all") {
   if (abox) abox.value = allSearchText;
   updateAllListings();
 }
+(function() {
+  try {
+    var _f = JSON.parse(sessionStorage.getItem('_wwc_from') || 'null');
+    if (_f && _f.key) {
+      sessionStorage.removeItem('_wwc_from');
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          var _el = document.getElementById('c-' + _f.key);
+          if (_el) _el.scrollIntoView({ block: 'center', behavior: 'instant' });
+        });
+      });
+    }
+  } catch(e) {}
+})();
 </script>
 <script>
 window.addEventListener('load', (event) => {

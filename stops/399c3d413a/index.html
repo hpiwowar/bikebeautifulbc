@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gold River Liquor Express</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Gold River</div>
 <p class="seo-desc">Gold River Liquor Express is a local liquor retail outlet serving the small, remote community of Gold River on Vancouver Island. For touring cyclists making the long run up or down the Tahsis/Gold River corridor, it offers a potential resupply point for beverages. Gold River is one of the few service stops in this otherwise very isolated stretch of the island.</p>

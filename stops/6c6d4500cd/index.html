@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gateway to India Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Nanaimo (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Gateway to India is an Indian restaurant in Nanaimo serving authentic dishes made with exotic spices imported from the northern and southern regions of the Indian subcontinent. The restaurant offers both dine-in and takeout, with an extensive menu of tandoor-baked breads, curries, pakoras, and a broad selection of vegetarian dishes. Their spice products are also sold at grocery stores across Vancouver Island and the Lower Mainland.</p>

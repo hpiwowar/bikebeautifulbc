@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Richmond Museum</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Richmond (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The Richmond Museum is a free, City of Richmond-operated local history museum situated inside the Richmond Cultural Centre alongside the Brighouse branch of the Richmond Public Library. It explores the community&#x27;s layered history — from Coast Salish First Nations to canneries and aviation — through exhibits and free self-guided walking tours covering three historic districts. A touring cyclist stopping here gains a grounded sense of the delta landscape they are riding through, plus downloadable PDF tour routes for the surrounding neighbourhoods.</p>

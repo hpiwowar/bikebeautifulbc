@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ho Fung</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  North Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Ho Fung is a Chinese restaurant at 724 Sixth Street offering dine-in and takeout. Based on OSM data last verified in early 2023, it serves Chinese cuisine with no outdoor seating. Touring cyclists would find it a straightforward meal stop, though no cycling-specific amenities have been confirmed.</p>

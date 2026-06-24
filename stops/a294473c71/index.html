@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Irish Times</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Irish Times is a Victoria institution on Government Street, voted best pub in North America in 2017 and best Irish Entertainment Venue in 2018. Open since 2004, it offers an authentic Irish pub experience with food, drink, and live music in a warm, welcoming atmosphere. Located on one of Victoria&#x27;s main cycling corridors, it serves as a natural stopping point for touring cyclists exploring the city.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">ORL: UBCO Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Kelowna (Okanagan)  ·  Free</div>
 <p class="seo-desc">The ORL UBCO Branch is a public library branch of the Okanagan Regional Library system located on the University of British Columbia Okanagan campus in Kelowna. It functions primarily as a holds pick-up location with a small selection of popular materials, and is staffed only on Tuesday mornings and during occasional special events. Multiple bus routes serve the campus, and the building&#x27;s book drop is always accessible.</p>

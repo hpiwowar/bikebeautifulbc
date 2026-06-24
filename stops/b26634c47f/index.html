@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">VIRL: Qualicum Beach Branch</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Qualicum Beach  ·  Free</div>
 <p class="seo-desc">The Qualicum Beach branch of Vancouver Island Regional Library has served the community since 1937 and has been housed in the Town Hall building since 1997. Part of the Vancouver Island Regional Library system — one of the largest public library networks in BC — it provides free public services to residents and visitors across a wide stretch of Vancouver Island. Its central Qualicum Beach location makes it a natural waypoint for cyclists passing through town.</p>

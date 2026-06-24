@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lac La Hache Campground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Wright</div>
 <p class="seo-desc">A well-serviced BC Parks campground on Highway 97 in the Cariboo, with flush toilets, tap water, and a sani-station; the lake beach, playground, and boat launch are across the highway in a separate day-use area. Good fishing for kokanee, rainbow, and lake trout, with a short self-guided history trail on site.</p>

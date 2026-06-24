@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Visitors Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Visitor Centre  ·  Fort Langley</div>
 <p class="seo-desc">A tourism information office serving the Fort Langley area and broader Township of Langley, operated in connection with Tourism Langley, the regional destination marketing organization. Visitor centres of this type typically provide local maps, attraction guides, and trip-planning assistance for the Fraser Valley region. As a publicly accessible information hub, it is a natural stop for touring cyclists exploring the area.</p>

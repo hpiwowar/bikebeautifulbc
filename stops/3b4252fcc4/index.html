@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Wicklow</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Wicklow is a cozy waterfront tavern at Stamps Landing overlooking False Creek, serving food made fresh in house daily alongside a full drinks menu and happy hour specials. Situated along a popular cycling corridor near the False Creek seawall, the pub offers a patio with stunning water views. It operates as a neighbourhood pub with table reservations available for larger parties.</p>

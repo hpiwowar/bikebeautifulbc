@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Accommodation</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Accommodation</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">SureStay</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Hotel / Motel  ·  Rossland  ·  Budget</div>
 <p class="seo-desc">The SureStay by Best Western Rossland Red Mountain is a motel on Highway 3B at the edge of Rossland, a mountain town celebrated for Red Mountain Resort&#x27;s skiing and trail riding. It offers free breakfast and a hot tub, making it a comfortable base for cyclists tackling the hilly terrain of the Kootenay Boundary region. As a Best Western-affiliated property it participates in the BWH Rewards loyalty program.</p>

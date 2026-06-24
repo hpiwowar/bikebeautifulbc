@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hot Pan Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Hot Pan Pizza is a multi-location pizza chain with outlets in Richmond, Vancouver, and Surrey, offering hand-crafted pizzas baked in stone ovens using traditional recipes and premium ingredients. The Richmond location on Alexandra Road is one of three BC locations, each offering online ordering and a full menu of classic and specialty pizzas. The business also provides catering services for corporate events, weddings, and private parties.</p>

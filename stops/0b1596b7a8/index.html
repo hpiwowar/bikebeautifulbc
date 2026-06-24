@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Timms Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Langley</div>
 <p class="seo-desc">Timms Community Centre is a City of Langley municipal recreation facility offering fitness and gymnasium programs, swimming and aquatic programs, licensed preschool, and daycamps. It is wheelchair accessible per OSM and sits within Langley City&#x27;s broader network of recreation facilities. A touring cyclist passing through Langley would find it a potential mid-route stop, though specific cyclist amenities are unconfirmed from available sources.</p>

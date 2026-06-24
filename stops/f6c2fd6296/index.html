@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Co-op</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Armstrong</div>
 <p class="seo-desc">Armstrong Regional Co-op is a long-established member-owned cooperative that has held over 104 annual general meetings, serving the North Okanagan with gas bars, convenience stores, bulk fuel, propane, and a liquor store (ARC Liquor) across multiple community locations. The Armstrong location combines a fuel station with a convenience store, making it a practical stop for cyclists passing through town. As a cooperative, profits are returned to members and reinvested in the local community.</p>

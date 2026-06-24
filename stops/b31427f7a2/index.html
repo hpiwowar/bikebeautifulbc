@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Smuggler&#x27;s Cove Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Smugglers Cove Pub is a cozy British-style tavern in the Cadboro Bay neighbourhood of Victoria, featuring a second-floor deck and 12 draught beers including local and imported ales. The menu covers global comfort fare — fish and chips, burgers, and more — with a loyal neighbourhood following and a welcoming atmosphere for visitors. An attached liquor store adds convenience for cyclists stocking up.</p>

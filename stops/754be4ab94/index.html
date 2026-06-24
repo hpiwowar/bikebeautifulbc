@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mayne Island Community Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Sidney (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">A small community library on Mayne Island, part of the Southern Gulf Islands Community Libraries network. It offers free Wi-Fi, printing services, and a quiet place to rest for cyclists exploring the Gulf Islands by ferry. The library also connects visitors to community resources including the Mayne Island Museum and Chamber of Commerce.</p>

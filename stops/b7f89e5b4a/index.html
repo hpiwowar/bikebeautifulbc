@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bon Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Bon Cafe is a neighbourhood Vietnamese restaurant in Vancouver&#x27;s Little Mountain area, a short ride from Queen Elizabeth Park at the corner of Main Street and E. 33rd Ave. The menu centres on pho, banh mi, and Vietnamese coffee, with reviewers consistently praising generous portions and solid value. Both dine-in and takeout are available, making it a practical pit-stop on the Main Street cycling corridor.</p>

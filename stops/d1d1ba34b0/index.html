@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Open Space</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Chilliwack</div>
 <p class="seo-desc">Open Space is a 1500-square-foot flexible cultural venue in the heart of historic Downtown Abbotsford, operated by the Abbotsford Downtown Business Association. It hosts curated art exhibitions, artisan markets, workshops, and micro-events, serving as a creative hub connecting local artists and small businesses. A touring cyclist passing through downtown Abbotsford could drop in to browse a gallery show or catch a pop-up market.</p>

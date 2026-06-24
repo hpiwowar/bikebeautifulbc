@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ricardo&#x27;s Ice Cream, Coffee, Bubble Tea</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  White Rock  ·  Cheap eats</div>
 <p class="seo-desc">Ricardo&#x27;s is a cafe on White Rock&#x27;s Marine Drive serving ice cream, coffee, and bubble tea. Marine Drive runs along the waterfront promenade, making this a natural stop for cyclists riding the popular White Rock beachfront route. The multi-item menu covers both refreshment and pick-me-up options in a single stop.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Haidilao Express</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Burnaby  ·  Casual</div>
 <p class="seo-desc">Haidilao Express is part of the internationally renowned Haidilao hot pot chain, which entered Canada in December 2018 and has grown to thousands of locations worldwide. The hot pot concept centres on customizable soup bases, thinly sliced meats, fresh seafood, and a mix-your-own dipping sauce bar. This North Vancouver location sits on the second floor and is an indoor-only dining environment.</p>

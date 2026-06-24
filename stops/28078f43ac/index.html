@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Harbour Oyster + Bar</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Upscale</div>
 <p class="seo-desc">Harbour Oyster + Bar is a seafood-focused restaurant and bar situated on Commercial Drive, one of Vancouver&#x27;s most culturally vibrant and cycle-friendly urban corridors. The venue centres on oysters and a bar program, offering a casual sit-down experience steps from the Drive&#x27;s busy cycling lane. Its location makes it a convenient mid-ride stop for cyclists exploring east Vancouver.</p>

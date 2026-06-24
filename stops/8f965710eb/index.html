@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Subway</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Alberni  ·  Cheap eats</div>
 <p class="seo-desc">Subway is a global sandwich chain serving made-to-order subs, wraps, and salads at this Vancouver Island location on 10th Avenue. The vegetarian-friendly menu and takeaway service make it a convenient refueling stop for touring cyclists passing through the area. No drive-through is present, so all service is counter-based inside the restaurant.</p>

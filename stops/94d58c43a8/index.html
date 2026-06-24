@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Oxford Ice Cream</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Langley  ·  Cheap eats</div>
 <p class="seo-desc">Oxford Ice Cream is a small-batch artisan ice cream shop in Langley run by two engineering-trained owners who craft rotating seasonal flavors from scratch. The shop offers a mix of dairy and vegan options, with gluten-friendly choices clearly marked on the menu. It&#x27;s a distinctive stop for cyclists along Fraser Highway looking for a quality sweet treat beyond standard chain offerings.</p>

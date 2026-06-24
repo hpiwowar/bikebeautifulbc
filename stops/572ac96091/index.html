@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chilliwack Community Forest</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Chilliwack  ·  Free</div>
 <p class="seo-desc">The Chilliwack Community Forest is a 100-acre City-owned forest park developed in partnership with the Chilliwack Parks Society and the Fraser Valley Mountain Bike Association, providing public access to an otherwise closed urban forest. The multi-use trail network includes a 2.5km beginner-level loop and several moderate loops purpose-built for hiking, biking, and running. Its co-development with a dedicated mountain bike association signals genuine commitment to cycling-friendly infrastructure and trail quality.</p>

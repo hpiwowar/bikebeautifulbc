@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Balkan House Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Burnaby  ·  Casual</div>
 <p class="seo-desc">Balkan House is a long-established Southeastern Mediterranean restaurant in Burnaby, popular with local Eastern European émigrés for its generous portions of grilled meats, kebabs, and fresh sausages. The dining room evokes a European hunting lodge atmosphere, and the signature Balkan platter is noted as large enough for two despite being listed for one. The restaurant also offers catering and can host private parties for 50–110 guests.</p>

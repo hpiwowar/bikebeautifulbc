@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cliffhouse Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">The Cliff House Restaurant is a casual West Coast dining room inside Capilano Suspension Bridge Park, perched above the canyon on the site of the original 1889 Cliff House. It serves fresh local ingredients, Ocean Wise seafood, BC wines, and regional craft beer on tap, with a large summer patio and cozy historic interior. Access requires purchasing paid park admission, making it a destination experience rather than a quick cyclist stop.</p>

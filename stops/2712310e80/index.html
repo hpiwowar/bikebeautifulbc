@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Jonanco Hobby Workshop</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Nanaimo (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">Jonanco Hobby Workshop is a non-profit artisan community workshop tucked just south of Nanaimo, serving Central Vancouver Island with studio space and tools for lapidary, woodworking, quilting, jewellery-making, and painting. Drop-in membership is available, making it accessible to visitors passing through without a full commitment. The workshop spans a wide age range of participants and hosts a rotating calendar of classes and seasonal craft markets.</p>

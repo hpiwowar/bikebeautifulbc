@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Government Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Alberni</div>
 <p class="seo-desc">BC LIQUOR Port Alberni is a provincial government liquor retail store on 10th Avenue in Port Alberni, part of the 198-store BCLIQUOR network operated by the BC Liquor Distribution Branch. It stocks wine, spirits, beer, coolers, ciders, and non-alcoholic beverages, and accepts credit and debit cards. OSM notes wheelchair accessibility, and the store offers a container-recycling deposit refund program.</p>

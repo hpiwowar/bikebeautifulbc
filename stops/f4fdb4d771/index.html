@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bravo Restaurant &amp; Lounge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Chilliwack (Fraser Valley)  ·  Upscale</div>
 <p class="seo-desc">Bravo Restaurant and Lounge is a casually elegant fine-dining spot in downtown Chilliwack specializing in Pacific Northwest cuisine, offering an innovative dinner menu alongside an extensive martini and wine list. The intimate yet social atmosphere makes it a standout evening destination on the Fraser Valley cycling corridor. A private lounge is available for group events, and Wi-Fi is available throughout.</p>

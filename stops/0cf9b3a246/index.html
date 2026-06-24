@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sea Island Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Sea Island Community Centre is a City of Richmond public facility situated on Sea Island, the same island that hosts Vancouver International Airport, making it a rare community hub in an otherwise airport-dominated landscape. The two-storey building serves the small residential population of Sea Island and would be a natural rest stop for cyclists navigating the flat, dyke-lined roads of this area. As a municipal community centre, it is likely to offer standard civic amenities, though none can be confirmed from available evidence.</p>

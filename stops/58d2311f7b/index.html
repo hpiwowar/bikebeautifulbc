@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tim&#x27;s Fish &amp; Chips</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Creston  ·  Cheap eats</div>
 <p class="seo-desc">Tim&#x27;s Fish &amp; Chips is a takeout-only fish and chip shop located on Northwest Boulevard in Creston, BC. For touring cyclists passing through the Creston Valley, it offers a classic fast-food stop in a town that sits at the junction of several regional cycling routes. The takeout-only format makes it a practical grab-and-go option rather than a sit-down rest.</p>

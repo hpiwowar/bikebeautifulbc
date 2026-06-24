@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">VIRL: Gold River Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Gold River  ·  Free</div>
 <p class="seo-desc">The Gold River branch of the Vancouver Island Regional Library is a small public library situated on the unceded traditional territory of the Mowachaht and Muchalaht First Nations, first opened in 1967 and operating at its current location since December 1992. It is one of the few public amenities in this remote Vancouver Island community and offers free WiFi and public computers to all visitors. For touring cyclists moving through Gold River, it serves as a connectivity and rest point in a town with limited services.</p>

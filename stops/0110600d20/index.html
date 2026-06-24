@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sushiway</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Port Coquitlam  ·  Casual</div>
 <p class="seo-desc">Sushiway is a Japanese restaurant in Port Coquitlam featuring an open-kitchen concept where diners can watch chefs steam, chop, and stir fry. The menu spans sushi, sashimi, katsu, and Japanese comfort food alongside vegetarian staples like agedashi tofu and edamame. Online ordering is available for convenient takeout.</p>

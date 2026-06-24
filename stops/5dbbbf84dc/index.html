@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Seven Summits Coffee</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Rossland  ·  Cheap eats</div>
 <p class="seo-desc">Seven Summits Coffee Company is a specialty coffee roaster with a public coffee bar in the heart of Rossland, BC, serving locally baked goods alongside their artisan roasted beans. The company sells beans, brewing equipment, and merchandise online and through retail partners across the Kootenays. For a touring cyclist, it offers a dedicated café experience in a mountain town well-known for outdoor adventure.</p>

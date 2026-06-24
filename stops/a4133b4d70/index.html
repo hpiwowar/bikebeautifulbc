@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Song Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Song Cafe is a Hong Kong-style restaurant on Heather Street in Vancouver offering a broad menu spanning Cantonese, Sichuan, and other regional Chinese cuisines alongside Western dishes. The restaurant accommodates tourist group meals and provides multiple service modes including dine-in, pickup, delivery, and catering. It sits in the Heather/Cambie corridor, a stretch accessible from several popular cycling routes through central Vancouver.</p>

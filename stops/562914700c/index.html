@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">H Mart</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Grocery Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">H Mart (Hanahreum Mart) is a Canadian branch of a large Korean-founded supermarket chain specializing in Asian groceries, fresh produce, seafood, and specialty food items. The Richmond location sits within a shopping centre on Hazelbridge Way and serves the city&#x27;s substantial Asian-Canadian community. Touring cyclists will find an extensive selection of packaged foods, fresh fruit, and pantry staples well suited for resupply.</p>

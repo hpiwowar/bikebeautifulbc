@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Little Tea House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Burnaby  ·  Cheap eats</div>
 <p class="seo-desc">Little Tea House is a family-run bubble tea shop on Kingsway in Burnaby that has been serving bubble tea and fresh fruit slushies since 1994, claiming to be among North America&#x27;s first bubble tea establishments. The menu features classic and fruit-infused bubble teas alongside fresh fruit slushies made from high-quality ingredients, prepared with a focus on fresh ingredients and attentive service.</p>

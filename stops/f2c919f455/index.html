@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Blue Poppy</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Sidney  ·  Casual</div>
 <p class="seo-desc">The Blue Poppy is a casual lunch restaurant housed in a large atrium-style former greenhouse within the world-famous Butchart Gardens near Brentwood Bay. It serves fresh, seasonal fare including soups, salads, burgers, and regional entrées. Access requires paid garden admission, making it a destination in itself rather than a casual en-route stop.</p>

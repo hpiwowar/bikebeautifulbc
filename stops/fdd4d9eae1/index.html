@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Waku North</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Nanaimo  ·  Casual</div>
 <p class="seo-desc">Waku North is a ramen and izakaya restaurant located in a commercial strip on Metral Drive in north Nanaimo. Specializing in Japanese ramen, it offers a sit-down dining experience with both lunch and dinner service across most of the week. Touring cyclists looking for a hot, filling bowl after a long day on the road will find this a solid stop in the Nanaimo area.</p>

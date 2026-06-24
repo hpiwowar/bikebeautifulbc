@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Well Pub</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Nanaimo (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Wellington Pub (locally known as The Well Pub) is a casual neighbourhood bar and dining spot in Wellington, a district of Nanaimo on Vancouver Island. It offers draught beers, spirits, and a food menu, making it a practical stop for a meal or drink on a ride through the area. An on-site liquor store allows cyclists to pick up supplies for the road.</p>

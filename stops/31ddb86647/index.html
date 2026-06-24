@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Slocan Community Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Slocan  ·  Free</div>
 <p class="seo-desc">The Slocan Community Library is a small, 100% volunteer-run public library serving the village of Slocan in the Slocan Valley. It offers a curated book catalogue, DVDs, audio books, and a collection with a focus on Indigenous reads, making it a genuine community hub in a rural cycling corridor. Touring cyclists passing through Slocan may find it a useful rest point for local information, though hours are limited to four partial days per week.</p>

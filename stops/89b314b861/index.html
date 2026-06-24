@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Afghani Kabul Kebab Donair</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Afghani Kabul Kebab Donair is an Afghan restaurant on Robson Street in Vancouver&#x27;s West End, serving kabobs, kebabs, and donairs. It sits on one of Vancouver&#x27;s busiest pedestrian and cycling corridors, with both indoor and outdoor seating. Vegetarian options are available, making it a flexible stop for mixed cycling groups.</p>

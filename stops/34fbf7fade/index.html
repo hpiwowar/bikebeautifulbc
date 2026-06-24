@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Red&#x27;s Bakery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Red&#x27;s Bakery is a local bakery established in 2017 on Commercial Street in downtown Nanaimo. Located in a walkable urban core, it would serve as a convenient stop for touring cyclists passing through the city. As a bakery, it likely offers baked goods suitable for restocking on a ride, though specific offerings could not be confirmed.</p>

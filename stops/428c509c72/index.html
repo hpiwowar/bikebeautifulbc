@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ambassador Taxi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Shuttle  ·  Comox</div>
 <p class="seo-desc">On-demand shuttle and taxi service based in Comox Valley, covering YQQ airport, Mt Washington, and the Little River Ferry Terminal, with runs extending down Vancouver Island to Nanaimo, Tofino, and beyond. No bike policy stated on the site.</p>

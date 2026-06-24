@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kissing Crows Cyclery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Kissing Crows Cyclery is a full-service bicycle shop on Main Street in Vancouver, operating on the unceded territories of the Musqueam, Squamish, and Tsleil-Waututh Nations. The shop offers professional one-on-one bike fitting alongside sales and mechanical services bookable online. It also runs regular community group rides of varying distances and terrain types, making it a social anchor for local and visiting cyclists alike.</p>

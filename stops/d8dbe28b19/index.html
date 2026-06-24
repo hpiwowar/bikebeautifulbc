@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kwantlen Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Delta (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Kwantlen Pizza is a pizza restaurant in the Tilbury industrial area of Delta, BC, operating out of a unit in a commercial building on 92 Street. It offers takeout and delivery service. A touring cyclist passing through the area on routes near the Tilbury industrial corridor might use it as a quick meal stop.</p>

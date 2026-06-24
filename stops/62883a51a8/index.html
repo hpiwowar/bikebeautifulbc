@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bún Riêu Phương Nam</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Burnaby (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Bún Riêu Phương Nam is a Vietnamese restaurant on Edmonds Street in the Edmonds neighbourhood of Burnaby. The name references bún riêu, the Vietnamese crab and tomato noodle soup, suggesting a menu centered on that dish. The restaurant sits along a commercial strip and is listed as non-smoking.</p>

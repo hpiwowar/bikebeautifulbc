@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kaya Sushi + Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Kelowna (Okanagan)  ·  Casual</div>
 <p class="seo-desc">Kaya Sushi + Grill is a Japanese restaurant in Kelowna&#x27;s north end specializing in fresh fish, flavourful house special rolls, noodles, and grill dishes. The menu blends traditional Japanese cuisine with a modern, edgy approach, making it a sit-down dining option for cyclists passing through the Pier Mac Way commercial corridor.</p>

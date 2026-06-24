@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Jak&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  North Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Jak&#x27;s (formerly Moonrakers Cold Beere &amp; Wine Store) is a neighbourhood liquor retail chain with 10 locations across Greater Vancouver, carrying craft beer, wine, and premium spirits. The New Westminster store is one of ten, with in-store browsing supported by knowledgeable staff trained to make personalised recommendations. Online ordering with home delivery is also available through the JAK&#x27;s website.</p>

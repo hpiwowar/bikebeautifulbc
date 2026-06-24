@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ashoka Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">Ashoka Indian Cuisine is a full-service licensed restaurant in Langley, BC, serving a broad menu spanning traditional Indian street food, tandoor specialties, Indo-Chinese fusion, and momos alongside a full bar program with cocktails, mocktails, wine, and spirits. The kitchen caters to both vegetarians and meat-eaters with dedicated menu sections for each, and the restaurant also handles catering and accepts online orders.</p>

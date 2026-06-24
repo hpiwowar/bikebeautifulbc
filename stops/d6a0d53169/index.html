@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Green Olive Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Port Coquitlam  ·  Cheap eats</div>
 <p class="seo-desc">Green Olive Pizza is a neighbourhood pizza restaurant in Port Coquitlam offering dine-in, takeout, and delivery from a strip-mall unit on Wilson Avenue. The menu centres on pizza alongside items like poutine, making it a convenient calorie stop for cyclists passing through the Tri-Cities corridor.</p>

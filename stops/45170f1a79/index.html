@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mr. Ho Wonton House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Mr. Ho Wonton House is a Chinese restaurant on Kingsway in Burnaby serving fresh wonton, noodle soups, congee, hot pot, and a broad menu of classic Cantonese dishes. The restaurant offers indoor seating with air conditioning, and accepts online orders for both pickup and delivery via its own app. It sits on a busy arterial cycling corridor connecting Burnaby to Vancouver.</p>

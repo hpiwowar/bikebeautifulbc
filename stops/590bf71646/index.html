@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">China Kitchen Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Maple Ridge  ·  Casual</div>
 <p class="seo-desc">China Kitchen has been a community staple in Maple Ridge since 1990, serving a broad range of Cantonese and Szechuan Chinese dishes across a full dine-in menu and a popular buffet. The restaurant sits on Lougheed Highway and offers both table-service dining and online ordering for takeout. With decades of history in the area, it is one of the longer-established Chinese restaurants on this busy corridor.</p>

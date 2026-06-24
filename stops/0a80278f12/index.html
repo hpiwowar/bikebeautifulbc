@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Shamrock Storehouse</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">A multi-location Irish pub chain in Vancouver, the Denman Street location sits in the West End neighbourhood a short ride from the Stanley Park seawall cycling routes. The pub offers live music, food, and cold beer in a &#x27;home away from home&#x27; atmosphere with both indoor and outdoor seating. A loyalty rewards program and Uber Eats delivery are available.</p>

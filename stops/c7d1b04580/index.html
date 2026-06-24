@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Glen Lake Liquor &amp; More</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Glen Lake Liquor &amp; More is a liquor and convenience store situated on Sooke Road in the Glen Lake area west of Victoria. It sits along a popular cycling corridor connecting the city to the Highlands and Sooke, making it a practical stop for riders heading in or out of town. The &#x27;More&#x27; in its name suggests a convenience offering beyond spirits and beer.</p>

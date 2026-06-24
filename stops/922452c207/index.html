@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Somewhere Else Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Dogwood Valley  ·  Cheap eats</div>
 <p class="seo-desc">Somewhere Else Cafe is a diner-style café in the Fraser Valley region of British Columbia, serving American comfort food including breakfast plates, burgers, sandwiches, and pancakes. Its broad all-day menu makes it a practical refuelling stop for touring cyclists passing through the area. The café operates seven days a week with extended hours on weekends.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tacofino</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  White Rock  ·  Cheap eats</div>
 <p class="seo-desc">Tacofino is a BC-born West Coast beach food chain with roots in Tofino, now operating multiple Lower Mainland locations including this White Rock outpost on Johnston Road. The restaurant serves Mexican-inspired fare with a casual, coastal vibe well suited to a post-ride meal. Pickup and third-party delivery options make it easy to grab food quickly and get back on the road.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Taste of Thai</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Taste of Thai is an established Vancouver Thai restaurant that has been serving authentic dishes since 1986, with chefs using special herbs and spices flown in fresh from Thailand. The menu spans curries, stir-fries, and rice dishes prepared without MSG, promising bold flavours and aromatic complexity. Touring cyclists will find a full sit-down dining experience with online ordering for takeout on West Broadway, a major cycling corridor.</p>

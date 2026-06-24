@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Paco&#x27;s Tacos</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Salt Spring Island  ·  Casual</div>
 <p class="seo-desc">Paco&#x27;s Tacos is a restaurant listed in OSM at 111 Rainbow Road in Duncan, BC. Details about the business&#x27;s offerings, setting, or cyclist-relevant features could not be confirmed, as the only discovered website resolves to a different establishment on Salt Spring Island.</p>

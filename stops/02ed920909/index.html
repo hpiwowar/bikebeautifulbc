@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fanny Bay Inn</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Fanny Bay  ·  Casual</div>
 <p class="seo-desc">A historic pub on the South Island Highway celebrated for its locally harvested Fanny Bay oysters and lively community atmosphere. The summer beer garden offers coastal views and a dog-friendly patio where minors are also welcome. Regular live music nights, Saturday jam sessions, and karaoke evenings make it a notable social hub for travellers passing through the Comox Valley corridor.</p>

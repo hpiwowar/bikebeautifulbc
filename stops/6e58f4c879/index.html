@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bull Canyon Campground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Alexis Creek</div>
 <p class="seo-desc">A small provincial campground set in a scenic canyon right on Highway 20, with the glacier-blue Chilcotin River flowing past — the only BC Parks site along this stretch between Williams Lake and Tweedsmuir. A short riverside interpretive trail is a nice stretch, but the cold, fast river is unsafe for swimming.</p>

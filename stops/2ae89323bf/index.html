@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gyrosa</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  View Royal (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Gyrosa is a fast-casual Greek street food restaurant in View Royal serving modern takes on traditional dishes like gyro wraps, souvlaki bowls, and loaded fries. It is one of two Greater Victoria locations and caters to a wide range of dietary needs with both meat and falafel protein options. Online pickup ordering makes it a straightforward stop for cyclists moving through the area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Nesters Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  North Vancouver</div>
 <p class="seo-desc">Nesters Market is a BC-born neighbourhood grocery chain founded in Whistler in 1987 and now operating over 16 locations across Western Canada. The Fraser Heights location is a full-service supermarket operated by the Pattison Food Group, stocking a broad range of fresh, natural, organic, and specialty products. Touring cyclists will find it a reliable resupply stop with an in-store deli and bistro, bakery, and pharmacy on site.</p>

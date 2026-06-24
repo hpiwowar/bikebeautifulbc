@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bubble World Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  New Westminster (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Bubble World Restaurant is a Taiwanese eatery in New Westminster offering indoor dining in a no-smoking environment. Its name suggests a focus on bubble tea alongside Taiwanese cuisine, making it a potential rest stop for cyclists seeking a full meal or a cold drink. No street address is recorded in OSM, so riders should confirm the exact location before visiting.</p>

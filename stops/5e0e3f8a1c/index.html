@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sundance Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Sun Peaks</div>
 <p class="seo-desc">Sundance Liquor Store is a village retail shop within the Sun Peaks Resort, located in the Residences at Sun Peaks Grand building. It carries wine, beer, coolers, ciders, and spirits, with a selection of over 200 different wines. For touring cyclists passing through or staying at Sun Peaks, it serves as a convenient spot to pick up drinks after a day on the trails or bike park.</p>

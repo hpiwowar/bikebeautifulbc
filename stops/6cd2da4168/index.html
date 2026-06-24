@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Potato Corner</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Potato Corner is a fast-food outlet specializing in flavored fries, part of an internationally recognized franchise brand. Located in a unit along Kingsway in Vancouver, it offers takeout service and appears to have a food truck component based on website navigation. A quick stop for a cyclist looking for a hot, carb-heavy snack along one of East Vancouver&#x27;s busiest commercial corridors.</p>

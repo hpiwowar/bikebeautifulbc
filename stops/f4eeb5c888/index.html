@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gabriola Wine Cellar</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Winery / Cidery  ·  Nanaimo</div>
 <p class="seo-desc">Gabriola Wine Cellar is a liquor and wine shop located on Gabriola Island, accessible by ferry from Nanaimo. It is one of the few retail alcohol outlets on the island, making it a practical stop for touring cyclists arriving by ferry who want to pick up wine or spirits for an overnight stay. The commercial building setting on Ross Way suggests a standalone retail operation serving the island community.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Seto Sushi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Nanaimo (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Seto Sushi is a Japanese takeout and delivery spot on Departure Bay Road in Nanaimo, known for large portions of fresh sushi, bento boxes, udon, poke bowls, and specialty rolls. The online-order model makes it a practical stop for cyclists wanting a quick, filling meal without a long dine-in wait.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Rewind Beer Co</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Port Moody</div>
 <p class="seo-desc">Rewind Beer Co is a Port Moody brewery tasting room with a time-travel theme, pouring a rotating lineup of house-brewed craft beers alongside guest taps and ciders. The tasting room doubles as a pizza kitchen, serving creative wood-fired pies available for dine-in. It&#x27;s a lively neighbourhood spot with a full non-alcoholic beverage selection and regular food features.</p>

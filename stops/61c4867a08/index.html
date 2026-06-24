@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Seto&#x27;s Wok &amp; Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Port Hardy  ·  Casual</div>
 <p class="seo-desc">Seto&#x27;s Wok &amp; Grill is a restaurant on northern Vancouver Island offering wok and grilled dishes. Situated on Trustee Road near the Port McNeill area, it sits along a route cyclists may travel while exploring the northern Island. The name suggests an Asian-influenced grill menu that could offer a satisfying hot meal after a day on the road.</p>

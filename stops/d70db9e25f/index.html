@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tsawwassen Arts Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Tsawwassen (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">The Tsawwassen Arts Centre is a municipally operated arts facility run by the City of Delta, serving the Tsawwassen community with cultural programming and events. Located in the southwest corner of Metro Vancouver near the Tsawwassen ferry terminal, it sits in an area frequently traversed by touring cyclists travelling to or from Vancouver Island. As a community arts venue, it may offer a cultural rest stop for cyclists exploring the South Delta area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Polish Deli Metrotown</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Specialty / Health Food  ·  Burnaby</div>
 <p class="seo-desc">Metrotown Polish Deli is a specialty food shop on Kingsway in Burnaby offering Polish cuisine products. Located near the busy Metrotown commercial area, it caters to those seeking Eastern European deli goods. Cyclists passing through Burnaby&#x27;s urban corridor may find it a distinctive food resupply option.</p>

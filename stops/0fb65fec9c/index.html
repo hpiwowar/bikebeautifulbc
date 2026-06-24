@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cinnabar Valley Farms</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Cinnabar Valley Farms is a wholesale distributor of premium garden and agricultural supplies, serving the Vancouver Island region with a wide portfolio of soils, amendments, fertilizers, garden tools, fencing, and bird care products under both house brands and third-party labels. The business operates as a B2B wholesale platform with weekday trade hours and an online ordering system requiring account registration. A touring cyclist would find no food, beverages, or cyclist-specific services at this location.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Matsuyama</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Matsuyama is a Japanese restaurant tucked into a Richmond strip mall, serving a broad menu of over 100 items including sushi platters sized for groups, daily bento specials, and late-night deals. The dining room features comfortable booth seating and flat-screen TVs, making it a relaxed stop for solo cyclists or a whole touring party. Delivery and take-out are also available.</p>

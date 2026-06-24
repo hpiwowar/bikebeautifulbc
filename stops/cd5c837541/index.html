@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Firepit Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Cheap eats</div>
 <p class="seo-desc">Firepit Pizza is a Surrey pizzeria operating since 2009, distinguished by its &#x27;Desi Flavours&#x27; lineup of Indian-inspired toppings such as Chicken Tandoori and Butter Chicken alongside classic options. Located along the Fraser Highway corridor, it offers both phone and online ordering with local delivery and in-store pickup. Vegetarian pizza options are a regular part of the menu.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Kwan Luck Seafood Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver  ·  Upscale</div>
 <p class="seo-desc">Kwan Luck is a Cantonese seafood restaurant on Kingsway in East Vancouver, serving a broad menu of classic Chinese dishes including clay pot rice, seafood, and a range of pork and beef preparations. The restaurant offers online ordering and a substantial dine-in menu that spans dozens of items. It sits along a busy arterial corridor that connects several Vancouver neighbourhoods.</p>

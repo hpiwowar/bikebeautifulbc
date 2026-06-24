@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Squamish Taxi Ltd.</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Taxi / Ridehail  ·  Squamish (Sea to Sky)</div>
 <p class="seo-desc">On-demand taxi operating 24/7 out of Squamish, BC, covering local trips and airport runs to Vancouver (YVR); bike racks fitted on all vehicles, advance notice requested.</p>

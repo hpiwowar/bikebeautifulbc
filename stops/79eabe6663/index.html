@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hani Kebab</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Maple Ridge  ·  Cheap eats</div>
 <p class="seo-desc">Hani Kebab serves authentic Persian cuisine from a counter inside Haney Place Mall in Maple Ridge, featuring halal-certified dishes crafted from generational recipes. The menu spans classic kubideh and jujeh kebabs to slow-cooked lamb shanks and traditional Persian stews. After mall hours, orders can be placed through Uber Eats or Skip The Dishes with a back-entrance pickup option.</p>

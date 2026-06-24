@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Golden Chopsticks</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Osoyoos  ·  Casual</div>
 <p class="seo-desc">Golden Chopsticks is a Chinese restaurant on Main Street in Osoyoos, the sun-drenched South Okanagan town at the heart of several popular cycling routes including the Kettle Valley and cross-Canada touring corridors. It offers a sit-down dining option in a town with limited restaurant variety, making it a useful resupply stop for cyclists passing through.</p>

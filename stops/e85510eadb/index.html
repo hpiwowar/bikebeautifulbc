@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">ARC Liquor Glenmore</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Kelowna (Okanagan)</div>
 <p class="seo-desc">Glenmore Liquor Store is a neighbourhood alcohol retail shop located in the Glenmore district of Kelowna. It accepts cash, Interac, Visa, and Mastercard, and OSM records it as a no-drive-through location, suggesting a walk-in retail format. Cyclists passing through the area could stop for beer, wine, or spirits, though no cyclist-specific services have been confirmed.</p>

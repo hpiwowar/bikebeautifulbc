@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">J &amp; V Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Trail  ·  Casual</div>
 <p class="seo-desc">J &amp; V Restaurant is a Chinese cuisine kitchen in Castlegar serving an extensive menu of Cantonese and Szechuan classics — from wonton soup and chow mein to Szechuan prawns and dry garlic pork. The business operates exclusively as drive-through pickup with no dine-in or delivery, making it a quick stop for touring cyclists passing through the Castlegar area. Catering is also available on request.</p>

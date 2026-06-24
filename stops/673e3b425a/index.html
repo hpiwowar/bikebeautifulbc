@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Polish Bistro</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Penticton  ·  Casual</div>
 <p class="seo-desc">Polish Bistro is a Polish cuisine restaurant in Penticton, British Columbia, operating from a compact single-storey retail building. Penticton is a hub on the Okanagan cycling circuit and near the Kettle Valley Rail Trail, making it a natural resupply point for touring riders. A Polish menu typically offers hearty, filling dishes — a welcome prospect after a long day in the saddle.</p>

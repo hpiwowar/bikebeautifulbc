@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Smitty&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Comox  ·  Casual</div>
 <p class="seo-desc">Smitty&#x27;s is a Canadian family restaurant chain operating since 1960, with this location on Comox Avenue serving the Comox Valley on Vancouver Island. The chain positions itself as &#x27;more than breakfast,&#x27; offering a full all-day menu. A familiar and accessible stop for touring cyclists making their way through the Comox area.</p>

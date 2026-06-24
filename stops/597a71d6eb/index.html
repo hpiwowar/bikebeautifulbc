@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">North Road Sushi &amp; Kitchen</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">North Road Sushi &amp; Kitchen is a Japanese restaurant in the Lougheed Town Centre area of Burnaby, offering a broad menu of sushi, sashimi, nigiri, tempura, noodles, katsu, and donburi. The restaurant is noted by customers for generous portions, fresh fish, and good value. Both dine-in and online pickup or delivery orders are available through their Foodly partnership.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chaibaba</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Kelowna (Okanagan)  ·  Cheap eats</div>
 <p class="seo-desc">Chaibaba is a community-focused loose leaf tea shop in downtown Kelowna, operated by Crystal Russell for over a decade. The shop blends and sells globally sourced organic teas and offers an in-store drink menu with hot and cold beverages. It is a calm, intentional stop with sidewalk seating — a nice contrast to the typical cyclist pit stop.</p>

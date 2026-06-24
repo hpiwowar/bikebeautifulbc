@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dora Drinkwater Community Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Denman Island  ·  Free</div>
 <p class="seo-desc">The Union Bay branch of Vancouver Island Regional Library, opened in 1949, is the smallest VIRL branch at just 300 square feet and occupies the historic Union Bay Post Office building constructed in 1913. It holds a collection of more than 4,400 items and offers free public WiFi, making it a modest digital rest stop in a small coastal community on Vancouver Island. The heritage building setting gives this tiny branch an outsized sense of place for cyclists passing through the area.</p>

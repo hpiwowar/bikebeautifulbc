@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dickens Liquor Shoppe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Sidney (Metro Vancouver)</div>
 <p class="seo-desc">Dickens Liquor Shoppe is a full-service private liquor retailer on Sidney&#x27;s main commercial street, Beacon Avenue, operating as a local institution since 1988. It stocks wine, spirits, and beer with regular sale pricing and a members loyalty program offering points and discounts. A delivery service is available, and the store is within easy walking distance of Sidney&#x27;s waterfront cycling routes.</p>

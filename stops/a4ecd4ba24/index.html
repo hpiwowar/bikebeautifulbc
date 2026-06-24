@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Little Creek Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Princeton  ·  Casual</div>
 <p class="seo-desc">Little Creek Grill is a family-owned restaurant in Princeton with roots going back to 1982, when the Goreas family opened it under the name Santos. Rebranded in 2014 after the founding family returned to Princeton, it serves a broad menu of Greek-inflected dishes alongside pizza, pasta, steaks, and seafood. The kitchen makes desserts in-house and offers full catering services across the Similkameen Valley.</p>

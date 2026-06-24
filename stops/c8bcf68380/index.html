@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">CRDL: McLeese Lake Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  McLeese Lake  ·  Free</div>
 <p class="seo-desc">The McLeese Lake Branch is a small community library serving the rural McLeese Lake area along Highway 97, operated as part of the 15-branch Cariboo Regional District Library network. It offers access to physical collections, digital lending (ebooks and audiobooks via Libby), and community programming. For touring cyclists on the Cariboo Highway corridor, it represents a quiet, publicly accessible rest stop in an otherwise sparsely serviced stretch of road.</p>

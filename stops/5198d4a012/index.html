@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Riverside Adventures</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Clearwater  ·  Premium</div>
 <p class="seo-desc">A family-owned whitewater rafting operation on the Clearwater River in Wells Gray Provincial Park, running for over 30 years. They offer owner-guided trips ranging from scenic float tours to multi-day rafting expeditions on the Babine and Nass rivers. All gear is provided including wetsuits, helmets, and life jackets, so touring cyclists could join a trip without carrying any extra equipment.</p>

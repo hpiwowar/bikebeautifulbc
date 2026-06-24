@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gabbie&#x27;s Cider</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Winery / Cidery  ·  Gabriola Island</div>
 <p class="seo-desc">Gabbie&#x27;s Cidery is a craft cider producer located on Coats Drive near Nanaimo on Vancouver Island. As a small-batch cidery with a retail shop, it offers a refreshing stop for touring cyclists exploring the region&#x27;s growing artisan beverage scene.</p>

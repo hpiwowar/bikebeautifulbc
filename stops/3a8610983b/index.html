@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Whistler Blackcomb</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Whistler (Sea to Sky)  ·  Low</div>
 <p class="seo-desc">Whistler Blackcomb is North America&#x27;s largest ski resort and a world-renowned four-season mountain destination operated by Vail Resorts. In summer it transforms into a major cycling hub anchored by the Whistler Mountain Bike Park, offering lift-accessed trail riding across both mountains. Touring cyclists passing through Whistler will find a full resort village with dining, rentals, and guest services at the mountain base.</p>

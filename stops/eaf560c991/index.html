@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Terminal Bar Nanaimo</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Nanaimo (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Terminal Bar is a historic Nanaimo institution on Victoria Crescent, established in 1912 and now over a century old. It sits in the heart of Nanaimo&#x27;s heritage downtown, just steps from the harbourfront. Touring cyclists passing through Nanaimo will find it a characterful stop in a neighbourhood rich with history.</p>

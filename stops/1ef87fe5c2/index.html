@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hot House Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Hot House Pizza is a pizza restaurant in Victoria&#x27;s Cook Street Village offering a broad menu of specialty, chicken, veggie, and classic pizzas alongside calzones, wings, and beverages. Multiple crust options are available including original, gourmet thin, whole wheat thin, and gluten free. It&#x27;s a filling and convenient stop for touring cyclists passing through one of Victoria&#x27;s busiest neighbourhood commercial strips.</p>

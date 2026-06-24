@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Country Grocer</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Country Grocer is a family-owned Vancouver Island supermarket chain founded in 1984, now operating eleven stores across Greater Victoria, the Gulf Islands, and Vancouver Island. This Nanaimo location (Chase River) is one of two Country Grocer stores in the city, offering a full supermarket with deli, bakery, seafood, and fresh floral departments. The chain has a strong emphasis on local BC suppliers and farmers and deep community roots spanning over four decades.</p>

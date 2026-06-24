@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Nakusp Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Nakusp  ·  Free</div>
 <p class="seo-desc">Nakusp Public Library is a community library serving the small Kootenay town of Nakusp, offering physical and digital collections including ebooks and audiobooks via Libby, plus computers, printing, and photocopying. The library hosts a lively schedule of programs and events for all ages, making it a genuine community hub. For touring cyclists, it is a welcoming public space to rest, use a computer, and connect with local community life in a town that sees relatively few services.</p>

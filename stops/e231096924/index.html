@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Woking Dragon</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">Woking Dragon is a family-owned Chinese restaurant operating since 2003, offering modern western-style Chinese cuisine across three Lower Mainland locations including Willoughby Town Centre in Langley. The restaurant has earned recognition as a favourite Chinese food destination in the Tri-Cities market. A touring cyclist stopping here can expect a sit-down meal with online ordering and takeout options available.</p>

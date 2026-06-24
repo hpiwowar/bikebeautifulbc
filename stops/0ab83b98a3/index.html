@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mr Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Mr Sushi Canada is a family-owned sushi restaurant established in North Vancouver in the early 1990s, with this third location opening in Vancouver&#x27;s Mount Pleasant/Olympic Village neighbourhood in 2023. The restaurant emphasises carefully sourced, fresh ingredients and has earned a North Shore News Readers&#x27; Choice Award. Cyclists can eat in or order for pickup or third-party delivery.</p>

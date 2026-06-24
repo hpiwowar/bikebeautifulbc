@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bangkok Modern Thai Cuisine</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Bangkok Modern Thai Cuisine is a Thai restaurant near downtown Victoria serving dishes such as Pad Thai, Drunken Noodle, and a range of curries, all prepared with no MSG. The restaurant accommodates a wide range of dietary needs including gluten-free, dairy-free, vegetarian, and vegan options. An order-ahead function lets cyclists arrange a pickup before they arrive.</p>

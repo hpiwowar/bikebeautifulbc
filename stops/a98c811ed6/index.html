@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Wellington Hall</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Wellington Hall is a community centre situated in the Wellington neighbourhood of Nanaimo, BC. Community halls of this type typically serve as gathering spaces for local events, meetings, and recreational programmes. For touring cyclists passing through the area, it may offer a convenient public stopping point.</p>

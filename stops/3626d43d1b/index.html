@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">BCIT Recreation Services</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  North Vancouver  ·  Low</div>
 <p class="seo-desc">BCIT Recreation Services is the campus sports and fitness centre for the British Columbia Institute of Technology at its main Burnaby campus. As a post-secondary institution recreation facility, it serves students, staff, and potentially community members with athletic and fitness programming. A touring cyclist arriving at BCIT would find a large institutional campus with a range of on-site services.</p>

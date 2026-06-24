@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hightop Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Hightop Pizza is a Detroit-style pizza restaurant in North Vancouver, BC. Detroit-style pies are known for their thick, rectangular focaccia-like crust, crispy cheese-laced edges, and sauce layered on top — a distinctive regional American style with a growing fanbase. It would make a hearty refuelling stop for cyclists on the North Shore.</p>

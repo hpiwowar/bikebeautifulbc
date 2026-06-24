@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">St. Regis Fine Wines &amp; Spirits</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">St. Regis is mapped in OSM as a basement-level alcohol shop on Dunsmuir Street in downtown Vancouver. The associated website is non-functional, and the URL referencing a &#x27;bar and grill&#x27; does not align with the OSM shop:alcohol tag, leaving the current nature of the business unclear. Insufficient evidence exists to characterize what a visiting cyclist would find here.</p>

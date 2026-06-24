@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Space Chicken</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Space Chicken is a halal-certified chicken fast-food restaurant on the Kingsway corridor in Vancouver, serving an extensive space-themed menu of crispy and grilled chicken pieces, galaxy-branded burgers, wraps, salads, and combo meals. The restaurant offers indoor seating and partners with major delivery platforms for online ordering. Its location on a major east-west arterial makes it a convenient fuel stop for cyclists passing through East Vancouver.</p>

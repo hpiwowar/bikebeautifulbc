@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Epic Grill Silogs + Sans Rival</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  New Westminster (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Epic Grill Silogs is a small restaurant serving Chinese and Filipino cuisine, including the Filipino staple silog dishes (garlic rice with protein). It operates as a takeout-friendly spot and maintains a no-smoking environment. Touring cyclists passing through the New Westminster area may find it a quick stop for hearty, inexpensive Filipino comfort food.</p>

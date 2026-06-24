@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">CRDL: Quesnel Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Quesnel  ·  Free</div>
 <p class="seo-desc">The Quesnel Branch of the Cariboo Regional District Library is a publicly accessible branch library operated by the Cariboo Regional District, serving Quesnel and the surrounding central interior. Part of a 15-branch regional network, it hosts regular community programming including book clubs, craft clubs, chess clubs, and author events. Located in downtown Quesnel, it sits along a key hub town on the interior touring corridor between Prince George and Williams Lake.</p>

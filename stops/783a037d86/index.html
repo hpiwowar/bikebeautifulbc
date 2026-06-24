@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Silkway Halal Cuisine</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Silkway Halal Cuisine is a halal-certified Chinese restaurant in Richmond, BC, serving a community with significant demand for halal dining options. It offers a notable combination of Chinese cuisine and halal preparation, making it one of relatively few options in the region catering to both culinary traditions. Touring cyclists passing through Richmond&#x27;s food-rich corridors may find this a convenient and distinctive stop.</p>

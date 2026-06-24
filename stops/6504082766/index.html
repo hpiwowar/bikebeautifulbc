@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pho 101</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Pho 101 is a Vietnamese restaurant and bubble tea spot on the Hastings Street corridor, serving pho and other Vietnamese dishes alongside bubble tea drinks. The combination of hearty noodle soups and refreshing bubble teas makes it a practical refuelling stop for a cyclist. Its location on Hastings Street places it along a busy arterial route through the Burnaby area.</p>

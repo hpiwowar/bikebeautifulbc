@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sointula Resource Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Sointula</div>
 <p class="seo-desc">The Sointula Resource Centre is the official Destination BC Visitor Centre for Malcolm Island, a remote ferry-access-only community founded by Finnish immigrants in 1901 as a utopian colony. Operating as a non-profit since 2002, it serves as the island&#x27;s primary information hub and community services centre. Notably for cyclists, it maintains a fleet of free bikes for visitors and residents to explore the island, and is associated with a MIBike Rental Advisor program.</p>

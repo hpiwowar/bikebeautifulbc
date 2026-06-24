@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cedar Park Chaat House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Abbotsford  ·  Cheap eats</div>
 <p class="seo-desc">Cedar Park Chaat House is an Indian restaurant in Abbotsford specializing in traditional chaat alongside a broad menu spanning tandoor breads, biryani, Indo-Chinese dishes, and classic South Asian comfort food. The kitchen emphasizes fresh, seasonal ingredients and recipes described as rooted in a decade of experience with traditional Indian flavours. The restaurant also runs a lunch buffet and full catering service for events of all sizes.</p>

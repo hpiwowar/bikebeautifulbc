@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Big Bend</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Golden  ·  Cheap eats</div>
 <p class="seo-desc">Big Bend Cafe is a locally owned breakfast and lunch spot that has been serving Golden since 2009, winning best breakfast in the Kootenay Rockies multiple years running. The menu spans 60 items — from eggs benedict and huevos rancheros to homemade soups — designed to fuel a day of mountain adventures. A sunny patio with views of the surrounding mountains makes it a welcoming stop for cyclists passing through Golden.</p>

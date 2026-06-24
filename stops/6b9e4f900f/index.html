@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Valemount Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Valemount</div>
 <p class="seo-desc">The Valemount Visitor Centre is the official tourism information hub for this mountain village nestled among the Rocky, Monashee, and Cariboo Mountains in the Robson Valley. It is a natural first stop for touring cyclists given Valemount&#x27;s active cycling culture, including the Valemount Mountain Bike Park spanning two local mountains and the annual Spring Bike Fest. Staff provide local knowledge, maps, and trip-planning resources for the surrounding mountains and trails.</p>

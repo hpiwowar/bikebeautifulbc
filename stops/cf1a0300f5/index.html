@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tourist Info</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Northern Rockies Regional Municipality</div>
 <p class="seo-desc">The Fort Nelson Visitor Information Centre sits on the Alaska Highway at the edge of BC&#x27;s Northern Rockies, a key stop for cyclists heading toward the Yukon. Located next to the recreation complex, Art Fraser Park, and the Fort Nelson Museum, it offers brochures, maps, a gift shop featuring local artists&#x27; work, and free Wi-Fi. Staff are knowledgeable about the Northern Rockies Regional Municipality and can help plan routes through this remote region.</p>

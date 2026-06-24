@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hi Dozo Sushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  New Westminster (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Hi Dozo Sushi is a Japanese restaurant in New Westminster offering a wide menu of sushi rolls, nigiri, sashimi, udon, teriyaki, and appetizers. The restaurant has indoor seating and caters to groups with party tray options. Online ordering is temporarily suspended, but in-store and phone orders are accepted.</p>

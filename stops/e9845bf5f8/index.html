@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">D-Plus Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Fleetwood  ·  Cheap eats</div>
 <p class="seo-desc">D-Plus Pizza is a locally owned and operated multi-location pizza chain that blends classic pizza with Indian-inspired menu items such as butter chicken, fish pakora, and paneer pizza. Originally launched as D Hut Pizza in the Fraser Valley, the brand grew to five locations across Surrey and Delta while emphasizing fresh ingredients and natural cheeses. The Fraser Highway location serves as one of several pickup and delivery hubs for the Lower Mainland.</p>

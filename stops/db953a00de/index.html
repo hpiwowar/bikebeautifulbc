@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Domino&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Victoria (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Domino&#x27;s Pizza at 770 Bay Street is a large national pizza chain offering carryout and delivery in downtown Victoria. It serves a broad menu of pizzas in multiple styles alongside sides and desserts, with frequent combo coupons available. Its central location on Bay Street makes it a convenient calorie stop for cyclists moving through the city core.</p>

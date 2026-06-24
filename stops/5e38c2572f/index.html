@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Subway</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Subway at Kensington Square Plaza is a franchise location of the global sandwich chain, serving footlong sandwiches, wraps, and salads in Burnaby&#x27;s Hastings corridor. The location supports in-restaurant dining, curbside pickup, and delivery, and accepts major credit cards. As a national chain with no documented cycling-specific amenities, its utility to touring cyclists is limited to basic food resupply.</p>

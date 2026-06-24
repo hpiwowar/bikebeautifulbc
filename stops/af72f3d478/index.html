@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Golden Island Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Chemainus  ·  Casual</div>
 <p class="seo-desc">Golden Island is a long-running Chinese restaurant that has served Salt Spring Island for over 40 years, operating as a takeout and delivery operation. The menu features house-made BBQ pork, crispy ginger beef, house-made sauces, and a range of combination meals, plus beer, wine, and ciders to go. A local institution with a loyal following, it is a practical meal stop for cyclists touring Salt Spring Island.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Marble Slab Creamery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Coquitlam  ·  Cheap eats</div>
 <p class="seo-desc">Marble Slab Creamery is a Canadian chain ice cream shop known for hand-mixed ice cream on a frozen marble slab. This location sits along Lougheed Highway in Coquitlam, making it an easy roadside stop for cyclists passing through the Tri-Cities area.</p>

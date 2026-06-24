@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lucia</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Upscale</div>
 <p class="seo-desc">Lucia is a modern Italian restaurant in Vancouver&#x27;s Mount Pleasant neighbourhood, reimagining Italian classics with a contemporary sensibility in a warmly lit, intimate setting. Located on the busy Main Street corridor, it draws diners for long, leisurely meals with an emphasis on wine and conversation. Reservations are encouraged, with a waitlist option and private dining available for larger groups.</p>

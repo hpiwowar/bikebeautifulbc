@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Skyview Campground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Manning Park</div>
 <p class="seo-desc">A full-service, RV-oriented campground at the heart of E.C. Manning Park in the Cascades, open year-round with flush washrooms, a playground, and optional resort pool and hot-tub access for a fee; the hookup-heavy layout skews toward RVs, but tent campers share the same modern facilities and can walk to Lightning Lake in 10 minutes.</p>

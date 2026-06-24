@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Estevan Liquor Plus</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Liquor Plus is a 100% Vancouver Island-owned chain of full-service liquor stores operating since 2002, known for broad selection of local and international wines, beer, spirits, and cider. The Oak Bay Road location sits in a residential neighbourhood near the University of Victoria, making it a potential stop for cyclists picking up beverages. The chain runs an active loyalty program, regular craft beer arrivals, and seasonal giveaways.</p>

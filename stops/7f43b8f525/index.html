@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Richmond E Bike</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">Richmond E Bike is a Metro Vancouver e-bike specialist that has been selling, repairing, and servicing electric bikes, trikes, and scooters since 2014. The shop carries a broad range of e-bike parts and accessories, handles ICBC inspections, and offers rentals, making it a practical stop for touring cyclists needing e-bike-specific expertise. Custom-built e-bikes and conversion kits are also available for riders looking to electrify their existing setup.</p>

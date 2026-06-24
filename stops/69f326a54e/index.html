@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Hope Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Hope  ·  Free</div>
 <p class="seo-desc">The Hope Library is Fraser Valley Regional Library&#x27;s branch serving the town of Hope, BC, housed in a civic building on 6th Avenue. It offers digital library services, computers, printing, and a range of community programs as part of FVRL&#x27;s extensive regional network. For touring cyclists moving through the Fraser Canyon gateway, it represents a quiet rest point in the heart of the downtown core.</p>

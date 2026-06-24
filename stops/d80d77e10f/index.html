@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cafe Orso</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Deep Cove, North Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Cafe Orso is a European-style cafe on Gallant Avenue in North Vancouver, offering both indoor and outdoor seating. Its location puts it within reach of cyclists using the nearby Seymour River and Lynn Valley trail networks. No independent web presence could be verified at the time of this record, as the registered domain has been repurposed by a third party.</p>

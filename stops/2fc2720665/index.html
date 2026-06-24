@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mazahr Lebanese Kitchen</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Mazahr Lebanese Kitchen is an authentic Lebanese restaurant on Vancouver&#x27;s West Side, serving traditional fare including cold and hot mezza, grills, salads, and desserts prepared daily from fresh ingredients. The restaurant offers casual seating both inside and on an outdoor patio, and is located near The Stanley Theatre on West 11th Avenue. Takeout pickup, delivery, and tailored catering services are also available.</p>

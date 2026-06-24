@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Red Swan Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Delta (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Red Swan Pizza is a proudly Canadian pizza franchise with over 160 locations nationwide, founded in Saskatchewan. The Delta location serves gourmet pizzas made with scratch-made dough, fresh cheeses, and a wide range of toppings, available for pickup or delivery. The menu also includes pastas, salads, sides, and desserts, with options spanning vegan, vegetarian, gluten-free, and keto dietary needs.</p>

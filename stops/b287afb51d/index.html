@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Squamish Public Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Squamish (Sea to Sky)  ·  Free</div>
 <p class="seo-desc">The Squamish Public Library is a welcoming public institution on Second Avenue in downtown Squamish, open free of charge to residents and visitors alike. Cyclists can drop in to use free Wi-Fi, public computers, and comfortable reading and workspace areas without needing a library card. The library also maintains a dedicated Squamish Visitor Information section, making it a practical orientation stop for those new to the area.</p>

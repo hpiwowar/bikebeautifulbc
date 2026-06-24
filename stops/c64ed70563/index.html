@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sen Zushi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Victoria (Metro Vancouver)  ·  Upscale</div>
 <p class="seo-desc">Sen Zushi is an authentic Japanese restaurant on Fort Street in Victoria, operated by a Japanese owner and chefs who blend traditional and contemporary cuisine. The menu spans nigiri, sashimi, sushi rolls, tempura, udon noodles, and premium sake, with a dedicated happy hour program and rotating special menu. A long-standing local favourite, it offers both a sushi bar and full dine-in experience alongside takeout.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chicken Box</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Chicken Box is a Korean-style fried chicken and burger restaurant on Main Street in Vancouver&#x27;s Mount Pleasant neighbourhood, part of a small BC chain with locations also in North Vancouver and Abbotsford. The Main Street location specialises in fried chicken with Korean influence and offers online ordering for convenient pickup. It sits on a well-travelled urban cycling corridor, making it a practical food stop on routes along Main Street.</p>

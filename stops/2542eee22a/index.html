@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lift Coffee Company</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Whistler (Sea to Sky)  ·  Cheap eats</div>
 <p class="seo-desc">Lift Coffee Company is a café located in Whistler, BC, one of Canada&#x27;s premier mountain biking and cycling destinations. The OSM record notes an on-site ATM, which can be handy for cyclists needing cash mid-ride. No further detail about the space, menu, or cyclist-specific facilities could be confirmed from available sources.</p>

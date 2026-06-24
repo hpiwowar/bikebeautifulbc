@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dawson Co-op Food Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Dawson Creek</div>
 <p class="seo-desc">Dawson Co-op is a member-owned co-operative supermarket serving Dawson Creek and the surrounding northern BC communities of Chetwynd, Tumbler Ridge, and Rolla. As a full-service community grocery store, it offers the kind of provisioning stop a long-distance touring cyclist needs before tackling the remote roads of this region. The co-op model means local ownership and community reinvestment, giving it a distinct character compared to chain supermarkets.</p>

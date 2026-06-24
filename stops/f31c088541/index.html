@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ming Court</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Delta (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Ladner Ming Court is a Chinese seafood restaurant in Ladner, BC, operated by an experienced chef and professional team. The menu spans a wide range of regional Chinese cuisines including Cantonese, Szechwan, Beijing, and Shanghai styles, with an extensive list of seafood, duck, and vegetarian dishes. It offers both pickup and delivery service, making it a convenient stop for cyclists passing through the Ladner area.</p>

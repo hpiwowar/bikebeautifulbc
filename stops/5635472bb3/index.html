@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Circle K</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Circle K is a 24-hour convenience store and petrol station on Quadra Street in Victoria, part of the international Couche-Tard/Circle K chain. It stocks the standard convenience-store range of snacks, drinks, and packaged foods, and offers coffee on-site. Its round-the-clock hours make it a reliable resupply point for touring cyclists passing through Victoria at any time of day or night.</p>

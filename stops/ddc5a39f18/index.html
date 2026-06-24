@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">14th Ave Pub</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Mission  ·  Casual</div>
 <p class="seo-desc">A neighbourhood sports pub and casual eatery in Mission that has been serving the community since 1977. The pub features a broad selection of Pacific Northwest craft beers, daily food and drink specials, multiple big-screen TVs for sports, and an attached liquor store open 365 days a year. Live bands perform every second Saturday and karaoke runs every Friday, making it a lively stop for an evening meal.</p>

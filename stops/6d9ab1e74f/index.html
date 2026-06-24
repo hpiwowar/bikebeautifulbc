@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dining Room Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Sidney  ·  Upscale</div>
 <p class="seo-desc">The Dining Room Restaurant is set inside the historic Butchart family residence at The Butchart Gardens, one of Vancouver Island&#x27;s most celebrated horticultural destinations. It serves a seasonally inspired Afternoon Tea and summer dinners using locally sourced ingredients, with menus that include gluten-free, vegetarian, and vegan options. Cyclists should be aware that paid admission to The Butchart Gardens is required to access the restaurant.</p>

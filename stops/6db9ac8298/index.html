@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Daddy&#x27;s Grill Richmond</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Daddy&#x27;s Grill Richmond is a Persian grill and kebab restaurant in Richmond, BC, serving kabab platters, wraps, and traditional accompaniments like naan and dough. The menu centres on skewered beef and chicken dishes alongside hearty wraps, making it a calorie-dense stop for cyclists. Online ordering with a 20-minute pickup window is available.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Accommodation</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Accommodation</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Thompson Hotel</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Hotel / Motel  ·  Kamloops (Thompson)  ·  Mid-range</div>
 <p class="seo-desc">The Thompson Hotel is a full-service hotel and conference centre in downtown Kamloops offering a range of room types from Double Queen to Family and Double King Suites. The property features an indoor heated pool, fully equipped fitness room with cardio equipment, a 24/7 games room, and an on-site Breakfast Bistro. It is pet-friendly and welcomes guests with dogs, making it a comfortable base for touring cyclists exploring the Thompson Valley.</p>

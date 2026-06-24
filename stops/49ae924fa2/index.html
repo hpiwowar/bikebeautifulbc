@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Hive</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Vancouver (North Shore)  ·  Low</div>
 <p class="seo-desc">The Hive is a bouldering-focused climbing gym occupying a two-storey building in Vancouver&#x27;s Industrial Avenue corridor. It is part of a multi-location BC and Manitoba chain and is notable as one of two Hive branches within walking distance of each other on the same street. For touring cyclists looking for an active rest day, it offers a drop-in climbing experience in an urban industrial setting.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pappa Leo&#x27;s Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Pappa Leo&#x27;s Pizza is a Lower Mainland pizza chain that has been locally owned and operated since 2003, with each outlet run by community members rather than a corporate franchisee. The brand is known for scratch-made dough and award-winning pizzas loaded with fresh ingredients, available for pickup or delivery. Touring cyclists passing through New Westminster can grab a quick meal with contactless payment options.</p>

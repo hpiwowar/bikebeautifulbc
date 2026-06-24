@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">La Maison Da Nang</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">La Maison Da Nang is a family-owned casual Vietnamese restaurant on Victoria Drive in Vancouver&#x27;s southeast, specializing in the regional cuisine of Da Nang in Central Vietnam. The restaurant features both indoor seating and a street-facing outdoor patio in a residential neighbourhood, offering a relaxed atmosphere with natural daylight. The menu focuses on authentic Central Vietnamese cooking, spanning side dishes, rice mains, soups, and desserts.</p>

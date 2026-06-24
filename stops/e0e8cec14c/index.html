@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sea to Sky Gondola</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Squamish (Sea to Sky)  ·  Free</div>
 <p class="seo-desc">The Summit Lodge Viewing Deck sits at the top of the Sea to Sky Gondola, a cable car attraction above Squamish offering panoramic views of Howe Sound and the Coast Mountains. The summit complex includes multiple restaurants, a suspension bridge, and trailheads for hiking and via ferrata. Touring cyclists who ride the Sea to Sky corridor often combine their ride with a gondola excursion to experience the alpine scenery above town.</p>

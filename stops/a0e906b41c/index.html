@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Taylor Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Taylor  ·  Free</div>
 <p class="seo-desc">Taylor Public Library is a small community library serving the District of Taylor in Northern BC&#x27;s Peace River region. It offers a range of public services including computer and internet access, interlibrary loans, photocopying, and programs for all ages. For touring cyclists passing through this remote northern corridor, it provides a welcoming public space with free Wi-Fi.</p>

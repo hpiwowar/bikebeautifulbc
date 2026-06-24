@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">LanaLou&#x27;s</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">LanaLou&#x27;s is an owner-operated rock n&#x27; roll eatery on Powell Street in Vancouver, celebrated for its live music, rotating art, and quirky, unpretentious decor. The 100-seat licensed restaurant serves comfort food crafted from locally sourced ingredients in a community-minded atmosphere. It is fully wheelchair accessible and operates as both a restaurant and a live music venue.</p>

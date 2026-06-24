@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Bao Bei</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Upscale</div>
 <p class="seo-desc">Bao Bei is a well-established modern Chinese restaurant in Vancouver&#x27;s Chinatown, serving small plates inspired by Taiwanese and Chinese flavours with global influences. The intimate space includes a dining room, high-tops, and a full bar, with both reservations and walk-in seating available. Vegetarian and vegan adaptations are readily offered, making it a welcoming stop for cyclists with varied dietary needs.</p>

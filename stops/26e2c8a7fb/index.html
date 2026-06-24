@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Embers BBQ House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Mission  ·  Cheap eats</div>
 <p class="seo-desc">Embers BBQ House is a family-owned-and-operated comfort food restaurant that has been serving authentic slow-smoked BBQ for over 15 years. Now located in Mission on the north bank of the Fraser River, the restaurant features an open kitchen and dining concept where guests can watch the cooking in action. Their signature slow-roasted pulled pork drives a menu of sandwiches, poutines, and wraps popular with returning customers.</p>

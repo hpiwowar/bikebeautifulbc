@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Family Foods</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Port Alice</div>
 <p class="seo-desc">Port Alice Family Foods is a full-service community supermarket serving the small, remote town of Port Alice on northern Vancouver Island. Part of the Family Foods chain with over 40 years of operation, the store carries fresh produce, meat, bakery, deli, frozen goods, and dairy. For touring cyclists navigating the roads of the North Island, it is a key resupply stop in an area with very limited services.</p>

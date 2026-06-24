@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">33 Acres Brewing</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">A family-owned craft brewery in Vancouver&#x27;s Mount Pleasant neighbourhood with two side-by-side tasting rooms on West 8th Avenue. Their core lineup spans amber lagers to Belgian tripels, including a World Beer Cup Silver Award-winning Belgian Tripel. Walk-in only with a casual, spacious atmosphere and seasonal food offerings.</p>

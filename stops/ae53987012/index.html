@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Elkford Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Elkford  ·  Free</div>
 <p class="seo-desc">Elkford Public Library is the community library serving Elkford, a small and remote municipality in the Kootenay Rockies near the headwaters of the Elk River. It provides public computers, digitization services, printing and scanning, and a broad range of community programs. For a touring cyclist riding through this isolated valley, it stands as one of the few publicly accessible indoor facilities in town.</p>

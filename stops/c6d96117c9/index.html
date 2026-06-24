@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mineiros Brazilian Bistro</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  North Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Mineiros Brazilian Bistro is a casual bistro in Burnaby serving Brazilian specialties including coxinha (crispy chicken-filled dough bites) and brigadeiro chocolates. Formerly operating as BrazEuro, the spot offers both pickup and delivery through online ordering. It sits on Edmonds Street and would make a distinctive stop for cyclists looking for something beyond typical café fare.</p>

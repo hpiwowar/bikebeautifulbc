@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Oaklands Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">The Oaklands Community Association is a neighbourhood association serving the Oaklands area of Victoria, bounded by Cook Street, Haultain Street, Shelbourne Street, and North Dairy Road. It operates from three locations — Oaklands Community Centre, Oaklands Neighbourhood House, and Hamilton Park — offering recreation programs, child care, a community garden, food security initiatives, and a seasonal Wednesday evening Sunset Market. The association is community-run and membership-based, with a broad range of programs for all ages.</p>

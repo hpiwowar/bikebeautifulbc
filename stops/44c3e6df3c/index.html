@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">SukkoThai Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Nanaimo (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">SukkhoThai Restaurant is an award-winning Thai restaurant on Commercial Street in downtown Nanaimo, serving authentic dishes such as Pad Thai, Green Curry, and Panaeng Curry with Prawns. The restaurant prides itself on consistent quality and offers both dine-in with table reservations and a takeout/pickup service, making it a practical meal stop for cyclists passing through the city centre.</p>

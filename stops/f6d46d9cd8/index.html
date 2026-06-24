@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hoa Phuong Do</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver  ·  Casual</div>
 <p class="seo-desc">Hoa Phuong Do is a Vietnamese restaurant on Victoria Drive in Vancouver&#x27;s East Side, serving the Fraserview and Killarney neighbourhoods. The restaurant operates bilingually in English and French, and offers online ordering with both pickup and delivery options via their own website. Cyclists passing through this stretch of Victoria Drive will find it a convenient sit-down or takeout stop for Vietnamese food.</p>

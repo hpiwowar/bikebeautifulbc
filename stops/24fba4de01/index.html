@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Shoal Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Sidney (Metro Vancouver)</div>
 <p class="seo-desc">SHOAL Centre is a busy community hub in Sidney operated by Beacon Community Services, serving Peninsula residents aged 55 and older with fitness classes, yoga, woodworking, lapidary, pottery, auditoriums, and a games room. The centre also offers on-site dining and a full suite of senior wellness and support programs. A touring cyclist passing through Sidney could use it as a rest stop for a meal in a welcoming, publicly accessible facility.</p>

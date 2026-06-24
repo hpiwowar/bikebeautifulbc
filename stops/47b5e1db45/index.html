@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Headwaters Park</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Park / Nature  ·  Vancouver (Metro Vancouver)  ·  Free</div>
 <p class="seo-desc">A 15-acre municipal park on Bowen Island centred on a fen wetland, with a perimeter trail and boardwalk crossing a portion of the fen. The park is an important link in an island-wide trail and greenbelt system, and its wetlands filter into Terminal Creek, one of the sources for the Cove Bay Water District.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">VIRL: Woss Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Woss  ·  Free</div>
 <p class="seo-desc">The Woss Branch of Vancouver Island Regional Library is a modern public facility that opened in a beautiful new building in December 2020, serving this small community in the unceded traditional territory of the Namgis nation. Part of the 40-branch Vancouver Island Regional Library system, it provides books, digital resources, and meeting spaces to one of the more remote communities on northern Vancouver Island. For touring cyclists, it represents one of the very few publicly accessible stops along this stretch of highway.</p>

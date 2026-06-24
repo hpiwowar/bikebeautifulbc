@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Canadian Brewhouse &amp; Grill</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Canadian Brewhouse &amp; Grill is a large, nationally-franchised sports bar and grill located in the Uptown shopping centre area of Victoria. It offers a broad pub menu including daily specials, happy hour, and a kids menu, with online ordering available. Touring cyclists stopping in the Uptown corridor will find a spacious, family-friendly venue open through late evening.</p>

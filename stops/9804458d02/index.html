@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Mission Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Mission  ·  Free</div>
 <p class="seo-desc">The Mission Library is a branch of the Fraser Valley Regional Library system, a public network serving communities across the Fraser Valley. Located on 2nd Avenue in downtown Mission, it offers public computers, printing, digital collections, and programming for residents and visitors alike. For a touring cyclist, it provides a quiet, climate-controlled rest stop with free Wi-Fi in the heart of Mission.</p>

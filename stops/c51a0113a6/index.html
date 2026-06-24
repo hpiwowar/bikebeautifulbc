@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Accommodation</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Accommodation</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Chalet Motel</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Hotel / Motel  ·  Kitimat  ·  Budget</div>
 <p class="seo-desc">The Chalet is a long-established motel in the heart of Kitimat, BC, serving the community through generations of celebrations and special occasions — describing itself as a &#x27;home away from home.&#x27; The property includes an attached restaurant, offering an on-site dining option for touring cyclists passing through the North Coast region. An amenities page exists on the website but its full content was not captured in the fetch.</p>

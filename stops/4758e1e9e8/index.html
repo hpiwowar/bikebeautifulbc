@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Canadian Museum of Rail Travel</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Cranbrook (East Kootenay)  ·  Low</div>
 <p class="seo-desc">The Cranbrook History Centre is a nationally recognized cultural institution housing a nationally designated historic railcar collection, internationally recognized paleontology specimens, and an interactive model railway exhibit. Guided tours step visitors back into the golden age of rail travel aboard original Trans-Canada Limited cars, weaving in Indigenous, labour, and immigration history. The museum is a short walk from downtown Cranbrook, close to cafés and shops, with free on-site parking accessed from Highway 95.</p>

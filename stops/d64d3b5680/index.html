@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Washtock Campground Camp Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Boothroyd</div>
 <p class="seo-desc">Washtock Family Farm is a 4th-generation off-grid farm established in 1912, situated at the confluence of the Fraser and Nahatlatch Rivers near Boston Bar. The on-site camp store serves campers and passing travellers with ice, snacks, beef cuts, firewood, and eggs. The farm generates its own electricity via a Pelton wheel and offers a peaceful, remote farm-based camping experience in the Fraser Canyon.</p>

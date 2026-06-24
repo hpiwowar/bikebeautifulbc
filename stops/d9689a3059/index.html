@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Baselines Pub</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Baselines Pub is a neighbourhood sports pub in Fleetwood, Surrey, open since December 2005 and self-described as the Lower Mainland&#x27;s best sports bar. It offers screens throughout the space for game-day viewing alongside pub fare, cocktails, and BC Lottery gaming. Touring cyclists would find a full sit-down pub with dine-in and takeout options.</p>

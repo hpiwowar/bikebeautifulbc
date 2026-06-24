@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cedar Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Ucluelet (Pacific Rim)  ·  Casual</div>
 <p class="seo-desc">Cedar Grill is a restaurant in Ucluelet, a small coastal community on the west coast of Vancouver Island frequently visited by cycle tourists travelling the Pacific Rim area. Beyond its OSM classification as a restaurant, no further details about cuisine style, setting, or cyclist-specific features could be confirmed from available sources.</p>

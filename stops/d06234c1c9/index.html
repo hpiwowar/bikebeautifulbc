@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Corner House Cafe</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Duncan (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Corner House Cafe is a neighbourhood restaurant and cafe situated on Jubilee Street in Duncan, on southern Vancouver Island. Its operating hours span most of the week from morning into the afternoon and early evening, suggesting a breakfast-and-lunch-focused menu well suited to a mid-ride stop. Duncan sits along the Cowichan Valley, a popular cycling corridor, making this a convenient refuelling option for touring cyclists passing through town.</p>

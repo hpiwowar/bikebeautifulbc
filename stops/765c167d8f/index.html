@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Meet Fresh</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Richmond (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Meet Fresh is a Taiwanese dessert chain founded in 2007, serving traditional handmade desserts including taro balls, grass jelly, tofu pudding, shaved ice, and herbal teas made without preservatives from natural ingredients. The Richmond location is part of the Canadian franchise network bringing authentic Central Taiwanese flavours to the Lower Mainland. A good stop for a sweet treat mid-ride, with a largely vegetarian-friendly menu.</p>

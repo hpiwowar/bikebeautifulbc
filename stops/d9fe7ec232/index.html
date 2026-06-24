@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Golden City Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Sechelt  ·  Casual</div>
 <p class="seo-desc">Golden City Restaurant is a beloved Chinese restaurant on BC&#x27;s Sunshine Coast that has been feeding the Sechelt community for over 40 years. The menu spans appetizers, seafood, hot pots, sizzling plates, and a popular Sunday buffet with more than 20 items, offered in both English and Chinese. Owner Ming runs a convivial spot where locals gather, making it a natural stop for touring cyclists riding the coast.</p>

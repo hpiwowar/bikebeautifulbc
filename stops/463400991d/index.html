@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gill Veggie Bakery &amp; Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Abbotsford</div>
 <p class="seo-desc">Gills Vegetarian Bakery is a 100% vegetarian bakery and pizza shop located in Chilliwack, BC, operating from unit 107 of a commercial building. The establishment offers plant-based baked goods and pizza under the registered name Gill Veggie Bakery &amp; Pizza Ltd. Touring cyclists looking for vegetarian food options in Chilliwack may find this a useful stop.</p>

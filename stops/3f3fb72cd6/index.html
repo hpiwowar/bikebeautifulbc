@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pho Ho</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Chilliwack  ·  Cheap eats</div>
 <p class="seo-desc">Pho Ho is a Vietnamese noodle soup restaurant located in Chilliwack, BC, offering a cuisine style well-suited to hungry touring cyclists seeking a hot, filling meal. The restaurant&#x27;s pho-focused menu suggests hearty portions typical of Vietnamese noodle houses. Chilliwack sits along popular Fraser Valley cycling routes, making this a potential restorative stop.</p>

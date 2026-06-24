@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Jumping Slug Community Cyclery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Repair Shop  ·  Alberni</div>
 <p class="seo-desc">Jumping Slug Community Cyclery is a full-service bike shop on the route into Port Alberni on Vancouver Island, offering sales, professional servicing for all bike types, and rentals including mountain, electric, gravel, and adventure bikes. The shop is deeply rooted in the Alberni Valley cycling community, hosting events and weekly group rides. Staff bring strong local knowledge of island backroads and trails, making it a useful stop for cyclists planning routes beyond the town.</p>

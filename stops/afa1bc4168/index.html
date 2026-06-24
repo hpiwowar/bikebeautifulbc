@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Arwaz Hooka Lounge</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">Arwaz Hooka Lounge is a dedicated hookah bar operating under the legal entity Arwaz Hookah Lounge Limited, located in a retail building with a designated smoking area. As a sit-down lounge, it offers a place for touring cyclists to rest indoors in a relaxed social atmosphere. The OSM record notes a dedicated smoking area, reflecting its core hookah-lounge format.</p>

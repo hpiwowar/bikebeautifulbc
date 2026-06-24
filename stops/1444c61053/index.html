@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Maple Ridge Museum</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Maple Ridge  ·  Low</div>
 <p class="seo-desc">A community museum and archives in Maple Ridge exploring the local history of the area, situated on the traditional territories of the Katzie and Kwantlen First Nations. The museum features permanent and temporary exhibits, a community archives with image search, and also manages the nearby historic Haney House on 224th Avenue. It hosts events like heritage preservation projects and &quot;Music on the Wharf,&quot; making it a worthwhile cultural stop along the route.</p>

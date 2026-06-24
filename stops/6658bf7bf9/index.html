@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cowichan Bay Maritime Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Cowichan Bay (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">A non-profit maritime museum in the quirky seaside village of Cowichan Bay, operated by the Cowichan Wooden Boat Society since the late 1980s. Visitors walk a 100-meter heritage pier with themed exhibit pods covering Indigenous canoe history, interactive boat-building activities, and meticulously restored vintage motors. The centre also hosts an annual wooden boat festival and maintains an active wooden-boat workshop.</p>

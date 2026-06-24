@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sidney Information Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Visitor Centre  ·  Sidney (Metro Vancouver)</div>
 <p class="seo-desc">The Sidney Information Centre is a volunteer-staffed visitor centre operated by the Sidney Business Improvement Area, situated on Beacon Avenue in the heart of downtown Sidney by the Sea. It serves as the primary resource hub for anyone exploring this charming waterfront community, offering guidance on local dining, events, accommodation, and attractions. Touring cyclists will find it a useful waypoint for route planning, local knowledge, and discovering what this peninsula town has to offer.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sardis Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Chilliwack (Fraser Valley)</div>
 <p class="seo-desc">Sardis Liquor Store is a retail alcohol shop located in the Sardis neighborhood of Chilliwack, BC, on Luckakuck Way. It serves the local community with beer, wine, and spirits, making it a convenient stop for touring cyclists moving through the Fraser Valley corridor. The Sardis area sits near the Trans Canada Trail and popular cycling routes connecting Chilliwack to the broader Lower Mainland.</p>

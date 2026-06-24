@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chicko Chicken</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Chicko Chicken is a Korean fried chicken fast food chain with dozens of locations across BC and Canada. The Burnaby Metrotown location sits on Kingsway and offers indoor seating with card payment accepted. Cyclists passing through the Metrotown corridor will find it a quick stop for a hot meal.</p>

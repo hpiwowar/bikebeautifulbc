@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">General Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Panorama</div>
 <p class="seo-desc">The General Store is a full-service convenience grocery inside Panorama Mountain Resort&#x27;s Toby Creek Lodge, stocking dry goods, fresh produce, dairy, meat, and specialty gifts. As an official BC Liquor Agency, it also carries beer, wine, and spirits at standard BC prices. It serves as the primary provisioning stop for guests and visitors in the remote Panorama village in the Kootenay Rockies.</p>

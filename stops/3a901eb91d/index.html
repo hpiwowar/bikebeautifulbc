@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Evo Car Share</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Car Share / Rental</div>
 <p class="seo-desc">One-way car share operated by BCAA. Every Evo vehicle is fitted with two Thule roof-mounted bike racks. Free-floating service in Metro Vancouver and Victoria — pick up any available car and drop it off anywhere within the zone. Evo Return is a scheduled one-way option at Nanaimo (Hullo Ferry Terminal) and Tofino — book in advance. Membership required before your trip.</p>

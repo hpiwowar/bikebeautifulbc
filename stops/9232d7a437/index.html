@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Royston Roasting Company</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Royston</div>
 <p class="seo-desc">Royston Roasting Company is a coffee shop in the small Vancouver Island community of Royston, situated on the South Island Highway — a key corridor for cycle tourists riding the island&#x27;s eastern coast. The shop operates out of its own building and accepts both cash and credit cards, making it a convenient stop for riders. It is closed Sundays and public holidays.</p>

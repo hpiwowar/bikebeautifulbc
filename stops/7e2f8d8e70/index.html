@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Little Saigon</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Chilliwack  ·  Cheap eats</div>
 <p class="seo-desc">Little Saigon is a Vietnamese restaurant in Mission, BC, serving pho, vermicelli bowls, and rice plates made with no-MSG, slow-simmered broths from family recipes. It is the Mission location of a two-restaurant Fraser Valley operation, housed in a strip-mall unit with free parking. Cyclists passing through Mission will find it a convenient stop for a filling, from-scratch Vietnamese meal.</p>

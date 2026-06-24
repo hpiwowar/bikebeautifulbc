@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pho Newton</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Newton, Surrey  ·  Cheap eats</div>
 <p class="seo-desc">Pho Newton is a fast-food Vietnamese restaurant in Tsawwassen, BC, likely serving pho and related noodle dishes. Its location in Tsawwassen places it near the BC Ferries terminal at Tsawwassen, a common waypoint for cyclists on multi-day tours to the Gulf Islands or Vancouver Island. No further detail about the business could be confirmed due to a mismatched website.</p>

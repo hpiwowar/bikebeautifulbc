@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">POW Pizza</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Windermere  ·  Cheap eats</div>
 <p class="seo-desc">POW Pizza serves Detroit-style pizza in Windermere, BC, with a sourdough crust naturally leavened with local spring water and baked in square steel pans with a signature cheese crown. The restaurant operates year-round and offers dine-out seating on an outdoor deck by the fire, a short walk from the lake. Notably, the business accepts cash and cryptocurrency only — no credit or debit cards.</p>

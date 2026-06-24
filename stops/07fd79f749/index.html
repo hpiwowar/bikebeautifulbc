@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Truck Stop Diner</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">The Truck Stop Diner is a pub and diner operated by Red Truck Beer Company, one of BC&#x27;s well-known craft breweries, in Vancouver. The brewery&#x27;s website navigation references a dedicated food menu, live music, and weekly specials at this venue alongside draft beer service. It is a full-service food-and-drink establishment in an urban Vancouver setting.</p>

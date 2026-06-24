@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Robba da Matti</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Upscale</div>
 <p class="seo-desc">Robba Da Matti is a Vancouver Italian restaurant group with three locations—West End, Yaletown, and Gastown—specializing in fresh homemade pasta and family recipes passed down through generations. The brand positions itself around recreating the warmth of Italian home dining, with regional dishes and an extensive Italian wine list. The West End location sits on Haro Street with both indoor and outdoor seating.</p>

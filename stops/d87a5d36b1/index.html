@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">TNRL: Cache Creek Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Cache Creek  ·  Free</div>
 <p class="seo-desc">The Cache Creek Library is a branch of the Thompson-Nicola Regional Library System, housed in a 2013-built, 1,672-square-foot building located directly on the Trans-Canada Highway. It is part of one of the larger regional library networks in British Columbia&#x27;s interior, serving the small community of Cache Creek. For touring cyclists passing through this otherwise sparse stretch of highway, it offers free Wi-Fi and public computers as a rest-stop resource.</p>

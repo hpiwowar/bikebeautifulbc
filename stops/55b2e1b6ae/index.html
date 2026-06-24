@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Misty Pines Cafe &amp; Bakery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">Misty Pines Cafe &amp; Bakery is a local café and bakery located in Nanaimo at 335 Wesley Street. As a combined café and bakery, it would offer touring cyclists a spot to stop for baked goods and café beverages in a community setting. The business operates seven days a week according to OSM.</p>

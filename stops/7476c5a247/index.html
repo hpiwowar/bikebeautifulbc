@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">China Bowl Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Langley  ·  Casual</div>
 <p class="seo-desc">China Bowl Restaurant is a family-owned Chinese restaurant in Langley specializing in Cantonese and Szechuan cuisine, including classics like beef and broccoli, hot bean sauce prawns, and wonton soup. Touring cyclists can order dine-in or takeout, and the restaurant also offers catering for large events. It operates out of a strip-mall unit on 200 Street in south Langley.</p>

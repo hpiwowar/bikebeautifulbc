@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Marulilu Cafe</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Marulilu Cafe is a Japanese classic-style cafe on West Broadway in Vancouver, one minute&#x27;s walk from Broadway-City Hall Station. It serves traditional Japanese comfort food popular in Japan — including Omu-Rice, Curry-Rice, Onigiri, and Donburi — alongside coffee and tea. Online ordering for counter pickup is available, making it a convenient stop on a busy cycling corridor.</p>

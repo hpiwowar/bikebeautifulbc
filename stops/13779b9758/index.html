@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Harvest</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Harvest Market is UBC Food Services&#x27; flagship campus grocery store, situated at Ponderosa Commons on the University of British Columbia&#x27;s Vancouver campus. It stocks basic groceries alongside gourmet prepared foods including rotisserie chicken, fresh salads, epic sandwiches, and take-out meals, making it a well-rounded provisioning stop. The market sits at a busy campus crossroads and serves tens of thousands of students, staff, and faculty daily.</p>

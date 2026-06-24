@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Minoru Centre for Active Living</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Richmond (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">Minoru Centre for Active Living is a City of Richmond public aquatics and fitness facility offering swimming and fitness programming. It also houses the Seniors Centre at Minoru, making it a broad community hub. Touring cyclists in Richmond looking to clean up or get a workout between rides may find this facility useful.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">ORL: Armstrong</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Armstrong  ·  Free</div>
 <p class="seo-desc">The Armstrong branch of the Okanagan Regional Library is part of a 30-branch regional system serving the North Okanagan&#x27;s small agricultural city of Armstrong. The branch offers free public computer and internet access, two reservable meeting/study rooms, and free car parking directly in front of the building. Its accessible, single-level facility with automatic doors and a wheelchair ramp makes it a practical indoor rest stop for touring cyclists passing through the area.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Phở Sunrise</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Phở Sunrise is a Vietnamese restaurant in South Surrey specializing in pho, located in a strip-mall unit at 15355 24 Avenue. It sits in a suburban commercial area near the 24 Avenue corridor and offers a sit-down dining experience focused on Vietnamese cuisine. A touring cyclist in the South Surrey area would find it a convenient stop for a restorative bowl of noodle soup.</p>

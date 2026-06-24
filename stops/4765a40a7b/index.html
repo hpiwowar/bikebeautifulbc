@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Polonia Sausage House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Specialty / Health Food  ·  Vancouver (North Shore)</div>
 <p class="seo-desc">Polonia Sausage House is a family-owned Polish delicatessen operating since 1989, one of six Lower Mainland locations, offering house-made gluten-free Polish sausages crafted from traditional family recipes. Beyond deli meats, the shop carries imported Eastern European cheeses, pickles, sauerkraut, perogies, and baked goods. It has been recognized as one of the top three meat products in Canada by the Ukrainian-Canadian Professional Business Association.</p>

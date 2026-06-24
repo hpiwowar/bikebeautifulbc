@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Transport</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Transport</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Rocky Mountaineer</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Rail</div>
 <p class="seo-desc">Multi-day luxury scenic rail through the BC interior and Canadian Rockies, daytime travel only with overnight hotel stops. Routes run Vancouver to Banff, Lake Louise, and Jasper via Kamloops, plus a Vancouver to Seattle Coastal Passage. Bikes are not carried in the coaches; a bicycle travels as oversized checked luggage moved separately by road and meets you at your hotel, likely for a surcharge. Confirm bicycle handling with the operator in advance.</p>

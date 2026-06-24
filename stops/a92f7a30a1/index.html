@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dublin Crossing</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Surrey  ·  Casual</div>
 <p class="seo-desc">Dublin Crossing is an authentic Irish pub in Surrey serving a full menu of food alongside Irish and local craft draught beers. The venue features live music several nights a week and hosts seasonal events including St. Patrick&#x27;s Day and Oktoberfest celebrations. Dine-in, patio seating, and take-out are all available.</p>

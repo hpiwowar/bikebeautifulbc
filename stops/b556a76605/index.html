@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">McRae&#x27;s Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">McRae&#x27;s is a neighbourhood pub-restaurant in Victoria&#x27;s Fairfield area offering elevated pub food in a cozy, unpretentious atmosphere. The menu focuses on regional cuisine and the space is designed to feel welcoming without being upscale in price. It would serve as a sit-down meal stop for cyclists exploring the residential streets near Beacon Hill Park.</p>

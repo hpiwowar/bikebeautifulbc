@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Urban Grocer</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Urban Grocer is a neighbourhood grocery store situated at The Junction of Oak Bay Avenue and Fort Street in Victoria, run by people with over 50 years of experience in the Vancouver Island and Gulf Islands grocery trade. The store emphasises fresh and organic produce, operates an in-house deli, and carries a curated selection of local Vancouver Island products under the Island Good brand. It is a convenient resupply stop for cyclists riding the Oak Bay and Fort Street corridors.</p>

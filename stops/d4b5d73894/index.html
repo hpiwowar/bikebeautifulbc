@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fresh Slice Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Chilliwack  ·  Cheap eats</div>
 <p class="seo-desc">Fresh Slice Pizza is a Canadian pizza chain franchise offering by-the-slice and whole-pizza options with any toppings, available for in-store pickup, delivery, and online ordering. The Chilliwack location sits in a strip-mall unit on King Road, a busy commercial arterial. It is a straightforward quick-service stop for a touring cyclist needing a hot, filling meal.</p>

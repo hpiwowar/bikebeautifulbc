@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Princeton Arena</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Princeton  ·  Low</div>
 <p class="seo-desc">Princeton Arena is a municipally operated ice facility in Princeton, BC, offering ice hockey and skating to the community. It is part of the Town of Princeton&#x27;s parks and recreation network, which also includes a bike park, outdoor pool, and campground. A touring cyclist passing through Princeton might visit as a spectator or to use shared municipal facilities.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Big Bay General Store &amp; Post Office</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Big Bay</div>
 <p class="seo-desc">Big Bay General Store &amp; Post Office is a combined general store and post office serving the remote community of Big Bay on Stuart Island, British Columbia, accessible only by ferry. Founded in a region of dramatic coastal inlets, it is one of the very few commercial supply points on this isolated island. For touring cyclists venturing this far off the beaten path, it represents a rare opportunity to resupply in an otherwise extremely remote off-grid environment.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Oliver Twist Pub &amp; Grill</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">Oliver Twist Pub &amp; Grill is a neighbourhood pub and grill operated by Daebak Tavern Ltd on Edmonds Street. It maintains a no-smoking environment throughout. A touring cyclist passing through the area would find a sit-down pub setting with food service.</p>

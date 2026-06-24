@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Muriel Arnason Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Langley  ·  Free</div>
 <p class="seo-desc">The Muriel Arnason Library is part of the Fraser Valley Regional Library system, serving the Willowbrook neighbourhood of Langley. As a public library, it offers computers, printing, digital resources, and community programming in a welcoming, publicly accessible space. Touring cyclists may find it a useful urban rest stop for connectivity and shelter.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Ostera Coastal Cuisine</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Fine dining</div>
 <p class="seo-desc">Osetra Coastal Cuisine is a contemporary seafood restaurant in downtown Vancouver, known for precision sourcing and an elevated atmosphere. The menu spans caviar service, Dungeness crab cake, house-cured King Salmon, and a weekend brunch, all presented under the banner of &#x27;The Key Collection.&#x27; Indoor and outdoor seating are available and the venue is wheelchair accessible.</p>

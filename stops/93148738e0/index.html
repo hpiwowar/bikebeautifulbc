@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Loon Lagoon</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Manning Park  ·  Low</div>
 <p class="seo-desc">Loon Lagoon is the indoor aquatic and wellness facility at Manning Park Resort, featuring a 50-ft heated swimming pool, hot tubs, a steam room, and a sauna. Situated along the Highway 3 cycling corridor in Manning Provincial Park, it is open to day visitors as well as resort guests, giving touring cyclists a rare chance to recover properly after crossing the Cascades. An on-site fitness centre with cardio equipment and free weights adds to the recovery options.</p>

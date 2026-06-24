@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Green Olive Market &amp; Café</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Squamish (Sea to Sky)  ·  Cheap eats</div>
 <p class="seo-desc">Green Olive Market &amp; Café is a café and market in Squamish, BC offering both indoor and outdoor seating. The combination of market and café format suggests a spot where cyclists passing through Squamish could stop for food and provisions. Its outdoor seating makes it a potential rest stop on rides in the Sea-to-Sky corridor.</p>

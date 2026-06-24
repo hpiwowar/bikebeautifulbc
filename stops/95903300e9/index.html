@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Good Co. Bars</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Good Co. Bars is a multi-location Vancouver bar and restaurant chain with its Main Street outpost anchoring the Mount Pleasant neighbourhood. The venue blends pub-style dining with sports viewing, games, and a busy events calendar including trivia nights, dance parties, and TV watch parties. Touring cyclists will find a full food menu with substantial meal options in a lively, social setting.</p>

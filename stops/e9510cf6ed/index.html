@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">O&#x27;Hare&#x27;s Liquor Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Richmond (Metro Vancouver)</div>
 <p class="seo-desc">O&#x27;Hare&#x27;s is a combined gastropub and liquor store serving the Steveston neighbourhood of Richmond, BC. The gastropub side offers a full food menu with dine-in service, while the attached retail store covers alcohol purchases to go. Its location on Steveston Highway places it within easy reach of the South Richmond dyke cycling network and the historic Steveston waterfront.</p>

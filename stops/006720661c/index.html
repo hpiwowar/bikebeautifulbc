@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Cyqule</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Rentals  ·  Nanaimo (Metro Vancouver)</div>
 <p class="seo-desc">CyQle is a bicycle and e-bike sales, service, and repair shop on Gabriola Island, established in 2015 and serving as Vancouver Island&#x27;s Biktrix authorized dealer since 2016. The shop handles e-bike sales, mechanical servicing, and warranty work for electric bicycles. Gabriola Island is a small Gulf Island accessible by ferry from Nanaimo, making this one of the only dedicated bike service options on the island.</p>

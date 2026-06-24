@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Seasons Farm Market</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farmers&#x27; Market  ·  Abbotsford</div>
 <p class="seo-desc">Seasons Farm Market is a barn-based farm market in Abbotsford&#x27;s agricultural corridor, stocking local free-range eggs, fresh dairy, garden produce, baked goods, and quality cuts of meat. The market emphasizes ethically raised, sustainable, and locally sourced food, and positions itself as a community gathering spot as much as a grocery stop. For a touring cyclist passing through the Fraser Valley farmland, it offers a genuine farm-fresh resupply point.</p>

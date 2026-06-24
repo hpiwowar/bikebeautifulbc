@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">CPL: City Centre Branch</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Coquitlam  ·  Free</div>
 <p class="seo-desc">The City Centre Branch of the Coquitlam Public Library is a full-service public branch located in the heart of Coquitlam&#x27;s City Centre neighbourhood. It offers programs for all ages, a library lounge, room bookings, computers and printing, and an extensive digital collection. For touring cyclists moving through the Tri-Cities area, it represents a potential urban rest stop with public services.</p>

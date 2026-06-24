@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">FVRL: Yarrow Library</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Library  ·  Chilliwack (Fraser Valley)  ·  Free</div>
 <p class="seo-desc">Yarrow Library is a community branch of the Fraser Valley Regional Library system serving the small rural village of Yarrow, southwest of Chilliwack. It offers free public WiFi, public computers, and a range of accessibility features in a welcoming community space. For touring cyclists passing through the Fraser Valley lowlands, it provides a convenient rest stop with outdoor bike parking.</p>

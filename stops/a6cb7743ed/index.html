@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Shawnigan House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  Duncan (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Shawnigan House Coffee and Chocolate is a specialty coffee and artisan chocolate shop that has been serving the Shawnigan Lake area since 2000. Located on Shawnigan Lake-Mill Bay Road, it offers globally sourced espresso drinks alongside locally handmade truffles and chocolate bars. The menu features a wide range of vegan, vegetarian, and gluten-free options.</p>

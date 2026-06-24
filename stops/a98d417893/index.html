@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Minnoz Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Nanaimo (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Minnoz Restaurant + Lounge is an elegant yet casual full-service dining room and lounge inside the Coast Bastion Hotel in downtown Nanaimo, serving breakfast through dinner plus weekend brunch. The menu spans homemade breakfasts, appetizers, and a rotating set of daily lunch specials. Its downtown hotel location puts it within reach of the Nanaimo waterfront cycling corridor.</p>

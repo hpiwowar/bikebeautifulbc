@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Midway Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Midway  ·  Free</div>
 <p class="seo-desc">Midway Public Library is a small but far-reaching community library serving the West Boundary of British Columbia, drawing patrons from Midway, Bridesville, Rock Creek, Westbridge, and Beaverdell. It offers physical collections alongside digital resources including ebooks and audiobooks via Libby, office services, and accessible programming. For touring cyclists passing through this remote stretch of Boundary Country, it is one of the few public institutions in the region offering community resources.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Madrona Farm</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Madrona Farm is a long-running organic farm at the foot of Mt. Doug, just minutes from downtown Victoria, operating under The Land Conservancy and selling freshly harvested produce at a roadside veggie stand. The farm grows over 105 varieties of vegetables and 35 varieties of fruit across all four seasons, with staff picking the morning of each market day and washing produce on-site. A touring cyclist would find an exceptional selection of fresh local vegetables and fruit in a working farm setting.</p>

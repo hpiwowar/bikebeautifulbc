@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Dhillon Farms Fruits &amp; Vegetables</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Eagle Bluff</div>
 <p class="seo-desc">Dhillon Farms Fruits &amp; Vegetables is a farm-direct produce stand located near Oliver, BC, in the South Okanagan. Tagged in OSM as shop=farm, it sits in one of BC&#x27;s most productive orchard and market-garden regions, where roadside farm stands are a staple of the local landscape. Touring cyclists passing through the South Okanagan may find it a useful stop for fresh seasonal produce.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">A:Sum</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  Langley  ·  Cheap eats</div>
 <p class="seo-desc">A:Sum is a dessert and ice cream cafe located in a Langley strip mall, offering sweet treats to visitors in the Lower Mainland and Fraser Valley region. The cafe operates in a unit-level space, making it a potential stop for cyclists looking for a sweet break along the 64 Avenue corridor. No outdoor seating is available according to OSM.</p>

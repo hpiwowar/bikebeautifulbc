@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Bike Services</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Bike Services</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Abby Bike Shop</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Repair Shop  ·  Chilliwack</div>
 <p class="seo-desc">Abby Bike Shop is a family-run bicycle shop founded by Dao Tran, who brings over 30 years of bike servicing experience previously at The Bike Shop on Ware Street in Abbotsford. The shop offers repair and maintenance, sales of new bicycles across multiple brands, and a broad selection of parts and accessories. Touring cyclists will find a knowledgeable, longtime local mechanic who prioritizes speedy turnaround.</p>

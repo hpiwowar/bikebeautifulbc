@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gun Creek Campground</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Gold Bridge</div>
 <p class="seo-desc">A free, roadside rec site at the confluence of Gun Creek and Carpenter Lake reservoir, roughly 9 km northeast of Gold Bridge; swimming and boating are not recommended due to fluctuating reservoir levels and swift creek currents, but it works well as a base for exploring the surrounding area.</p>

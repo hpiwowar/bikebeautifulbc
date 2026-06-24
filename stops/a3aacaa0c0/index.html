@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Grad House Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">The Grad House Restaurant is a pub and restaurant on the University of Victoria campus, owned and operated by the Graduate Students&#x27; Society. It offers sit-down dining, table reservations by email, and in-house catering for both public and private events. Cyclists exploring the UVic campus grounds will find it a convenient meal stop, with the venue welcoming all guests.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Summer Art Gallery</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Denman Island  ·  Free</div>
 <p class="seo-desc">Arts Denman is a nonprofit arts society founded in 1985 that serves as the cultural hub of Denman Island, supporting eight partner organizations including a summer art gallery, theatre, dance collective, and music concerts. Operating from 1016 Northwest Road, it provides gallery and performance space for local artists and artisans. For a touring cyclist exploring the Southern Gulf Islands, it offers a taste of the island&#x27;s vibrant, community-driven arts scene.</p>

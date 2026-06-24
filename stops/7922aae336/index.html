@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Folietta</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Folietta is an Italian restaurant from the Wentworth Hospitality Group situated in Vancouver&#x27;s Grandview-Woodlands neighbourhood on the east side. The menu centres on pasta, meat, and fish dishes built from fresh West Coast ingredients with inspiration drawn from regional Italian culinary traditions. The restaurant offers both dinner service throughout the week and weekend brunch, with walk-ins welcomed alongside reservations.</p>

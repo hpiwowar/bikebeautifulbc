@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">New Sun Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">New Sun Restaurant is a Chinese-Canadian neighbourhood restaurant on Cambie Street in Vancouver, offering a broad menu of classic dishes spanning chop suey, egg foo yong, seafood, pork, and family dinner specials. Online ordering with curbside pickup is available through their own ordering platform, including WeChat login integration. It is a practical stop for cyclists seeking a filling sit-down or takeout meal along the Cambie corridor.</p>

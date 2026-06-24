@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Harris Green Liquor Express</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Victoria (Metro Vancouver)</div>
 <p class="seo-desc">Harris Green Liquor is a locally-owned, family-run neighbourhood liquor store in the heart of Victoria&#x27;s Harris Green district, in business since 2005. It carries a broad selection of BC craft beers, international spirits, wine, ciders, coolers, and non-alcoholic beverages. A touring cyclist moving through Victoria&#x27;s urban core could stop here to restock on drinks.</p>

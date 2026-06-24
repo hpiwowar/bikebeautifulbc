@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Side Quest Brewing Co.</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Brewery / Pub  ·  Port Coquitlam  ·  Casual</div>
 <p class="seo-desc">Side Quest Brewing Co. is a craft brewery taproom in Port Coquitlam whose beers are inspired by gaming, fantasy, and adventure. The taproom maintains a large board game library and hosts community events, making it a sociable stop for groups. The rebranded operation occupies a unit in an industrial-style complex on Sherling Place.</p>

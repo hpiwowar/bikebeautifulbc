@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Gandoum Bakery</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Café / Bakery  ·  North Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">Gandoum Bakery is a takeaway-only bakery on Marine Drive in North Vancouver, serving the West Vancouver waterfront corridor. Operating under the Gandoum Bakery Catering LTD brand, it is a neighbourhood stop for baked goods with no indoor or outdoor seating. For touring cyclists on the Marine Drive route, it offers a quick food pickup option near the shore.</p>

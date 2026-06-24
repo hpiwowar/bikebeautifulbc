@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Aviary</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Vancouver (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">The Aviary is a volunteer-run indoor climbing wall on the second floor of the AMS Nest at UBC Vancouver, open to the public regardless of UBC affiliation. It offers top rope and lead climbing, a full adaptive climbing program with specialized equipment at no extra charge, and free gear rentals for all visitors. The facility is reached via elevator within the Nest building and is served by multiple TransLink bus routes along University Boulevard.</p>

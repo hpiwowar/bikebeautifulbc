@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Tourism Information &amp; Municipal Campground Office</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Logan Lake</div>
 <p class="seo-desc">The Logan Lake Municipal Campground is a 50-site lakeview facility operated by the District of Logan Lake, offering both powered RV sites and tent-only sites. Amenities include hot showers, free WiFi, potable water taps throughout the grounds, a fish cleaning station, and a boat launch on the lake. A bike park, mountain bike and hiking trails, two disc golf courses, and a golf course are all within walking distance.</p>

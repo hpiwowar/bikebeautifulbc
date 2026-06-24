@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Sparwood Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Sparwood  ·  Free</div>
 <p class="seo-desc">Sparwood Public Library is a community hub in the Elk Valley, serving Sparwood and the surrounding Kootenay region with free library cards, print and digital collections, and a variety of programming for all ages. The library offers computer and internet access along with digital resources including e-books, audiobooks, and online learning platforms such as LinkedIn Learning. For cyclists riding the Crowsnest Pass corridor, it provides a sheltered indoor stop with connectivity in an otherwise remote stretch of southeastern BC.</p>

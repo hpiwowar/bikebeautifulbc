@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Salt Spring Inn</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Duncan  ·  Casual</div>
 <p class="seo-desc">Salt Spring Inn is a combined restaurant and accommodation property on Salt Spring Island, serving breakfast, lunch, and dinner with a kids menu. As both an inn and a full-service restaurant, it offers a sit-down dining experience in one of BC&#x27;s most popular cycling destinations. Touring cyclists riding the island&#x27;s rural roads would find it a convenient stop for a full meal.</p>

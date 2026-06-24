@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">D-Plus Curry House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  North Vancouver  ·  Casual</div>
 <p class="seo-desc">D-Plus Curry House is an Indian fast-food and sweets shop serving housemade curries, pakoras, biryanis, and tandoori dishes, all prepared fresh daily. Located near Surrey Central Station, it offers dine-in, delivery, online ordering, and a tiffin subscription service. A touring cyclist passing through Surrey will find a wide range of hearty, filling Indian dishes with a dedicated vegetarian section.</p>

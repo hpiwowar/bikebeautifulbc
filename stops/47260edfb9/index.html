@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Walmart</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Kamloops (Thompson)</div>
 <p class="seo-desc">This Walmart Supercenter on Hillside Drive in Kamloops is one of the largest one-stop retail destinations in the region, carrying a full grocery section alongside electronics, clothing, furniture, and baby products. For touring cyclists passing through Kamloops, it offers a broad resupply opportunity — from food and camping consumables to clothing and electronics — under one roof. The store provides free in-store WiFi according to OSM tags.</p>

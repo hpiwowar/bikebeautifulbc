@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Renfrew Pool</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Vancouver</div>
 <p class="seo-desc">Renfrew Pool is a City of Vancouver public swimming facility located in the Renfrew neighbourhood of East Vancouver. Operated by Vancouver Parks, Recreation &amp; Culture, it is a fee-based aquatic centre serving the local community. Touring cyclists passing through East Vancouver may find it a convenient stop for a swim or facilities access.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Beagle Pub</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Victoria (Metro Vancouver)  ·  Casual</div>
 <p class="seo-desc">Beagle Pub is a classic neighbourhood pub anchoring Victoria&#x27;s lively Cook Street Village, offering a wide range of beer on tap alongside food service in a welcoming, unpretentious setting. The Cook Street corridor is a popular cycling route connecting residential Victoria to the waterfront, making the pub a natural candidate stop for touring cyclists. OSM records the venue as wheelchair accessible.</p>

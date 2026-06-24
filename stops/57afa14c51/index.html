@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Panago</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Tsawwassen (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Panago is a Canadian pizza chain franchise in Tsawwassen offering delivery and takeout. The chain emphasizes Canadian-sourced ingredients including 100% Canadian wheat dough made fresh in-house, organic tomato sauce, and meats raised without antibiotics. Touring cyclists will find a range of pizzas, salads, and plant-based options available for quick pickup.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Omai Sushi</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Langley  ·  Cheap eats</div>
 <p class="seo-desc">Omai Sushi is a Japanese restaurant in Langley, BC, serving contemporary Japanese cuisine with an emphasis on fresh, high-quality ingredients in generous portions. It brands itself as the best-value sushi option in Langley and sits near the Langley ICBC Driver Licensing office on Willowbrook Drive. Online ordering and free delivery are available alongside dine-in service.</p>

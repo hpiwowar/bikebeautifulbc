@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Clove</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Quathiaski Cove  ·  Cheap eats</div>
 <p class="seo-desc">The Clove is a pizza and American-cuisine restaurant situated in a plaza on Quadra Island, a ferry-accessible island that attracts touring cyclists along the Discovery Islands route. The restaurant offers takeaway service and outdoor seating, making it a practical rest stop for riders exploring the island. Its location in Heriot Bay places it near the ferry terminal connecting Quadra Island to Campbell River.</p>

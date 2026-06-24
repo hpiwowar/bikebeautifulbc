@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Obanhmi</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">Obanhmi is a sandwich shop on Kingsway, Vancouver&#x27;s vibrant East Side arterial corridor, with a name that strongly suggests a Vietnamese bánh mì focus. Situated on a well-traveled cycling route connecting Burnaby to downtown Vancouver, it offers a convenient midpoint rest stop. The OSM record lists it as a sit-down restaurant with extended daily hours.</p>

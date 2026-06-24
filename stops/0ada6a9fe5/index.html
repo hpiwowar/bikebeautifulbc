@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">7-Eleven</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">A 24/7 convenience store and fuel station on Southeast Marine Drive in South Vancouver, part of the global 7-Eleven chain. It offers a full range of grab-and-go foods, hot roller grill items, espresso, Slurpee drinks, and an ATM, making it a reliable any-hour stop for cyclists needing to restock. The on-site fuel station also sells diesel.</p>

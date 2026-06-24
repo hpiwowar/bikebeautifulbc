@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pho&#x27; 54</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Courtenay  ·  Casual</div>
 <p class="seo-desc">Pho&#x27; 54 is a Vietnamese restaurant in Courtenay on Vancouver Island, serving pho and likely other Vietnamese dishes. The &#x27;courtenay&#x27; in the domain name anchors it to this cycling-friendly community on the Island Highway corridor. It would serve as a warm, hearty stop for riders looking for noodle soup after a day in the saddle.</p>

@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Mid Island Liquor</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Liquor Store  ·  Nanaimo</div>
 <p class="seo-desc">Mid Island Liquor is a locally-owned co-operative liquor retailer with 18 locations across Vancouver Island and surrounding communities, from Nanaimo and Parksville to Duncan, Ladysmith, and beyond. It recently acquired the Landlubber Liquor Store and hosts community events such as the Parksville Beer Festival, reflecting deep regional ties. For touring cyclists, it offers a reliable stop for beverages across a wide stretch of the island.</p>

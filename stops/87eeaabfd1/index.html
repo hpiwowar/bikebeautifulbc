@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Boemma Euro Foods &amp; Deli</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Burnaby</div>
 <p class="seo-desc">Boemma Euro Foods &amp; Deli is a European specialty food shop and deli located on Burnaby&#x27;s busy Kingsway corridor, stocking traditional imported European products alongside freshly made items from their in-house kitchen. The shop also offers catering services including charcuterie boards, meat platters, and custom orders. It&#x27;s a distinctive provisioning stop for cyclists who appreciate specialty European ingredients and prepared deli goods.</p>

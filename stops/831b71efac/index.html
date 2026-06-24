@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Neptune Chinese Kitchen</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Restaurant  ·  Vancouver (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Neptune Chinese Kitchen is a Chinese restaurant located on the UBC Vancouver campus offering both western-style and traditional Chinese dishes. The menu is notably broad, spanning dim sum, congee, BBQ meats, hot pot, fried noodles, and a large tofu/vegetable selection. Situated near Saveonfood on Shrum Lane, it makes a convenient full-meal stop for cyclists exploring the UBC peninsula.</p>

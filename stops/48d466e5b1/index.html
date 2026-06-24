@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Nicola Valley Art Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Merritt  ·  Free</div>
 <p class="seo-desc">The Nicola Valley Arts Centre is a community arts hub in Merritt operated by the Nicola Valley Community Arts Council, offering a rotating art gallery, an artisan gift shop, and classes and events for children and adults. Located on Voght Street beside the Kekuli Cafe, it serves as a creative gathering place for the Thompson-Nicola region. Touring cyclists will find a lively cultural stop with regular exhibitions and a locally curated gift shop.</p>

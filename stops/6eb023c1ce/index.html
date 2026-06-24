@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chemainus Visitor Centre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Visitor Centre  ·  Chemainus (Metro Vancouver)</div>
 <p class="seo-desc">The Chemainus Visitor Centre is the official tourism information office for the Chemainus and District area, operated by the Chemainus + District Chamber of Commerce. Chemainus is widely known as &#x27;The Little Town That Did,&#x27; famous for its large-scale outdoor murals depicting local history. A touring cyclist stopping here can expect local maps, route suggestions, and area information from knowledgeable staff.</p>

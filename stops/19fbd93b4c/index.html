@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Camping</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Camping</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Haida Gwaii Glamping</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Private Campground / RV Park  ·  Tlell</div>
 <p class="seo-desc">A boutique luxury glamping resort in Tlell on Haida Gwaii, with 10 cedar prospector tents (4 ocean-facing, 6 in the rainforest), each with a private ensuite and deck; complimentary breakfast, cedar spa tub, and geodesic dome kitchen are included, but rates are premium and the site is mid-spring to fall only — reachable by BC Ferries from Prince Rupert.</p>

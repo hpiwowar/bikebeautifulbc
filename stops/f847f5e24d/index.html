@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Old Barn Community Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Vancouver (Metro Vancouver)</div>
 <p class="seo-desc">A residential community centre on UBC&#x27;s campus operated by the University Neighbourhoods Association, serving the surrounding residential neighbourhoods. The centre hosts family events, recreation programs, fitness facilities, and community services. It functions as a civic hub for UBC-area residents rather than a visitor-facing attraction.</p>

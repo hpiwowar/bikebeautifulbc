@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Agi Hall</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Community Centre  ·  Gabriola</div>
 <p class="seo-desc">Agi Hall is a community hall on Gabriola Island rebuilt in 1967 after a fire, operated by the Gabriola Agricultural Co-op. It hosts the weekly Growers and Makers Market showcasing local farmers and artisans, and is available for community rentals. A touring cyclist passing through Gabriola could time a visit to coincide with the Saturday market for fresh local produce and handmade goods.</p>

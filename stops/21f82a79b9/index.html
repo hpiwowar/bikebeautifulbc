@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Fort St. James Public Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Fort St. James  ·  Free</div>
 <p class="seo-desc">A small-town public library in the historic fur-trade community of Fort St. James on Stuart Lake, whose Carrier-language name Nawhulnukw bayoh means &#x27;house for shared stories.&#x27; The library offers free computer and internet access, community event listings, and a wealth of local-history and First Nations cultural resources. The surrounding area features the Fort St. James National Historic Site, provincial parks, and Stuart Lake Golf Club.</p>

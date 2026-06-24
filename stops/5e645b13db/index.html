@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Tennis Centre</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Community Centre  ·  Walnut Grove  ·  Low</div>
 <p class="seo-desc">The Tennis Centre is a multi-location indoor and outdoor tennis facility founded by internationally recognized coach Larry Jurovich, with three Lower Mainland locations in Surrey, Langley, and Coquitlam. The Surrey location is home to the only outdoor red clay courts in Western Canada, while the Langley facility includes a fitness centre and childcare services alongside six indoor courts. The centre offers a full range of programming for juniors and adults at all skill levels.</p>

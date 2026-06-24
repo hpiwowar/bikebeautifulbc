@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Habitat</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Burnaby  ·  Casual</div>
 <p class="seo-desc">Habitat Pub is located on the BCIT Burnaby campus in Building SE02, serving the college community at 3700 Willingdon Avenue. It appears to have previously operated under the name Professor Mugs Pub based on its Facebook presence. As a campus pub, its primary clientele is BCIT students and staff, though Canadian campus pubs are generally open to the public.</p>

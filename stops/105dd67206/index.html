@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Old Street Express</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Richmond (Metro Vancouver)  ·  Cheap eats</div>
 <p class="seo-desc">Old Street Express is a Chinese fast-food outlet in Richmond, BC, tagged in OpenStreetMap as operating at ground level within an indoor space — consistent with a food-court or mall unit. The cuisine tag suggests Chinese fare typical of quick-service counters common in Richmond&#x27;s dense dining scene. A touring cyclist passing through Richmond&#x27;s urban core may find it a convenient stop for a fast hot meal.</p>

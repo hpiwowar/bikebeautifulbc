@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Starbucks</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Fast Food / Chain  ·  Aldergrove  ·  Cheap eats</div>
 <p class="seo-desc">A Starbucks Coffee location on Fraser Highway in the Fraser Valley, one of the busiest arterial corridors in the Lower Mainland. As a drive-through and walk-in café, it offers the full Starbucks espresso and food menu in a standalone building. Touring cyclists on the Fraser Valley route will find it a reliable stop for a caffeine fix and food between communities.</p>

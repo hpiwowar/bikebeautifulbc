@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Switch</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Brewery / Pub  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Switch is a bar and karaoke venue on Vancouver&#x27;s Robson Street offering private karaoke suites, a food menu, and a drink menu. Located in the heart of the West End, it draws a lively evening crowd. The venue is wheelchair accessible per OSM tags and sits on one of Vancouver&#x27;s most walkable and cyclable commercial corridors.</p>

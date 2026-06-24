@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The British Store</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Grocery Store  ·  Surrey (Metro Vancouver)</div>
 <p class="seo-desc">Family-run specialty British grocery store founded by London-born Andy Bradshaw, claiming to be the largest British grocery store in North America with over 1,400 imported products. Located in Surrey since 2014, it stocks a wide range of imported British food cupboard staples, drinks, sweets, chocolate, crisps, and in-store-only chilled and frozen goods. It also operates as the exclusive wholesaler for GB Foods, a producer of traditional British-style meat products made on-site.</p>

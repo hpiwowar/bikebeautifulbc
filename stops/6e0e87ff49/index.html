@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Two Roads Farm</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Farm Stand  ·  Denman Island</div>
 <p class="seo-desc">Two Roads Farm is a farm shop on Vancouver Island tagged in OpenStreetMap as a direct-farm retail outlet. Farm shops in this region typically sell locally grown produce, eggs, and seasonal goods directly to customers. A touring cyclist passing through would likely find fresh local food, though the full range of offerings could not be confirmed.</p>

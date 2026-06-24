@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Chatime</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Café / Bakery  ·  North Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Chatime is a globally recognised bubble tea franchise with over 1,300 outlets worldwide, specialising in freshly brewed milk teas, fruit teas, smoothies, and signature boba drinks. This Hastings Street location operates as a takeout-focused shop offering a wide range of cold and warm beverages. Cyclists passing through the area could stop for a quick, customisable drink.</p>

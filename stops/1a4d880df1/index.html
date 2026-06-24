@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lucky House</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Valemount  ·  Cheap eats</div>
 <p class="seo-desc">Lucky House is a Chinese restaurant (幸運樓) in Valemount, BC, a small mountain community at the crossroads of several major cycling corridors through the Canadian Rockies. The restaurant operates on a pickup-only model with online ordering, making it convenient for cyclists to call ahead. Valemount is a key resupply stop for riders on the Icefields Parkway approach and other long-distance routes through the region.</p>

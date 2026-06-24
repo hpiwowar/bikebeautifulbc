@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Metro Theatre</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Museum / Gallery  ·  Vancouver (Metro Vancouver)  ·  Moderate</div>
 <p class="seo-desc">Metro Theatre is a community theatre in Vancouver&#x27;s Marpole neighbourhood that has been producing comedies, mysteries, and musicals since its founding in 1963 by a collective of local theatre groups. The 300-seat auditorium and 50-person upstairs lounge host a full annual season of performances ranging from musicals to classic mysteries. It has served as a launching pad for many artists who have gone on to careers in theatre, film, and television.</p>

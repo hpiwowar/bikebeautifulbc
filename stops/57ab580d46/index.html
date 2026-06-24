@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Megabite Pizza</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Fast Food / Chain  ·  Vancouver (North Shore)  ·  Cheap eats</div>
 <p class="seo-desc">Megabite Pizza is a BC-based fast-food pizza chain with multiple locations across Greater Vancouver, offering dine-in, takeout, and delivery from a menu spanning pizzas, wings, poutine, and sides. The chain carries vegetarian pizza options and runs a loyalty rewards program for repeat customers. A cycling tourist stopping here would find an accessible indoor space with no outdoor seating.</p>

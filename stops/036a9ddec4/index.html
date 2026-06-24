@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Geoffrey R Weller Library</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Charella Garden  ·  Free</div>
 <p class="seo-desc">The Geoffrey R. Weller Library is the main academic library of the University of Northern British Columbia, located on the Prince George campus. It serves both the university community and external community members who can become registered patrons. Touring cyclists passing through Prince George may find it a quiet destination for research, study space, or print services.</p>

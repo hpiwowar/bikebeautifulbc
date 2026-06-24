@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Hiroshi Ramen</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Surrey  ·  Cheap eats</div>
 <p class="seo-desc">Hiroshi Ramen is a Japanese ramen restaurant on Fraser Highway in Surrey, offering a focused menu of traditional broth styles — Shio, Shoyu, Miso, Mayu, and Sesame — alongside udon and Japanese appetizers like karaage, gyoza, and takoyaki. It operates as the Surrey branch of the Hiroshi Japanese Kitchen brand. Online ordering with both pickup and delivery options is available.</p>

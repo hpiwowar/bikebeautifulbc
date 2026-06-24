@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Accommodation</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Accommodation</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">The Crystal Lodge</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Hotel / Motel  ·  Whistler (Sea to Sky)  ·  Upscale</div>
 <p class="seo-desc">Crystal Lodge is a long-established full-service hotel sitting in the heart of Whistler Village, steps from the ski hill and Bike Park, with over 30 years of operation. It caters explicitly to cyclists with a dedicated bike valet, secure complimentary bike storage, and on-site washing and tuning stations. Touring cyclists will also appreciate the heated outdoor pool, hot tub, and sauna for post-ride recovery.</p>

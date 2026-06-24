@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">VIRL: Campbell River Branch</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Library  ·  Campbell River  ·  Free</div>
 <p class="seo-desc">The Campbell River branch of the Vancouver Island Regional Library serves the second-largest population in the VIRL system, situated in the heart of downtown on Shoppers Row on the unceded traditional territory of the Ligwiłda&#x27;xw people. The branch offers bookable meeting rooms, digital learning resources, and a broad range of community programs spanning literacy, technology, and local culture. It is a well-established civic anchor for a community described as poised for significant growth.</p>

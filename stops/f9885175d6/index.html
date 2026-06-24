@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Pizza Coming Soon</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver (North Shore)  ·  Casual</div>
 <p class="seo-desc">Pizza Coming Soon is an evening pizzeria tucked into Vancouver&#x27;s historic Chinatown on East Pender Street, operating under the parent company Laughing Seal Dreams Worldwide Enterprises Inc. It offers dine-in service alongside delivery through DoorDash, Uber Eats, and Skip the Dishes. The restaurant has a no-smoking policy and accepts reservations for larger groups via email.</p>

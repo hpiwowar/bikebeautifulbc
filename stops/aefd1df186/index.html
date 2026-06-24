@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Attractions</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Attractions</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Beaty Biodiversity Museum</h1>
 <div class="seo-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  Museum / Gallery  ·  Vancouver (Metro Vancouver)  ·  Low</div>
 <p class="seo-desc">Vancouver&#x27;s natural history museum on the UBC campus, home to a 26-metre-long blue whale skeleton suspended in the atrium and over two million biological specimens. Exhibits span 20,000 square feet covering insects, birds, fossils, mammals, and dinosaur trackways from BC&#x27;s early Cretaceous period. Operated by UBC Faculty of Science, with an audio tour available for self-guided exploration.</p>

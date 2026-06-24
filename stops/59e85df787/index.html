@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Lung Duck Tong Restaurant</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Barkerville  ·  Casual</div>
 <p class="seo-desc">The Lung Duck Tong Restaurant is a long-standing local favourite situated within Barkerville Historic Town &amp; Park, the largest living history museum in western North America. Renowned for fresh, authentic Chinese cooking, it draws visitors from around the world to this remote gold-rush heritage town deep in the Cariboo. For touring cyclists making the journey up Highway 26, it offers a distinctive dining experience unlike anything else along the route.</p>

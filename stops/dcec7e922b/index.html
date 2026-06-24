@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Food &amp; Drink</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Food &amp; Drink</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">chefhyve</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Restaurant  ·  Vancouver  ·  Cheap eats</div>
 <p class="seo-desc">chefhyve is a 100% locally owned Vancouver restaurant on Kingsway that bans canned goods and microwaves outright, preparing every dish fresh in small batches using seasonal, locally sourced ingredients. The diverse menu spans fish and chips, creative wraps, burgers, burritos, and salads, with the entire menu certified halal. Customer reviews consistently single out the fish sandwich and garlic chicken wrap as standout items.</p>

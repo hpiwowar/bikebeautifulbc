@@ -141,7 +141,8 @@ body {
 })();
 </script>
 <main class="seo-main">
-<nav class="seo-breadcrumb"><a href="/stops/">← All listings</a> / Groceries</nav>
+<nav class="seo-breadcrumb"><a href="/stops/" id="seo-back" onclick="history.back();return false;">← <span id="seo-back-label">All listings</span></a> / Groceries</nav>
+<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('seo-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="seo-h1">Alberni Co-op</h1>
 <div class="seo-meta"><span class="badge badge-info">Info</span>  ·  Convenience Store  ·  Alberni</div>
 <p class="seo-desc">Alberni Co-op is a member-owned co-operative grocery and retail operation serving Port Alberni on Vancouver Island, affiliated with the Western Canada Co-operative Retailing System. As a true local co-op, it is governed by community members and tailored to local needs, and also operates a liquor store and gas bar/convenience component. For a touring cyclist rolling into Port Alberni, it represents a full-service community grocery stop with the breadth typical of Western Canadian Co-op associations.</p>
