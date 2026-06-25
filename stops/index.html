@@ -109,10 +109,28 @@ body {
 .main { max-width: 1100px; margin: 0 auto; padding: 28px 28px 48px; }
 
 .category-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-.cat-btn { padding: 9px 16px; border: 1.5px solid #E0D9CC; background: #FFFDF9; border-radius: 18px; font-size: 14px; color: #636363; cursor: pointer; transition: all 0.14s; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
+.cat-btn { padding: 9px 16px; border: 1.5px solid #E0D9CC; background: #FFFDF9; border-radius: 18px; font-size: 14px; color: #636363; cursor: pointer; transition: all 0.14s; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
 .cat-btn.active { border-color: #1E7D96; background: #1E7D96; color: white; font-weight: 600; }
 .cat-btn:hover:not(.active) { border-color: #999; background: #FFF6E5; }
 .cat-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+.nav-tagline { font-size: 13px; color: #57534e; margin: 0 0 12px; }
+.subcat-pill-row { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 0; border-top: 0.5px solid #E5E7EB; border-bottom: 0.5px solid #E5E7EB; margin-bottom: 10px; }
+.subcat-pill { display: inline-flex; align-items: center; gap: 4px; padding: 5px 11px; border-radius: 16px; border: 0.5px solid #d6d3d1; background: #fafaf9; font-size: 12px; color: #57534e; cursor: pointer; white-space: nowrap; transition: all 0.12s; }
+.subcat-pill:hover:not(.active) { border-color: #999; background: #FFF6E5; }
+.subcat-pill.active { border-color: #1E7D96; background: #E1F5EE; color: #0F6E56; }
+.subcat-pill-count { font-size: 10px; opacity: 0.7; }
+.search-hint { font-size: 13px; color: #6B746B; display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.legend-status { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #9AA29A; }
+.search-hint-eg { font-family: ui-monospace, monospace; font-size: 12px; color: #1E7D96; background: #FFF6E5; border: 1px solid #F0E6C5; border-radius: 5px; padding: 2px 8px; cursor: pointer; transition: background 0.12s; }
+.search-hint-eg:hover { background: #FBEFD0; }
+.comm-chip { display: inline-flex; align-items: center; gap: 8px; background: #E1F5EE; color: #0F6E56; border: 0.5px solid #9FD9C9; border-radius: 18px; padding: 7px 14px; font-size: 14px; margin: 0 0 16px; }
+.comm-chip strong { font-weight: 700; }
+.comm-chip-x { cursor: pointer; font-size: 13px; opacity: 0.7; padding: 0 2px; }
+.comm-chip-x:hover { opacity: 1; }
+.trail-links { font-size: 12px; color: #a8a29e; margin: 8px 0 20px; }
+.trail-links a { color: #57534e; text-decoration: none; }
+.trail-links a:hover { text-decoration: underline; }
 
 .card { background: #FFFDF9; border-radius: 18px; border: 1px solid #E5E7EB; }
 .card + .card { margin-top: 20px; }
@@ -123,7 +141,7 @@ body {
 .cat-header-text { flex: 1; }
 .cat-header h2 { font-family: "Archivo", sans-serif; font-size: 24px; font-weight: 700; color: #1F514C; margin-bottom: 4px; letter-spacing: -0.02em; }
 .cat-header p { color: #6b7280; font-size: 15px; max-width: 600px; margin-bottom: 8px; }
-.criteria-inline { font-size: 13px; color: #6b7280; }
+.criteria-inline { font-size: 15px; color: #6B746B; }
 .criteria-link { color: #1E7D96; font-weight: 600; cursor: pointer; margin-left: 4px; }
 .criteria-link:hover { text-decoration: underline; }
 
@@ -135,8 +153,7 @@ body {
   .site-header { padding: 16px 20px; }
   .header-text h1 { font-size: 20px; }
   .main { padding: 20px 14px 40px; }
-  .view-toggle { width: 100%; }
-  .view-toggle button { flex: 1; padding: 9px 10px; font-size: 13px; }
+  .nav-tagline { font-size: 13px; }
   .cat-header { padding: 20px 20px 16px; flex-direction: column; gap: 12px; }
   .cat-icon-circle { width: 48px; height: 48px; }
   .cat-icon-circle svg { width: 22px; height: 22px; }
@@ -163,13 +180,6 @@ body {
   .route-cat-icon-sm { width: 34px; height: 34px; }
   .route-cat-icon-sm svg { width: 15px; height: 15px; }
   .route-cat-name { font-size: 15px; }
-  .modal { max-height: 95vh; border-radius: 10px; }
-  .modal-header { padding: 18px 20px 12px; }
-  .modal-title { font-size: 18px; }
-  .modal-body { padding: 16px 20px 24px; }
-  .modal-detail-grid { grid-template-columns: 1fr; }
-  .modal-logo-photo { flex-direction: column; }
-  .modal-detail-grid { grid-template-columns: 1fr; }
 }
 .col-left { padding: 28px 32px 32px; background: #FFFDF9; }
 .col-right { padding: 28px 32px 32px; border-left: 1px solid #EEE; }
@@ -189,8 +199,10 @@ body {
 .optional-pills { display: flex; flex-wrap: wrap; gap: 6px; }
 .opt-pill { display: inline-block; padding: 5px 11px; background: #FFFDF9; color: #4b5563; border: 1px solid #E5E7EB; border-radius: 16px; font-size: 12px; font-weight: 500; white-space: nowrap; }
 
-.examples-toolbar { padding: 20px 36px 16px; border-bottom: 1px solid #EEE; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-.examples-toolbar h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; }
+.examples-toolbar { padding: 24px 36px 18px; border-bottom: 1px solid #EEE; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px 20px; }
+.examples-toolbar .toolbar-head { min-width: 0; }
+.examples-toolbar h3 { font-family: "Archivo", sans-serif; font-size: clamp(20px,3vw,26px); font-weight: 700; color: #1F514C; letter-spacing: -0.02em; }
+.examples-toolbar .criteria-inline { margin-top: 6px; }
 .examples-toolbar .legend { display: flex; gap: 12px; align-items: center; font-size: 12px; color: #636363; flex-wrap: wrap; }
 .examples-toolbar .legend .badge { font-size: 11px; padding: 3px 10px; border: 1.5px solid; transition: all 0.15s; }
 .examples-toolbar .legend .badge-sector { background: #FFFDF9; color: #4A3C31; border-color: #4A3C31; }
@@ -215,7 +227,7 @@ body {
 .filter-bar { padding: 16px 36px; border-bottom: 1px solid #EEE; background: #FFFDF9; }
 .filter-bar-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
 .filter-bar-top label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #999; flex-shrink: 0; }
-.search-input { padding: 6px 12px; border: 1px solid #DDD; border-radius: 6px; font-size: 13px; color: #141414; background: #FFFFFF; width: 240px; max-width: 100%; }
+.search-input { padding: 12px 15px; border: 1px solid #DDD8C7; border-radius: 9px; font-size: 15px; color: #141414; background: #FFFFFF; width: 320px; max-width: 100%; }
 .search-input::placeholder { color: #BBB; }
 .all-listings-title-area { display: flex; flex-direction: column; gap: 2px; }
 .all-count-subtitle { font-size: 14px; color: #4b5563; }
@@ -257,19 +269,18 @@ body {
 
 .listing-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 8px; }
 .listing-badges { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; }
-.listing-name { font-size: 17px; font-weight: 700; color: #141414; }
-.listing-location { font-size: 13px; color: #9CA3AF; margin-top: 2px; margin-bottom: 10px; font-weight: 400; }
-.listing-subcat { color: #9CA3AF; font-size: 13px; font-weight: 400; }
-.listing-price-band { color: #9CA3AF; font-size: 13px; font-weight: 400; }
-.modal-subcat { color: #999; font-size: 13px; }
-.listing-desc { font-size: 14px; color: #4b5563; margin-bottom: 16px; line-height: 1.5; }
+.listing-name { font-size: 21px; font-weight: 700; color: #141414; letter-spacing: -0.01em; }
+.listing-location { font-size: 15px; color: #8A938A; margin-top: 4px; margin-bottom: 12px; font-weight: 400; }
+.listing-subcat { color: #8A938A; font-size: 15px; font-weight: 400; }
+.listing-price-band { display: inline-block; font-size: 13px; font-weight: 500; color: #57534e; background: #f5f5f4; border: 0.5px solid #e7e5e4; border-radius: 999px; padding: 2px 9px; margin-left: 6px; vertical-align: 1px; }
+.listing-desc { font-size: 15.5px; color: #3C4A43; margin-bottom: 18px; line-height: 1.55; }
 .listing-network { font-size: 11px; color: #4A3C31; font-weight: 600; margin-top: 4px; }
 .card-body { display: flex; gap: 24px; align-items: flex-start; }
 .card-body-left { flex: 1; min-width: 0; }
-.card-body-right { flex-shrink: 0; width: 200px; border-left: 1px solid #EDE8DF; padding-left: 20px; display: flex; flex-direction: column; }
-.card-req-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #BBB; margin-bottom: 8px; }
-.card-req-list { display: flex; flex-direction: column; gap: 5px; }
-.card-req-item { display: flex; align-items: baseline; gap: 6px; font-size: 12px; line-height: 1.4; }
+.card-body-right { flex-shrink: 0; width: 240px; border-left: 1px solid #EDE8DF; padding-left: 24px; display: flex; flex-direction: column; }
+.card-req-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #9AA29A; margin-bottom: 11px; }
+.card-req-list { display: flex; flex-direction: column; gap: 8px; }
+.card-req-item { display: flex; align-items: baseline; gap: 8px; font-size: 15px; line-height: 1.4; }
 .card-req-symbol { font-weight: 700; width: 12px; flex-shrink: 0; text-align: center; }
 .card-req-yes .card-req-symbol { color: #2E8A36; }
 .card-req-yes .card-req-name { color: #374151; }
@@ -278,7 +289,7 @@ body {
 .card-req-null .card-req-symbol { color: #D1D5DB; }
 .card-req-null .card-req-name { color: #D1D5DB; }
 
-.card-outer { display: flex; gap: 16px; align-items: flex-start; }
+.card-outer { display: flex; gap: 20px; align-items: flex-start; }
 .card-inner { flex: 1; min-width: 0; }
 .card-icon-circle { width: 48px; height: 48px; border-radius: 50%; background: #EDF3F4; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #1E7D96; margin-top: 2px; }
 .card-icon-circle svg { width: 22px; height: 22px; }
@@ -289,13 +300,13 @@ body {
 @media (max-width: 700px) { .card-icon-circle { display: none; } }
 .listing-name-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 2px; }
 .listing-name-row .listing-name { flex: 1 1 auto; min-width: 0; }
-.view-details-wrap { margin-top: auto; padding-top: 12px; }
-.view-details-link { font-size: 13px; color: #1E7D96; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 2px; }
+.view-details-wrap { margin-top: auto; padding-top: 16px; }
+.view-details-link { font-size: 15px; color: #1E7D96; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 2px; }
 .view-details-link:hover { text-decoration: underline; }
 
-.amenities-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #BBB; margin-bottom: 8px; }
-.amenity-pills { display: flex; flex-wrap: wrap; gap: 5px; }
-.pill { padding: 4px 10px; border-radius: 14px; font-size: 11.5px; font-weight: 500; white-space: nowrap; }
+.amenities-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #9AA29A; margin-bottom: 10px; }
+.amenity-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+.pill { padding: 6px 12px; border-radius: 999px; font-size: 13px; font-weight: 500; white-space: nowrap; }
 .pill-yes { background: #E8F5E9; color: #2E8A36; border: 1px solid #C8E6C9; cursor: pointer; transition: background 0.12s; }
 .pill-yes:hover { background: #D0EED2; }
 .pill-yes .note-star { color: #1E7D96; font-weight: 800; font-size: 14px; }
@@ -304,46 +315,8 @@ body {
 .no-results { text-align: center; padding: 40px 20px; color: #999; font-size: 14px; }
 .no-results a { color: #1E7D96; cursor: pointer; text-decoration: underline; }
 
-/* ---- MODAL ---- */
-.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; visibility: hidden; transition: opacity 0.2s; }
-.modal-overlay.open { opacity: 1; visibility: visible; }
-.modal { background: #FFFFFF; border-radius: 20px; width: 100%; max-width: 680px; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
-.modal-header { padding: 24px 28px 16px; border-bottom: 1px solid #EEE; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
-.modal-header-left { flex: 1; }
-.modal-title { font-size: 22px; font-weight: 700; color: #141414; }
-.modal-location { font-size: 14px; color: #636363; margin-top: 4px; }
-.modal-network { font-size: 12px; color: #4A3C31; font-weight: 600; margin-top: 6px; }
-.modal-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
-.modal-close { width: 32px; height: 32px; border: none; background: #FFFDF9; border-radius: 50%; font-size: 18px; color: #636363; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.modal-close:hover { background: #E5E7EB; }
-.modal-body { padding: 20px 28px 28px; }
-.modal-section { margin-bottom: 24px; }
-.modal-section:last-child { margin-bottom: 0; }
-.modal-section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 10px; }
-.modal-desc { font-size: 14px; color: #4b5563; line-height: 1.7; }
-.modal-photo { width: 100%; height: 160px; background: #FFFDF9; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #BBB; font-size: 13px; border: 2px dashed #DDD; }
-.modal-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.modal-detail-item { font-size: 13px; }
-.modal-detail-item .label { font-weight: 600; color: #999; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
-.modal-detail-item .value { color: #141414; margin-top: 2px; }
-.modal-detail-item a { color: #1E7D96; text-decoration: none; }
-.modal-detail-item a:hover { text-decoration: underline; }
-.modal-routes { display: flex; flex-direction: column; gap: 8px; }
 .route-tag { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #FFF6E5; border: 1px solid #D6EDF3; border-radius: 8px; font-size: 13px; color: #1E7D96; font-weight: 500; text-decoration: none; cursor: pointer; transition: background 0.12s; }
 .route-tag:hover { background: #E4F2F7; }
-.modal-pills { display: flex; flex-wrap: wrap; gap: 5px; }
-.modal-pill-yes { padding: 5px 12px; border-radius: 14px; font-size: 12px; font-weight: 500; background: #E8F5E9; color: #2E8A36; border: 1px solid #C8E6C9; }
-.modal-pill-yes .note-star { color: #1E7D96; font-weight: 800; font-size: 14px; }
-.modal-pill-no { padding: 5px 12px; border-radius: 14px; font-size: 12px; font-weight: 500; background: #FFFDF9; color: #D1D5DB; border: 1px solid #F3F4F6; text-decoration: line-through; }
-.req-list { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
-.req-item { display: flex; align-items: baseline; gap: 8px; font-size: 13px; }
-.req-symbol { font-weight: 700; width: 14px; text-align: center; flex-shrink: 0; }
-.req-item-yes .req-symbol { color: #2E8A36; }
-.req-item-yes .req-name { color: #1a1a1a; }
-.req-item-no .req-symbol { color: #DC2626; }
-.req-item-no .req-name { color: #6b7280; text-decoration: line-through; }
-.req-item-null .req-symbol { color: #9CA3AF; }
-.req-item-null .req-name { color: #9CA3AF; }
 .click-hint { font-size: 11px; color: #BBB; text-align: center; padding: 8px 36px 20px; font-style: italic; }
 
 .demo-tag { font-size: 13px; font-style: normal; color: rgba(13,64,112,0.55); font-weight: 500; margin-left: 16px; letter-spacing: 0.03em; text-transform: uppercase; }
@@ -360,15 +333,7 @@ body {
 .demo-toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #636363; cursor: pointer; user-select: none; }
 .demo-toggle input { width: 16px; height: 16px; accent-color: #1E7D96; cursor: pointer; }
 
-.modal-tips { margin-top: 16px; padding: 14px 16px; background: #FFFDF9; border-radius: 8px; font-size: 13px; color: #4A3C31; line-height: 1.5; }
-.modal-tips strong { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; display: block; margin-bottom: 6px; color: #92400E; }
 
-.modal-notes { margin-top: 14px; display: flex; flex-direction: column; gap: 4px; }
-.modal-note-item { font-size: 12px; color: #4b5563; line-height: 1.4; padding: 6px 10px; background: #FFF6E5; border-left: 3px solid #1E7D96; border-radius: 0 6px 6px 0; }
-.modal-note-item strong { color: #1E7D96; font-weight: 600; }
-
-.verify-banner { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #92400E; line-height: 1.5; margin-bottom: 20px; }
-.verify-banner a { color: #92400E; font-weight: 600; text-decoration: underline; cursor: pointer; }
 .verified-banner { background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #15803D; line-height: 1.5; margin-bottom: 20px; }
 
 .legend-badge-wrap { position: relative; display: inline-flex; cursor: pointer; }
@@ -378,14 +343,7 @@ body {
 .listing-logo { width: 40px; height: 40px; border-radius: 6px; background: #FFFDF9; border: 1px solid #E5E7EB; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #999; flex-shrink: 0; text-align: center; line-height: 1.1; }
 .listing-name-row { display: flex; align-items: center; gap: 12px; }
 
-.modal-logo-photo { display: flex; gap: 16px; align-items: flex-start; }
-.modal-logo-box { width: 80px; height: 80px; border-radius: 10px; background: #FFFDF9; border: 2px dashed #DDD; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #999; text-align: center; flex-shrink: 0; }
-.modal-photo-main { flex: 1; }
 
-.view-toggle { display: flex; border: 1.5px solid #1E7D96; border-radius: 8px; overflow: hidden; margin-bottom: 24px; width: fit-content; }
-.view-toggle button { padding: 9px 22px; border: none; background: #FFFDF9; color: #1E7D96; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.14s; }
-.view-toggle button:not(:last-child) { border-right: 1.5px solid #1E7D96; }
-.view-toggle button.active { background: #1E7D96; color: white; font-weight: 600; }
 
 .route-selector { margin-bottom: 24px; }
 .route-select { padding: 10px 16px; border: 1.5px solid #DDD; border-radius: 8px; font-size: 14px; color: #141414; background: #FFFFFF; width: 100%; max-width: 400px; cursor: pointer; }
@@ -441,35 +399,32 @@ body {
 </script>
 
 <div class="main">
-  <div style="margin-bottom:28px;">
+  <div style="margin-bottom:20px;">
     <h1 style="font-family:'Archivo',sans-serif;font-size:32px;font-weight:400;color:#1F514C;margin-bottom:10px;letter-spacing:-0.03em;">Stops &amp; Services</h1>
-    <p style="font-size:16px;color:#4b5563;line-height:1.5;max-width:720px;">Stops and services across BC, annotated with amenities reflecting the <a href="https://bccycletourism.ca/we-welcome-cyclists/" style="color:#1F514C;font-weight:700;text-decoration:underline;">We Welcome Cyclists</a> standards, designed for what touring cyclists actually need to know. For now the scope is limited to our initial ten listed <a href="/routes" style="color:#1F514C;font-weight:700;text-decoration:underline;">Routes</a>, but coverage of the whole province coming soon, stay tuned!</p>
+    <p style="font-size:16px;color:#3C4A43;line-height:1.5;max-width:940px;">Stops and services across BC, annotated with amenities reflecting the <a href="https://bccycletourism.ca/we-welcome-cyclists/" style="color:#1F514C;font-weight:700;text-decoration:underline;">We Welcome Cyclists</a> standards, designed for what touring cyclists actually need to know. Browse 18,000+ cycling-friendly stops province-wide.</p>
     <hr style="border:none;border-top:1px solid #EEE;margin-top:20px;margin-bottom:0;" />
   </div>
-  <div class="view-toggle" id="view-toggle">
-    <button class="active" onclick="setView('category')">By Category</button>
-    <button onclick="setView('route')">By Route</button>
-    <button onclick="setView('all')">All Listings</button>
+  <div id="top-nav">
+    <div class="category-nav" id="category-nav"></div>
+    <div class="subcat-pill-row" id="subcat-pill-row" style="display:none"></div>
+    <p class="trail-links"><a onclick="setView('route');return false;" style="cursor:pointer;">Browse by trail →</a> &nbsp;·&nbsp; <a href="/stops/communities/">Browse by community →</a></p>
   </div>
   <div id="view-category">
-    <div class="category-nav" id="category-nav"></div>
-    <div class="card" id="criteria-card"></div>
     <div class="card" id="examples-card"><div style="padding:40px;text-align:center;color:#9CA3AF;font-size:14px;">Loading listings…</div></div>
   </div>
   <div id="view-route" style="display:none">
+    <p class="trail-links"><a onclick="setView('category');return false;" style="cursor:pointer;">← Browse by category</a></p>
     <div class="category-nav" id="route-category-nav"></div>
     <div class="route-selector" id="route-selector"></div>
     <div class="card" id="route-card"></div>
   </div>
   <div id="view-all" style="display:none">
+    <p class="trail-links"><a onclick="setView('category');return false;" style="cursor:pointer;">← Browse by category</a></p>
     <div class="card" id="all-card"></div>
   </div>
 </div>
 
 </div><!-- end wwc-root -->
-<div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this)closeModal()">
-  <div class="modal" id="modal-content"></div>
-</div>
 
 <script>
 var INFO_FIELDS = [
@@ -517,16 +472,18 @@ function toggleDemo() {
   showDemo = !showDemo;
   document.querySelectorAll(".demo-cb").forEach(function(cb) { cb.checked = showDemo; });
   var cat = getCat();
-  if (currentView === "category") { renderSubcatGrid(cat); updateFilterPills(cat); updateListings(cat); }
+  if (currentView === "category") { renderSubcatPillRow(cat); updateFilterPills(cat); updateListings(cat); }
   if (currentView === "route") renderRouteCard();
   if (currentView === "all") { buildAllCatDropdown(); updateAllListings(); }
   updateHash();
 }
 
 function setCat(id) {
-  currentCatId = id; searchText = ""; activeFilters = []; activeReqFilters = []; activeSubcat = null;
-  document.querySelectorAll(".cat-btn").forEach(function(btn) { btn.classList.toggle("active", btn.dataset.cat === id); });
+  currentCatId = id; activeFilters = []; activeReqFilters = []; activeSubcat = null;
+  if (currentView !== "category") setView("category");
+  document.querySelectorAll("#category-nav .cat-btn").forEach(function(btn) { btn.classList.toggle("active", btn.dataset.cat === id); });
   renderAll();
+  var _sb = document.getElementById("search-box"); if (_sb) _sb.value = searchText;  // keep search across category switches
   updateHash();
 }
 function getCat() { return categories.find(function(c) { return c.id === currentCatId; }); }
@@ -534,14 +491,15 @@ function getCat() { return categories.find(function(c) { return c.id === current
 function renderCategoryNav() {
   document.getElementById("category-nav").innerHTML = categories.map(function(c) {
     var icon = CAT_ICONS[c.id] || '';
-    return '<button class="cat-btn' + (c.id === currentCatId ? ' active' : '') + '" data-cat="' + c.id + '" onclick="setCat(\x27' + c.id + '\x27)">' + icon + c.tab + '</button>';
+    var slug = _catSlug[c.id] || c.id;
+    return '<a class="cat-btn' + (c.id === currentCatId ? ' active' : '') + '" href="/stops/' + slug + '/" data-cat="' + c.id + '" onclick="setCat(\x27' + c.id + '\x27);return false;">' + icon + c.tab + '</a>';
   }).join("");
 }
 
 function renderAll() {
   var cat = getCat();
-  document.getElementById("criteria-card").innerHTML = renderCriteria(cat);
   renderExamplesCard(cat);
+  renderSubcatPillRow(cat);
   positionTooltips();
 }
 
@@ -569,13 +527,7 @@ function renderCriteria(cat) {
     return '<li class="required-item"><span class="req-check">✓</span><span class="req-title">' + r.title + '</span></li>';
   }).join("");
   var pills = cat.optional.map(function(o) { return '<span class="opt-pill">' + o + '</span>'; }).join("");
-  var icon = CAT_ICONS[cat.id] || '';
-  return '<div class="cat-header"><div class="cat-icon-circle">' + icon + '</div>' +
-    '<div class="cat-header-text">' +
-    '<h2>' + cat.name + ' Listings <span style="font-weight:400;color:#6b7280;font-size:18px;">(' + cat.examples.filter(function(ex) { return !isDemo(ex); }).length + ')</span></h2>' +
-    '<div class="criteria-inline">Criteria: ' + cat.required.length + ' required &middot; ' + cat.optional.length + ' optional &nbsp;<span class="criteria-link" id="criteria-view-link" onclick="toggleCriteria()">View criteria ›</span></div>' +
-    '</div></div>' +
-    '<div class="criteria-body" id="criteria-body">' +
+  return '<div class="criteria-body" id="criteria-body">' +
       '<div class="two-col"><div class="col-left"><div class="section-label">Required <span class="count">· ' + cat.required.length + '</span></div>' +
       '<ul class="required-list">' + reqItems + '</ul></div>' +
       '<div class="col-right"><div class="section-label">Optional <span class="count">· ' + cat.optional.length + ' amenities</span></div>' +
@@ -585,9 +537,12 @@ function renderCriteria(cat) {
 
 function renderExamplesCard(cat) {
   var el = document.getElementById("examples-card");
-  el.innerHTML = '<div id="subcat-grid-container"></div>' +
-    '<div class="examples-toolbar"><h3>Listings</h3>' +
-    '<div class="legend">' +
+  var _realCount = cat.examples.filter(function(ex) { return !isDemo(ex); }).length;
+  el.innerHTML = '<div class="examples-toolbar"><div class="toolbar-head">' +
+    '<h3>Listings</h3>' +
+    '<div class="criteria-inline">' + _realCount.toLocaleString() + ' ' + cat.name.toLowerCase() + ' &middot; Criteria: ' + cat.required.length + ' required &middot; ' + cat.optional.length + ' optional &nbsp;<span class="criteria-link" id="criteria-view-link" onclick="toggleCriteria()">View criteria ›</span></div>' +
+    '</div>' +
+    '<div class="legend"><span class="legend-status">Status</span>' +
       // HIDDEN — no partners yet. Restore the two lines below to bring back the Sector Partner / Industry Partner pills.
       // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span><span class="legend-tip">Member of a sector partner network like the BC Ale Trail or BC Farmers' + "'" + ' Market Network. Their network has partnered with BC Cycle Tourism Society to co-brand cycle-friendly member businesses.</span></span>' +
       // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span><span class="legend-tip">Cycling industry business with an enhanced listing — logo, photos, and promoted placement. Supports BC Cycle Tourism Society through the industry partner program.</span></span>' +
@@ -596,47 +551,46 @@ function renderExamplesCard(cat) {
       '<span class="legend-badge-wrap" data-badge-term="Info" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span><span class="legend-tip">Useful reference — doesn' + "'" + 't fully meet required criteria but worth knowing about.</span></span>' +
       '<span class="legend-badge-wrap" data-badge-term="Bikes Unwelcome" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span><span class="legend-tip">This business or service does not accommodate cyclists or bicycles. Listed so you know before you show up.</span></span>' +
     '</div></div>' +
+    renderCriteria(cat) +
     '<div class="filter-bar"><div class="filter-bar-top">' +
-    '<input type="text" id="search-box" class="search-input" placeholder="Search name, location, route, amenity, or badge…" oninput="onSearch(this.value)" />' +
+    '<input type="text" id="search-box" class="search-input" placeholder="Search name, amenity, or badge…" oninput="onSearch(this.value)" />' +
     // '<label class="demo-toggle" style="margin-left:auto"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
+    '<div class="search-hint">💡 Tip: filter to one town — type <span class="search-hint-eg" onclick="fillCommunityPrefix()">community:Hope</span></div>' +
     '</div><div class="filter-pills-row" id="filter-pills-row"></div></div>' +
     '<div id="results-count-area"></div><div id="listings-area"></div>' +
     '<div style="text-align:center;padding:8px 36px 20px;font-size:13px;color:#636363;">Click a listing to see details. Data © <a href="https://www.openstreetmap.org/copyright" style="color:#636363;">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/" style="color:#636363;">Open Database License (ODbL)</a>.</div>' +
     '<div style="text-align:center;padding:16px 36px 24px;"><a href="/apply" style="font-size:13px;color:#2E8A36;font-weight:600;text-decoration:none;">Want to welcome cyclists? Apply for accreditation &rarr;</a></div>' +
     '<div style="text-align:center;padding:0 36px 28px;font-size:13px;color:#636363;max-width:500px;margin:0 auto;">See a <span class="badge badge-unwelcome" style="font-size:11px;padding:2px 8px;vertical-align:1px;background:#FFFDF9;color:#DC2626;border:1.5px solid #DC2626;">Bikes Unwelcome</span> listing that' + "'" + 's wrong? We' + "'" + 'd love to be wrong. <a href="/suggest" style="color:#1E7D96;font-weight:600;">Let us know</a> and we' + "'" + 'll correct it ASAP.</div>';
-  renderSubcatGrid(cat);
   updateFilterPills(cat);
   updateListings(cat);
   updateBadgeLegendActive();
 }
 
-function renderSubcatGrid(cat) {
-  var wrap = document.getElementById("subcat-grid-container");
-  if (!wrap) return;
+function renderSubcatPillRow(cat) {
+  var row = document.getElementById("subcat-pill-row");
+  if (!row) return;
   var counts = {};
   cat.examples.filter(function(ex) { return !isDemo(ex) && ex.subcategory; }).forEach(function(ex) {
     counts[ex.subcategory] = (counts[ex.subcategory] || 0) + 1;
   });
   var subcats = Object.keys(counts).sort(function(a, b) { return counts[b] - counts[a]; });
-  if (subcats.length < 2) { wrap.innerHTML = ""; return; }
-  var cards = subcats.map(function(s) {
-    var icon = SUBCAT_ICONS[s] || "⭐";
+  if (subcats.length < 2) { row.style.display = "none"; row.innerHTML = ""; return; }
+  var total = cat.examples.filter(function(ex) { return !isDemo(ex); }).length;
+  var allActive = !activeSubcat;
+  var pills = '<button class="subcat-pill' + (allActive ? ' active' : '') + '" onclick="toggleSubcat(null)">All <span class="subcat-pill-count">' + total + '</span></button>';
+  pills += subcats.map(function(s) {
     var isActive = activeSubcat === s;
     var sAttr = s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;");
-    return '<div class="subcat-card' + (isActive ? ' active' : '') + '" data-subcat="' + sAttr + '" onclick="toggleSubcat(this.dataset.subcat)">' +
-      '<span class="subcat-card-icon">' + icon + '</span>' +
-      '<div class="subcat-card-text">' +
-        '<div class="subcat-card-name">' + s + '</div>' +
-        '<div class="subcat-card-count">' + counts[s] + ' listing' + (counts[s] === 1 ? '' : 's') + '</div>' +
-      '</div>' +
-    '</div>';
+    return '<button class="subcat-pill' + (isActive ? ' active' : '') + '" data-subcat="' + sAttr + '" onclick="toggleSubcat(this.dataset.subcat)">' +
+      (SUBCAT_ICONS[s] ? SUBCAT_ICONS[s] + ' ' : '') + s + ' <span class="subcat-pill-count">' + counts[s] + '</span></button>';
   }).join("");
-  wrap.innerHTML = '<div class="subcat-grid-wrap"><div class="subcat-grid">' + cards + '</div></div>';
+  row.innerHTML = pills;
+  row.style.display = "flex";
 }
 
 function toggleSubcat(name) {
-  activeSubcat = (activeSubcat === name) ? null : name;
-  var cat = getCat(); renderSubcatGrid(cat); updateListings(cat); updateHash();
+  activeSubcat = (name === null || activeSubcat === name) ? null : name;
+  var cat = getCat(); renderSubcatPillRow(cat); updateListings(cat); updateHash();
 }
 
 function updateFilterPills(cat) {
@@ -666,12 +620,13 @@ function _renderListingPage(cat) {
   var countMsg = hasF ? 'Showing ' + showing + ' of ' + filtered.length + ' filtered' :
                  (filtered.length > _listingsPageLimit ? 'Showing ' + showing + ' of ' + filtered.length : '');
   document.getElementById("results-count-area").innerHTML = countMsg ? '<div class="results-count">' + countMsg + '</div>' : '';
+  var _cqName = communityQuery(searchText);
   if (filtered.length === 0) {
-    document.getElementById("listings-area").innerHTML = '<div class="no-results">No listings match your filters. <a onclick="clearAll()">Clear all</a></div>';
+    document.getElementById("listings-area").innerHTML = (_cqName ? communityChipHTML(_cqName) : '') + '<div class="no-results">No listings match your filters. <a onclick="clearAll()">Clear all</a></div>';
     return;
   }
   var visible = filtered.slice(0, _listingsPageLimit);
-  var html = '<div class="listings-body">' + visible.map(function(ex) {
+  var html = (_cqName ? communityChipHTML(_cqName) : '') + '<div class="listings-body">' + visible.map(function(ex) {
     return renderListingCardHTML(cat, ex);
   }).join("") + '</div>';
   if (filtered.length > _listingsPageLimit) {
@@ -684,13 +639,23 @@ function loadMoreListings() {
   _renderListingPage(getCat());
 }
 
+// Returns the community name if `text` is a community: directive, else null.
+function communityQuery(text) {
+  var m = /^\s*community:(.+)$/i.exec(text || "");
+  return m ? m[1].trim() : null;
+}
+
 function getSortedFiltered(cat) {
   var list = cat.examples.slice();
   if (!showDemo) list = list.filter(function(ex) { return !isDemo(ex); });
   if (activeSubcat) list = list.filter(function(ex) { return ex.subcategory === activeSubcat; });
   if (activeReqFilters.length > 0) list = list.filter(function(ex) { var rc = ex.req_checked || []; return activeReqFilters.every(function(f) { return rc.indexOf(cat.required[f].title) !== -1; }); });
   if (activeFilters.length > 0) list = list.filter(function(ex) { return activeFilters.every(function(f) { return ex.checked.indexOf(cat.optional[f]) !== -1; }); });
-  if (searchText.length > 0) {
+  var _commQ = communityQuery(searchText);
+  if (_commQ) {
+    var _cql = _commQ.toLowerCase();
+    list = list.filter(function(ex) { return (ex.community || "").toLowerCase() === _cql; });
+  } else if (searchText.length > 0) {
     var q = searchText.toLowerCase();
     var isBadgeTerm = BADGE_TERMS.indexOf(q) !== -1;
     list = list.filter(function(ex) {
@@ -747,122 +712,18 @@ function updateBadgeLegendActive() {
 function clearAll() {
   searchText = ""; activeFilters = []; activeReqFilters = []; activeSubcat = null;
   var box = document.getElementById("search-box"); if (box) box.value = "";
-  var cat = getCat(); renderSubcatGrid(cat); updateFilterPills(cat); updateListings(cat); updateBadgeLegendActive(); updateHash();
+  var cat = getCat(); renderSubcatPillRow(cat); updateFilterPills(cat); updateListings(cat); updateBadgeLegendActive(); updateHash();
 }
 
-function navigateOrModal(el, catId, exIdx) {
+function goToListing(el) {
   var k = el.dataset.key;
-  if (k) {
-    try {
-      var _lbl = currentView === 'route' ? currentRoute : (currentView === 'all' ? 'All listings' : getCat().name);
-      sessionStorage.setItem('_wwc_from', JSON.stringify({ key: k, label: _lbl }));
-    } catch(e) {}
-    window.location = '/stops/' + k + '/';
-  } else { openModal(catId, exIdx); }
+  if (!k) return;
+  try {
+    var _lbl = currentView === 'route' ? currentRoute : (currentView === 'all' ? 'All listings' : getCat().name);
+    sessionStorage.setItem('_wwc_from', JSON.stringify({ key: k, label: _lbl }));
+  } catch(e) {}
+  window.location = '/stops/' + k + '/';
 }
-
-function openModal(catId, exIdx) {
-  var cat = categories.find(function(c) { return c.id === catId; });
-  var ex = cat.examples[exIdx];
-  var badges = '';
-  if (ex.badge === "unwelcome") {
-    badges = '<span class="badge badge-unwelcome">Bikes Unwelcome</span>';
-  } else {
-    if (ex.network) badges += '<span class="badge badge-sector">' + ex.network + '</span>';
-    if (ex.partner) badges += '<span class="badge badge-industry">Industry Partner</span>';
-    if (ex.badge === "accredited") badges += '<span class="badge badge-accredited">Accredited</span>';
-    else if (ex.badge === "welcoming") badges += '<span class="badge badge-welcoming">Welcoming</span>';
-    else badges += '<span class="badge badge-info">Info</span>';
-  }
-
-  var detailHTML = '';
-  if (ex.detail) {
-    var sourceTag = (ex.sources && ex.sources.length > 0)
-      ? '<div style="font-size:11px;color:#999;margin-top:10px;font-style:italic">Data: ' + ex.sources.join(' · ') + '</div>'
-      : (ex.detail.source === "operator" ? '<div style="font-size:11px;color:#999;margin-top:10px;font-style:italic">Data from operator</div>' : '');
-    detailHTML = '<div class="modal-section"><div class="modal-section-title">Contact & Details</div><div class="modal-detail-grid">' +
-      (ex.detail.address ? '<div class="modal-detail-item"><div class="label">Address</div><div class="value">' + ex.detail.address + '</div></div>' : '') +
-      (ex.detail.phone ? '<div class="modal-detail-item"><div class="label">Phone</div><div class="value">' + ex.detail.phone + '</div></div>' : '') +
-      (ex.detail.url ? '<div class="modal-detail-item"><div class="label">Website</div><div class="value"><a href="' + (ex.detail.url.indexOf('://') === -1 ? 'https://' : '') + ex.detail.url + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">' + ex.detail.url + '</a></div></div>' : '') +
-      '</div>' + sourceTag + '</div>';
-  }
-
-  var photoHTML = '';
-
-  var routesHTML = '';
-  if (ex.routes && ex.routes.length > 0) {
-    routesHTML = '<div class="modal-section"><div class="modal-section-title">Routes nearby</div><div class="modal-routes">' +
-      ex.routes.map(function(r) { var slug = (typeof routeSlugs !== 'undefined' && routeSlugs[r]) || r.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); return '<a class="route-tag" href="/route/' + slug + '" onclick="event.stopPropagation()">🚴 ' + r + '</a>'; }).join("") +
-      '</div></div>';
-  }
-
-  var reqHTML = '';
-  if (ex.badge !== "unwelcome" && cat.required && cat.required.length > 0) {
-    var _reqChecked = isDemo(ex) ? cat.required.map(function(r) { return r.title; }) : (ex.req_checked || []);
-    var _reqFalsed = ex.req_falsed || [];
-    var reqItems = cat.required.map(function(req, i) {
-      var isChecked = _reqChecked.indexOf(req.title) !== -1;
-      var isFalsed = _reqFalsed.indexOf(req.title) !== -1;
-      var symbol = isChecked ? '✓' : (isFalsed ? '✗' : '?');
-      var cls = isChecked ? 'req-item-yes' : (isFalsed ? 'req-item-no' : 'req-item-null');
-      return '<div class="req-item ' + cls + '"><span class="req-symbol">' + symbol + '</span><span class="req-name">' + req.title + '</span></div>';
-    }).join("");
-    reqHTML = '<div class="modal-section"><div class="modal-section-title">Required criteria</div><div class="req-list">' + reqItems + '</div></div>';
-  }
-
-  var amenitySectionHTML = '';
-  if (ex.badge !== "unwelcome") {
-    var notesList = [];
-    var pills = cat.optional.map(function(opt, i) {
-      var has = ex.checked.indexOf(opt) !== -1;
-      var star = '';
-      if (has && ex.notes && ex.notes[opt]) { star = '<span class="note-star">*</span>'; notesList.push({ name: opt, note: ex.notes[opt] }); }
-      return '<span class="' + (has ? 'modal-pill-yes' : 'modal-pill-no') + '">' + opt + star + '</span>';
-    }).join("");
-    var notesHTML = '';
-    if (notesList.length > 0) {
-      notesHTML = '<div class="modal-notes">' + notesList.map(function(n) {
-        return '<div class="modal-note-item"><strong>' + n.name + '</strong> — ' + n.note + '</div>';
-      }).join("") + '</div>';
-    }
-    amenitySectionHTML = '<div class="modal-section"><div class="modal-section-title">Amenities</div><div class="modal-pills">' + pills + '</div>' + notesHTML + '</div>';
-  }
-
-  var verifyHTML = '';
-  if (ex.badge !== "accredited" && ex.badge !== "unwelcome" && ex.detail && ex.detail.source === "osm") {
-    verifyHTML = '<div class="verify-banner">Amenities assumed from location and public data. <a href="/suggest#edit=' + encodeURIComponent(ex.name) + '">Confirm or update this listing</a></div>';
-  }
-
-  document.getElementById("modal-content").innerHTML =
-    '<div class="modal-header"><div class="modal-header-left">' +
-      '<div class="modal-title">' + ex.name + (isDemo(ex) ? '<span class="demo-tag">demo</span>' : '') + '</div>' +
-      '<div class="modal-location">' + ex.location + (ex.subcategory ? '<span class="modal-subcat"> · ' + ex.subcategory + '</span>' : '') + '</div>' +
-      (ex.network ? '<div class="modal-network">Member of ' + ex.network + '</div>' : '') +
-      '<div class="modal-badges">' + badges + '</div>' +
-    '</div><button class="modal-close" onclick="closeModal()">×</button></div>' +
-    '<div class="modal-body">' +
-      verifyHTML +
-      reqHTML +
-      amenitySectionHTML +
-      (ex.tips ? '<div class="modal-tips"><strong>Good to know</strong>' + ex.tips + '</div>' : '') +
-      photoHTML +
-      '<div class="modal-section"><div class="modal-section-title">About</div><div class="modal-desc">' + ex.desc + '</div></div>' +
-      detailHTML +
-      routesHTML +
-      (ex.badge === "unwelcome"
-        ? '<div style="text-align:center;margin-top:20px;padding:16px 20px;border-top:1px solid #EEE;background:#FEF2F2;border-radius:0 0 12px 12px;"><div style="font-size:14px;font-weight:600;color:#DC2626;margin-bottom:4px;">Are we wrong? We' + "'" + 'd love to be wrong!</div><div style="font-size:13px;color:#4b5563;">If you do welcome bikes, <a href="/suggest#edit=' + encodeURIComponent(ex.name) + '" style="color:#1E7D96;font-weight:600;">let us know</a> and we' + "'" + 'll get it corrected ASAP.</div></div>'
-        : '<div style="text-align:center;margin-top:20px;padding-top:16px;border-top:1px solid #EEE;"><a href="/suggest#edit=' + encodeURIComponent(ex.name) + '" style="font-size:13px;color:#1E7D96;text-decoration:none;">Suggest an edit to this listing</a></div>') +
-    '</div>';
-  document.getElementById("modal-overlay").classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-
-function closeModal() {
-  document.getElementById("modal-overlay").classList.remove("open");
-  document.body.style.overflow = "";
-}
-
-document.addEventListener("keydown", function(e) { if (e.key === "Escape") closeModal(); });
 
 // ---- VIEW SWITCHING ----
 var currentView = "category";
@@ -873,9 +734,7 @@ var allCatFilter = "";
 
 function setView(v) {
   currentView = v;
-  document.querySelectorAll(".view-toggle button").forEach(function(btn, i) {
-    btn.classList.toggle("active", (i === 0 && v === "category") || (i === 1 && v === "route") || (i === 2 && v === "all"));
-  });
+  document.getElementById("top-nav").style.display = v === "category" ? "" : "none";
   document.getElementById("view-category").style.display = v === "category" ? "" : "none";
   document.getElementById("view-route").style.display = v === "route" ? "" : "none";
   document.getElementById("view-all").style.display = v === "all" ? "" : "none";
@@ -976,7 +835,7 @@ function renderAllView() {
   el.innerHTML =
     '<div class="examples-toolbar">' +
       '<div class="all-listings-title-area"><h3>All Listings</h3><div id="all-count-area" class="all-count-subtitle"></div></div>' +
-      '<div class="legend">' +
+      '<div class="legend"><span class="legend-status">Status</span>' +
         // HIDDEN — no partners yet. Restore the two lines below to bring back the Sector Partner / Industry Partner pills.
         // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span></span>' +
         // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span></span>' +
@@ -988,9 +847,10 @@ function renderAllView() {
     '</div>' +
     '<div class="filter-bar"><div class="filter-bar-top">' +
     '<div class="all-search-wrap"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>' +
-    '<input type="text" id="all-search-box" class="search-input" placeholder="Search name, location, route, amenity…" oninput="onAllSearch(this.value)" /></div>' +
+    '<input type="text" id="all-search-box" class="search-input" placeholder="Search name, amenity, location…" oninput="onAllSearch(this.value)" /></div>' +
     '<select class="subcat-select" id="all-cat-select" onchange="setAllCatFilter(this.value)"><option value="">All categories</option></select>' +
     // '<label class="demo-toggle" style="margin-left:auto"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
+    '<div class="search-hint">💡 Tip: filter to one town — type <span class="search-hint-eg" onclick="fillCommunityPrefix()">community:Hope</span></div>' +
     '</div></div>' +
     '<div id="all-listings-area"></div>';
   buildAllCatDropdown();
@@ -1042,7 +902,11 @@ function getAllListings() {
       all = all.filter(function(item) { return item.cat.id === fCatId; });
     }
   }
-  if (allSearchText.length > 0) {
+  var _allCommQ = communityQuery(allSearchText);
+  if (_allCommQ) {
+    var _acql = _allCommQ.toLowerCase();
+    all = all.filter(function(item) { return (item.ex.community || "").toLowerCase() === _acql; });
+  } else if (allSearchText.length > 0) {
     var q = allSearchText.toLowerCase();
     var isBadgeTerm = BADGE_TERMS.indexOf(q) !== -1;
     all = all.filter(function(item) {
@@ -1088,13 +952,15 @@ function _renderAllListingsPage() {
   } else {
     document.getElementById("all-count-area").textContent = totalAll + ' listings across all categories';
   }
+  var _acqName = communityQuery(allSearchText);
+  var _acChip = _acqName ? communityChipHTML(_acqName) : '';
   if (all.length === 0) {
-    document.getElementById("all-listings-area").innerHTML = '<div class="no-results">No listings match your search. <a onclick="clearAllSearch()">Clear</a></div>';
+    document.getElementById("all-listings-area").innerHTML = _acChip + '<div class="no-results">No listings match your search. <a onclick="clearAllSearch()">Clear</a></div>';
     return;
   }
   var visible = all.slice(0, _allPageLimit);
   var more = all.length > _allPageLimit ? '<div style="text-align:center;padding:16px 0 8px;"><button onclick="loadMoreAllListings()" style="padding:10px 24px;background:#1E7D96;color:white;border:none;border-radius:20px;font-size:14px;font-weight:600;cursor:pointer;">Load more (' + (all.length - _allPageLimit) + ' remaining)</button></div>' : '';
-  document.getElementById("all-listings-area").innerHTML = '<div class="listings-body">' + visible.map(function(item) {
+  document.getElementById("all-listings-area").innerHTML = _acChip + '<div class="listings-body">' + visible.map(function(item) {
     return renderListingCardHTML(item.cat, item.ex, true);
   }).join("") + '</div>' + more;
 }
@@ -1105,6 +971,27 @@ function loadMoreAllListings() {
 
 function onAllSearch(val) { allSearchText = val; updateAllListings(); updateBadgeLegendActive(); updateHash(); }
 function clearAllSearch() { allSearchText = ""; allCatFilter = ""; var box = document.getElementById("all-search-box"); if (box) box.value = ""; buildAllCatDropdown(); updateAllListings(); updateBadgeLegendActive(); updateHash(); }
+
+function fillCommunityPrefix() {
+  var isAll = currentView === "all";
+  var box = document.getElementById(isAll ? "all-search-box" : "search-box");
+  if (!box) return;
+  box.value = "community:";
+  box.focus();
+}
+function communityChipHTML(name) {
+  return '<div class="comm-chip">Showing stops in <strong>' + name.replace(/</g, "&lt;") + '</strong><span class="comm-chip-x" onclick="clearCommunityFilter()" title="Clear">✕</span></div>';
+}
+function clearCommunityFilter() {
+  if (currentView === "all") {
+    allSearchText = ""; var ab = document.getElementById("all-search-box"); if (ab) ab.value = "";
+    updateAllListings();
+  } else {
+    searchText = ""; var b = document.getElementById("search-box"); if (b) b.value = "";
+    var cat = getCat(); updateFilterPills(cat); updateListings(cat);
+  }
+  updateBadgeLegendActive(); updateHash();
+}
 
 // ---- SHARED LISTING CARD RENDERER ----
 function renderListingCardHTML(cat, ex, showCatTag) {
@@ -1131,7 +1018,7 @@ function renderListingCardHTML(cat, ex, showCatTag) {
       return '<span class="pill pill-yes">' + opt + star + '</span>';
     }).join("");
     if (pills) {
-      pillsHTML = '<div class="amenities-label">Amenities</div><div class="amenity-pills">' + pills + '</div>';
+      pillsHTML = '<div class="amenity-pills">' + pills + '</div>';
     }
   }
   var demoBanner = isDemo(ex) ? '<div style="margin-top:10px;padding:8px 12px;background:#FEF3C7;border:1px solid #F59E0B;border-radius:6px;font-size:12px;color:#92400E;font-weight:600;">Sample data — not a real listing. For illustration only.</div>' : '';
@@ -1152,11 +1039,11 @@ function renderListingCardHTML(cat, ex, showCatTag) {
   var icon = CAT_ICONS[cat.id] || '';
   var _cardKey = ex.key ? ' data-key="' + ex.key + '"' : '';
   var _cardId = ex.key ? ' id="c-' + ex.key + '"' : '';
-  return '<div class="listing-card ' + borderClass + demoClass + '"' + _cardId + _cardKey + ' onclick="navigateOrModal(this,\x27' + cat.id + '\x27,' + idx + ')">' +
+  return '<div class="listing-card ' + borderClass + demoClass + '"' + _cardId + _cardKey + ' onclick="goToListing(this)">' +
     '<div class="card-outer"><div class="card-icon-circle">' + icon + '</div>' +
     '<div class="card-inner">' +
     '<div class="listing-name-row"><span class="listing-name">' + ex.name + catTag + demoTag + '</span><div class="listing-badges">' + badges + '</div></div>' +
-    '<div class="listing-location">' + ex.location + (ex.subcategory ? '<span class="listing-subcat"> · ' + ex.subcategory + '</span>' : '') + (ex.price_band ? '<span class="listing-price-band"> · ' + ex.price_band + '</span>' : '') + '</div>' +
+    '<div class="listing-location">' + ex.location + (ex.subcategory ? '<span class="listing-subcat"> · ' + ex.subcategory + '</span>' : '') + (ex.price_band ? '<span class="listing-price-band">' + ex.price_band + '</span>' : '') + '</div>' +
     '<div class="card-body">' +
       '<div class="card-body-left"><div class="listing-desc">' + ex.desc + '</div>' + demoBanner + pillsHTML + '</div>' +
       cardReqHTML +
@@ -1176,13 +1063,17 @@ function updateHash() {
   if (currentView === "category") {
     parts.push("category=" + (_catSlug[currentCatId] || currentCatId));
     if (activeSubcat) parts.push("subcat=" + toSlug(activeSubcat));
-    if (searchText) parts.push("q=" + encodeURIComponent(searchText));
+    var _cqh = communityQuery(searchText);
+    if (_cqh) parts.push("community=" + encodeURIComponent(COMMUNITY_SLUGS[_cqh] || _cqh));
+    else if (searchText) parts.push("q=" + encodeURIComponent(searchText));
     if (activeFilters.length > 0) parts.push("f=" + activeFilters.join(","));
   } else if (currentView === "route") {
     if (currentRoute) parts.push("route=" + encodeURIComponent(currentRoute));
     if (routeCatFilter) parts.push("category=" + (_catSlug[routeCatFilter] || routeCatFilter));
   } else if (currentView === "all") {
-    if (allSearchText) parts.push("q=" + encodeURIComponent(allSearchText));
+    var _acqh = communityQuery(allSearchText);
+    if (_acqh) parts.push("community=" + encodeURIComponent(COMMUNITY_SLUGS[_acqh] || _acqh));
+    else if (allSearchText) parts.push("q=" + encodeURIComponent(allSearchText));
     if (allCatFilter) {
       var _enc = allCatFilter.indexOf('subcat:') === 0
         ? (function() { var r = allCatFilter.slice(7), ci = r.indexOf(':'); return (_catSlug[r.slice(0,ci)]||r.slice(0,ci)) + ':' + r.slice(ci+1); })()
@@ -1204,6 +1095,7 @@ function readHash() {
   if (params.view) currentView = params.view;
   if (params.demo === "0") showDemo = false; else if (params.demo === "1") showDemo = true;
   if (params.route) currentRoute = params.route;
+  if (params.community) { _pendingCommunity = params.community; if (!params.view) currentView = "all"; }
   var _cv = params.category;
   if (_cv) {
     if (params.view === "route") {
@@ -1228,6 +1120,7 @@ function readHash() {
 
 var routeSlugs = {};
 var SUBCAT_ICONS = {};
+var COMMUNITY_SLUGS = {}; var _slugToComm = {}; var _pendingCommunity = null;
 var _subcatSlugMap = {};
 var _catSlug = {}; var _slugCat = {};
 categories.forEach(function(c) { var sl = toSlug(c.tab); _catSlug[c.id] = sl; _slugCat[sl] = c.id; });
@@ -1242,6 +1135,14 @@ fetch('/we-welcome-cyclists.json')
   .then(function(d) {
     routeSlugs = d.routeSlugs;
     SUBCAT_ICONS = d.subcatIcons;
+    COMMUNITY_SLUGS = d.communitySlugs || {};
+    _slugToComm = {};
+    Object.keys(COMMUNITY_SLUGS).forEach(function(name) { _slugToComm[COMMUNITY_SLUGS[name]] = name; });
+    if (_pendingCommunity) {
+      var _cq = "community:" + (_slugToComm[_pendingCommunity] || _pendingCommunity);
+      if (currentView === "all") { allSearchText = _cq; _savedAllSearch = _cq; }
+      else { searchText = _cq; _savedSearch = _cq; }
+    }
     categories.forEach(function(cat) {
       (d.listings[cat.id] || []).forEach(function(ex) { cat.examples.push(ex); });
     });
