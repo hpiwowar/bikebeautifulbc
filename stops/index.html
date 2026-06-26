@@ -367,6 +367,123 @@ body {
 
 .footer { text-align: center; margin-top: 32px; font-size: 11px; color: #999; line-height: 1.8; }
 .footer .org { font-weight: 600; color: #636363; }
+
+/* ===== Stops & Services redesign (Approach A: sidebar filter) ===== */
+.dir-intro h1 { font-family:"Archivo",sans-serif; font-size:32px; font-weight:700; color:#1F514C; letter-spacing:-0.03em; margin-bottom:10px; }
+.dir-intro .intro { font-size:17px; color:#3C4A43; line-height:1.5; max-width:940px; }
+.dir-intro .intro a { color:#1F514C; font-weight:700; text-decoration:underline; }
+.dir-intro hr { border:none; border-top:1px solid #E6E0CC; margin:20px 0 0; }
+
+.cat-tabs { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 4px; }
+.cat-tab { display:inline-flex; align-items:center; gap:8px; padding:11px 18px; border-radius:999px; font-size:15.5px; font-weight:600; border:1px solid #DAD7C6; background:#FFFDF9; color:#2C463C; cursor:pointer; white-space:nowrap; text-decoration:none; transition:all .12s; }
+.cat-tab svg { width:17px; height:17px; flex-shrink:0; }
+.cat-tab .ct { font-weight:400; color:#9AA29A; }
+.cat-tab:hover:not(.active) { border-color:#999; background:#FFF6E5; }
+.cat-tab.active { background:#1E7D96; border-color:#1E7D96; color:#fff; }
+.cat-tab.active .ct { color:rgba(255,255,255,.72); }
+.browse-links { font-size:15px; color:#4A554D; margin:10px 0 0; }
+.browse-links a { color:#4A554D; cursor:pointer; text-decoration:none; }
+.browse-links a:hover { text-decoration:underline; }
+
+.ss-panel { display:flex; gap:26px; align-items:flex-start; margin-top:20px; position:relative; }
+.ss-sidebar { width:256px; flex-shrink:0; }
+.ss-sidebar-inner { border-right:1px solid #EFEAD9; padding-right:24px; }
+.ss-results { flex:1; min-width:0; }
+
+.fg { margin-bottom:22px; }
+.fg-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:9px; }
+.fg-title { font-size:12px; font-weight:700; color:#9AA29A; letter-spacing:.7px; text-transform:uppercase; }
+.fg-hint { font-size:12px; color:#B0B6A8; }
+.fopt { display:flex; align-items:center; gap:10px; padding:5px 0; cursor:pointer; }
+.fopt .lbl { font-size:15px; color:#3C4A43; flex:1; min-width:0; }
+.fopt .cnt { font-size:13.5px; color:#9AA29A; }
+/* zero-result filter options keep full styling by default; uncomment to dim them */
+/* .fopt.z0 { opacity:.5; } */
+.fdot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+.cbx { width:17px; height:17px; border-radius:5px; border:1.5px solid #C9C9BC; background:#fff; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+.cbx svg { width:11px; height:11px; stroke:#fff; stroke-width:3; fill:none; display:none; }
+.fopt.on .cbx { background:#1E7D96; border-color:#1E7D96; }
+.fopt.on .cbx svg { display:block; }
+.amen-filter { width:100%; padding:8px 11px; border:1px solid #DDD8C7; border-radius:8px; background:#FCFBF6; font-size:14px; margin-bottom:8px; font-family:inherit; }
+.amen-toggle { font-size:14px; color:#1E7D96; font-weight:600; cursor:pointer; display:inline-block; margin-top:6px; }
+.allcallout { background:#FFF6E5; border:1px solid #F0E6C5; border-radius:10px; padding:13px 15px; font-size:14px; line-height:1.5; color:#4A3C31; margin-bottom:22px; }
+
+.res-head { display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.res-head h2 { font-family:"Archivo",sans-serif; font-size:26px; font-weight:700; color:#1F514C; margin:0; letter-spacing:-0.02em; }
+.res-head .guidelink { font-size:15px; color:#1E7D96; font-weight:700; white-space:nowrap; text-decoration:none; }
+.res-head .guidelink:hover { text-decoration:underline; }
+.res-sub { font-size:16px; color:#6B746B; line-height:1.5; margin:6px 0 16px; }
+.res-sub b { color:#1F514C; }
+.search-in { width:100%; padding:13px 16px; border:1px solid #DDD8C7; border-radius:9px; background:#FCFBF6; font-size:16px; font-family:inherit; color:#141414; }
+.search-in::placeholder { color:#A8B0A6; }
+.search-tip { font-size:14px; color:#8A938A; margin:8px 0 0; }
+.search-tip code { background:#F4F1E4; color:#6B6B5E; border-radius:5px; font-family:ui-monospace,Menlo,monospace; font-size:13px; padding:1px 5px; cursor:pointer; }
+.dir-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:14px 0; border-bottom:1px solid #EFEAD9; margin-top:14px; }
+.dir-showing { font-size:14px; color:#3C4A43; }
+.dir-sortwrap { margin-left:auto; display:inline-flex; align-items:center; gap:6px; }
+.dir-sortlbl { font-size:14px; color:#6B746B; }
+.dir-sortbtn { border:1px solid #DDD8C7; border-radius:8px; background:#fff; padding:8px 12px; font-size:14px; color:#3C4A43; font-family:inherit; cursor:pointer; }
+.assumed-note { font-size:13px; color:#9AA29A; margin:10px 0 0; }
+.assumed-note code { font-family:ui-monospace,Menlo,monospace; }
+
+.filterbtn { display:none; align-items:center; gap:8px; border:1px solid #1E7D96; background:#EAF3EC; color:#1C5240; font-weight:600; border-radius:8px; padding:9px 14px; font-size:14px; cursor:pointer; font-family:inherit; }
+.filterbtn svg { width:16px; height:16px; }
+.filterbtn .badge-n { background:#1E7D96; color:#fff; border-radius:999px; font-size:12px; padding:1px 8px; font-weight:600; }
+
+.dir-chips { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:14px 0 4px; }
+.dir-chip { display:inline-flex; align-items:center; gap:7px; background:#1E7D96; color:#fff; font-size:13.5px; border-radius:999px; padding:5px 11px; cursor:pointer; }
+.dir-chip .x { font-weight:700; opacity:.85; }
+.dir-clearall { font-size:14px; color:#1E7D96; font-weight:600; text-decoration:underline; cursor:pointer; }
+
+.dir-cards { margin-top:18px; display:flex; flex-direction:column; gap:16px; }
+.lcard { border:1px solid #ECE7D6; border-left:4px solid #B6B6AC; border-radius:12px; padding:clamp(18px,2.5vw,24px) clamp(16px,2vw,26px); display:flex; flex-wrap:wrap; gap:20px; background:#fff; cursor:pointer; transition:box-shadow .12s; }
+.lcard:hover { box-shadow:0 3px 14px rgba(0,0,0,.06); }
+.lcard.is-accredited { border-left-color:#2E8A36; }
+.lcard.is-welcoming { border-left-color:#D9A93B; }
+.lcard.is-info { border-left-color:#B6B6AC; }
+.lcard.is-unwelcome { border-left-color:#C9483B; }
+.lavatar { width:44px; height:44px; border-radius:50%; background:#E6F0EE; display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#1E7D96; }
+.lavatar svg { width:20px; height:20px; }
+.lbody { flex:1 1 360px; min-width:240px; }
+.ltitle-row { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.ltitle { font-size:22px; font-weight:700; color:#1A1A1A; }
+.sbadge { font-size:14px; font-weight:600; border-radius:999px; padding:3px 11px; white-space:nowrap; flex-shrink:0; }
+.sb-accredited { background:#E6F2E8; color:#2E8A36; }
+.sb-welcoming { background:#FFF8E1; color:#8A5A1E; }
+.sb-info { background:#EEEEEA; color:#7A7A72; }
+.sb-unwelcome { background:#F6E3E0; color:#B33B2E; }
+.lmeta { font-size:16px; color:#8A938A; margin:5px 0 0; }
+.lcatpill { background:#FFF6E5; color:#1E7D96; font-weight:600; font-size:13.5px; border-radius:999px; padding:2px 9px; }
+.lprice { background:#F0EEE4; color:#6B6B5E; font-size:14px; border-radius:6px; padding:1px 7px; margin-left:6px; }
+.lachips { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 0; }
+.lachip { background:#FFF6E5; border:1px solid #F0E6C5; color:#1E7D96; font-size:14.5px; border-radius:999px; padding:3px 11px; }
+.lachip .star { color:#1E7D96; font-weight:800; }
+.ldesc { font-size:16px; line-height:1.55; color:#3C4A43; margin:11px 0 0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.lfoot { display:flex; align-items:center; gap:12px; margin:12px 0 0; flex-wrap:wrap; }
+.lbasics { font-size:14px; }
+.lbasics.partial { color:#B07A1E; }
+.lbasics.unconfirmed { color:#8A8F86; }
+.lbasics.unwelcome { color:#B33B2E; }
+.lviewdetails { font-size:15px; color:#1E7D96; font-weight:700; margin-left:auto; }
+.dir-noresults { padding:40px 8px; color:#6B746B; font-size:15px; }
+.dir-noresults a { color:#1E7D96; cursor:pointer; text-decoration:underline; }
+.dir-loadmore { display:block; margin:18px auto 0; padding:10px 24px; background:#1E7D96; color:#fff; border:none; border-radius:20px; font-size:14px; font-weight:600; cursor:pointer; }
+
+.ss-overlay { display:none; position:fixed; inset:0; background:rgba(28,40,33,.42); z-index:40; }
+.sheet-head, .sheet-apply, .sheet-grip { display:none; }
+
+@media (max-width:880px) {
+  .ss-sidebar-inner { border-right:none; padding-right:0; }
+  .ss-sidebar { position:fixed; left:0; right:0; bottom:0; width:auto; background:#fff; border-radius:22px 22px 0 0; box-shadow:0 -8px 30px rgba(0,0,0,.18); max-height:86vh; overflow:auto; z-index:50; padding:0 20px 20px; transform:translateY(101%); visibility:hidden; transition:transform .26s ease, visibility .26s; }
+  .ss-sidebar.open { transform:translateY(0); visibility:visible; }
+  .ss-overlay.open { display:block; }
+  .filterbtn { display:inline-flex; }
+  .sheet-grip { display:block; width:44px; height:5px; border-radius:3px; background:#D8D4C4; margin:10px auto 4px; }
+  .sheet-head { display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; background:#fff; padding:8px 0 12px; border-bottom:1px solid #EFEAD9; margin-bottom:14px; }
+  .sheet-head .h { font-size:18px; font-weight:700; color:#0D2E1E; }
+  .sheet-apply { display:block; position:sticky; bottom:0; width:100%; background:#1E7D96; color:#fff; font-weight:600; font-size:16px; border:none; border-radius:11px; padding:14px; margin-top:8px; cursor:pointer; }
+  .res-head h2 { font-size:23px; }
+}
 </style>
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
 </head>
@@ -399,28 +516,32 @@ body {
 </script>
 
 <div class="main">
-  <div style="margin-bottom:20px;">
-    <h1 style="font-family:'Archivo',sans-serif;font-size:32px;font-weight:400;color:#1F514C;margin-bottom:10px;letter-spacing:-0.03em;">Stops &amp; Services</h1>
-    <p style="font-size:16px;color:#3C4A43;line-height:1.5;max-width:940px;">Stops and services across BC, annotated with amenities reflecting the <a href="https://bccycletourism.ca/we-welcome-cyclists/" style="color:#1F514C;font-weight:700;text-decoration:underline;">We Welcome Cyclists</a> standards, designed for what touring cyclists actually need to know. Browse 18,000+ stops across British Columbia.</p>
-    <hr style="border:none;border-top:1px solid #EEE;margin-top:20px;margin-bottom:0;" />
+  <div class="dir-intro">
+    <h1>We Welcome Cyclists listings</h1>
+    <p class="intro">Stops and services across BC, annotated with amenities reflecting the <a href="https://bccycletourism.ca/we-welcome-cyclists/">We Welcome Cyclists</a> standards, designed for what touring cyclists actually need to know. Browse 18,000+ stops across British Columbia.</p>
+    <hr />
   </div>
-  <div id="top-nav">
-    <div class="category-nav" id="category-nav"></div>
-    <div class="subcat-pill-row" id="subcat-pill-row" style="display:none"></div>
-    <p class="trail-links"><a onclick="setView('route');return false;" style="cursor:pointer;">Browse by trail →</a> &nbsp;·&nbsp; <a href="/stops/communities/">Browse by community →</a></p>
+
+  <div id="view-dir">
+    <div class="cat-tabs" id="cat-tabs"></div>
+    <p class="browse-links"><a onclick="gotoRoute();return false;">Browse by trail &rarr;</a> &nbsp;&middot;&nbsp; <a href="/stops/communities/">Browse by community &rarr;</a></p>
+    <div class="ss-panel">
+      <div class="ss-overlay" id="dir-overlay" onclick="closeDrawer()"></div>
+      <aside class="ss-sidebar" id="dir-sidebar">
+        <div class="sheet-grip"></div>
+        <div class="sheet-head"><span class="h">Filters</span><span class="dir-clearall" onclick="clearAll()">Clear all</span></div>
+        <div class="ss-sidebar-inner" id="dir-sidebar-inner"></div>
+        <button class="sheet-apply" id="dir-sheet-apply" onclick="closeDrawer()"></button>
+      </aside>
+      <section class="ss-results" id="dir-results"><div style="padding:40px;text-align:center;color:#9CA3AF;font-size:14px;">Loading listings&hellip;</div></section>
+    </div>
   </div>
-  <div id="view-category">
-    <div class="card" id="examples-card"><div style="padding:40px;text-align:center;color:#9CA3AF;font-size:14px;">Loading listings…</div></div>
-  </div>
+
   <div id="view-route" style="display:none">
-    <p class="trail-links"><a onclick="setView('category');return false;" style="cursor:pointer;">← Browse by category</a></p>
+    <p class="browse-links"><a onclick="gotoDir();return false;">&larr; Browse by category</a></p>
     <div class="category-nav" id="route-category-nav"></div>
     <div class="route-selector" id="route-selector"></div>
     <div class="card" id="route-card"></div>
-  </div>
-  <div id="view-all" style="display:none">
-    <p class="trail-links"><a onclick="setView('category');return false;" style="cursor:pointer;">← Browse by category</a></p>
-    <div class="card" id="all-card"></div>
   </div>
 </div>
 
@@ -433,12 +554,10 @@ var INFO_FIELDS = [
   "Fallback transportation where available", "Local hazards or access notes"
 ];
 
-// Exact-match badge labels — when the search box contains one of these, we filter by badge only (not free-text).
-var BADGE_TERMS = ["accredited", "welcoming", "info", "bikes unwelcome", "sector partner", "industry partner"];
-
 var categories = [{"id": "visitor", "tab": "Attractions", "name": "Attractions", "description": "Visitor centres, museums, heritage sites, libraries, rec centres, hot springs, and farmers' markets.", "infoSheet": true, "required": [{"title": "Bike parking", "detail": ""}, {"title": "Water bottle refill", "detail": "Potable water refill available to customers, or staff can refill a bottle on request."}, {"title": "Washrooms", "detail": ""}, {"title": "We Welcome Cyclists Local Knowledge Sheet or equivalent local info", "detail": "Local routes, repair options, emergency contacts, hazards, and fallback transport."}], "optional": ["Showers (drop-in or fee)", "Café or food on site", "Water without admission", "Luggage / bag storage", "Vending machines", "Bike rack visible from inside", "Covered bike parking", "Public rack nearby", "Bike allowed inside/on patio", "Device charging", "Wi-Fi", "E-bike charging", "Pump", "Discount for arriving by bike"], "examples": []}, {"id": "hotel", "tab": "Accommodation", "name": "Accommodation", "description": "Hotels, motels, hostels, guesthouses, B&Bs, and inns.", "infoSheet": true, "required": [{"title": "Secure overnight bike storage", "detail": "Locked room, garage, bikes in guest rooms, storage shed, staff-controlled storage, or another clearly described secure arrangement."}, {"title": "Staff know the bike procedure", "detail": "Front desk staff know where bikes go and what to do with loaded touring bikes, e-bikes, or trailers."}, {"title": "We Welcome Cyclists Local Knowledge Sheet or equivalent available", "detail": "Local routes, repair options, emergency contacts, hazards, and fallback transport."}], "optional": ["Min-stay waived", "Laundry", "Drying area", "Early or packed breakfast", "Nearby evening food", "Nearby grocery", "Vending machines", "Bikes in rooms", "E-bike charging", "Device charging", "Luggage storage", "Pump", "Basic tools", "Bike wash / hose", "Wi-Fi"], "examples": []}, {"id": "campground", "tab": "Camping", "name": "Camping", "description": "Private campgrounds, public campgrounds, and backcountry sites.", "infoSheet": true, "required": [{"title": "No turn-away policy for cyclists", "detail": "Must accommodate cyclists arriving by bike for one night — hiker/biker sites, overflow tenting, or similar. Limits on group size ok, see ****HEATHER PUT URL HERE*** for more info."}, {"title": "We Welcome Cyclists Local Knowledge Sheet or equivalent available", "detail": "Local routes, repair options, emergency contacts, hazards, and fallback transport."}], "optional": ["Min-stay waived", "Hiker/biker sites", "Potable water", "Showers", "Washrooms", "Flush toilets", "Pit/outhouse toilet", "Food nearby", "Covered shelter", "Laundry", "Drying area", "Animal-safe food storage", "Reservations accepted", "Cyclist discount", "Device charging", "E-bike charging", "Vending machines", "Ice", "Pump", "Basic tools", "Camping fuel"], "examples": []}, {"id": "restaurant", "tab": "Food & Drink", "name": "Food & Drink", "description": "Restaurants, cafés, pubs, food trucks, fast food, bakeries, wineries, and breweries.", "infoSheet": false, "required": [{"title": "Bike parking or bike visibility", "detail": "Bike rack, public rack, patio visibility, window visibility, or staff-approved area. The listing describes which."}, {"title": "Water bottle refill", "detail": "Potable water refill available to customers, or staff can refill a bottle on request."}, {"title": "Washrooms", "detail": "For food trucks, kiosks, farm stands, and takeout-only businesses, list the nearest public washrooms."}], "optional": ["Takeout", "Packed lunches", "Water without purchase", "Vegetarian / vegan / GF", "Bike rack visible from inside", "Covered bike parking", "Public rack nearby", "Bike allowed inside/on patio", "Device charging", "E-bike charging", "Pump", "Wi-Fi"], "examples": []}, {"id": "grocery", "tab": "Supplies", "name": "Supplies", "description": "Grocery stores, convenience stores, farm stands, and retail stores to restock on supplies and outdoor gear.", "infoSheet": false, "required": [{"title": "Bike parking", "detail": "A practical place for customers arriving by bike to park."}, {"title": "Water bottle refill", "detail": "Potable water refill available to customers, or staff can refill a bottle on request."}], "optional": ["Basic groceries", "Hot food", "Washrooms", "Outdoor water tap", "Ice", "Vending machines", "Camping fuel", "Bike rack visible from inside", "Covered bike parking", "Public rack nearby", "Bike allowed inside/on patio", "Device charging", "E-bike charging", "Pump"], "examples": []}, {"id": "bikeshop", "tab": "Bike Services", "name": "Bike Services", "description": "Bicycle retail and repair shops, bike rental.", "infoSheet": true, "required": [{"title": "Staff help with urgent mechanical issues", "detail": "Staff will offer triage, air, basic advice, same-day help where possible, or a clear referral."}, {"title": "Pump available", "detail": "A floor pump accessible to visiting cyclists."}, {"title": "We Welcome Cyclists Local Knowledge Sheet or equivalent available", "detail": "Local routes, repair options, emergency contacts, hazards, and fallback transport."}], "optional": ["Walk-in repairs", "Same-day urgent repairs", "Touring parts stocked", "E-bike service", "Bike boxes / packing", "Shipping bikes", "Bike rentals", "Shuttle / trip support", "Guided rides", "DIY stand", "Washrooms", "Water bottle refill", "Device charging", "E-bike charging"], "examples": []}, {"id": "transport", "tab": "Transport", "name": "Transport", "description": "Planes, trains, automobiles, buses, shuttles, taxies, and ferries.", "infoSheet": false, "required": [{"title": "Accommodates bicycles", "detail": "Transports cyclists with bikes, or handles luggage/unaccompanied bicycles. Listing explains capacity, booking, fees, and packaging."}], "optional": ["Passenger + bike", "Walk-on bikes", "Advance booking required", "Reservations", "Bike fee applies", "Unboxed bikes OK", "Boxed bikes OK", "Bagged bikes OK", "E-bikes OK", "Trailers OK", "Luggage transfer", "Unaccompanied bike transport", "Interior transport", "Exterior rack"], "examples": []}];
 
 var CAT_ICONS = {
+  all:        "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='7' height='7' rx='1.5'/><rect x='14' y='3' width='7' height='7' rx='1.5'/><rect x='3' y='14' width='7' height='7' rx='1.5'/><rect x='14' y='14' width='7' height='7' rx='1.5'/></svg>",
   hotel:      "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12h20M2 20v-8h20v8M2 12V7.5A1.5 1.5 0 013.5 6H9A1.5 1.5 0 0110.5 7.5V12M13.5 12V8A1.5 1.5 0 0115 6.5h5.5A1.5 1.5 0 0122 8v4'/></svg>",
   campground: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'><path d='M3.5 21L12 3l8.5 18H3.5z'/><path d='M10 21v-3a2 2 0 014 0v3'/></svg>",
   restaurant: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'><line x1='9' y1='2' x2='9' y2='22'/><path d='M6 2v6a3 3 0 006 0V2'/><line x1='18' y1='2' x2='18' y2='22'/><path d='M15 2c0 0 3 3 3 6'/></svg>",
@@ -447,675 +566,496 @@ var CAT_ICONS = {
   bikeshop:   "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'><circle cx='5.5' cy='17.5' r='3.5'/><circle cx='18.5' cy='17.5' r='3.5'/><path d='M15 6h-3l-1.5 4.5H8L6 17.5'/><path d='M15 6l3.5 5-3.5 6.5'/></svg>",
   transport:  "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='4' width='18' height='14' rx='2'/><path d='M3 9h18'/><path d='M7 18v2M17 18v2'/><circle cx='7.5' cy='14' r='1.2'/><circle cx='16.5' cy='14' r='1.2'/></svg>",
 };
+var CHECK_SVG = "<svg viewBox='0 0 24 24'><path d='M5 12l5 5L20 6'/></svg>";
+var STATUS_OPTS = [
+  {key:'accredited', label:'Accredited',      dot:'#2E8A36'},
+  {key:'welcoming',  label:'Welcoming',       dot:'#D9A93B'},
+  {key:'info',       label:'Info',            dot:'#B6B6AC'},
+  {key:'unwelcome',  label:'Bikes Unwelcome', dot:'#C9483B'},
+];
+var PRICE_OPTS = ['Free', '$', '$$', '$$$'];
+var PAGE = 50;
 
-function toggleCriteria() {
-  var cb = document.getElementById('criteria-body');
-  cb.classList.toggle('open');
-  var lnk = document.getElementById('criteria-view-link');
-  if (lnk) lnk.textContent = cb.classList.contains('open') ? 'Hide criteria ›' : 'View criteria ›';
-}
-
-var currentCatId = "visitor";
-var searchText = "";
-var activeFilters = [];
-var activeReqFilters = [];
-var activeSubcat = null;
-var showDemo = false;
-var _listingsPageLimit = 50;
+var currentView = 'dir';                  // 'dir' (tabs + sidebar) or 'route'
+var state = {
+  activeCat: 'visitor',                   // category id, or 'all' for cross-category
+  sel: {type:[], status:[], price:[], basics:[], amenities:[]},
+  search: '',
+  sort: 'amenities',                      // 'amenities' (default) or 'alpha'
+  showAmenAll: false,
+  amenFilter: '',
+  limit: PAGE,
+};
+// route-view state (unchanged behaviour)
+var currentRoute = '';
+var routeCatFilter = null;
 var _routePageLimit = 50;
-var _allPageLimit = 50;
+// per-render lookup tables (index -> value) so inline handlers never quote labels
+var _subOpts = [], _amenShown = [], _basicOpts = [], _chipOpts = [];
 
-function isDemo(ex) { return !ex.real; }
-function amenityCount(ex) { return (ex.req_checked ? ex.req_checked.length : 0) + (ex.checked ? ex.checked.length : 0); }
+function toSlug(s) { return s.toLowerCase().replace(/\s*&\s*/g, '-').replace(/\s+/g, '-'); }
+function esc(s) { return (s == null ? '' : '' + s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function catById(id) { return categories.find(function(c){ return c.id === id; }); }
+function realEx(cat) { return cat.examples.filter(function(e){ return e.real !== false; }); }
+function statusOf(ex) { if (ex.badge === 'unwelcome') return 'unwelcome'; if (ex.badge === 'accredited') return 'accredited'; if (ex.badge === 'welcoming') return 'welcoming'; return 'info'; }
+function amenCount(ex) { return (ex.req_checked ? ex.req_checked.length : 0) + (ex.checked ? ex.checked.length : 0); }
 
-function toggleDemo() {
-  showDemo = !showDemo;
-  document.querySelectorAll(".demo-cb").forEach(function(cb) { cb.checked = showDemo; });
-  var cat = getCat();
-  if (currentView === "category") { renderSubcatPillRow(cat); updateFilterPills(cat); updateListings(cat); }
-  if (currentView === "route") renderRouteCard();
-  if (currentView === "all") { buildAllCatDropdown(); updateAllListings(); }
-  updateHash();
+/* ---------- category tabs ---------- */
+function catTotal(id) {
+  if (id === 'all') return categories.reduce(function(n,c){ return n + realEx(c).length; }, 0);
+  var c = catById(id); return c ? realEx(c).length : 0;
 }
-
+function renderTabs() {
+  var tabs = [{id:'all', tab:'All', slug:''}].concat(categories.map(function(c){ return {id:c.id, tab:c.tab, slug:(_catSlug[c.id]||c.id)}; }));
+  document.getElementById('cat-tabs').innerHTML = tabs.map(function(t){
+    var icon = CAT_ICONS[t.id] || CAT_ICONS.all;
+    var on = (currentView === 'dir' && state.activeCat === t.id) ? ' active' : '';
+    var href = t.id === 'all' ? '/stops/' : '/guide/' + t.slug + '/';
+    return '<a class="cat-tab' + on + '" href="' + href + '" onclick="setCat(\x27' + t.id + '\x27);return false;">' + icon + '<span>' + esc(t.tab) + '</span><span class="ct">' + catTotal(t.id).toLocaleString() + '</span></a>';
+  }).join('');
+}
 function setCat(id) {
-  currentCatId = id; activeFilters = []; activeReqFilters = []; activeSubcat = null;
-  if (currentView !== "category") setView("category");
-  document.querySelectorAll("#category-nav .cat-btn").forEach(function(btn) { btn.classList.toggle("active", btn.dataset.cat === id); });
-  renderAll();
-  var _sb = document.getElementById("search-box"); if (_sb) _sb.value = searchText;  // keep search across category switches
-  updateHash();
-}
-function getCat() { return categories.find(function(c) { return c.id === currentCatId; }); }
-
-function renderCategoryNav() {
-  document.getElementById("category-nav").innerHTML = categories.map(function(c) {
-    var icon = CAT_ICONS[c.id] || '';
-    var slug = _catSlug[c.id] || c.id;
-    return '<a class="cat-btn' + (c.id === currentCatId ? ' active' : '') + '" href="/stops/' + slug + '/" data-cat="' + c.id + '" onclick="setCat(\x27' + c.id + '\x27);return false;">' + icon + c.tab + '</a>';
-  }).join("");
+  state.activeCat = id;
+  // Per-category filters reset on a tab switch, but the search (esp. a community:/name:
+  // directive) persists across categories — matches the pre-redesign behaviour.
+  state.sel = {type:[], status:[], price:[], basics:[], amenities:[]};
+  state.showAmenAll = false; state.amenFilter = ''; state.limit = PAGE;
+  if (currentView !== 'dir') { gotoDir(); }
+  closeDrawer(); renderTabs(); renderSidebar(); renderResults(); updateHash();
 }
 
-function renderAll() {
-  var cat = getCat();
-  renderExamplesCard(cat);
-  renderSubcatPillRow(cat);
-  positionTooltips();
+/* ---------- sidebar ---------- */
+function subcatCounts(cat) {
+  var m = {};
+  realEx(cat).forEach(function(e){ if (e.subcategory) m[e.subcategory] = (m[e.subcategory]||0) + 1; });
+  return m;
 }
-
-function positionTooltips() {
-  document.querySelectorAll(".tooltip-wrap").forEach(function(wrap) {
-    wrap.addEventListener("mouseenter", function() {
-      var tip = wrap.querySelector(".tooltip-text");
-      if (!tip) return;
-      var rect = wrap.getBoundingClientRect();
-      tip.style.left = Math.min(rect.left, window.innerWidth - 330) + "px";
-      tip.style.top = (rect.bottom + 6) + "px";
-    });
-  });
+function toggle(group, val) {
+  var a = state.sel[group]; var i = a.indexOf(val);
+  if (i === -1) a.push(val); else a.splice(i, 1);
+  state.limit = PAGE; renderSidebar(); renderDynamic(); updateHash();
 }
+function togType(i)   { toggle('type', _subOpts[i]); }
+function togStatus(i) { toggle('status', STATUS_OPTS[i].key); }
+function togPrice(i)  { toggle('price', PRICE_OPTS[i]); }
+function togBasic(i)  { toggle('basics', _basicOpts[i]); }
+function togAmen(i)   { toggle('amenities', _amenShown[i]); }
+function togChip(i)   { var c = _chipOpts[i]; toggle(c[0], c[1]); }
+function amenToggle() { state.showAmenAll = !state.showAmenAll; renderSidebar(); }
+function amenFilterIn(v) { state.amenFilter = v; renderSidebar(); var el = document.querySelector('#dir-sidebar-inner .amen-filter'); if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }
+function setSort(v) { state.sort = v; state.limit = PAGE; renderDynamic(); }
 
-function renderCriteria(cat) {
-  var reqItems = cat.required.map(function(r) {
-    var tip = "";
-    if (r.title.indexOf("Info Sheet") !== -1 && cat.infoSheet) {
-      tip = '<span class="tooltip-text">A short local info sheet covering:<br><br>' + INFO_FIELDS.map(function(f) { return "• " + f; }).join("<br>") + '</span>';
-    } else if (r.detail) {
-      tip = '<span class="tooltip-text">' + r.detail + '</span>';
+function _fopt(on, fn, idx, label, opts) {
+  opts = opts || {};
+  var dot = opts.dot ? '<span class="fdot" style="background:' + opts.dot + '"></span>' : '';
+  var cntTxt = (opts.delta != null) ? ('+' + opts.delta.toLocaleString())
+             : (opts.count != null) ? opts.count.toLocaleString() : null;
+  var cnt = (cntTxt != null) ? '<span class="cnt">' + cntTxt + '</span>' : '';
+  var zero = opts.zero ? ' z0' : '';
+  return '<div class="fopt' + (on ? ' on' : '') + zero + '" onclick="' + fn + '(' + idx + ')">' +
+    '<span class="cbx">' + CHECK_SVG + '</span>' + dot + '<span class="lbl">' + esc(label) + '</span>' + cnt + '</div>';
+}
+// Decide what number to show beside a filter option. For OR groups (type/status/price) that
+// already have a selection, an unchecked option shows "+N" (how many it would add). Otherwise
+// (no selection yet, AND groups, or the checked option itself) show the absolute result count.
+function _cntOpts(group, value, P, cur) {
+  var hypo = facetCount(group, value, P);
+  var isOR = (group === 'type' || group === 'status' || group === 'price');
+  var on = state.sel[group].indexOf(value) !== -1;
+  if (isOR && !on && state.sel[group].length > 0) return { delta: hypo - cur, zero: hypo === cur };
+  return { count: hypo, zero: hypo === 0 };
+}
+function _group(title, hint, body) {
+  return '<div class="fg"><div class="fg-head"><span class="fg-title">' + title + '</span>' + (hint ? '<span class="fg-hint">' + hint + '</span>' : '') + '</div>' + body + '</div>';
+}
+function _basicLabel(t) { return t.replace(/^We Welcome Cyclists Local Knowledge Sheet.*/, 'Local Knowledge Sheet'); }
+function renderSidebar() {
+  var html = '';
+  // Faceted counts: how many results you'd get if each option were on, given everything else
+  // currently selected (incl. search). P (the pool) and cur (current result count) built once.
+  var P = pool();
+  var cur = applyFilters(P, state.sel).length;
+  if (state.activeCat === 'all') {
+    html += '<div class="allcallout">Type &amp; amenity filters are defined per category. <b>Pick a category above</b> to use them.</div>';
+    html += _group('Status', 'any of', STATUS_OPTS.map(function(s,i){ var o = _cntOpts('status', s.key, P, cur); o.dot = s.dot; return _fopt(state.sel.status.indexOf(s.key)!==-1, 'togStatus', i, s.label, o); }).join(''));
+    html += _group('Price', 'any of', PRICE_OPTS.map(function(p,i){ return _fopt(state.sel.price.indexOf(p)!==-1, 'togPrice', i, p, _cntOpts('price', p, P, cur)); }).join(''));
+  } else {
+    var cat = catById(state.activeCat);
+    var sc = subcatCounts(cat);
+    _subOpts = Object.keys(sc).sort(function(a,b){ return sc[b]-sc[a]; });   // stable order by overall popularity
+    if (_subOpts.length > 1) {
+      html += _group('Type', 'any of', _subOpts.map(function(s,i){ return _fopt(state.sel.type.indexOf(s)!==-1, 'togType', i, s, _cntOpts('type', s, P, cur)); }).join(''));
     }
-    if (tip) return '<li class="required-item"><span class="req-check">✓</span><span class="tooltip-wrap">' + r.title + tip + '</span></li>';
-    return '<li class="required-item"><span class="req-check">✓</span><span class="req-title">' + r.title + '</span></li>';
-  }).join("");
-  var pills = cat.optional.map(function(o) { return '<span class="opt-pill">' + o + '</span>'; }).join("");
-  return '<div class="criteria-body" id="criteria-body">' +
-      '<div class="two-col"><div class="col-left"><div class="section-label">Required <span class="count">· ' + cat.required.length + '</span></div>' +
-      '<ul class="required-list">' + reqItems + '</ul></div>' +
-      '<div class="col-right"><div class="section-label">Optional <span class="count">· ' + cat.optional.length + ' amenities</span></div>' +
-      '<div class="optional-pills">' + pills + '</div></div></div>' +
-    '</div>';
-}
-
-function renderExamplesCard(cat) {
-  var el = document.getElementById("examples-card");
-  var _realCount = cat.examples.filter(function(ex) { return !isDemo(ex); }).length;
-  el.innerHTML = '<div class="examples-toolbar"><div class="toolbar-head">' +
-    '<h3>Listings</h3>' +
-    '<div class="criteria-inline">' + _realCount.toLocaleString() + ' ' + cat.name.toLowerCase() + ' &middot; Criteria: ' + cat.required.length + ' required &middot; ' + cat.optional.length + ' optional &nbsp;<span class="criteria-link" id="criteria-view-link" onclick="toggleCriteria()">View criteria ›</span></div>' +
-    '</div>' +
-    '<div class="legend"><span class="legend-status">Status</span>' +
-      // HIDDEN — no partners yet. Restore the two lines below to bring back the Sector Partner / Industry Partner pills.
-      // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span><span class="legend-tip">Member of a sector partner network like the BC Ale Trail or BC Farmers' + "'" + ' Market Network. Their network has partnered with BC Cycle Tourism Society to co-brand cycle-friendly member businesses.</span></span>' +
-      // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span><span class="legend-tip">Cycling industry business with an enhanced listing — logo, photos, and promoted placement. Supports BC Cycle Tourism Society through the industry partner program.</span></span>' +
-      '<span class="legend-badge-wrap" data-badge-term="Accredited" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span><span class="legend-tip">Business has confirmed all required criteria and joined the We Welcome Cyclists program. Free to join. Apply at /apply</span></span>' +
-      '<span class="legend-badge-wrap" data-badge-term="Welcoming" onclick="filterByBadge(\x27Welcoming\x27)"><span class="badge badge-welcoming">Welcoming</span><span class="legend-tip">Editorial entry — meets basic criteria but hasn' + "'" + 't formally enrolled in the program yet.</span></span>' +
-      '<span class="legend-badge-wrap" data-badge-term="Info" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span><span class="legend-tip">Useful reference — doesn' + "'" + 't fully meet required criteria but worth knowing about.</span></span>' +
-      '<span class="legend-badge-wrap" data-badge-term="Bikes Unwelcome" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span><span class="legend-tip">This business or service does not accommodate cyclists or bicycles. Listed so you know before you show up.</span></span>' +
-    '</div></div>' +
-    renderCriteria(cat) +
-    '<div class="filter-bar"><div class="filter-bar-top">' +
-    '<input type="text" id="search-box" class="search-input" placeholder="Search name, amenity, or badge…" oninput="onSearch(this.value)" />' +
-    // '<label class="demo-toggle" style="margin-left:auto"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
-    '<div class="search-hint">💡 Tip: filter to one town — type <span class="search-hint-eg" onclick="fillCommunityPrefix()">community:Hope</span></div>' +
-    '</div><div class="filter-pills-row" id="filter-pills-row"></div></div>' +
-    '<div id="results-count-area"></div><div id="listings-area"></div>' +
-    '<div style="text-align:center;padding:8px 36px 20px;font-size:13px;color:#636363;">Click a listing to see details. Data © <a href="https://www.openstreetmap.org/copyright" style="color:#636363;">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/" style="color:#636363;">Open Database License (ODbL)</a>.</div>' +
-    '<div style="text-align:center;padding:16px 36px 24px;"><a href="/apply" style="font-size:13px;color:#2E8A36;font-weight:600;text-decoration:none;">Want to welcome cyclists? Apply for accreditation &rarr;</a></div>' +
-    '<div style="text-align:center;padding:0 36px 28px;font-size:13px;color:#636363;max-width:500px;margin:0 auto;">See a <span class="badge badge-unwelcome" style="font-size:11px;padding:2px 8px;vertical-align:1px;background:#FFFDF9;color:#DC2626;border:1.5px solid #DC2626;">Bikes Unwelcome</span> listing that' + "'" + 's wrong? We' + "'" + 'd love to be wrong. <a href="/suggest" style="color:#1E7D96;font-weight:600;">Let us know</a> and we' + "'" + 'll correct it ASAP.</div>';
-  updateFilterPills(cat);
-  updateListings(cat);
-  updateBadgeLegendActive();
-}
-
-function renderSubcatPillRow(cat) {
-  var row = document.getElementById("subcat-pill-row");
-  if (!row) return;
-  var counts = {};
-  cat.examples.filter(function(ex) { return !isDemo(ex) && ex.subcategory; }).forEach(function(ex) {
-    counts[ex.subcategory] = (counts[ex.subcategory] || 0) + 1;
-  });
-  var subcats = Object.keys(counts).sort(function(a, b) { return counts[b] - counts[a]; });
-  if (subcats.length < 2) { row.style.display = "none"; row.innerHTML = ""; return; }
-  var total = cat.examples.filter(function(ex) { return !isDemo(ex); }).length;
-  var allActive = !activeSubcat;
-  var pills = '<button class="subcat-pill' + (allActive ? ' active' : '') + '" onclick="toggleSubcat(null)">All <span class="subcat-pill-count">' + total + '</span></button>';
-  pills += subcats.map(function(s) {
-    var isActive = activeSubcat === s;
-    var sAttr = s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;");
-    return '<button class="subcat-pill' + (isActive ? ' active' : '') + '" data-subcat="' + sAttr + '" onclick="toggleSubcat(this.dataset.subcat)">' +
-      (SUBCAT_ICONS[s] ? SUBCAT_ICONS[s] + ' ' : '') + s + ' <span class="subcat-pill-count">' + counts[s] + '</span></button>';
-  }).join("");
-  row.innerHTML = pills;
-  row.style.display = "flex";
-}
-
-function toggleSubcat(name) {
-  activeSubcat = (name === null || activeSubcat === name) ? null : name;
-  var cat = getCat(); renderSubcatPillRow(cat); updateListings(cat); updateHash();
-}
-
-function updateFilterPills(cat) {
-  var reqPills = cat.required.map(function(r, idx) {
-    var a = activeReqFilters.indexOf(idx) !== -1;
-    var label = r.title.replace(/^We Welcome Cyclists Local Knowledge Sheet.*/, 'Local Knowledge Sheet');
-    return '<span class="filter-pill-req' + (a ? ' active' : '') + '" onclick="toggleReqFilter(' + idx + ')">' + label + '</span>';
-  }).join("");
-  var optPills = cat.optional.map(function(opt, idx) {
-    var a = activeFilters.indexOf(idx) !== -1;
-    return '<span class="filter-pill' + (a ? ' active' : '') + '" onclick="toggleFilter(' + idx + ')">' + opt + '</span>';
-  }).join("");
-  var hasActive = activeFilters.length > 0 || activeReqFilters.length > 0 || searchText.length > 0;
-  var clear = hasActive ? '<span class="clear-filters" onclick="clearAll()">Clear all</span>' : '';
-  document.getElementById("filter-pills-row").innerHTML = reqPills + optPills + clear;
-}
-
-function updateListings(cat) {
-  _listingsPageLimit = 50;
-  _renderListingPage(cat);
-}
-function _renderListingPage(cat) {
-  var filtered = getSortedFiltered(cat);
-  var hasF = activeFilters.length > 0 || activeReqFilters.length > 0 || searchText.length > 0;
-  var visibleTotal = cat.examples.filter(function(ex) { return showDemo || !isDemo(ex); }).length;
-  var showing = Math.min(filtered.length, _listingsPageLimit);
-  var countMsg = hasF ? 'Showing ' + showing + ' of ' + filtered.length + ' filtered' :
-                 (filtered.length > _listingsPageLimit ? 'Showing ' + showing + ' of ' + filtered.length : '');
-  document.getElementById("results-count-area").innerHTML = countMsg ? '<div class="results-count">' + countMsg + '</div>' : '';
-  var _cqName = communityQuery(searchText);
-  if (filtered.length === 0) {
-    document.getElementById("listings-area").innerHTML = (_cqName ? communityChipHTML(_cqName) : '') + '<div class="no-results">No listings match your filters. <a onclick="clearAll()">Clear all</a></div>';
-    return;
+    html += _group('Status', 'any of', STATUS_OPTS.map(function(s,i){ var o = _cntOpts('status', s.key, P, cur); o.dot = s.dot; return _fopt(state.sel.status.indexOf(s.key)!==-1, 'togStatus', i, s.label, o); }).join(''));
+    html += _group('Price', 'any of', PRICE_OPTS.map(function(p,i){ return _fopt(state.sel.price.indexOf(p)!==-1, 'togPrice', i, p, _cntOpts('price', p, P, cur)); }).join(''));
+    _basicOpts = cat.required.map(function(r){ return r.title; });
+    html += _group('Required basics', 'all of', _basicOpts.map(function(t,i){ return _fopt(state.sel.basics.indexOf(t)!==-1, 'togBasic', i, _basicLabel(t), _cntOpts('basics', t, P, cur)); }).join(''));
+    _amenShown = cat.optional.slice();
+    var rows = _amenShown.map(function(a,i){ return _fopt(state.sel.amenities.indexOf(a)!==-1, 'togAmen', i, a, _cntOpts('amenities', a, P, cur)); }).join('');
+    html += _group('Amenities', 'all of', rows);
   }
-  var visible = filtered.slice(0, _listingsPageLimit);
-  var html = (_cqName ? communityChipHTML(_cqName) : '') + '<div class="listings-body">' + visible.map(function(ex) {
-    return renderListingCardHTML(cat, ex);
-  }).join("") + '</div>';
-  if (filtered.length > _listingsPageLimit) {
-    html += '<div style="text-align:center;padding:16px 0 8px;"><button onclick="loadMoreListings()" style="padding:10px 24px;background:#1E7D96;color:white;border:none;border-radius:20px;font-size:14px;font-weight:600;cursor:pointer;">Load more (' + (filtered.length - _listingsPageLimit) + ' remaining)</button></div>';
-  }
-  document.getElementById("listings-area").innerHTML = html;
-}
-function loadMoreListings() {
-  _listingsPageLimit += 50;
-  _renderListingPage(getCat());
+  document.getElementById('dir-sidebar-inner').innerHTML = html;
+  var ap = document.getElementById('dir-sheet-apply');
+  if (ap) ap.textContent = 'Show ' + filtered().length.toLocaleString() + ' results';
 }
 
-// Returns the community name if `text` is a community: directive, else null.
-function communityQuery(text) {
-  var m = /^\s*community:(.+)$/i.exec(text || "");
-  return m ? m[1].trim() : null;
+/* ---------- filtering ---------- */
+function selCount() { var s = state.sel; return s.type.length + s.status.length + s.price.length + s.basics.length + s.amenities.length; }
+function pool() {
+  var out = [];
+  var cats = (state.activeCat === 'all') ? categories : [catById(state.activeCat)];
+  cats.forEach(function(c){ realEx(c).forEach(function(e){ var o = Object.create(e); o.__cat = c; out.push(o); }); });
+  return out;
 }
-
-function getSortedFiltered(cat) {
-  var list = cat.examples.slice();
-  if (!showDemo) list = list.filter(function(ex) { return !isDemo(ex); });
-  if (activeSubcat) list = list.filter(function(ex) { return ex.subcategory === activeSubcat; });
-  if (activeReqFilters.length > 0) list = list.filter(function(ex) { var rc = ex.req_checked || []; return activeReqFilters.every(function(f) { return rc.indexOf(cat.required[f].title) !== -1; }); });
-  if (activeFilters.length > 0) list = list.filter(function(ex) { return activeFilters.every(function(f) { return ex.checked.indexOf(cat.optional[f]) !== -1; }); });
-  var _commQ = communityQuery(searchText);
-  if (_commQ) {
-    var _cql = _commQ.toLowerCase();
-    list = list.filter(function(ex) { return (ex.community || "").toLowerCase() === _cql; });
-  } else if (searchText.length > 0) {
-    var q = searchText.toLowerCase();
-    var isBadgeTerm = BADGE_TERMS.indexOf(q) !== -1;
-    list = list.filter(function(ex) {
-      var amenityMatch = cat.optional.some(function(opt, i) {
-        return ex.checked.indexOf(opt) !== -1 && opt.toLowerCase().indexOf(q) !== -1;
-      });
-      var badgeMatch = (ex.network && ex.network.toLowerCase().indexOf(q) !== -1) ||
-        (ex.partner && "industry partner".indexOf(q) !== -1) ||
-        (ex.badge && ex.badge.toLowerCase() === q) ||
-        (ex.badge === "unwelcome" && q === "bikes unwelcome") ||
-        ((ex.network) && q === "sector partner");
-      if (isBadgeTerm) return badgeMatch;
-      return ex.name.toLowerCase().indexOf(q) !== -1 || ex.location.toLowerCase().indexOf(q) !== -1 || ex.desc.toLowerCase().indexOf(q) !== -1 || (ex.routes && ex.routes.some(function(r) { return r.toLowerCase().indexOf(q) !== -1; })) || amenityMatch || badgeMatch;
+function communityQuery(t) { var m = /^\s*community:(.+)$/i.exec(t || ''); return m ? m[1].trim() : null; }
+function nameQuery(t) { var m = /^\s*name:(.+)$/i.exec(t || ''); return m ? m[1].trim() : null; }
+// Pure filter pass (no sort): used by filtered() for the result list, and by facetCount()
+// to count hypothetical selections for the sidebar counts.
+function applyFilters(list, s) {
+  if (s.type.length)   list = list.filter(function(e){ return s.type.indexOf(e.subcategory) !== -1; });
+  if (s.status.length) list = list.filter(function(e){ return s.status.indexOf(statusOf(e)) !== -1; });
+  if (s.price.length)  list = list.filter(function(e){ return s.price.indexOf(e.price_band) !== -1; });
+  if (s.basics.length) list = list.filter(function(e){ var rc = e.req_checked||[]; return s.basics.every(function(b){ return rc.indexOf(b) !== -1; }); });
+  if (s.amenities.length) list = list.filter(function(e){ var ch = e.checked||[]; return s.amenities.every(function(a){ return ch.indexOf(a) !== -1; }); });
+  var cq = communityQuery(state.search), nq = nameQuery(state.search);
+  if (cq) { var c = cq.toLowerCase(); list = list.filter(function(e){ return (e.community||'').toLowerCase() === c; }); }
+  else if (nq) { var n = nq.toLowerCase(); list = list.filter(function(e){ return (e.name||'').toLowerCase().indexOf(n) !== -1; }); }
+  else if (state.search) {
+    var q = state.search.toLowerCase();
+    list = list.filter(function(e){
+      return (e.name||'').toLowerCase().indexOf(q) !== -1 || (e.location||'').toLowerCase().indexOf(q) !== -1 ||
+        (e.desc||'').toLowerCase().indexOf(q) !== -1 || (e.checked||[]).some(function(a){ return a.toLowerCase().indexOf(q) !== -1; }) ||
+        (e.routes && e.routes.some(function(r){ return r.toLowerCase().indexOf(q) !== -1; }));
     });
   }
-  function sortRank(ex) { if (ex.badge === "unwelcome") return 5; if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; if (ex.badge === "welcoming") return 3; return 4; }
-  list.sort(function(a, b) { var ra = sortRank(a), rb = sortRank(b); if (ra !== rb) return ra - rb; var la = a.central ? 1 : 0, lb = b.central ? 1 : 0; if (la !== lb) return la - lb; var ca = amenityCount(a), cb = amenityCount(b); if (ca !== cb) return cb - ca; return a.name.localeCompare(b.name); });
+  return list;
+}
+// Count of results if `value` were active in `group`, with all other selections (and search) held.
+// OR groups (type/status/price) add the value to the set; AND groups (basics/amenities) intersect it in.
+function facetCount(group, value, P) {
+  var s = state.sel;
+  var sel = { type:s.type.slice(), status:s.status.slice(), price:s.price.slice(), basics:s.basics.slice(), amenities:s.amenities.slice() };
+  if (sel[group].indexOf(value) === -1) sel[group].push(value);
+  return applyFilters(P, sel).length;
+}
+function filtered() {
+  var list = applyFilters(pool(), state.sel);
+  function rank(e){ var st = statusOf(e); if (st === 'unwelcome') return 5; if (st === 'accredited') return 2; if (st === 'welcoming') return 3; return 4; }
+  if (state.sort === 'alpha') {
+    // Alphabetical A–Z, but always sink Bikes Unwelcome to the bottom.
+    list.sort(function(a,b){
+      var ua = statusOf(a)==='unwelcome'?1:0, ub = statusOf(b)==='unwelcome'?1:0; if (ua !== ub) return ua - ub;
+      return (a.name||'').localeCompare(b.name||'');
+    });
+  } else {
+    list.sort(function(a,b){
+      var ra = rank(a), rb = rank(b); if (ra !== rb) return ra - rb;
+      var la = a.central?1:0, lb = b.central?1:0; if (la !== lb) return lb - la;
+      var ca = amenCount(a), cb = amenCount(b); if (ca !== cb) return cb - ca;
+      return (a.name||'').localeCompare(b.name||'');
+    });
+  }
   return list;
 }
 
-function toggleFilter(idx) {
-  var p = activeFilters.indexOf(idx);
-  if (p === -1) activeFilters.push(idx); else activeFilters.splice(p, 1);
-  var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateHash();
+/* ---------- results ---------- */
+function selChips() {
+  var s = state.sel; _chipOpts = [];
+  s.type.forEach(function(v){ _chipOpts.push(['type', v, v]); });
+  s.status.forEach(function(v){ var o = STATUS_OPTS.find(function(x){return x.key===v;}); _chipOpts.push(['status', v, o?o.label:v]); });
+  s.price.forEach(function(v){ _chipOpts.push(['price', v, v]); });
+  s.basics.forEach(function(v){ _chipOpts.push(['basics', v, _basicLabel(v)]); });
+  s.amenities.forEach(function(v){ _chipOpts.push(['amenities', v, v]); });
+  return _chipOpts;
 }
-function toggleReqFilter(idx) {
-  var p = activeReqFilters.indexOf(idx);
-  if (p === -1) activeReqFilters.push(idx); else activeReqFilters.splice(p, 1);
-  var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateHash();
+function renderResults() {
+  var allMode = state.activeCat === 'all';
+  var cat = allMode ? null : catById(state.activeCat);
+  var list = filtered();
+  var total = catTotal(state.activeCat);
+  var showing = Math.min(list.length, state.limit);
+  var n = selCount();
+  var hasF = n > 0 || state.search.length > 0;
+  var guideHref = allMode ? '' : '/guide/' + (_catSlug[cat.id]||cat.id) + '/';
+
+  var head = allMode
+    ? '<div class="res-head"><h2>All stops</h2></div>' +
+      '<p class="res-sub">Searching all ' + categories.length + ' categories &middot; about ' + total.toLocaleString() + ' stops province-wide. Each result shows its category.</p>'
+    : '<div class="res-head"><h2>' + esc(cat.name) + '</h2><a class="guidelink" href="' + guideHref + '">' + esc(cat.name) + ' guide &rsaquo;</a></div>' +
+      '<p class="res-sub">Each stop listed with its <b>We Welcome Cyclists</b> amenities for ' + esc(cat.name.toLowerCase()) + '.</p>';
+
+  var ph = allMode ? 'Search all categories — try name:MEC or community:Hope…' : 'Search this category — try name:MEC or community:Hope…';
+  var search = '<input class="search-in" id="dir-search" placeholder="' + esc(ph) + '" value="' + esc(state.search) + '" oninput="onSearch(this.value)" />' +
+    '<p class="search-tip">Tip: search by name with <code onclick="fillSearch(\x27name:\x27)">name:MEC</code>, by town with <code onclick="fillCommunityPrefix()">community:Hope</code>, or just type an amenity.</p>';
+
+  var fbtn = '<button class="filterbtn" onclick="openDrawer()">' +
+    "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'><line x1='4' y1='7' x2='20' y2='7'/><line x1='7' y1='12' x2='17' y2='12'/><line x1='10' y1='17' x2='14' y2='17'/></svg>" +
+    'Filters<span class="badge-n" id="dir-fbadge" style="display:none"></span></button>';
+  var sortSel = '<div class="dir-sortwrap"><label class="dir-sortlbl">Sort</label> <select class="dir-sortbtn" onchange="setSort(this.value)">' +
+    '<option value="amenities"' + (state.sort === 'amenities' ? ' selected' : '') + '>Most amenities</option>' +
+    '<option value="alpha"' + (state.sort === 'alpha' ? ' selected' : '') + '>Alphabetical (A&ndash;Z)</option>' +
+    '</select></div>';
+  var toolbar = '<div class="dir-toolbar">' + fbtn + '<span class="dir-showing" id="dir-showing"></span>' +
+    sortSel + '</div>' +
+    '<p class="assumed-note"><code>*</code> = please see related note in full listing</p>';
+
+  // Build the stable shell ONCE. The search <input> lives here so it is never recreated
+  // mid-keystroke (recreating it would steal focus). Only #dir-dyn updates as you type/filter.
+  document.getElementById('dir-results').innerHTML = head + search + toolbar +
+    '<div id="dir-dyn"></div>';
+  renderDynamic();
+  renderSidebar();
 }
-function onSearch(val) { searchText = val; var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateBadgeLegendActive(); updateHash(); }
-function filterByBadge(term) {
-  if (currentView === "category") {
-    searchText = (searchText === term) ? "" : term;
-    var box = document.getElementById("search-box"); if (box) box.value = searchText;
-    var cat = getCat(); updateFilterPills(cat); updateListings(cat); updateBadgeLegendActive(); updateHash();
-  } else if (currentView === "all") {
-    allSearchText = (allSearchText === term) ? "" : term;
-    var abox = document.getElementById("all-search-box"); if (abox) abox.value = allSearchText;
-    updateAllListings(); updateBadgeLegendActive(); updateHash();
+// Updates only the volatile parts (count, filter badge, selected chips, cards) so the
+// search input and static header keep their DOM identity (and focus) while typing.
+function renderDynamic() {
+  var allMode = state.activeCat === 'all';
+  var list = filtered();
+  var total = catTotal(state.activeCat);
+  var n = selCount();
+  var hasF = n > 0 || state.search.length > 0;
+  var showing = Math.min(list.length, state.limit);
+
+  var showEl = document.getElementById('dir-showing');
+  if (showEl) showEl.textContent = 'Showing ' + showing.toLocaleString() + ' of ' + (hasF ? list.length : total).toLocaleString();
+  var badge = document.getElementById('dir-fbadge');
+  if (badge) { if (n) { badge.textContent = n; badge.style.display = ''; } else { badge.style.display = 'none'; } }
+  var ap = document.getElementById('dir-sheet-apply');
+  if (ap) ap.textContent = 'Show ' + list.length.toLocaleString() + ' results';
+
+  var chips = selChips();
+  var chipsHtml = chips.length
+    ? '<div class="dir-chips">' + chips.map(function(c,i){ return '<span class="dir-chip" onclick="togChip(' + i + ')">' + esc(c[2]) + ' <span class="x">&#10005;</span></span>'; }).join('') + '<span class="dir-clearall" onclick="clearAll()">Clear all</span></div>'
+    : '';
+  var cqName = communityQuery(state.search);
+  var commChip = cqName ? communityChipHTML(cqName) : '';
+  var cards;
+  if (list.length === 0) {
+    cards = commChip + '<div class="dir-noresults">No listings match your filters. <a onclick="clearAll()">Clear all</a></div>';
+  } else {
+    cards = commChip + '<div class="dir-cards">' + list.slice(0, state.limit).map(function(e){ return renderCard(e, e.__cat, allMode); }).join('') + '</div>';
+    if (list.length > state.limit) cards += '<button class="dir-loadmore" onclick="loadMore()">Load more (' + (list.length - state.limit).toLocaleString() + ' remaining)</button>';
   }
+  document.getElementById('dir-dyn').innerHTML = chipsHtml + cards;
+  (function(){
+    try {
+      var _f = JSON.parse(sessionStorage.getItem('_wwc_from') || 'null');
+      if (_f && _f.key) { sessionStorage.removeItem('_wwc_from');
+        requestAnimationFrame(function(){ requestAnimationFrame(function(){ var el = document.getElementById('c-' + _f.key); if (el) el.scrollIntoView({block:'center', behavior:'instant'}); }); }); }
+    } catch(e) {}
+  })();
 }
-
-function updateBadgeLegendActive() {
-  var term = (currentView === "all") ? allSearchText : searchText;
-  var q = (term || "").toLowerCase();
-  var isBadge = BADGE_TERMS.indexOf(q) !== -1;
-  document.querySelectorAll(".legend-badge-wrap").forEach(function(w) {
-    var dt = (w.getAttribute("data-badge-term") || "").toLowerCase();
-    if (isBadge && dt === q) w.classList.add("active");
-    else w.classList.remove("active");
-  });
-}
+function onSearch(v) { state.search = v; state.limit = PAGE; renderDynamic(); renderSidebar(); updateHash(); }
+function loadMore() { state.limit += PAGE; renderDynamic(); }
 function clearAll() {
-  searchText = ""; activeFilters = []; activeReqFilters = []; activeSubcat = null;
-  var box = document.getElementById("search-box"); if (box) box.value = "";
-  var cat = getCat(); renderSubcatPillRow(cat); updateFilterPills(cat); updateListings(cat); updateBadgeLegendActive(); updateHash();
+  state.sel = {type:[], status:[], price:[], basics:[], amenities:[]};
+  state.search = ''; state.limit = PAGE;
+  var b = document.getElementById('dir-search'); if (b) b.value = '';
+  renderSidebar(); renderDynamic(); updateHash();
 }
+function fillSearch(val) { state.search = val; var b = document.getElementById('dir-search'); if (b) { b.value = val; b.focus(); b.setSelectionRange(val.length, val.length); } state.limit = PAGE; renderDynamic(); renderSidebar(); updateHash(); }
+function fillCommunityPrefix() { fillSearch('community:'); }
+function communityChipHTML(name) {
+  return '<div class="comm-chip">Showing stops in <strong>' + esc(name) + '</strong><span class="comm-chip-x" onclick="clearSearch()" title="Clear">&#10005;</span></div>';
+}
+function clearSearch() { state.search = ''; var b = document.getElementById('dir-search'); if (b) b.value = ''; state.limit = PAGE; renderDynamic(); updateHash(); }
 
+/* ---------- shared card renderer (directory + route view) ---------- */
+function basicsLine(e, cat) {
+  if (statusOf(e) === 'unwelcome') return '<span class="lbasics unwelcome">&#10005; Bikes not accommodated</span>';
+  var req = cat.required.length, got = (e.req_checked||[]).length, fal = (e.req_falsed||[]).length;
+  if (got >= req) return '';
+  if (got === 0 && fal === 0) return '<span class="lbasics unconfirmed">? Cyclist basics not yet confirmed</span>';
+  return '<span class="lbasics partial">! Meets ' + got + ' of ' + req + ' basics</span>';
+}
+function renderCard(e, cat, showCatTag) {
+  var st = statusOf(e);
+  var sbMap = {accredited:['sb-accredited','Accredited'], welcoming:['sb-welcoming','Welcoming'], info:['sb-info','Info'], unwelcome:['sb-unwelcome','Bikes Unwelcome']};
+  var sb = sbMap[st];
+  var icon = CAT_ICONS[cat.id] || CAT_ICONS.all;
+  var catPill = showCatTag ? ' <span class="lcatpill">' + esc(cat.tab) + '</span> ' : '';
+  var price = e.price_band ? '<span class="lprice">' + esc(e.price_band) + '</span>' : '';
+  var meta = esc(e.location||'') + catPill + (e.subcategory ? ' &middot; ' + esc(e.subcategory) : '') + price;
+  var chips = '';
+  if (st !== 'unwelcome' && e.checked && e.checked.length) {
+    chips = '<div class="lachips">' + e.checked.map(function(a){
+      var star = (e.notes && e.notes[a]) ? '<span class="star">*</span>' : '';
+      return '<span class="lachip">' + esc(a) + star + '</span>';
+    }).join('') + '</div>';
+  }
+  var desc = e.desc ? '<p class="ldesc">' + esc(e.desc) + '</p>' : '';
+  var foot = '<div class="lfoot">' + basicsLine(e, cat) + '<span class="lviewdetails">View all details &rsaquo;</span></div>';
+  var keyAttr = e.key ? ' id="c-' + e.key + '" data-key="' + e.key + '"' : '';
+  return '<div class="lcard is-' + st + '"' + keyAttr + ' onclick="goToListing(this)">' +
+    '<div class="lavatar">' + icon + '</div>' +
+    '<div class="lbody">' +
+      '<div class="ltitle-row"><span class="ltitle">' + esc(e.name) + '</span><span class="sbadge ' + sb[0] + '">' + sb[1] + '</span></div>' +
+      '<div class="lmeta">' + meta + '</div>' + chips + desc + foot +
+    '</div></div>';
+}
 function goToListing(el) {
-  var k = el.dataset.key;
-  if (!k) return;
+  var k = el.dataset.key; if (!k) return;
   try {
-    var _lbl = currentView === 'route' ? currentRoute : (currentView === 'all' ? 'All listings' : getCat().name);
-    sessionStorage.setItem('_wwc_from', JSON.stringify({ key: k, label: _lbl }));
+    var lbl = (currentView === 'route') ? currentRoute : (state.activeCat === 'all' ? 'All listings' : catById(state.activeCat).name);
+    sessionStorage.setItem('_wwc_from', JSON.stringify({key:k, label:lbl}));
   } catch(e) {}
-  window.location = '/stops/' + k + '/';
+  window.location = '/stop/' + k + '/';
 }
 
-// ---- VIEW SWITCHING ----
-var currentView = "category";
-var currentRoute = "";
-var allSearchText = "";
-var allFilters = [];
-var allCatFilter = "";
+/* ---------- mobile drawer ---------- */
+function openDrawer() { document.getElementById('dir-sidebar').classList.add('open'); document.getElementById('dir-overlay').classList.add('open'); }
+function closeDrawer() { var sb = document.getElementById('dir-sidebar'); if (sb) sb.classList.remove('open'); var ov = document.getElementById('dir-overlay'); if (ov) ov.classList.remove('open'); }
 
-function setView(v) {
-  currentView = v;
-  document.getElementById("top-nav").style.display = v === "category" ? "" : "none";
-  document.getElementById("view-category").style.display = v === "category" ? "" : "none";
-  document.getElementById("view-route").style.display = v === "route" ? "" : "none";
-  document.getElementById("view-all").style.display = v === "all" ? "" : "none";
-  if (v === "route") renderRouteView();
-  if (v === "all") renderAllView();
-  updateHash();
-}
+/* ---------- view switching ---------- */
+function gotoRoute() { currentView = 'route'; closeDrawer(); document.getElementById('view-dir').style.display = 'none'; document.getElementById('view-route').style.display = ''; renderRouteView(); renderTabs(); updateHash(); }
+function gotoDir() { currentView = 'dir'; document.getElementById('view-route').style.display = 'none'; document.getElementById('view-dir').style.display = ''; renderTabs(); renderSidebar(); renderResults(); updateHash(); }
 
-// ---- ROUTE VIEW ----
+/* ---------- route view (Browse by trail) ---------- */
 function getRoutesWithCounts() {
-  var routeMap = {};
-  categories.forEach(function(cat) {
-    cat.examples.forEach(function(ex) {
-      if (!showDemo && isDemo(ex)) return;
-      if (ex.routes) ex.routes.forEach(function(r) { routeMap[r] = (routeMap[r] || 0) + 1; });
-    });
-  });
-  return Object.keys(routeMap).sort().map(function(r) { return { name: r, count: routeMap[r] }; });
+  var rm = {};
+  categories.forEach(function(cat){ realEx(cat).forEach(function(ex){ if (ex.routes) ex.routes.forEach(function(r){ rm[r] = (rm[r]||0) + 1; }); }); });
+  return Object.keys(rm).sort().map(function(r){ return {name:r, count:rm[r]}; });
 }
-
-var routeCatFilter = null;
-
 function renderRouteCategoryNav() {
-  document.getElementById("route-category-nav").innerHTML = categories.map(function(c) {
+  document.getElementById('route-category-nav').innerHTML = categories.map(function(c){
     var icon = CAT_ICONS[c.id] || '';
-    var isActive = routeCatFilter === c.id;
-    return '<button class="cat-btn' + (isActive ? ' active' : '') + '" data-cat="' + c.id + '" onclick="setRouteCat(\x27' + c.id + '\x27)">' + icon + c.tab + '</button>';
-  }).join("");
+    var on = routeCatFilter === c.id ? ' active' : '';
+    return '<button class="cat-btn' + on + '" data-cat="' + c.id + '" onclick="setRouteCat(\x27' + c.id + '\x27)">' + icon + esc(c.tab) + '</button>';
+  }).join('');
 }
-
-function setRouteCat(id) {
-  routeCatFilter = (routeCatFilter === id) ? null : id;
-  renderRouteCategoryNav();
-  renderRouteCard();
-  updateHash();
-}
-
+function setRouteCat(id) { routeCatFilter = (routeCatFilter === id) ? null : id; renderRouteCategoryNav(); renderRouteCard(); updateHash(); }
 function renderRouteView() {
   var routes = getRoutesWithCounts();
+  if (!routes.length) { document.getElementById('route-card').innerHTML = '<div class="dir-noresults">No routes available yet.</div>'; document.getElementById('route-selector').innerHTML = ''; return; }
   if (!currentRoute) currentRoute = routes[0].name;
   renderRouteCategoryNav();
-  document.getElementById("route-selector").innerHTML =
-    '<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">' +
+  document.getElementById('route-selector').innerHTML =
     '<select class="route-select" onchange="currentRoute=this.value;renderRouteCard();updateHash()">' +
-    routes.map(function(r) { return '<option value="' + r.name + '"' + (r.name === currentRoute ? ' selected' : '') + '>' + r.name + ' (' + r.count + ')</option>'; }).join("") +
-    '</select>' +
-    // '<label class="demo-toggle"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
-    '</div>';
+    routes.map(function(r){ return '<option value="' + esc(r.name) + '"' + (r.name===currentRoute?' selected':'') + '>' + esc(r.name) + ' (' + r.count + ')</option>'; }).join('') +
+    '</select>';
   renderRouteCard();
 }
-
 function renderRouteCard() {
-  _routePageLimit = 50;
-  _renderRouteCardPage();
+  _routePageLimit = 50; _renderRouteCardPage();
 }
 function _renderRouteCardPage() {
   var items = [];
-  categories.forEach(function(cat) {
+  categories.forEach(function(cat){
     if (routeCatFilter && cat.id !== routeCatFilter) return;
-    cat.examples.forEach(function(ex) {
-      if (!showDemo && isDemo(ex)) return;
-      if (!ex.routes || ex.routes.indexOf(currentRoute) === -1) return;
-      items.push({ cat: cat, ex: ex });
-    });
+    realEx(cat).forEach(function(ex){ if (!ex.routes || ex.routes.indexOf(currentRoute) === -1) return; items.push({cat:cat, ex:ex}); });
   });
-
-  function rank(ex) { if (ex.badge === "unwelcome") return 5; if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; if (ex.badge === "welcoming") return 3; return 4; }
-  items.sort(function(a, b) {
-    var ra = rank(a.ex), rb = rank(b.ex); if (ra !== rb) return ra - rb;
-    var la = a.ex.central ? 1 : 0, lb = b.ex.central ? 1 : 0; if (la !== lb) return la - lb;
-    var ca = amenityCount(a.ex), cb = amenityCount(b.ex); if (ca !== cb) return cb - ca;
-    return a.ex.name.localeCompare(b.ex.name);
-  });
-
+  function rank(e){ var st = statusOf(e); if (st==='unwelcome') return 5; if (st==='accredited') return 2; if (st==='welcoming') return 3; return 4; }
+  items.sort(function(a,b){ var ra=rank(a.ex), rb=rank(b.ex); if (ra!==rb) return ra-rb; var la=a.ex.central?1:0, lb=b.ex.central?1:0; if (la!==lb) return lb-la; var ca=amenCount(a.ex), cb=amenCount(b.ex); if (ca!==cb) return cb-ca; return (a.ex.name||'').localeCompare(b.ex.name||''); });
   var total = items.length;
   var routeSlug = (typeof routeSlugs !== 'undefined' && routeSlugs[currentRoute]) || currentRoute.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   var scopeNote = routeCatFilter ? ' in this category' : '';
-  var header = '<div class="route-header"><h2>🚴 ' + currentRoute + '</h2>' +
-    '<p>' + total + ' listing' + (total !== 1 ? 's' : '') + ' along this route' + scopeNote + ' &nbsp;·&nbsp; <a href="/route/' + routeSlug + '/" style="color:#1E7D96;">View route page ›</a></p></div>';
-
+  var header = '<div class="route-header"><h2>' + esc(currentRoute) + '</h2><p>' + total + ' listing' + (total!==1?'s':'') + ' along this route' + scopeNote + ' &nbsp;&middot;&nbsp; <a href="/route/' + routeSlug + '/" style="color:#1E7D96;">View route page &rsaquo;</a></p></div>';
   var visible = items.slice(0, _routePageLimit);
-  var body = visible.map(function(it) { return renderListingCardHTML(it.cat, it.ex); }).join("");
-  var more = total > _routePageLimit ? '<div style="text-align:center;padding:16px 0 8px;"><button onclick="loadMoreRoute()" style="padding:10px 24px;background:#1E7D96;color:white;border:none;border-radius:20px;font-size:14px;font-weight:600;cursor:pointer;">Load more (' + (total - _routePageLimit) + ' remaining)</button></div>' : '';
+  var body = '<div class="dir-cards" style="padding:20px 28px 28px;">' + visible.map(function(it){ return renderCard(it.ex, it.cat); }).join('') + '</div>';
+  var more = total > _routePageLimit ? '<div style="text-align:center;padding:0 0 20px;"><button class="dir-loadmore" onclick="loadMoreRoute()">Load more (' + (total - _routePageLimit) + ' remaining)</button></div>' : '';
+  document.getElementById('route-card').innerHTML = header + (total ? body : '<div class="dir-noresults" style="padding:24px 28px;">No listings found for this route' + (routeCatFilter?' in this category.':'.') + '</div>') + more;
+}
+function loadMoreRoute() { _routePageLimit += 50; _renderRouteCardPage(); }
 
-  document.getElementById("route-card").innerHTML = header + (body || '<div class="no-results">No listings found for this route' + (routeCatFilter ? ' in this category.' : '.') + '</div>') + more;
-}
-function loadMoreRoute() {
-  _routePageLimit += 50;
-  _renderRouteCardPage();
-}
-
-// ---- ALL LISTINGS VIEW ----
-var allViewInitialized = false;
-function renderAllView() {
-  if (!allViewInitialized) { allViewInitialized = true; }
-  else { allSearchText = ""; allFilters = []; allCatFilter = ""; }
-  var el = document.getElementById("all-card");
-  el.innerHTML =
-    '<div class="examples-toolbar">' +
-      '<div class="all-listings-title-area"><h3>All Listings</h3><div id="all-count-area" class="all-count-subtitle"></div></div>' +
-      '<div class="legend"><span class="legend-status">Status</span>' +
-        // HIDDEN — no partners yet. Restore the two lines below to bring back the Sector Partner / Industry Partner pills.
-        // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Sector Partner\x27)"><span class="badge badge-sector">Sector Partner</span></span>' +
-        // '<span class="legend-badge-wrap" onclick="filterByBadge(\x27Industry Partner\x27)"><span class="badge badge-industry">Industry Partner</span></span>' +
-        '<span class="legend-badge-wrap" data-badge-term="Accredited" onclick="filterByBadge(\x27Accredited\x27)"><span class="badge badge-accredited">Accredited</span></span>' +
-        '<span class="legend-badge-wrap" data-badge-term="Welcoming" onclick="filterByBadge(\x27Welcoming\x27)"><span class="badge badge-welcoming">Welcoming</span></span>' +
-        '<span class="legend-badge-wrap" data-badge-term="Info" onclick="filterByBadge(\x27Info\x27)"><span class="badge badge-info">Info</span></span>' +
-        '<span class="legend-badge-wrap" data-badge-term="Bikes Unwelcome" onclick="filterByBadge(\x27Bikes Unwelcome\x27)"><span class="badge badge-unwelcome">Bikes Unwelcome</span></span>' +
-      '</div>' +
-    '</div>' +
-    '<div class="filter-bar"><div class="filter-bar-top">' +
-    '<div class="all-search-wrap"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>' +
-    '<input type="text" id="all-search-box" class="search-input" placeholder="Search name, amenity, location…" oninput="onAllSearch(this.value)" /></div>' +
-    '<select class="subcat-select" id="all-cat-select" onchange="setAllCatFilter(this.value)"><option value="">All categories</option></select>' +
-    // '<label class="demo-toggle" style="margin-left:auto"><input type="checkbox" class="demo-cb"' + (showDemo ? ' checked' : '') + ' onchange="toggleDemo()"> Show demo data</label>' +
-    '<div class="search-hint">💡 Tip: filter to one town — type <span class="search-hint-eg" onclick="fillCommunityPrefix()">community:Hope</span></div>' +
-    '</div></div>' +
-    '<div id="all-listings-area"></div>';
-  buildAllCatDropdown();
-  updateAllListings();
-  updateBadgeLegendActive();
-}
-
-function buildAllCatDropdown() {
-  var sel = document.getElementById("all-cat-select");
-  if (!sel) return;
-  var opts = '<option value="">All categories</option>';
-  categories.forEach(function(cat) {
-    var catEx = cat.examples.filter(function(ex) { return showDemo || !isDemo(ex); });
-    if (!catEx.length) return;
-    var subcounts = {};
-    catEx.forEach(function(ex) { if (ex.subcategory) subcounts[ex.subcategory] = (subcounts[ex.subcategory] || 0) + 1; });
-    var subcats = Object.keys(subcounts).sort(function(a, b) { return subcounts[b] - subcounts[a]; });
-    opts += '<optgroup label="' + cat.name.replace(/"/g, '&quot;') + ' (' + catEx.length + ')">';
-    opts += '<option value="cat:' + cat.id + '">All ' + cat.name.replace(/"/g, '&quot;') + '</option>';
-    subcats.forEach(function(s) {
-      opts += '<option value="subcat:' + cat.id + ':' + s.replace(/"/g, '&quot;') + '">' + s + ' (' + subcounts[s] + ')</option>';
-    });
-    opts += '</optgroup>';
-  });
-  sel.innerHTML = opts;
-  sel.value = allCatFilter || "";
-}
-
-function setAllCatFilter(val) {
-  allCatFilter = val || "";
-  updateAllListings(); updateHash();
-}
-
-function getAllListings() {
-  var all = [];
-  categories.forEach(function(cat) {
-    cat.examples.forEach(function(ex) {
-      if (!showDemo && isDemo(ex)) return;
-      all.push({ cat: cat, ex: ex });
-    });
-  });
-  if (allCatFilter) {
-    if (allCatFilter.indexOf("subcat:") === 0) {
-      var rest = allCatFilter.slice(7), ci = rest.indexOf(":");
-      var fCatId = rest.slice(0, ci), fSub = rest.slice(ci + 1);
-      all = all.filter(function(item) { return item.cat.id === fCatId && item.ex.subcategory === fSub; });
-    } else if (allCatFilter.indexOf("cat:") === 0) {
-      var fCatId = allCatFilter.slice(4);
-      all = all.filter(function(item) { return item.cat.id === fCatId; });
-    }
-  }
-  var _allCommQ = communityQuery(allSearchText);
-  if (_allCommQ) {
-    var _acql = _allCommQ.toLowerCase();
-    all = all.filter(function(item) { return (item.ex.community || "").toLowerCase() === _acql; });
-  } else if (allSearchText.length > 0) {
-    var q = allSearchText.toLowerCase();
-    var isBadgeTerm = BADGE_TERMS.indexOf(q) !== -1;
-    all = all.filter(function(item) {
-      var ex = item.ex;
-      var amenityMatch = item.cat.optional.some(function(opt, i) {
-        return ex.checked.indexOf(opt) !== -1 && opt.toLowerCase().indexOf(q) !== -1;
-      });
-      var badgeMatch = (ex.network && ex.network.toLowerCase().indexOf(q) !== -1) ||
-        (ex.partner && "industry partner".indexOf(q) !== -1) ||
-        (ex.badge && ex.badge.toLowerCase() === q) ||
-        (ex.badge === "unwelcome" && q === "bikes unwelcome") ||
-        ((ex.network) && q === "sector partner");
-      if (isBadgeTerm) return badgeMatch;
-      return ex.name.toLowerCase().indexOf(q) !== -1 ||
-             ex.location.toLowerCase().indexOf(q) !== -1 ||
-             ex.desc.toLowerCase().indexOf(q) !== -1 ||
-             (ex.routes && ex.routes.some(function(r) { return r.toLowerCase().indexOf(q) !== -1; })) ||
-             item.cat.name.toLowerCase().indexOf(q) !== -1 ||
-             amenityMatch || badgeMatch;
-    });
-  }
-  all.sort(function(a, b) {
-    function rank(ex) { if (ex.badge === "unwelcome") return 5; if (ex.network) return 0; if (ex.partner) return 1; if (ex.badge === "accredited") return 2; if (ex.badge === "welcoming") return 3; return 4; }
-    var ra = rank(a.ex), rb = rank(b.ex); if (ra !== rb) return ra - rb; var la = a.ex.central ? 1 : 0, lb = b.ex.central ? 1 : 0; if (la !== lb) return la - lb; var ca = amenityCount(a.ex), cb = amenityCount(b.ex); if (ca !== cb) return cb - ca; return a.ex.name.localeCompare(b.ex.name);
-  });
-  return all;
-}
-
-function updateAllListings() {
-  _allPageLimit = 50;
-  _renderAllListingsPage();
-}
-function _renderAllListingsPage() {
-  var all = getAllListings();
-  var totalAll = 0;
-  categories.forEach(function(c) { totalAll += c.examples.filter(function(ex) { return showDemo || !isDemo(ex); }).length; });
-  var hasF = allSearchText.length > 0 || allCatFilter.length > 0;
-  var showing = Math.min(all.length, _allPageLimit);
-  if (hasF) {
-    document.getElementById("all-count-area").textContent = 'Showing ' + showing + ' of ' + all.length + ' filtered';
-  } else if (all.length > _allPageLimit) {
-    document.getElementById("all-count-area").textContent = 'Showing ' + showing + ' of ' + totalAll + ' listings across all categories';
-  } else {
-    document.getElementById("all-count-area").textContent = totalAll + ' listings across all categories';
-  }
-  var _acqName = communityQuery(allSearchText);
-  var _acChip = _acqName ? communityChipHTML(_acqName) : '';
-  if (all.length === 0) {
-    document.getElementById("all-listings-area").innerHTML = _acChip + '<div class="no-results">No listings match your search. <a onclick="clearAllSearch()">Clear</a></div>';
-    return;
-  }
-  var visible = all.slice(0, _allPageLimit);
-  var more = all.length > _allPageLimit ? '<div style="text-align:center;padding:16px 0 8px;"><button onclick="loadMoreAllListings()" style="padding:10px 24px;background:#1E7D96;color:white;border:none;border-radius:20px;font-size:14px;font-weight:600;cursor:pointer;">Load more (' + (all.length - _allPageLimit) + ' remaining)</button></div>' : '';
-  document.getElementById("all-listings-area").innerHTML = _acChip + '<div class="listings-body">' + visible.map(function(item) {
-    return renderListingCardHTML(item.cat, item.ex, true);
-  }).join("") + '</div>' + more;
-}
-function loadMoreAllListings() {
-  _allPageLimit += 50;
-  _renderAllListingsPage();
-}
-
-function onAllSearch(val) { allSearchText = val; updateAllListings(); updateBadgeLegendActive(); updateHash(); }
-function clearAllSearch() { allSearchText = ""; allCatFilter = ""; var box = document.getElementById("all-search-box"); if (box) box.value = ""; buildAllCatDropdown(); updateAllListings(); updateBadgeLegendActive(); updateHash(); }
-
-function fillCommunityPrefix() {
-  var isAll = currentView === "all";
-  var box = document.getElementById(isAll ? "all-search-box" : "search-box");
-  if (!box) return;
-  box.value = "community:";
-  box.focus();
-}
-function communityChipHTML(name) {
-  return '<div class="comm-chip">Showing stops in <strong>' + name.replace(/</g, "&lt;") + '</strong><span class="comm-chip-x" onclick="clearCommunityFilter()" title="Clear">✕</span></div>';
-}
-function clearCommunityFilter() {
-  if (currentView === "all") {
-    allSearchText = ""; var ab = document.getElementById("all-search-box"); if (ab) ab.value = "";
-    updateAllListings();
-  } else {
-    searchText = ""; var b = document.getElementById("search-box"); if (b) b.value = "";
-    var cat = getCat(); updateFilterPills(cat); updateListings(cat);
-  }
-  updateBadgeLegendActive(); updateHash();
-}
-
-// ---- SHARED LISTING CARD RENDERER ----
-function renderListingCardHTML(cat, ex, showCatTag) {
-  var idx = cat.examples.indexOf(ex);
-  var badges = '';
-  if (ex.badge === "unwelcome") {
-    badges = '<span class="badge badge-unwelcome">Bikes Unwelcome</span>';
-  } else {
-    if (ex.network) badges += '<span class="badge badge-sector">' + ex.network + '</span>';
-    if (ex.partner) badges += '<span class="badge badge-industry">Industry Partner</span>';
-    if (ex.badge === "accredited") badges += '<span class="badge badge-accredited">Accredited</span>';
-    else if (ex.badge === "welcoming") badges += '<span class="badge badge-welcoming">Welcoming</span>';
-    else badges += '<span class="badge badge-info">Info</span>';
-  }
-  var borderClass = ex.badge === 'unwelcome' ? 'is-unwelcome' : (ex.partner ? 'is-industry' : (ex.network ? 'is-sector' : (ex.badge === 'accredited' ? 'is-accredited' : (ex.badge === 'welcoming' ? 'is-welcoming' : 'is-info'))));
-  var catTag = showCatTag ? '<span class="cat-tag">' + cat.tab + '</span>' : '';
-  var demoTag = isDemo(ex) ? '<span class="demo-tag">demo</span>' : '';
-  var demoClass = isDemo(ex) ? ' is-demo' : '';
-  var pillsHTML = '';
-  if (ex.badge !== "unwelcome") {
-    var pills = cat.optional.map(function(opt, i) {
-      if (ex.checked.indexOf(opt) === -1) return '';
-      var star = (ex.notes && ex.notes[opt]) ? '<span class="note-star">*</span>' : '';
-      return '<span class="pill pill-yes">' + opt + star + '</span>';
-    }).join("");
-    if (pills) {
-      pillsHTML = '<div class="amenity-pills">' + pills + '</div>';
-    }
-  }
-  var demoBanner = isDemo(ex) ? '<div style="margin-top:10px;padding:8px 12px;background:#FEF3C7;border:1px solid #F59E0B;border-radius:6px;font-size:12px;color:#92400E;font-weight:600;">Sample data — not a real listing. For illustration only.</div>' : '';
-  var cardReqHTML = '';
-  if (ex.badge !== "unwelcome" && cat.required && cat.required.length > 0) {
-    var cardReqChecked = isDemo(ex) ? cat.required.map(function(r) { return r.title; }) : (ex.req_checked || []);
-    var cardReqFalsed = ex.req_falsed || [];
-    var cardReqItems = cat.required.map(function(req, i) {
-      var chk = cardReqChecked.indexOf(req.title) !== -1;
-      var fls = cardReqFalsed.indexOf(req.title) !== -1;
-      var sym = chk ? '✓' : (fls ? '✗' : '?');
-      var cls = chk ? 'card-req-yes' : (fls ? 'card-req-no' : 'card-req-null');
-      var title = req.title.replace(/^We Welcome Cyclists Local Knowledge Sheet.*/, 'Local Knowledge Sheet');
-      return '<div class="card-req-item ' + cls + '"><span class="card-req-symbol">' + sym + '</span><span class="card-req-name">' + title + '</span></div>';
-    }).join("");
-    cardReqHTML = '<div class="card-body-right"><div class="card-req-label">Required Basics</div><div class="card-req-list">' + cardReqItems + '</div><div class="view-details-wrap"><span class="view-details-link">View all details ›</span></div></div>';
-  }
-  var icon = CAT_ICONS[cat.id] || '';
-  var _cardKey = ex.key ? ' data-key="' + ex.key + '"' : '';
-  var _cardId = ex.key ? ' id="c-' + ex.key + '"' : '';
-  return '<div class="listing-card ' + borderClass + demoClass + '"' + _cardId + _cardKey + ' onclick="goToListing(this)">' +
-    '<div class="card-outer"><div class="card-icon-circle">' + icon + '</div>' +
-    '<div class="card-inner">' +
-    '<div class="listing-name-row"><span class="listing-name">' + ex.name + catTag + demoTag + '</span><div class="listing-badges">' + badges + '</div></div>' +
-    '<div class="listing-location">' + ex.location + (ex.subcategory ? '<span class="listing-subcat"> · ' + ex.subcategory + '</span>' : '') + (ex.price_band ? '<span class="listing-price-band">' + ex.price_band + '</span>' : '') + '</div>' +
-    '<div class="card-body">' +
-      '<div class="card-body-left"><div class="listing-desc">' + ex.desc + '</div>' + demoBanner + pillsHTML + '</div>' +
-      cardReqHTML +
-    '</div>' +
-    '</div></div></div>';
-}
-
-// ---- URL HASH STATE ----
-function toSlug(s) {
-  return s.toLowerCase().replace(/\s*&\s*/g, '-').replace(/\s+/g, '-');
-}
-
+/* ---------- URL hash state ---------- */
+var _pendingCommunity = null;
 function updateHash() {
   var parts = [];
-  parts.push("view=" + currentView);
-  if (showDemo) parts.push("demo=1");
-  if (currentView === "category") {
-    parts.push("category=" + (_catSlug[currentCatId] || currentCatId));
-    if (activeSubcat) parts.push("subcat=" + toSlug(activeSubcat));
-    var _cqh = communityQuery(searchText);
-    if (_cqh) parts.push("community=" + encodeURIComponent(COMMUNITY_SLUGS[_cqh] || _cqh));
-    else if (searchText) parts.push("q=" + encodeURIComponent(searchText));
-    if (activeFilters.length > 0) parts.push("f=" + activeFilters.join(","));
-  } else if (currentView === "route") {
-    if (currentRoute) parts.push("route=" + encodeURIComponent(currentRoute));
-    if (routeCatFilter) parts.push("category=" + (_catSlug[routeCatFilter] || routeCatFilter));
-  } else if (currentView === "all") {
-    var _acqh = communityQuery(allSearchText);
-    if (_acqh) parts.push("community=" + encodeURIComponent(COMMUNITY_SLUGS[_acqh] || _acqh));
-    else if (allSearchText) parts.push("q=" + encodeURIComponent(allSearchText));
-    if (allCatFilter) {
-      var _enc = allCatFilter.indexOf('subcat:') === 0
-        ? (function() { var r = allCatFilter.slice(7), ci = r.indexOf(':'); return (_catSlug[r.slice(0,ci)]||r.slice(0,ci)) + ':' + r.slice(ci+1); })()
-        : allCatFilter.indexOf('cat:') === 0 ? (_catSlug[allCatFilter.slice(4)] || allCatFilter.slice(4)) : allCatFilter;
-      parts.push("category=" + encodeURIComponent(_enc));
-    }
+  if (currentView === 'route') {
+    parts.push('view=route');
+    if (currentRoute) parts.push('route=' + encodeURIComponent(currentRoute));
+    if (routeCatFilter) parts.push('category=' + (_catSlug[routeCatFilter]||routeCatFilter));
+  } else if (state.activeCat === 'all') {
+    parts.push('view=all');
+    pushSearchHash(parts);
+    pushFilterHash(parts);
+  } else {
+    parts.push('view=category');
+    parts.push('category=' + (_catSlug[state.activeCat]||state.activeCat));
+    if (state.sel.type.length) parts.push('subcat=' + state.sel.type.map(toSlug).join(','));
+    pushSearchHash(parts);
+    pushFilterHash(parts);
   }
-  history.replaceState(null, "", "#" + parts.join("&"));
+  history.replaceState(null, '', '#' + parts.join('&'));
 }
-
+function pushSearchHash(parts) {
+  var cq = communityQuery(state.search);
+  if (cq) parts.push('community=' + encodeURIComponent((typeof COMMUNITY_SLUGS!=='undefined' && COMMUNITY_SLUGS[cq]) || cq));
+  else if (state.search) parts.push('q=' + encodeURIComponent(state.search));
+}
+function pushFilterHash(parts) {
+  var cat = (state.activeCat === 'all') ? null : catById(state.activeCat);
+  if (cat && state.sel.amenities.length) {
+    var idx = state.sel.amenities.map(function(a){ return cat.optional.indexOf(a); }).filter(function(i){ return i !== -1; });
+    if (idx.length) parts.push('f=' + idx.join(','));
+  }
+  if (state.sel.status.length) parts.push('st=' + state.sel.status.join(','));
+  if (state.sel.price.length) parts.push('pr=' + state.sel.price.map(encodeURIComponent).join(','));
+  if (cat && state.sel.basics.length) {
+    var bi = state.sel.basics.map(function(b){ return cat.required.findIndex(function(r){ return r.title === b; }); }).filter(function(i){ return i !== -1; });
+    if (bi.length) parts.push('bs=' + bi.join(','));
+  }
+}
 function readHash() {
-  var hash = location.hash.replace(/^#/, "");
+  var hash = location.hash.replace(/^#/, '');
   if (!hash) return;
-  var params = {};
-  hash.split("&").forEach(function(pair) {
-    var kv = pair.split("=");
-    if (kv.length === 2) params[kv[0]] = decodeURIComponent(kv[1]);
-  });
-  if (params.view) currentView = params.view;
-  if (params.demo === "0") showDemo = false; else if (params.demo === "1") showDemo = true;
-  if (params.route) currentRoute = params.route;
-  if (params.community) { _pendingCommunity = params.community; if (!params.view) currentView = "all"; }
-  var _cv = params.category;
-  if (_cv) {
-    if (params.view === "route") {
-      routeCatFilter = _slugCat[_cv] || _cv;
-    } else if (params.view === "all") {
-      var _ci = _cv.indexOf(':');
-      allCatFilter = _ci !== -1
-        ? 'subcat:' + (_slugCat[_cv.slice(0,_ci)] || _cv.slice(0,_ci)) + ':' + _cv.slice(_ci+1)
-        : (_slugCat[_cv] ? 'cat:' + _slugCat[_cv] : _cv);
-    } else {
-      currentCatId = _slugCat[_cv] || _cv;
+  var p = {};
+  hash.split('&').forEach(function(pair){ var kv = pair.split('='); if (kv.length === 2) p[kv[0]] = decodeURIComponent(kv[1]); });
+
+  if (p.view === 'route') {
+    currentView = 'route';
+    if (p.route) currentRoute = p.route;
+    if (p.category) routeCatFilter = _slugCat[p.category] || p.category;
+    return;
+  }
+  currentView = 'dir';
+  // resolve category / all, including legacy view=all&category=cat:..|subcat:..
+  if (p.view === 'all') {
+    state.activeCat = 'all';
+    if (p.category) {
+      var cv = p.category, ci = cv.indexOf(':');
+      if (cv.indexOf('subcat:') === 0) {
+        var rest = cv.slice(7), c2 = rest.indexOf(':');
+        var cid = _slugCat[rest.slice(0,c2)] || rest.slice(0,c2);
+        state.activeCat = cid; _pendingSubcatSlug = rest.slice(c2+1);
+      } else if (cv.indexOf('cat:') === 0) {
+        state.activeCat = _slugCat[cv.slice(4)] || cv.slice(4);
+      } else {
+        state.activeCat = _slugCat[cv] || cv;
+      }
+    }
+  } else if (p.category) {
+    state.activeCat = _slugCat[p.category] || p.category;
+  }
+  if (p.subcat) _pendingSubcatSlug = p.subcat;        // comma-separated slugs
+  if (p.community) { _pendingCommunity = p.community; }
+  else if (p.q) state.search = p.q;
+  _pendingF = p.f || null;
+  if (p.st) state.sel.status = p.st.split(',');
+  if (p.pr) state.sel.price = p.pr.split(',');
+  _pendingBs = p.bs || null;
+}
+var _pendingSubcatSlug = null, _pendingF = null, _pendingBs = null;
+function resolvePending() {
+  // resolve subcat slugs -> labels, and f/bs indices -> labels, once listings + slug maps exist
+  if (state.activeCat !== 'all' && state.activeCat) {
+    var cat = catById(state.activeCat);
+    if (cat) {
+      if (_pendingSubcatSlug) {
+        var want = _pendingSubcatSlug.split(',');
+        var subs = {};
+        realEx(cat).forEach(function(e){ if (e.subcategory) subs[toSlug(e.subcategory)] = e.subcategory; });
+        state.sel.type = want.map(function(s){ return subs[s]; }).filter(Boolean);
+      }
+      if (_pendingF) state.sel.amenities = _pendingF.split(',').map(function(i){ return cat.optional[+i]; }).filter(Boolean);
+      if (_pendingBs) state.sel.basics = _pendingBs.split(',').map(function(i){ return cat.required[+i] && cat.required[+i].title; }).filter(Boolean);
     }
   }
-  if (params.view === "category") {
-    if (params.subcat) activeSubcat = _subcatSlugMap[params.subcat] || params.subcat;
-    if (params.q) searchText = params.q;
-    if (params.f) activeFilters = params.f.split(",").map(Number);
-  } else if (params.view === "all") {
-    if (params.q) allSearchText = params.q;
+  if (_pendingCommunity) {
+    var nm = (typeof _slugToComm !== 'undefined' && _slugToComm[_pendingCommunity]) || _pendingCommunity;
+    state.search = 'community:' + nm;
   }
+  _pendingSubcatSlug = _pendingF = _pendingBs = _pendingCommunity = null;
 }
 
 var routeSlugs = {};
@@ -1125,67 +1065,26 @@ var _subcatSlugMap = {};
 var _catSlug = {}; var _slugCat = {};
 categories.forEach(function(c) { var sl = toSlug(c.tab); _catSlug[c.id] = sl; _slugCat[sl] = c.id; });
 
+
 readHash();
-var _savedSearch = searchText;
-var _savedFilters = activeFilters.slice();
-var _savedAllSearch = allSearchText;
-renderCategoryNav();
+
 fetch('/we-welcome-cyclists.json')
-  .then(function(r) { return r.json(); })
-  .then(function(d) {
-    routeSlugs = d.routeSlugs;
-    SUBCAT_ICONS = d.subcatIcons;
+  .then(function(r){ return r.json(); })
+  .then(function(d){
+    routeSlugs = d.routeSlugs || {};
+    SUBCAT_ICONS = d.subcatIcons || {};
     COMMUNITY_SLUGS = d.communitySlugs || {};
     _slugToComm = {};
-    Object.keys(COMMUNITY_SLUGS).forEach(function(name) { _slugToComm[COMMUNITY_SLUGS[name]] = name; });
-    if (_pendingCommunity) {
-      var _cq = "community:" + (_slugToComm[_pendingCommunity] || _pendingCommunity);
-      if (currentView === "all") { allSearchText = _cq; _savedAllSearch = _cq; }
-      else { searchText = _cq; _savedSearch = _cq; }
-    }
-    categories.forEach(function(cat) {
-      (d.listings[cat.id] || []).forEach(function(ex) { cat.examples.push(ex); });
-    });
-    categories.forEach(function(cat) {
-      cat.examples.forEach(function(ex) {
-        if (ex.subcategory) { var sl = toSlug(ex.subcategory); if (!_subcatSlugMap[sl]) _subcatSlugMap[sl] = ex.subcategory; }
-      });
-    });
-    renderAll();
-    setView(currentView);
-    if (currentView === "category") {
-      searchText = _savedSearch;
-      activeFilters = _savedFilters;
-      var box = document.getElementById("search-box");
-      if (box) box.value = searchText;
-      var cat = getCat();
-      updateFilterPills(cat);
-      updateListings(cat);
-    }
-    if (currentView === "all") {
-      allSearchText = _savedAllSearch;
-      var abox = document.getElementById("all-search-box");
-      if (abox) abox.value = allSearchText;
-      updateAllListings();
-    }
-    (function() {
-      try {
-        var _f = JSON.parse(sessionStorage.getItem('_wwc_from') || 'null');
-        if (_f && _f.key) {
-          sessionStorage.removeItem('_wwc_from');
-          requestAnimationFrame(function() {
-            requestAnimationFrame(function() {
-              var _el = document.getElementById('c-' + _f.key);
-              if (_el) _el.scrollIntoView({ block: 'center', behavior: 'instant' });
-            });
-          });
-        }
-      } catch(e) {}
-    })();
+    Object.keys(COMMUNITY_SLUGS).forEach(function(name){ _slugToComm[COMMUNITY_SLUGS[name]] = name; });
+    categories.forEach(function(cat){ (d.listings[cat.id] || []).forEach(function(ex){ cat.examples.push(ex); }); });
+    resolvePending();
+    renderTabs();
+    if (currentView === 'route') { gotoRoute(); }
+    else { renderSidebar(); renderResults(); }
   })
-  .catch(function() {
-    var _ec = document.getElementById('examples-card');
-    if (_ec) _ec.innerHTML = '<div style="padding:40px;text-align:center;color:#DC2626;">Failed to load listings. <a style="color:#1E7D96;cursor:pointer;" onclick="location.reload()">Refresh</a></div>';
+  .catch(function(err){
+    var el = document.getElementById('dir-results');
+    if (el) el.innerHTML = '<div class="dir-noresults">Failed to load listings. <a onclick="location.reload()">Refresh</a></div>';
   });
 </script>
 <script>
