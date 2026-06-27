@@ -582,13 +582,28 @@ var OWNERSHIP_OPTS = [
   {key:'Buy BC (chain)',       label:'Buy BC (chain)'},
   {key:'Buy Canadian',         label:'Buy Canadian'},
   {key:'Global chain',         label:'Global chain'},
+  // Attractions governance set (own value set; zero-count buckets auto-hide).
+  {key:'Public',                 label:'Public'},
+  {key:'Nonprofit / community',  label:'Nonprofit / community'},
+  // Camping operator types (own value set; zero-count buckets auto-hide).
+  // 'Private' is shared with Attractions (same concept, one facet option).
+  {key:'Private',              label:'Private'},
+  {key:'Municipal',            label:'Municipal'},
+  {key:'Provincial park',      label:'Provincial park'},
+  {key:'Provincial rec site',  label:'Provincial rec site'},
+  {key:'National park',        label:'National park'},
+];
+// Indigenous affiliation — a SEPARATE cross-category facet (own attribute,
+// e.indigenous_role, a list). Multi-value; grows (operated -> owned/content).
+var INDIG_OPTS = [
+  {key:'Indigenous operated', label:'Indigenous operated'},
 ];
 var PAGE = 50;
 
 var currentView = 'dir';                  // 'dir' (tabs + sidebar) or 'route'
 var state = {
   activeCat: 'visitor',                   // category id, or 'all' for cross-category
-  sel: {type:[], status:[], price:[], ownership:[], basics:[], amenities:[]},
+  sel: {type:[], status:[], price:[], ownership:[], indigenous:[], basics:[], amenities:[]},
   search: '',
   sort: 'amenities',                      // 'amenities' (default) or 'alpha'
   showAmenAll: false,
@@ -648,6 +663,7 @@ function togType(i)   { toggle('type', _subOpts[i]); }
 function togStatus(i) { toggle('status', STATUS_OPTS[i].key); }
 function togPrice(i)  { toggle('price', PRICE_OPTS[i]); }
 function togOwn(i)    { toggle('ownership', OWNERSHIP_OPTS[i].key); }
+function togIndig(i)  { toggle('indigenous', INDIG_OPTS[i].key); }
 function togBasic(i)  { toggle('basics', _basicOpts[i]); }
 function togAmen(i)   { toggle('amenities', _amenShown[i]); }
 function togChip(i)   { var c = _chipOpts[i]; toggle(c[0], c[1]); }
@@ -670,7 +686,7 @@ function _fopt(on, fn, idx, label, opts) {
 // (no selection yet, AND groups, or the checked option itself) show the absolute result count.
 function _cntOpts(group, value, P, cur) {
   var hypo = facetCount(group, value, P);
-  var isOR = (group === 'type' || group === 'status' || group === 'price' || group === 'ownership');
+  var isOR = (group === 'type' || group === 'status' || group === 'price' || group === 'ownership' || group === 'indigenous');
   var on = state.sel[group].indexOf(value) !== -1;
   if (isOR && !on && state.sel[group].length > 0) return { delta: hypo - cur, zero: hypo === cur };
   return { count: hypo, zero: hypo === 0 };
@@ -686,6 +702,13 @@ function _ownGroup(P, cur) {
   if (!present.length) return '';
   return _group('Ownership', 'any of', present.map(function(o){ var c = _cntOpts('ownership', o.key, P, cur); var oi = OWNERSHIP_OPTS.indexOf(o); return _fopt(state.sel.ownership.indexOf(o.key)!==-1, 'togOwn', oi, o.label, c); }).join(''));
 }
+// Indigenous facet (cross-category). Same auto-hide rule: only render values
+// present in the pool, so the section appears wherever any record carries one.
+function _indigGroup(P, cur) {
+  var present = INDIG_OPTS.filter(function(o){ return facetCount('indigenous', o.key, P) > 0 || state.sel.indigenous.indexOf(o.key) !== -1; });
+  if (!present.length) return '';
+  return _group('Indigenous', 'any of', present.map(function(o){ var c = _cntOpts('indigenous', o.key, P, cur); var oi = INDIG_OPTS.indexOf(o); return _fopt(state.sel.indigenous.indexOf(o.key)!==-1, 'togIndig', oi, o.label, c); }).join(''));
+}
 function renderSidebar() {
   var html = '';
   // Faceted counts: how many results you'd get if each option were on, given everything else
@@ -697,6 +720,7 @@ function renderSidebar() {
     html += _group('Status', 'any of', STATUS_OPTS.map(function(s,i){ var o = _cntOpts('status', s.key, P, cur); o.dot = s.dot; return _fopt(state.sel.status.indexOf(s.key)!==-1, 'togStatus', i, s.label, o); }).join(''));
     html += _group('Price', 'any of', PRICE_OPTS.map(function(p,i){ return _fopt(state.sel.price.indexOf(p)!==-1, 'togPrice', i, p, _cntOpts('price', p, P, cur)); }).join(''));
     html += _ownGroup(P, cur);
+    html += _indigGroup(P, cur);
   } else {
     var cat = catById(state.activeCat);
     var sc = subcatCounts(cat);
@@ -707,6 +731,7 @@ function renderSidebar() {
     html += _group('Status', 'any of', STATUS_OPTS.map(function(s,i){ var o = _cntOpts('status', s.key, P, cur); o.dot = s.dot; return _fopt(state.sel.status.indexOf(s.key)!==-1, 'togStatus', i, s.label, o); }).join(''));
     html += _group('Price', 'any of', PRICE_OPTS.map(function(p,i){ return _fopt(state.sel.price.indexOf(p)!==-1, 'togPrice', i, p, _cntOpts('price', p, P, cur)); }).join(''));
     html += _ownGroup(P, cur);
+    html += _indigGroup(P, cur);
     _basicOpts = cat.required.map(function(r){ return r.title; });
     html += _group('Required basics', 'all of', _basicOpts.map(function(t,i){ return _fopt(state.sel.basics.indexOf(t)!==-1, 'togBasic', i, _basicLabel(t), _cntOpts('basics', t, P, cur)); }).join(''));
     _amenShown = cat.optional.slice();
@@ -719,7 +744,7 @@ function renderSidebar() {
 }
 
 /* ---------- filtering ---------- */
-function selCount() { var s = state.sel; return s.type.length + s.status.length + s.price.length + s.ownership.length + s.basics.length + s.amenities.length; }
+function selCount() { var s = state.sel; return s.type.length + s.status.length + s.price.length + s.ownership.length + s.indigenous.length + s.basics.length + s.amenities.length; }
 function pool() {
   var out = [];
   var cats = (state.activeCat === 'all') ? categories : [catById(state.activeCat)];
@@ -797,6 +822,7 @@ function _matchTerm(e, term) {
   if (f === 'route' || f === 'routes') return !!(e.routes && e.routes.some(function(r){ return r.toLowerCase().indexOf(v) !== -1; }));
   if (f === 'type' || f === 'subcategory' || f === 'subcat') return (e.subcategory||'').toLowerCase().indexOf(v) !== -1;
   if (f === 'owner' || f === 'ownership') return (e.ownership||'').toLowerCase().indexOf(v) !== -1;
+  if (f === 'indigenous' || f === 'indigenous_role') return (e.indigenous_role||[]).some(function(r){ return r.toLowerCase().indexOf(v) !== -1; });
   var lit = f + ':' + v;
   return (e.name||'').toLowerCase().indexOf(lit) !== -1 || (e.desc||'').toLowerCase().indexOf(lit) !== -1;
 }
@@ -829,6 +855,7 @@ function applyFilters(list, s) {
   if (s.status.length) list = list.filter(function(e){ return s.status.indexOf(statusOf(e)) !== -1; });
   if (s.price.length)  list = list.filter(function(e){ return s.price.indexOf(e.price_band) !== -1; });
   if (s.ownership.length) list = list.filter(function(e){ return s.ownership.indexOf(e.ownership) !== -1; });
+  if (s.indigenous.length) list = list.filter(function(e){ var ir = e.indigenous_role||[]; return s.indigenous.some(function(v){ return ir.indexOf(v) !== -1; }); });
   if (s.basics.length) list = list.filter(function(e){ var rc = e.req_checked||[]; return s.basics.every(function(b){ return rc.indexOf(b) !== -1; }); });
   if (s.amenities.length) list = list.filter(function(e){ var ch = e.checked||[]; return s.amenities.every(function(a){ return ch.indexOf(a) !== -1; }); });
   if (state.search) { var _pred = compileSearch(state.search); if (_pred) list = list.filter(_pred); }
@@ -838,7 +865,7 @@ function applyFilters(list, s) {
 // OR groups (type/status/price) add the value to the set; AND groups (basics/amenities) intersect it in.
 function facetCount(group, value, P) {
   var s = state.sel;
-  var sel = { type:s.type.slice(), status:s.status.slice(), price:s.price.slice(), ownership:s.ownership.slice(), basics:s.basics.slice(), amenities:s.amenities.slice() };
+  var sel = { type:s.type.slice(), status:s.status.slice(), price:s.price.slice(), ownership:s.ownership.slice(), indigenous:s.indigenous.slice(), basics:s.basics.slice(), amenities:s.amenities.slice() };
   if (sel[group].indexOf(value) === -1) sel[group].push(value);
   return applyFilters(P, sel).length;
 }
@@ -869,6 +896,7 @@ function selChips() {
   s.status.forEach(function(v){ var o = STATUS_OPTS.find(function(x){return x.key===v;}); _chipOpts.push(['status', v, o?o.label:v]); });
   s.price.forEach(function(v){ _chipOpts.push(['price', v, v]); });
   s.ownership.forEach(function(v){ _chipOpts.push(['ownership', v, v]); });
+  s.indigenous.forEach(function(v){ _chipOpts.push(['indigenous', v, v]); });
   s.basics.forEach(function(v){ _chipOpts.push(['basics', v, _basicLabel(v)]); });
   s.amenities.forEach(function(v){ _chipOpts.push(['amenities', v, v]); });
   return _chipOpts;
@@ -1098,6 +1126,7 @@ function pushFilterHash(parts) {
   if (state.sel.status.length) parts.push('st=' + state.sel.status.join(','));
   if (state.sel.price.length) parts.push('pr=' + state.sel.price.map(encodeURIComponent).join(','));
   if (state.sel.ownership.length) parts.push('ow=' + state.sel.ownership.map(encodeURIComponent).join(','));
+  if (state.sel.indigenous.length) parts.push('ir=' + state.sel.indigenous.map(encodeURIComponent).join(','));
   if (cat && state.sel.basics.length) {
     var bi = state.sel.basics.map(function(b){ return cat.required.findIndex(function(r){ return r.title === b; }); }).filter(function(i){ return i !== -1; });
     if (bi.length) parts.push('bs=' + bi.join(','));
@@ -1141,6 +1170,7 @@ function readHash() {
   if (p.st) state.sel.status = p.st.split(',');
   if (p.pr) state.sel.price = p.pr.split(',');
   if (p.ow) state.sel.ownership = p.ow.split(',');
+  if (p.ir) state.sel.indigenous = p.ir.split(',');
   _pendingBs = p.bs || null;
 }
 var _pendingSubcatSlug = null, _pendingF = null, _pendingBs = null;
