@@ -708,8 +708,101 @@ function pool() {
   cats.forEach(function(c){ realEx(c).forEach(function(e){ var o = Object.create(e); o.__cat = c; out.push(o); }); });
   return out;
 }
-function communityQuery(t) { var m = /^\s*community:(.+)$/i.exec(t || ''); return m ? m[1].trim() : null; }
-function nameQuery(t) { var m = /^\s*name:(.+)$/i.exec(t || ''); return m ? m[1].trim() : null; }
+/* ---------- search query parser (boolean: AND / OR / NOT / quotes / fields) ---------- */
+// Compiles the search box into a predicate over a listing. Implicit-AND between terms; uppercase
+// OR (or |); NOT or a leading '-'; ( ) groups; "quoted phrases"; and field:value directives
+// (community = exact; name/status/price/amenity/route/type = substring). Lowercase or/and/not are
+// literal words, never operators. Malformed input degrades to a plain AND of its words.
+function _tokenizeSearch(str) {
+  var toks = [], i = 0, n = str.length;
+  while (i < n) {
+    var ch = str[i];
+    if (ch === ' ' || ch === '\t') { i++; continue; }
+    if (ch === '(' || ch === ')') { toks.push({t: ch}); i++; continue; }
+    if (ch === '|') { toks.push({t: 'OR'}); i++; continue; }
+    var raw = '', quoted = false;
+    while (i < n) {
+      var c = str[i];
+      if (c === ' ' || c === '\t' || c === '(' || c === ')') break;
+      if (c === '"') { quoted = true; i++; while (i < n && str[i] !== '"') { raw += str[i++]; } if (i < n) i++; continue; }
+      raw += c; i++;
+    }
+    if (!quoted && (raw === 'OR' || raw === 'AND' || raw === 'NOT')) { toks.push({t: raw}); continue; }
+    toks.push({t: 'TERM', raw: raw, quoted: quoted});
+  }
+  return toks;
+}
+function _parseTerm(tok) {
+  var s = tok.raw, negate = false;
+  if (s.charAt(0) === '-' && s.length > 1) { negate = true; s = s.slice(1); }
+  var field = null, value = s, ci = s.indexOf(':');
+  if (ci > 0) { field = s.slice(0, ci).toLowerCase(); value = s.slice(ci + 1); }
+  return {field: field, value: value, negate: negate};
+}
+function _parseQuery(toks) {
+  var pos = 0;
+  function peek() { return toks[pos]; }
+  function adv() { return toks[pos++]; }
+  function pOr() { var node = pAnd(); while (peek() && peek().t === 'OR') { adv(); node = {op:'or', a:node, b:pAnd()}; } return node; }
+  function pAnd() {
+    var node = pNot();
+    while (peek()) { var t = peek().t; if (t === 'OR' || t === ')') break; if (t === 'AND') adv(); node = {op:'and', a:node, b:pNot()}; }
+    return node;
+  }
+  function pNot() { if (peek() && peek().t === 'NOT') { adv(); return {op:'not', a: pNot()}; } return pAtom(); }
+  function pAtom() {
+    var tk = peek();
+    if (!tk) throw 'eof';
+    if (tk.t === '(') { adv(); var e = pOr(); if (!peek() || peek().t !== ')') throw 'paren'; adv(); return e; }
+    if (tk.t === 'TERM') { adv(); var term = _parseTerm(tk); var node = {op:'term', term: term}; return term.negate ? {op:'not', a:node} : node; }
+    throw 'unexpected';
+  }
+  var ast = pOr();
+  if (pos !== toks.length) throw 'trailing';
+  return ast;
+}
+function _normAmen(s) { return (s||'').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+function _matchTerm(e, term) {
+  var v = (term.value || '').toLowerCase();
+  if (!v) return true;
+  var f = term.field;
+  if (!f) {
+    return (e.name||'').toLowerCase().indexOf(v) !== -1 || (e.location||'').toLowerCase().indexOf(v) !== -1 ||
+      (e.desc||'').toLowerCase().indexOf(v) !== -1 || (e.checked||[]).some(function(a){ return a.toLowerCase().indexOf(v) !== -1; }) ||
+      (e.routes && e.routes.some(function(r){ return r.toLowerCase().indexOf(v) !== -1; }));
+  }
+  if (f === 'community') return (e.community||'').toLowerCase() === v;
+  if (f === 'name') return (e.name||'').toLowerCase().indexOf(v) !== -1;
+  if (f === 'status') return (statusOf(e)||'').toLowerCase().indexOf(v) !== -1;
+  if (f === 'price') return (e.price_band||'').toLowerCase().indexOf(v) !== -1;
+  if (f === 'amenity' || f === 'amenities') { var nv = _normAmen(v); return (e.checked||[]).some(function(a){ return _normAmen(a).indexOf(nv) !== -1; }); }
+  if (f === 'route' || f === 'routes') return !!(e.routes && e.routes.some(function(r){ return r.toLowerCase().indexOf(v) !== -1; }));
+  if (f === 'type' || f === 'subcategory' || f === 'subcat') return (e.subcategory||'').toLowerCase().indexOf(v) !== -1;
+  var lit = f + ':' + v;
+  return (e.name||'').toLowerCase().indexOf(lit) !== -1 || (e.desc||'').toLowerCase().indexOf(lit) !== -1;
+}
+function _evalAst(e, node) {
+  if (node.op === 'term') return _matchTerm(e, node.term);
+  if (node.op === 'and') return _evalAst(e, node.a) && _evalAst(e, node.b);
+  if (node.op === 'or') return _evalAst(e, node.a) || _evalAst(e, node.b);
+  if (node.op === 'not') return !_evalAst(e, node.a);
+  return true;
+}
+function compileSearch(str) {
+  str = (str || '').trim();
+  if (!str) return null;
+  try {
+    var toks = _tokenizeSearch(str);
+    if (!toks.length) return null;
+    var ast = _parseQuery(toks);
+    return function(e){ return _evalAst(e, ast); };
+  } catch (err) {
+    var words = str.replace(/["()]/g, ' ').split(/\s+/).filter(function(w){ return w && w !== 'OR' && w !== 'AND' && w !== 'NOT' && w !== '|'; });
+    if (!words.length) return null;
+    return function(e){ return words.every(function(w){ return _matchTerm(e, _parseTerm({raw: w, quoted: false})); }); };
+  }
+}
+function soleCommunity(str) { var m = /^\s*community:(?:"([^"]+)"|(\S+))\s*$/i.exec(str || ''); return m ? (m[1] || m[2]) : null; }
 // Pure filter pass (no sort): used by filtered() for the result list, and by facetCount()
 // to count hypothetical selections for the sidebar counts.
 function applyFilters(list, s) {
@@ -718,17 +811,7 @@ function applyFilters(list, s) {
   if (s.price.length)  list = list.filter(function(e){ return s.price.indexOf(e.price_band) !== -1; });
   if (s.basics.length) list = list.filter(function(e){ var rc = e.req_checked||[]; return s.basics.every(function(b){ return rc.indexOf(b) !== -1; }); });
   if (s.amenities.length) list = list.filter(function(e){ var ch = e.checked||[]; return s.amenities.every(function(a){ return ch.indexOf(a) !== -1; }); });
-  var cq = communityQuery(state.search), nq = nameQuery(state.search);
-  if (cq) { var c = cq.toLowerCase(); list = list.filter(function(e){ return (e.community||'').toLowerCase() === c; }); }
-  else if (nq) { var n = nq.toLowerCase(); list = list.filter(function(e){ return (e.name||'').toLowerCase().indexOf(n) !== -1; }); }
-  else if (state.search) {
-    var q = state.search.toLowerCase();
-    list = list.filter(function(e){
-      return (e.name||'').toLowerCase().indexOf(q) !== -1 || (e.location||'').toLowerCase().indexOf(q) !== -1 ||
-        (e.desc||'').toLowerCase().indexOf(q) !== -1 || (e.checked||[]).some(function(a){ return a.toLowerCase().indexOf(q) !== -1; }) ||
-        (e.routes && e.routes.some(function(r){ return r.toLowerCase().indexOf(q) !== -1; }));
-    });
-  }
+  if (state.search) { var _pred = compileSearch(state.search); if (_pred) list = list.filter(_pred); }
   return list;
 }
 // Count of results if `value` were active in `group`, with all other selections (and search) held.
@@ -784,9 +867,9 @@ function renderResults() {
       '<p class="res-sub">Searching all ' + categories.length + ' categories &middot; about ' + total.toLocaleString() + ' stops province-wide. Each result shows its category.</p>'
     : '<div class="res-head"><h2>' + esc(cat.name) + '</h2><a class="guidelink" href="' + guideHref + '">' + esc(cat.name) + ' guide &rsaquo;</a></div>';
 
-  var ph = allMode ? 'Search all categories — try name:MEC or community:Hope…' : 'Search this category — try name:MEC or community:Hope…';
+  var ph = allMode ? 'Search all categories — try gelato community:Vancouver…' : 'Search this category — try gelato community:Vancouver…';
   var search = '<input class="search-in" id="dir-search" placeholder="' + esc(ph) + '" value="' + esc(state.search) + '" oninput="onSearch(this.value)" />' +
-    '<p class="search-tip">Tip: search by name with <code onclick="fillSearch(\x27name:\x27)">name:MEC</code>, by town with <code onclick="fillCommunityPrefix()">community:Hope</code>, or just type an amenity.</p>';
+    '<p class="search-tip">Tip: combine filters — <code onclick="fillCommunityPrefix()">community:Hope</code> narrows to a town, <code onclick="fillSearch(\x27name:\x27)">name:MEC</code> to a name, and any other words (like <code onclick="fillSearch(\x27gelato community:Vancouver\x27)">gelato</code>) match amenities.</p>';
 
   var fbtn = '<button class="filterbtn" onclick="openDrawer()">' +
     "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'><line x1='4' y1='7' x2='20' y2='7'/><line x1='7' y1='12' x2='17' y2='12'/><line x1='10' y1='17' x2='14' y2='17'/></svg>" +
@@ -827,7 +910,7 @@ function renderDynamic() {
   var chipsHtml = chips.length
     ? '<div class="dir-chips">' + chips.map(function(c,i){ return '<span class="dir-chip" onclick="togChip(' + i + ')">' + esc(c[2]) + ' <span class="x">&#10005;</span></span>'; }).join('') + '<span class="dir-clearall" onclick="clearAll()">Clear all</span></div>'
     : '';
-  var cqName = communityQuery(state.search);
+  var cqName = soleCommunity(state.search);
   var commChip = cqName ? communityChipHTML(cqName) : '';
   var cards;
   if (list.length === 0) {
@@ -979,7 +1062,9 @@ function updateHash() {
   history.replaceState(null, '', '#' + parts.join('&'));
 }
 function pushSearchHash(parts) {
-  var cq = communityQuery(state.search);
+  var cq = soleCommunity(state.search);
+  // Clean community=slug form only when the whole search is a single community: directive;
+  // otherwise round-trip the full raw string via q= (readHash re-parses it).
   if (cq) parts.push('community=' + encodeURIComponent((typeof COMMUNITY_SLUGS!=='undefined' && COMMUNITY_SLUGS[cq]) || cq));
   else if (state.search) parts.push('q=' + encodeURIComponent(state.search));
 }
