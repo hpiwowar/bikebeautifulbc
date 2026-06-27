@@ -583,10 +583,12 @@ var OWNERSHIP_OPTS = [
   {key:'Buy Canadian',         label:'Buy Canadian'},
   {key:'Global chain',         label:'Global chain'},
   // Attractions governance set (own value set; zero-count buckets auto-hide).
+  // Private splits by locale-of-ownership, mirroring the Buy BC / Global axis.
   {key:'Public',                 label:'Public'},
   {key:'Nonprofit / community',  label:'Nonprofit / community'},
+  {key:'Private (BC-owned)',     label:'Private (BC-owned)'},
+  {key:'Private (outside BC)',   label:'Private (outside BC)'},
   // Camping operator types (own value set; zero-count buckets auto-hide).
-  // 'Private' is shared with Attractions (same concept, one facet option).
   {key:'Private',              label:'Private'},
   {key:'Municipal',            label:'Municipal'},
   {key:'Provincial park',      label:'Provincial park'},
@@ -642,7 +644,7 @@ function setCat(id) {
   state.activeCat = id;
   // Per-category filters reset on a tab switch, but the search (esp. a community:/name:
   // directive) persists across categories — matches the pre-redesign behaviour.
-  state.sel = {type:[], status:[], price:[], ownership:[], basics:[], amenities:[]};
+  state.sel = {type:[], status:[], price:[], ownership:[], indigenous:[], basics:[], amenities:[]};
   state.showAmenAll = false; state.amenFilter = ''; state.limit = PAGE;
   if (currentView !== 'dir') { gotoDir(); }
   closeDrawer(); renderTabs(); renderSidebar(); renderResults(); updateHash();
@@ -980,7 +982,7 @@ function renderDynamic() {
 function onSearch(v) { state.search = v; state.limit = PAGE; renderDynamic(); renderSidebar(); updateHash(); }
 function loadMore() { state.limit += PAGE; renderDynamic(); }
 function clearAll() {
-  state.sel = {type:[], status:[], price:[], basics:[], amenities:[]};
+  state.sel = {type:[], status:[], price:[], ownership:[], indigenous:[], basics:[], amenities:[]};
   state.search = ''; state.limit = PAGE;
   var b = document.getElementById('dir-search'); if (b) b.value = '';
   renderSidebar(); renderDynamic(); updateHash();
