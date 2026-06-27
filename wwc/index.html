@@ -40,7 +40,7 @@ body {
 .g-header-left { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .g-header-left img { width: 44px; height: 44px; }
 .g-header-left span { font-size: 15px; font-weight: 700; color: #1F514C; }
-.g-header-nav { display: flex; gap: 28px; align-items: center; }
+.g-header-nav { display: flex; gap: 28px; align-items: center; margin-left: auto; }
 .g-header-nav a { font-size: 16px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
 .g-header-nav a:hover { color: #1E7D96; }
 .g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
@@ -369,7 +369,8 @@ body {
 .footer .org { font-weight: 600; color: #636363; }
 
 /* ===== Stops & Services redesign (Approach A: sidebar filter) ===== */
-.dir-intro h1 { font-family:"Archivo",sans-serif; font-size:32px; font-weight:700; color:#1F514C; letter-spacing:-0.03em; margin-bottom:10px; }
+.dir-eyebrow { font-family:"Archivo",sans-serif; font-size:13px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:#1E7D96; margin-bottom:6px; }
+.dir-intro h1 { font-family:"Archivo",sans-serif; font-size:32px; font-weight:400; color:#1F514C; letter-spacing:-0.03em; margin-bottom:10px; }
 .dir-intro .intro { font-size:17px; color:#3C4A43; line-height:1.5; max-width:940px; }
 .dir-intro .intro a { color:#1F514C; font-weight:700; text-decoration:underline; }
 .dir-intro hr { border:none; border-top:1px solid #E6E0CC; margin:20px 0 0; }
@@ -418,12 +419,12 @@ body {
 .search-in::placeholder { color:#A8B0A6; }
 .search-tip { font-size:14px; color:#8A938A; margin:8px 0 0; }
 .search-tip code { background:#F4F1E4; color:#6B6B5E; border-radius:5px; font-family:ui-monospace,Menlo,monospace; font-size:13px; padding:1px 5px; cursor:pointer; }
-.dir-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:14px 0; border-bottom:1px solid #EFEAD9; margin-top:14px; }
+.dir-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:14px 0; margin-top:14px; }
 .dir-showing { font-size:14px; color:#3C4A43; }
 .dir-sortwrap { margin-left:auto; display:inline-flex; align-items:center; gap:6px; }
 .dir-sortlbl { font-size:14px; color:#6B746B; }
 .dir-sortbtn { border:1px solid #DDD8C7; border-radius:8px; background:#fff; padding:8px 12px; font-size:14px; color:#3C4A43; font-family:inherit; cursor:pointer; }
-.assumed-note { font-size:13px; color:#9AA29A; margin:10px 0 0; }
+.assumed-note { font-size:13px; color:#9AA29A; margin:10px 0 0; text-align:right; }
 .assumed-note code { font-family:ui-monospace,Menlo,monospace; }
 
 .filterbtn { display:none; align-items:center; gap:8px; border:1px solid #1E7D96; background:#EAF3EC; color:#1C5240; font-weight:600; border-radius:8px; padding:9px 14px; font-size:14px; cursor:pointer; font-family:inherit; }
@@ -490,7 +491,6 @@ body {
 <body>
 
 <div id="wwc-root" style="display:block!important;width:100%!important;max-width:100%!important;flex-direction:column!important;">
-<div class="g-banner"><strong>PRE-LAUNCH PREVIEW</strong> — <a href="/#contact" style="color:#92400E;font-weight:600;">Contact us</a> if you have questions or ideas!</div>
 <div class="g-header">
   <div class="g-header-inner">
     <a href="/" class="g-header-left">
@@ -498,8 +498,7 @@ body {
       <span>BC Cycle Tourism Society</span>
     </a>
     <div class="g-header-nav" id="g-nav">
-      <a href="/we-welcome-cyclists">Stops &amp; Services</a>
-      <a href="/routes">Routes</a>
+      <a href="/wwc/">Plan Your Ride</a>
       <a href="/field-notes">Field Notes</a>
       <a href="/about">About</a>
     </div>
@@ -517,19 +516,21 @@ body {
 
 <div class="main">
   <div class="dir-intro">
-    <h1>We Welcome Cyclists listings</h1>
-    <p class="intro">Stops and services across BC, annotated with amenities reflecting the <a href="https://bccycletourism.ca/we-welcome-cyclists/">We Welcome Cyclists</a> standards, designed for what touring cyclists actually need to know. Browse 18,000+ stops across British Columbia.</p>
+    <div class="dir-eyebrow">We Welcome Cyclists</div>
+    <h1>Plan your ride in British Columbia</h1>
+    <p class="intro">Find the stops and services that welcome cyclists, and know what to expect before you arrive. A directory of 19,000+ places across BC, with the details and descriptions touring cyclists actually need.</p>
+    <p class="browse-links"><a href="/routes">Browse routes &rarr;</a> &nbsp;&middot;&nbsp; <a href="/wwc/communities/">Browse by community &rarr;</a> &nbsp;&middot;&nbsp; <a href="/we-welcome-cyclists/">What &ldquo;welcomes cyclists&rdquo; means &rarr;</a></p>
     <hr />
   </div>
 
   <div id="view-dir">
     <div class="cat-tabs" id="cat-tabs"></div>
-    <p class="browse-links"><a onclick="gotoRoute();return false;">Browse by trail &rarr;</a> &nbsp;&middot;&nbsp; <a href="/wwc/communities/">Browse by community &rarr;</a></p>
     <div class="ss-panel">
       <div class="ss-overlay" id="dir-overlay" onclick="closeDrawer()"></div>
       <aside class="ss-sidebar" id="dir-sidebar">
         <div class="sheet-grip"></div>
         <div class="sheet-head"><span class="h">Filters</span><span class="dir-clearall" onclick="clearAll()">Clear all</span></div>
+        <a onclick="gotoRoute();return false;" href="#" style="display:block;font-size:14px;font-weight:600;color:#1E7D96;text-decoration:none;margin:2px 0 14px;">Browse by trail &rarr;</a>
         <div class="ss-sidebar-inner" id="dir-sidebar-inner"></div>
         <button class="sheet-apply" id="dir-sheet-apply" onclick="closeDrawer()"></button>
       </aside>
@@ -781,8 +782,7 @@ function renderResults() {
   var head = allMode
     ? '<div class="res-head"><h2>All stops</h2></div>' +
       '<p class="res-sub">Searching all ' + categories.length + ' categories &middot; about ' + total.toLocaleString() + ' stops province-wide. Each result shows its category.</p>'
-    : '<div class="res-head"><h2>' + esc(cat.name) + '</h2><a class="guidelink" href="' + guideHref + '">' + esc(cat.name) + ' guide &rsaquo;</a></div>' +
-      '<p class="res-sub">Each stop listed with its <b>We Welcome Cyclists</b> amenities for ' + esc(cat.name.toLowerCase()) + '.</p>';
+    : '<div class="res-head"><h2>' + esc(cat.name) + '</h2><a class="guidelink" href="' + guideHref + '">' + esc(cat.name) + ' guide &rsaquo;</a></div>';
 
   var ph = allMode ? 'Search all categories — try name:MEC or community:Hope…' : 'Search this category — try name:MEC or community:Hope…';
   var search = '<input class="search-in" id="dir-search" placeholder="' + esc(ph) + '" value="' + esc(state.search) + '" oninput="onSearch(this.value)" />' +
@@ -1110,6 +1110,7 @@ window.addEventListener('load', (event) => {
   <div class="g-footer-nav">
     <div class="g-footer-col">
       <a href="/">Home</a>
+      <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
       <a href="/routes">Routes</a>
     </div>

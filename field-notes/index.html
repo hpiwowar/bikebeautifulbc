@@ -40,7 +40,7 @@ body {
 .g-header-left { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .g-header-left img { width: 44px; height: 44px; }
 .g-header-left span { font-size: 15px; font-weight: 700; color: #1F514C; }
-.g-header-nav { display: flex; gap: 28px; align-items: center; }
+.g-header-nav { display: flex; gap: 28px; align-items: center; margin-left: auto; }
 .g-header-nav a { font-size: 16px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
 .g-header-nav a:hover { color: #1E7D96; }
 .g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
@@ -81,7 +81,7 @@ body {
 
 .fn-main { max-width: 1100px; margin: 0 auto; padding: 36px 40px 20px; }
 .fn-label { font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #aaa; text-transform: uppercase; margin: 0 0 0.4rem; }
-.fn-title { font-family: "Archivo", sans-serif; font-size: 28px; font-weight: 400; color: #1F514C; margin: 0 0 0.4rem; letter-spacing: -0.03em; }
+.fn-title { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin: 0 0 0.4rem; letter-spacing: -0.03em; }
 .fn-desc { font-size: 15px; color: #666; margin: 0 0 1.25rem; line-height: 1.6; max-width: 720px; }
 .search-wrap { position: relative; margin-bottom: 1.75rem; max-width: 480px; }
 .search-wrap svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; stroke: #aaa; fill: none; stroke-width: 2; stroke-linecap: round; pointer-events: none; }
@@ -152,7 +152,7 @@ body {
 .section-heading { font-family: "Archivo", sans-serif; font-size: 28px; font-weight: 400; color: #1F514C; margin: 0 0 1rem; letter-spacing: -0.03em; }
 @media (max-width: 500px) {
   .fn-main { padding: 24px 14px 16px; }
-  .fn-title { font-size: 24px; }
+  .fn-title { font-size: 32px; }
   .fn-card { flex: 0 0 260px; }
   .fn-grid-nav { display: none; }
   .subscribe-strip { flex-direction: column; align-items: stretch; gap: 1rem; }
@@ -164,7 +164,6 @@ body {
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
 </head>
 <body>
-<div class="g-banner"><strong>PRE-LAUNCH PREVIEW</strong> — <a href="/#contact" style="color:#92400E;font-weight:600;">Contact us</a> if you have questions or ideas!</div>
 <div class="g-header">
   <div class="g-header-inner">
     <a href="/" class="g-header-left">
@@ -172,8 +171,7 @@ body {
       <span>BC Cycle Tourism Society</span>
     </a>
     <div class="g-header-nav" id="g-nav">
-      <a href="/we-welcome-cyclists">Stops &amp; Services</a>
-      <a href="/routes">Routes</a>
+      <a href="/wwc/">Plan Your Ride</a>
       <a href="/field-notes">Field Notes</a>
       <a href="/about">About</a>
     </div>
@@ -339,6 +337,7 @@ body {
   <div class="g-footer-nav">
     <div class="g-footer-col">
       <a href="/">Home</a>
+      <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
       <a href="/routes">Routes</a>
     </div>
