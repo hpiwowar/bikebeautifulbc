@@ -575,12 +575,20 @@ var STATUS_OPTS = [
   {key:'unwelcome',  label:'Bikes Unwelcome', dot:'#C9483B'},
 ];
 var PRICE_OPTS = ['Free', '$', '$$', '$$$'];
+// Ownership facet (cross-category, like Status/Price). key === ex.ownership value.
+// No colour dots (design): plain labels; the flag treatment lives on the stop pages.
+var OWNERSHIP_OPTS = [
+  {key:'Buy BC (independent)', label:'Buy BC (independent)'},
+  {key:'Buy BC (chain)',       label:'Buy BC (chain)'},
+  {key:'Buy Canadian',         label:'Buy Canadian'},
+  {key:'Global chain',         label:'Global chain'},
+];
 var PAGE = 50;
 
 var currentView = 'dir';                  // 'dir' (tabs + sidebar) or 'route'
 var state = {
   activeCat: 'visitor',                   // category id, or 'all' for cross-category
-  sel: {type:[], status:[], price:[], basics:[], amenities:[]},
+  sel: {type:[], status:[], price:[], ownership:[], basics:[], amenities:[]},
   search: '',
   sort: 'amenities',                      // 'amenities' (default) or 'alpha'
   showAmenAll: false,
@@ -619,7 +627,7 @@ function setCat(id) {
   state.activeCat = id;
   // Per-category filters reset on a tab switch, but the search (esp. a community:/name:
   // directive) persists across categories — matches the pre-redesign behaviour.
-  state.sel = {type:[], status:[], price:[], basics:[], amenities:[]};
+  state.sel = {type:[], status:[], price:[], ownership:[], basics:[], amenities:[]};
   state.showAmenAll = false; state.amenFilter = ''; state.limit = PAGE;
   if (currentView !== 'dir') { gotoDir(); }
   closeDrawer(); renderTabs(); renderSidebar(); renderResults(); updateHash();
@@ -639,6 +647,7 @@ function toggle(group, val) {
 function togType(i)   { toggle('type', _subOpts[i]); }
 function togStatus(i) { toggle('status', STATUS_OPTS[i].key); }
 function togPrice(i)  { toggle('price', PRICE_OPTS[i]); }
+function togOwn(i)    { toggle('ownership', OWNERSHIP_OPTS[i].key); }
 function togBasic(i)  { toggle('basics', _basicOpts[i]); }
 function togAmen(i)   { toggle('amenities', _amenShown[i]); }
 function togChip(i)   { var c = _chipOpts[i]; toggle(c[0], c[1]); }
@@ -661,7 +670,7 @@ function _fopt(on, fn, idx, label, opts) {
 // (no selection yet, AND groups, or the checked option itself) show the absolute result count.
 function _cntOpts(group, value, P, cur) {
   var hypo = facetCount(group, value, P);
-  var isOR = (group === 'type' || group === 'status' || group === 'price');
+  var isOR = (group === 'type' || group === 'status' || group === 'price' || group === 'ownership');
   var on = state.sel[group].indexOf(value) !== -1;
   if (isOR && !on && state.sel[group].length > 0) return { delta: hypo - cur, zero: hypo === cur };
   return { count: hypo, zero: hypo === 0 };
@@ -670,6 +679,13 @@ function _group(title, hint, body) {
   return '<div class="fg"><div class="fg-head"><span class="fg-title">' + title + '</span>' + (hint ? '<span class="fg-hint">' + hint + '</span>' : '') + '</div>' + body + '</div>';
 }
 function _basicLabel(t) { return t.replace(/^We Welcome Cyclists Local Knowledge Sheet.*/, 'Local Knowledge Sheet'); }
+// Ownership facet (cross-category). Only render buckets present in the pool so it
+// stays hidden for categories that carry no ownership (Attractions, Camping).
+function _ownGroup(P, cur) {
+  var present = OWNERSHIP_OPTS.filter(function(o){ return facetCount('ownership', o.key, P) > 0 || state.sel.ownership.indexOf(o.key) !== -1; });
+  if (!present.length) return '';
+  return _group('Ownership', 'any of', present.map(function(o){ var c = _cntOpts('ownership', o.key, P, cur); var oi = OWNERSHIP_OPTS.indexOf(o); return _fopt(state.sel.ownership.indexOf(o.key)!==-1, 'togOwn', oi, o.label, c); }).join(''));
+}
 function renderSidebar() {
   var html = '';
   // Faceted counts: how many results you'd get if each option were on, given everything else
@@ -680,6 +696,7 @@ function renderSidebar() {
     html += '<div class="allcallout">Type &amp; amenity filters are defined per category. <b>Pick a category above</b> to use them.</div>';
     html += _group('Status', 'any of', STATUS_OPTS.map(function(s,i){ var o = _cntOpts('status', s.key, P, cur); o.dot = s.dot; return _fopt(state.sel.status.indexOf(s.key)!==-1, 'togStatus', i, s.label, o); }).join(''));
     html += _group('Price', 'any of', PRICE_OPTS.map(function(p,i){ return _fopt(state.sel.price.indexOf(p)!==-1, 'togPrice', i, p, _cntOpts('price', p, P, cur)); }).join(''));
+    html += _ownGroup(P, cur);
   } else {
     var cat = catById(state.activeCat);
     var sc = subcatCounts(cat);
@@ -689,6 +706,7 @@ function renderSidebar() {
     }
     html += _group('Status', 'any of', STATUS_OPTS.map(function(s,i){ var o = _cntOpts('status', s.key, P, cur); o.dot = s.dot; return _fopt(state.sel.status.indexOf(s.key)!==-1, 'togStatus', i, s.label, o); }).join(''));
     html += _group('Price', 'any of', PRICE_OPTS.map(function(p,i){ return _fopt(state.sel.price.indexOf(p)!==-1, 'togPrice', i, p, _cntOpts('price', p, P, cur)); }).join(''));
+    html += _ownGroup(P, cur);
     _basicOpts = cat.required.map(function(r){ return r.title; });
     html += _group('Required basics', 'all of', _basicOpts.map(function(t,i){ return _fopt(state.sel.basics.indexOf(t)!==-1, 'togBasic', i, _basicLabel(t), _cntOpts('basics', t, P, cur)); }).join(''));
     _amenShown = cat.optional.slice();
@@ -701,7 +719,7 @@ function renderSidebar() {
 }
 
 /* ---------- filtering ---------- */
-function selCount() { var s = state.sel; return s.type.length + s.status.length + s.price.length + s.basics.length + s.amenities.length; }
+function selCount() { var s = state.sel; return s.type.length + s.status.length + s.price.length + s.ownership.length + s.basics.length + s.amenities.length; }
 function pool() {
   var out = [];
   var cats = (state.activeCat === 'all') ? categories : [catById(state.activeCat)];
@@ -778,6 +796,7 @@ function _matchTerm(e, term) {
   if (f === 'amenity' || f === 'amenities') { var nv = _normAmen(v); return (e.checked||[]).some(function(a){ return _normAmen(a).indexOf(nv) !== -1; }); }
   if (f === 'route' || f === 'routes') return !!(e.routes && e.routes.some(function(r){ return r.toLowerCase().indexOf(v) !== -1; }));
   if (f === 'type' || f === 'subcategory' || f === 'subcat') return (e.subcategory||'').toLowerCase().indexOf(v) !== -1;
+  if (f === 'owner' || f === 'ownership') return (e.ownership||'').toLowerCase().indexOf(v) !== -1;
   var lit = f + ':' + v;
   return (e.name||'').toLowerCase().indexOf(lit) !== -1 || (e.desc||'').toLowerCase().indexOf(lit) !== -1;
 }
@@ -809,6 +828,7 @@ function applyFilters(list, s) {
   if (s.type.length)   list = list.filter(function(e){ return s.type.indexOf(e.subcategory) !== -1; });
   if (s.status.length) list = list.filter(function(e){ return s.status.indexOf(statusOf(e)) !== -1; });
   if (s.price.length)  list = list.filter(function(e){ return s.price.indexOf(e.price_band) !== -1; });
+  if (s.ownership.length) list = list.filter(function(e){ return s.ownership.indexOf(e.ownership) !== -1; });
   if (s.basics.length) list = list.filter(function(e){ var rc = e.req_checked||[]; return s.basics.every(function(b){ return rc.indexOf(b) !== -1; }); });
   if (s.amenities.length) list = list.filter(function(e){ var ch = e.checked||[]; return s.amenities.every(function(a){ return ch.indexOf(a) !== -1; }); });
   if (state.search) { var _pred = compileSearch(state.search); if (_pred) list = list.filter(_pred); }
@@ -818,7 +838,7 @@ function applyFilters(list, s) {
 // OR groups (type/status/price) add the value to the set; AND groups (basics/amenities) intersect it in.
 function facetCount(group, value, P) {
   var s = state.sel;
-  var sel = { type:s.type.slice(), status:s.status.slice(), price:s.price.slice(), basics:s.basics.slice(), amenities:s.amenities.slice() };
+  var sel = { type:s.type.slice(), status:s.status.slice(), price:s.price.slice(), ownership:s.ownership.slice(), basics:s.basics.slice(), amenities:s.amenities.slice() };
   if (sel[group].indexOf(value) === -1) sel[group].push(value);
   return applyFilters(P, sel).length;
 }
@@ -848,6 +868,7 @@ function selChips() {
   s.type.forEach(function(v){ _chipOpts.push(['type', v, v]); });
   s.status.forEach(function(v){ var o = STATUS_OPTS.find(function(x){return x.key===v;}); _chipOpts.push(['status', v, o?o.label:v]); });
   s.price.forEach(function(v){ _chipOpts.push(['price', v, v]); });
+  s.ownership.forEach(function(v){ _chipOpts.push(['ownership', v, v]); });
   s.basics.forEach(function(v){ _chipOpts.push(['basics', v, _basicLabel(v)]); });
   s.amenities.forEach(function(v){ _chipOpts.push(['amenities', v, v]); });
   return _chipOpts;
@@ -1076,6 +1097,7 @@ function pushFilterHash(parts) {
   }
   if (state.sel.status.length) parts.push('st=' + state.sel.status.join(','));
   if (state.sel.price.length) parts.push('pr=' + state.sel.price.map(encodeURIComponent).join(','));
+  if (state.sel.ownership.length) parts.push('ow=' + state.sel.ownership.map(encodeURIComponent).join(','));
   if (cat && state.sel.basics.length) {
     var bi = state.sel.basics.map(function(b){ return cat.required.findIndex(function(r){ return r.title === b; }); }).filter(function(i){ return i !== -1; });
     if (bi.length) parts.push('bs=' + bi.join(','));
@@ -1118,6 +1140,7 @@ function readHash() {
   _pendingF = p.f || null;
   if (p.st) state.sel.status = p.st.split(',');
   if (p.pr) state.sel.price = p.pr.split(',');
+  if (p.ow) state.sel.ownership = p.ow.split(',');
   _pendingBs = p.bs || null;
 }
 var _pendingSubcatSlug = null, _pendingF = null, _pendingBs = null;
