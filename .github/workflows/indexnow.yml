@@ -1,0 +1,61 @@
+name: IndexNow ping
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # need the previous commit to diff against
+
+      - name: Submit changed URLs to IndexNow
+        env:
+          INDEXNOW_KEY: 48cf37f2e9d35f7eb0f378e1b7dc0c8b
+          HOST: bccycletourism.ca
+        run: |
+          set -euo pipefail
+          BEFORE='${{ github.event.before }}'
+          # A brand-new branch reports an all-zero "before"; fall back to HEAD~1.
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            BEFORE=$(git rev-parse HEAD~1 2>/dev/null || echo "")
+          fi
+          if [ -z "$BEFORE" ]; then
+            echo "No previous commit to diff against; skipping."
+            exit 0
+          fi
+
+          # Changed/added .html files -> site URLs (strip trailing index.html).
+          URLS=()
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            path="${f%index.html}"
+            URLS+=("https://$HOST/$path")
+          done < <(git diff --name-only --diff-filter=AM "$BEFORE" "${{ github.sha }}" -- '*.html' | sort -u)
+
+          if [ ${#URLS[@]} -eq 0 ]; then
+            echo "No changed HTML files; nothing to submit."
+            exit 0
+          fi
+          echo "Submitting ${#URLS[@]} URL(s)."
+
+          submit() {
+            local json
+            json=$(printf '%s\n' "$@" | jq -R . | jq -s \
+              --arg host "$HOST" --arg key "$INDEXNOW_KEY" \
+              --arg keyloc "https://$HOST/$INDEXNOW_KEY.txt" \
+              '{host:$host, key:$key, keyLocation:$keyloc, urlList:.}')
+            curl -sS -X POST 'https://api.indexnow.org/indexnow' \
+              -H 'Content-Type: application/json' --data "$json" -w 'HTTP %{http_code}\n'
+          }
+
+          # IndexNow caps a submission at 10,000 URLs; batch to stay under it.
+          BATCH=()
+          for u in "${URLS[@]}"; do
+            BATCH+=("$u")
+            if [ ${#BATCH[@]} -ge 10000 ]; then submit "${BATCH[@]}"; BATCH=(); fi
+          done
+          [ ${#BATCH[@]} -gt 0 ] && submit "${BATCH[@]}"

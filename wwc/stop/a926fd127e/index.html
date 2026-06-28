@@ -101,6 +101,10 @@ body {
 .listing-pill-yes { background: #ECFDF5; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #065F46; }
 .listing-pill-no { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #9CA3AF; }
 .listing-amenity-note { font-size: 12px; color: #6B7280; margin-top: 8px; line-height: 1.6; }
+.listing-indig-roles { list-style: none; padding: 0; margin: 0; }
+.listing-indig-roles li { font-size: 14.5px; color: #1F514C; font-weight: 600; padding: 2px 0; }
+.listing-indig-attr { margin: 10px 0 0; font-size: 13.5px; }
+.listing-indig-attr a { color: #1E7D96; text-decoration: none; }
 .listing-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
 .listing-verify a { color: #1E7D96; }
 .listing-routes { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -142,11 +146,12 @@ body {
 <nav class="listing-breadcrumb"><a href="/wwc/" id="listing-back" onclick="history.back();return false;">← <span id="listing-back-label">All listings</span></a> / Bike Services</nav>
 <script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('listing-back-label').textContent=f.label;}}catch(e){}})();</script>
 <h1 class="listing-h1">Half Time Sports</h1>
-<div class="listing-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  <span style="font-weight:600;"><img src="/img/bc-flag.png" alt="" width="20" height="14" style="vertical-align:-2px;margin-right:5px;border-radius:2px;">Buy BC (independent)</span>  ·  Repair Shop  ·  Vancouver</div>
+<div class="listing-meta"><span class="badge badge-info">Info</span>  ·  <span style="font-weight:600;"><img src="/img/bc-flag.png" alt="" width="20" height="14" style="vertical-align:-2px;margin-right:5px;border-radius:2px;">Buy BC (independent)</span>  ·  Repair Shop  ·  Vancouver</div>
 <p class="listing-desc">Half Time Sports is a sports retailer located on Granville Island in Vancouver, a popular destination for cyclists and visitors alike. The shop is tagged as a general sports shop (shop=sports) rather than a dedicated bike shop, so the range and depth of cycling-specific services is unknown. Its Granville Island location puts it within a well-trafficked recreational cycling corridor.</p>
 <div class="listing-verify">Amenities assumed from location and public data. <a href="/suggest#edit=Half Time Sports">Confirm or update this listing →</a></div>
 <div class="listing-section"><div class="listing-section-title">Contact</div><div class="listing-detail-row"><strong>Address:</strong> Unit 23 - 1496 Cartwright Street, Vancouver, BC</div><div class="listing-detail-row"><strong>Website:</strong> <a href="https://halftimesports.ca" target="_blank" rel="noopener">https://halftimesports.ca</a></div></div>
-<div class="listing-section"><div class="listing-section-title">Required Criteria</div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Staff help with urgent mechanical issues</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Pump available</span></div></div>
+
+<div class="listing-section"><div class="listing-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>Staff help with urgent mechanical issues</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Pump available</span></div></div>
 <div class="listing-section"><div class="listing-section-title">Amenities</div><div class="listing-pills"><span class="listing-pill-no">Walk-in repairs</span><span class="listing-pill-no">Same-day urgent repairs</span><span class="listing-pill-no">Touring parts stocked</span><span class="listing-pill-no">E-bike service</span><span class="listing-pill-no">Bike boxes / packing</span><span class="listing-pill-no">Shipping bikes</span><span class="listing-pill-no">Bike rentals</span><span class="listing-pill-no">Shuttle / trip support</span><span class="listing-pill-no">Guided rides</span><span class="listing-pill-no">DIY stand</span><span class="listing-pill-no">Washrooms</span><span class="listing-pill-no">Water bottle refill</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">E-bike charging</span></div></div>
 
 <div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: AI sources with manual review</div></div>

@@ -474,6 +474,8 @@ body {
 .lachips { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 0; }
 .lachip { background:#FFF6E5; border:1px solid #F0E6C5; color:#1E7D96; font-size:14.5px; border-radius:999px; padding:3px 11px; }
 .lachip .star { color:#1E7D96; font-weight:800; }
+.lichips { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 0; }
+.lichip { background:#EDF5EE; border:1px solid #CFE3D2; color:#1F514C; font-weight:600; font-size:13.5px; border-radius:999px; padding:3px 11px; }
 .ldesc { font-size:16px; line-height:1.55; color:#3C4A43; margin:11px 0 0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
 .lfoot { display:flex; align-items:center; gap:12px; margin:12px 0 0; flex-wrap:wrap; }
 .lbasics { font-size:14px; }
@@ -660,7 +662,9 @@ var OWNERSHIP_OPTS = [
 // Indigenous affiliation — a SEPARATE cross-category facet (own attribute,
 // e.indigenous_role, a list). Multi-value; grows (operated -> owned/content).
 var INDIG_OPTS = [
-  {key:'Indigenous operated', label:'Indigenous operated'},
+  {key:'Indigenous owned', label:'Owned'},
+  {key:'Indigenous operated', label:'Operated'},
+  {key:'Indigenous culture & heritage', label:'Culture & heritage'},
 ];
 var PAGE = 50;
 
@@ -1087,6 +1091,11 @@ function renderCard(e, cat, showCatTag) {
       return '<span class="lachip">' + esc(a) + star + '</span>';
     }).join('') + '</div>';
   }
+  var ichips = '';
+  var iroles = e.indigenous_role || [];
+  if (iroles.length) {
+    ichips = '<div class="lichips">' + iroles.map(function(r){ return '<span class="lichip">' + esc(r) + '</span>'; }).join('') + '</div>';
+  }
   var desc = e.desc ? '<p class="ldesc">' + esc(e.desc) + '</p>' : '';
   var foot = '<div class="lfoot">' + basicsLine(e, cat) + '<span class="lviewdetails">View all details &rsaquo;</span></div>';
   var keyAttr = e.key ? ' id="c-' + e.key + '" data-key="' + e.key + '"' : '';
@@ -1094,7 +1103,7 @@ function renderCard(e, cat, showCatTag) {
     '<div class="lavatar">' + icon + '</div>' +
     '<div class="lbody">' +
       '<div class="ltitle-row"><span class="ltitle">' + esc(e.name) + '</span><span class="sbadge ' + sb[0] + '">' + sb[1] + '</span></div>' +
-      '<div class="lmeta">' + meta + '</div>' + chips + desc + foot +
+      '<div class="lmeta">' + meta + '</div>' + ichips + chips + desc + foot +
     '</div></div>';
 }
 function goToListing(el) {
