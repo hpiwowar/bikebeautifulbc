@@ -34,7 +34,8 @@ jobs:
             [ -z "$f" ] && continue
             path="${f%index.html}"
             URLS+=("https://$HOST/$path")
-          done < <(git diff --name-only --diff-filter=AM "$BEFORE" "${{ github.sha }}" -- '*.html' | sort -u)
+          # shuf so a daily cap drops a different random subset each run, not always the same URLs.
+          done < <(git diff --name-only --diff-filter=AM "$BEFORE" "${{ github.sha }}" -- '*.html' | sort -u | shuf)
 
           if [ ${#URLS[@]} -eq 0 ]; then
             echo "No changed HTML files; nothing to submit."
@@ -42,14 +43,15 @@ jobs:
           fi
           echo "Submitting ${#URLS[@]} URL(s)."
 
+          # Pipe the JSON to curl via stdin (--data-binary @-). A large payload
+          # exceeds the ~128KB single-argument limit if passed as --data "$json".
           submit() {
-            local json
-            json=$(printf '%s\n' "$@" | jq -R . | jq -s \
+            printf '%s\n' "$@" | jq -R . | jq -s \
               --arg host "$HOST" --arg key "$INDEXNOW_KEY" \
               --arg keyloc "https://$HOST/$INDEXNOW_KEY.txt" \
-              '{host:$host, key:$key, keyLocation:$keyloc, urlList:.}')
-            curl -sS -X POST 'https://api.indexnow.org/indexnow' \
-              -H 'Content-Type: application/json' --data "$json" -w 'HTTP %{http_code}\n'
+              '{host:$host, key:$key, keyLocation:$keyloc, urlList:.}' \
+            | curl -sS -X POST 'https://api.indexnow.org/indexnow' \
+                -H 'Content-Type: application/json' --data-binary @- -w 'HTTP %{http_code}\n'
           }
 
           # IndexNow caps a submission at 10,000 URLs; batch to stay under it.
