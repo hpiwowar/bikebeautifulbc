@@ -419,6 +419,21 @@ body {
 .search-in::placeholder { color:#A8B0A6; }
 .search-tip { font-size:14px; color:#8A938A; margin:8px 0 0; }
 .search-tip code { background:#F4F1E4; color:#6B6B5E; border-radius:5px; font-family:ui-monospace,Menlo,monospace; font-size:13px; padding:1px 5px; cursor:pointer; }
+.adv-link { color:#8A938A; cursor:pointer; text-decoration:underline; text-decoration-style:dotted; white-space:nowrap; margin-left:6px; }
+.adv-link:hover { color:#1E7D96; }
+.sh-overlay { display:none; position:fixed; inset:0; background:rgba(28,40,33,.5); z-index:60; }
+.sh-overlay.open { display:flex; align-items:flex-start; justify-content:center; padding:40px 16px; overflow-y:auto; }
+.sh-card { background:#FFFFFF; border-radius:12px; max-width:560px; width:100%; padding:24px 30px 30px; box-shadow:0 18px 50px rgba(0,0,0,.25); }
+.sh-head { display:flex; justify-content:space-between; align-items:flex-start; }
+.sh-card h2 { margin:0 0 4px; font-size:20px; color:#141414; }
+.sh-card .sh-lead { margin:0 0 14px; font-size:14px; color:#6B746B; }
+.sh-card h3 { margin:18px 0 6px; font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:#1E7D96; }
+.sh-card ul { margin:0; padding-left:18px; }
+.sh-card li { font-size:14px; color:#3A433A; margin:4px 0; line-height:1.45; }
+.sh-card p.sh-note { font-size:14px; color:#3A433A; margin:6px 0; line-height:1.45; }
+.sh-card code { background:#F4F1E4; color:#5A5A4E; border-radius:5px; font-family:ui-monospace,Menlo,monospace; font-size:12.5px; padding:1px 5px; }
+.sh-x { cursor:pointer; font-size:24px; line-height:1; color:#9CA3AF; border:none; background:none; padding:0 0 0 12px; }
+.sh-x:hover { color:#141414; }
 .dir-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:14px 0; margin-top:14px; }
 .dir-showing { font-size:14px; color:#3C4A43; }
 .dir-sortwrap { margin-left:auto; display:inline-flex; align-items:center; gap:6px; }
@@ -546,6 +561,53 @@ body {
   </div>
 </div>
 
+<div class="sh-overlay" id="search-help" onclick="if(event.target===this)closeSearchHelp()">
+  <div class="sh-card" role="dialog" aria-modal="true" aria-label="Search syntax">
+    <div class="sh-head">
+      <h2>Search syntax</h2>
+      <button class="sh-x" onclick="closeSearchHelp()" aria-label="Close">&times;</button>
+    </div>
+    <p class="sh-lead">The search box does more than match words. Everything below can be combined in one query.</p>
+    <h3>Basics</h3>
+    <ul>
+      <li>Type any words to match a stop&rsquo;s name, town, description, amenities, or route. <code>gelato</code></li>
+      <li>Add words to narrow; each word must match. <code>bakery campground</code></li>
+    </ul>
+    <h3>Fields &mdash; field:value</h3>
+    <ul>
+      <li><code>community:Hope</code> &mdash; exact town (the only exact-match field)</li>
+      <li><code>community:"Maple Ridge"</code> &mdash; quote any value with a space in it</li>
+      <li><code>name:MEC</code> &mdash; stop name</li>
+      <li><code>type:hostel</code> &mdash; subcategory (also <code>subcat:</code>)</li>
+      <li><code>amenity:wifi</code> &mdash; a listed amenity</li>
+      <li><code>route:Kettle</code> &mdash; stops on a named route</li>
+      <li><code>status:qualified</code> &mdash; accreditation status</li>
+      <li><code>price:$$</code> &mdash; price band</li>
+      <li><code>owner:"Buy BC"</code> &mdash; ownership (also <code>"Buy Canadian"</code>, <code>chain</code>)</li>
+      <li><code>indigenous:owned</code> &mdash; Indigenous role</li>
+    </ul>
+    <h3>Operators &mdash; must be UPPERCASE</h3>
+    <ul>
+      <li><code>bakery OR cafe</code> &mdash; either (or <code>bakery | cafe</code>)</li>
+      <li><code>cafe NOT chain</code> &mdash; exclude (or <code>-chain</code>)</li>
+      <li><code>vegan AND patio</code> &mdash; both (a space already means AND)</li>
+      <li><code>(cafe OR bakery) community:Tofino</code> &mdash; group with parentheses</li>
+    </ul>
+    <h3>Quotes</h3>
+    <p class="sh-note">Quotes hold words together as one value, for a field or a phrase.</p>
+    <ul>
+      <li><code>owner:"Buy BC"</code> &mdash; a multi-word field value</li>
+      <li><code>"bike shop"</code> &mdash; an exact phrase in the name or description</li>
+    </ul>
+    <h3>Good to know</h3>
+    <ul>
+      <li>Lowercase <code>or</code> / <code>and</code> / <code>not</code> are treated as plain words, not operators.</li>
+      <li>Every field matches partway, except <code>community:</code>, which is exact. So <code>name:Maple</code> finds &ldquo;Maple Leaf Inn&rdquo;, but <code>community:Maple</code> finds nothing unless the town is exactly &ldquo;Maple&rdquo;.</li>
+      <li>Mix it all: <code>route:Kettle type:campground -reservation</code></li>
+    </ul>
+  </div>
+</div>
+
 </div><!-- end wwc-root -->
 
 <script>
@@ -574,7 +636,7 @@ var STATUS_OPTS = [
   {key:'info',       label:'Info',            dot:'#B6B6AC'},
   {key:'unwelcome',  label:'Bikes Unwelcome', dot:'#C9483B'},
 ];
-var PRICE_OPTS = ['Free', '$', '$$', '$$$'];
+var PRICE_OPTS = ['Free', '$', '$$', '$$$', '$$$$'];
 // Ownership facet (cross-category, like Status/Price). key === ex.ownership value.
 // No colour dots (design): plain labels; the flag treatment lives on the stop pages.
 var OWNERSHIP_OPTS = [
@@ -711,6 +773,14 @@ function _indigGroup(P, cur) {
   if (!present.length) return '';
   return _group('Indigenous', 'any of', present.map(function(o){ var c = _cntOpts('indigenous', o.key, P, cur); var oi = INDIG_OPTS.indexOf(o); return _fopt(state.sel.indigenous.indexOf(o.key)!==-1, 'togIndig', oi, o.label, c); }).join(''));
 }
+// Price facet. Only render tiers present in the pool (or already selected), so
+// the whole group auto-hides on unpriced tabs (Camping/Groceries/Bike/Transport)
+// and a tab never shows a $$$$ option that matches nothing.
+function _priceGroup(P, cur) {
+  var present = PRICE_OPTS.filter(function(p){ return facetCount('price', p, P) > 0 || state.sel.price.indexOf(p) !== -1; });
+  if (!present.length) return '';
+  return _group('Price', 'any of', present.map(function(p){ var pi = PRICE_OPTS.indexOf(p); return _fopt(state.sel.price.indexOf(p)!==-1, 'togPrice', pi, p, _cntOpts('price', p, P, cur)); }).join(''));
+}
 function renderSidebar() {
   var html = '';
   // Faceted counts: how many results you'd get if each option were on, given everything else
@@ -720,7 +790,7 @@ function renderSidebar() {
   if (state.activeCat === 'all') {
     html += '<div class="allcallout">Type &amp; amenity filters are defined per category. <b>Pick a category above</b> to use them.</div>';
     html += _group('Status', 'any of', STATUS_OPTS.map(function(s,i){ var o = _cntOpts('status', s.key, P, cur); o.dot = s.dot; return _fopt(state.sel.status.indexOf(s.key)!==-1, 'togStatus', i, s.label, o); }).join(''));
-    html += _group('Price', 'any of', PRICE_OPTS.map(function(p,i){ return _fopt(state.sel.price.indexOf(p)!==-1, 'togPrice', i, p, _cntOpts('price', p, P, cur)); }).join(''));
+    html += _priceGroup(P, cur);
     html += _ownGroup(P, cur);
     html += _indigGroup(P, cur);
   } else {
@@ -731,7 +801,7 @@ function renderSidebar() {
       html += _group('Type', 'any of', _subOpts.map(function(s,i){ return _fopt(state.sel.type.indexOf(s)!==-1, 'togType', i, s, _cntOpts('type', s, P, cur)); }).join(''));
     }
     html += _group('Status', 'any of', STATUS_OPTS.map(function(s,i){ var o = _cntOpts('status', s.key, P, cur); o.dot = s.dot; return _fopt(state.sel.status.indexOf(s.key)!==-1, 'togStatus', i, s.label, o); }).join(''));
-    html += _group('Price', 'any of', PRICE_OPTS.map(function(p,i){ return _fopt(state.sel.price.indexOf(p)!==-1, 'togPrice', i, p, _cntOpts('price', p, P, cur)); }).join(''));
+    html += _priceGroup(P, cur);
     html += _ownGroup(P, cur);
     html += _indigGroup(P, cur);
     _basicOpts = cat.required.map(function(r){ return r.title; });
@@ -819,7 +889,7 @@ function _matchTerm(e, term) {
   if (f === 'community') return (e.community||'').toLowerCase() === v;
   if (f === 'name') return (e.name||'').toLowerCase().indexOf(v) !== -1;
   if (f === 'status') return (statusOf(e)||'').toLowerCase().indexOf(v) !== -1;
-  if (f === 'price') return (e.price_band||'').toLowerCase().indexOf(v) !== -1;
+  if (f === 'price') return (e.price_tier||'').toLowerCase() === String(v).toLowerCase();
   if (f === 'amenity' || f === 'amenities') { var nv = _normAmen(v); return (e.checked||[]).some(function(a){ return _normAmen(a).indexOf(nv) !== -1; }); }
   if (f === 'route' || f === 'routes') return !!(e.routes && e.routes.some(function(r){ return r.toLowerCase().indexOf(v) !== -1; }));
   if (f === 'type' || f === 'subcategory' || f === 'subcat') return (e.subcategory||'').toLowerCase().indexOf(v) !== -1;
@@ -855,7 +925,7 @@ function soleCommunity(str) { var m = /^\s*community:(?:"([^"]+)"|(\S+))\s*$/i.e
 function applyFilters(list, s) {
   if (s.type.length)   list = list.filter(function(e){ return s.type.indexOf(e.subcategory) !== -1; });
   if (s.status.length) list = list.filter(function(e){ return s.status.indexOf(statusOf(e)) !== -1; });
-  if (s.price.length)  list = list.filter(function(e){ return s.price.indexOf(e.price_band) !== -1; });
+  if (s.price.length)  list = list.filter(function(e){ return s.price.indexOf(e.price_tier) !== -1; });
   if (s.ownership.length) list = list.filter(function(e){ return s.ownership.indexOf(e.ownership) !== -1; });
   if (s.indigenous.length) list = list.filter(function(e){ var ir = e.indigenous_role||[]; return s.indigenous.some(function(v){ return ir.indexOf(v) !== -1; }); });
   if (s.basics.length) list = list.filter(function(e){ var rc = e.req_checked||[]; return s.basics.every(function(b){ return rc.indexOf(b) !== -1; }); });
@@ -920,7 +990,7 @@ function renderResults() {
 
   var ph = allMode ? 'Search all categories — try gelato community:Vancouver…' : 'Search this category — try gelato community:Vancouver…';
   var search = '<input class="search-in" id="dir-search" placeholder="' + esc(ph) + '" value="' + esc(state.search) + '" oninput="onSearch(this.value)" />' +
-    '<p class="search-tip">Tip: combine filters — <code onclick="fillCommunityPrefix()">community:Hope</code> narrows to a town, <code onclick="fillSearch(\x27name:\x27)">name:MEC</code> to a name, and any other words (like <code onclick="fillSearch(\x27gelato community:Vancouver\x27)">gelato</code>) match amenities.</p>';
+    '<p class="search-tip">Tip: combine filters — <code onclick="fillCommunityPrefix()">community:Hope</code> narrows to a town, <code onclick="fillSearch(\x27name:\x27)">name:MEC</code> to a name, and any other words (like <code onclick="fillSearch(\x27gelato community:Vancouver\x27)">gelato</code>) match amenities. <a class="adv-link" onclick="openSearchHelp()">Advanced</a></p>';
 
   var fbtn = '<button class="filterbtn" onclick="openDrawer()">' +
     "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'><line x1='4' y1='7' x2='20' y2='7'/><line x1='7' y1='12' x2='17' y2='12'/><line x1='10' y1='17' x2='14' y2='17'/></svg>" +
@@ -1039,6 +1109,9 @@ function goToListing(el) {
 /* ---------- mobile drawer ---------- */
 function openDrawer() { document.getElementById('dir-sidebar').classList.add('open'); document.getElementById('dir-overlay').classList.add('open'); }
 function closeDrawer() { var sb = document.getElementById('dir-sidebar'); if (sb) sb.classList.remove('open'); var ov = document.getElementById('dir-overlay'); if (ov) ov.classList.remove('open'); }
+function openSearchHelp() { var m = document.getElementById('search-help'); if (m) m.classList.add('open'); }
+function closeSearchHelp() { var m = document.getElementById('search-help'); if (m) m.classList.remove('open'); }
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeSearchHelp(); });
 
 /* ---------- view switching ---------- */
 function gotoRoute() { currentView = 'route'; closeDrawer(); document.getElementById('view-dir').style.display = 'none'; document.getElementById('view-route').style.display = ''; renderRouteView(); renderTabs(); updateHash(); }
