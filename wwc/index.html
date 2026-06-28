@@ -524,13 +524,13 @@ body {
   </div>
 
   <div id="view-dir">
+    <p class="browse-links" style="margin-bottom:16px;"><a onclick="gotoRoute();return false;">Filter by trail &rarr;</a></p>
     <div class="cat-tabs" id="cat-tabs"></div>
     <div class="ss-panel">
       <div class="ss-overlay" id="dir-overlay" onclick="closeDrawer()"></div>
       <aside class="ss-sidebar" id="dir-sidebar">
         <div class="sheet-grip"></div>
         <div class="sheet-head"><span class="h">Filters</span><span class="dir-clearall" onclick="clearAll()">Clear all</span></div>
-        <a onclick="gotoRoute();return false;" href="#" style="display:block;font-size:14px;font-weight:600;color:#1E7D96;text-decoration:none;margin:2px 0 14px;">Browse by trail &rarr;</a>
         <div class="ss-sidebar-inner" id="dir-sidebar-inner"></div>
         <button class="sheet-apply" id="dir-sheet-apply" onclick="closeDrawer()"></button>
       </aside>
@@ -539,7 +539,7 @@ body {
   </div>
 
   <div id="view-route" style="display:none">
-    <p class="browse-links"><a onclick="gotoDir();return false;">&larr; Browse by category</a></p>
+    <p class="browse-links" style="margin-bottom:16px;"><a onclick="gotoDir();return false;">&larr; Filter by category</a></p>
     <div class="category-nav" id="route-category-nav"></div>
     <div class="route-selector" id="route-selector"></div>
     <div class="card" id="route-card"></div>
