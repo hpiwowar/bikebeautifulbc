@@ -702,6 +702,11 @@ var PRICE_TO_SLUG = {'Free':'free', '$':'1', '$$':'2', '$$$':'3', '$$$$':'4'};
 var PRICE_BY_SLUG = {}; Object.keys(PRICE_TO_SLUG).forEach(function(k){ PRICE_BY_SLUG[PRICE_TO_SLUG[k]] = k; });
 var PAGE = 50;
 
+// Fathom event helper. Fathom takes an event NAME only (no properties), so we bake
+// the one dimension we care about into the name and keep cardinality low. Guarded
+// because the script loads deferred and may not be ready on early interactions.
+function track(n){ try { if (window.fathom) fathom.trackEvent(n); } catch (e) {} }
+
 var currentView = 'dir';                  // 'dir' (tabs + sidebar) or 'route'
 var state = {
   activeCat: 'visitor',                   // category id, or 'all' for cross-category
@@ -742,6 +747,8 @@ function renderTabs() {
   }).join('');
 }
 function setCat(id) {
+  var _t = catById(id);
+  track('Category tab: ' + (_t ? _t.tab : id));
   state.activeCat = id;
   // Per-category filters reset on a tab switch, but the search (esp. a community:/name:
   // directive) persists across categories — matches the pre-redesign behaviour.
@@ -759,7 +766,7 @@ function subcatCounts(cat) {
 }
 function toggle(group, val) {
   var a = state.sel[group]; var i = a.indexOf(val);
-  if (i === -1) a.push(val); else a.splice(i, 1);
+  if (i === -1) { a.push(val); track('Filter: ' + group + '/' + val); } else a.splice(i, 1);
   state.limit = PAGE; renderSidebar(); renderDynamic(); updateHash();
 }
 function togType(i)   { toggle('type', _subOpts[i]); }
@@ -772,7 +779,7 @@ function togAmen(i)   { toggle('amenities', _amenShown[i]); }
 function togChip(i)   { var c = _chipOpts[i]; toggle(c[0], c[1]); }
 function amenToggle() { state.showAmenAll = !state.showAmenAll; renderSidebar(); }
 function amenFilterIn(v) { state.amenFilter = v; renderSidebar(); var el = document.querySelector('#dir-sidebar-inner .amen-filter'); if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }
-function setSort(v) { state.sort = v; state.limit = PAGE; renderDynamic(); updateHash(); }
+function setSort(v) { track('Sort: ' + v); state.sort = v; state.limit = PAGE; renderDynamic(); updateHash(); }
 
 function _fopt(on, fn, idx, label, opts) {
   opts = opts || {};
@@ -1173,7 +1180,11 @@ function clearFilters() {
   renderSidebar(); renderDynamic(); updateHash();
 }
 function goAllWithSearch() { setCat('all'); }
-function onSearch(v) { state.search = v; state.limit = PAGE; renderDynamic(); renderSidebar(); updateHash(); }
+function onSearch(v) {
+  // Count a search "session" once (empty -> non-empty), never per keystroke, and never the text itself.
+  if (!state.search && v) track('Search used');
+  state.search = v; state.limit = PAGE; renderDynamic(); renderSidebar(); updateHash();
+}
 function loadMore() { state.limit += PAGE; renderDynamic(); }
 function clearAll() {
   state.sel = {type:[], status:[], price:[], ownership:[], indigenous:[], basics:[], amenities:[]};
@@ -1455,12 +1466,14 @@ fetch('/wwc/wwc_data.json')
 window.addEventListener('load', (event) => {
   document.querySelectorAll('a').forEach(item => {
     item.addEventListener('click', event => {
-      let linkUrl = new URL(item.getAttribute('href'), window.location.href);
-      let currentHostname = window.location.hostname;
-      if (linkUrl.hostname !== currentHostname) {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
         let domainParts = linkUrl.hostname.split('.');
         let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
-        fathom.trackEvent(`External link clicked: ${domainName}`);
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
       }
     });
   });

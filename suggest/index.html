@@ -386,6 +386,7 @@ function submitSuggest(e) {
     .then(function(r) { return r.json(); })
     .then(function(res) {
       if (res.success) {
+        if (window.fathom) fathom.trackEvent(isEdit ? 'Listing edit submitted' : 'Listing suggestion submitted');
         document.querySelector('.form-card').innerHTML = '<div style="padding:40px 0;text-align:center;"><p style="font-family:Archivo,sans-serif;font-size:28px;font-weight:400;color:#0D2E1E;letter-spacing:-0.03em;margin-bottom:8px;">Thanks!</p><p style="font-size:16px;color:rgba(13,64,112,0.5);">Your suggestion has been received. We will review it shortly.</p></div>';
       } else {
         btn.disabled = false; btn.textContent = 'Submit';
@@ -424,12 +425,14 @@ function submitSuggest(e) {
 window.addEventListener('load', (event) => {
   document.querySelectorAll('a').forEach(item => {
     item.addEventListener('click', event => {
-      let linkUrl = new URL(item.getAttribute('href'), window.location.href);
-      let currentHostname = window.location.hostname;
-      if (linkUrl.hostname !== currentHostname) {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
         let domainParts = linkUrl.hostname.split('.');
         let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
-        fathom.trackEvent(`External link clicked: ${domainName}`);
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
       }
     });
   });
