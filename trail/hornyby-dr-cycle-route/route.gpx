@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Hornyby Dr Cycle Route</name>
+<link href="https://bccycletourism.ca/trail/hornyby-dr-cycle-route/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.091161" lon="-122.956558">
+<name>Triple O's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.092039" lon="-122.957565">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.092403" lon="-122.951511">
+<name>Vandula Farms</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<trk><name>Hornyby Dr Cycle Route</name>
+<trkseg>
+<trkpt lat="49.089552" lon="-122.962928"/>
+<trkpt lat="49.089041" lon="-122.962637"/>
+<trkpt lat="49.089011" lon="-122.959985"/>
+<trkpt lat="49.090052" lon="-122.957132"/>
+<trkpt lat="49.090077" lon="-122.926409"/>
+<trkpt lat="49.090583" lon="-122.923830"/>
+<trkpt lat="49.090722" lon="-122.921794"/>
+<trkpt lat="49.090059" lon="-122.918939"/>
+<trkpt lat="49.090076" lon="-122.912618"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.083865" lon="-122.912586"/>
+<trkpt lat="49.084070" lon="-122.912582"/>
+<trkpt lat="49.091194" lon="-122.912608"/>
+<trkpt lat="49.091706" lon="-122.912612"/>
+<trkpt lat="49.098236" lon="-122.912695"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.090066" lon="-122.934928"/>
+<trkpt lat="49.076929" lon="-122.934758"/>
+</trkseg>
+</trk>
+</gpx>

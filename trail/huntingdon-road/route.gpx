@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Huntingdon Road</name>
+<link href="https://bccycletourism.ca/trail/huntingdon-road/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.017019" lon="-122.327288">
+<name>Go Market</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.016110" lon="-122.289255">
+<name>Willems Berry Farm</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.020288" lon="-122.386901">
+<name>CF-101 Voodoo</name>
+<cmt>viewpoint</cmt>
+<desc>Activity / Experience</desc>
+<sym>Dot</sym>
+<type>overlook</type>
+</wpt>
+<trk><name>Huntingdon Road</name>
+<trkseg>
+<trkpt lat="49.017106" lon="-122.386507"/>
+<trkpt lat="49.017042" lon="-122.381834"/>
+<trkpt lat="49.016543" lon="-122.340410"/>
+<trkpt lat="49.016711" lon="-122.326381"/>
+<trkpt lat="49.016821" lon="-122.320155"/>
+<trkpt lat="49.016907" lon="-122.314066"/>
+<trkpt lat="49.016909" lon="-122.310011"/>
+<trkpt lat="49.016870" lon="-122.293686"/>
+</trkseg>
+</trk>
+</gpx>

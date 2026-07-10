@@ -20,6 +20,7 @@
 <meta property="og:description" content="C Market Coffee is a design-forward café chain with four Tri-Cities and Vancouver locations that roasts high-quality Arabica micro-lot beans in-house and…">
 <meta name="twitter:description" content="C Market Coffee is a design-forward café chain with four Tri-Cities and Vancouver locations that roasts high-quality Arabica micro-lot beans in-house and…">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":[]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"We Welcome Cyclists","item":"https://bccycletourism.ca/wwc/"},{"@type":"ListItem","position":2,"name":"C Market Coffee","item":"https://bccycletourism.ca/wwc/stop/7738b0c1c9/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FoodEstablishment", "name": "C Market Coffee", "description": "C Market Coffee is a design-forward café chain with four Tri-Cities and Vancouver locations that roasts high-quality Arabica micro-lot beans in-house and pairs them with freshly made food. The Coquitlam outpost is part of a brand that also runs coffee classes, pop-up markets, and room rentals, giving it a community hub character beyond a typical café stop. Note that the business is cashless, so card or app payment is required.", "address": "100 Schoolhouse Street, Coquitlam", "url": "https://www.cmarket.ca/", "priceRange": "$"}</script>
 <style>
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
@@ -55,6 +56,11 @@ body {
 .g-main a { color: #1E7D96; }
 .g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: 1200px; margin: 0 auto; padding: 64px 40px 72px; display: flex; align-items: flex-start; justify-content: space-between; }
 .g-footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .g-footer-brand img { width: 48px; height: 48px; }
@@ -83,12 +89,40 @@ body {
 }
 
 .listing-main { max-width: 800px; margin: 0 auto; padding: 28px 24px 64px; }
-.listing-breadcrumb { font-size: 13px; color: #9CA3AF; margin-bottom: 24px; }
-.listing-breadcrumb a { color: #1E7D96; text-decoration: none; }
+.listing-main.ls-two-col { max-width: 1160px; }
+.ls-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+.ls-col-right { position: sticky; top: 20px; }
+.ls-col-right .ls-band { margin: 0; grid-template-columns: 1fr; gap: 0; }
+.ls-col-right .ls-card { border-radius: 0; }
+.ls-col-right .ls-card:first-child { border-radius: 12px 12px 0 0; border-bottom: none; }
+.ls-col-right .ls-card:last-child { border-radius: 0 0 12px 12px; border-top: none; }
+.ls-col-right .ls-bpnote { margin: 14px 0 0; }
+@media (max-width: 860px) { .ls-layout { grid-template-columns: 1fr; } .ls-col-right { position: static; } }
 .listing-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: -0.03em; color: #1F514C; margin-bottom: 8px; }
-.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.badge-accredited { display: inline-flex; align-items: center; gap: 4px; background: #1E7D96; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-accredited .seal { color: #F0C948; }
+.badge-welcoming { display: inline-flex; align-items: center; background: #FEF3C7; color: #92400E; border: 1px solid #F5D98B; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-info { display: inline-flex; align-items: center; background: #F3F4F6; color: #6B7280; border: 1px solid #E5E7EB; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-unwelcome { display: inline-flex; align-items: center; background: #DC2626; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.ls-meta-sep { width: 1px; height: 14px; background: #E5E7EB; }
+.ls-meta-type { font-weight: 600; color: #6B7280; }
+.ls-meta-city { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-meta-city:hover { text-decoration: underline; }
+.ls-meta-price { display: inline-flex; align-items: center; background: #FFF6E5; border: 1px solid #F0E6C5; border-radius: 999px; padding: 3px 11px; font-weight: 700; color: #2D2D2D; letter-spacing: 0.4px; font-size: 12.5px; }
 .listing-desc { font-size: 15px; line-height: 1.65; color: #2D2D2D; margin-bottom: 24px; }
-.listing-section { margin-bottom: 20px; border-top: 1px solid #E5E7EB; padding-top: 16px; }
+.listing-web-top { font-size: 14px; margin: -12px 0 24px; display: flex; gap: 8px; align-items: baseline; }
+.listing-web-top .ico { flex-shrink: 0; }
+.listing-web-top a { color: #1E7D96; text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
+.listing-web-top a:hover { text-decoration: underline; }
+.listing-bike-info { margin-top: -16px; }
+.listing-bike-info a { font-weight: 600; }
+.listing-pull { border-left: 4px solid #C9A83E; padding: 6px 0 6px 20px; margin: 26px 0 30px; }
+.listing-pull .q { font-family: "Archivo", sans-serif; font-size: 21px; font-weight: 400; letter-spacing: -0.01em; color: #1F514C; line-height: 1.45; }
+.listing-pull .who { font-size: 13px; color: #9CA3AF; margin-top: 6px; }
+.listing-pull .who a { color: #9CA3AF; text-decoration: none; }
+.listing-pull .who a:hover { color: #1E7D96; text-decoration: underline; }
+.listing-section { margin-bottom: 28px; }
 .listing-section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 10px; }
 .listing-detail-row { font-size: 14px; color: #2D2D2D; margin-bottom: 6px; }
 .listing-detail-row a { color: #1E7D96; }
@@ -107,15 +141,96 @@ body {
 .listing-indig-attr a { color: #1E7D96; text-decoration: none; }
 .listing-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
 .listing-verify a { color: #1E7D96; }
+.listing-section-sub { font-size: 13px; color: #6B7280; margin: -4px 0 12px; line-height: 1.5; }
+.listing-owner-cta { margin-top: 14px; background: #F5FAFB; border: 1px solid #BFDDE7; border-radius: 8px; padding: 12px 16px; font-size: 13.5px; color: #14586B; line-height: 1.6; }
+.listing-owner-cta strong { color: #14586B; }
+.listing-owner-cta a { color: #1E7D96; font-weight: 600; }
+.ls-notable-hero { border-top: 3px solid #1F514C; border-bottom: 3px solid #1F514C; padding: 24px 2px 26px; margin: 18px 0 30px; }
+.ls-notable-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1E7D96; margin-bottom: 8px; }
+.ls-notable-eyebrow .star { color: #1F514C; }
+.ls-notable-line { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; color: #1F514C; line-height: 1.4; }
+@media (max-width: 700px) { .ls-notable-line { font-size: 20px; } }
+.ls-ribbon { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.ls-rib { display: inline-flex; align-items: center; gap: 7px; background: #EDF6F8; border: 1px solid #BEDDE6; border-radius: 10px; padding: 8px 13px; font-size: 13px; font-weight: 600; color: #1E7D96; }
+.ls-sec-title { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; margin-bottom: 4px; }
+.ls-vrow { padding: 10px 0; border-bottom: 1px dashed #EDE9DA; font-size: 14px; }
+.ls-vrow:last-of-type { border-bottom: none; }
+.ls-vrow-main { display: flex; gap: 12px; align-items: baseline; }
+.ls-vrow .tick { color: #2E8A36; font-weight: 700; flex-shrink: 0; width: 16px; }
+.ls-vrow .k { font-weight: 700; color: #1F514C; }
+.ls-vrow .d { display: block; color: #57534E; line-height: 1.55; margin: 4px 0 0 28px; font-size: 13.5px; }
+.ls-pills-label { font-size: 12px; color: #9CA3AF; margin-top: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; }
+.ls-bpnote { display: flex; gap: 12px; background: #EAF3EC; border-radius: 10px; padding: 13px 16px; margin-top: 14px; font-size: 14px; color: #1C5240; line-height: 1.55; }
+.ls-bpnote .ico { font-size: 18px; line-height: 1.3; flex-shrink: 0; }
+.ls-bpnote details { margin-top: 6px; }
+.ls-bpnote summary { cursor: pointer; color: #1C5240; font-weight: 600; }
+.ls-bpnote ul { list-style: none; margin: 8px 0 0; padding: 0; }
+.ls-bpnote li { font-size: 13px; padding: 2px 0; color: #1C5240; }
 .listing-routes { display: flex; flex-wrap: wrap; gap: 8px; }
 .listing-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
 .listing-route-tag:hover { background: #DBEAFE; }
+.listing-trail-list { list-style: none; padding: 0; margin: 0; }
+.listing-trail-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-trail-name { color: #047857; text-decoration: none; }
+a.listing-trail-name:hover { text-decoration: underline; }
+.listing-trail-item.dest .listing-trail-name { font-weight: 700; }
+.listing-trail-dist { color: #9CA3AF; font-size: 13px; }
+.listing-near-group { margin-bottom: 14px; }
+.listing-near-grouptitle { font-size: 11px; font-weight: 700; color: #78716C; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.listing-near-list { list-style: none; padding: 0; margin: 0; }
+.listing-near-item { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-near-name { color: #1E7D96; text-decoration: none; }
+.listing-near-name:hover { text-decoration: underline; }
+.listing-near-subcat { color: #9CA3AF; font-size: 13px; }
+.listing-near-badge { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 20px; }
+.listing-near-dist { color: #9CA3AF; font-size: 13px; }
+.listing-bp-list { list-style: none; padding: 0; margin: 0; }
+.listing-bp-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-bp-dist { color: #9CA3AF; font-size: 13px; }
+/* Map + "Find them" band (Mockup C reflow Step 7) */
+.ls-band { display: grid; grid-template-columns: 1fr 300px; gap: 14px; margin: 24px 0 30px; align-items: start; }
+.ls-band.ls-band-solo { grid-template-columns: 1fr; }
+.ls-card { background: #fff; border: 1px solid #E7E2D0; border-radius: 12px; overflow: hidden; }
+/* Map keeps the shared .wwc-map fixed height (no flex/resize hacks — same as every
+   other embedded map); only strip its own border/radius since the card supplies them. */
+.ls-card-map .wwc-map { max-width: none; border: 0; border-radius: 0; }
+.ls-card-map .wwc-map-ctrls { margin: 0; padding: 10px 14px; }
+.ls-card-pad { padding: 14px 16px; }
+.ls-card-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1E7D96; margin-bottom: 9px; }
+.ls-contact-row { font-size: 13.5px; color: #2D2D2D; margin-bottom: 7px; display: flex; gap: 8px; }
+.ls-contact-row .ico { width: 18px; flex-shrink: 0; text-align: center; }
+.ls-contact-row span { min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a { color: #1E7D96; text-decoration: none; min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a:hover { text-decoration: underline; }
+.ls-route-tag { display: inline-flex; align-items: center; gap: 6px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; font-weight: 600; margin: 0 4px 4px 0; }
+.ls-route-tag:hover { background: #DBEAFE; }
+.ls-trail-line { font-size: 13px; padding: 2px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ls-trail-line a { color: #141414; text-decoration: none; font-weight: 400; }
+.ls-trail-line a:hover { text-decoration: underline; }
+.ls-trail-line .dist { color: #9CA3AF; font-size: 12px; flex-shrink: 0; }
+/* "Around you, by need" grid (Mockup C reflow Step 6) */
+.ls-needs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.ls-need { background: #FCFBF6; border: 1px solid #E7E2D0; border-radius: 12px; padding: 14px 16px; }
+.ls-need-title { font-size: 13px; font-weight: 700; color: #1F514C; margin-bottom: 9px; }
+.ls-need ul { list-style: none; padding: 0; margin: 0; }
+.ls-need li { display: flex; align-items: baseline; gap: 8px; font-size: 13.5px; padding: 3px 0; }
+.ls-need .nm { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-need .nm:hover { text-decoration: underline; }
+.ls-need .dist { color: #9CA3AF; font-size: 12px; margin-left: auto; white-space: nowrap; }
+.ls-need .wbadge { font-size: 10px; font-weight: 700; background: #EAF3EC; color: #1C5240; border-radius: 20px; padding: 1px 6px; }
+.ls-need .wbadge.no { background: #FDECEC; color: #B91C1C; }
+@media (max-width: 700px) { .ls-band { grid-template-columns: 1fr; } .ls-needs { grid-template-columns: 1fr; } }
 .listing-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .listing-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .listing-attribution a { color: #9CA3AF; }
 .listing-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
 .listing-suggest a { color: #1E7D96; }
+.listing-json { text-align: right; margin-top: 14px; }
+.listing-json a { font-size: 11px; color: #C9CDD3; text-decoration: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .03em; }
+.listing-json a:hover { color: #9CA3AF; text-decoration: underline; }
 .listing-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
+.badge-notable { display: inline-flex; align-items: center; background: #1F514C; color: #fff; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; letter-spacing: 0.2px; }
+.listing-notable { font-size: 14.5px; color: #1F514C; font-style: italic; margin: -8px 0 18px; line-height: 1.5; }
 
 </style>
 </head>
@@ -142,20 +257,52 @@ body {
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
 </script>
-<main class="listing-main">
-<nav class="listing-breadcrumb"><a href="/wwc/" id="listing-back" onclick="history.back();return false;">← <span id="listing-back-label">All listings</span></a> / Food &amp; Drink</nav>
-<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('listing-back-label').textContent=f.label;}}catch(e){}})();</script>
+<main class="listing-main ls-two-col">
+<div class="ls-layout"><div class="ls-col-left"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/wwc/">We Welcome Cyclists</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">C Market Coffee</span></nav>
 <h1 class="listing-h1">C Market Coffee</h1>
-<div class="listing-meta"><span class="badge badge-info">Info</span>  ·  <span style="font-weight:600;"><img src="/img/bc-flag.png" alt="" width="20" height="14" style="vertical-align:-2px;margin-right:5px;border-radius:2px;">Buy BC (independent)</span>  ·  Café / Coffee  ·  Coquitlam  ·  $ · Cheap eats</div>
+<div class="listing-meta"><span class="badge badge-info">Info</span><span class="ls-meta-sep"></span><span class="ls-meta-type"><img src="/img/bc-flag.png" alt="" width="20" height="14" style="vertical-align:-2px;margin-right:5px;border-radius:2px;">Buy BC (independent) &middot; Café / Coffee</span><a href="/wwc/community/coquitlam/" class="ls-meta-city">&#128205; Coquitlam</a><span class="ls-meta-price">$ · Cheap eats</span></div>
+
+<div class="ls-ribbon"><span class="ls-rib">Water bottle refill</span><span class="ls-rib">Washrooms</span><span class="ls-rib">Takeout</span></div>
 <p class="listing-desc">C Market Coffee is a design-forward café chain with four Tri-Cities and Vancouver locations that roasts high-quality Arabica micro-lot beans in-house and pairs them with freshly made food. The Coquitlam outpost is part of a brand that also runs coffee classes, pop-up markets, and room rentals, giving it a community hub character beyond a typical café stop. Note that the business is cashless, so card or app payment is required.</p>
-<div class="listing-verify">Amenities assumed from location and public data. <a href="/suggest#edit=C Market Coffee">Confirm or update this listing →</a></div>
-<div class="listing-section"><div class="listing-section-title">Contact</div><div class="listing-detail-row"><strong>Address:</strong> 100 Schoolhouse Street, Coquitlam</div><div class="listing-detail-row"><strong>Website:</strong> <a href="https://www.cmarket.ca/" target="_blank" rel="noopener">https://www.cmarket.ca/</a></div></div>
+<p class="listing-web-top"><span class="ico">🌐</span><a href="https://www.cmarket.ca/" target="_blank" rel="noopener">Main website &rsaquo;</a></p>
 
-<div class="listing-section"><div class="listing-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>Bike parking or bike visibility</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Water bottle refill</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Washrooms</span></div></div>
-<div class="listing-section"><div class="listing-section-title">Amenities</div><div class="listing-pills"><span class="listing-pill-yes">Takeout</span><span class="listing-pill-no">Packed lunches</span><span class="listing-pill-no">Water without purchase</span><span class="listing-pill-no">Vegetarian / vegan / GF</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-no">Public rack nearby</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span><span class="listing-pill-no">Wi-Fi</span></div></div>
 
-<div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: AI sources with manual review</div></div>
+<div class="listing-section"><div class="ls-sec-title">What's here for you</div><div class="listing-section-sub">Gathered from publicly available data and OpenStreetMap. Not confirmed by the owner yet.</div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Water bottle refill</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Washrooms</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Takeout</span></div></div><div class="ls-pills-label">Not confirmed yet</div><div class="listing-pills"><span class="listing-pill-no">Bike parking or bike visibility</span><span class="listing-pill-no">Packed lunches</span><span class="listing-pill-no">Water without purchase</span><span class="listing-pill-no">Vegetarian / vegan / GF</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-no">Public rack nearby</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span><span class="listing-pill-no">Wi-Fi</span></div><div class="listing-owner-cta"><strong>Run this place?</strong> <a href="/apply">Confirm your details</a> and we'll mark them verified. Spotted an error? <a href="/suggest#edit=C Market Coffee">Suggest an edit</a>.</div></div>
+
+
+<div class="listing-section"><div class="ls-sec-title">Around here</div><div class="listing-section-sub">The closest options for the things touring cyclists actually look for.</div><div class="ls-needs"><div class="ls-need"><div class="ls-need-title">🔧 Fix &amp; supply</div><ul><li><a class="nm" href="/wwc/stop/78c3274a37/">Berezan Liquor Store</a><span class="dist">0.1 km</span></li><li><a class="nm" href="/wwc/stop/b9090a1c4e/">Winners</a><span class="dist">0.2 km</span></li><li><a class="nm" href="/wwc/stop/175a690873/">Cap&#x27;s Bicycle Shop</a><span class="dist">2.9 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🍽 Eat nearby</div><ul><li><a class="nm" href="/wwc/stop/acc34c7e0b/">Mei Le Bakery &amp; Restaurant Inc.</a><span class="dist">right here</span></li><li><a class="nm" href="/wwc/stop/d26460eff3/">I Am Pho</a><span class="dist">right here</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🛏 Sleep nearby</div><ul><li><a class="nm" href="/wwc/stop/80f25727a8/">Sapperton Dyke</a><span class="dist">1.5 km</span></li><li><a class="nm" href="/wwc/stop/543e257fe3/">Ramada by Wyndham Coquitlam</a><span class="dist">2.5 km</span></li><li><a class="nm" href="/wwc/stop/7682eee1a8/">Executive Plaza Hotel</a><span class="dist">3.2 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🎭 While you're here</div><ul><li><a class="nm" href="/wwc/stop/3aa938a8bf/">Climb Base5</a><span class="dist">0.7 km</span></li><li><a class="nm" href="/wwc/stop/a129e317e6/">Place des Arts</a><span class="dist">0.8 km</span></li><li><a class="nm" href="/wwc/stop/bd77f539d9/">Mackin House Museum</a><span class="dist">0.8 km</span></li><li><a class="nm" href="/wwc/stop/5e74987e7b/">Maillardville Community Centre</a><span class="dist">0.9 km</span></li></ul></div></div></div>
+<div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: Public data, AI sources with manual review</div></div>
 <div class="listing-suggest"><a href="/suggest#edit=C Market Coffee">Suggest an edit to this listing</a></div>
+<div class="listing-json"><a href="/wwc/stop/7738b0c1c9.json" rel="nofollow">JSON</a></div></div><aside class="ls-col-right"><div class="ls-band"><div class="ls-card ls-card-map"><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div id="stopmap" class="wwc-map compact"></div><div class="wwc-map-ctrls"><span class="stopmap-lgd" style="color:#14807A"><span class="stopmap-lgd-sw" style="background:#14807A"></span> Bike network</span><span class="stopmap-lgd"><span class="stopmap-lgd-sw"></span> Nearby bike routes</span></div><script src="/map/lib/maplibre-gl.js"></script>
+<script src="/map/lib/pmtiles.js"></script>
+<script>
+(function(){
+  var protocol=new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile);
+  var map=new maplibregl.Map(Object.assign(
+    {container:"stopmap", style:location.origin+"/map/style/style.json", attributionControl:false},
+    {"center": [-122.8530342, 49.2338358], "zoom": 13}));
+  map.addControl(new maplibregl.NavigationControl(), "top-right");
+  var _attrib=new maplibregl.AttributionControl({compact:true,
+    customAttribution:'\u00a9 <a href="https://www.openmaptiles.org/">OpenMapTiles</a> \u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  map.addControl(_attrib);
+  // Compact mode initializes expanded; collapse it to the small "i" so the map
+  // opens clean. Clicking the button still expands the credit.
+  if(_attrib._container){_attrib._container.classList.remove("maplibregl-compact-show");}
+  map.on("load", function(){
+    map.addSource("stoptrails",{type:"geojson",data:{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "MultiLineString", "coordinates": [[[-122.89731730000001, 49.24850779999998], [-122.89768330000001, 49.24877199999998]], [[-122.8971639, 49.24842079999999], [-122.89731730000001, 49.24850779999998]], [[-122.89657839999998, 49.24811369999996], [-122.8971639, 49.24842079999999]], [[-122.8931595, 49.246229599999985], [-122.89657839999998, 49.24811369999996]], [[-122.8526429, 49.23270749999999], [-122.8530914, 49.23280549999995]], [[-122.85216459999998, 49.23261569999998], [-122.8526429, 49.23270749999999]], [[-122.85040630000002, 49.232250700000066], [-122.85216459999998, 49.23261569999998]], [[-122.84969830000001, 49.232098100000044], [-122.85040630000002, 49.232250700000066]], [[-122.84906040000001, 49.2319541], [-122.84969830000001, 49.232098100000044]], [[-122.8438078, 49.230861000000004], [-122.84906040000001, 49.2319541]], [[-122.84255779999998, 49.230735400000036], [-122.8438078, 49.230861000000004]], [[-122.84195050000001, 49.230637000000016], [-122.84255779999998, 49.230735400000036]], [[-122.84108130000001, 49.2304224], [-122.84195050000001, 49.230637000000016]], [[-122.83870260000002, 49.23020270000001], [-122.84108130000001, 49.2304224]], [[-122.8358189, 49.23000829999997], [-122.83870260000002, 49.23020270000001]], [[-122.834694, 49.22993319999998], [-122.8358189, 49.23000829999997]], [[-122.83282080000001, 49.229825600000034], [-122.834694, 49.22993319999998]], [[-122.832372, 49.22979609999995], [-122.83282080000001, 49.229825600000034]], [[-122.8247926, 49.22847950000004], [-122.8298399, 49.22970370000004], [-122.832372, 49.22979609999995]], [[-122.8240967, 49.22839559999998], [-122.8247926, 49.22847950000004]], [[-122.8195178, 49.22828589999995], [-122.8204579, 49.2284892], [-122.8240967, 49.22839559999998]], [[-122.819684, 49.2279586], [-122.8195178, 49.22828589999995]], [[-122.87742380000002, 49.2378133], [-122.87724719999999, 49.237754499999944]], [[-122.8778422, 49.23795340000005], [-122.87742380000002, 49.2378133]], [[-122.8793088, 49.238545699999996], [-122.8778422, 49.23795340000005]], [[-122.87992519999999, 49.23885869999997], [-122.8793088, 49.238545699999996]], [[-122.88094949999999, 49.23941419999999], [-122.87992519999999, 49.23885869999997]], [[-122.8814264, 49.2396725], [-122.88094949999999, 49.23941419999999]], [[-122.8824209, 49.240201000000006], [-122.8814264, 49.2396725]], [[-122.8828355, 49.240435399999996], [-122.8824209, 49.240201000000006]], [[-122.8843345, 49.24126670000009], [-122.8828355, 49.240435399999996]], [[-122.884636, 49.24144229999994], [-122.8843345, 49.24126670000009]], [[-122.88576270000002, 49.2420667], [-122.884636, 49.24144229999994]], [[-122.8859538, 49.24216800000003], [-122.88576270000002, 49.2420667]], [[-122.88637230000002, 49.242392599999945], [-122.8859538, 49.24216800000003]], [[-122.8915254, 49.24520079999998], [-122.88637230000002, 49.242392599999945]], [[-122.89211480000002, 49.24551610000001], [-122.8915254, 49.24520079999998]], [[-122.89261680000001, 49.24576949999999], [-122.89211480000002, 49.24551610000001]], [[-122.892788, 49.24586659999994], [-122.89261680000001, 49.24576949999999]], [[-122.89309770000001, 49.246024100000014], [-122.892788, 49.24586659999994]], [[-122.8935168, 49.24625759999993], [-122.89309770000001, 49.246024100000014]], [[-122.8939182, 49.24648080000007], [-122.8935168, 49.24625759999993]], [[-122.8942863, 49.24668769999998], [-122.8939182, 49.24648080000007]], [[-122.8972349, 49.248306200000016], [-122.8942863, 49.24668769999998]], [[-122.8974359, 49.24841269999998], [-122.8972349, 49.248306200000016]], [[-122.89278600000002, 49.24601770000002], [-122.8931595, 49.246229599999985]], [[-122.8926103, 49.24592649999998], [-122.89278600000002, 49.24601770000002]], [[-122.8918327, 49.2454962], [-122.8926103, 49.24592649999998]], [[-122.8913952, 49.2452657], [-122.8918327, 49.2454962]], [[-122.89054939999998, 49.244816900000004], [-122.8913952, 49.2452657]], [[-122.890355, 49.24471419999995], [-122.89054939999998, 49.244816900000004]], [[-122.8885786, 49.243730700000036], [-122.890355, 49.24471419999995]], [[-122.888118, 49.24347470000003], [-122.8885786, 49.243730700000036]], [[-122.88800120000002, 49.243408699999975], [-122.888118, 49.24347470000003]], [[-122.8875697, 49.24317349999999], [-122.88800120000002, 49.243408699999975]], [[-122.88683780000001, 49.24277590000002], [-122.8875697, 49.24317349999999]], [[-122.88591900000002, 49.24228620000003], [-122.88683780000001, 49.24277590000002]], [[-122.8856542, 49.24214940000004], [-122.88591900000002, 49.24228620000003]], [[-122.8853784, 49.24200189999996], [-122.8856542, 49.24214940000004]], [[-122.88381029999998, 49.24112249999997], [-122.8853784, 49.24200189999996]], [[-122.8833036, 49.24085850000003], [-122.88381029999998, 49.24112249999997]], [[-122.882426, 49.240369100000045], [-122.8833036, 49.24085850000003]], [[-122.88123839999999, 49.23971589999998], [-122.882426, 49.240369100000045]], [[-122.8809158, 49.23953329999994], [-122.88123839999999, 49.23971589999998]], [[-122.8803702, 49.23924259999996], [-122.8809158, 49.23953329999994]], [[-122.87943880000002, 49.23874450000001], [-122.8803702, 49.23924259999996]], [[-122.87865030000002, 49.23838360000004], [-122.87943880000002, 49.23874450000001]], [[-122.8781326, 49.2381781], [-122.87865030000002, 49.23838360000004]], [[-122.87750460000001, 49.23795980000004], [-122.8781326, 49.2381781]], [[-122.87583580000002, 49.23752149999998], [-122.87750460000001, 49.23795980000004]], [[-122.8736632, 49.23708679999999], [-122.87583580000002, 49.23752149999998]], [[-122.8730943, 49.236970000000014], [-122.8736632, 49.23708679999999]], [[-122.871867, 49.236737199999936], [-122.8730943, 49.236970000000014]], [[-122.87169210000002, 49.23669989999991], [-122.871867, 49.236737199999936]], [[-122.87200010000001, 49.23660780000002], [-122.8714536, 49.23657120000001]], [[-122.8721694, 49.236650200000085], [-122.87200010000001, 49.23660780000002]], [[-122.87309999999998, 49.236857600000015], [-122.8721694, 49.236650200000085]], [[-122.8751951, 49.23728860000002], [-122.87309999999998, 49.236857600000015]], [[-122.8762593, 49.23749920000003], [-122.8751951, 49.23728860000002]], [[-122.87724719999999, 49.237754499999944], [-122.8762593, 49.23749920000003]], [[-122.8710523, 49.23648920000001], [-122.8714536, 49.23657120000001]], [[-122.8704778, 49.23637190000006], [-122.8710523, 49.23648920000001]], [[-122.8698646, 49.23624319999999], [-122.8704778, 49.23637190000006]], [[-122.8697211, 49.23621310000003], [-122.8698646, 49.23624319999999]], [[-122.86927850000001, 49.23612380000002], [-122.8697211, 49.23621310000003]], [[-122.8690497, 49.23607090000003], [-122.86927850000001, 49.23612380000002]], [[-122.8686768, 49.23599160000003], [-122.8690497, 49.23607090000003]], [[-122.8683659, 49.23597069999996], [-122.8686768, 49.23599160000003]], [[-122.86822309999998, 49.23594469999998], [-122.8683659, 49.23597069999996]], [[-122.8670336, 49.23570150000002], [-122.86822309999998, 49.23594469999998]], [[-122.8637341, 49.23497429999996], [-122.8670336, 49.23570150000002]], [[-122.8632955, 49.23488569999997], [-122.8637341, 49.23497429999996]], [[-122.86256850000001, 49.234738800000066], [-122.8632955, 49.23488569999997]], [[-122.86227590000001, 49.23467969999998], [-122.86256850000001, 49.234738800000066]], [[-122.86164319999999, 49.23454650000005], [-122.86227590000001, 49.23467969999998]], [[-122.8611096, 49.23443820000002], [-122.86164319999999, 49.23454650000005]], [[-122.8530914, 49.23280549999995], [-122.85340269999999, 49.23286420000002]], [[-122.85340269999999, 49.23286420000002], [-122.8541824, 49.233017899999986]], [[-122.8541824, 49.233017899999986], [-122.85980610000001, 49.234169399999985]], [[-122.8686768, 49.23599160000003], [-122.86840810000001, 49.2358502]], [[-122.86840810000001, 49.2358502], [-122.86828810000002, 49.23582500000006]], [[-122.86828810000002, 49.23582500000006], [-122.8680356, 49.235771299999996]], [[-122.8680356, 49.235771299999996], [-122.8673732, 49.23563030000007]], [[-122.8673732, 49.23563030000007], [-122.8660227, 49.23533359999997]], [[-122.8660227, 49.23533359999997], [-122.86514840000001, 49.235138700000014]], [[-122.86514840000001, 49.235138700000014], [-122.8647287, 49.23504600000003]], [[-122.85980610000001, 49.234169399999985], [-122.8611096, 49.23443820000002]], [[-122.86340649999998, 49.2347657], [-122.86225999999999, 49.23452319999999]], [[-122.86225999999999, 49.23452319999999], [-122.86164860000001, 49.234396699999984]], [[-122.86164860000001, 49.234396699999984], [-122.8611789, 49.2342913]], [[-122.8611789, 49.2342913], [-122.85440419999999, 49.23289889999998]], [[-122.8647287, 49.23504600000003], [-122.86340649999998, 49.2347657]], [[-122.85440419999999, 49.23289889999998], [-122.85329709999999, 49.23265909999997]], [[-122.85329709999999, 49.23265909999997], [-122.85272100000002, 49.232547700000055]], [[-122.85272100000002, 49.232547700000055], [-122.85234480000001, 49.23246360000001]], [[-122.85234480000001, 49.23246360000001], [-122.8493534, 49.2318373]], [[-122.8493534, 49.2318373], [-122.848796, 49.23167380000004]], [[-122.848796, 49.23167380000004], [-122.84854680000001, 49.23153650000003]], [[-122.84854680000001, 49.23153650000003], [-122.8469721, 49.230647699999984]], [[-122.8469721, 49.230647699999984], [-122.8464144, 49.23040380000001]], [[-122.8464144, 49.23040380000001], [-122.84577700000001, 49.23018579999997]], [[-122.84577700000001, 49.23018579999997], [-122.84209270000001, 49.22959530000001]], [[-122.84209270000001, 49.22959530000001], [-122.84017540000002, 49.22939410000006]], [[-122.84017540000002, 49.22939410000006], [-122.8390937, 49.2293094]], [[-122.8390937, 49.2293094], [-122.8367684, 49.22928649999998], [-122.8344268, 49.22982280000002]], [[-122.8344268, 49.22982280000002], [-122.83223120000001, 49.23091669999998]], [[-122.83223120000001, 49.23091669999998], [-122.82435370000002, 49.2347357]], [[-122.82435370000002, 49.2347357], [-122.8238313, 49.23498699999997]], [[-122.8238313, 49.23498699999997], [-122.8221922, 49.2357047], [-122.82189929999998, 49.23607989999998]], [[-122.82189929999998, 49.23607989999998], [-122.82048430000002, 49.236773600000014]], [[-122.82048430000002, 49.236773600000014], [-122.8179447, 49.23802239999998]], [[-122.81985130000001, 49.237400800000025], [-122.8257572, 49.23446290000002]], [[-122.8257572, 49.23446290000002], [-122.83013289999998, 49.23293619999998], [-122.8317669, 49.231825400000005]], [[-122.8317669, 49.231825400000005], [-122.83430880000002, 49.23031389999998]], [[-122.83430880000002, 49.23031389999998], [-122.8352127, 49.22996709999999]], [[-122.8714536, 49.23657120000001], [-122.87169210000002, 49.23669989999991]], [[-122.89768330000001, 49.24877199999998], [-122.89897787507425, 49.24942180038797]], [[-122.89897787507425, 49.24916812015996], [-122.89790170000002, 49.24859269999998]], [[-122.89790170000002, 49.24859269999998], [-122.8974359, 49.24841269999998]]]}, "properties": {"name": "Lougheed Highway Cycle Route"}}]}});
+    map.addLayer({id:"stoptrails-casing",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#ffffff","line-width":6,"line-opacity":0.9}});
+    map.addLayer({id:"stoptrails-line",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#5f259f","line-width":3}});
+    var mk=new maplibregl.Marker({color:"#1F514C"}).setLngLat([-122.8530342, 49.2338358]);
+    var pop=new maplibregl.Popup({closeButton:true,closeOnClick:false,focusAfterOpen:false}).setHTML("<b>C Market Coffee<\/b>");
+    mk.setPopup(pop).addTo(map);
+  });
+})();
+</script></div><div class="ls-card"><div class="ls-card-pad"><div class="ls-card-title">Location</div><div class="ls-contact-row"><span class="ico">📍</span><span>100 Schoolhouse Street, Coquitlam</span></div><div class="ls-contact-row"><span class="ico">🌐</span><a href="https://www.cmarket.ca/" target="_blank" rel="noopener">https://www.cmarket.ca/</a></div><div class="ls-card-title" style="margin-top:14px;color:#5f259f;">Nearby bike routes</div><div class="ls-trail-line"><a href="/trail/lougheed-highway-cycle-route/" style="">Lougheed Highway Cycle Route</a> <span class="dist">110 m</span></div></div></div></div></aside></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">
@@ -167,7 +314,6 @@ body {
       <a href="/">Home</a>
       <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
-      <a href="/routes">Routes</a>
     </div>
     <div class="g-footer-col">
       <a href="/about">About</a>

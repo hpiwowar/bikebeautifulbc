@@ -20,6 +20,7 @@
 <meta property="og:description" content="Moet&amp;#x27;s Convenience Stores is a 24/7 corner shop on Dundas Street in Vancouver, making it accessible to cyclists at any hour of the day or night. As a…">
 <meta name="twitter:description" content="Moet&amp;#x27;s Convenience Stores is a 24/7 corner shop on Dundas Street in Vancouver, making it accessible to cyclists at any hour of the day or night. As a…">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":[]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"We Welcome Cyclists","item":"https://bccycletourism.ca/wwc/"},{"@type":"ListItem","position":2,"name":"Moet's Convenience Stores","item":"https://bccycletourism.ca/wwc/stop/b285437d97/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ConvenienceStore", "name": "Moet's Convenience Stores", "description": "Moet's Convenience Stores is a 24/7 corner shop on Dundas Street in Vancouver, making it accessible to cyclists at any hour of the day or night. As a neighbourhood convenience store, it likely stocks the kind of quick-grab supplies — snacks, drinks, and sundries — that touring cyclists often need on the road. Its round-the-clock availability distinguishes it from most other grocery options in the area.", "address": "2085 Dundas Street, Vancouver", "url": "https://www.instagram.com/moetsconvenience/"}</script>
 <style>
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
@@ -55,6 +56,11 @@ body {
 .g-main a { color: #1E7D96; }
 .g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: 1200px; margin: 0 auto; padding: 64px 40px 72px; display: flex; align-items: flex-start; justify-content: space-between; }
 .g-footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .g-footer-brand img { width: 48px; height: 48px; }
@@ -83,12 +89,40 @@ body {
 }
 
 .listing-main { max-width: 800px; margin: 0 auto; padding: 28px 24px 64px; }
-.listing-breadcrumb { font-size: 13px; color: #9CA3AF; margin-bottom: 24px; }
-.listing-breadcrumb a { color: #1E7D96; text-decoration: none; }
+.listing-main.ls-two-col { max-width: 1160px; }
+.ls-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+.ls-col-right { position: sticky; top: 20px; }
+.ls-col-right .ls-band { margin: 0; grid-template-columns: 1fr; gap: 0; }
+.ls-col-right .ls-card { border-radius: 0; }
+.ls-col-right .ls-card:first-child { border-radius: 12px 12px 0 0; border-bottom: none; }
+.ls-col-right .ls-card:last-child { border-radius: 0 0 12px 12px; border-top: none; }
+.ls-col-right .ls-bpnote { margin: 14px 0 0; }
+@media (max-width: 860px) { .ls-layout { grid-template-columns: 1fr; } .ls-col-right { position: static; } }
 .listing-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: -0.03em; color: #1F514C; margin-bottom: 8px; }
-.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.badge-accredited { display: inline-flex; align-items: center; gap: 4px; background: #1E7D96; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-accredited .seal { color: #F0C948; }
+.badge-welcoming { display: inline-flex; align-items: center; background: #FEF3C7; color: #92400E; border: 1px solid #F5D98B; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-info { display: inline-flex; align-items: center; background: #F3F4F6; color: #6B7280; border: 1px solid #E5E7EB; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-unwelcome { display: inline-flex; align-items: center; background: #DC2626; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.ls-meta-sep { width: 1px; height: 14px; background: #E5E7EB; }
+.ls-meta-type { font-weight: 600; color: #6B7280; }
+.ls-meta-city { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-meta-city:hover { text-decoration: underline; }
+.ls-meta-price { display: inline-flex; align-items: center; background: #FFF6E5; border: 1px solid #F0E6C5; border-radius: 999px; padding: 3px 11px; font-weight: 700; color: #2D2D2D; letter-spacing: 0.4px; font-size: 12.5px; }
 .listing-desc { font-size: 15px; line-height: 1.65; color: #2D2D2D; margin-bottom: 24px; }
-.listing-section { margin-bottom: 20px; border-top: 1px solid #E5E7EB; padding-top: 16px; }
+.listing-web-top { font-size: 14px; margin: -12px 0 24px; display: flex; gap: 8px; align-items: baseline; }
+.listing-web-top .ico { flex-shrink: 0; }
+.listing-web-top a { color: #1E7D96; text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
+.listing-web-top a:hover { text-decoration: underline; }
+.listing-bike-info { margin-top: -16px; }
+.listing-bike-info a { font-weight: 600; }
+.listing-pull { border-left: 4px solid #C9A83E; padding: 6px 0 6px 20px; margin: 26px 0 30px; }
+.listing-pull .q { font-family: "Archivo", sans-serif; font-size: 21px; font-weight: 400; letter-spacing: -0.01em; color: #1F514C; line-height: 1.45; }
+.listing-pull .who { font-size: 13px; color: #9CA3AF; margin-top: 6px; }
+.listing-pull .who a { color: #9CA3AF; text-decoration: none; }
+.listing-pull .who a:hover { color: #1E7D96; text-decoration: underline; }
+.listing-section { margin-bottom: 28px; }
 .listing-section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 10px; }
 .listing-detail-row { font-size: 14px; color: #2D2D2D; margin-bottom: 6px; }
 .listing-detail-row a { color: #1E7D96; }
@@ -107,15 +141,96 @@ body {
 .listing-indig-attr a { color: #1E7D96; text-decoration: none; }
 .listing-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
 .listing-verify a { color: #1E7D96; }
+.listing-section-sub { font-size: 13px; color: #6B7280; margin: -4px 0 12px; line-height: 1.5; }
+.listing-owner-cta { margin-top: 14px; background: #F5FAFB; border: 1px solid #BFDDE7; border-radius: 8px; padding: 12px 16px; font-size: 13.5px; color: #14586B; line-height: 1.6; }
+.listing-owner-cta strong { color: #14586B; }
+.listing-owner-cta a { color: #1E7D96; font-weight: 600; }
+.ls-notable-hero { border-top: 3px solid #1F514C; border-bottom: 3px solid #1F514C; padding: 24px 2px 26px; margin: 18px 0 30px; }
+.ls-notable-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1E7D96; margin-bottom: 8px; }
+.ls-notable-eyebrow .star { color: #1F514C; }
+.ls-notable-line { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; color: #1F514C; line-height: 1.4; }
+@media (max-width: 700px) { .ls-notable-line { font-size: 20px; } }
+.ls-ribbon { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.ls-rib { display: inline-flex; align-items: center; gap: 7px; background: #EDF6F8; border: 1px solid #BEDDE6; border-radius: 10px; padding: 8px 13px; font-size: 13px; font-weight: 600; color: #1E7D96; }
+.ls-sec-title { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; margin-bottom: 4px; }
+.ls-vrow { padding: 10px 0; border-bottom: 1px dashed #EDE9DA; font-size: 14px; }
+.ls-vrow:last-of-type { border-bottom: none; }
+.ls-vrow-main { display: flex; gap: 12px; align-items: baseline; }
+.ls-vrow .tick { color: #2E8A36; font-weight: 700; flex-shrink: 0; width: 16px; }
+.ls-vrow .k { font-weight: 700; color: #1F514C; }
+.ls-vrow .d { display: block; color: #57534E; line-height: 1.55; margin: 4px 0 0 28px; font-size: 13.5px; }
+.ls-pills-label { font-size: 12px; color: #9CA3AF; margin-top: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; }
+.ls-bpnote { display: flex; gap: 12px; background: #EAF3EC; border-radius: 10px; padding: 13px 16px; margin-top: 14px; font-size: 14px; color: #1C5240; line-height: 1.55; }
+.ls-bpnote .ico { font-size: 18px; line-height: 1.3; flex-shrink: 0; }
+.ls-bpnote details { margin-top: 6px; }
+.ls-bpnote summary { cursor: pointer; color: #1C5240; font-weight: 600; }
+.ls-bpnote ul { list-style: none; margin: 8px 0 0; padding: 0; }
+.ls-bpnote li { font-size: 13px; padding: 2px 0; color: #1C5240; }
 .listing-routes { display: flex; flex-wrap: wrap; gap: 8px; }
 .listing-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
 .listing-route-tag:hover { background: #DBEAFE; }
+.listing-trail-list { list-style: none; padding: 0; margin: 0; }
+.listing-trail-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-trail-name { color: #047857; text-decoration: none; }
+a.listing-trail-name:hover { text-decoration: underline; }
+.listing-trail-item.dest .listing-trail-name { font-weight: 700; }
+.listing-trail-dist { color: #9CA3AF; font-size: 13px; }
+.listing-near-group { margin-bottom: 14px; }
+.listing-near-grouptitle { font-size: 11px; font-weight: 700; color: #78716C; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.listing-near-list { list-style: none; padding: 0; margin: 0; }
+.listing-near-item { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-near-name { color: #1E7D96; text-decoration: none; }
+.listing-near-name:hover { text-decoration: underline; }
+.listing-near-subcat { color: #9CA3AF; font-size: 13px; }
+.listing-near-badge { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 20px; }
+.listing-near-dist { color: #9CA3AF; font-size: 13px; }
+.listing-bp-list { list-style: none; padding: 0; margin: 0; }
+.listing-bp-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-bp-dist { color: #9CA3AF; font-size: 13px; }
+/* Map + "Find them" band (Mockup C reflow Step 7) */
+.ls-band { display: grid; grid-template-columns: 1fr 300px; gap: 14px; margin: 24px 0 30px; align-items: start; }
+.ls-band.ls-band-solo { grid-template-columns: 1fr; }
+.ls-card { background: #fff; border: 1px solid #E7E2D0; border-radius: 12px; overflow: hidden; }
+/* Map keeps the shared .wwc-map fixed height (no flex/resize hacks — same as every
+   other embedded map); only strip its own border/radius since the card supplies them. */
+.ls-card-map .wwc-map { max-width: none; border: 0; border-radius: 0; }
+.ls-card-map .wwc-map-ctrls { margin: 0; padding: 10px 14px; }
+.ls-card-pad { padding: 14px 16px; }
+.ls-card-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1E7D96; margin-bottom: 9px; }
+.ls-contact-row { font-size: 13.5px; color: #2D2D2D; margin-bottom: 7px; display: flex; gap: 8px; }
+.ls-contact-row .ico { width: 18px; flex-shrink: 0; text-align: center; }
+.ls-contact-row span { min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a { color: #1E7D96; text-decoration: none; min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a:hover { text-decoration: underline; }
+.ls-route-tag { display: inline-flex; align-items: center; gap: 6px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; font-weight: 600; margin: 0 4px 4px 0; }
+.ls-route-tag:hover { background: #DBEAFE; }
+.ls-trail-line { font-size: 13px; padding: 2px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ls-trail-line a { color: #141414; text-decoration: none; font-weight: 400; }
+.ls-trail-line a:hover { text-decoration: underline; }
+.ls-trail-line .dist { color: #9CA3AF; font-size: 12px; flex-shrink: 0; }
+/* "Around you, by need" grid (Mockup C reflow Step 6) */
+.ls-needs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.ls-need { background: #FCFBF6; border: 1px solid #E7E2D0; border-radius: 12px; padding: 14px 16px; }
+.ls-need-title { font-size: 13px; font-weight: 700; color: #1F514C; margin-bottom: 9px; }
+.ls-need ul { list-style: none; padding: 0; margin: 0; }
+.ls-need li { display: flex; align-items: baseline; gap: 8px; font-size: 13.5px; padding: 3px 0; }
+.ls-need .nm { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-need .nm:hover { text-decoration: underline; }
+.ls-need .dist { color: #9CA3AF; font-size: 12px; margin-left: auto; white-space: nowrap; }
+.ls-need .wbadge { font-size: 10px; font-weight: 700; background: #EAF3EC; color: #1C5240; border-radius: 20px; padding: 1px 6px; }
+.ls-need .wbadge.no { background: #FDECEC; color: #B91C1C; }
+@media (max-width: 700px) { .ls-band { grid-template-columns: 1fr; } .ls-needs { grid-template-columns: 1fr; } }
 .listing-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .listing-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .listing-attribution a { color: #9CA3AF; }
 .listing-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
 .listing-suggest a { color: #1E7D96; }
+.listing-json { text-align: right; margin-top: 14px; }
+.listing-json a { font-size: 11px; color: #C9CDD3; text-decoration: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .03em; }
+.listing-json a:hover { color: #9CA3AF; text-decoration: underline; }
 .listing-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
+.badge-notable { display: inline-flex; align-items: center; background: #1F514C; color: #fff; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; letter-spacing: 0.2px; }
+.listing-notable { font-size: 14.5px; color: #1F514C; font-style: italic; margin: -8px 0 18px; line-height: 1.5; }
 
 </style>
 </head>
@@ -142,20 +257,52 @@ body {
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
 </script>
-<main class="listing-main">
-<nav class="listing-breadcrumb"><a href="/wwc/" id="listing-back" onclick="history.back();return false;">← <span id="listing-back-label">All listings</span></a> / Supplies</nav>
-<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('listing-back-label').textContent=f.label;}}catch(e){}})();</script>
+<main class="listing-main ls-two-col">
+<div class="ls-layout"><div class="ls-col-left"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/wwc/">We Welcome Cyclists</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Moet&#x27;s Convenience Stores</span></nav>
 <h1 class="listing-h1">Moet&#x27;s Convenience Stores</h1>
-<div class="listing-meta"><span class="badge badge-info">Info</span>  ·  <span style="font-weight:600;"><img src="/img/bc-flag.png" alt="" width="20" height="14" style="vertical-align:-2px;margin-right:5px;border-radius:2px;">Buy BC (independent)</span>  ·  Convenience Store  ·  Vancouver</div>
-<p class="listing-desc">Moet&#x27;s Convenience Stores is a 24/7 corner shop on Dundas Street in Vancouver, making it accessible to cyclists at any hour of the day or night. As a neighbourhood convenience store, it likely stocks the kind of quick-grab supplies — snacks, drinks, and sundries — that touring cyclists often need on the road. Its round-the-clock availability distinguishes it from most other grocery options in the area.</p>
-<div class="listing-verify">Amenities assumed from location and public data. <a href="/suggest#edit=Moet&#x27;s Convenience Stores">Confirm or update this listing →</a></div>
-<div class="listing-section"><div class="listing-section-title">Contact</div><div class="listing-detail-row"><strong>Address:</strong> 2085 Dundas Street, Vancouver</div><div class="listing-detail-row"><strong>Website:</strong> <a href="https://www.instagram.com/moetsconvenience/" target="_blank" rel="noopener">https://www.instagram.com/moetsconvenience/</a></div></div>
+<div class="listing-meta"><span class="badge badge-info">Info</span><span class="ls-meta-sep"></span><span class="ls-meta-type"><img src="/img/bc-flag.png" alt="" width="20" height="14" style="vertical-align:-2px;margin-right:5px;border-radius:2px;">Buy BC (independent) &middot; Convenience Store</span><a href="/wwc/community/vancouver/" class="ls-meta-city">&#128205; Vancouver</a></div>
 
-<div class="listing-section"><div class="listing-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>Bike parking</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>Water bottle refill</span></div></div>
-<div class="listing-section"><div class="listing-section-title">Amenities</div><div class="listing-pills"><span class="listing-pill-no">Basic groceries</span><span class="listing-pill-no">Hot food</span><span class="listing-pill-no">Washrooms</span><span class="listing-pill-no">Outdoor water tap</span><span class="listing-pill-no">Ice</span><span class="listing-pill-no">Vending machines</span><span class="listing-pill-no">Camping fuel</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-no">Public rack nearby</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span></div></div>
-<div class="listing-section"><div class="listing-section-title">Routes nearby</div><div class="listing-routes"><a class="listing-route-tag" href="/route/seymour-valley-lonsdale-brew-loop/">🚴 Seymour Valley + Lonsdale Brew Loop</a></div></div>
-<div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: AI sources with manual review</div></div>
+
+<p class="listing-desc">Moet&#x27;s Convenience Stores is a 24/7 corner shop on Dundas Street in Vancouver, making it accessible to cyclists at any hour of the day or night. As a neighbourhood convenience store, it likely stocks the kind of quick-grab supplies — snacks, drinks, and sundries — that touring cyclists often need on the road. Its round-the-clock availability distinguishes it from most other grocery options in the area.</p>
+<p class="listing-web-top"><span class="ico">🌐</span><a href="https://www.instagram.com/moetsconvenience/" target="_blank" rel="noopener">Main website &rsaquo;</a></p>
+
+
+<div class="listing-section"><div class="ls-sec-title">What's here for you</div><div class="listing-section-sub">Gathered from publicly available data and OpenStreetMap. Not confirmed by the owner yet.</div><div class="ls-pills-label">Not confirmed yet</div><div class="listing-pills"><span class="listing-pill-no">Bike parking</span><span class="listing-pill-no">Water bottle refill</span><span class="listing-pill-no">Basic groceries</span><span class="listing-pill-no">Hot food</span><span class="listing-pill-no">Washrooms</span><span class="listing-pill-no">Outdoor water tap</span><span class="listing-pill-no">Ice</span><span class="listing-pill-no">Vending machines</span><span class="listing-pill-no">Camping fuel</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-no">Public rack nearby</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span></div><div class="listing-owner-cta"><strong>Run this place?</strong> <a href="/apply">Confirm your details</a> and we'll mark them verified. Spotted an error? <a href="/suggest#edit=Moet&#x27;s Convenience Stores">Suggest an edit</a>.</div></div>
+
+
+<div class="listing-section"><div class="ls-sec-title">Around here</div><div class="listing-section-sub">The closest options for the things touring cyclists actually look for.</div><div class="ls-needs"><div class="ls-need"><div class="ls-need-title">🔧 Fix &amp; supply</div><ul><li><a class="nm" href="/wwc/stop/590973be27/">Templeton Market</a><span class="dist">0.2 km</span></li><li><a class="nm" href="/wwc/stop/3aa7eaa466/">On the Run</a><span class="dist">0.2 km</span></li><li><a class="nm" href="/wwc/stop/855663034c/">Mactalla Cycles</a><span class="dist">0.9 km</span></li><li><a class="nm" href="/wwc/stop/bfa2176937/">Bici</a><span class="dist">1.3 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🍽 Eat nearby</div><ul><li><a class="nm" href="/wwc/stop/f420e12c0c/">Pho Dundas</a><span class="dist">right here</span></li><li><a class="nm" href="/wwc/stop/7cde62580a/">Far Out Coffee Post</a><span class="dist">0.1 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🛏 Sleep nearby</div><ul><li><a class="nm" href="/wwc/stop/bcdb8fc55a/">Hotel At The Waldorf</a><span class="dist">1.0 km</span></li><li><a class="nm" href="/wwc/stop/b639dc5448/">Atrium Hotel Vancouver</a><span class="dist">1.3 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🎭 While you're here</div><ul><li><a class="nm" href="/wwc/stop/b9dc566455/">Chén̓chenstway Healing Garden and Indigenous Food Forest</a><span class="dist">right here</span></li><li><a class="nm" href="/wwc/stop/1fc69bfb09/">Templeton Park Pool</a><span class="wbadge">Welcoming</span><span class="dist">0.8 km</span></li><li><a class="nm" href="/wwc/stop/6d2ce059de/">Cedar Root Gallery</a><span class="dist">0.8 km</span></li><li><a class="nm" href="/wwc/stop/046d9d22cf/">Hastings Library Branch</a><span class="wbadge">Welcoming</span><span class="dist">1.0 km</span></li></ul></div></div></div>
+<div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: Public data, AI sources with manual review</div></div>
 <div class="listing-suggest"><a href="/suggest#edit=Moet&#x27;s Convenience Stores">Suggest an edit to this listing</a></div>
+<div class="listing-json"><a href="/wwc/stop/b285437d97.json" rel="nofollow">JSON</a></div></div><aside class="ls-col-right"><div class="ls-band"><div class="ls-card ls-card-map"><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div id="stopmap" class="wwc-map compact"></div><div class="wwc-map-ctrls"><span class="stopmap-lgd" style="color:#14807A"><span class="stopmap-lgd-sw" style="background:#14807A"></span> Bike network</span><span class="stopmap-lgd"><span class="stopmap-lgd-sw"></span> Nearby bike routes</span></div><script src="/map/lib/maplibre-gl.js"></script>
+<script src="/map/lib/pmtiles.js"></script>
+<script>
+(function(){
+  var protocol=new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile);
+  var map=new maplibregl.Map(Object.assign(
+    {container:"stopmap", style:location.origin+"/map/style/style.json", attributionControl:false},
+    {"center": [-123.0619003, 49.2851575], "zoom": 13}));
+  map.addControl(new maplibregl.NavigationControl(), "top-right");
+  var _attrib=new maplibregl.AttributionControl({compact:true,
+    customAttribution:'\u00a9 <a href="https://www.openmaptiles.org/">OpenMapTiles</a> \u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  map.addControl(_attrib);
+  // Compact mode initializes expanded; collapse it to the small "i" so the map
+  // opens clean. Clicking the button still expands the credit.
+  if(_attrib._container){_attrib._container.classList.remove("maplibregl-compact-show");}
+  map.on("load", function(){
+    map.addSource("stoptrails",{type:"geojson",data:{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "MultiLineString", "coordinates": [[[-123.086758, 49.311952900000016], [-123.0871186, 49.31230409999999], [-123.0868723, 49.31257309999997]], [[-123.0868723, 49.31257309999997], [-123.08662550000001, 49.312815299999954]], [[-123.08662550000001, 49.312815299999954], [-123.08625740000001, 49.31324890000003]], [[-123.08625740000001, 49.31324890000003], [-123.08590540000002, 49.3136836]], [[-123.08590540000002, 49.3136836], [-123.0858824, 49.31370390000003]], [[-123.0859672, 49.31373930000001], [-123.0858824, 49.31370390000003]], [[-123.0860172, 49.31449009999999], [-123.0859672, 49.31373930000001]], [[-123.0860064, 49.31482849999997], [-123.0860172, 49.31449009999999]], [[-123.08599790000001, 49.315087199999994], [-123.0860064, 49.31482849999997]], [[-123.08599598425987, 49.3151575], [-123.08599790000001, 49.315087199999994]], [[-123.0850331, 49.31162919999998], [-123.0840317, 49.31116360000003]], [[-123.0840317, 49.31116360000003], [-123.0834385, 49.311682800000014]], [[-123.0834385, 49.311682800000014], [-123.08339249999999, 49.31166349999997]], [[-123.08339249999999, 49.31166349999997], [-123.083356, 49.311647799999996]], [[-123.083356, 49.311647799999996], [-123.08325779999998, 49.31174700000003]], [[-123.08325779999998, 49.31174700000003], [-123.0828226, 49.31219919999994]], [[-123.0828226, 49.31219919999994], [-123.08259140000001, 49.31227360000001]], [[-123.08259140000001, 49.31227360000001], [-123.08255630000001, 49.31229330000003]], [[-123.08255630000001, 49.31229330000003], [-123.0824307, 49.312414899999986]], [[-123.0824307, 49.312414899999986], [-123.0824073, 49.312435799999996]], [[-123.0824073, 49.312435799999996], [-123.082426, 49.31244680000003]], [[-123.082426, 49.31244680000003], [-123.0824546, 49.31246279999998]], [[-123.0824546, 49.31246279999998], [-123.0825922, 49.312522299999976]], [[-123.0825922, 49.312522299999976], [-123.0826296, 49.31253749999999]], [[-123.0826296, 49.31253749999999], [-123.08264690000001, 49.31254220000003]], [[-123.08264690000001, 49.31254220000003], [-123.08269060000002, 49.31255690000005]], [[-123.08269060000002, 49.31255690000005], [-123.08272099999999, 49.312569499999995]], [[-123.08272099999999, 49.312569499999995], [-123.0832323, 49.31277790000001]], [[-123.0832323, 49.31277790000001], [-123.0833638, 49.31283979999999]], [[-123.0833638, 49.31283979999999], [-123.08400600000002, 49.31311859999994]], [[-123.08400600000002, 49.31311859999994], [-123.08410329999998, 49.313159099999986]], [[-123.08410329999998, 49.313159099999986], [-123.08569900000002, 49.31385529999993]], [[-123.08569900000002, 49.31385529999993], [-123.0858172, 49.31482700000002]], [[-123.0858172, 49.31482700000002], [-123.08580970000001, 49.315027799999996]], [[-123.08580970000001, 49.315027799999996], [-123.08580556332684, 49.3151575]], [[-123.0855513, 49.31123440000004], [-123.0867514, 49.31183109999998]], [[-123.0855513, 49.31123440000004], [-123.08516680000001, 49.3116116]], [[-123.0840317, 49.31116360000003], [-123.0835412, 49.31049269999998]], [[-123.0835412, 49.31049269999998], [-123.08337239999999, 49.31033090000002]], [[-123.08337239999999, 49.31033090000002], [-123.0833629, 49.3103275]], [[-123.0833629, 49.3103275], [-123.0831908, 49.31025359999998]], [[-123.0831908, 49.31025359999998], [-123.0839179, 49.309540299999966]], [[-123.10789177664027, 49.28744033222593], [-123.10610550000001, 49.288104799999964], [-123.10294050000002, 49.289658299999964], [-123.09374869999999, 49.29648520000001], [-123.09215800000001, 49.2981738], [-123.0839179, 49.309540299999966]], [[-123.01590882335974, 49.291935768897694], [-123.02168229999998, 49.29262290000003]], [[-123.02168229999998, 49.29262290000003], [-123.021859, 49.292627499999995]], [[-123.021859, 49.292627499999995], [-123.02368100000001, 49.29271100000004]], [[-123.02368100000001, 49.29271100000004], [-123.0242687, 49.292598100000035]], [[-123.08671169999998, 49.311822900000024], [-123.086865, 49.311955300000015], [-123.08671169999998, 49.311822900000024]], [[-123.0867241, 49.311840599999975], [-123.0867241, 49.311840599999975]], [[-123.0850395, 49.31162270000005], [-123.0850395, 49.31162270000005]], [[-123.08264690000001, 49.31254220000003], [-123.08269060000002, 49.31255690000005]], [[-123.0242687, 49.292598100000035], [-123.0248834, 49.292490400000034]], [[-123.0248834, 49.292490400000034], [-123.0259614, 49.29221710000001]], [[-123.0259614, 49.29221710000001], [-123.0283616, 49.29083049999997]], [[-123.0283616, 49.29083049999997], [-123.02858400000001, 49.29056900000002]], [[-123.0333266, 49.28858999999996], [-123.03132649999999, 49.2888943], [-123.02858400000001, 49.29056900000002]], [[-123.03599340000001, 49.288170100000016], [-123.0333266, 49.28858999999996]], [[-123.03653249999999, 49.288373999999976], [-123.03599340000001, 49.288170100000016]], [[-123.03653249999999, 49.288373999999976], [-123.036344, 49.28847260000002]], [[-123.036344, 49.28847260000002], [-123.0362814, 49.2888397]], [[-123.0362814, 49.2888397], [-123.0364233, 49.28901619999997]], [[-123.0400026, 49.2913056], [-123.0395227, 49.29085580000005], [-123.03751210000001, 49.290761800000055], [-123.03713920000001, 49.289640800000036], [-123.0364233, 49.28901619999997]], [[-123.0400026, 49.2913056], [-123.0401444, 49.29181800000002], [-123.04069150000001, 49.291920899999965], [-123.0412296, 49.291676999999986], [-123.04112929999998, 49.291209599999995]], [[-123.04112929999998, 49.291209599999995], [-123.04159130000001, 49.2909941]], [[-123.0401306, 49.28998079999995], [-123.0403736, 49.29059750000006], [-123.04159130000001, 49.2909941]], [[-123.0403981, 49.289062499999936], [-123.0401306, 49.28998079999995]], [[-123.0403088, 49.28900019999998], [-123.0403981, 49.289062499999936]], [[-123.0403815, 49.28894580000004], [-123.0403088, 49.28900019999998]], [[-123.0404573, 49.288919000000014], [-123.0403815, 49.28894580000004]], [[-123.0406721, 49.288907600000016], [-123.0404573, 49.288919000000014]], [[-123.0407465, 49.28891890000006], [-123.0406721, 49.288907600000016]], [[-123.04081989999999, 49.28894970000007], [-123.0407465, 49.28891890000006]], [[-123.04084060000001, 49.288958399999984], [-123.04081989999999, 49.28894970000007]], [[-123.1066082, 49.27584279999995], [-123.10650429999998, 49.276526599999976]], [[-123.1031768, 49.27562350000006], [-123.1066082, 49.27584279999995]], [[-123.10315990000001, 49.275393700000016], [-123.1031768, 49.27562350000006]], [[-123.10230390000001, 49.27335389999995], [-123.1025714, 49.27467070000003], [-123.10315990000001, 49.275393700000016]], [[-123.10230390000001, 49.27335389999995], [-123.102308, 49.27318150000001]], [[-123.1023104, 49.27311939999995], [-123.102308, 49.27318150000001]], [[-123.10231059999998, 49.27303719999999], [-123.1023104, 49.27311939999995]], [[-123.10231059999998, 49.27303719999999], [-123.10243869999998, 49.27290540000001]], [[-123.10253940000001, 49.27266179999999], [-123.10243869999998, 49.27290540000001]], [[-123.1028453, 49.27200820000005], [-123.10253940000001, 49.27266179999999]], [[-123.1042956, 49.27194609999998], [-123.1028453, 49.27200820000005]], [[-123.1042956, 49.27194609999998], [-123.10666029999999, 49.27202459999996], [-123.10686220000001, 49.27164180000003], [-123.10789177664027, 49.271657898071226]], [[-123.061993, 49.28603830000005], [-123.0607488, 49.2875682]], [[-123.0622129, 49.28588980000001], [-123.061993, 49.28603830000005]], [[-123.0621836, 49.28587140000003], [-123.0622129, 49.28588980000001]], [[-123.06214650000001, 49.2858506], [-123.0621836, 49.28587140000003]], [[-123.06198479999999, 49.28571410000001], [-123.06214650000001, 49.2858506]], [[-123.06163830000001, 49.28570310000001], [-123.06198479999999, 49.28571410000001]], [[-123.0616402, 49.284824699999994], [-123.06163830000001, 49.28570310000001]], [[-123.06167699999999, 49.283068799999974], [-123.0616402, 49.284824699999994]], [[-123.0617026, 49.28164440000007], [-123.0616769, 49.2829648]], [[-123.06170930000002, 49.2811789], [-123.0617026, 49.28164440000007]], [[-123.0617201, 49.28075869999999], [-123.06170930000002, 49.2811789]], [[-123.0617086, 49.279697600000034], [-123.0617201, 49.28075869999999]], [[-123.0617086, 49.279697600000034], [-123.0617944, 49.2796398]], [[-123.0617831, 49.278340199999995], [-123.0617944, 49.2796398]], [[-123.06175899999998, 49.27750279999999], [-123.0617831, 49.278340199999995]], [[-123.06175899999998, 49.27750279999999], [-123.0619057, 49.27750469999998]], [[-123.0619057, 49.27750469999998], [-123.06369490000002, 49.27751949999999]], [[-123.06369490000002, 49.27751949999999], [-123.0649811, 49.27752650000004]], [[-123.0649811, 49.27752650000004], [-123.06520769999999, 49.27752430000003]], [[-123.0655757, 49.27750309999997], [-123.06520769999999, 49.27752430000003]], [[-123.0656848, 49.27750179999997], [-123.0655757, 49.27750309999997]], [[-123.06588180000001, 49.27751859999999], [-123.0656848, 49.27750179999997]], [[-123.0683649, 49.27754809999998], [-123.06588180000001, 49.27751859999999]], [[-123.07002, 49.27757180000008], [-123.0683649, 49.27754809999998]], [[-123.070146, 49.27755369999997], [-123.07002, 49.27757180000008]], [[-123.07042939999998, 49.277568200000005], [-123.070146, 49.27755369999997]], [[-123.07048960000002, 49.27756939999998], [-123.07042939999998, 49.277568200000005]], [[-123.07048960000002, 49.27756939999998], [-123.07275209999999, 49.277606399999975]], [[-123.07275209999999, 49.277606399999975], [-123.07399680000002, 49.27762240000002]], [[-123.07399680000002, 49.27762240000002], [-123.0741999, 49.27762319999999]], [[-123.0741999, 49.27762319999999], [-123.07657, 49.27765559999997]], [[-123.07657, 49.27765559999997], [-123.0771989, 49.277663399999994]], [[-123.0771989, 49.277663399999994], [-123.0775575, 49.27766780000002]], [[-123.0775575, 49.27766780000002], [-123.079171, 49.277692799999976]], [[-123.079171, 49.277692799999976], [-123.07941449999998, 49.277317499999995]], [[-123.08137450000001, 49.2773353], [-123.07941449999998, 49.277317499999995]], [[-123.08193169999998, 49.277343100000024], [-123.08137450000001, 49.2773353]], [[-123.0825777, 49.2773612], [-123.08193169999998, 49.277343100000024]], [[-123.0873098, 49.2774411], [-123.0825777, 49.2773612]], [[-123.0877621, 49.27746490000008], [-123.0873098, 49.2774411]], [[-123.08969860000002, 49.27749519999997], [-123.0877621, 49.27746490000008]], [[-123.08969860000002, 49.27749519999997], [-123.08969839999999, 49.27926900000003]], [[-123.08969839999999, 49.27926900000003], [-123.0972151, 49.27944289999998]], [[-123.0972151, 49.27944289999998], [-123.0989913, 49.27947249999993]], [[-123.0989913, 49.27947249999993], [-123.0997451, 49.279484099999955]], [[-123.0997451, 49.279484099999955], [-123.1013653, 49.279469800000015]], [[-123.1013653, 49.279469800000015], [-123.102218, 49.27927510000003]], [[-123.1025825, 49.279213299999974], [-123.102218, 49.27927510000003]], [[-123.1044741, 49.279240900000055], [-123.1025825, 49.279213299999974]], [[-123.1044741, 49.279240900000055], [-123.10455, 49.27924239999994]], [[-123.10455, 49.27924239999994], [-123.104586, 49.279170600000015]], [[-123.104586, 49.279170600000015], [-123.10613760000001, 49.278139300000014]], [[-123.10613760000001, 49.278139300000014], [-123.10628249999999, 49.27798490000001]], [[-123.10628249999999, 49.27798490000001], [-123.10645470000001, 49.27719610000003]], [[-123.10645470000001, 49.27719610000003], [-123.10649620000001, 49.27703050000002]], [[-123.10649620000001, 49.27703050000002], [-123.10650429999998, 49.276526599999976]], [[-123.10650429999998, 49.276526599999976], [-123.10636200000002, 49.27702769999996]], [[-123.10636200000002, 49.27702769999996], [-123.10634820000001, 49.27710839999996]], [[-123.10634820000001, 49.27710839999996], [-123.10633380000002, 49.277192499999984]], [[-123.10633380000002, 49.277192499999984], [-123.1061831, 49.27796149999997]], [[-123.1061831, 49.27796149999997], [-123.1060139, 49.278116300000015]], [[-123.1060139, 49.278116300000015], [-123.10484540000002, 49.278680000000044], [-123.10442599999999, 49.27917259999998]], [[-123.10442599999999, 49.27917259999998], [-123.1043961, 49.27923940000004]], [[-123.06568469999999, 49.277536500000025], [-123.06588180000001, 49.27751859999999]], [[-123.06557550000001, 49.277537199999976], [-123.06568469999999, 49.277536500000025]], [[-123.06520769999999, 49.27752430000003], [-123.06557550000001, 49.277537199999976]], [[-123.0873098, 49.2774411], [-123.0877621, 49.27746490000008]], [[-123.0413027, 49.2888743], [-123.04138120000002, 49.28896790000001]], [[-123.04131979999998, 49.289117000000026], [-123.04138120000002, 49.28896790000001]], [[-123.0413832, 49.289149000000016], [-123.04131979999998, 49.289117000000026]], [[-123.0416186, 49.289310900000004], [-123.0413832, 49.289149000000016]], [[-123.0431737, 49.29053340000003], [-123.0416186, 49.289310900000004]], [[-123.04406670000002, 49.29102100000001], [-123.0431737, 49.29053340000003]], [[-123.04658160000001, 49.29161809999999], [-123.04406670000002, 49.29102100000001]], [[-123.0519465, 49.291656599999996], [-123.0494481, 49.29215820000003], [-123.04672850000001, 49.291651400000056]], [[-123.0519465, 49.291656599999996], [-123.0537802, 49.291262799999984]], [[-123.0537802, 49.291262799999984], [-123.0519465, 49.291656599999996]], [[-123.0545618, 49.29109019999998], [-123.0537802, 49.291262799999984]], [[-123.0564213, 49.29073199999995], [-123.0545618, 49.29109019999998]], [[-123.06068180000001, 49.28763600000002], [-123.0591442, 49.28949809999999], [-123.05661140000001, 49.29071370000005]], [[-123.0606552, 49.28761890000005], [-123.0606552, 49.28761890000005]], [[-123.04138120000002, 49.28896790000001], [-123.0414366, 49.2888668]], [[-123.0414366, 49.2888668], [-123.0413986, 49.28886889999998]], [[-123.0413986, 49.28886889999998], [-123.04135279999998, 49.28887150000003]], [[-123.04122150000002, 49.28887890000004], [-123.04135279999998, 49.28887150000003]], [[-123.04122150000002, 49.28887890000004], [-123.0406964, 49.2891325]], [[-123.0406964, 49.2891325], [-123.040334, 49.29007889999998]], [[-123.04135999999998, 49.29072880000005], [-123.040521, 49.29048529999998], [-123.040334, 49.29007889999998]], [[-123.04135999999998, 49.29072880000005], [-123.0415677, 49.29081419999999]], [[-123.0415677, 49.29081419999999], [-123.0415964, 49.290825600000026]], [[-123.0415964, 49.290825600000026], [-123.04174630000001, 49.29088070000003]], [[-123.04174630000001, 49.29088070000003], [-123.0417651, 49.29091110000001]], [[-123.04169020000002, 49.29100850000007], [-123.0417651, 49.29091110000001]], [[-123.04159130000001, 49.2909941], [-123.04169020000002, 49.29100850000007]], [[-123.0564542, 49.290660300000056], [-123.0564542, 49.290660300000056]], [[-123.07002, 49.27757180000008], [-123.07028860000001, 49.27759230000003]], [[-123.07028860000001, 49.27759230000003], [-123.07042939999998, 49.277568200000005]], [[-123.102308, 49.27318150000001], [-123.10230390000001, 49.27335389999995]], [[-123.10243869999998, 49.27290540000001], [-123.10231059999998, 49.27303719999999]], [[-123.04673310000001, 49.29163470000005], [-123.04673310000001, 49.29163470000005]], [[-123.0616033, 49.28303170000001], [-123.0616033, 49.28303170000001]], [[-123.06170730000001, 49.28128959999999], [-123.0617026, 49.28164440000007]]]}, "properties": {"name": "Trans Canada Trail"}}]}});
+    map.addLayer({id:"stoptrails-casing",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#ffffff","line-width":6,"line-opacity":0.9}});
+    map.addLayer({id:"stoptrails-line",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#5f259f","line-width":3}});
+    var mk=new maplibregl.Marker({color:"#1F514C"}).setLngLat([-123.0619003, 49.2851575]);
+    var pop=new maplibregl.Popup({closeButton:true,closeOnClick:false,focusAfterOpen:false}).setHTML("<b>Moet&#x27;s Convenience Stores<\/b>");
+    mk.setPopup(pop).addTo(map);
+  });
+})();
+</script></div><div class="ls-card"><div class="ls-card-pad"><div class="ls-card-title">Location</div><div class="ls-contact-row"><span class="ico">📍</span><span>2085 Dundas Street, Vancouver</span></div><div class="ls-contact-row"><span class="ico">🌐</span><a href="https://www.instagram.com/moetsconvenience/" target="_blank" rel="noopener">https://www.instagram.com/moetsconvenience/</a></div><div class="ls-card-title" style="margin-top:14px;color:#5f259f;">Nearby bike routes</div><div class="ls-trail-line"><a href="/trail/trans-canada-trail/" style="">Trans Canada Trail</a> <span class="dist">20 m</span></div></div></div></div></aside></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">
@@ -167,7 +314,6 @@ body {
       <a href="/">Home</a>
       <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
-      <a href="/routes">Routes</a>
     </div>
     <div class="g-footer-col">
       <a href="/about">About</a>

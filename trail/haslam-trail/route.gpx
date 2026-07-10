@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Haslam Trail</name>
+<link href="https://bccycletourism.ca/trail/haslam-trail/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.043812" lon="-123.883482">
+<name>Timberlands Pub</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Haslam Trail</name>
+<trkseg>
+<trkpt lat="49.042219" lon="-123.947573"/>
+<trkpt lat="49.041792" lon="-123.946947"/>
+<trkpt lat="49.041914" lon="-123.946004"/>
+<trkpt lat="49.041255" lon="-123.945232"/>
+<trkpt lat="49.038327" lon="-123.944103"/>
+<trkpt lat="49.037199" lon="-123.941120"/>
+<trkpt lat="49.036230" lon="-123.939773"/>
+<trkpt lat="49.035855" lon="-123.938669"/>
+<trkpt lat="49.035064" lon="-123.937775"/>
+<trkpt lat="49.034790" lon="-123.936471"/>
+<trkpt lat="49.033995" lon="-123.935292"/>
+<trkpt lat="49.033451" lon="-123.930279"/>
+<trkpt lat="49.033459" lon="-123.926974"/>
+<trkpt lat="49.035342" lon="-123.917994"/>
+<trkpt lat="49.035863" lon="-123.917127"/>
+<trkpt lat="49.035532" lon="-123.916598"/>
+<trkpt lat="49.035801" lon="-123.915708"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.035691" lon="-123.915039"/>
+<trkpt lat="49.035175" lon="-123.914660"/>
+<trkpt lat="49.034831" lon="-123.913652"/>
+<trkpt lat="49.034511" lon="-123.913367"/>
+<trkpt lat="49.032542" lon="-123.914972"/>
+<trkpt lat="49.030999" lon="-123.914925"/>
+<trkpt lat="49.030741" lon="-123.914352"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.030843" lon="-123.914028"/>
+<trkpt lat="49.031376" lon="-123.912814"/>
+<trkpt lat="49.031804" lon="-123.910936"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.034639" lon="-123.901840"/>
+<trkpt lat="49.034670" lon="-123.900973"/>
+<trkpt lat="49.034119" lon="-123.900018"/>
+<trkpt lat="49.034708" lon="-123.897063"/>
+<trkpt lat="49.037412" lon="-123.891243"/>
+<trkpt lat="49.037987" lon="-123.888867"/>
+<trkpt lat="49.039040" lon="-123.886403"/>
+<trkpt lat="49.039557" lon="-123.885585"/>
+<trkpt lat="49.039596" lon="-123.886684"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.042348" lon="-123.887939"/>
+<trkpt lat="49.042613" lon="-123.887837"/>
+</trkseg>
+</trk>
+</gpx>

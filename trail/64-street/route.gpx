@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>64 Street</name>
+<link href="https://bccycletourism.ca/trail/64-street/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.067068" lon="-123.046555">
+<name>Snow Farms</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.074809" lon="-123.046666">
+<name>Gulraj Farm</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.089856" lon="-123.045725">
+<name>Otter Co-op</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.112213" lon="-123.046706">
+<name>Schoolhouse Farm</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.089926" lon="-123.044798">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.111801" lon="-123.052474">
+<name>Ramie's Greek Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>64 Street</name>
+<trkseg>
+<trkpt lat="49.065272" lon="-123.077060"/>
+<trkpt lat="49.066118" lon="-123.075660"/>
+<trkpt lat="49.066062" lon="-123.063346"/>
+<trkpt lat="49.066040" lon="-123.059437"/>
+<trkpt lat="49.066041" lon="-123.057640"/>
+<trkpt lat="49.066037" lon="-123.056844"/>
+<trkpt lat="49.066026" lon="-123.054854"/>
+<trkpt lat="49.065980" lon="-123.046384"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.065980" lon="-123.046384"/>
+<trkpt lat="49.059864" lon="-123.046499"/>
+<trkpt lat="49.058928" lon="-123.046612"/>
+<trkpt lat="49.057058" lon="-123.046459"/>
+<trkpt lat="49.053721" lon="-123.046399"/>
+<trkpt lat="49.049668" lon="-123.046402"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.065980" lon="-123.046384"/>
+<trkpt lat="49.089791" lon="-123.046251"/>
+<trkpt lat="49.090150" lon="-123.046248"/>
+<trkpt lat="49.090524" lon="-123.046247"/>
+<trkpt lat="49.093068" lon="-123.046233"/>
+<trkpt lat="49.093770" lon="-123.046246"/>
+<trkpt lat="49.094100" lon="-123.046252"/>
+<trkpt lat="49.094241" lon="-123.046258"/>
+<trkpt lat="49.102990" lon="-123.046177"/>
+<trkpt lat="49.104016" lon="-123.047949"/>
+<trkpt lat="49.104343" lon="-123.047604"/>
+<trkpt lat="49.103799" lon="-123.046087"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.103845" lon="-123.046116"/>
+<trkpt lat="49.111963" lon="-123.046105"/>
+</trkseg>
+</trk>
+</gpx>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>King Edward Bikeway</name>
+<link href="https://bccycletourism.ca/trail/king-edward-bikeway/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.249209" lon="-123.115530">
+<name>INS Market</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.249348" lon="-123.115692">
+<name>Freshslice Pizza</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.249411" lon="-123.115689">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.249831" lon="-123.115592">
+<name>Landmark Hot Pot House</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.249868" lon="-123.115190">
+<name>Ton Ton Sushi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.249983" lon="-123.115171">
+<name>Old Xian's Food Noodle &amp; Mart 老西安面馆</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.248770" lon="-123.185421">
+<name>Stong's Replenish Cafe</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.248325" lon="-123.185036">
+<name>Wild Sushi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.248291" lon="-123.185444">
+<name>Stong's Market</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.248181" lon="-123.185039">
+<name>Domino's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.250622" lon="-123.168003">
+<name>Moki's Pizza</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.250751" lon="-123.168003">
+<name>The Patty Shop</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.250815" lon="-123.168021">
+<name>Ridge Garden</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.253758" lon="-123.154789">
+<name>Vancouver Traveller B&amp;B</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.248615" lon="-123.153580">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.248607" lon="-123.153902">
+<name>Safeway</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.248337" lon="-123.153964">
+<name>BC Liquor Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.246644" lon="-123.185029">
+<name>JAK's Beer Wine Spirits</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.246599" lon="-123.185407">
+<name>Cosy Inn Cafe</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.246500" lon="-123.185412">
+<name>Bynns</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.246322" lon="-123.185018">
+<name>Prado Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.246087" lon="-123.185754">
+<name>Dunbar Library Branch</name>
+<cmt>library</cmt>
+<desc>Library</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<trk><name>King Edward Bikeway</name>
+<trkseg>
+<trkpt lat="49.249969" lon="-123.185197"/>
+<trkpt lat="49.249961" lon="-123.183466"/>
+<trkpt lat="49.249953" lon="-123.182119"/>
+<trkpt lat="49.249929" lon="-123.181880"/>
+<trkpt lat="49.249928" lon="-123.181753"/>
+<trkpt lat="49.249951" lon="-123.181562"/>
+<trkpt lat="49.249946" lon="-123.179420"/>
+<trkpt lat="49.249937" lon="-123.178599"/>
+<trkpt lat="49.249912" lon="-123.172054"/>
+<trkpt lat="49.249878" lon="-123.171710"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.249878" lon="-123.171710"/>
+<trkpt lat="49.249725" lon="-123.171915"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.249878" lon="-123.171710"/>
+<trkpt lat="49.248474" lon="-123.168842"/>
+<trkpt lat="49.248072" lon="-123.167870"/>
+<trkpt lat="49.247998" lon="-123.166965"/>
+<trkpt lat="49.248114" lon="-123.163524"/>
+<trkpt lat="49.249695" lon="-123.159244"/>
+<trkpt lat="49.251116" lon="-123.155623"/>
+<trkpt lat="49.251430" lon="-123.154661"/>
+<trkpt lat="49.251457" lon="-123.153142"/>
+<trkpt lat="49.251348" lon="-123.152900"/>
+<trkpt lat="49.251268" lon="-123.152425"/>
+<trkpt lat="49.250771" lon="-123.151495"/>
+<trkpt lat="49.249628" lon="-123.149118"/>
+<trkpt lat="49.249435" lon="-123.146090"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.249628" lon="-123.146082"/>
+<trkpt lat="49.249829" lon="-123.149054"/>
+<trkpt lat="49.250981" lon="-123.151391"/>
+<trkpt lat="49.251339" lon="-123.152070"/>
+<trkpt lat="49.251521" lon="-123.152544"/>
+<trkpt lat="49.251684" lon="-123.152897"/>
+<trkpt lat="49.251664" lon="-123.153237"/>
+<trkpt lat="49.251632" lon="-123.154627"/>
+<trkpt lat="49.251274" lon="-123.155756"/>
+<trkpt lat="49.249867" lon="-123.159366"/>
+<trkpt lat="49.248278" lon="-123.163696"/>
+<trkpt lat="49.248183" lon="-123.167330"/>
+<trkpt lat="49.248222" lon="-123.167872"/>
+<trkpt lat="49.248382" lon="-123.168307"/>
+<trkpt lat="49.248634" lon="-123.168761"/>
+<trkpt lat="49.249332" lon="-123.170017"/>
+<trkpt lat="49.249780" lon="-123.170855"/>
+<trkpt lat="49.250034" lon="-123.171436"/>
+<trkpt lat="49.250092" lon="-123.171713"/>
+<trkpt lat="49.250124" lon="-123.172214"/>
+<trkpt lat="49.250140" lon="-123.178007"/>
+<trkpt lat="49.250146" lon="-123.178600"/>
+<trkpt lat="49.250154" lon="-123.181899"/>
+<trkpt lat="49.250157" lon="-123.183465"/>
+<trkpt lat="49.250161" lon="-123.184560"/>
+<trkpt lat="49.250165" lon="-123.185191"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.248854" lon="-123.115193"/>
+<trkpt lat="49.248852" lon="-123.115142"/>
+<trkpt lat="49.248850" lon="-123.115062"/>
+<trkpt lat="49.248861" lon="-123.114387"/>
+<trkpt lat="49.248858" lon="-123.114289"/>
+<trkpt lat="49.248858" lon="-123.114263"/>
+<trkpt lat="49.248833" lon="-123.112863"/>
+<trkpt lat="49.248836" lon="-123.112824"/>
+<trkpt lat="49.248825" lon="-123.112292"/>
+<trkpt lat="49.248831" lon="-123.112220"/>
+<trkpt lat="49.248839" lon="-123.112085"/>
+<trkpt lat="49.248831" lon="-123.110221"/>
+<trkpt lat="49.248834" lon="-123.110050"/>
+</trkseg>
+</trk>
+</gpx>

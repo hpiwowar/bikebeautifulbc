@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Dyke Road</name>
+<link href="https://bccycletourism.ca/trail/dyke-road/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.235789" lon="-121.957123">
+<name>Kilby Historic Site</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.236639" lon="-121.960476">
+<name>Kilby Lodge</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<trk><name>Dyke Road</name>
+<trkseg>
+<trkpt lat="49.179900" lon="-122.031106"/>
+<trkpt lat="49.184678" lon="-122.028578"/>
+<trkpt lat="49.187457" lon="-122.019414"/>
+<trkpt lat="49.188010" lon="-122.012300"/>
+<trkpt lat="49.188986" lon="-122.010894"/>
+<trkpt lat="49.190003" lon="-122.010365"/>
+<trkpt lat="49.191858" lon="-122.010417"/>
+<trkpt lat="49.197861" lon="-122.018223"/>
+<trkpt lat="49.198742" lon="-122.016483"/>
+<trkpt lat="49.199652" lon="-122.015429"/>
+<trkpt lat="49.201750" lon="-122.014376"/>
+<trkpt lat="49.203036" lon="-122.012900"/>
+<trkpt lat="49.204260" lon="-122.010382"/>
+<trkpt lat="49.204104" lon="-122.006642"/>
+<trkpt lat="49.207472" lon="-122.003626"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.235218" lon="-121.957612"/>
+<trkpt lat="49.234763" lon="-121.955732"/>
+<trkpt lat="49.234540" lon="-121.953037"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.230356" lon="-121.921230"/>
+<trkpt lat="49.230089" lon="-121.918346"/>
+</trkseg>
+</trk>
+</gpx>

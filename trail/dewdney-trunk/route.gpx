@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Dewdney Trunk</name>
+<link href="https://bccycletourism.ca/trail/dewdney-trunk/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.244737" lon="-122.712712">
+<name>Hopcott Farms Bistro</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Dewdney Trunk</name>
+<trkseg>
+<trkpt lat="49.242276" lon="-122.644738"/>
+<trkpt lat="49.242268" lon="-122.655860"/>
+<trkpt lat="49.242286" lon="-122.667002"/>
+<trkpt lat="49.242279" lon="-122.670161"/>
+<trkpt lat="49.242280" lon="-122.670381"/>
+<trkpt lat="49.242293" lon="-122.678222"/>
+<trkpt lat="49.242286" lon="-122.689503"/>
+<trkpt lat="49.244127" lon="-122.689526"/>
+<trkpt lat="49.244236" lon="-122.718108"/>
+<trkpt lat="49.243392" lon="-122.719120"/>
+<trkpt lat="49.243072" lon="-122.719437"/>
+</trkseg>
+</trk>
+</gpx>

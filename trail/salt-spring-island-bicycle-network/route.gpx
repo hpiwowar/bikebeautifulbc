@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Salt Spring Island Bicycle Network</name>
+<link href="https://bccycletourism.ca/trail/salt-spring-island-bicycle-network/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="48.881660" lon="-123.572301">
+<name>Seaside restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.880404" lon="-123.568547">
+<name>Vesuvius Cafe&amp;Store</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.877322" lon="-123.544362">
+<name>Duck Creek Farm</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="48.856393" lon="-123.503989">
+<name>Salt Spring Island Multi Space (SIMS)</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="48.855091" lon="-123.499997">
+<name>BCLIQUOR Ganges</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="48.859485" lon="-123.508497">
+<name>Uptown Pizza</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.854070" lon="-123.501099">
+<name>Paco's Tacos</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.853647" lon="-123.501700">
+<name>Switchboard Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.853409" lon="-123.499782">
+<name>Salt Spring Island Visitor Information Centre</name>
+<cmt>generic</cmt>
+<desc>Visitor Centre</desc>
+<sym>Dot</sym>
+<type>generic</type>
+</wpt>
+<wpt lat="48.859196" lon="-123.500759">
+<name>Moby's Pub</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.853284" lon="-123.498396">
+<name>Glad's Ice Cream</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.852600" lon="-123.499807">
+<name>Cassette Cafe and Dive Bar</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.853096" lon="-123.497582">
+<name>Steffich Fine Art</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="48.852157" lon="-123.499693">
+<name>Pizza Cavern</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.867274" lon="-123.506326">
+<name>The Glass Foundry</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="48.852089" lon="-123.502754">
+<name>ArtSpring</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="48.858347" lon="-123.509964">
+<name>Wisteria Guest House</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="48.855537" lon="-123.501142">
+<name>Mariner's Loft</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="48.854991" lon="-123.501089">
+<name>Mahon Hall</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="48.854784" lon="-123.500378">
+<name>Pura Vida</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.854726" lon="-123.500364">
+<name>Seaside Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.859603" lon="-123.508940">
+<name>Golden Island Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.859788" lon="-123.509452">
+<name>Dagwoods Diner</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.854059" lon="-123.500601">
+<name>Kodama Kitchen</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.861117" lon="-123.511776">
+<name>Upper Ganges Liquor Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="48.860602" lon="-123.511230">
+<name>Country Grocer</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="48.853805" lon="-123.500589">
+<name>Salt Spring Inn</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="48.853865" lon="-123.499963">
+<name>Voyage Liquor Express</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="48.853717" lon="-123.500360">
+<name>Salt Spring Inn</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.858999" lon="-123.502295">
+<name>Harbour House</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.853648" lon="-123.501544">
+<name>Switchboard cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.853780" lon="-123.499741">
+<name>Thrifty Foods</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="48.859143" lon="-123.502354">
+<name>Harbour House Hotel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="48.853941" lon="-123.498783">
+<name>Oystercatcher Seafood Bar &amp; Grill</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.855071" lon="-123.512042">
+<name>Rainbow Road Aquatic Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="48.864820" lon="-123.514167">
+<name>Kutatás Wines</name>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.859153" lon="-123.499776">
+<name>Hastings House Country House Hotel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="48.852792" lon="-123.499929">
+<name>T.J. Beans</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.852547" lon="-123.500546">
+<name>Salt Spring Coffee</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.862059" lon="-123.520516">
+<name>Salt Spring Wild Cider</name>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.852510" lon="-123.501222">
+<name>Salt Spring Island Public Library</name>
+<cmt>library</cmt>
+<desc>Library</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="48.862058" lon="-123.520638">
+<name>Salt Spring Wild Cider House Kitchen</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.852336" lon="-123.500703">
+<name>Barb's Bakery &amp; Bistro</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.851896" lon="-123.500762">
+<name>OutSpokin</name>
+<cmt>bike_shop</cmt>
+<desc>Repair Shop</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+<wpt lat="48.851833" lon="-123.499251">
+<name>Del Vecchio Pasta - Pasta Fresca</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Salt Spring Island Bicycle Network</name>
+<trkseg>
+<trkpt lat="48.881253" lon="-123.573386"/>
+<trkpt lat="48.881192" lon="-123.572760"/>
+<trkpt lat="48.881741" lon="-123.572518"/>
+<trkpt lat="48.881852" lon="-123.572351"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.881852" lon="-123.572351"/>
+<trkpt lat="48.881906" lon="-123.572439"/>
+<trkpt lat="48.882137" lon="-123.572811"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.881852" lon="-123.572351"/>
+<trkpt lat="48.881278" lon="-123.571360"/>
+<trkpt lat="48.880339" lon="-123.567681"/>
+<trkpt lat="48.880082" lon="-123.565344"/>
+<trkpt lat="48.878903" lon="-123.561516"/>
+<trkpt lat="48.878904" lon="-123.559318"/>
+<trkpt lat="48.878924" lon="-123.558766"/>
+<trkpt lat="48.877744" lon="-123.555274"/>
+<trkpt lat="48.876180" lon="-123.551200"/>
+<trkpt lat="48.877478" lon="-123.548902"/>
+<trkpt lat="48.877649" lon="-123.547884"/>
+<trkpt lat="48.875918" lon="-123.542816"/>
+<trkpt lat="48.875358" lon="-123.539854"/>
+<trkpt lat="48.875398" lon="-123.534771"/>
+<trkpt lat="48.873914" lon="-123.532316"/>
+<trkpt lat="48.873124" lon="-123.529275"/>
+<trkpt lat="48.868359" lon="-123.529064"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.861841" lon="-123.515151"/>
+<trkpt lat="48.858487" lon="-123.514970"/>
+<trkpt lat="48.858434" lon="-123.512221"/>
+<trkpt lat="48.857980" lon="-123.510983"/>
+<trkpt lat="48.857736" lon="-123.509108"/>
+<trkpt lat="48.857270" lon="-123.507597"/>
+<trkpt lat="48.856957" lon="-123.504653"/>
+<trkpt lat="48.856080" lon="-123.501110"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.865358" lon="-123.500942"/>
+<trkpt lat="48.865407" lon="-123.498550"/>
+<trkpt lat="48.864995" lon="-123.497091"/>
+<trkpt lat="48.860140" lon="-123.486950"/>
+<trkpt lat="48.857351" lon="-123.480785"/>
+<trkpt lat="48.853789" lon="-123.471533"/>
+<trkpt lat="48.853452" lon="-123.470287"/>
+<trkpt lat="48.853440" lon="-123.468674"/>
+<trkpt lat="48.853472" lon="-123.465689"/>
+<trkpt lat="48.851960" lon="-123.459982"/>
+<trkpt lat="48.851467" lon="-123.454657"/>
+<trkpt lat="48.850716" lon="-123.451495"/>
+<trkpt lat="48.850591" lon="-123.450064"/>
+<trkpt lat="48.850660" lon="-123.448244"/>
+<trkpt lat="48.851166" lon="-123.446139"/>
+<trkpt lat="48.851355" lon="-123.445408"/>
+</trkseg>
+</trk>
+</gpx>

@@ -51,6 +51,11 @@ body {
 .g-main a { color: #1E7D96; }
 .g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: 1200px; margin: 0 auto; padding: 64px 40px 72px; display: flex; align-items: flex-start; justify-content: space-between; }
 .g-footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .g-footer-brand img { width: 48px; height: 48px; }
@@ -375,7 +380,7 @@ body {
 .dir-intro .intro a { color:#1F514C; font-weight:700; text-decoration:underline; }
 .dir-intro hr { border:none; border-top:1px solid #E6E0CC; margin:20px 0 0; }
 
-.cat-tabs { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 4px; }
+.cat-tabs { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 14px; }
 .cat-tab { display:inline-flex; align-items:center; gap:8px; padding:11px 18px; border-radius:999px; font-size:15.5px; font-weight:600; border:1px solid #DAD7C6; background:#FFFDF9; color:#2C463C; cursor:pointer; white-space:nowrap; text-decoration:none; transition:all .12s; }
 .cat-tab svg { width:17px; height:17px; flex-shrink:0; }
 .cat-tab .ct { font-weight:400; color:#9AA29A; }
@@ -395,11 +400,17 @@ body {
 .fg-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:9px; }
 .fg-title { font-size:12px; font-weight:700; color:#9AA29A; letter-spacing:.7px; text-transform:uppercase; }
 .fg-hint { font-size:12px; color:#B0B6A8; }
+.fg-titlewrap { display:flex; align-items:center; gap:5px; }
+.fg-info { position:relative; display:inline-flex; cursor:pointer; outline:none; }
+.fg-i { display:inline-flex; align-items:center; justify-content:center; width:14px; height:14px; border-radius:50%; border:1px solid #C4CABA; color:#9AA29A; font-size:10px; font-weight:700; line-height:1; font-family:Georgia,'Times New Roman',serif; }
+.fg-info:hover .fg-i, .fg-info:focus .fg-i { border-color:#1E7D96; color:#1E7D96; }
+.fg-pop { position:absolute; left:0; top:22px; z-index:60; width:230px; background:#fff; border:1px solid #E3DECF; border-radius:10px; box-shadow:0 6px 22px rgba(0,0,0,.13); padding:11px 13px; font-size:12px; line-height:1.5; font-weight:400; letter-spacing:normal; text-transform:none; color:#3C4A43; opacity:0; visibility:hidden; transition:opacity .16s ease, visibility .16s ease; }
+.fg-info:hover .fg-pop, .fg-info:focus .fg-pop { opacity:1; visibility:visible; }
 .fopt { display:flex; align-items:center; gap:10px; padding:5px 0; cursor:pointer; }
 .fopt .lbl { font-size:15px; color:#3C4A43; flex:1; min-width:0; }
 .fopt .cnt { font-size:13.5px; color:#9AA29A; }
 /* zero-result filter options keep full styling by default; uncomment to dim them */
-/* .fopt.z0 { opacity:.5; } */
+.fopt.z0 { opacity:.45; }
 .fdot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
 .cbx { width:17px; height:17px; border-radius:5px; border:1.5px solid #C9C9BC; background:#fff; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
 .cbx svg { width:11px; height:11px; stroke:#fff; stroke-width:3; fill:none; display:none; }
@@ -439,8 +450,10 @@ body {
 .dir-sortwrap { margin-left:auto; display:inline-flex; align-items:center; gap:6px; }
 .dir-sortlbl { font-size:14px; color:#6B746B; }
 .dir-sortbtn { border:1px solid #DDD8C7; border-radius:8px; background:#fff; padding:8px 12px; font-size:14px; color:#3C4A43; font-family:inherit; cursor:pointer; }
-.assumed-note { font-size:13px; color:#9AA29A; margin:10px 0 0; text-align:right; }
+.assumed-note { font-size:13px; color:#9AA29A; margin:0 0 8px; text-align:right; }
 .assumed-note code { font-family:ui-monospace,Menlo,monospace; }
+.desc-toggle { font-size:14px; border:1px solid #DDD8C7; border-radius:8px; background:#fff; padding:8px 12px; color:#3C4A43; text-decoration:none; white-space:nowrap; }
+.desc-toggle:hover { color:#1E7D96; border-color:#1E7D96; }
 
 .filterbtn { display:none; align-items:center; gap:8px; border:1px solid #1E7D96; background:#EAF3EC; color:#1C5240; font-weight:600; border-radius:8px; padding:9px 14px; font-size:14px; cursor:pointer; font-family:inherit; }
 .filterbtn svg { width:16px; height:16px; }
@@ -454,7 +467,9 @@ body {
 .dir-cards { margin-top:18px; display:flex; flex-direction:column; gap:16px; }
 .lcard { border:1px solid #ECE7D6; border-left:4px solid #B6B6AC; border-radius:12px; padding:clamp(18px,2.5vw,24px) clamp(16px,2vw,26px); display:flex; flex-wrap:wrap; gap:20px; background:#fff; cursor:pointer; transition:box-shadow .12s; }
 .lcard:hover { box-shadow:0 3px 14px rgba(0,0,0,.06); }
-.lcard.is-accredited { border-left-color:#2E8A36; }
+/* Accredited cards keep their sort position but wear the C4 treatment:
+   light teal panel, teal stripe, teal badge with gold seal. */
+.lcard.is-accredited { background:#F5FAFB; border-color:#BFDDE7; border-left-color:#14586B; box-shadow:0 2px 10px rgba(20,88,107,0.08); }
 .lcard.is-welcoming { border-left-color:#D9A93B; }
 .lcard.is-info { border-left-color:#B6B6AC; }
 .lcard.is-unwelcome { border-left-color:#C9483B; }
@@ -462,26 +477,33 @@ body {
 .lavatar svg { width:20px; height:20px; }
 .lbody { flex:1 1 360px; min-width:240px; }
 .ltitle-row { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.lbadges { display:flex; align-items:flex-start; gap:8px; flex-shrink:0; }
 .ltitle { font-size:22px; font-weight:700; color:#1A1A1A; }
 .sbadge { font-size:14px; font-weight:600; border-radius:999px; padding:3px 11px; white-space:nowrap; flex-shrink:0; }
-.sb-accredited { background:#E6F2E8; color:#2E8A36; }
+.sb-accredited { background:#1E7D96; color:#fff; }
+.sb-accredited .seal { color:#F0C948; }
 .sb-welcoming { background:#FFF8E1; color:#8A5A1E; }
 .sb-info { background:#EEEEEA; color:#7A7A72; }
 .sb-unwelcome { background:#F6E3E0; color:#B33B2E; }
+.lnotable { background:#1F514C; color:#FFF; font-size:13px; font-weight:600; border-radius:999px; padding:3px 10px; white-space:nowrap; flex-shrink:0; letter-spacing:0.2px; }
+.lwowcap { font-size:14.5px; color:#5A6358; font-style:italic; margin:6px 0 0; line-height:1.4; }
 .lmeta { font-size:16px; color:#8A938A; margin:5px 0 0; }
 .lcatpill { background:#FFF6E5; color:#1E7D96; font-weight:600; font-size:13.5px; border-radius:999px; padding:2px 9px; }
 .lprice { background:#F0EEE4; color:#6B6B5E; font-size:14px; border-radius:6px; padding:1px 7px; margin-left:6px; }
+.lareqchips { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 0; }
 .lachips { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 0; }
-.lachip { background:#FFF6E5; border:1px solid #F0E6C5; color:#1E7D96; font-size:14.5px; border-radius:999px; padding:3px 11px; }
+.lachip { background:#FFF6E5; border:1px solid #F0E6C5; color:#1E7D96; font-size:14.5px; border-radius:999px; padding:3px 11px; position:relative; }
 .lachip .star { color:#1E7D96; font-weight:800; }
+/* Styled hover tooltip for amenity notes (replaces the OS-grey title tooltip) */
+.lachip[data-note]::after { content:attr(data-note); position:absolute; left:0; bottom:calc(100% + 8px); background:#25332C; color:#fff; font-size:13.5px; font-weight:400; line-height:1.45; padding:9px 12px; border-radius:8px; width:max-content; max-width:300px; white-space:normal; box-shadow:0 4px 14px rgba(0,0,0,.18); opacity:0; visibility:hidden; transition:opacity .12s; pointer-events:none; z-index:40; }
+.lachip[data-note]:hover::after { opacity:1; visibility:visible; }
 .lichips { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 0; }
 .lichip { background:#EDF5EE; border:1px solid #CFE3D2; color:#1F514C; font-weight:600; font-size:13.5px; border-radius:999px; padding:3px 11px; }
+.lfacets { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 0; }
+.lfacet { background:#EEF3F1; border:1px solid #D5E2DE; color:#1E7D96; font-weight:600; font-size:13.5px; border-radius:999px; padding:3px 11px; }
 .ldesc { font-size:16px; line-height:1.55; color:#3C4A43; margin:11px 0 0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+body.wwc-show-full .ldesc { -webkit-line-clamp: unset; display:block; overflow:visible; }
 .lfoot { display:flex; align-items:center; gap:12px; margin:12px 0 0; flex-wrap:wrap; }
-.lbasics { font-size:14px; }
-.lbasics.partial { color:#B07A1E; }
-.lbasics.unconfirmed { color:#8A8F86; }
-.lbasics.unwelcome { color:#B33B2E; }
 .lviewdetails { font-size:15px; color:#1E7D96; font-weight:700; margin-left:auto; }
 .dir-noresults { padding:40px 8px; color:#6B746B; font-size:15px; }
 .dir-noresults a { color:#1E7D96; cursor:pointer; text-decoration:underline; }
@@ -535,13 +557,12 @@ body {
   <div class="dir-intro">
     <div class="dir-eyebrow">We Welcome Cyclists</div>
     <h1>Plan your ride in British Columbia</h1>
-    <p class="intro">Find the stops and services that welcome cyclists, and know what to expect before you arrive. A directory of 19,000+ places across BC, with the details and descriptions touring cyclists actually need.</p>
-    <p class="browse-links"><a href="/routes">Browse routes &rarr;</a> &nbsp;&middot;&nbsp; <a href="/wwc/communities/">Browse by community &rarr;</a> &nbsp;&middot;&nbsp; <a href="/we-welcome-cyclists/">What &ldquo;welcomes cyclists&rdquo; means &rarr;</a></p>
+    <p class="intro">Find the stops and services that welcome cyclists, and know what to expect before you arrive. A directory of 18,600+ places across BC, with the details and descriptions touring cyclists actually need.</p>
+    <p class="browse-links"><a href="/trails/">Browse named trails &rarr;</a> &nbsp;&middot;&nbsp; <a href="/wwc/communities/">Browse by community &rarr;</a> &nbsp;&middot;&nbsp; <a href="/we-welcome-cyclists/">What &ldquo;welcomes cyclists&rdquo; means &rarr;</a></p>
     <hr />
   </div>
 
   <div id="view-dir">
-    <p class="browse-links" style="margin-bottom:16px;"><a onclick="gotoRoute();return false;">Filter by trail &rarr;</a></p>
     <div class="cat-tabs" id="cat-tabs"></div>
     <div class="ss-panel">
       <div class="ss-overlay" id="dir-overlay" onclick="closeDrawer()"></div>
@@ -583,7 +604,7 @@ body {
       <li><code>type:hostel</code> &mdash; subcategory (also <code>subcat:</code>)</li>
       <li><code>amenity:wifi</code> &mdash; a listed amenity</li>
       <li><code>route:Kettle</code> &mdash; stops on a named route</li>
-      <li><code>status:qualified</code> &mdash; accreditation status</li>
+      <li><code>status:welcoming</code> &mdash; accreditation status (also <code>accredited</code>, <code>info</code>)</li>
       <li><code>price:$$</code> &mdash; price band</li>
       <li><code>owner:"Buy BC"</code> &mdash; ownership (also <code>"Buy Canadian"</code>, <code>chain</code>)</li>
       <li><code>indigenous:owned</code> &mdash; Indigenous role</li>
@@ -619,7 +640,7 @@ var INFO_FIELDS = [
   "Fallback transportation where available", "Local hazards or access notes"
 ];
 
-var categories = [{"id": "visitor", "tab": "Attractions", "name": "Attractions", "description": "Visitor centres, museums, heritage sites, libraries, rec centres, hot springs, and farmers' markets.", "infoSheet": true, "required": [{"title": "Bike parking", "detail": ""}, {"title": "Water bottle refill", "detail": "Potable water refill available to customers, or staff can refill a bottle on request."}, {"title": "Washrooms", "detail": ""}], "optional": ["Showers (drop-in or fee)", "Café or food on site", "Water without admission", "Luggage / bag storage", "Vending machines", "Bike rack visible from inside", "Covered bike parking", "Public rack nearby", "Bike allowed inside/on patio", "Device charging", "Wi-Fi", "E-bike charging", "Pump", "Discount for arriving by bike"], "examples": []}, {"id": "hotel", "tab": "Accommodation", "name": "Accommodation", "description": "Hotels, motels, hostels, guesthouses, B&Bs, and inns.", "infoSheet": true, "required": [{"title": "Secure overnight bike storage", "detail": "Locked room, garage, bikes in guest rooms, storage shed, staff-controlled storage, or another clearly described secure arrangement."}, {"title": "Staff know the bike procedure", "detail": "Front desk staff know where bikes go and what to do with loaded touring bikes, e-bikes, or trailers."}], "optional": ["Min-stay waived", "Laundry", "Drying area", "Early or packed breakfast", "Nearby evening food", "Nearby grocery", "Vending machines", "Bikes in rooms", "E-bike charging", "Device charging", "Luggage storage", "Pump", "Basic tools", "Bike wash / hose", "Wi-Fi"], "examples": []}, {"id": "campground", "tab": "Camping", "name": "Camping", "description": "Private campgrounds, public campgrounds, and backcountry sites.", "infoSheet": true, "required": [{"title": "No turn-away policy for cyclists", "detail": "Must accommodate cyclists arriving by bike for one night — hiker/biker sites, overflow tenting, or similar. Limits on group size ok, see ****HEATHER PUT URL HERE*** for more info."}], "optional": ["Min-stay waived", "Hiker/biker sites", "Potable water", "Showers", "Washrooms", "Flush toilets", "Pit/outhouse toilet", "Food nearby", "Covered shelter", "Laundry", "Drying area", "Animal-safe food storage", "Reservations accepted", "Cyclist discount", "Device charging", "E-bike charging", "Vending machines", "Ice", "Pump", "Basic tools", "Camping fuel"], "examples": []}, {"id": "restaurant", "tab": "Food & Drink", "name": "Food & Drink", "description": "Restaurants, cafés, pubs, food trucks, fast food, bakeries, wineries, and breweries.", "infoSheet": false, "required": [{"title": "Bike parking or bike visibility", "detail": "Bike rack, public rack, patio visibility, window visibility, or staff-approved area. The listing describes which."}, {"title": "Water bottle refill", "detail": "Potable water refill available to customers, or staff can refill a bottle on request."}, {"title": "Washrooms", "detail": "For food trucks, kiosks, farm stands, and takeout-only businesses, list the nearest public washrooms."}], "optional": ["Takeout", "Packed lunches", "Water without purchase", "Vegetarian / vegan / GF", "Bike rack visible from inside", "Covered bike parking", "Public rack nearby", "Bike allowed inside/on patio", "Device charging", "E-bike charging", "Pump", "Wi-Fi"], "examples": []}, {"id": "grocery", "tab": "Supplies", "name": "Supplies", "description": "Grocery stores, convenience stores, farm stands, and retail stores to restock on supplies and outdoor gear.", "infoSheet": false, "required": [{"title": "Bike parking", "detail": "A practical place for customers arriving by bike to park."}, {"title": "Water bottle refill", "detail": "Potable water refill available to customers, or staff can refill a bottle on request."}], "optional": ["Basic groceries", "Hot food", "Washrooms", "Outdoor water tap", "Ice", "Vending machines", "Camping fuel", "Bike rack visible from inside", "Covered bike parking", "Public rack nearby", "Bike allowed inside/on patio", "Device charging", "E-bike charging", "Pump"], "examples": []}, {"id": "bikeshop", "tab": "Bike Services", "name": "Bike Services", "description": "Bicycle retail and repair shops, bike rental.", "infoSheet": true, "required": [{"title": "Staff help with urgent mechanical issues", "detail": "Staff will offer triage, air, basic advice, same-day help where possible, or a clear referral."}, {"title": "Pump available", "detail": "A floor pump accessible to visiting cyclists."}], "optional": ["Walk-in repairs", "Same-day urgent repairs", "Touring parts stocked", "E-bike service", "Bike boxes / packing", "Shipping bikes", "Bike rentals", "Shuttle / trip support", "Guided rides", "DIY stand", "Washrooms", "Water bottle refill", "Device charging", "E-bike charging"], "examples": []}, {"id": "transport", "tab": "Transport", "name": "Transport", "description": "Planes, trains, automobiles, buses, shuttles, taxies, and ferries.", "infoSheet": false, "required": [{"title": "Accommodates bicycles", "detail": "Transports cyclists with bikes, or handles luggage/unaccompanied bicycles. Listing explains capacity, booking, fees, and packaging."}], "optional": ["Passenger + bike", "Walk-on bikes", "Advance booking required", "Reservations", "Bike fee applies", "Unboxed bikes OK", "Boxed bikes OK", "Bagged bikes OK", "E-bikes OK", "Trailers OK", "Luggage transfer", "Unaccompanied bike transport", "Interior transport", "Exterior rack"], "examples": []}];
+var categories = [{"id": "visitor", "tab": "Attractions", "name": "Attractions", "description": "Visitor centres, museums, heritage sites, libraries, rec centres, hot springs, and farmers' markets.", "infoSheet": true, "required": [{"title": "Bike parking", "detail": ""}, {"title": "Water bottle refill", "detail": "Potable water refill available to customers, or staff can refill a bottle on request."}, {"title": "Washrooms", "detail": ""}], "optional": ["Showers (drop-in or fee)", "Café or food on site", "Water without admission", "Luggage / bag storage", "Vending machines", "Bike rack visible from inside", "Covered bike parking", "Public rack nearby", "Bike allowed inside/on patio", "Device charging", "Wi-Fi", "E-bike charging", "Pump", "Discount for arriving by bike"], "examples": []}, {"id": "hotel", "tab": "Accommodation", "name": "Accommodation", "description": "Hotels, motels, hostels, guesthouses, B&Bs, and inns.", "infoSheet": true, "required": [{"title": "Secure overnight bike storage", "detail": "Locked room, garage, bikes in guest rooms, storage shed, staff-controlled storage, or another clearly described secure arrangement."}], "optional": ["Min-stay waived", "Laundry", "Drying area", "Early or packed breakfast", "Nearby evening food", "Nearby grocery", "Vending machines", "Bikes in rooms", "E-bike charging", "Device charging", "Luggage storage", "Pump", "Basic tools", "Bike wash / hose", "Wi-Fi"], "examples": []}, {"id": "campground", "tab": "Camping", "name": "Camping", "description": "Private campgrounds, public campgrounds, and backcountry sites.", "infoSheet": true, "required": [{"title": "No turn-away policy for cyclists", "detail": "Must accommodate cyclists arriving by bike for one night — hiker/biker sites, overflow tenting, or similar. Limits on group size ok, see ****HEATHER PUT URL HERE*** for more info."}], "optional": ["Min-stay waived", "Hiker/biker sites", "Potable water", "Showers", "Washrooms", "Flush toilets", "Pit/outhouse toilet", "Food nearby", "Covered shelter", "Laundry", "Drying area", "Animal-safe food storage", "Reservations accepted", "Cyclist discount", "Device charging", "E-bike charging", "Vending machines", "Ice", "Pump", "Basic tools", "Camping fuel"], "examples": []}, {"id": "restaurant", "tab": "Food & Drink", "name": "Food & Drink", "description": "Restaurants, cafés, pubs, food trucks, fast food, bakeries, wineries, and breweries.", "infoSheet": false, "required": [{"title": "Bike parking or bike visibility", "detail": "Bike rack, public rack, patio visibility, window visibility, or staff-approved area. The listing describes which."}, {"title": "Water bottle refill", "detail": "Potable water refill available to customers, or staff can refill a bottle on request."}, {"title": "Washrooms", "detail": "For food trucks, kiosks, farm stands, and takeout-only businesses, list the nearest public washrooms."}], "optional": ["Takeout", "Packed lunches", "Water without purchase", "Vegetarian / vegan / GF", "Bike rack visible from inside", "Covered bike parking", "Public rack nearby", "Bike allowed inside/on patio", "Device charging", "E-bike charging", "Pump", "Wi-Fi"], "examples": []}, {"id": "grocery", "tab": "Supplies", "name": "Supplies", "description": "Grocery stores, convenience stores, farm stands, and retail stores to restock on supplies and outdoor gear.", "infoSheet": false, "required": [{"title": "Bike parking", "detail": "A practical place for customers arriving by bike to park."}, {"title": "Water bottle refill", "detail": "Potable water refill available to customers, or staff can refill a bottle on request."}], "optional": ["Basic groceries", "Hot food", "Washrooms", "Outdoor water tap", "Ice", "Vending machines", "Camping fuel", "Bike rack visible from inside", "Covered bike parking", "Public rack nearby", "Bike allowed inside/on patio", "Device charging", "E-bike charging", "Pump"], "examples": []}, {"id": "bikeshop", "tab": "Bike Services", "name": "Bike Services", "description": "Bicycle retail and repair shops, bike rental.", "infoSheet": true, "required": [{"title": "Staff help with urgent mechanical issues", "detail": "Staff will offer triage, air, basic advice, same-day help where possible, or a clear referral."}, {"title": "Pump available", "detail": "A floor pump accessible to visiting cyclists."}], "optional": ["Walk-in repairs", "Same-day urgent repairs", "Touring parts stocked", "E-bike service", "Bike boxes / packing", "Shipping bikes", "Bike rentals", "Shuttle / trip support", "Guided rides", "DIY stand", "Washrooms", "Water bottle refill", "Device charging", "E-bike charging"], "examples": []}, {"id": "transport", "tab": "Transport", "name": "Transport", "description": "Planes, trains, automobiles, buses, shuttles, taxies, and ferries.", "infoSheet": false, "required": [{"title": "Accommodates bicycles", "detail": "Transports cyclists with bikes, or handles luggage/unaccompanied bicycles. Listing explains capacity, booking, fees, and packaging."}], "optional": ["Passenger + bike", "Walk-on bikes", "Advance booking required", "Reservations", "Bike fee applies", "Unboxed bikes OK", "Boxed bikes OK", "Bagged bikes OK", "E-bikes OK", "Trailers OK", "Luggage transfer", "Unaccompanied bike transport", "Interior transport", "Exterior rack"], "examples": []}];
 
 var CAT_ICONS = {
   all:        "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='7' height='7' rx='1.5'/><rect x='14' y='3' width='7' height='7' rx='1.5'/><rect x='3' y='14' width='7' height='7' rx='1.5'/><rect x='14' y='14' width='7' height='7' rx='1.5'/></svg>",
@@ -633,7 +654,7 @@ var CAT_ICONS = {
 };
 var CHECK_SVG = "<svg viewBox='0 0 24 24'><path d='M5 12l5 5L20 6'/></svg>";
 var STATUS_OPTS = [
-  {key:'accredited', label:'Accredited',      dot:'#2E8A36'},
+  {key:'accredited', label:'Accredited',      dot:'#1E7D96'},
   {key:'welcoming',  label:'Welcoming',       dot:'#D9A93B'},
   {key:'info',       label:'Info',            dot:'#B6B6AC'},
   {key:'unwelcome',  label:'Bikes Unwelcome', dot:'#C9483B'},
@@ -666,6 +687,19 @@ var INDIG_OPTS = [
   {key:'Indigenous operated', label:'Operated'},
   {key:'Indigenous culture & heritage', label:'Culture & heritage'},
 ];
+var INDIG_INFO = "Sourced from <a href='https://www.indigenousbc.com' target='_blank' rel='noopener' style='color:#1E7D96'>Indigenous Tourism BC</a> and <a href='https://www.destinationindigenous.ca' target='_blank' rel='noopener' style='color:#1E7D96'>Destination Indigenous</a>, where businesses self-identify, plus a few band-operated facilities from public records. Spot an error, or a business we're missing? Let us know.";
+// URL slugs for the label-based facets (ownership/indigenous/price), so the hash
+// carries clean tokens (ir=indigenous-culture-heritage) instead of percent-encoded
+// human labels with spaces and %26. Maps are built once from the OPTS; read falls
+// back to the raw value, so any older encoded-label URL still resolves.
+function _facetSlug(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
+var OWN_BY_SLUG = {}, OWN_TO_SLUG = {};
+OWNERSHIP_OPTS.forEach(function(o){ var s = _facetSlug(o.key); OWN_BY_SLUG[s] = o.key; OWN_TO_SLUG[o.key] = s; });
+var INDIG_BY_SLUG = {}, INDIG_TO_SLUG = {};
+INDIG_OPTS.forEach(function(o){ var s = _facetSlug(o.key); INDIG_BY_SLUG[s] = o.key; INDIG_TO_SLUG[o.key] = s; });
+// Price symbols slugify to nothing, so map them explicitly.
+var PRICE_TO_SLUG = {'Free':'free', '$':'1', '$$':'2', '$$$':'3', '$$$$':'4'};
+var PRICE_BY_SLUG = {}; Object.keys(PRICE_TO_SLUG).forEach(function(k){ PRICE_BY_SLUG[PRICE_TO_SLUG[k]] = k; });
 var PAGE = 50;
 
 var currentView = 'dir';                  // 'dir' (tabs + sidebar) or 'route'
@@ -673,9 +707,10 @@ var state = {
   activeCat: 'visitor',                   // category id, or 'all' for cross-category
   sel: {type:[], status:[], price:[], ownership:[], indigenous:[], basics:[], amenities:[]},
   search: '',
-  sort: 'amenities',                      // 'amenities' (default) or 'alpha'
+  sort: 'relevant',                       // 'relevant' (default) | 'wow' | 'amenities' | 'alpha'
   showAmenAll: false,
   amenFilter: '',
+  showFull: false,
   limit: PAGE,
 };
 // route-view state (unchanged behaviour)
@@ -737,7 +772,7 @@ function togAmen(i)   { toggle('amenities', _amenShown[i]); }
 function togChip(i)   { var c = _chipOpts[i]; toggle(c[0], c[1]); }
 function amenToggle() { state.showAmenAll = !state.showAmenAll; renderSidebar(); }
 function amenFilterIn(v) { state.amenFilter = v; renderSidebar(); var el = document.querySelector('#dir-sidebar-inner .amen-filter'); if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }
-function setSort(v) { state.sort = v; state.limit = PAGE; renderDynamic(); }
+function setSort(v) { state.sort = v; state.limit = PAGE; renderDynamic(); updateHash(); }
 
 function _fopt(on, fn, idx, label, opts) {
   opts = opts || {};
@@ -759,29 +794,50 @@ function _cntOpts(group, value, P, cur) {
   if (isOR && !on && state.sel[group].length > 0) return { delta: hypo - cur, zero: hypo === cur };
   return { count: hypo, zero: hypo === 0 };
 }
-function _group(title, hint, body) {
-  return '<div class="fg"><div class="fg-head"><span class="fg-title">' + title + '</span>' + (hint ? '<span class="fg-hint">' + hint + '</span>' : '') + '</div>' + body + '</div>';
+function _group(title, hint, body, info) {
+  var head = '<span class="fg-titlewrap"><span class="fg-title">' + title + '</span>' + (info ? _fginfo(info) : '') + '</span>';
+  return '<div class="fg"><div class="fg-head">' + head + (hint ? '<span class="fg-hint">' + hint + '</span>' : '') + '</div>' + body + '</div>';
+}
+function _fginfo(txt) {
+  return '<span class="fg-info" tabindex="0" role="button" aria-label="Where these tags come from">'
+    + '<span class="fg-i" aria-hidden="true">i</span>'
+    + '<span class="fg-pop">' + txt + '</span></span>';
 }
 function _basicLabel(t) { return t.replace(/^We Welcome Cyclists Local Knowledge Sheet.*/, 'Local Knowledge Sheet'); }
-// Ownership facet (cross-category). Only render buckets present in the pool so it
-// stays hidden for categories that carry no ownership (Attractions, Camping).
+// Does ANY listing in the pool carry this facet value, ignoring current selections
+// and search? This is the category "universe" check: it decides whether an option
+// belongs to this tab at all (category-aware), separate from its live count. Using
+// it for membership keeps the option list STABLE as you toggle — a value whose
+// count drops to 0 under the current selection greys out (z0) instead of vanishing,
+// so the panel no longer jumps between hiding "0" and showing "+0".
+function poolHas(group, value, P) {
+  return P.some(function(e){
+    if (group === 'ownership') return e.ownership === value;
+    if (group === 'indigenous') return (e.indigenous_role || []).indexOf(value) !== -1;
+    if (group === 'price') return e.price_tier === value;
+    return false;
+  });
+}
+// Ownership facet (cross-category). Render every bucket that occurs in this
+// category's pool (category-aware: Attractions/Camping carry their own value sets);
+// zero-under-selection buckets grey out rather than disappear.
 function _ownGroup(P, cur) {
-  var present = OWNERSHIP_OPTS.filter(function(o){ return facetCount('ownership', o.key, P) > 0 || state.sel.ownership.indexOf(o.key) !== -1; });
+  var present = OWNERSHIP_OPTS.filter(function(o){ return poolHas('ownership', o.key, P) || state.sel.ownership.indexOf(o.key) !== -1; });
   if (!present.length) return '';
-  return _group('Ownership', 'any of', present.map(function(o){ var c = _cntOpts('ownership', o.key, P, cur); var oi = OWNERSHIP_OPTS.indexOf(o); return _fopt(state.sel.ownership.indexOf(o.key)!==-1, 'togOwn', oi, o.label, c); }).join(''));
+  return _group('Buy Local', 'any of', present.map(function(o){ var c = _cntOpts('ownership', o.key, P, cur); var oi = OWNERSHIP_OPTS.indexOf(o); return _fopt(state.sel.ownership.indexOf(o.key)!==-1, 'togOwn', oi, o.label, c); }).join(''));
 }
-// Indigenous facet (cross-category). Same auto-hide rule: only render values
-// present in the pool, so the section appears wherever any record carries one.
+// Indigenous facet (cross-category). Render every role present anywhere in this
+// category's pool; zero-under-selection roles grey out rather than disappear.
 function _indigGroup(P, cur) {
-  var present = INDIG_OPTS.filter(function(o){ return facetCount('indigenous', o.key, P) > 0 || state.sel.indigenous.indexOf(o.key) !== -1; });
+  var present = INDIG_OPTS.filter(function(o){ return poolHas('indigenous', o.key, P) || state.sel.indigenous.indexOf(o.key) !== -1; });
   if (!present.length) return '';
-  return _group('Indigenous', 'any of', present.map(function(o){ var c = _cntOpts('indigenous', o.key, P, cur); var oi = INDIG_OPTS.indexOf(o); return _fopt(state.sel.indigenous.indexOf(o.key)!==-1, 'togIndig', oi, o.label, c); }).join(''));
+  return _group('Indigenous tourism', 'any of', present.map(function(o){ var c = _cntOpts('indigenous', o.key, P, cur); var oi = INDIG_OPTS.indexOf(o); return _fopt(state.sel.indigenous.indexOf(o.key)!==-1, 'togIndig', oi, o.label, c); }).join(''), INDIG_INFO);
 }
-// Price facet. Only render tiers present in the pool (or already selected), so
-// the whole group auto-hides on unpriced tabs (Camping/Groceries/Bike/Transport)
-// and a tab never shows a $$$$ option that matches nothing.
+// Price facet. Render every tier present in this category's pool, so the group
+// auto-hides on unpriced tabs (Camping/Groceries/Bike/Transport) but its options
+// stay put as you toggle; zero-under-selection tiers grey out.
 function _priceGroup(P, cur) {
-  var present = PRICE_OPTS.filter(function(p){ return facetCount('price', p, P) > 0 || state.sel.price.indexOf(p) !== -1; });
+  var present = PRICE_OPTS.filter(function(p){ return poolHas('price', p, P) || state.sel.price.indexOf(p) !== -1; });
   if (!present.length) return '';
   return _group('Price', 'any of', present.map(function(p){ var pi = PRICE_OPTS.indexOf(p); return _fopt(state.sel.price.indexOf(p)!==-1, 'togPrice', pi, p, _cntOpts('price', p, P, cur)); }).join(''));
 }
@@ -794,9 +850,9 @@ function renderSidebar() {
   if (state.activeCat === 'all') {
     html += '<div class="allcallout">Type &amp; amenity filters are defined per category. <b>Pick a category above</b> to use them.</div>';
     html += _group('Status', 'any of', STATUS_OPTS.map(function(s,i){ var o = _cntOpts('status', s.key, P, cur); o.dot = s.dot; return _fopt(state.sel.status.indexOf(s.key)!==-1, 'togStatus', i, s.label, o); }).join(''));
-    html += _priceGroup(P, cur);
-    html += _ownGroup(P, cur);
     html += _indigGroup(P, cur);
+    html += _ownGroup(P, cur);
+    html += _priceGroup(P, cur);
   } else {
     var cat = catById(state.activeCat);
     var sc = subcatCounts(cat);
@@ -805,14 +861,14 @@ function renderSidebar() {
       html += _group('Type', 'any of', _subOpts.map(function(s,i){ return _fopt(state.sel.type.indexOf(s)!==-1, 'togType', i, s, _cntOpts('type', s, P, cur)); }).join(''));
     }
     html += _group('Status', 'any of', STATUS_OPTS.map(function(s,i){ var o = _cntOpts('status', s.key, P, cur); o.dot = s.dot; return _fopt(state.sel.status.indexOf(s.key)!==-1, 'togStatus', i, s.label, o); }).join(''));
-    html += _priceGroup(P, cur);
-    html += _ownGroup(P, cur);
-    html += _indigGroup(P, cur);
     _basicOpts = cat.required.map(function(r){ return r.title; });
-    html += _group('Required basics', 'all of', _basicOpts.map(function(t,i){ return _fopt(state.sel.basics.indexOf(t)!==-1, 'togBasic', i, _basicLabel(t), _cntOpts('basics', t, P, cur)); }).join(''));
+    html += _group('Bike Basics', 'all of', _basicOpts.map(function(t,i){ return _fopt(state.sel.basics.indexOf(t)!==-1, 'togBasic', i, _basicLabel(t), _cntOpts('basics', t, P, cur)); }).join(''));
     _amenShown = cat.optional.slice();
     var rows = _amenShown.map(function(a,i){ return _fopt(state.sel.amenities.indexOf(a)!==-1, 'togAmen', i, a, _cntOpts('amenities', a, P, cur)); }).join('');
-    html += _group('Amenities', 'all of', rows);
+    html += _group('Bike Extras', 'all of', rows);
+    html += _indigGroup(P, cur);
+    html += _ownGroup(P, cur);
+    html += _priceGroup(P, cur);
   }
   document.getElementById('dir-sidebar-inner').innerHTML = html;
   var ap = document.getElementById('dir-sheet-apply');
@@ -880,7 +936,10 @@ function _parseQuery(toks) {
   if (pos !== toks.length) throw 'trailing';
   return ast;
 }
-function _normAmen(s) { return (s||'').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+// Collapse to bare alphanumerics (no separators) so amenity queries match
+// regardless of punctuation/spacing: "wifi" matches "Wi-Fi", "drinkingwater"
+// matches "Drinking water", etc.
+function _normAmen(s) { return (s||'').toLowerCase().replace(/[^a-z0-9]+/g, ''); }
 function _matchTerm(e, term) {
   var v = (term.value || '').toLowerCase();
   if (!v) return true;
@@ -954,10 +1013,34 @@ function filtered() {
       var ua = statusOf(a)==='unwelcome'?1:0, ub = statusOf(b)==='unwelcome'?1:0; if (ua !== ub) return ua - ub;
       return (a.name||'').localeCompare(b.name||'');
     });
-  } else {
+  } else if (state.sort === 'wow') {
+    // Wow score descending; Bikes Unwelcome still sunk; amenities then name break ties.
+    list.sort(function(a,b){
+      var ua = statusOf(a)==='unwelcome'?1:0, ub = statusOf(b)==='unwelcome'?1:0; if (ua !== ub) return ua - ub;
+      var na = (typeof a.wow==='number')?a.wow:-1, nb = (typeof b.wow==='number')?b.wow:-1;
+      if (na !== nb) return nb - na;
+      var ca = amenCount(a), cb = amenCount(b); if (ca !== cb) return cb - ca;
+      return (a.name||'').localeCompare(b.name||'');
+    });
+  } else if (state.sort === 'amenities') {
     list.sort(function(a,b){
       var ra = rank(a), rb = rank(b); if (ra !== rb) return ra - rb;
       var la = a.central?1:0, lb = b.central?1:0; if (la !== lb) return lb - la;
+      var ca = amenCount(a), cb = amenCount(b); if (ca !== cb) return cb - ca;
+      return (a.name||'').localeCompare(b.name||'');
+    });
+  } else {
+    // 'relevant' (default): wow (0-4) + tier bump (Accredited +3 / Welcoming +1),
+    // Bikes Unwelcome sunk regardless; amenity count then name break ties.
+    // Weights are eyeballed with Heather (2026-07-08); tune here if needed.
+    function relScore(e){
+      var st = statusOf(e);
+      var w = (typeof e.wow==='number') ? e.wow : 0;
+      return w + (st==='accredited' ? 3 : st==='welcoming' ? 1 : 0);
+    }
+    list.sort(function(a,b){
+      var ua = statusOf(a)==='unwelcome'?1:0, ub = statusOf(b)==='unwelcome'?1:0; if (ua !== ub) return ua - ub;
+      var sa = relScore(a), sb = relScore(b); if (sa !== sb) return sb - sa;
       var ca = amenCount(a), cb = amenCount(b); if (ca !== cb) return cb - ca;
       return (a.name||'').localeCompare(b.name||'');
     });
@@ -994,18 +1077,20 @@ function renderResults() {
 
   var ph = allMode ? 'Search all categories — try gelato community:Vancouver…' : 'Search this category — try gelato community:Vancouver…';
   var search = '<input class="search-in" id="dir-search" placeholder="' + esc(ph) + '" value="' + esc(state.search) + '" oninput="onSearch(this.value)" />' +
-    '<p class="search-tip">Tip: combine filters — <code onclick="fillCommunityPrefix()">community:Hope</code> narrows to a town, <code onclick="fillSearch(\x27name:\x27)">name:MEC</code> to a name, and any other words (like <code onclick="fillSearch(\x27gelato community:Vancouver\x27)">gelato</code>) match amenities. <a class="adv-link" onclick="openSearchHelp()">Advanced</a></p>';
+    '<p class="search-tip">Tip: <code onclick="fillCommunityPrefix()">community:Hope</code> narrows results to a town. <a class="adv-link" onclick="openSearchHelp()">Search tips</a></p>';
 
   var fbtn = '<button class="filterbtn" onclick="openDrawer()">' +
     "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'><line x1='4' y1='7' x2='20' y2='7'/><line x1='7' y1='12' x2='17' y2='12'/><line x1='10' y1='17' x2='14' y2='17'/></svg>" +
     'Filters<span class="badge-n" id="dir-fbadge" style="display:none"></span></button>';
   var sortSel = '<div class="dir-sortwrap"><label class="dir-sortlbl">Sort</label> <select class="dir-sortbtn" onchange="setSort(this.value)">' +
-    '<option value="amenities"' + (state.sort === 'amenities' ? ' selected' : '') + '>Most amenities</option>' +
+    '<option value="relevant"' + (state.sort === 'relevant' ? ' selected' : '') + '>Relevant</option>' +
+    '<option value="wow"' + (state.sort === 'wow' ? ' selected' : '') + '>Wow</option>' +
+    '<option value="amenities"' + (state.sort === 'amenities' ? ' selected' : '') + '>Most bike amenities</option>' +
     '<option value="alpha"' + (state.sort === 'alpha' ? ' selected' : '') + '>Alphabetical (A&ndash;Z)</option>' +
     '</select></div>';
   var toolbar = '<div class="dir-toolbar">' + fbtn + '<span class="dir-showing" id="dir-showing"></span>' +
-    sortSel + '</div>' +
-    '<p class="assumed-note"><code>*</code> = please see related note in full listing</p>';
+    sortSel +
+    '<a class="adv-link desc-toggle" id="dir-expand-link" onclick="toggleFull()">' + (state.showFull ? 'Shorten descriptions' : 'Full descriptions') + '</a></div>';
 
   // Build the stable shell ONCE. The search <input> lives here so it is never recreated
   // mid-keystroke (recreating it would steal focus). Only #dir-dyn updates as you type/filter.
@@ -1022,6 +1107,7 @@ function renderDynamic() {
   var total = catTotal(state.activeCat);
   var n = selCount();
   var hasF = n > 0 || state.search.length > 0;
+
   var showing = Math.min(list.length, state.limit);
 
   var showEl = document.getElementById('dir-showing');
@@ -1039,9 +1125,10 @@ function renderDynamic() {
   var commChip = cqName ? communityChipHTML(cqName) : '';
   var cards;
   if (list.length === 0) {
-    cards = commChip + '<div class="dir-noresults">No listings match your filters. <a onclick="clearAll()">Clear all</a></div>';
+    cards = commChip + '<div class="dir-noresults">' + emptyStateHTML(allMode, n) + '</div>';
   } else {
-    cards = commChip + '<div class="dir-cards">' + list.slice(0, state.limit).map(function(e){ return renderCard(e, e.__cat, allMode); }).join('') + '</div>';
+    var starNote = '<p class="assumed-note"><code>*</code> = has a note. Hover, or open the listing, to read it.</p>';
+    cards = commChip + starNote + '<div class="dir-cards">' + list.slice(0, state.limit).map(function(e){ return renderCard(e, e.__cat, allMode); }).join('') + '</div>';
     if (list.length > state.limit) cards += '<button class="dir-loadmore" onclick="loadMore()">Load more (' + (list.length - state.limit).toLocaleString() + ' remaining)</button>';
   }
   document.getElementById('dir-dyn').innerHTML = chipsHtml + cards;
@@ -1053,6 +1140,39 @@ function renderDynamic() {
     } catch(e) {}
   })();
 }
+// Empty-state rescues: a scoped search that finds nothing offers the cross-category
+// count (one click to All, search kept); a filters-only zero offers "Clear filters".
+// The rescue count ignores sidebar filters (they don't carry to All mode anyway), but
+// when filters — not the search — caused the zero, we say so instead.
+function emptyStateHTML(allMode, nFilters) {
+  var catName = allMode ? 'stops' : catById(state.activeCat).tab;
+  var q = (state.search || '').trim();
+  if (q) {
+    var pred = compileSearch(q);
+    if (!allMode && pred) {
+      if (nFilters) {
+        var ccnt = 0;
+        realEx(catById(state.activeCat)).forEach(function(e){ if (pred(e)) ccnt++; });
+        if (ccnt > 0) return 'No ' + esc(catName) + ' match &ldquo;' + esc(q) + '&rdquo; with these filters. <a onclick="clearFilters()">Clear filters</a> (' + ccnt.toLocaleString() + ' without them)';
+      }
+      var acnt = 0;
+      categories.forEach(function(c){ realEx(c).forEach(function(e){ if (pred(e)) acnt++; }); });
+      if (acnt > 0) return 'No ' + esc(catName) + ' match &ldquo;' + esc(q) + '&rdquo;. <a onclick="goAllWithSearch()">' + acnt.toLocaleString() + (acnt === 1 ? ' match' : ' matches') + ' across all categories &rsaquo;</a>';
+    }
+    var tail = ' <a onclick="clearAll()">Clear all</a>';
+    if (allMode) return 'No stops match &ldquo;' + esc(q) + '&rdquo;.' + tail;
+    return 'No ' + esc(catName) + ' match &ldquo;' + esc(q) + '&rdquo;, and nothing in the other categories either.' + tail;
+  }
+  if (nFilters) return 'No ' + esc(catName) + ' match these filters. <a onclick="clearFilters()">Clear filters</a>' +
+    (allMode ? '' : ' or <a onclick="goAllWithSearch()">try All listings &rsaquo;</a>');
+  return 'No listings here yet.';
+}
+function clearFilters() {
+  state.sel = {type:[], status:[], price:[], ownership:[], indigenous:[], basics:[], amenities:[]};
+  state.limit = PAGE;
+  renderSidebar(); renderDynamic(); updateHash();
+}
+function goAllWithSearch() { setCat('all'); }
 function onSearch(v) { state.search = v; state.limit = PAGE; renderDynamic(); renderSidebar(); updateHash(); }
 function loadMore() { state.limit += PAGE; renderDynamic(); }
 function clearAll() {
@@ -1069,13 +1189,6 @@ function communityChipHTML(name) {
 function clearSearch() { state.search = ''; var b = document.getElementById('dir-search'); if (b) b.value = ''; state.limit = PAGE; renderDynamic(); updateHash(); }
 
 /* ---------- shared card renderer (directory + route view) ---------- */
-function basicsLine(e, cat) {
-  if (statusOf(e) === 'unwelcome') return '<span class="lbasics unwelcome">&#10005; Bikes not accommodated</span>';
-  var req = cat.required.length, got = (e.req_checked||[]).length, fal = (e.req_falsed||[]).length;
-  if (got >= req) return '';
-  if (got === 0 && fal === 0) return '<span class="lbasics unconfirmed">? Cyclist basics not yet confirmed</span>';
-  return '<span class="lbasics partial">! Meets ' + got + ' of ' + req + ' basics</span>';
-}
 function renderCard(e, cat, showCatTag) {
   var st = statusOf(e);
   var sbMap = {accredited:['sb-accredited','Accredited'], welcoming:['sb-welcoming','Welcoming'], info:['sb-info','Info'], unwelcome:['sb-unwelcome','Bikes Unwelcome']};
@@ -1084,11 +1197,22 @@ function renderCard(e, cat, showCatTag) {
   var catPill = showCatTag ? ' <span class="lcatpill">' + esc(cat.tab) + '</span> ' : '';
   var price = e.price_band ? '<span class="lprice">' + esc(e.price_band) + '</span>' : '';
   var meta = esc(e.location||'') + catPill + (e.subcategory ? ' &middot; ' + esc(e.subcategory) : '') + price;
+  var reqChips = '';
+  if (st !== 'unwelcome' && e.req_checked && e.req_checked.length) {
+    reqChips = '<div class="lareqchips">' + e.req_checked.map(function(a){
+      var note = e.req_notes && e.req_notes[a];
+      var star = note ? '<span class="star">*</span>' : '';
+      var tip = note ? ' data-note="' + esc(note) + '"' : '';
+      return '<span class="lachip"' + tip + '>' + esc(a) + star + '</span>';
+    }).join('') + '</div>';
+  }
   var chips = '';
   if (st !== 'unwelcome' && e.checked && e.checked.length) {
     chips = '<div class="lachips">' + e.checked.map(function(a){
-      var star = (e.notes && e.notes[a]) ? '<span class="star">*</span>' : '';
-      return '<span class="lachip">' + esc(a) + star + '</span>';
+      var note = e.notes && e.notes[a];
+      var star = note ? '<span class="star">*</span>' : '';
+      var tip = note ? ' data-note="' + esc(note) + '"' : '';
+      return '<span class="lachip"' + tip + '>' + esc(a) + star + '</span>';
     }).join('') + '</div>';
   }
   var ichips = '';
@@ -1096,14 +1220,24 @@ function renderCard(e, cat, showCatTag) {
   if (iroles.length) {
     ichips = '<div class="lichips">' + iroles.map(function(r){ return '<span class="lichip">' + esc(r) + '</span>'; }).join('') + '</div>';
   }
+  var fchips = '';
+  var facetPills = [];
+  if (e.walk_in) facetPills.push('Walk-in');
+  if (facetPills.length) {
+    fchips = '<div class="lfacets">' + facetPills.map(function(f){ return '<span class="lfacet">' + esc(f) + '</span>'; }).join('') + '</div>';
+  }
+  // Caption-gated badge: e.wow_cap is emitted only at wow>=3 with a non-empty
+  // string (blurb, or wow_evidence fallback), so its presence is the badge condition.
+  var notable = e.wow_cap ? '<span class="lnotable">Worth a stop</span>' : '';
+  var wowcap = e.wow_cap ? '<p class="lwowcap">' + esc(e.wow_cap) + '</p>' : '';
   var desc = e.desc ? '<p class="ldesc">' + esc(e.desc) + '</p>' : '';
-  var foot = '<div class="lfoot">' + basicsLine(e, cat) + '<span class="lviewdetails">View all details &rsaquo;</span></div>';
+  var foot = '<div class="lfoot"><span class="lviewdetails">View all details &rsaquo;</span></div>';
   var keyAttr = e.key ? ' id="c-' + e.key + '" data-key="' + e.key + '"' : '';
   return '<div class="lcard is-' + st + '"' + keyAttr + ' onclick="goToListing(this)">' +
     '<div class="lavatar">' + icon + '</div>' +
     '<div class="lbody">' +
-      '<div class="ltitle-row"><span class="ltitle">' + esc(e.name) + '</span><span class="sbadge ' + sb[0] + '">' + sb[1] + '</span></div>' +
-      '<div class="lmeta">' + meta + '</div>' + ichips + chips + desc + foot +
+      '<div class="ltitle-row"><span class="ltitle">' + esc(e.name) + '</span><span class="lbadges">' + notable + '<span class="sbadge ' + sb[0] + '">' + (st === 'accredited' ? '<span class="seal">&#10038;</span> ' : '') + sb[1] + '</span></span></div>' +
+      '<div class="lmeta">' + meta + '</div>' + wowcap + ichips + fchips + reqChips + chips + desc + foot +
     '</div></div>';
 }
 function goToListing(el) {
@@ -1118,6 +1252,12 @@ function goToListing(el) {
 /* ---------- mobile drawer ---------- */
 function openDrawer() { document.getElementById('dir-sidebar').classList.add('open'); document.getElementById('dir-overlay').classList.add('open'); }
 function closeDrawer() { var sb = document.getElementById('dir-sidebar'); if (sb) sb.classList.remove('open'); var ov = document.getElementById('dir-overlay'); if (ov) ov.classList.remove('open'); }
+function toggleFull() {
+  state.showFull = !state.showFull;
+  document.body.classList.toggle('wwc-show-full', state.showFull);
+  var l = document.getElementById('dir-expand-link');
+  if (l) l.textContent = state.showFull ? 'Shorten descriptions' : 'Full descriptions';
+}
 function openSearchHelp() { var m = document.getElementById('search-help'); if (m) m.classList.add('open'); }
 function closeSearchHelp() { var m = document.getElementById('search-help'); if (m) m.classList.remove('open'); }
 document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeSearchHelp(); });
@@ -1207,10 +1347,11 @@ function pushFilterHash(parts) {
     var idx = state.sel.amenities.map(function(a){ return cat.optional.indexOf(a); }).filter(function(i){ return i !== -1; });
     if (idx.length) parts.push('f=' + idx.join(','));
   }
+  if (state.sort !== 'relevant') parts.push('sort=' + state.sort);
   if (state.sel.status.length) parts.push('st=' + state.sel.status.join(','));
-  if (state.sel.price.length) parts.push('pr=' + state.sel.price.map(encodeURIComponent).join(','));
-  if (state.sel.ownership.length) parts.push('ow=' + state.sel.ownership.map(encodeURIComponent).join(','));
-  if (state.sel.indigenous.length) parts.push('ir=' + state.sel.indigenous.map(encodeURIComponent).join(','));
+  if (state.sel.price.length) parts.push('pr=' + state.sel.price.map(function(v){ return PRICE_TO_SLUG[v] || _facetSlug(v); }).join(','));
+  if (state.sel.ownership.length) parts.push('ow=' + state.sel.ownership.map(function(v){ return OWN_TO_SLUG[v] || _facetSlug(v); }).join(','));
+  if (state.sel.indigenous.length) parts.push('ir=' + state.sel.indigenous.map(function(v){ return INDIG_TO_SLUG[v] || _facetSlug(v); }).join(','));
   if (cat && state.sel.basics.length) {
     var bi = state.sel.basics.map(function(b){ return cat.required.findIndex(function(r){ return r.title === b; }); }).filter(function(i){ return i !== -1; });
     if (bi.length) parts.push('bs=' + bi.join(','));
@@ -1251,10 +1392,11 @@ function readHash() {
   if (p.community) { _pendingCommunity = p.community; }
   else if (p.q) state.search = p.q;
   _pendingF = p.f || null;
+  if (p.sort && ['relevant','wow','amenities','alpha'].indexOf(p.sort) !== -1) state.sort = p.sort;
   if (p.st) state.sel.status = p.st.split(',');
-  if (p.pr) state.sel.price = p.pr.split(',');
-  if (p.ow) state.sel.ownership = p.ow.split(',');
-  if (p.ir) state.sel.indigenous = p.ir.split(',');
+  if (p.pr) state.sel.price = p.pr.split(',').map(function(s){ return PRICE_BY_SLUG[s] || s; });
+  if (p.ow) state.sel.ownership = p.ow.split(',').map(function(s){ return OWN_BY_SLUG[s] || s; });
+  if (p.ir) state.sel.indigenous = p.ir.split(',').map(function(s){ return INDIG_BY_SLUG[s] || s; });
   _pendingBs = p.bs || null;
 }
 var _pendingSubcatSlug = null, _pendingF = null, _pendingBs = null;
@@ -1275,7 +1417,7 @@ function resolvePending() {
   }
   if (_pendingCommunity) {
     var nm = (typeof _slugToComm !== 'undefined' && _slugToComm[_pendingCommunity]) || _pendingCommunity;
-    state.search = 'community:' + nm;
+    state.search = 'community:' + (/\s/.test(nm) ? '"' + nm + '"' : nm);
   }
   _pendingSubcatSlug = _pendingF = _pendingBs = _pendingCommunity = null;
 }
@@ -1334,7 +1476,6 @@ window.addEventListener('load', (event) => {
       <a href="/">Home</a>
       <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
-      <a href="/routes">Routes</a>
     </div>
     <div class="g-footer-col">
       <a href="/about">About</a>

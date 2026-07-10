@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Shuswap North Okanagan Rail Trail</name>
+<link href="https://bccycletourism.ca/trail/shuswap-north-okanagan-rail-trail/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="50.447988" lon="-119.183528">
+<name>Armstrong Inn</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="50.447223" lon="-119.184914">
+<name>Askew's Foods</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="50.446310" lon="-119.184000">
+<name>McDonald's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.446207" lon="-119.184995">
+<name>Armstrong Library</name>
+<cmt>library</cmt>
+<desc>Library</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="50.445622" lon="-119.183572">
+<name>7-Eleven</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="50.445078" lon="-119.183318">
+<name>A&amp;W</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.444804" lon="-119.183418">
+<name>DQ Grill &amp; Chill</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.444614" lon="-119.183325">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.833935" lon="-118.990235">
+<name>Super 8 by Wyndham Sicamous</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="50.835063" lon="-118.987835">
+<name>The Narrows Smokehouse</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Shuswap North Okanagan Rail Trail</name>
+<trkseg>
+<trkpt lat="50.448990" lon="-119.184409"/>
+<trkpt lat="50.449932" lon="-119.180352"/>
+<trkpt lat="50.453502" lon="-119.170192"/>
+</trkseg>
+<trkseg>
+<trkpt lat="50.722817" lon="-119.052785"/>
+<trkpt lat="50.725839" lon="-119.052755"/>
+<trkpt lat="50.729077" lon="-119.051552"/>
+<trkpt lat="50.731886" lon="-119.051503"/>
+<trkpt lat="50.734644" lon="-119.050072"/>
+<trkpt lat="50.737325" lon="-119.050129"/>
+<trkpt lat="50.738670" lon="-119.049463"/>
+<trkpt lat="50.740053" lon="-119.049612"/>
+<trkpt lat="50.741268" lon="-119.050710"/>
+<trkpt lat="50.742573" lon="-119.051404"/>
+<trkpt lat="50.744658" lon="-119.051743"/>
+<trkpt lat="50.746080" lon="-119.051670"/>
+<trkpt lat="50.750108" lon="-119.050606"/>
+<trkpt lat="50.754572" lon="-119.050186"/>
+<trkpt lat="50.756850" lon="-119.047749"/>
+<trkpt lat="50.760401" lon="-119.046177"/>
+<trkpt lat="50.764484" lon="-119.040323"/>
+<trkpt lat="50.767920" lon="-119.037270"/>
+<trkpt lat="50.772461" lon="-119.035200"/>
+<trkpt lat="50.774787" lon="-119.035321"/>
+<trkpt lat="50.777304" lon="-119.032965"/>
+<trkpt lat="50.781061" lon="-119.031311"/>
+<trkpt lat="50.784268" lon="-119.029136"/>
+<trkpt lat="50.787195" lon="-119.026673"/>
+<trkpt lat="50.789083" lon="-119.025936"/>
+<trkpt lat="50.789904" lon="-119.025267"/>
+<trkpt lat="50.791205" lon="-119.022918"/>
+<trkpt lat="50.794012" lon="-119.016710"/>
+<trkpt lat="50.795036" lon="-119.015424"/>
+<trkpt lat="50.796815" lon="-119.011551"/>
+<trkpt lat="50.797651" lon="-119.009150"/>
+<trkpt lat="50.798883" lon="-119.007182"/>
+<trkpt lat="50.799298" lon="-119.003590"/>
+<trkpt lat="50.801062" lon="-119.000878"/>
+<trkpt lat="50.802026" lon="-118.993984"/>
+<trkpt lat="50.802567" lon="-118.992710"/>
+<trkpt lat="50.803221" lon="-118.992118"/>
+<trkpt lat="50.805690" lon="-118.990901"/>
+<trkpt lat="50.808535" lon="-118.989001"/>
+<trkpt lat="50.809222" lon="-118.988871"/>
+<trkpt lat="50.810838" lon="-118.989711"/>
+<trkpt lat="50.813172" lon="-118.990186"/>
+<trkpt lat="50.813789" lon="-118.990994"/>
+<trkpt lat="50.814528" lon="-118.993303"/>
+<trkpt lat="50.815113" lon="-118.994129"/>
+<trkpt lat="50.816002" lon="-118.994593"/>
+<trkpt lat="50.820316" lon="-118.994556"/>
+<trkpt lat="50.822301" lon="-118.994125"/>
+<trkpt lat="50.823252" lon="-118.993699"/>
+<trkpt lat="50.825748" lon="-118.991085"/>
+<trkpt lat="50.826606" lon="-118.991010"/>
+<trkpt lat="50.827554" lon="-118.991501"/>
+<trkpt lat="50.829201" lon="-118.994003"/>
+<trkpt lat="50.830599" lon="-118.994304"/>
+<trkpt lat="50.833632" lon="-118.993239"/>
+<trkpt lat="50.835269" lon="-118.994077"/>
+</trkseg>
+</trk>
+</gpx>

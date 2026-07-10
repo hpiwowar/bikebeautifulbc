@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Rotary Seawalk</name>
+<link href="https://bccycletourism.ca/trail/rotary-seawalk/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.990946" lon="-125.227166">
+<name>FoggDukkers</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.003011" lon="-125.231691">
+<name>Campbell River Fishing Village &amp; R.V. Park</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="50.003978" lon="-125.232186">
+<name>Driftwood by the Sea</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="50.004402" lon="-125.232736">
+<name>Driftwood by the Sea</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.990789" lon="-125.228020">
+<name>Fas Gas Convenience Store</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.972051" lon="-125.218724">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.971525" lon="-125.217731">
+<name>BC Liquor Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.971467" lon="-125.217613">
+<name>Sea Wok</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.972742" lon="-125.219799">
+<name>7-Eleven</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.965236" lon="-125.209579">
+<name>Willow Point Greenway</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.990427" lon="-125.228209">
+<name>Vista del Mar</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.998778" lon="-125.231227">
+<name>Heron's Landing Hotel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.999295" lon="-125.231412">
+<name>Ramada by Wyndham Campbell River</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.988819" lon="-125.227558">
+<name>Big Rock Motel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.965991" lon="-125.208928">
+<name>Willow Creek Greenway</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.971498" lon="-125.214875">
+<name>RavenSong Soap and Candle</name>
+<cmt>viewpoint</cmt>
+<desc>Activity / Experience</desc>
+<sym>Dot</sym>
+<type>overlook</type>
+</wpt>
+<wpt lat="49.971171" lon="-125.214796">
+<name>Serious Coffee</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.971093" lon="-125.214588">
+<name>Domino's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.971008" lon="-125.214318">
+<name>Mattone</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.971093" lon="-125.214065">
+<name>Discovery Foods</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.970021" lon="-125.215259">
+<name>Daves' Bakery</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.969386" lon="-125.212633">
+<name>Panago</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Rotary Seawalk</name>
+<trkseg>
+<trkpt lat="49.954912" lon="-125.204689"/>
+<trkpt lat="49.955004" lon="-125.204525"/>
+<trkpt lat="49.957658" lon="-125.206797"/>
+<trkpt lat="49.959739" lon="-125.207672"/>
+<trkpt lat="49.961820" lon="-125.209125"/>
+<trkpt lat="49.964958" lon="-125.208619"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.971912" lon="-125.217155"/>
+<trkpt lat="49.972660" lon="-125.218518"/>
+<trkpt lat="49.974284" lon="-125.219895"/>
+<trkpt lat="49.978057" lon="-125.221035"/>
+<trkpt lat="49.979433" lon="-125.222261"/>
+<trkpt lat="49.980725" lon="-125.222925"/>
+<trkpt lat="49.981093" lon="-125.223496"/>
+<trkpt lat="49.983399" lon="-125.223415"/>
+<trkpt lat="49.985030" lon="-125.223943"/>
+<trkpt lat="49.988567" lon="-125.226162"/>
+<trkpt lat="49.994008" lon="-125.228740"/>
+<trkpt lat="49.994679" lon="-125.228916"/>
+<trkpt lat="49.994858" lon="-125.228246"/>
+<trkpt lat="49.995241" lon="-125.229196"/>
+<trkpt lat="50.002284" lon="-125.231116"/>
+<trkpt lat="50.005258" lon="-125.232390"/>
+<trkpt lat="50.006774" lon="-125.233526"/>
+</trkseg>
+</trk>
+</gpx>

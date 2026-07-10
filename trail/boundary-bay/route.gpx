@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Boundary Bay</name>
+<link href="https://bccycletourism.ca/trail/boundary-bay/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.015006" lon="-123.040308">
+<name>Emdee's Fish and Chips</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.024218" lon="-123.059567">
+<name>Beach Grove Golf Club Lounge</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.024923" lon="-123.059562">
+<name>Beach Grove Motel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.025749" lon="-123.058439">
+<name>Beach Grove Cafe &amp; Boutique</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.007280" lon="-123.046930">
+<name>L'aromas Coffee Southlands</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.007194" lon="-123.046487">
+<name>Pedego Electric Bikes Delta</name>
+<cmt>bike_shop</cmt>
+<desc>Repair Shop</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+<wpt lat="49.007169" lon="-123.046926">
+<name>Cookie's Ice Cream</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.007287" lon="-123.048699">
+<name>Southlands Grange Centre For Farming And Food</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.008445" lon="-123.049435">
+<name>Earthwise Society Garden and Farm</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.007121" lon="-123.047484">
+<name>Four Winds Beach House &amp; Brewery</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Boundary Bay</name>
+<trkseg>
+<trkpt lat="49.008401" lon="-123.046410"/>
+<trkpt lat="49.008523" lon="-123.046593"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008523" lon="-123.046593"/>
+<trkpt lat="49.008524" lon="-123.046478"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008524" lon="-123.046478"/>
+<trkpt lat="49.008824" lon="-123.046568"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008824" lon="-123.046568"/>
+<trkpt lat="49.011627" lon="-123.046559"/>
+<trkpt lat="49.012422" lon="-123.046933"/>
+<trkpt lat="49.012950" lon="-123.047729"/>
+<trkpt lat="49.013886" lon="-123.050818"/>
+<trkpt lat="49.015467" lon="-123.052832"/>
+<trkpt lat="49.017109" lon="-123.056346"/>
+<trkpt lat="49.018731" lon="-123.057588"/>
+<trkpt lat="49.020427" lon="-123.058285"/>
+<trkpt lat="49.022437" lon="-123.058437"/>
+<trkpt lat="49.022922" lon="-123.058355"/>
+<trkpt lat="49.024138" lon="-123.058164"/>
+<trkpt lat="49.024466" lon="-123.058419"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.024591" lon="-123.058454"/>
+<trkpt lat="49.024548" lon="-123.058607"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.024664" lon="-123.058516"/>
+<trkpt lat="49.024554" lon="-123.057966"/>
+<trkpt lat="49.024470" lon="-123.052952"/>
+<trkpt lat="49.020694" lon="-123.044219"/>
+<trkpt lat="49.018828" lon="-123.042033"/>
+<trkpt lat="49.017550" lon="-123.042565"/>
+<trkpt lat="49.016785" lon="-123.041124"/>
+<trkpt lat="49.016360" lon="-123.041088"/>
+<trkpt lat="49.015190" lon="-123.039920"/>
+<trkpt lat="49.014215" lon="-123.040001"/>
+<trkpt lat="49.013016" lon="-123.039107"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.013003" lon="-123.039537"/>
+<trkpt lat="49.013016" lon="-123.039107"/>
+<trkpt lat="49.012681" lon="-123.038969"/>
+<trkpt lat="49.009929" lon="-123.037666"/>
+<trkpt lat="49.008418" lon="-123.037300"/>
+<trkpt lat="49.008431" lon="-123.039019"/>
+<trkpt lat="49.008432" lon="-123.040050"/>
+<trkpt lat="49.008434" lon="-123.041753"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008434" lon="-123.041753"/>
+<trkpt lat="49.008495" lon="-123.046422"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008495" lon="-123.046422"/>
+<trkpt lat="49.008524" lon="-123.046478"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008495" lon="-123.046422"/>
+<trkpt lat="49.008474" lon="-123.046405"/>
+<trkpt lat="49.008401" lon="-123.046410"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008401" lon="-123.046410"/>
+<trkpt lat="49.008407" lon="-123.043967"/>
+<trkpt lat="49.008408" lon="-123.043498"/>
+<trkpt lat="49.008434" lon="-123.041753"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008523" lon="-123.046593"/>
+<trkpt lat="49.008824" lon="-123.046568"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.013233" lon="-123.048650"/>
+<trkpt lat="49.013870" lon="-123.047660"/>
+<trkpt lat="49.013704" lon="-123.045883"/>
+<trkpt lat="49.014410" lon="-123.044003"/>
+<trkpt lat="49.014547" lon="-123.042028"/>
+<trkpt lat="49.014708" lon="-123.042046"/>
+<trkpt lat="49.015149" lon="-123.042151"/>
+<trkpt lat="49.016108" lon="-123.042296"/>
+<trkpt lat="49.016143" lon="-123.041435"/>
+<trkpt lat="49.016397" lon="-123.041115"/>
+</trkseg>
+</trk>
+</gpx>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Williams Lake River Valley Trail</name>
+<link href="https://bccycletourism.ca/trail/williams-lake-river-valley-trail/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="52.128806" lon="-122.147502">
+<name>Station House Gallery</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="52.128626" lon="-122.146759">
+<name>Oliver Street Bar &amp; Grill</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.129503" lon="-122.146785">
+<name>Dumpling House</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.128521" lon="-122.145681">
+<name>Pind Balluchi North Indian Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.129140" lon="-122.144097">
+<name>LVY Vietnamese Pho</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.131603" lon="-122.145871">
+<name>Cariboo Bowling Lanes</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="52.128115" lon="-122.143420">
+<name>Kome Sushi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.130002" lon="-122.143626">
+<name>Domino's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.128791" lon="-122.142652">
+<name>Mr. Mike's</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Williams Lake River Valley Trail</name>
+<trkseg>
+<trkpt lat="52.151655" lon="-122.187607"/>
+<trkpt lat="52.150042" lon="-122.185151"/>
+<trkpt lat="52.148952" lon="-122.186030"/>
+<trkpt lat="52.147866" lon="-122.185151"/>
+<trkpt lat="52.147340" lon="-122.184249"/>
+<trkpt lat="52.146727" lon="-122.182103"/>
+<trkpt lat="52.145957" lon="-122.181921"/>
+<trkpt lat="52.145252" lon="-122.180419"/>
+<trkpt lat="52.145305" lon="-122.176922"/>
+<trkpt lat="52.144278" lon="-122.174796"/>
+<trkpt lat="52.143705" lon="-122.171994"/>
+<trkpt lat="52.143646" lon="-122.171753"/>
+<trkpt lat="52.142891" lon="-122.170657"/>
+<trkpt lat="52.142702" lon="-122.170467"/>
+<trkpt lat="52.141295" lon="-122.168143"/>
+<trkpt lat="52.141197" lon="-122.167123"/>
+<trkpt lat="52.141444" lon="-122.166136"/>
+<trkpt lat="52.141220" lon="-122.165691"/>
+<trkpt lat="52.141124" lon="-122.165450"/>
+<trkpt lat="52.141144" lon="-122.164570"/>
+<trkpt lat="52.140647" lon="-122.163154"/>
+<trkpt lat="52.138727" lon="-122.160123"/>
+<trkpt lat="52.137917" lon="-122.159565"/>
+<trkpt lat="52.136953" lon="-122.155322"/>
+<trkpt lat="52.135907" lon="-122.154246"/>
+<trkpt lat="52.135550" lon="-122.153121"/>
+<trkpt lat="52.134851" lon="-122.152911"/>
+<trkpt lat="52.134059" lon="-122.151586"/>
+<trkpt lat="52.134181" lon="-122.151277"/>
+<trkpt lat="52.134825" lon="-122.151988"/>
+<trkpt lat="52.135126" lon="-122.151529"/>
+<trkpt lat="52.134921" lon="-122.150984"/>
+</trkseg>
+<trkseg>
+<trkpt lat="52.135907" lon="-122.154246"/>
+<trkpt lat="52.134777" lon="-122.153064"/>
+<trkpt lat="52.133729" lon="-122.154206"/>
+<trkpt lat="52.132751" lon="-122.151958"/>
+<trkpt lat="52.132353" lon="-122.151905"/>
+<trkpt lat="52.131546" lon="-122.152543"/>
+<trkpt lat="52.131296" lon="-122.152119"/>
+<trkpt lat="52.129465" lon="-122.151631"/>
+<trkpt lat="52.129422" lon="-122.150327"/>
+<trkpt lat="52.129020" lon="-122.149689"/>
+<trkpt lat="52.127664" lon="-122.149952"/>
+<trkpt lat="52.127459" lon="-122.149936"/>
+<trkpt lat="52.125711" lon="-122.147762"/>
+<trkpt lat="52.125609" lon="-122.147596"/>
+<trkpt lat="52.122796" lon="-122.143767"/>
+<trkpt lat="52.122608" lon="-122.142275"/>
+<trkpt lat="52.122259" lon="-122.141932"/>
+<trkpt lat="52.122005" lon="-122.140988"/>
+<trkpt lat="52.121992" lon="-122.139126"/>
+</trkseg>
+</trk>
+</gpx>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Mount Lehman Road</name>
+<link href="https://bccycletourism.ca/trail/mount-lehman-road/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.065946" lon="-122.380792">
+<name>OTTER CO-OP</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.065901" lon="-122.380791">
+<name>Pizza24</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.049196" lon="-122.380769">
+<name>Loudmouth Brewing</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.048923" lon="-122.380732">
+<name>Giddy Up Pizza -n- Curry</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.065926" lon="-122.379434">
+<name>Zaika Tastes of India</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.065929" lon="-122.377655">
+<name>Super Star Veggie Pizza</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.055584" lon="-122.381459">
+<name>Shell Select</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.107118" lon="-122.380959">
+<name>Singletree Winery</name>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.056171" lon="-122.380617">
+<name>Bar One</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.056215" lon="-122.380711">
+<name>Denny's</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.062061" lon="-122.380013">
+<name>Co-op Mt. Lehman Food Store</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.056369" lon="-122.383281">
+<name>Old Abbey Ales</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.052252" lon="-122.375371">
+<name>Nasir's Super Donair</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.061624" lon="-122.380837">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.061686" lon="-122.380013">
+<name>Hana Sushi Japanese Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.061276" lon="-122.380797">
+<name>Panago</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.057261" lon="-122.381307">
+<name>Sandman Hotel Abbotsford Airport</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.061138" lon="-122.380796">
+<name>McDonald's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.061202" lon="-122.379992">
+<name>Quesada</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Mount Lehman Road</name>
+<trkseg>
+<trkpt lat="49.031880" lon="-122.378566"/>
+<trkpt lat="49.037548" lon="-122.378376"/>
+<trkpt lat="49.038696" lon="-122.378759"/>
+<trkpt lat="49.040395" lon="-122.380696"/>
+<trkpt lat="49.041551" lon="-122.381200"/>
+<trkpt lat="49.046155" lon="-122.381276"/>
+<trkpt lat="49.046594" lon="-122.381268"/>
+<trkpt lat="49.050560" lon="-122.381180"/>
+<trkpt lat="49.052861" lon="-122.381174"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.065618" lon="-122.381209"/>
+<trkpt lat="49.066445" lon="-122.381190"/>
+<trkpt lat="49.066828" lon="-122.381194"/>
+<trkpt lat="49.069503" lon="-122.381196"/>
+<trkpt lat="49.069790" lon="-122.381188"/>
+<trkpt lat="49.074751" lon="-122.381162"/>
+<trkpt lat="49.075039" lon="-122.381172"/>
+<trkpt lat="49.086683" lon="-122.381187"/>
+<trkpt lat="49.087734" lon="-122.382121"/>
+<trkpt lat="49.089200" lon="-122.382402"/>
+<trkpt lat="49.092232" lon="-122.382024"/>
+<trkpt lat="49.097028" lon="-122.382008"/>
+<trkpt lat="49.104009" lon="-122.382016"/>
+</trkseg>
+</trk>
+</gpx>

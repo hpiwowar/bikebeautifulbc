@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Pelmewash Parkway Multi-use Pathway</name>
+<link href="https://bccycletourism.ca/trail/pelmewash-parkway-multi-use-pathway/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="50.110836" lon="-119.385233">
+<name>Oyama General Store</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="50.054562" lon="-119.410273">
+<name>Winfield Chinese</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.111077" lon="-119.388750">
+<name>Gatzke Orchard</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="50.054284" lon="-119.410405">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.054304" lon="-119.411779">
+<name>Beat Patisserie</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.053970" lon="-119.411722">
+<name>TBC (Turtle Bay Crossing) Liquour Merchants</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="50.053663" lon="-119.411788">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.054166" lon="-119.412535">
+<name>GOGO Sushi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.052845" lon="-119.410122">
+<name>Turtle Bay Pub</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Pelmewash Parkway Multi-use Pathway</name>
+<trkseg>
+<trkpt lat="50.055139" lon="-119.409523"/>
+<trkpt lat="50.055100" lon="-119.409085"/>
+<trkpt lat="50.055844" lon="-119.408420"/>
+<trkpt lat="50.057010" lon="-119.408208"/>
+<trkpt lat="50.057942" lon="-119.408579"/>
+<trkpt lat="50.058881" lon="-119.407600"/>
+<trkpt lat="50.060110" lon="-119.407434"/>
+<trkpt lat="50.065689" lon="-119.408036"/>
+<trkpt lat="50.069596" lon="-119.406825"/>
+<trkpt lat="50.071898" lon="-119.405475"/>
+<trkpt lat="50.074794" lon="-119.402504"/>
+<trkpt lat="50.077759" lon="-119.400676"/>
+<trkpt lat="50.081456" lon="-119.397882"/>
+<trkpt lat="50.085102" lon="-119.398094"/>
+<trkpt lat="50.086199" lon="-119.397509"/>
+<trkpt lat="50.088281" lon="-119.397127"/>
+<trkpt lat="50.090125" lon="-119.397669"/>
+<trkpt lat="50.091813" lon="-119.397441"/>
+<trkpt lat="50.093984" lon="-119.396737"/>
+<trkpt lat="50.096014" lon="-119.395325"/>
+<trkpt lat="50.100695" lon="-119.392911"/>
+<trkpt lat="50.104876" lon="-119.392161"/>
+<trkpt lat="50.108556" lon="-119.388327"/>
+<trkpt lat="50.109388" lon="-119.387694"/>
+<trkpt lat="50.110227" lon="-119.387518"/>
+<trkpt lat="50.110518" lon="-119.386814"/>
+<trkpt lat="50.110343" lon="-119.383868"/>
+</trkseg>
+<trkseg>
+<trkpt lat="50.110341" lon="-119.387373"/>
+<trkpt lat="50.110579" lon="-119.387589"/>
+</trkseg>
+</trk>
+</gpx>

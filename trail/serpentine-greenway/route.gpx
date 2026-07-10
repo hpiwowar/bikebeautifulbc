@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Serpentine Greenway</name>
+<link href="https://bccycletourism.ca/trail/serpentine-greenway/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.148507" lon="-122.871441">
+<name>Mayuri Indian Cuisine</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Serpentine Greenway</name>
+<trkseg>
+<trkpt lat="49.111800" lon="-122.871232"/>
+<trkpt lat="49.111885" lon="-122.871290"/>
+<trkpt lat="49.112945" lon="-122.871964"/>
+<trkpt lat="49.114278" lon="-122.873393"/>
+<trkpt lat="49.114280" lon="-122.873545"/>
+<trkpt lat="49.115412" lon="-122.873577"/>
+<trkpt lat="49.115444" lon="-122.873577"/>
+<trkpt lat="49.115583" lon="-122.873577"/>
+<trkpt lat="49.115602" lon="-122.873577"/>
+<trkpt lat="49.116277" lon="-122.873557"/>
+<trkpt lat="49.116359" lon="-122.873556"/>
+<trkpt lat="49.116369" lon="-122.874881"/>
+<trkpt lat="49.116374" lon="-122.875614"/>
+<trkpt lat="49.119123" lon="-122.876182"/>
+<trkpt lat="49.119193" lon="-122.876186"/>
+<trkpt lat="49.119219" lon="-122.876077"/>
+<trkpt lat="49.119285" lon="-122.876081"/>
+<trkpt lat="49.119310" lon="-122.876658"/>
+<trkpt lat="49.120483" lon="-122.876491"/>
+<trkpt lat="49.121019" lon="-122.875966"/>
+<trkpt lat="49.121866" lon="-122.875736"/>
+<trkpt lat="49.122862" lon="-122.875985"/>
+<trkpt lat="49.122959" lon="-122.875983"/>
+<trkpt lat="49.125655" lon="-122.875676"/>
+<trkpt lat="49.126587" lon="-122.876027"/>
+<trkpt lat="49.126674" lon="-122.876028"/>
+<trkpt lat="49.129433" lon="-122.876181"/>
+<trkpt lat="49.129493" lon="-122.876184"/>
+<trkpt lat="49.133847" lon="-122.876256"/>
+<trkpt lat="49.133915" lon="-122.876257"/>
+<trkpt lat="49.133956" lon="-122.876147"/>
+<trkpt lat="49.134044" lon="-122.876145"/>
+<trkpt lat="49.137018" lon="-122.876147"/>
+<trkpt lat="49.137288" lon="-122.874701"/>
+<trkpt lat="49.138448" lon="-122.874462"/>
+<trkpt lat="49.139506" lon="-122.874637"/>
+<trkpt lat="49.140178" lon="-122.874135"/>
+<trkpt lat="49.140246" lon="-122.874316"/>
+<trkpt lat="49.140454" lon="-122.874544"/>
+<trkpt lat="49.141020" lon="-122.874266"/>
+<trkpt lat="49.141107" lon="-122.874269"/>
+<trkpt lat="49.143119" lon="-122.874383"/>
+<trkpt lat="49.144072" lon="-122.874122"/>
+<trkpt lat="49.144641" lon="-122.873447"/>
+<trkpt lat="49.148174" lon="-122.873147"/>
+<trkpt lat="49.148328" lon="-122.873141"/>
+<trkpt lat="49.148778" lon="-122.874617"/>
+<trkpt lat="49.151883" lon="-122.874494"/>
+<trkpt lat="49.151952" lon="-122.874495"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.113338" lon="-122.870422"/>
+<trkpt lat="49.113260" lon="-122.870529"/>
+<trkpt lat="49.112803" lon="-122.871139"/>
+<trkpt lat="49.112742" lon="-122.872073"/>
+</trkseg>
+</trk>
+</gpx>

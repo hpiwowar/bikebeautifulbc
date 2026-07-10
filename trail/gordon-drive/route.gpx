@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Gordon Drive</name>
+<link href="https://bccycletourism.ca/trail/gordon-drive/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.812896" lon="-119.482916">
+<name>Bellevue Creek Greenway</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.860555" lon="-119.474925">
+<name>Circle K</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.872131" lon="-119.474970">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.871770" lon="-119.474655">
+<name>Fezziwig's Bakery-Cafe</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.844790" lon="-119.481589">
+<name>Abaco Health</name>
+<cmt>convenience_store</cmt>
+<desc>Specialty / Health Food</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.871455" lon="-119.474166">
+<name>Urban Liquor Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.838244" lon="-119.480869">
+<name>H2O Adventure and Fitness Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.804123" lon="-119.475398">
+<name>Save-On-Foods</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.846765" lon="-119.481708">
+<name>Wilson Creek Linear Park</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.836070" lon="-119.480241">
+<name>Mission Library Branch</name>
+<cmt>library</cmt>
+<desc>Library</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.836593" lon="-119.479372">
+<name>MNP Place</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.880007" lon="-119.477580">
+<name>Oasis Inn</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.861456" lon="-119.468971">
+<name>UBCO Library Branch</name>
+<cmt>library</cmt>
+<desc>Library</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.832448" lon="-119.488735">
+<name>Thomson Creek</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.840165" lon="-119.488160">
+<name>Bright Jenny Coffee</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.880717" lon="-119.475598">
+<name>Peter's Your Independent Grocer</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.845956" lon="-119.486733">
+<name>Black Rabbit Coffee House</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.881110" lon="-119.474969">
+<name>Yum Yum Tree</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Gordon Drive</name>
+<trkseg>
+<trkpt lat="49.803354" lon="-119.476574"/>
+<trkpt lat="49.804300" lon="-119.476962"/>
+<trkpt lat="49.805232" lon="-119.476405"/>
+<trkpt lat="49.805867" lon="-119.474285"/>
+<trkpt lat="49.805690" lon="-119.472215"/>
+<trkpt lat="49.805744" lon="-119.471022"/>
+<trkpt lat="49.806208" lon="-119.469842"/>
+<trkpt lat="49.807420" lon="-119.468865"/>
+<trkpt lat="49.808713" lon="-119.469384"/>
+<trkpt lat="49.809774" lon="-119.471760"/>
+<trkpt lat="49.810724" lon="-119.474852"/>
+<trkpt lat="49.810742" lon="-119.476899"/>
+<trkpt lat="49.811714" lon="-119.482398"/>
+<trkpt lat="49.812156" lon="-119.483016"/>
+<trkpt lat="49.812685" lon="-119.483092"/>
+<trkpt lat="49.812990" lon="-119.483094"/>
+<trkpt lat="49.817515" lon="-119.483167"/>
+<trkpt lat="49.818107" lon="-119.483182"/>
+<trkpt lat="49.818621" lon="-119.483182"/>
+<trkpt lat="49.819415" lon="-119.483170"/>
+<trkpt lat="49.820992" lon="-119.483122"/>
+<trkpt lat="49.822967" lon="-119.483186"/>
+<trkpt lat="49.825772" lon="-119.483160"/>
+<trkpt lat="49.827585" lon="-119.483182"/>
+<trkpt lat="49.831210" lon="-119.483232"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.831210" lon="-119.483232"/>
+<trkpt lat="49.835624" lon="-119.482716"/>
+<trkpt lat="49.837205" lon="-119.482345"/>
+<trkpt lat="49.837385" lon="-119.482302"/>
+<trkpt lat="49.841033" lon="-119.482250"/>
+<trkpt lat="49.841578" lon="-119.482265"/>
+<trkpt lat="49.842742" lon="-119.481918"/>
+<trkpt lat="49.850884" lon="-119.476502"/>
+<trkpt lat="49.854402" lon="-119.474378"/>
+<trkpt lat="49.860703" lon="-119.474226"/>
+<trkpt lat="49.860954" lon="-119.474222"/>
+<trkpt lat="49.861051" lon="-119.474220"/>
+<trkpt lat="49.861331" lon="-119.474214"/>
+<trkpt lat="49.868746" lon="-119.474110"/>
+<trkpt lat="49.872484" lon="-119.475801"/>
+<trkpt lat="49.872772" lon="-119.475978"/>
+<trkpt lat="49.875424" lon="-119.477006"/>
+<trkpt lat="49.876820" lon="-119.476999"/>
+<trkpt lat="49.876916" lon="-119.476998"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.876911" lon="-119.477152"/>
+<trkpt lat="49.876815" lon="-119.477153"/>
+<trkpt lat="49.875424" lon="-119.477187"/>
+<trkpt lat="49.868719" lon="-119.474260"/>
+<trkpt lat="49.861285" lon="-119.474384"/>
+<trkpt lat="49.861052" lon="-119.474391"/>
+<trkpt lat="49.860954" lon="-119.474394"/>
+<trkpt lat="49.860703" lon="-119.474397"/>
+<trkpt lat="49.854700" lon="-119.474470"/>
+<trkpt lat="49.853795" lon="-119.474727"/>
+<trkpt lat="49.842736" lon="-119.482106"/>
+<trkpt lat="49.841558" lon="-119.482395"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.841013" lon="-119.482382"/>
+<trkpt lat="49.838301" lon="-119.482349"/>
+<trkpt lat="49.835640" lon="-119.482880"/>
+<trkpt lat="49.834022" lon="-119.483229"/>
+<trkpt lat="49.831210" lon="-119.483232"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.835536" lon="-119.482616"/>
+<trkpt lat="49.838023" lon="-119.482019"/>
+<trkpt lat="49.841029" lon="-119.482181"/>
+<trkpt lat="49.841608" lon="-119.482178"/>
+<trkpt lat="49.843046" lon="-119.481617"/>
+<trkpt lat="49.850944" lon="-119.476346"/>
+</trkseg>
+</trk>
+</gpx>

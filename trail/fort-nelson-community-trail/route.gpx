@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Fort Nelson Community Trail</name>
+<link href="https://bccycletourism.ca/trail/fort-nelson-community-trail/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="58.803684" lon="-122.683937">
+<name>A&amp;W</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="58.801092" lon="-122.676965">
+<name>One Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="58.801103" lon="-122.677519">
+<name>Woodlands Inn &amp; Suites</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="58.802310" lon="-122.684651">
+<name>Blue Bell Inn</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="58.800421" lon="-122.671944">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="58.802592" lon="-122.686136">
+<name>Motel 6 Fort Nelson</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="58.800438" lon="-122.671011">
+<name>On the Run</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="58.803032" lon="-122.688061">
+<name>Boston Pizza</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="58.803045" lon="-122.689783">
+<name>Super 8</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<trk><name>Fort Nelson Community Trail</name>
+<trkseg>
+<trkpt lat="58.817535" lon="-122.707608"/>
+<trkpt lat="58.817470" lon="-122.702429"/>
+<trkpt lat="58.817263" lon="-122.701455"/>
+<trkpt lat="58.817437" lon="-122.699621"/>
+<trkpt lat="58.817156" lon="-122.699097"/>
+<trkpt lat="58.816379" lon="-122.698954"/>
+<trkpt lat="58.815854" lon="-122.697776"/>
+<trkpt lat="58.816889" lon="-122.695257"/>
+<trkpt lat="58.816901" lon="-122.694619"/>
+<trkpt lat="58.816022" lon="-122.692936"/>
+<trkpt lat="58.815830" lon="-122.690252"/>
+<trkpt lat="58.815110" lon="-122.689359"/>
+<trkpt lat="58.814393" lon="-122.690432"/>
+<trkpt lat="58.815740" lon="-122.685103"/>
+<trkpt lat="58.815236" lon="-122.685753"/>
+<trkpt lat="58.815337" lon="-122.684809"/>
+<trkpt lat="58.815064" lon="-122.685210"/>
+<trkpt lat="58.815113" lon="-122.684443"/>
+<trkpt lat="58.813467" lon="-122.682774"/>
+<trkpt lat="58.813027" lon="-122.682724"/>
+<trkpt lat="58.812377" lon="-122.681653"/>
+<trkpt lat="58.814646" lon="-122.675719"/>
+<trkpt lat="58.813616" lon="-122.673925"/>
+<trkpt lat="58.811938" lon="-122.673513"/>
+<trkpt lat="58.811776" lon="-122.673487"/>
+<trkpt lat="58.810992" lon="-122.673286"/>
+<trkpt lat="58.810512" lon="-122.671994"/>
+<trkpt lat="58.808625" lon="-122.670403"/>
+<trkpt lat="58.806598" lon="-122.669937"/>
+<trkpt lat="58.803898" lon="-122.668627"/>
+<trkpt lat="58.802822" lon="-122.673950"/>
+<trkpt lat="58.801902" lon="-122.674667"/>
+<trkpt lat="58.803139" lon="-122.682288"/>
+</trkseg>
+</trk>
+</gpx>

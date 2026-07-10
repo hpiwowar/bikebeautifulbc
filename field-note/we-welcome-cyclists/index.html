@@ -53,6 +53,11 @@ body {
 .g-main a { color: #1E7D96; }
 .g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: 1200px; margin: 0 auto; padding: 64px 40px 72px; display: flex; align-items: flex-start; justify-content: space-between; }
 .g-footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .g-footer-brand img { width: 48px; height: 48px; }
@@ -147,7 +152,7 @@ body {
 
 <h2>What we built, and why</h2>
 
-<p>Quebec figured this out a long time ago. Their Bienvenue Cyclistes program has been running for decades, and 31% of overnight cycle tourists in Quebec adapt their itinerary based on Bienvenue cyclistes! certification. Ontario By Bike has done the same since 2007 and now has over 1,600 certified businesses.</p>
+<p>Quebec figured this out a long time ago. Their Bienvenue cyclistes! program has been running for decades, and 31% of overnight cycle tourists in Quebec adapt their itinerary based on Bienvenue cyclistes! certification. Ontario By Bike has done the same since 2007 and now has over 1,600 certified businesses.</p>
 
 <p>BC has had pieces of this — <a href="https://gobybikebc.ca/bc-bike-friendly-business-directory/">GoByBike BC's directory</a> among them — but nothing built for touring. Until now.</p>
 
@@ -183,7 +188,7 @@ body {
 
 <p><em>** Bikes on BC buses and ferries is its own saga! More in a future issue. **</em></p>
 
-<p style="font-size: 13px; color: #999; margin-top: 32px;"><em>Sources: <a href="https://www.velo.qc.ca/en/bienvenue-cyclists/attestation/">Bienvenue Cyclistes attestation program</a>, V&eacute;lo Qu&eacute;bec; <a href="https://www.ontariobybike.ca/business-directory/">Ontario By Bike business directory</a>, Ontario By Bike.</em></p>
+<p style="font-size: 13px; color: #999; margin-top: 32px;"><em>Sources: <a href="https://www.velo.qc.ca/en/bienvenue-cyclists/attestation/">Bienvenue cyclistes! attestation program</a>, V&eacute;lo Qu&eacute;bec; <a href="https://www.ontariobybike.ca/business-directory/">Ontario By Bike business directory</a>, Ontario By Bike.</em></p>
 
   </div>
 </div>
@@ -197,7 +202,6 @@ body {
       <a href="/">Home</a>
       <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
-      <a href="/routes">Routes</a>
     </div>
     <div class="g-footer-col">
       <a href="/about">About</a>

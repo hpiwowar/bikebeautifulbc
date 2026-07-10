@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Barns to Beaches</name>
+<link href="https://bccycletourism.ca/trail/barns-to-beaches/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.025749" lon="-123.058439">
+<name>Beach Grove Cafe &amp; Boutique</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.067068" lon="-123.046555">
+<name>Snow Farms</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.007287" lon="-123.048699">
+<name>Southlands Grange Centre For Farming And Food</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.007280" lon="-123.046930">
+<name>L'aromas Coffee Southlands</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.074809" lon="-123.046666">
+<name>Gulraj Farm</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.112196" lon="-123.038973">
+<name>Barnside Brewery Co.</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.007169" lon="-123.046926">
+<name>Cookie's Ice Cream</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.007194" lon="-123.046487">
+<name>Pedego Electric Bikes Delta</name>
+<cmt>bike_shop</cmt>
+<desc>Repair Shop</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+<wpt lat="49.089856" lon="-123.045725">
+<name>Otter Co-op</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.112213" lon="-123.046706">
+<name>Schoolhouse Farm</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.024218" lon="-123.059567">
+<name>Beach Grove Golf Club Lounge</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.024923" lon="-123.059562">
+<name>Beach Grove Motel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.089926" lon="-123.044798">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.008445" lon="-123.049435">
+<name>Earthwise Society Garden and Farm</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.111801" lon="-123.052474">
+<name>Ramie's Greek Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.007121" lon="-123.047484">
+<name>Four Winds Beach House &amp; Brewery</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Barns to Beaches</name>
+<trkseg>
+<trkpt lat="49.007048" lon="-123.048989"/>
+<trkpt lat="49.007607" lon="-123.046193"/>
+<trkpt lat="49.008160" lon="-123.046451"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008160" lon="-123.046451"/>
+<trkpt lat="49.008360" lon="-123.046588"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008368" lon="-123.046456"/>
+<trkpt lat="49.008160" lon="-123.046451"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008524" lon="-123.046478"/>
+<trkpt lat="49.008523" lon="-123.046593"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008523" lon="-123.046593"/>
+<trkpt lat="49.008824" lon="-123.046568"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008824" lon="-123.046568"/>
+<trkpt lat="49.011627" lon="-123.046559"/>
+<trkpt lat="49.012422" lon="-123.046933"/>
+<trkpt lat="49.012950" lon="-123.047729"/>
+<trkpt lat="49.013886" lon="-123.050818"/>
+<trkpt lat="49.015467" lon="-123.052832"/>
+<trkpt lat="49.017109" lon="-123.056346"/>
+<trkpt lat="49.018731" lon="-123.057588"/>
+<trkpt lat="49.020427" lon="-123.058285"/>
+<trkpt lat="49.022437" lon="-123.058437"/>
+<trkpt lat="49.022922" lon="-123.058355"/>
+<trkpt lat="49.024138" lon="-123.058164"/>
+<trkpt lat="49.024466" lon="-123.058419"/>
+<trkpt lat="49.024548" lon="-123.058607"/>
+<trkpt lat="49.026509" lon="-123.058084"/>
+<trkpt lat="49.031930" lon="-123.055346"/>
+<trkpt lat="49.034638" lon="-123.054029"/>
+<trkpt lat="49.034669" lon="-123.052802"/>
+<trkpt lat="49.037263" lon="-123.051710"/>
+<trkpt lat="49.042059" lon="-123.050672"/>
+<trkpt lat="49.042597" lon="-123.050217"/>
+<trkpt lat="49.043408" lon="-123.050222"/>
+<trkpt lat="49.046330" lon="-123.049065"/>
+<trkpt lat="49.046945" lon="-123.049483"/>
+<trkpt lat="49.049157" lon="-123.047429"/>
+<trkpt lat="49.049668" lon="-123.046402"/>
+<trkpt lat="49.053721" lon="-123.046399"/>
+<trkpt lat="49.057058" lon="-123.046459"/>
+<trkpt lat="49.058928" lon="-123.046612"/>
+<trkpt lat="49.059864" lon="-123.046499"/>
+<trkpt lat="49.065980" lon="-123.046384"/>
+<trkpt lat="49.089791" lon="-123.046251"/>
+<trkpt lat="49.090150" lon="-123.046248"/>
+<trkpt lat="49.090524" lon="-123.046247"/>
+<trkpt lat="49.093068" lon="-123.046233"/>
+<trkpt lat="49.093770" lon="-123.046246"/>
+<trkpt lat="49.094100" lon="-123.046252"/>
+<trkpt lat="49.094241" lon="-123.046258"/>
+<trkpt lat="49.102990" lon="-123.046177"/>
+<trkpt lat="49.104016" lon="-123.047949"/>
+<trkpt lat="49.104343" lon="-123.047604"/>
+<trkpt lat="49.103799" lon="-123.046087"/>
+<trkpt lat="49.103845" lon="-123.046116"/>
+<trkpt lat="49.111963" lon="-123.046105"/>
+<trkpt lat="49.112059" lon="-123.035085"/>
+<trkpt lat="49.125421" lon="-123.034946"/>
+<trkpt lat="49.126789" lon="-123.034357"/>
+<trkpt lat="49.135121" lon="-123.034057"/>
+<trkpt lat="49.135376" lon="-123.034047"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008824" lon="-123.046568"/>
+<trkpt lat="49.008524" lon="-123.046478"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.008524" lon="-123.046478"/>
+<trkpt lat="49.008495" lon="-123.046422"/>
+<trkpt lat="49.008474" lon="-123.046405"/>
+<trkpt lat="49.008401" lon="-123.046410"/>
+<trkpt lat="49.008523" lon="-123.046593"/>
+</trkseg>
+</trk>
+</gpx>

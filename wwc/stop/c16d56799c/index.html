@@ -20,6 +20,7 @@
 <meta property="og:description" content="A family-run, smoke-free motel sitting directly on the shore of Osoyoos Lake in Canada&amp;#x27;s only desert, offering 34 rooms — most with fully equipped…">
 <meta name="twitter:description" content="A family-run, smoke-free motel sitting directly on the shore of Osoyoos Lake in Canada&amp;#x27;s only desert, offering 34 rooms — most with fully equipped…">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":[]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"We Welcome Cyclists","item":"https://bccycletourism.ca/wwc/"},{"@type":"ListItem","position":2,"name":"The Poplars Motel","item":"https://bccycletourism.ca/wwc/stop/c16d56799c/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Hotel", "name": "The Poplars Motel", "description": "A family-run, smoke-free motel sitting directly on the shore of Osoyoos Lake in Canada's only desert, offering 34 rooms — most with fully equipped kitchens — plus a private beach and shaded lawn. The property is open year-round and is well-positioned for exploring the southern Okanagan wine country, desert trails, and cross-border routes near the Washington state line. Staff are described as long-term Osoyoos residents knowledgeable about local attractions.", "address": "6404 Cottonwood Dr, Osoyoos, BC V0H 1V0", "telephone": "250-495-6035", "url": "https://www.thepoplarsmotel.com/", "priceRange": "$$", "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Laundry", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Nearby evening food", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true}]}</script>
 <style>
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
@@ -55,6 +56,11 @@ body {
 .g-main a { color: #1E7D96; }
 .g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: 1200px; margin: 0 auto; padding: 64px 40px 72px; display: flex; align-items: flex-start; justify-content: space-between; }
 .g-footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .g-footer-brand img { width: 48px; height: 48px; }
@@ -83,12 +89,40 @@ body {
 }
 
 .listing-main { max-width: 800px; margin: 0 auto; padding: 28px 24px 64px; }
-.listing-breadcrumb { font-size: 13px; color: #9CA3AF; margin-bottom: 24px; }
-.listing-breadcrumb a { color: #1E7D96; text-decoration: none; }
+.listing-main.ls-two-col { max-width: 1160px; }
+.ls-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+.ls-col-right { position: sticky; top: 20px; }
+.ls-col-right .ls-band { margin: 0; grid-template-columns: 1fr; gap: 0; }
+.ls-col-right .ls-card { border-radius: 0; }
+.ls-col-right .ls-card:first-child { border-radius: 12px 12px 0 0; border-bottom: none; }
+.ls-col-right .ls-card:last-child { border-radius: 0 0 12px 12px; border-top: none; }
+.ls-col-right .ls-bpnote { margin: 14px 0 0; }
+@media (max-width: 860px) { .ls-layout { grid-template-columns: 1fr; } .ls-col-right { position: static; } }
 .listing-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: -0.03em; color: #1F514C; margin-bottom: 8px; }
-.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.badge-accredited { display: inline-flex; align-items: center; gap: 4px; background: #1E7D96; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-accredited .seal { color: #F0C948; }
+.badge-welcoming { display: inline-flex; align-items: center; background: #FEF3C7; color: #92400E; border: 1px solid #F5D98B; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-info { display: inline-flex; align-items: center; background: #F3F4F6; color: #6B7280; border: 1px solid #E5E7EB; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-unwelcome { display: inline-flex; align-items: center; background: #DC2626; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.ls-meta-sep { width: 1px; height: 14px; background: #E5E7EB; }
+.ls-meta-type { font-weight: 600; color: #6B7280; }
+.ls-meta-city { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-meta-city:hover { text-decoration: underline; }
+.ls-meta-price { display: inline-flex; align-items: center; background: #FFF6E5; border: 1px solid #F0E6C5; border-radius: 999px; padding: 3px 11px; font-weight: 700; color: #2D2D2D; letter-spacing: 0.4px; font-size: 12.5px; }
 .listing-desc { font-size: 15px; line-height: 1.65; color: #2D2D2D; margin-bottom: 24px; }
-.listing-section { margin-bottom: 20px; border-top: 1px solid #E5E7EB; padding-top: 16px; }
+.listing-web-top { font-size: 14px; margin: -12px 0 24px; display: flex; gap: 8px; align-items: baseline; }
+.listing-web-top .ico { flex-shrink: 0; }
+.listing-web-top a { color: #1E7D96; text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
+.listing-web-top a:hover { text-decoration: underline; }
+.listing-bike-info { margin-top: -16px; }
+.listing-bike-info a { font-weight: 600; }
+.listing-pull { border-left: 4px solid #C9A83E; padding: 6px 0 6px 20px; margin: 26px 0 30px; }
+.listing-pull .q { font-family: "Archivo", sans-serif; font-size: 21px; font-weight: 400; letter-spacing: -0.01em; color: #1F514C; line-height: 1.45; }
+.listing-pull .who { font-size: 13px; color: #9CA3AF; margin-top: 6px; }
+.listing-pull .who a { color: #9CA3AF; text-decoration: none; }
+.listing-pull .who a:hover { color: #1E7D96; text-decoration: underline; }
+.listing-section { margin-bottom: 28px; }
 .listing-section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 10px; }
 .listing-detail-row { font-size: 14px; color: #2D2D2D; margin-bottom: 6px; }
 .listing-detail-row a { color: #1E7D96; }
@@ -107,15 +141,96 @@ body {
 .listing-indig-attr a { color: #1E7D96; text-decoration: none; }
 .listing-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
 .listing-verify a { color: #1E7D96; }
+.listing-section-sub { font-size: 13px; color: #6B7280; margin: -4px 0 12px; line-height: 1.5; }
+.listing-owner-cta { margin-top: 14px; background: #F5FAFB; border: 1px solid #BFDDE7; border-radius: 8px; padding: 12px 16px; font-size: 13.5px; color: #14586B; line-height: 1.6; }
+.listing-owner-cta strong { color: #14586B; }
+.listing-owner-cta a { color: #1E7D96; font-weight: 600; }
+.ls-notable-hero { border-top: 3px solid #1F514C; border-bottom: 3px solid #1F514C; padding: 24px 2px 26px; margin: 18px 0 30px; }
+.ls-notable-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1E7D96; margin-bottom: 8px; }
+.ls-notable-eyebrow .star { color: #1F514C; }
+.ls-notable-line { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; color: #1F514C; line-height: 1.4; }
+@media (max-width: 700px) { .ls-notable-line { font-size: 20px; } }
+.ls-ribbon { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.ls-rib { display: inline-flex; align-items: center; gap: 7px; background: #EDF6F8; border: 1px solid #BEDDE6; border-radius: 10px; padding: 8px 13px; font-size: 13px; font-weight: 600; color: #1E7D96; }
+.ls-sec-title { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; margin-bottom: 4px; }
+.ls-vrow { padding: 10px 0; border-bottom: 1px dashed #EDE9DA; font-size: 14px; }
+.ls-vrow:last-of-type { border-bottom: none; }
+.ls-vrow-main { display: flex; gap: 12px; align-items: baseline; }
+.ls-vrow .tick { color: #2E8A36; font-weight: 700; flex-shrink: 0; width: 16px; }
+.ls-vrow .k { font-weight: 700; color: #1F514C; }
+.ls-vrow .d { display: block; color: #57534E; line-height: 1.55; margin: 4px 0 0 28px; font-size: 13.5px; }
+.ls-pills-label { font-size: 12px; color: #9CA3AF; margin-top: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; }
+.ls-bpnote { display: flex; gap: 12px; background: #EAF3EC; border-radius: 10px; padding: 13px 16px; margin-top: 14px; font-size: 14px; color: #1C5240; line-height: 1.55; }
+.ls-bpnote .ico { font-size: 18px; line-height: 1.3; flex-shrink: 0; }
+.ls-bpnote details { margin-top: 6px; }
+.ls-bpnote summary { cursor: pointer; color: #1C5240; font-weight: 600; }
+.ls-bpnote ul { list-style: none; margin: 8px 0 0; padding: 0; }
+.ls-bpnote li { font-size: 13px; padding: 2px 0; color: #1C5240; }
 .listing-routes { display: flex; flex-wrap: wrap; gap: 8px; }
 .listing-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
 .listing-route-tag:hover { background: #DBEAFE; }
+.listing-trail-list { list-style: none; padding: 0; margin: 0; }
+.listing-trail-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-trail-name { color: #047857; text-decoration: none; }
+a.listing-trail-name:hover { text-decoration: underline; }
+.listing-trail-item.dest .listing-trail-name { font-weight: 700; }
+.listing-trail-dist { color: #9CA3AF; font-size: 13px; }
+.listing-near-group { margin-bottom: 14px; }
+.listing-near-grouptitle { font-size: 11px; font-weight: 700; color: #78716C; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.listing-near-list { list-style: none; padding: 0; margin: 0; }
+.listing-near-item { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-near-name { color: #1E7D96; text-decoration: none; }
+.listing-near-name:hover { text-decoration: underline; }
+.listing-near-subcat { color: #9CA3AF; font-size: 13px; }
+.listing-near-badge { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 20px; }
+.listing-near-dist { color: #9CA3AF; font-size: 13px; }
+.listing-bp-list { list-style: none; padding: 0; margin: 0; }
+.listing-bp-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-bp-dist { color: #9CA3AF; font-size: 13px; }
+/* Map + "Find them" band (Mockup C reflow Step 7) */
+.ls-band { display: grid; grid-template-columns: 1fr 300px; gap: 14px; margin: 24px 0 30px; align-items: start; }
+.ls-band.ls-band-solo { grid-template-columns: 1fr; }
+.ls-card { background: #fff; border: 1px solid #E7E2D0; border-radius: 12px; overflow: hidden; }
+/* Map keeps the shared .wwc-map fixed height (no flex/resize hacks — same as every
+   other embedded map); only strip its own border/radius since the card supplies them. */
+.ls-card-map .wwc-map { max-width: none; border: 0; border-radius: 0; }
+.ls-card-map .wwc-map-ctrls { margin: 0; padding: 10px 14px; }
+.ls-card-pad { padding: 14px 16px; }
+.ls-card-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1E7D96; margin-bottom: 9px; }
+.ls-contact-row { font-size: 13.5px; color: #2D2D2D; margin-bottom: 7px; display: flex; gap: 8px; }
+.ls-contact-row .ico { width: 18px; flex-shrink: 0; text-align: center; }
+.ls-contact-row span { min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a { color: #1E7D96; text-decoration: none; min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a:hover { text-decoration: underline; }
+.ls-route-tag { display: inline-flex; align-items: center; gap: 6px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; font-weight: 600; margin: 0 4px 4px 0; }
+.ls-route-tag:hover { background: #DBEAFE; }
+.ls-trail-line { font-size: 13px; padding: 2px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ls-trail-line a { color: #141414; text-decoration: none; font-weight: 400; }
+.ls-trail-line a:hover { text-decoration: underline; }
+.ls-trail-line .dist { color: #9CA3AF; font-size: 12px; flex-shrink: 0; }
+/* "Around you, by need" grid (Mockup C reflow Step 6) */
+.ls-needs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.ls-need { background: #FCFBF6; border: 1px solid #E7E2D0; border-radius: 12px; padding: 14px 16px; }
+.ls-need-title { font-size: 13px; font-weight: 700; color: #1F514C; margin-bottom: 9px; }
+.ls-need ul { list-style: none; padding: 0; margin: 0; }
+.ls-need li { display: flex; align-items: baseline; gap: 8px; font-size: 13.5px; padding: 3px 0; }
+.ls-need .nm { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-need .nm:hover { text-decoration: underline; }
+.ls-need .dist { color: #9CA3AF; font-size: 12px; margin-left: auto; white-space: nowrap; }
+.ls-need .wbadge { font-size: 10px; font-weight: 700; background: #EAF3EC; color: #1C5240; border-radius: 20px; padding: 1px 6px; }
+.ls-need .wbadge.no { background: #FDECEC; color: #B91C1C; }
+@media (max-width: 700px) { .ls-band { grid-template-columns: 1fr; } .ls-needs { grid-template-columns: 1fr; } }
 .listing-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .listing-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .listing-attribution a { color: #9CA3AF; }
 .listing-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
 .listing-suggest a { color: #1E7D96; }
+.listing-json { text-align: right; margin-top: 14px; }
+.listing-json a { font-size: 11px; color: #C9CDD3; text-decoration: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .03em; }
+.listing-json a:hover { color: #9CA3AF; text-decoration: underline; }
 .listing-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
+.badge-notable { display: inline-flex; align-items: center; background: #1F514C; color: #fff; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; letter-spacing: 0.2px; }
+.listing-notable { font-size: 14.5px; color: #1F514C; font-style: italic; margin: -8px 0 18px; line-height: 1.5; }
 
 </style>
 </head>
@@ -142,20 +257,52 @@ body {
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
 </script>
-<main class="listing-main">
-<nav class="listing-breadcrumb"><a href="/wwc/" id="listing-back" onclick="history.back();return false;">← <span id="listing-back-label">All listings</span></a> / Accommodation</nav>
-<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('listing-back-label').textContent=f.label;}}catch(e){}})();</script>
+<main class="listing-main ls-two-col">
+<div class="ls-layout"><div class="ls-col-left"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/wwc/">We Welcome Cyclists</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">The Poplars Motel</span></nav>
 <h1 class="listing-h1">The Poplars Motel</h1>
-<div class="listing-meta"><span class="badge badge-info">Info</span>  ·  <span style="font-weight:600;"><img src="/img/bc-flag.png" alt="" width="20" height="14" style="vertical-align:-2px;margin-right:5px;border-radius:2px;">Buy BC (independent)</span>  ·  Hotel / Motel  ·  Osoyoos  ·  $$ · Budget</div>
+<div class="listing-meta"><span class="badge badge-info">Info</span><span class="ls-meta-sep"></span><span class="ls-meta-type"><img src="/img/bc-flag.png" alt="" width="20" height="14" style="vertical-align:-2px;margin-right:5px;border-radius:2px;">Buy BC (independent) &middot; Hotel / Motel</span><a href="/wwc/community/osoyoos/" class="ls-meta-city">&#128205; Osoyoos</a><span class="ls-meta-price">$$ · Budget</span></div>
+
+<div class="ls-ribbon"><span class="ls-rib">Laundry</span><span class="ls-rib">Nearby evening food</span><span class="ls-rib">Wi-Fi</span></div>
 <p class="listing-desc">A family-run, smoke-free motel sitting directly on the shore of Osoyoos Lake in Canada&#x27;s only desert, offering 34 rooms — most with fully equipped kitchens — plus a private beach and shaded lawn. The property is open year-round and is well-positioned for exploring the southern Okanagan wine country, desert trails, and cross-border routes near the Washington state line. Staff are described as long-term Osoyoos residents knowledgeable about local attractions.</p>
-<div class="listing-verify">Amenities assumed from location and public data. <a href="/suggest#edit=The Poplars Motel">Confirm or update this listing →</a></div>
-<div class="listing-section"><div class="listing-section-title">Contact</div><div class="listing-detail-row"><strong>Address:</strong> 6404 Cottonwood Dr, Osoyoos, BC V0H 1V0</div><div class="listing-detail-row"><strong>Phone:</strong> 250-495-6035</div><div class="listing-detail-row"><strong>Website:</strong> <a href="https://www.thepoplarsmotel.com/" target="_blank" rel="noopener">https://www.thepoplarsmotel.com/</a></div></div>
+<p class="listing-web-top"><span class="ico">🌐</span><a href="https://www.thepoplarsmotel.com/" target="_blank" rel="noopener">Main website &rsaquo;</a></p>
 
-<div class="listing-section"><div class="listing-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>Secure overnight bike storage</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>Staff know the bike procedure</span></div></div>
-<div class="listing-section"><div class="listing-section-title">Amenities</div><div class="listing-pills"><span class="listing-pill-no">Min-stay waived</span><span class="listing-pill-yes">Laundry*</span><span class="listing-pill-no">Drying area</span><span class="listing-pill-no">Early or packed breakfast</span><span class="listing-pill-yes">Nearby evening food*</span><span class="listing-pill-no">Nearby grocery</span><span class="listing-pill-no">Vending machines</span><span class="listing-pill-no">Bikes in rooms</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">Luggage storage</span><span class="listing-pill-no">Pump</span><span class="listing-pill-no">Basic tools</span><span class="listing-pill-no">Bike wash / hose</span><span class="listing-pill-yes">Wi-Fi</span></div><div class="listing-amenity-note"><div><strong>Laundry:</strong> Services page lists &#x27;Guest laundry&#x27; as an amenity</div><div><strong>Nearby evening food:</strong> Services page lists &#x27;Pub -- across the street&#x27;</div></div></div>
 
-<div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: AI sources with manual review</div></div>
+<div class="listing-section"><div class="ls-sec-title">What's here for you</div><div class="listing-section-sub">Gathered from publicly available data and OpenStreetMap. Not confirmed by the owner yet.</div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Laundry</span></div><span class="d">Services page lists &#x27;Guest laundry&#x27; as an amenity</span></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Nearby evening food</span></div><span class="d">Services page lists &#x27;Pub -- across the street&#x27;</span></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Wi-Fi</span></div></div><div class="ls-pills-label">Not confirmed yet</div><div class="listing-pills"><span class="listing-pill-no">Secure overnight bike storage</span><span class="listing-pill-no">Min-stay waived</span><span class="listing-pill-no">Drying area</span><span class="listing-pill-no">Early or packed breakfast</span><span class="listing-pill-no">Nearby grocery</span><span class="listing-pill-no">Vending machines</span><span class="listing-pill-no">Bikes in rooms</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">Luggage storage</span><span class="listing-pill-no">Pump</span><span class="listing-pill-no">Basic tools</span><span class="listing-pill-no">Bike wash / hose</span></div><div class="listing-owner-cta"><strong>Run this place?</strong> <a href="/apply">Confirm your details</a> and we'll mark them verified. Spotted an error? <a href="/suggest#edit=The Poplars Motel">Suggest an edit</a>.</div></div>
+
+
+<div class="listing-section"><div class="ls-sec-title">Around here</div><div class="listing-section-sub">The closest options for the things touring cyclists actually look for.</div><div class="ls-needs"><div class="ls-need"><div class="ls-need-title">🔧 Fix &amp; supply</div><ul><li><a class="nm" href="/wwc/stop/c0bc5b0591/">Sage Pub &amp; Liquor Store</a><span class="dist">0.1 km</span></li><li><a class="nm" href="/wwc/stop/b8e0e5b36a/">Sage Liquor Store</a><span class="dist">0.1 km</span></li><li><a class="nm" href="/wwc/stop/e71622cadb/">BC Liquor Store</a><span class="dist">0.9 km</span></li><li><a class="nm" href="/wwc/stop/1b7072b51f/">Double O Bikes</a><span class="wbadge">Welcoming</span><span class="dist">1.5 km</span></li><li><a class="nm" href="/wwc/stop/6c40c5edda/">Sessions Outdoor Sports</a><span class="dist">1.8 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🍽 Eat nearby</div><ul><li><a class="nm" href="/wwc/stop/dbfb3ecefe/">The Sage Pub</a><span class="dist">0.1 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">If this stop is full</div><ul><li><a class="nm" href="/wwc/stop/7e98f87f27/">Sandy Beach Suites</a><span class="dist">0.1 km</span></li><li><a class="nm" href="/wwc/stop/69ae17803d/">The Riviera Motel</a><span class="dist">0.1 km</span></li><li><a class="nm" href="/wwc/stop/19318dcaef/">Island View RV Resort</a><span class="dist">1.4 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🎭 While you're here</div><ul><li><a class="nm" href="/wwc/stop/dd9cee3ca6/">Osoyoos Library Branch</a><span class="dist">1.2 km</span></li><li><a class="nm" href="/wwc/stop/9de76a0869/">Osoyoos Visitor Centre</a><span class="dist">1.3 km</span></li></ul></div></div></div>
+<div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: Public data, AI sources with manual review</div></div>
 <div class="listing-suggest"><a href="/suggest#edit=The Poplars Motel">Suggest an edit to this listing</a></div>
+<div class="listing-json"><a href="/wwc/stop/c16d56799c.json" rel="nofollow">JSON</a></div></div><aside class="ls-col-right"><div class="ls-band"><div class="ls-card ls-card-map"><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div id="stopmap" class="wwc-map compact"></div><div class="wwc-map-ctrls"><span class="stopmap-lgd" style="color:#14807A"><span class="stopmap-lgd-sw" style="background:#14807A"></span> Bike network</span><span class="stopmap-lgd"><span class="stopmap-lgd-sw"></span> Nearby bike routes</span></div><script src="/map/lib/maplibre-gl.js"></script>
+<script src="/map/lib/pmtiles.js"></script>
+<script>
+(function(){
+  var protocol=new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile);
+  var map=new maplibregl.Map(Object.assign(
+    {container:"stopmap", style:location.origin+"/map/style/style.json", attributionControl:false},
+    {"center": [-119.4497535, 49.0303271], "zoom": 13}));
+  map.addControl(new maplibregl.NavigationControl(), "top-right");
+  var _attrib=new maplibregl.AttributionControl({compact:true,
+    customAttribution:'\u00a9 <a href="https://www.openmaptiles.org/">OpenMapTiles</a> \u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  map.addControl(_attrib);
+  // Compact mode initializes expanded; collapse it to the small "i" so the map
+  // opens clean. Clicking the button still expands the credit.
+  if(_attrib._container){_attrib._container.classList.remove("maplibregl-compact-show");}
+  map.on("load", function(){
+    map.addSource("stoptrails",{type:"geojson",data:{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "MultiLineString", "coordinates": [[[-119.4634138, 49.00182219999999], [-119.4639518, 49.00256750000003]], [[-119.4639518, 49.00256750000003], [-119.46556780000002, 49.00476769999998]], [[-119.46556780000002, 49.00476769999998], [-119.4661804, 49.005832599999984], [-119.4662509, 49.00855400000004], [-119.4644496, 49.01274169999998], [-119.46577130000001, 49.016288100000054]], [[-119.46577130000001, 49.016288100000054], [-119.46662040000001, 49.01779030000001], [-119.4686868, 49.01884589999997]], [[-119.4686868, 49.01884589999997], [-119.47323160000002, 49.02192839999999]], [[-119.47323160000002, 49.02192839999999], [-119.474677, 49.023332299999964], [-119.4746389, 49.02477700000005]], [[-119.4746389, 49.02477700000005], [-119.47342919999998, 49.02788739999999], [-119.4737236, 49.030212], [-119.47519590000002, 49.03314950000003]], [[-119.47519590000002, 49.03314950000003], [-119.47566340000002, 49.03399869999999]], [[-119.47566340000002, 49.03399869999999], [-119.47586559999999, 49.0343183]], [[-119.47698630000001, 49.035707500000036], [-119.47586559999999, 49.0343183]], [[-119.4770397, 49.03577099999998], [-119.47698630000001, 49.035707500000036]], [[-119.47968940000001, 49.03821149999998], [-119.4770397, 49.03577099999998]], [[-119.47702649999998, 49.036000500000036], [-119.47791989999999, 49.036973500000016], [-119.47968940000001, 49.03821149999998]], [[-119.47684790000001, 49.03577800000003], [-119.47702649999998, 49.036000500000036]], [[-119.4768007, 49.035719000000036], [-119.47684790000001, 49.03577800000003]], [[-119.47586559999999, 49.0343183], [-119.4768007, 49.035719000000036]], [[-119.4768007, 49.035719000000036], [-119.47592860000002, 49.03565749999999], [-119.4747587, 49.03519169999998]], [[-119.4747587, 49.03519169999998], [-119.47453320000001, 49.035137599999985]], [[-119.47414220000002, 49.034969699999984], [-119.47453320000001, 49.035137599999985]], [[-119.47080749999999, 49.032776599999984], [-119.47238410000001, 49.0334231], [-119.47414220000002, 49.034969699999984]], [[-119.46911720000001, 49.03268510000005], [-119.47080749999999, 49.032776599999984]], [[-119.4672331, 49.032798900000024], [-119.46911720000001, 49.03268510000005]], [[-119.46525829999999, 49.03291259999994], [-119.4672331, 49.032798900000024]], [[-119.4642416, 49.0329724], [-119.46525829999999, 49.03291259999994]], [[-119.46348519999998, 49.0330169], [-119.4642416, 49.0329724]], [[-119.4634265, 49.03263029999997], [-119.46348519999998, 49.0330169]], [[-119.463284, 49.03157860000001], [-119.4634265, 49.03263029999997]], [[-119.4632555, 49.03136390000001], [-119.463284, 49.03157860000001]], [[-119.463238, 49.03123230000002], [-119.4632555, 49.03136390000001]], [[-119.46320580000001, 49.03092949999996], [-119.463238, 49.03123230000002]], [[-119.46232309999999, 49.02995570000002], [-119.46320580000001, 49.03092949999996]], [[-119.4620224, 49.029749099999954], [-119.46232309999999, 49.02995570000002]], [[-119.4600809, 49.02859959999998], [-119.4620224, 49.029749099999954]], [[-119.45922420000001, 49.02830560000005], [-119.4600809, 49.02859959999998]], [[-119.44119330000001, 49.02805519999993], [-119.4434559, 49.02821459999996], [-119.4474873, 49.02901740000001], [-119.4570494, 49.028171099999994], [-119.45922420000001, 49.02830560000005]], [[-119.46822210000002, 49.02687179999996], [-119.46596749999999, 49.027549900000025], [-119.46486310000002, 49.02818679999996], [-119.4619096, 49.028848400000015], [-119.46117130000002, 49.029228200000034]], [[-119.4689309, 49.02683009999997], [-119.46822210000002, 49.02687179999996]], [[-119.46906800000001, 49.02633679999997], [-119.4689309, 49.02683009999997]], [[-119.46937640000002, 49.02580670000003], [-119.46906800000001, 49.02633679999997]], [[-119.47015460000001, 49.025308299999985], [-119.46937640000002, 49.02580670000003]], [[-119.47000280000002, 49.024620899999974], [-119.47015460000001, 49.025308299999985]], [[-119.47000280000002, 49.024620899999974], [-119.46937640000002, 49.02580670000003]], [[-119.4702145, 49.02394149999997], [-119.47000280000002, 49.024620899999974]], [[-119.46665789999999, 49.0216634], [-119.4681542, 49.02258989999999], [-119.46892700000001, 49.02347270000001], [-119.4702145, 49.02394149999997]], [[-119.46596149999999, 49.0204651], [-119.46649349999998, 49.0209408], [-119.46665789999999, 49.0216634]], [[-119.4645834, 49.0193029], [-119.46596149999999, 49.0204651]], [[-119.46436840000001, 49.019057500000045], [-119.4645834, 49.0193029]], [[-119.46304679999999, 49.017585700000055], [-119.46436840000001, 49.019057500000045]], [[-119.4634597, 49.0167158], [-119.4629248, 49.01700950000002], [-119.46304679999999, 49.017585700000055]], [[-119.45987190000001, 49.0142913], [-119.4601431, 49.01453750000004], [-119.46135640000001, 49.0148015], [-119.4629194, 49.01574959999997], [-119.4634597, 49.0167158]], [[-119.45987190000001, 49.0142913], [-119.4576405, 49.01480230000002]], [[-119.4576405, 49.01480230000002], [-119.4566421, 49.01499509999998], [-119.45464279999999, 49.01473329999999], [-119.45273769999999, 49.015874200000034], [-119.44612240000001, 49.018178]], [[-119.44612240000001, 49.018178], [-119.44293710000001, 49.01881749999999], [-119.44256440000001, 49.0192052], [-119.444221, 49.019190400000014], [-119.44612240000001, 49.018178]], [[-119.4776995, 49.03565609999999], [-119.47665620000001, 49.035301899999986]], [[-119.4776995, 49.03565609999999], [-119.47698630000001, 49.035707500000036]], [[-119.47698630000001, 49.035707500000036], [-119.4768007, 49.035719000000036]], [[-119.438549, 49.02797860000002], [-119.44119330000001, 49.02805519999993]], [[-119.4765063, 49.03536019999998], [-119.4762634, 49.03571279999998]], [[-119.47593700000002, 49.03574739999998], [-119.47702649999998, 49.036000500000036]], [[-119.47593700000002, 49.03574739999998], [-119.47684790000001, 49.03577800000003]], [[-119.47684790000001, 49.03577800000003], [-119.4770397, 49.03577099999998]], [[-119.4770397, 49.03577099999998], [-119.47830480000002, 49.0357139]], [[-119.47830480000002, 49.0357139], [-119.4792792, 49.03559899999999]], [[-119.4792792, 49.03559899999999], [-119.4799027, 49.03538560000001]], [[-119.4799027, 49.03538560000001], [-119.48083040000002, 49.034883599999986]], [[-119.4940713, 49.03759229999997], [-119.48824550000002, 49.034185400000005], [-119.48671569999999, 49.03366409999998], [-119.48389480000002, 49.03363940000001], [-119.48083040000002, 49.034883599999986]], [[-119.49550895945886, 49.038436900350625], [-119.4940713, 49.03759229999997]], [[-119.48083040000002, 49.034883599999986], [-119.47928230000001, 49.03551620000001]], [[-119.47928230000001, 49.03551620000001], [-119.47830520000001, 49.0356436]], [[-119.47830520000001, 49.0356436], [-119.4780217, 49.03564380000001]], [[-119.4780217, 49.03564380000001], [-119.4776995, 49.03565609999999]], [[-119.47727480000002, 49.036059400000035], [-119.4776074, 49.03573049999997]], [[-119.4368062, 49.027929300000004], [-119.438549, 49.02797860000002]], [[-119.4368062, 49.027929300000004], [-119.4366673, 49.028625199999986], [-119.43519880000001, 49.02996499999998]], [[-119.43519880000001, 49.02996499999998], [-119.43658280000001, 49.03550810000001], [-119.4374866, 49.037220900000015]], [[-119.4374866, 49.037220900000015], [-119.4378982, 49.03796140000001]], [[-119.4378982, 49.03796140000001], [-119.43808020000002, 49.03868220000005], [-119.4369736, 49.03944719999999], [-119.43675900000001, 49.04039599999998], [-119.4351792, 49.04090199999996]], [[-119.4351792, 49.04090199999996], [-119.4344744, 49.04112030000004]], [[-119.47453320000001, 49.035137599999985], [-119.47593700000002, 49.03574739999998]], [[-119.47968940000001, 49.03821149999998], [-119.48448419999998, 49.04171490000003], [-119.48981070000002, 49.04332709999998], [-119.49550895945886, 49.046488140317166]], [[-119.4494468, 49.02888170000005], [-119.44942719999999, 49.029404399999976]], [[-119.44942719999999, 49.029404399999976], [-119.4494223, 49.02952739999996]], [[-119.4494223, 49.02952739999996], [-119.4494201, 49.029881099999976]], [[-119.4494201, 49.029881099999976], [-119.4493859, 49.03065530000002]], [[-119.4493859, 49.03065530000002], [-119.44805990000002, 49.03137479999997]], [[-119.44805990000002, 49.03137479999997], [-119.4475501, 49.03164419999998]], [[-119.4475501, 49.03164419999998], [-119.44704739999999, 49.03194020000002]], [[-119.44704739999999, 49.03194020000002], [-119.4455723, 49.03285870000003]], [[-119.4455723, 49.03285870000003], [-119.44391830000002, 49.03425909999998]], [[-119.44391830000002, 49.03425909999998], [-119.4437398, 49.034473600000005]], [[-119.4437398, 49.034473600000005], [-119.443551, 49.035090999999966]], [[-119.443551, 49.035090999999966], [-119.44348040000001, 49.035506499999975]], [[-119.44348040000001, 49.035506499999975], [-119.4437091, 49.03628820000001]], [[-119.4425457, 49.02792819999994], [-119.44257700000001, 49.028095599999986]], [[-119.4423132, 49.026687], [-119.4425457, 49.02792819999994]], [[-119.4421583, 49.02587909999998], [-119.4423132, 49.026687]], [[-119.4418874, 49.024472800000005], [-119.4421583, 49.02587909999998]], [[-119.43758489999999, 49.02313129999997], [-119.4391785, 49.02389090000002], [-119.4414965, 49.02420019999995], [-119.4418874, 49.024472800000005]], [[-119.43591490000001, 49.019219500000055], [-119.4355658, 49.02089710000004], [-119.43758489999999, 49.02313129999997]], [[-119.436018, 49.015381000000026], [-119.43591490000001, 49.019219500000055]], [[-119.43782470000001, 49.01017129999999], [-119.43717600000001, 49.01094599999998], [-119.435978, 49.01405999999999], [-119.436018, 49.015381000000026]], [[-119.43656600000001, 49.004991999999994], [-119.438038, 49.005984], [-119.43900499999998, 49.00854100000002], [-119.43889899999999, 49.00900399999996], [-119.43782470000001, 49.01017129999999]], [[-119.4322343, 49.00242849999999], [-119.433607, 49.00355100000003], [-119.43656600000001, 49.004991999999994]], [[-119.46348519999998, 49.0330169], [-119.4636159, 49.03394170000001]], [[-119.4636159, 49.03394170000001], [-119.4642955, 49.0366233], [-119.4639817, 49.03689219999995]], [[-119.4639817, 49.03689219999995], [-119.4657411, 49.039305300000045], [-119.4668212, 49.04163269999997]], [[-119.4706633, 49.040024299999985], [-119.4693099, 49.04125099999997], [-119.4668212, 49.04163269999997]], [[-119.4706633, 49.040024299999985], [-119.47205260000001, 49.04109359999999], [-119.47576549999998, 49.042079299999955], [-119.4798318, 49.04368400000001], [-119.4828266, 49.04383190000001], [-119.4834621, 49.044035999999984]], [[-119.4834621, 49.044035999999984], [-119.4840069, 49.04504380000002], [-119.4886417, 49.048111099999964]], [[-119.4886417, 49.048111099999964], [-119.4893949, 49.04840559999998]], [[-119.4893949, 49.04840559999998], [-119.4906987, 49.049148399999986], [-119.4945213, 49.049718699999985], [-119.49550895945886, 49.049636262738375]], [[-119.40399804054114, 49.011845096986114], [-119.4050045, 49.01145560000001]], [[-119.4050045, 49.01145560000001], [-119.4051741, 49.01105910000002], [-119.40460880000002, 49.0109095]], [[-119.40460880000002, 49.0109095], [-119.40399804054114, 49.01119082005497]], [[-119.40399804054114, 49.0111866068588], [-119.40427149999998, 49.01105910000002], [-119.4049408, 49.01103889999997], [-119.4050114, 49.0113136], [-119.40399804054114, 49.01183699794713]], [[-119.4351696, 49.02787719999999], [-119.4368062, 49.027929300000004]], [[-119.4326697, 49.027834799999994], [-119.4351696, 49.02787719999999]], [[-119.4326697, 49.027834799999994], [-119.43201370000001, 49.02801239999997], [-119.4315416, 49.02853869999998], [-119.43091470000002, 49.031842999999974]], [[-119.43091470000002, 49.031842999999974], [-119.4308174, 49.032337500000004]], [[-119.4308174, 49.032337500000004], [-119.43001050000001, 49.0362254], [-119.4288952, 49.037323400000005], [-119.4277206, 49.03772330000001], [-119.4263417, 49.03779239999999], [-119.4250768, 49.037520299999926], [-119.4237323, 49.03662759999999]], [[-119.4237323, 49.03662759999999], [-119.4213381, 49.03274890000003]], [[-119.4213381, 49.03274890000003], [-119.41717450000002, 49.02835890000002], [-119.4168723, 49.027499399999954], [-119.4169514, 49.02538839999998], [-119.4163655, 49.02424650000001], [-119.4155923, 49.023478299999944], [-119.41020790000002, 49.019819199999965], [-119.4094521, 49.01895720000004], [-119.4094971, 49.0177367], [-119.41101320000001, 49.01571150000001], [-119.41135640000002, 49.014806699999944], [-119.41202190000001, 49.01209119999999], [-119.4116803, 49.010486499999956]], [[-119.4116803, 49.010486499999956], [-119.41093370000002, 49.009545600000024], [-119.4097536, 49.00948660000004], [-119.40941479999998, 49.009835399999965], [-119.409266, 49.011272299999995], [-119.40797730000001, 49.01219599999997]], [[-119.40797730000001, 49.01219599999997], [-119.40399804054114, 49.01455199296549]], [[-119.40399804054114, 49.017571122316085], [-119.40400730000002, 49.017588000000025], [-119.40399804054114, 49.01759762866362]]]}, "properties": {"name": "South Okanagan - Similkameen Bike Route Network"}}]}});
+    map.addLayer({id:"stoptrails-casing",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#ffffff","line-width":6,"line-opacity":0.9}});
+    map.addLayer({id:"stoptrails-line",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#5f259f","line-width":3}});
+    var mk=new maplibregl.Marker({color:"#1F514C"}).setLngLat([-119.4497535, 49.0303271]);
+    var pop=new maplibregl.Popup({closeButton:true,closeOnClick:false,focusAfterOpen:false}).setHTML("<b>The Poplars Motel<\/b>");
+    mk.setPopup(pop).addTo(map);
+  });
+})();
+</script></div><div class="ls-card"><div class="ls-card-pad"><div class="ls-card-title">Location</div><div class="ls-contact-row"><span class="ico">📍</span><span>6404 Cottonwood Dr, Osoyoos, BC V0H 1V0</span></div><div class="ls-contact-row"><span class="ico">📞</span><span>250-495-6035</span></div><div class="ls-contact-row"><span class="ico">🌐</span><a href="https://www.thepoplarsmotel.com/" target="_blank" rel="noopener">https://www.thepoplarsmotel.com/</a></div><div class="ls-card-title" style="margin-top:14px;color:#5f259f;">Nearby bike routes</div><div class="ls-trail-line"><a href="/trail/south-okanagan-similkameen-bike-route-network/" style="">South Okanagan - Similkameen Bike Route Network</a> <span class="dist">20 m</span></div></div></div></div></aside></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">
@@ -167,7 +314,6 @@ body {
       <a href="/">Home</a>
       <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
-      <a href="/routes">Routes</a>
     </div>
     <div class="g-footer-col">
       <a href="/about">About</a>

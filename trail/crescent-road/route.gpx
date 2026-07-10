@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Crescent Road</name>
+<link href="https://bccycletourism.ca/trail/crescent-road/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.053376" lon="-122.866866">
+<name>Dudes Coffee House</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.053427" lon="-122.867092">
+<name>Fieldstone Bread</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.053550" lon="-122.867092">
+<name>Domino's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.065213" lon="-122.842011">
+<name>Stewart Farmhouse</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.052902" lon="-122.880776">
+<name>The Sunflower Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.052861" lon="-122.880978">
+<name>The Cabin Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.056473" lon="-122.871719">
+<name>White Rock Sea Tours and Whale Watch Vancouver</name>
+<cmt>viewpoint</cmt>
+<desc>Activity / Experience</desc>
+<sym>Dot</sym>
+<type>overlook</type>
+</wpt>
+<wpt lat="49.052632" lon="-122.883266">
+<name>Crescent Coffee House</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.052136" lon="-122.884411">
+<name>Red Baron Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Crescent Road</name>
+<trkseg>
+<trkpt lat="49.053583" lon="-122.878321"/>
+<trkpt lat="49.054015" lon="-122.876544"/>
+<trkpt lat="49.053997" lon="-122.874128"/>
+<trkpt lat="49.053760" lon="-122.872481"/>
+<trkpt lat="49.053326" lon="-122.869661"/>
+<trkpt lat="49.053270" lon="-122.869289"/>
+<trkpt lat="49.053172" lon="-122.868650"/>
+<trkpt lat="49.053087" lon="-122.868071"/>
+<trkpt lat="49.053080" lon="-122.868019"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.053080" lon="-122.868019"/>
+<trkpt lat="49.053095" lon="-122.867518"/>
+<trkpt lat="49.053126" lon="-122.867453"/>
+<trkpt lat="49.053128" lon="-122.867270"/>
+<trkpt lat="49.053112" lon="-122.867232"/>
+<trkpt lat="49.053111" lon="-122.866551"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.053111" lon="-122.866551"/>
+<trkpt lat="49.053059" lon="-122.866797"/>
+<trkpt lat="49.052929" lon="-122.867208"/>
+<trkpt lat="49.052901" lon="-122.867253"/>
+<trkpt lat="49.052897" lon="-122.867467"/>
+<trkpt lat="49.052950" lon="-122.867536"/>
+<trkpt lat="49.053080" lon="-122.868019"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.053111" lon="-122.866551"/>
+<trkpt lat="49.053442" lon="-122.864508"/>
+<trkpt lat="49.054565" lon="-122.862884"/>
+<trkpt lat="49.056127" lon="-122.859887"/>
+<trkpt lat="49.056982" lon="-122.856582"/>
+<trkpt lat="49.057536" lon="-122.854108"/>
+<trkpt lat="49.057830" lon="-122.853183"/>
+<trkpt lat="49.058468" lon="-122.852430"/>
+<trkpt lat="49.060365" lon="-122.850530"/>
+<trkpt lat="49.061735" lon="-122.849145"/>
+<trkpt lat="49.062649" lon="-122.847669"/>
+<trkpt lat="49.064109" lon="-122.843208"/>
+<trkpt lat="49.064633" lon="-122.840081"/>
+<trkpt lat="49.064998" lon="-122.839181"/>
+<trkpt lat="49.066878" lon="-122.836365"/>
+<trkpt lat="49.067209" lon="-122.834995"/>
+<trkpt lat="49.067321" lon="-122.834309"/>
+<trkpt lat="49.067435" lon="-122.833611"/>
+<trkpt lat="49.067474" lon="-122.830030"/>
+<trkpt lat="49.067143" lon="-122.827806"/>
+<trkpt lat="49.067510" lon="-122.824719"/>
+<trkpt lat="49.066672" lon="-122.822923"/>
+<trkpt lat="49.066770" lon="-122.822177"/>
+<trkpt lat="49.066954" lon="-122.821779"/>
+<trkpt lat="49.067423" lon="-122.820736"/>
+<trkpt lat="49.067490" lon="-122.820603"/>
+</trkseg>
+</trk>
+</gpx>

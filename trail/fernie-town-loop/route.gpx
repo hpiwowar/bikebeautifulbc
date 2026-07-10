@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Fernie Town Loop</name>
+<link href="https://bccycletourism.ca/trail/fernie-town-loop/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.516771" lon="-115.057733">
+<name>Ann's Your Independent Grocer</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.504741" lon="-115.069455">
+<name>The Bridge Bistro</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.514634" lon="-115.057329">
+<name>Best Western Fernie Mountain Lodge</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.502079" lon="-115.061640">
+<name>GearHub Sports</name>
+<cmt>bike_shop</cmt>
+<desc>Repair Shop</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+<wpt lat="49.514944" lon="-115.058417">
+<name>Fernie Mountain Spirits</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.517462" lon="-115.059263">
+<name>Canadian Tire</name>
+<cmt>convenience_store</cmt>
+<desc>General merchandise</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.514970" lon="-115.058534">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.502863" lon="-115.060875">
+<name>Royal Hotel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.514192" lon="-115.058102">
+<name>Boston Pizza</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.502466" lon="-115.061938">
+<name>Ski Base</name>
+<cmt>bike_shop</cmt>
+<desc>Repair Shop</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+<wpt lat="49.503888" lon="-115.059764">
+<name>The Arts Station</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.500278" lon="-115.061631">
+<name>Fernie Aquatic Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.520744" lon="-115.052026">
+<name>Fernie RV Resort</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="49.502312" lon="-115.062438">
+<name>The Brickhouse Bar &amp; Grill</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.503065" lon="-115.061328">
+<name>Big Bang bagels</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.504829" lon="-115.058588">
+<name>Save-On-Foods</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.516058" lon="-115.059319">
+<name>McDonald's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.504532" lon="-115.058948">
+<name>BC Liquorstore</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.502937" lon="-115.061855">
+<name>Straight Line Bicycles</name>
+<cmt>bike_shop</cmt>
+<desc>Repair Shop</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+<wpt lat="49.503017" lon="-115.061903">
+<name>Fernie Museum</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.501599" lon="-115.063269">
+<name>The Central</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.501550" lon="-115.063308">
+<name>Himalayan Spice Bistro</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.516504" lon="-115.059911">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.503489" lon="-115.061409">
+<name>Lunchbox</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.503354" lon="-115.061627">
+<name>Nevados</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.504108" lon="-115.060332">
+<name>The Local</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.504379" lon="-115.059517">
+<name>The Fernie Taphouse</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.503633" lon="-115.061631">
+<name>The Northern Bar &amp; Stage</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.504322" lon="-115.060528">
+<name>The Loaf</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.504187" lon="-115.060849">
+<name>Freshies Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.504241" lon="-115.061088">
+<name>House of Gato</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.503275" lon="-115.062547">
+<name>Fernie Heritage Library</name>
+<cmt>library</cmt>
+<desc>Library</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.504064" lon="-115.061728">
+<name>Mug Shots</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.512458" lon="-115.059330">
+<name>A&amp;W</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.506689" lon="-115.066594">
+<name>Fas Gas</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.524814" lon="-115.054414">
+<name>Fernie Historic Oil Derrick</name>
+<cmt>viewpoint</cmt>
+<desc>Activity / Experience</desc>
+<sym>Dot</sym>
+<type>overlook</type>
+</wpt>
+<wpt lat="49.524615" lon="-115.055707">
+<name>Fernie Visitor Information Centre</name>
+<cmt>generic</cmt>
+<desc>Visitor Centre</desc>
+<sym>Dot</sym>
+<type>generic</type>
+</wpt>
+<wpt lat="49.508546" lon="-115.064633">
+<name>Bramasole Restaurant &amp; Wine Bar</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.511527" lon="-115.060145">
+<name>7-Eleven</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.510016" lon="-115.063075">
+<name>Snow Valley Lodging</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.507333" lon="-115.064741">
+<name>Park Place Lodge</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.526796" lon="-115.047828">
+<name>Fernie Brewing Company</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.510772" lon="-115.062184">
+<name>Red Tree Lodge</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.507382" lon="-115.064425">
+<name>The Pub, Bar &amp; Grill</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Fernie Town Loop</name>
+<trkseg>
+<trkpt lat="49.495565" lon="-115.064069"/>
+<trkpt lat="49.495807" lon="-115.064834"/>
+<trkpt lat="49.495111" lon="-115.066778"/>
+<trkpt lat="49.495427" lon="-115.068108"/>
+<trkpt lat="49.495741" lon="-115.067853"/>
+<trkpt lat="49.496171" lon="-115.068528"/>
+<trkpt lat="49.497480" lon="-115.069175"/>
+<trkpt lat="49.499270" lon="-115.066879"/>
+<trkpt lat="49.500734" lon="-115.066474"/>
+<trkpt lat="49.502332" lon="-115.067326"/>
+<trkpt lat="49.504134" lon="-115.069370"/>
+<trkpt lat="49.505747" lon="-115.070937"/>
+<trkpt lat="49.507347" lon="-115.071813"/>
+<trkpt lat="49.509092" lon="-115.070982"/>
+<trkpt lat="49.511294" lon="-115.068846"/>
+<trkpt lat="49.512459" lon="-115.068609"/>
+<trkpt lat="49.517597" lon="-115.063427"/>
+<trkpt lat="49.518773" lon="-115.061382"/>
+<trkpt lat="49.518343" lon="-115.059002"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.518343" lon="-115.059002"/>
+<trkpt lat="49.521069" lon="-115.055432"/>
+<trkpt lat="49.521768" lon="-115.053210"/>
+<trkpt lat="49.522112" lon="-115.051226"/>
+<trkpt lat="49.522529" lon="-115.048135"/>
+<trkpt lat="49.522427" lon="-115.046656"/>
+<trkpt lat="49.522906" lon="-115.045034"/>
+<trkpt lat="49.522780" lon="-115.043630"/>
+<trkpt lat="49.522959" lon="-115.041574"/>
+<trkpt lat="49.522430" lon="-115.040685"/>
+<trkpt lat="49.522236" lon="-115.039309"/>
+<trkpt lat="49.521513" lon="-115.038719"/>
+<trkpt lat="49.521557" lon="-115.038400"/>
+<trkpt lat="49.521317" lon="-115.037605"/>
+<trkpt lat="49.520177" lon="-115.038684"/>
+<trkpt lat="49.519463" lon="-115.038317"/>
+<trkpt lat="49.518212" lon="-115.039552"/>
+<trkpt lat="49.517996" lon="-115.040250"/>
+<trkpt lat="49.517400" lon="-115.040830"/>
+<trkpt lat="49.515427" lon="-115.042744"/>
+<trkpt lat="49.514572" lon="-115.042749"/>
+<trkpt lat="49.514100" lon="-115.042567"/>
+<trkpt lat="49.513224" lon="-115.043191"/>
+<trkpt lat="49.512361" lon="-115.043956"/>
+<trkpt lat="49.511299" lon="-115.045909"/>
+<trkpt lat="49.510113" lon="-115.046439"/>
+<trkpt lat="49.510101" lon="-115.046827"/>
+<trkpt lat="49.509475" lon="-115.047835"/>
+<trkpt lat="49.509629" lon="-115.047933"/>
+<trkpt lat="49.508397" lon="-115.049163"/>
+<trkpt lat="49.507711" lon="-115.050991"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.507711" lon="-115.050991"/>
+<trkpt lat="49.508191" lon="-115.051409"/>
+<trkpt lat="49.509032" lon="-115.053582"/>
+<trkpt lat="49.509223" lon="-115.054022"/>
+<trkpt lat="49.510531" lon="-115.052269"/>
+<trkpt lat="49.511024" lon="-115.052049"/>
+<trkpt lat="49.511841" lon="-115.052727"/>
+<trkpt lat="49.512109" lon="-115.053109"/>
+<trkpt lat="49.512283" lon="-115.052870"/>
+<trkpt lat="49.514918" lon="-115.056729"/>
+<trkpt lat="49.515365" lon="-115.057513"/>
+<trkpt lat="49.516239" lon="-115.056718"/>
+<trkpt lat="49.516923" lon="-115.057688"/>
+<trkpt lat="49.517350" lon="-115.057952"/>
+<trkpt lat="49.518179" lon="-115.058185"/>
+<trkpt lat="49.518343" lon="-115.059002"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.507711" lon="-115.050991"/>
+<trkpt lat="49.506319" lon="-115.054299"/>
+<trkpt lat="49.503702" lon="-115.057339"/>
+<trkpt lat="49.503095" lon="-115.057651"/>
+<trkpt lat="49.502778" lon="-115.059213"/>
+<trkpt lat="49.501584" lon="-115.060737"/>
+<trkpt lat="49.501600" lon="-115.061012"/>
+<trkpt lat="49.501182" lon="-115.060028"/>
+<trkpt lat="49.498553" lon="-115.059768"/>
+<trkpt lat="49.497264" lon="-115.059283"/>
+<trkpt lat="49.497138" lon="-115.058667"/>
+<trkpt lat="49.497556" lon="-115.055099"/>
+<trkpt lat="49.497496" lon="-115.054630"/>
+<trkpt lat="49.497158" lon="-115.054873"/>
+</trkseg>
+</trk>
+</gpx>

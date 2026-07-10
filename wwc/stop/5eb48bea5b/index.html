@@ -20,7 +20,8 @@
 <meta property="og:description" content="A 7-Eleven in">
 <meta name="twitter:description" content="A 7-Eleven in">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":[]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ConvenienceStore", "name": "7-Eleven", "description": "A 7-Eleven in Chilliwack.", "address": "3027 Immel Street, V2S 4L3", "telephone": "+1-604-850-0977", "url": "https://stores.7-eleven.ca/store/29617"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"We Welcome Cyclists","item":"https://bccycletourism.ca/wwc/"},{"@type":"ListItem","position":2,"name":"7-Eleven","item":"https://bccycletourism.ca/wwc/stop/5eb48bea5b/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ConvenienceStore", "name": "7-Eleven", "description": "A 7-Eleven in Abbotsford.", "address": "3027 Immel Street, V2S 4L3", "telephone": "+1-604-850-0977", "url": "https://stores.7-eleven.ca/store/29617"}</script>
 <style>
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -55,6 +56,11 @@ body {
 .g-main a { color: #1E7D96; }
 .g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: 1200px; margin: 0 auto; padding: 64px 40px 72px; display: flex; align-items: flex-start; justify-content: space-between; }
 .g-footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .g-footer-brand img { width: 48px; height: 48px; }
@@ -83,12 +89,40 @@ body {
 }
 
 .listing-main { max-width: 800px; margin: 0 auto; padding: 28px 24px 64px; }
-.listing-breadcrumb { font-size: 13px; color: #9CA3AF; margin-bottom: 24px; }
-.listing-breadcrumb a { color: #1E7D96; text-decoration: none; }
+.listing-main.ls-two-col { max-width: 1160px; }
+.ls-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+.ls-col-right { position: sticky; top: 20px; }
+.ls-col-right .ls-band { margin: 0; grid-template-columns: 1fr; gap: 0; }
+.ls-col-right .ls-card { border-radius: 0; }
+.ls-col-right .ls-card:first-child { border-radius: 12px 12px 0 0; border-bottom: none; }
+.ls-col-right .ls-card:last-child { border-radius: 0 0 12px 12px; border-top: none; }
+.ls-col-right .ls-bpnote { margin: 14px 0 0; }
+@media (max-width: 860px) { .ls-layout { grid-template-columns: 1fr; } .ls-col-right { position: static; } }
 .listing-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: -0.03em; color: #1F514C; margin-bottom: 8px; }
-.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.badge-accredited { display: inline-flex; align-items: center; gap: 4px; background: #1E7D96; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-accredited .seal { color: #F0C948; }
+.badge-welcoming { display: inline-flex; align-items: center; background: #FEF3C7; color: #92400E; border: 1px solid #F5D98B; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-info { display: inline-flex; align-items: center; background: #F3F4F6; color: #6B7280; border: 1px solid #E5E7EB; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-unwelcome { display: inline-flex; align-items: center; background: #DC2626; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.ls-meta-sep { width: 1px; height: 14px; background: #E5E7EB; }
+.ls-meta-type { font-weight: 600; color: #6B7280; }
+.ls-meta-city { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-meta-city:hover { text-decoration: underline; }
+.ls-meta-price { display: inline-flex; align-items: center; background: #FFF6E5; border: 1px solid #F0E6C5; border-radius: 999px; padding: 3px 11px; font-weight: 700; color: #2D2D2D; letter-spacing: 0.4px; font-size: 12.5px; }
 .listing-desc { font-size: 15px; line-height: 1.65; color: #2D2D2D; margin-bottom: 24px; }
-.listing-section { margin-bottom: 20px; border-top: 1px solid #E5E7EB; padding-top: 16px; }
+.listing-web-top { font-size: 14px; margin: -12px 0 24px; display: flex; gap: 8px; align-items: baseline; }
+.listing-web-top .ico { flex-shrink: 0; }
+.listing-web-top a { color: #1E7D96; text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
+.listing-web-top a:hover { text-decoration: underline; }
+.listing-bike-info { margin-top: -16px; }
+.listing-bike-info a { font-weight: 600; }
+.listing-pull { border-left: 4px solid #C9A83E; padding: 6px 0 6px 20px; margin: 26px 0 30px; }
+.listing-pull .q { font-family: "Archivo", sans-serif; font-size: 21px; font-weight: 400; letter-spacing: -0.01em; color: #1F514C; line-height: 1.45; }
+.listing-pull .who { font-size: 13px; color: #9CA3AF; margin-top: 6px; }
+.listing-pull .who a { color: #9CA3AF; text-decoration: none; }
+.listing-pull .who a:hover { color: #1E7D96; text-decoration: underline; }
+.listing-section { margin-bottom: 28px; }
 .listing-section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 10px; }
 .listing-detail-row { font-size: 14px; color: #2D2D2D; margin-bottom: 6px; }
 .listing-detail-row a { color: #1E7D96; }
@@ -107,15 +141,96 @@ body {
 .listing-indig-attr a { color: #1E7D96; text-decoration: none; }
 .listing-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
 .listing-verify a { color: #1E7D96; }
+.listing-section-sub { font-size: 13px; color: #6B7280; margin: -4px 0 12px; line-height: 1.5; }
+.listing-owner-cta { margin-top: 14px; background: #F5FAFB; border: 1px solid #BFDDE7; border-radius: 8px; padding: 12px 16px; font-size: 13.5px; color: #14586B; line-height: 1.6; }
+.listing-owner-cta strong { color: #14586B; }
+.listing-owner-cta a { color: #1E7D96; font-weight: 600; }
+.ls-notable-hero { border-top: 3px solid #1F514C; border-bottom: 3px solid #1F514C; padding: 24px 2px 26px; margin: 18px 0 30px; }
+.ls-notable-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1E7D96; margin-bottom: 8px; }
+.ls-notable-eyebrow .star { color: #1F514C; }
+.ls-notable-line { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; color: #1F514C; line-height: 1.4; }
+@media (max-width: 700px) { .ls-notable-line { font-size: 20px; } }
+.ls-ribbon { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.ls-rib { display: inline-flex; align-items: center; gap: 7px; background: #EDF6F8; border: 1px solid #BEDDE6; border-radius: 10px; padding: 8px 13px; font-size: 13px; font-weight: 600; color: #1E7D96; }
+.ls-sec-title { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; margin-bottom: 4px; }
+.ls-vrow { padding: 10px 0; border-bottom: 1px dashed #EDE9DA; font-size: 14px; }
+.ls-vrow:last-of-type { border-bottom: none; }
+.ls-vrow-main { display: flex; gap: 12px; align-items: baseline; }
+.ls-vrow .tick { color: #2E8A36; font-weight: 700; flex-shrink: 0; width: 16px; }
+.ls-vrow .k { font-weight: 700; color: #1F514C; }
+.ls-vrow .d { display: block; color: #57534E; line-height: 1.55; margin: 4px 0 0 28px; font-size: 13.5px; }
+.ls-pills-label { font-size: 12px; color: #9CA3AF; margin-top: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; }
+.ls-bpnote { display: flex; gap: 12px; background: #EAF3EC; border-radius: 10px; padding: 13px 16px; margin-top: 14px; font-size: 14px; color: #1C5240; line-height: 1.55; }
+.ls-bpnote .ico { font-size: 18px; line-height: 1.3; flex-shrink: 0; }
+.ls-bpnote details { margin-top: 6px; }
+.ls-bpnote summary { cursor: pointer; color: #1C5240; font-weight: 600; }
+.ls-bpnote ul { list-style: none; margin: 8px 0 0; padding: 0; }
+.ls-bpnote li { font-size: 13px; padding: 2px 0; color: #1C5240; }
 .listing-routes { display: flex; flex-wrap: wrap; gap: 8px; }
 .listing-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
 .listing-route-tag:hover { background: #DBEAFE; }
+.listing-trail-list { list-style: none; padding: 0; margin: 0; }
+.listing-trail-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-trail-name { color: #047857; text-decoration: none; }
+a.listing-trail-name:hover { text-decoration: underline; }
+.listing-trail-item.dest .listing-trail-name { font-weight: 700; }
+.listing-trail-dist { color: #9CA3AF; font-size: 13px; }
+.listing-near-group { margin-bottom: 14px; }
+.listing-near-grouptitle { font-size: 11px; font-weight: 700; color: #78716C; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.listing-near-list { list-style: none; padding: 0; margin: 0; }
+.listing-near-item { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-near-name { color: #1E7D96; text-decoration: none; }
+.listing-near-name:hover { text-decoration: underline; }
+.listing-near-subcat { color: #9CA3AF; font-size: 13px; }
+.listing-near-badge { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 20px; }
+.listing-near-dist { color: #9CA3AF; font-size: 13px; }
+.listing-bp-list { list-style: none; padding: 0; margin: 0; }
+.listing-bp-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-bp-dist { color: #9CA3AF; font-size: 13px; }
+/* Map + "Find them" band (Mockup C reflow Step 7) */
+.ls-band { display: grid; grid-template-columns: 1fr 300px; gap: 14px; margin: 24px 0 30px; align-items: start; }
+.ls-band.ls-band-solo { grid-template-columns: 1fr; }
+.ls-card { background: #fff; border: 1px solid #E7E2D0; border-radius: 12px; overflow: hidden; }
+/* Map keeps the shared .wwc-map fixed height (no flex/resize hacks — same as every
+   other embedded map); only strip its own border/radius since the card supplies them. */
+.ls-card-map .wwc-map { max-width: none; border: 0; border-radius: 0; }
+.ls-card-map .wwc-map-ctrls { margin: 0; padding: 10px 14px; }
+.ls-card-pad { padding: 14px 16px; }
+.ls-card-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1E7D96; margin-bottom: 9px; }
+.ls-contact-row { font-size: 13.5px; color: #2D2D2D; margin-bottom: 7px; display: flex; gap: 8px; }
+.ls-contact-row .ico { width: 18px; flex-shrink: 0; text-align: center; }
+.ls-contact-row span { min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a { color: #1E7D96; text-decoration: none; min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a:hover { text-decoration: underline; }
+.ls-route-tag { display: inline-flex; align-items: center; gap: 6px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; font-weight: 600; margin: 0 4px 4px 0; }
+.ls-route-tag:hover { background: #DBEAFE; }
+.ls-trail-line { font-size: 13px; padding: 2px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ls-trail-line a { color: #141414; text-decoration: none; font-weight: 400; }
+.ls-trail-line a:hover { text-decoration: underline; }
+.ls-trail-line .dist { color: #9CA3AF; font-size: 12px; flex-shrink: 0; }
+/* "Around you, by need" grid (Mockup C reflow Step 6) */
+.ls-needs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.ls-need { background: #FCFBF6; border: 1px solid #E7E2D0; border-radius: 12px; padding: 14px 16px; }
+.ls-need-title { font-size: 13px; font-weight: 700; color: #1F514C; margin-bottom: 9px; }
+.ls-need ul { list-style: none; padding: 0; margin: 0; }
+.ls-need li { display: flex; align-items: baseline; gap: 8px; font-size: 13.5px; padding: 3px 0; }
+.ls-need .nm { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-need .nm:hover { text-decoration: underline; }
+.ls-need .dist { color: #9CA3AF; font-size: 12px; margin-left: auto; white-space: nowrap; }
+.ls-need .wbadge { font-size: 10px; font-weight: 700; background: #EAF3EC; color: #1C5240; border-radius: 20px; padding: 1px 6px; }
+.ls-need .wbadge.no { background: #FDECEC; color: #B91C1C; }
+@media (max-width: 700px) { .ls-band { grid-template-columns: 1fr; } .ls-needs { grid-template-columns: 1fr; } }
 .listing-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .listing-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .listing-attribution a { color: #9CA3AF; }
 .listing-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
 .listing-suggest a { color: #1E7D96; }
+.listing-json { text-align: right; margin-top: 14px; }
+.listing-json a { font-size: 11px; color: #C9CDD3; text-decoration: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .03em; }
+.listing-json a:hover { color: #9CA3AF; text-decoration: underline; }
 .listing-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
+.badge-notable { display: inline-flex; align-items: center; background: #1F514C; color: #fff; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; letter-spacing: 0.2px; }
+.listing-notable { font-size: 14.5px; color: #1F514C; font-style: italic; margin: -8px 0 18px; line-height: 1.5; }
 
 </style>
 </head>
@@ -142,20 +257,52 @@ body {
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
 </script>
-<main class="listing-main">
-<nav class="listing-breadcrumb"><a href="/wwc/" id="listing-back" onclick="history.back();return false;">← <span id="listing-back-label">All listings</span></a> / Supplies</nav>
-<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('listing-back-label').textContent=f.label;}}catch(e){}})();</script>
+<main class="listing-main ls-two-col">
+<div class="ls-layout"><div class="ls-col-left"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/wwc/">We Welcome Cyclists</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">7-Eleven</span></nav>
 <h1 class="listing-h1">7-Eleven</h1>
-<div class="listing-meta"><span class="badge badge-info">Info</span>  ·  <span style="font-weight:600;">Global chain</span>  ·  Convenience Store  ·  Chilliwack</div>
-<p class="listing-desc">A 7-Eleven in Chilliwack.</p>
-<div class="listing-verify">Amenities assumed from location and public data. <a href="/suggest#edit=7-Eleven">Confirm or update this listing →</a></div>
-<div class="listing-section"><div class="listing-section-title">Contact</div><div class="listing-detail-row"><strong>Address:</strong> 3027 Immel Street, V2S 4L3</div><div class="listing-detail-row"><strong>Phone:</strong> +1-604-850-0977</div><div class="listing-detail-row"><strong>Website:</strong> <a href="https://stores.7-eleven.ca/store/29617" target="_blank" rel="noopener">https://stores.7-eleven.ca/store/29617</a></div></div>
+<div class="listing-meta"><span class="badge badge-info">Info</span><span class="ls-meta-sep"></span><span class="ls-meta-type">Global chain &middot; Convenience Store</span><a href="/wwc/community/abbotsford/" class="ls-meta-city">&#128205; Abbotsford</a></div>
 
-<div class="listing-section"><div class="listing-section-title">Required Criteria</div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Bike parking</span></div><div class="req-row req-null"><span class="req-sym">?</span><span>Water bottle refill</span></div></div>
-<div class="listing-section"><div class="listing-section-title">Amenities</div><div class="listing-pills"><span class="listing-pill-no">Basic groceries</span><span class="listing-pill-no">Hot food</span><span class="listing-pill-no">Washrooms</span><span class="listing-pill-no">Outdoor water tap</span><span class="listing-pill-no">Ice</span><span class="listing-pill-no">Vending machines</span><span class="listing-pill-no">Camping fuel</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-yes">Public rack nearby</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span></div></div>
+<div class="ls-ribbon"><span class="ls-rib">Bike parking</span><span class="ls-rib">Public rack nearby</span></div>
+<p class="listing-desc">A 7-Eleven in Abbotsford.</p>
+<p class="listing-web-top"><span class="ico">🌐</span><a href="https://stores.7-eleven.ca/store/29617" target="_blank" rel="noopener">Main website &rsaquo;</a></p>
 
+
+<div class="listing-section"><div class="ls-sec-title">What's here for you</div><div class="listing-section-sub">Gathered from publicly available data and OpenStreetMap. Not confirmed by the owner yet.</div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Bike parking</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Public rack nearby</span></div></div><div class="ls-pills-label">Not confirmed yet</div><div class="listing-pills"><span class="listing-pill-no">Water bottle refill</span><span class="listing-pill-no">Basic groceries</span><span class="listing-pill-no">Hot food</span><span class="listing-pill-no">Washrooms</span><span class="listing-pill-no">Outdoor water tap</span><span class="listing-pill-no">Ice</span><span class="listing-pill-no">Vending machines</span><span class="listing-pill-no">Camping fuel</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span></div><div class="listing-owner-cta"><strong>Run this place?</strong> <a href="/apply">Confirm your details</a> and we'll mark them verified. Spotted an error? <a href="/suggest#edit=7-Eleven">Suggest an edit</a>.</div></div>
+
+
+<div class="listing-section"><div class="ls-sec-title">Around here</div><div class="listing-section-sub">The closest options for the things touring cyclists actually look for.</div><div class="ls-needs"><div class="ls-need"><div class="ls-need-title">🔧 Fix &amp; supply</div><ul><li><a class="nm" href="/wwc/stop/bb2b58ac65/">Clayburn Liquor Store</a><span class="dist">0.1 km</span></li><li><a class="nm" href="/wwc/stop/072877681a/">Choices Market</a><span class="wbadge">Welcoming</span><span class="dist">0.1 km</span></li><li><a class="nm" href="/wwc/stop/84fbcadb78/">Alter Ego E-Bike Factory Outlet</a><span class="dist">1.8 km</span></li><li><a class="nm" href="/wwc/stop/93462d34c6/">Life Cycles</a><span class="dist">2.8 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🍽 Eat nearby</div><ul><li><a class="nm" href="/wwc/stop/74592d0311/">McDonald&#x27;s</a><span class="wbadge">Welcoming</span><span class="dist">right here</span></li><li><a class="nm" href="/wwc/stop/3063cfec5c/">Kira Sushi</a><span class="wbadge">Welcoming</span><span class="dist">0.1 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🛏 Sleep nearby</div><ul><li><a class="nm" href="/wwc/stop/68c7ba6de5/">The Coast Abbotsford Hotel &amp; Suites</a><span class="dist">2.0 km</span></li><li><a class="nm" href="/wwc/stop/067ebaa3e9/">Super 8 by Wyndham Abbotsford BC</a><span class="dist">2.3 km</span></li><li><a class="nm" href="/wwc/stop/b9f427a701/">Aloha R.V. Manufacture Homes and Camp Grounds</a><span class="dist">9.5 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🎭 While you're here</div><ul><li><a class="nm" href="/wwc/stop/d967a5f8da/">Abbotsford Recreation Centre</a><span class="wbadge">Welcoming</span><span class="dist">1.2 km</span></li><li><a class="nm" href="/wwc/stop/d1d1ba34b0/">Open Space</a><span class="wbadge">Welcoming</span><span class="dist">1.5 km</span></li><li><a class="nm" href="/wwc/stop/2e2b533513/">Original Hot Yoga Abbotsford</a><span class="wbadge">Welcoming</span><span class="dist">1.5 km</span></li></ul></div></div></div>
 <div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: OpenStreetMap</div></div>
 <div class="listing-suggest"><a href="/suggest#edit=7-Eleven">Suggest an edit to this listing</a></div>
+<div class="listing-json"><a href="/wwc/stop/5eb48bea5b.json" rel="nofollow">JSON</a></div></div><aside class="ls-col-right"><div class="ls-band"><div class="ls-card ls-card-map"><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div id="stopmap" class="wwc-map compact"></div><div class="wwc-map-ctrls"><span class="stopmap-lgd" style="color:#14807A"><span class="stopmap-lgd-sw" style="background:#14807A"></span> Bike network</span><span class="stopmap-lgd"><span class="stopmap-lgd-sw"></span> Nearby bike routes</span></div><script src="/map/lib/maplibre-gl.js"></script>
+<script src="/map/lib/pmtiles.js"></script>
+<script>
+(function(){
+  var protocol=new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile);
+  var map=new maplibregl.Map(Object.assign(
+    {container:"stopmap", style:location.origin+"/map/style/style.json", attributionControl:false},
+    {"center": [-122.2724788, 49.0567924], "zoom": 13}));
+  map.addControl(new maplibregl.NavigationControl(), "top-right");
+  var _attrib=new maplibregl.AttributionControl({compact:true,
+    customAttribution:'\u00a9 <a href="https://www.openmaptiles.org/">OpenMapTiles</a> \u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  map.addControl(_attrib);
+  // Compact mode initializes expanded; collapse it to the small "i" so the map
+  // opens clean. Clicking the button still expands the credit.
+  if(_attrib._container){_attrib._container.classList.remove("maplibregl-compact-show");}
+  map.on("load", function(){
+    map.addSource("stoptrails",{type:"geojson",data:{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "MultiLineString", "coordinates": [[[-122.2653987, 49.02715920000003], [-122.26539631873406, 49.0267924]], [[-122.2654133, 49.02769279999997], [-122.2653987, 49.02715920000003]], [[-122.2654073, 49.027981000000075], [-122.2654133, 49.02769279999997]], [[-122.2654053, 49.02848910000001], [-122.2654073, 49.027981000000075]], [[-122.2654059, 49.02875950000004], [-122.2654053, 49.02848910000001]], [[-122.2654059, 49.02875950000004], [-122.26540669999999, 49.02900800000002]], [[-122.26540669999999, 49.02900800000002], [-122.26545739999999, 49.030225500000014]], [[-122.26545739999999, 49.030225500000014], [-122.26546520000001, 49.0302984]], [[-122.2658884, 49.03192420000002], [-122.26546520000001, 49.0302984]], [[-122.2662382, 49.03289709999999], [-122.2658884, 49.03192420000002]], [[-122.26713069999998, 49.03498659999998], [-122.2662382, 49.03289709999999]], [[-122.26732860000001, 49.0354426], [-122.26713069999998, 49.03498659999998]], [[-122.2677875, 49.03639270000001], [-122.26732860000001, 49.0354426]], [[-122.2681019, 49.03703779999996], [-122.2677875, 49.03639270000001]], [[-122.269083, 49.03813780000003], [-122.2681019, 49.03703779999996]], [[-122.2691946, 49.03822639999998], [-122.269083, 49.03813780000003]], [[-122.2696576, 49.038547299999976], [-122.2691946, 49.03822639999998]], [[-122.2704666, 49.039054299999975], [-122.2696576, 49.038547299999976]], [[-122.2708363, 49.03933370000005], [-122.2704666, 49.039054299999975]], [[-122.27133640000001, 49.04000969999996], [-122.2708363, 49.03933370000005]], [[-122.2713659, 49.04007580000001], [-122.27133640000001, 49.04000969999996]], [[-122.27150470000001, 49.04123489999998], [-122.2713659, 49.04007580000001]], [[-122.2714832, 49.04163900000003], [-122.27150470000001, 49.04123489999998]], [[-122.2714253, 49.04232109999999], [-122.2714832, 49.04163900000003]], [[-122.27118730000001, 49.04506230000005], [-122.2714253, 49.04232109999999]], [[-122.284748, 49.058614200000015], [-122.28072139999999, 49.05847900000005], [-122.27781260000002, 49.057913399999975], [-122.27498320000001, 49.056775200000025], [-122.27250980000001, 49.05498320000004], [-122.2711175, 49.053120000000014], [-122.2705222, 49.05123799999999], [-122.27118730000001, 49.04506230000005]], [[-122.2852145, 49.058620300000015], [-122.284748, 49.058614200000015]], [[-122.28646629999999, 49.058618800000026], [-122.2852145, 49.058620300000015]], [[-122.28652320000002, 49.058697600000066], [-122.28650920000001, 49.058618800000026]], [[-122.28650920000001, 49.058618800000026], [-122.28646629999999, 49.058618800000026]], [[-122.26546520000001, 49.0302984], [-122.2655672, 49.0314328]], [[-122.2655672, 49.0314328], [-122.26571209999999, 49.03189199999994]], [[-122.26571209999999, 49.03189199999994], [-122.26573429999999, 49.0319663]], [[-122.26573429999999, 49.0319663], [-122.2662133, 49.03320250000005]], [[-122.2662133, 49.03320250000005], [-122.2665239, 49.03403690000002]], [[-122.2665239, 49.03403690000002], [-122.26692329999999, 49.035015699999995]], [[-122.26692329999999, 49.035015699999995], [-122.2671223, 49.03542049999999]], [[-122.2671223, 49.03542049999999], [-122.26725180000001, 49.035704400000036]], [[-122.26725180000001, 49.035704400000036], [-122.267593, 49.0364499]], [[-122.267593, 49.0364499], [-122.26784140000001, 49.037039199999995]], [[-122.26784140000001, 49.037039199999995], [-122.2683896, 49.03781749999997]], [[-122.2683896, 49.03781749999997], [-122.2687607, 49.03815550000002]], [[-122.2687607, 49.03815550000002], [-122.26888030000002, 49.03824100000002]], [[-122.26888030000002, 49.03824100000002], [-122.27005910000001, 49.039013799999964]], [[-122.27005910000001, 49.039013799999964], [-122.2707638, 49.03952169999997]], [[-122.2707638, 49.03952169999997], [-122.2711208, 49.04001499999997]], [[-122.2711208, 49.04001499999997], [-122.27114799999998, 49.04008009999999]], [[-122.27114799999998, 49.04008009999999], [-122.2712632, 49.040461399999984]], [[-122.2712632, 49.040461399999984], [-122.2712993, 49.041241600000035]], [[-122.2712993, 49.041241600000035], [-122.2712129, 49.043412600000025]], [[-122.2712129, 49.043412600000025], [-122.2704631, 49.04930739999998]], [[-122.2704631, 49.04930739999998], [-122.27039480000002, 49.05122570000005], [-122.27082849999998, 49.052779000000044], [-122.27178730000001, 49.05434750000001], [-122.27315230000002, 49.05570029999999], [-122.27484720000001, 49.0568134], [-122.2771402, 49.05780109999997], [-122.2794117, 49.05837629999994], [-122.28245370000002, 49.05866899999993]], [[-122.28245370000002, 49.05866899999993], [-122.2843422, 49.058694199999955]], [[-122.2843422, 49.058694199999955], [-122.2852131, 49.05870310000004]], [[-122.2852131, 49.05870310000004], [-122.28616810000001, 49.05875920000001], [-122.2863881, 49.05898820000002]], [[-122.272833, 49.05590310000003], [-122.2771402, 49.05780109999997]], [[-122.2711132, 49.0533547], [-122.272833, 49.05590310000003]], [[-122.2762347, 49.05736940000004], [-122.27467140000002, 49.05650460000006], [-122.27366180000001, 49.05549220000002]], [[-122.27366180000001, 49.05549220000002], [-122.2723494, 49.05467340000006], [-122.2709974, 49.05286749999998]], [[-122.2864978, 49.0603603], [-122.28652320000002, 49.058697600000066]], [[-122.2864767, 49.06191760000003], [-122.2864978, 49.0603603]], [[-122.2863974, 49.063791400000014], [-122.2864767, 49.06191760000003]], [[-122.28637060000001, 49.06464540000001], [-122.2863974, 49.063791400000014]], [[-122.28637050000002, 49.065072200000046], [-122.28637060000001, 49.06464540000001]], [[-122.2863533, 49.06563289999996], [-122.28637050000002, 49.065072200000046]], [[-122.28634210000001, 49.066057599999986], [-122.2863533, 49.06563289999996]], [[-122.28633699999999, 49.0661526], [-122.28634210000001, 49.066057599999986]], [[-122.286312, 49.06753309999994], [-122.28633699999999, 49.0661526]], [[-122.2862586, 49.06864579999999], [-122.286312, 49.06753309999994]], [[-122.2862531, 49.06911589999999], [-122.2862586, 49.06864579999999]], [[-122.28562580000002, 49.074714999999955], [-122.2862531, 49.06911589999999]], [[-122.2854308, 49.075687199999976], [-122.28562580000002, 49.074714999999955]], [[-122.2851102, 49.08137190000003], [-122.28490919999999, 49.07857219999999], [-122.2854308, 49.075687199999976]], [[-122.28580449999998, 49.08182549999998], [-122.2851102, 49.08137190000003]], [[-122.2854064, 49.08243190000002], [-122.28540509999999, 49.082062999999906], [-122.28580449999998, 49.08182549999998]], [[-122.2854064, 49.08243190000002], [-122.28522840000001, 49.08182920000007]], [[-122.28522840000001, 49.08182920000007], [-122.2851102, 49.08137190000003]], [[-122.2863881, 49.05898820000002], [-122.28628890000002, 49.06244310000003]], [[-122.28628890000002, 49.06244310000003], [-122.2862706, 49.063205399999994]], [[-122.2862706, 49.063205399999994], [-122.28625960000001, 49.06366440000001]], [[-122.28625960000001, 49.06366440000001], [-122.2862457, 49.06406340000003]], [[-122.2862457, 49.06406340000003], [-122.286233, 49.065086499999985]], [[-122.286233, 49.065086499999985], [-122.286227, 49.06536479999998]], [[-122.286227, 49.06536479999998], [-122.2862141, 49.06595500000002]], [[-122.2862141, 49.06595500000002], [-122.28620370000002, 49.06611249999998]], [[-122.28620370000002, 49.06611249999998], [-122.28613860000002, 49.067504399999976]], [[-122.28613860000002, 49.067504399999976], [-122.2857697, 49.07303849999999]], [[-122.2857697, 49.07303849999999], [-122.2854616, 49.07471700000001]], [[-122.2854616, 49.07471700000001], [-122.285374, 49.075105799999946]], [[-122.285374, 49.075105799999946], [-122.28474830000002, 49.08024620000006]], [[-122.28474830000002, 49.08024620000006], [-122.2849455, 49.08138700000001]], [[-122.2849455, 49.08138700000001], [-122.28504450000001, 49.081830900000035]], [[-122.28504450000001, 49.081830900000035], [-122.2852303, 49.08244930000002]], [[-122.2852303, 49.08244930000002], [-122.2862127121723, 49.0867924]], [[-122.28573990000001, 49.083605600000034], [-122.2854064, 49.08243190000002]], [[-122.28640527122991, 49.0867924], [-122.28573990000001, 49.083605600000034]], [[-122.2849455, 49.08138700000001], [-122.2846687, 49.0817242], [-122.28360730000001, 49.081849799999965]], [[-122.28360730000001, 49.081849799999965], [-122.28493590000001, 49.0819837], [-122.2852303, 49.08244930000002]]]}, "properties": {"name": "Highway 11 Cycle Route (Abbotsford-Mission)"}}, {"type": "Feature", "geometry": {"type": "MultiLineString", "coordinates": [[[-122.2348236, 49.05646660000003], [-122.2345958, 49.0565865]], [[-122.24007830000001, 49.059105699999996], [-122.23976170000002, 49.05869509999996], [-122.23664909999998, 49.05757549999999], [-122.23576340000001, 49.056802699999984], [-122.2348236, 49.05646660000003]], [[-122.24008040000001, 49.05918589999999], [-122.24007830000001, 49.059105699999996]], [[-122.242485, 49.05947889999997], [-122.2411617, 49.05961090000005], [-122.24008040000001, 49.05918589999999]], [[-122.2425627, 49.05947510000001], [-122.242485, 49.05947889999997]], [[-122.24476139999999, 49.05867090000006], [-122.24292649999998, 49.05886310000003], [-122.2425627, 49.05947510000001]], [[-122.2448756, 49.05860520000001], [-122.24476139999999, 49.05867090000006]], [[-122.2498827, 49.059899300000026], [-122.2496327, 49.05908730000004], [-122.2491844, 49.05881360000005], [-122.2472353, 49.05892200000003], [-122.2448756, 49.05860520000001]], [[-122.2499691, 49.059840600000015], [-122.2498827, 49.059899300000026]], [[-122.25012379999998, 49.059932499999974], [-122.2499691, 49.059840600000015]], [[-122.2504193, 49.05971549999999], [-122.25012379999998, 49.059932499999974]], [[-122.25959700000001, 49.06001390000003], [-122.2586098, 49.05982380000002], [-122.25911030000002, 49.05929470000002], [-122.25769189999998, 49.05984539999997], [-122.25651780000001, 49.059186899999986], [-122.25593699999999, 49.05951300000001], [-122.2547073, 49.05968140000001], [-122.2504193, 49.05971549999999]], [[-122.2606865, 49.06008200000003], [-122.26143110000001, 49.06009070000002]], [[-122.26143110000001, 49.06009070000002], [-122.26169479999999, 49.06018749999997]], [[-122.2627627, 49.0601009], [-122.26169479999999, 49.06018749999997]], [[-122.2627627, 49.0601009], [-122.2642764, 49.060116199999975]], [[-122.2657044, 49.06011970000004], [-122.2642764, 49.060116199999975]], [[-122.26802790000002, 49.05929640000001], [-122.2668302, 49.05990549999998], [-122.2657044, 49.06011970000004]], [[-122.26842730000001, 49.059028099999956], [-122.26802790000002, 49.05929640000001]], [[-122.2682711, 49.060207800000015], [-122.26842730000001, 49.059028099999956]], [[-122.2718507, 49.06013030000004], [-122.2682711, 49.060207800000015]], [[-122.2718529, 49.05989000000005], [-122.2718507, 49.06013030000004]], [[-122.27222470000001, 49.05972510000001], [-122.2719405, 49.05967510000002], [-122.2718529, 49.05989000000005]], [[-122.27222470000001, 49.05972510000001], [-122.27230570000002, 49.05967910000004]], [[-122.27230570000002, 49.05967910000004], [-122.27352410000002, 49.06014500000004]], [[-122.27352410000002, 49.06014500000004], [-122.27622410000001, 49.060239700000025]], [[-122.27622410000001, 49.060239700000025], [-122.27656720000002, 49.0603379]], [[-122.27656720000002, 49.0603379], [-122.2771378, 49.06059990000001]], [[-122.2771378, 49.06059990000001], [-122.2774684, 49.06082]], [[-122.2775413, 49.06079210000002], [-122.2774684, 49.06082]], [[-122.27834400000002, 49.0611628], [-122.27822820000002, 49.06153589999999], [-122.2779032, 49.060912100000024], [-122.2775413, 49.06079210000002]], [[-122.27964649999998, 49.06301920000003], [-122.2785452, 49.062587799999974], [-122.27834400000002, 49.0611628]], [[-122.2797962, 49.06302139999992], [-122.27964649999998, 49.06301920000003]], [[-122.28285300000002, 49.063027199999944], [-122.2797962, 49.06302139999992]], [[-122.2828592, 49.06368409999999], [-122.28285300000002, 49.063027199999944]], [[-122.283582, 49.0636831], [-122.2828592, 49.06368409999999]], [[-122.2842132, 49.0636782], [-122.283582, 49.0636831]], [[-122.28545400000002, 49.06368690000001], [-122.2842132, 49.0636782]], [[-122.28625960000001, 49.06366440000001], [-122.28545400000002, 49.06368690000001]], [[-122.2863974, 49.063791400000014], [-122.28625960000001, 49.06366440000001]], [[-122.28637060000001, 49.06464540000001], [-122.2863974, 49.063791400000014]], [[-122.28637050000002, 49.065072200000046], [-122.28637060000001, 49.06464540000001]], [[-122.2863533, 49.06563289999996], [-122.28637050000002, 49.065072200000046]], [[-122.28634210000001, 49.066057599999986], [-122.2863533, 49.06563289999996]], [[-122.28633699999999, 49.0661526], [-122.28634210000001, 49.066057599999986]], [[-122.286312, 49.06753309999994], [-122.28633699999999, 49.0661526]], [[-122.2862586, 49.06864579999999], [-122.286312, 49.06753309999994]], [[-122.2867368, 49.0691269], [-122.2862586, 49.06864579999999]], [[-122.2867368, 49.0691269], [-122.2875111, 49.0691506]], [[-122.2875111, 49.0691506], [-122.2897355, 49.06914800000005]], [[-122.29008459999999, 49.069108600000014], [-122.2897355, 49.06914800000005]], [[-122.29034650000001, 49.0687578], [-122.29008459999999, 49.069108600000014]], [[-122.29932440000002, 49.06432189999999], [-122.2952086, 49.06385730000002], [-122.294232, 49.065089200000045], [-122.2938503, 49.06737110000002], [-122.2931195, 49.068393700000016], [-122.2922711, 49.06872619999998], [-122.29034650000001, 49.0687578]], [[-122.29996370000002, 49.06428169999998], [-122.29932440000002, 49.06432189999999]], [[-122.30028240000001, 49.06422090000002], [-122.29996370000002, 49.06428169999998]], [[-122.3008597, 49.06422420000003], [-122.30028240000001, 49.06422090000002]], [[-122.30231149999999, 49.064233599999994], [-122.3008597, 49.06422420000003]], [[-122.3024353, 49.064233500000014], [-122.30231149999999, 49.064233599999994]], [[-122.3030379, 49.06423300000003], [-122.3024353, 49.064233500000014]], [[-122.3034053, 49.064106200000055], [-122.3030379, 49.06423300000003]], [[-122.308241, 49.065295800000015], [-122.3082566, 49.064371699999946], [-122.3077769, 49.06411979999999], [-122.30657750000002, 49.063944899999996], [-122.3060159, 49.064173099999955], [-122.30599300000002, 49.06399340000006], [-122.3058325, 49.064155400000026], [-122.3042056, 49.064021900000036], [-122.3038679, 49.06379570000002], [-122.30368410000001, 49.06412019999999], [-122.3034053, 49.064106200000055]], [[-122.2277384, 49.053723300000016], [-122.2286789, 49.05401779999999], [-122.22997970000002, 49.05492400000002], [-122.2345958, 49.0565865]], [[-122.2277384, 49.053723300000016], [-122.22752650000001, 49.053692999999996]], [[-122.2266989839472, 49.05345931764438], [-122.22752650000001, 49.053692999999996]], [[-122.3149276, 49.06598509999999], [-122.3144756, 49.065183900000015], [-122.3135281, 49.06498119999998], [-122.31261970000001, 49.065358599999996], [-122.308241, 49.065295800000015]], [[-122.31583839999999, 49.06693930000002], [-122.31584940000002, 49.06588260000002], [-122.3149276, 49.06598509999999]], [[-122.31610239999999, 49.066942400000016], [-122.31583839999999, 49.06693930000002]], [[-122.3160803, 49.0658962], [-122.31610239999999, 49.066942400000016]], [[-122.3182586160528, 49.06561936383436], [-122.3167875, 49.06538079999998], [-122.3160803, 49.0658962]], [[-122.2606865, 49.06008200000003], [-122.25959700000001, 49.06001390000003]], [[-122.2862531, 49.06911589999999], [-122.2867368, 49.0691269]], [[-122.2861958, 49.0691148], [-122.2862531, 49.06911589999999]], [[-122.28613860000002, 49.067504399999976], [-122.2861958, 49.0691148]], [[-122.28620370000002, 49.06611249999998], [-122.28613860000002, 49.067504399999976]], [[-122.2862141, 49.06595500000002], [-122.28620370000002, 49.06611249999998]], [[-122.286227, 49.06536479999998], [-122.2862141, 49.06595500000002]], [[-122.286233, 49.065086499999985], [-122.286227, 49.06536479999998]], [[-122.2862457, 49.06406340000003], [-122.286233, 49.065086499999985]], [[-122.28545400000002, 49.06368690000001], [-122.2859777, 49.063744299999975], [-122.2862457, 49.06406340000003]], [[-122.28620370000002, 49.06611249999998], [-122.28613860000002, 49.067504399999976]]]}, "properties": {"name": "Discovery Trail"}}]}});
+    map.addLayer({id:"stoptrails-casing",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#ffffff","line-width":6,"line-opacity":0.9}});
+    map.addLayer({id:"stoptrails-line",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#5f259f","line-width":3}});
+    var mk=new maplibregl.Marker({color:"#1F514C"}).setLngLat([-122.2724788, 49.0567924]);
+    var pop=new maplibregl.Popup({closeButton:true,closeOnClick:false,focusAfterOpen:false}).setHTML("<b>7-Eleven<\/b>");
+    mk.setPopup(pop).addTo(map);
+  });
+})();
+</script></div><div class="ls-card"><div class="ls-card-pad"><div class="ls-card-title">Location</div><div class="ls-contact-row"><span class="ico">📍</span><span>3027 Immel Street, V2S 4L3</span></div><div class="ls-contact-row"><span class="ico">📞</span><span>+1-604-850-0977</span></div><div class="ls-contact-row"><span class="ico">🌐</span><a href="https://stores.7-eleven.ca/store/29617" target="_blank" rel="noopener">https://stores.7-eleven.ca/store/29617</a></div><div class="ls-card-title" style="margin-top:14px;color:#5f259f;">Nearby bike routes</div><div class="ls-trail-line"><a href="/trail/highway-11-cycle-route-abbotsford-mission/" style="">Highway 11 Cycle Route (Abbotsford-Mission)</a> <span class="dist">90 m</span></div><div class="ls-trail-line"><a href="/trail/discovery-trail/" style="">Discovery Trail</a> <span class="dist">320 m</span></div></div></div></div><div class="ls-bpnote"><span class="ico">&#128690;</span><span><strong>Bike parking nearby:</strong> 3 public racks with 8 spaces within 100 m. Nearest is 26 m away.<details><summary>Full list &rsaquo;</summary><ul><li>Rack, 2 spaces (26 m)</li><li>Rack, 4 spaces (27 m)</li><li>Rack, 2 spaces (70 m)</li></ul></details></span></div></aside></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">
@@ -167,7 +314,6 @@ body {
       <a href="/">Home</a>
       <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
-      <a href="/routes">Routes</a>
     </div>
     <div class="g-footer-col">
       <a href="/about">About</a>

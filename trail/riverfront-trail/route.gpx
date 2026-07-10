@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Riverfront Trail</name>
+<link href="https://bccycletourism.ca/trail/riverfront-trail/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="52.976695" lon="-122.497703">
+<name>Cariboo Hotel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="52.978646" lon="-122.498145">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.977157" lon="-122.497598">
+<name>Ulysses</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.973060" lon="-122.506497">
+<name>Save-On-Foods</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="52.975244" lon="-122.503518">
+<name>Fraser Bridge Inn &amp; RV Park</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="52.979353" lon="-122.498183">
+<name>Safeway</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="52.977934" lon="-122.497090">
+<name>Pizza Hut</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.973826" lon="-122.504901">
+<name>Domino's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.981240" lon="-122.498347">
+<name>Travelodge by Wyndham Quesnel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="52.981135" lon="-122.497111">
+<name>Tower Inn &amp; Suites</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="52.976749" lon="-122.489531">
+<name>Quesnel Visitor Centre</name>
+<cmt>generic</cmt>
+<desc>Visitor Centre</desc>
+<sym>Dot</sym>
+<type>generic</type>
+</wpt>
+<wpt lat="52.979499" lon="-122.496709">
+<name>Quiznos</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.974379" lon="-122.506960">
+<name>7-Eleven</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="52.979671" lon="-122.496731">
+<name>Mr Mikes</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.979846" lon="-122.496741">
+<name>Subway</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.980073" lon="-122.496775">
+<name>Quesnel Bakery</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.980508" lon="-122.496969">
+<name>BC Liquor Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="52.979234" lon="-122.495702">
+<name>Dairy Queen</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="52.977619" lon="-122.494883">
+<name>Billy Barker Casino Hotel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="52.979270" lon="-122.494235">
+<name>Ramada by Wyndham Quesnel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="52.979325" lon="-122.493733">
+<name>Quesnel Library Branch</name>
+<cmt>library</cmt>
+<desc>Library</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="52.986621" lon="-122.501373">
+<name>Gold Pan Motel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="52.978009" lon="-122.492073">
+<name>West Fraser Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<trk><name>Riverfront Trail</name>
+<trkseg>
+<trkpt lat="52.975406" lon="-122.502334"/>
+<trkpt lat="52.975417" lon="-122.502224"/>
+<trkpt lat="52.975656" lon="-122.498433"/>
+<trkpt lat="52.975680" lon="-122.498092"/>
+<trkpt lat="52.976120" lon="-122.498164"/>
+<trkpt lat="52.975758" lon="-122.498493"/>
+</trkseg>
+<trkseg>
+<trkpt lat="52.975406" lon="-122.502334"/>
+<trkpt lat="52.979404" lon="-122.503589"/>
+<trkpt lat="52.981788" lon="-122.504919"/>
+<trkpt lat="52.981816" lon="-122.505625"/>
+<trkpt lat="52.980996" lon="-122.505800"/>
+<trkpt lat="52.983189" lon="-122.509736"/>
+<trkpt lat="52.982737" lon="-122.510434"/>
+<trkpt lat="52.981665" lon="-122.510638"/>
+<trkpt lat="52.980606" lon="-122.509339"/>
+<trkpt lat="52.980456" lon="-122.508484"/>
+<trkpt lat="52.978131" lon="-122.508506"/>
+<trkpt lat="52.978376" lon="-122.512343"/>
+<trkpt lat="52.978577" lon="-122.512772"/>
+<trkpt lat="52.978817" lon="-122.512579"/>
+<trkpt lat="52.978564" lon="-122.513437"/>
+<trkpt lat="52.978829" lon="-122.513775"/>
+<trkpt lat="52.978293" lon="-122.514275"/>
+<trkpt lat="52.977673" lon="-122.513813"/>
+<trkpt lat="52.977079" lon="-122.512848"/>
+<trkpt lat="52.976510" lon="-122.511185"/>
+<trkpt lat="52.976044" lon="-122.510662"/>
+<trkpt lat="52.974579" lon="-122.510144"/>
+<trkpt lat="52.974175" lon="-122.510568"/>
+<trkpt lat="52.973318" lon="-122.510684"/>
+<trkpt lat="52.973432" lon="-122.509668"/>
+<trkpt lat="52.973474" lon="-122.509384"/>
+<trkpt lat="52.972459" lon="-122.508588"/>
+<trkpt lat="52.972169" lon="-122.507762"/>
+<trkpt lat="52.972188" lon="-122.506839"/>
+<trkpt lat="52.972757" lon="-122.504619"/>
+<trkpt lat="52.973952" lon="-122.502290"/>
+<trkpt lat="52.975406" lon="-122.502334"/>
+</trkseg>
+<trkseg>
+<trkpt lat="52.982807" lon="-122.500432"/>
+<trkpt lat="52.982946" lon="-122.499500"/>
+<trkpt lat="52.982255" lon="-122.498859"/>
+<trkpt lat="52.982297" lon="-122.497512"/>
+<trkpt lat="52.984049" lon="-122.497801"/>
+<trkpt lat="52.984081" lon="-122.491642"/>
+<trkpt lat="52.984210" lon="-122.491650"/>
+<trkpt lat="52.984113" lon="-122.487955"/>
+<trkpt lat="52.981953" lon="-122.485416"/>
+<trkpt lat="52.981688" lon="-122.484781"/>
+<trkpt lat="52.982066" lon="-122.484100"/>
+</trkseg>
+<trkseg>
+<trkpt lat="52.982066" lon="-122.484100"/>
+<trkpt lat="52.982666" lon="-122.482517"/>
+<trkpt lat="52.981820" lon="-122.480123"/>
+<trkpt lat="52.981310" lon="-122.479814"/>
+<trkpt lat="52.979298" lon="-122.480493"/>
+<trkpt lat="52.978613" lon="-122.481566"/>
+<trkpt lat="52.977925" lon="-122.484363"/>
+<trkpt lat="52.976488" lon="-122.485945"/>
+<trkpt lat="52.975338" lon="-122.488186"/>
+<trkpt lat="52.973410" lon="-122.490216"/>
+<trkpt lat="52.972586" lon="-122.493255"/>
+<trkpt lat="52.972634" lon="-122.493791"/>
+<trkpt lat="52.971829" lon="-122.494340"/>
+<trkpt lat="52.971555" lon="-122.495381"/>
+<trkpt lat="52.972141" lon="-122.497310"/>
+<trkpt lat="52.973289" lon="-122.497260"/>
+<trkpt lat="52.975191" lon="-122.498413"/>
+<trkpt lat="52.978070" lon="-122.498781"/>
+<trkpt lat="52.981826" lon="-122.500730"/>
+<trkpt lat="52.982807" lon="-122.500432"/>
+</trkseg>
+<trkseg>
+<trkpt lat="52.982807" lon="-122.500432"/>
+<trkpt lat="52.981826" lon="-122.500730"/>
+<trkpt lat="52.978070" lon="-122.498781"/>
+<trkpt lat="52.975191" lon="-122.498413"/>
+<trkpt lat="52.973289" lon="-122.497260"/>
+<trkpt lat="52.972141" lon="-122.497310"/>
+<trkpt lat="52.971555" lon="-122.495381"/>
+<trkpt lat="52.971829" lon="-122.494340"/>
+<trkpt lat="52.972634" lon="-122.493791"/>
+<trkpt lat="52.972586" lon="-122.493255"/>
+<trkpt lat="52.973410" lon="-122.490216"/>
+<trkpt lat="52.975338" lon="-122.488186"/>
+<trkpt lat="52.976488" lon="-122.485945"/>
+<trkpt lat="52.977925" lon="-122.484363"/>
+<trkpt lat="52.978613" lon="-122.481566"/>
+<trkpt lat="52.979298" lon="-122.480493"/>
+<trkpt lat="52.981310" lon="-122.479814"/>
+<trkpt lat="52.981820" lon="-122.480123"/>
+<trkpt lat="52.982666" lon="-122.482517"/>
+<trkpt lat="52.982066" lon="-122.484100"/>
+</trkseg>
+</trk>
+</gpx>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Russ Baker Way Cycle Route</name>
+<link href="https://bccycletourism.ca/trail/russ-baker-way-cycle-route/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.179939" lon="-123.152347">
+<name>McDonald's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.190605" lon="-123.141091">
+<name>Radisson Blu Vancouver Airport Hotel &amp; Marina</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.191598" lon="-123.144316">
+<name>Sea Island Community Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.190695" lon="-123.139231">
+<name>The Deck Kitchen + Bar</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.174350" lon="-123.151881">
+<name>Time Out Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.174408" lon="-123.151333">
+<name>Richmond Olympic Experience</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<trk><name>Russ Baker Way Cycle Route</name>
+<trkseg>
+<trkpt lat="49.170303" lon="-123.159015"/>
+<trkpt lat="49.170536" lon="-123.158904"/>
+<trkpt lat="49.170989" lon="-123.158903"/>
+<trkpt lat="49.171813" lon="-123.158893"/>
+<trkpt lat="49.172590" lon="-123.158772"/>
+<trkpt lat="49.173352" lon="-123.158403"/>
+<trkpt lat="49.176944" lon="-123.156482"/>
+<trkpt lat="49.178085" lon="-123.155562"/>
+<trkpt lat="49.178629" lon="-123.154968"/>
+<trkpt lat="49.179586" lon="-123.153855"/>
+<trkpt lat="49.179775" lon="-123.153599"/>
+<trkpt lat="49.179836" lon="-123.153522"/>
+<trkpt lat="49.180107" lon="-123.153204"/>
+<trkpt lat="49.180422" lon="-123.152825"/>
+<trkpt lat="49.180811" lon="-123.152350"/>
+<trkpt lat="49.181245" lon="-123.151779"/>
+<trkpt lat="49.181301" lon="-123.151700"/>
+<trkpt lat="49.182436" lon="-123.149989"/>
+<trkpt lat="49.184113" lon="-123.147689"/>
+<trkpt lat="49.186377" lon="-123.145119"/>
+<trkpt lat="49.187592" lon="-123.144440"/>
+<trkpt lat="49.187890" lon="-123.144269"/>
+<trkpt lat="49.188401" lon="-123.143975"/>
+<trkpt lat="49.189192" lon="-123.143521"/>
+<trkpt lat="49.189566" lon="-123.143347"/>
+<trkpt lat="49.190032" lon="-123.143077"/>
+<trkpt lat="49.192057" lon="-123.142470"/>
+<trkpt lat="49.192166" lon="-123.142462"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.192162" lon="-123.142197"/>
+<trkpt lat="49.192055" lon="-123.142203"/>
+<trkpt lat="49.191572" lon="-123.142219"/>
+<trkpt lat="49.191072" lon="-123.142346"/>
+<trkpt lat="49.190988" lon="-123.142369"/>
+<trkpt lat="49.189478" lon="-123.143119"/>
+<trkpt lat="49.188997" lon="-123.143372"/>
+<trkpt lat="49.188608" lon="-123.143586"/>
+<trkpt lat="49.186302" lon="-123.144900"/>
+<trkpt lat="49.185706" lon="-123.145375"/>
+<trkpt lat="49.185098" lon="-123.146112"/>
+<trkpt lat="49.181591" lon="-123.150960"/>
+<trkpt lat="49.181501" lon="-123.151089"/>
+<trkpt lat="49.181194" lon="-123.151523"/>
+<trkpt lat="49.181138" lon="-123.151603"/>
+<trkpt lat="49.180934" lon="-123.151860"/>
+<trkpt lat="49.179935" lon="-123.153167"/>
+<trkpt lat="49.179731" lon="-123.153415"/>
+<trkpt lat="49.178980" lon="-123.154348"/>
+<trkpt lat="49.178062" lon="-123.155428"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.178062" lon="-123.155428"/>
+<trkpt lat="49.176931" lon="-123.156349"/>
+<trkpt lat="49.173323" lon="-123.158286"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.173323" lon="-123.158286"/>
+<trkpt lat="49.171739" lon="-123.158753"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.171739" lon="-123.158753"/>
+<trkpt lat="49.173323" lon="-123.158286"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.173323" lon="-123.158286"/>
+<trkpt lat="49.176931" lon="-123.156349"/>
+<trkpt lat="49.178062" lon="-123.155428"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.171739" lon="-123.158753"/>
+<trkpt lat="49.170303" lon="-123.158720"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.170303" lon="-123.158720"/>
+<trkpt lat="49.171739" lon="-123.158753"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.170303" lon="-123.158720"/>
+<trkpt lat="49.170204" lon="-123.158721"/>
+<trkpt lat="49.170303" lon="-123.158720"/>
+</trkseg>
+</trk>
+</gpx>

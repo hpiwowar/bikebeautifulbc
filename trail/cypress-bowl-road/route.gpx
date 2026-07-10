@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Cypress Bowl Road</name>
+<link href="https://bccycletourism.ca/trail/cypress-bowl-road/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.348265" lon="-123.222567">
+<name>The Shed Cypress</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.378879" lon="-123.192590">
+<name>Nordic Cafe</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.396162" lon="-123.205051">
+<name>Cypress Creek Lodge</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.346057" lon="-123.217784">
+<name>Chevron</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.372495" lon="-123.201086">
+<name>Old Growth Conservancy</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<trk><name>Cypress Bowl Road</name>
+<trkseg>
+<trkpt lat="49.347589" lon="-123.195099"/>
+<trkpt lat="49.347968" lon="-123.195596"/>
+<trkpt lat="49.348316" lon="-123.196657"/>
+<trkpt lat="49.348620" lon="-123.199482"/>
+<trkpt lat="49.348687" lon="-123.200151"/>
+<trkpt lat="49.348762" lon="-123.200797"/>
+<trkpt lat="49.348959" lon="-123.202676"/>
+<trkpt lat="49.348986" lon="-123.203150"/>
+<trkpt lat="49.348976" lon="-123.203833"/>
+<trkpt lat="49.348163" lon="-123.208196"/>
+<trkpt lat="49.348127" lon="-123.208672"/>
+<trkpt lat="49.348135" lon="-123.209420"/>
+<trkpt lat="49.348345" lon="-123.210965"/>
+<trkpt lat="49.348426" lon="-123.212320"/>
+<trkpt lat="49.348150" lon="-123.215346"/>
+<trkpt lat="49.348623" lon="-123.218218"/>
+<trkpt lat="49.348895" lon="-123.222617"/>
+<trkpt lat="49.349203" lon="-123.223579"/>
+<trkpt lat="49.349837" lon="-123.223972"/>
+<trkpt lat="49.350285" lon="-123.223840"/>
+<trkpt lat="49.350700" lon="-123.223254"/>
+<trkpt lat="49.350823" lon="-123.222266"/>
+<trkpt lat="49.349481" lon="-123.218787"/>
+<trkpt lat="49.349227" lon="-123.216566"/>
+<trkpt lat="49.350461" lon="-123.209423"/>
+<trkpt lat="49.351678" lon="-123.204374"/>
+<trkpt lat="49.351932" lon="-123.203312"/>
+<trkpt lat="49.352209" lon="-123.202173"/>
+<trkpt lat="49.353671" lon="-123.195925"/>
+<trkpt lat="49.354201" lon="-123.192095"/>
+<trkpt lat="49.354269" lon="-123.186328"/>
+<trkpt lat="49.353912" lon="-123.180734"/>
+<trkpt lat="49.353700" lon="-123.179353"/>
+<trkpt lat="49.353080" lon="-123.178035"/>
+<trkpt lat="49.353207" lon="-123.177291"/>
+<trkpt lat="49.353790" lon="-123.177380"/>
+<trkpt lat="49.353957" lon="-123.178736"/>
+<trkpt lat="49.356637" lon="-123.189727"/>
+<trkpt lat="49.357782" lon="-123.198391"/>
+<trkpt lat="49.358056" lon="-123.203148"/>
+<trkpt lat="49.358613" lon="-123.207223"/>
+<trkpt lat="49.358370" lon="-123.208465"/>
+<trkpt lat="49.357495" lon="-123.210060"/>
+<trkpt lat="49.357483" lon="-123.211277"/>
+<trkpt lat="49.357948" lon="-123.212451"/>
+<trkpt lat="49.358795" lon="-123.212982"/>
+<trkpt lat="49.359599" lon="-123.212432"/>
+<trkpt lat="49.359899" lon="-123.211454"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.359954" lon="-123.211086"/>
+<trkpt lat="49.360459" lon="-123.208005"/>
+<trkpt lat="49.361270" lon="-123.205411"/>
+<trkpt lat="49.361077" lon="-123.202522"/>
+<trkpt lat="49.361316" lon="-123.200285"/>
+<trkpt lat="49.361170" lon="-123.197544"/>
+<trkpt lat="49.362833" lon="-123.190359"/>
+<trkpt lat="49.362885" lon="-123.189241"/>
+<trkpt lat="49.362649" lon="-123.188063"/>
+<trkpt lat="49.362871" lon="-123.187615"/>
+<trkpt lat="49.363200" lon="-123.187840"/>
+<trkpt lat="49.363654" lon="-123.189835"/>
+<trkpt lat="49.365306" lon="-123.192510"/>
+<trkpt lat="49.370461" lon="-123.195342"/>
+<trkpt lat="49.371840" lon="-123.195691"/>
+<trkpt lat="49.378236" lon="-123.194748"/>
+<trkpt lat="49.379185" lon="-123.193995"/>
+<trkpt lat="49.380544" lon="-123.191779"/>
+<trkpt lat="49.382437" lon="-123.191177"/>
+<trkpt lat="49.385121" lon="-123.189003"/>
+<trkpt lat="49.386755" lon="-123.188623"/>
+<trkpt lat="49.388177" lon="-123.188933"/>
+<trkpt lat="49.389322" lon="-123.189555"/>
+<trkpt lat="49.391918" lon="-123.191756"/>
+<trkpt lat="49.394256" lon="-123.194343"/>
+<trkpt lat="49.394391" lon="-123.195094"/>
+<trkpt lat="49.394113" lon="-123.198470"/>
+<trkpt lat="49.395191" lon="-123.201726"/>
+<trkpt lat="49.395189" lon="-123.202393"/>
+<trkpt lat="49.394921" lon="-123.202661"/>
+<trkpt lat="49.394498" lon="-123.202543"/>
+<trkpt lat="49.392755" lon="-123.200769"/>
+</trkseg>
+</trk>
+</gpx>

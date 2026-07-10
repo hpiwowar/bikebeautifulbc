@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Heather Bikeway</name>
+<link href="https://bccycletourism.ca/trail/heather-bikeway/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.257178" lon="-123.120244">
+<name>Velo Star Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.257131" lon="-123.120246">
+<name>Velo Star Cafe</name>
+<cmt>bike_shop</cmt>
+<desc>Repair Shop</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+<wpt lat="49.263452" lon="-123.119719">
+<name>Blenz Coffee</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263102" lon="-123.120044">
+<name>Song Cafe</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263493" lon="-123.120204">
+<name>Stages Bistro &amp; Lounge</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263132" lon="-123.119462">
+<name>Avik Bakery</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263521" lon="-123.120439">
+<name>Holiday Inn Vancouver-Centre (Broadway)</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.263156" lon="-123.120468">
+<name>Domino's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263157" lon="-123.120573">
+<name>Pacific Poke</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263101" lon="-123.119188">
+<name>River Sushi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263160" lon="-123.120665">
+<name>Peaked Pies</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263173" lon="-123.120930">
+<name>Cha Tra Mue</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263118" lon="-123.118781">
+<name>A.Bento</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.265727" lon="-123.120228">
+<name>7-Eleven</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.256910" lon="-123.121295">
+<name>Ramson's Pizza and Bar</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.256912" lon="-123.121567">
+<name>Hachibei</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263515" lon="-123.121366">
+<name>A&amp;W</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263961" lon="-123.118250">
+<name>Kamei on Broadway</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263149" lon="-123.121487">
+<name>HiFive Chicken</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263701" lon="-123.121474">
+<name>Dynasty Seafood Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.206000" lon="-123.125359">
+<name>McDonald's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263151" lon="-123.121628">
+<name>Meat &amp; Bread</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.257160" lon="-123.121870">
+<name>Willow Cafe &amp; Bakery</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.252466" lon="-123.122252">
+<name>Douglas Park Community Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.263552" lon="-123.117754">
+<name>Tractor</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263603" lon="-123.122019">
+<name>Kisokoma Japanese Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263182" lon="-123.122062">
+<name>Big Star Sandwich Company</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263640" lon="-123.122080">
+<name>Aidan's Coffee &amp; Food</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.265610" lon="-123.121980">
+<name>Szechuan Chili Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.262222" lon="-123.122332">
+<name>Bean Around The World</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263196" lon="-123.122355">
+<name>Freshslice Pizza</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263424" lon="-123.117312">
+<name>Cactus Club Cafe</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.264819" lon="-123.117251">
+<name>Caffè Cittadella</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263190" lon="-123.122457">
+<name>Banana Leaf on Broadway</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263101" lon="-123.117295">
+<name>Elysian Coffee Roasters</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.265744" lon="-123.122305">
+<name>Yanaki Sushi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.265808" lon="-123.122303">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.240604" lon="-123.117906">
+<name>Simple Love</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.260993" lon="-123.117099">
+<name>Lennox Liquor Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.263412" lon="-123.116998">
+<name>Pizza Rubato Napoletana</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.260823" lon="-123.117053">
+<name>Fresh slice Pizza</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.260754" lon="-123.117006">
+<name>Sungiven Foods</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.263097" lon="-123.116837">
+<name>Hokkaido Ramen Santouka</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.260831" lon="-123.116895">
+<name>Blaze Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.243330" lon="-123.124719">
+<name>Connect Express</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263085" lon="-123.116573">
+<name>Saku</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263494" lon="-123.116493">
+<name>Onigiri Ya</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.233647" lon="-123.127294">
+<name>Jewish Community Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.265123" lon="-123.116384">
+<name>Cafe &amp; Life Co.</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263512" lon="-123.123390">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263058" lon="-123.116349">
+<name>Yolks</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.260732" lon="-123.116371">
+<name>i cafe express</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263491" lon="-123.116260">
+<name>McDonald's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.267446" lon="-123.119643">
+<name>Convivial Café and Bakery</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263056" lon="-123.116117">
+<name>Peaceful Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.260851" lon="-123.116165">
+<name>A&amp;W</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263054" lon="-123.115977">
+<name>Chipotle</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.229130" lon="-123.117751">
+<name>Oakridge Library Branch</name>
+<cmt>library</cmt>
+<desc>Library</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.263540" lon="-123.123896">
+<name>Legendary Noodle</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.264291" lon="-123.115808">
+<name>COBS Bread</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263483" lon="-123.115745">
+<name>Lumiere Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263052" lon="-123.115725">
+<name>La Ruota</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263482" lon="-123.115657">
+<name>Krispy Kreme</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.245144" lon="-123.124763">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.240917" lon="-123.128006">
+<name>VanDusen Botanical Garden</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.227359" lon="-123.116863">
+<name>Chatime</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.255875" lon="-123.115763">
+<name>Osteria Elio Volpe</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.264548" lon="-123.115359">
+<name>BC Liquor Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.229020" lon="-123.117146">
+<name>Alliance Française</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.264000" lon="-123.115281">
+<name>Whole Foods Market</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.260632" lon="-123.115390">
+<name>ChiuChow Seafood Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.259824" lon="-123.115330">
+<name>The Golden Horn Turkish Bakery &amp; Cafe</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.249348" lon="-123.115692">
+<name>Freshslice Pizza</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.249411" lon="-123.115689">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263010" lon="-123.115219">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.262654" lon="-123.115242">
+<name>Xin Chào</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.254741" lon="-123.115460">
+<name>Angry Otter Liquor</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.263958" lon="-123.115151">
+<name>Whole Foods Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263885" lon="-123.115150">
+<name>Seaport City Seafood Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.255100" lon="-123.115364">
+<name>JJ Bean</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.256082" lon="-123.115394">
+<name>Subway</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.264752" lon="-123.115081">
+<name>Sushi Tendo</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.255199" lon="-123.115335">
+<name>Lemonade Gluten Free Bakery</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.264635" lon="-123.115076">
+<name>Pho &amp; Roll by Wooden Fish</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.259245" lon="-123.115228">
+<name>New Sun Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.249831" lon="-123.115592">
+<name>Landmark Hot Pot House</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.255777" lon="-123.115362">
+<name>June</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.255711" lon="-123.115363">
+<name>Thai Away Home</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.254265" lon="-123.115405">
+<name>Choice's Market</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.259036" lon="-123.115232">
+<name>Indian Roti Kitchen</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.249209" lon="-123.115530">
+<name>INS Market</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.239521" lon="-123.128651">
+<name>The Garden Café at VanDusen</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.248612" lon="-123.125250">
+<name>Mandarin Hong Kong Cafe</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.262569" lon="-123.114904">
+<name>Freshslice Pizza</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.248523" lon="-123.125484">
+<name>Kim Express</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.242149" lon="-123.115486">
+<name>Queen Elizabeth Park</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.216897" lon="-123.129115">
+<name>Marpole Oakridge Community Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.255265" lon="-123.114945">
+<name>Baja Racing Sports Bar</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.249868" lon="-123.115190">
+<name>Ton Ton Sushi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.255536" lon="-123.114937">
+<name>Café Gloucester</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.248525" lon="-123.125630">
+<name>Osaka Sushi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.249983" lon="-123.115171">
+<name>Old Xian's Food Noodle &amp; Mart 老西安面馆</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.255607" lon="-123.114933">
+<name>BenGong's Tea</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.255135" lon="-123.114894">
+<name>Rain or Shine Ice Cream</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.255689" lon="-123.114933">
+<name>Hot Cha Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.254627" lon="-123.114941">
+<name>Viet House</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.258564" lon="-123.114832">
+<name>Hot Delivery</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.258508" lon="-123.114833">
+<name>The Firewood Café</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.227010" lon="-123.128733">
+<name>Jazen Tea</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.226971" lon="-123.128746">
+<name>Phở Hòa</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.248526" lon="-123.125680">
+<name>Libations Liquor Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.254372" lon="-123.114954">
+<name>Miso Taco</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.254178" lon="-123.114958">
+<name>Sushi 7 Japanese Bar &amp; Grill</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.254098" lon="-123.114961">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.254283" lon="-123.114953">
+<name>Monsoon Curry Indian Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.257562" lon="-123.114845">
+<name>Vij's</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.256030" lon="-123.114887">
+<name>Dutch Wooden Shoe Cafe</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.256203" lon="-123.114877">
+<name>Piast Bakery &amp; Deli</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.256290" lon="-123.114871">
+<name>Dong Tai Xiang Shanghai Dim Sum</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.226833" lon="-123.128810">
+<name>Sushi Mura</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.226921" lon="-123.128806">
+<name>Subway</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.259935" lon="-123.114725">
+<name>101 BoBA</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.257008" lon="-123.114813">
+<name>Alley 16</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.226748" lon="-123.128868">
+<name>A&amp;W</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.260203" lon="-123.114694">
+<name>iDen &amp; Quanjude</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.226248" lon="-123.128940">
+<name>Tim Hortons</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.264573" lon="-123.114471">
+<name>Red Burrito</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.258453" lon="-123.114679">
+<name>Passion8 Dessert Cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263467" lon="-123.114482">
+<name>A&amp;W</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.268526" lon="-123.118626">
+<name>Riviera Cafe &amp; Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.257958" lon="-123.114616">
+<name>Shiro Japanese Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263866" lon="-123.114380">
+<name>Wendy's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.217649" lon="-123.118417">
+<name>Cafe Algan</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.265132" lon="-123.114299">
+<name>Canadian Tire</name>
+<cmt>convenience_store</cmt>
+<desc>General merchandise</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.264675" lon="-123.114244">
+<name>Save-On-Foods</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.263551" lon="-123.125484">
+<name>Chef's Choice Chinese Cuisine</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263147" lon="-123.125523">
+<name>Homura Yakiniku</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.264218" lon="-123.114145">
+<name>Winners</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.264078" lon="-123.114138">
+<name>Uncle Fatih's Pizza</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.268711" lon="-123.118640">
+<name>The Wicklow</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.260953" lon="-123.125704">
+<name>Purple Grain</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.260812" lon="-123.125736">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263359" lon="-123.114097">
+<name>Marulilu Cafe</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.234906" lon="-123.116462">
+<name>BC Liquor Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.263554" lon="-123.125692">
+<name>Tozen Sushi Bar</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.259236" lon="-123.114140">
+<name>Cambie Lodge</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.209966" lon="-123.118155">
+<name>Joy Cafe Vancouver</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.264077" lon="-123.113877">
+<name>West Coast Poké</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.235276" lon="-123.115738">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263833" lon="-123.113794">
+<name>Uma Sushi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.235207" lon="-123.115740">
+<name>Anna's Cake House</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263832" lon="-123.113724">
+<name>Mr. Japanese Curry</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.248544" lon="-123.126635">
+<name>Starbucks</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.238508" lon="-123.129949">
+<name>Shaughnessy Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.210445" lon="-123.130463">
+<name>Chuan Yue</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.269047" lon="-123.118483">
+<name>Uno Gelato</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.210512" lon="-123.130465">
+<name>Parm'z Pizza Factory Ltd.</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.210104" lon="-123.117799">
+<name>Panago</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.234862" lon="-123.115760">
+<name>Bonjour Banh Mi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.245841" lon="-123.126934">
+<name>Bean Around the World</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.269221" lon="-123.118730">
+<name>Bae Side</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.248612" lon="-123.126912">
+<name>Safeway</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.242144" lon="-123.114044">
+<name>Bloedel Floral Conservatory</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.248803" lon="-123.127025">
+<name>Shell</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.263343" lon="-123.113202">
+<name>West B Pizza</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.250975" lon="-123.127090">
+<name>Subway</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.263344" lon="-123.113072">
+<name>Menya Raizo</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Heather Bikeway</name>
+<trkseg>
+<trkpt lat="49.205054" lon="-123.122472"/>
+<trkpt lat="49.206973" lon="-123.124329"/>
+<trkpt lat="49.207121" lon="-123.124472"/>
+<trkpt lat="49.207195" lon="-123.124417"/>
+<trkpt lat="49.207473" lon="-123.124247"/>
+<trkpt lat="49.208267" lon="-123.124218"/>
+<trkpt lat="49.208465" lon="-123.124215"/>
+<trkpt lat="49.209371" lon="-123.124190"/>
+<trkpt lat="49.210231" lon="-123.124156"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.210330" lon="-123.124148"/>
+<trkpt lat="49.210714" lon="-123.124137"/>
+<trkpt lat="49.211183" lon="-123.124123"/>
+<trkpt lat="49.212301" lon="-123.124078"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.212398" lon="-123.124075"/>
+<trkpt lat="49.214205" lon="-123.124009"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.214301" lon="-123.124009"/>
+<trkpt lat="49.216020" lon="-123.123953"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.216116" lon="-123.123948"/>
+<trkpt lat="49.216976" lon="-123.123922"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.217063" lon="-123.123921"/>
+<trkpt lat="49.223261" lon="-123.123704"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.223261" lon="-123.123704"/>
+<trkpt lat="49.223560" lon="-123.120963"/>
+<trkpt lat="49.226284" lon="-123.120871"/>
+<trkpt lat="49.226319" lon="-123.121790"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.226319" lon="-123.121790"/>
+<trkpt lat="49.227266" lon="-123.121756"/>
+<trkpt lat="49.229080" lon="-123.121693"/>
+<trkpt lat="49.229141" lon="-123.123415"/>
+<trkpt lat="49.230650" lon="-123.123381"/>
+<trkpt lat="49.231892" lon="-123.123890"/>
+<trkpt lat="49.232873" lon="-123.123905"/>
+<trkpt lat="49.237471" lon="-123.123754"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.237514" lon="-123.123679"/>
+<trkpt lat="49.237415" lon="-123.120786"/>
+<trkpt lat="49.241169" lon="-123.120661"/>
+<trkpt lat="49.244307" lon="-123.120538"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.244403" lon="-123.120537"/>
+<trkpt lat="49.245262" lon="-123.120517"/>
+<trkpt lat="49.246195" lon="-123.120487"/>
+<trkpt lat="49.247070" lon="-123.120461"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.247167" lon="-123.120462"/>
+<trkpt lat="49.247987" lon="-123.120425"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.248083" lon="-123.120425"/>
+<trkpt lat="49.248789" lon="-123.120396"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.248789" lon="-123.120396"/>
+<trkpt lat="49.249017" lon="-123.120353"/>
+<trkpt lat="49.249154" lon="-123.120349"/>
+<trkpt lat="49.249324" lon="-123.120379"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.249324" lon="-123.120379"/>
+<trkpt lat="49.249155" lon="-123.120422"/>
+<trkpt lat="49.249018" lon="-123.120426"/>
+<trkpt lat="49.248789" lon="-123.120396"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.249324" lon="-123.120379"/>
+<trkpt lat="49.251546" lon="-123.120306"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.251642" lon="-123.120303"/>
+<trkpt lat="49.253346" lon="-123.120237"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.253442" lon="-123.120232"/>
+<trkpt lat="49.255161" lon="-123.120156"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.255257" lon="-123.120152"/>
+<trkpt lat="49.258616" lon="-123.120054"/>
+<trkpt lat="49.258810" lon="-123.120048"/>
+<trkpt lat="49.258935" lon="-123.120045"/>
+<trkpt lat="49.259018" lon="-123.120042"/>
+<trkpt lat="49.259496" lon="-123.120028"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.259581" lon="-123.120025"/>
+<trkpt lat="49.260474" lon="-123.119989"/>
+<trkpt lat="49.261174" lon="-123.119961"/>
+<trkpt lat="49.262325" lon="-123.119940"/>
+<trkpt lat="49.262793" lon="-123.119910"/>
+<trkpt lat="49.263072" lon="-123.119885"/>
+<trkpt lat="49.263300" lon="-123.119876"/>
+<trkpt lat="49.264211" lon="-123.119843"/>
+<trkpt lat="49.264974" lon="-123.119818"/>
+<trkpt lat="49.265046" lon="-123.119815"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.241378" lon="-123.123734"/>
+<trkpt lat="49.241355" lon="-123.123736"/>
+<trkpt lat="49.241205" lon="-123.123737"/>
+<trkpt lat="49.241161" lon="-123.123720"/>
+<trkpt lat="49.241119" lon="-123.123713"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.241119" lon="-123.123713"/>
+<trkpt lat="49.239674" lon="-123.123822"/>
+<trkpt lat="49.239242" lon="-123.123831"/>
+<trkpt lat="49.239242" lon="-123.123693"/>
+<trkpt lat="49.237571" lon="-123.123748"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.241119" lon="-123.123713"/>
+<trkpt lat="49.241126" lon="-123.123688"/>
+<trkpt lat="49.241124" lon="-123.123628"/>
+<trkpt lat="49.241275" lon="-123.123621"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.226319" lon="-123.121790"/>
+<trkpt lat="49.226385" lon="-123.123601"/>
+<trkpt lat="49.223261" lon="-123.123704"/>
+</trkseg>
+</trk>
+</gpx>

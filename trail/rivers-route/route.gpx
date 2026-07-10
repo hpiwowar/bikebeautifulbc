@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Rivers Route</name>
+<link href="https://bccycletourism.ca/trail/rivers-route/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="50.032922" lon="-125.271159">
+<name>White Tower</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.033196" lon="-125.272466">
+<name>On the Rocks</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="50.033548" lon="-125.268584">
+<name>Chateau Riverside Boutique Hotel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="50.032614" lon="-125.270041">
+<name>Ginger Beef House</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.034763" lon="-125.277255">
+<name>Haig-Brown Heritage House</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="50.030652" lon="-125.266229">
+<name>Ryan's Pizzeria</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.028864" lon="-125.270438">
+<name>Swicked Cycles</name>
+<cmt>bike_shop</cmt>
+<desc>Repair Shop</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+<wpt lat="50.032211" lon="-125.261913">
+<name>Walmart</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="50.030428" lon="-125.273966">
+<name>McDonald's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.026703" lon="-125.263676">
+<name>Perk's</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.037063" lon="-125.294453">
+<name>Quinsam Campground</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="50.030397" lon="-125.257602">
+<name>Nunns Creek</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<trk><name>Rivers Route</name>
+<trkseg>
+<trkpt lat="50.041000" lon="-125.292042"/>
+<trkpt lat="50.041278" lon="-125.292135"/>
+</trkseg>
+<trkseg>
+<trkpt lat="50.041000" lon="-125.292042"/>
+<trkpt lat="50.040160" lon="-125.291699"/>
+<trkpt lat="50.039014" lon="-125.290173"/>
+<trkpt lat="50.038624" lon="-125.288465"/>
+<trkpt lat="50.038358" lon="-125.288368"/>
+<trkpt lat="50.037841" lon="-125.288745"/>
+<trkpt lat="50.037598" lon="-125.288922"/>
+<trkpt lat="50.036636" lon="-125.285362"/>
+<trkpt lat="50.034760" lon="-125.281613"/>
+<trkpt lat="50.034503" lon="-125.279523"/>
+<trkpt lat="50.034515" lon="-125.278629"/>
+<trkpt lat="50.033602" lon="-125.275754"/>
+<trkpt lat="50.033434" lon="-125.275034"/>
+<trkpt lat="50.033122" lon="-125.273038"/>
+<trkpt lat="50.032727" lon="-125.270538"/>
+<trkpt lat="50.029905" lon="-125.270774"/>
+<trkpt lat="50.029884" lon="-125.263586"/>
+<trkpt lat="50.032532" lon="-125.263602"/>
+<trkpt lat="50.032675" lon="-125.263602"/>
+<trkpt lat="50.033332" lon="-125.263600"/>
+<trkpt lat="50.033311" lon="-125.267251"/>
+<trkpt lat="50.032896" lon="-125.267618"/>
+<trkpt lat="50.032924" lon="-125.268522"/>
+<trkpt lat="50.033275" lon="-125.268546"/>
+<trkpt lat="50.033405" lon="-125.270365"/>
+<trkpt lat="50.033716" lon="-125.272654"/>
+<trkpt lat="50.033364" lon="-125.272885"/>
+<trkpt lat="50.033868" lon="-125.272755"/>
+<trkpt lat="50.035243" lon="-125.272322"/>
+<trkpt lat="50.035160" lon="-125.272301"/>
+<trkpt lat="50.034699" lon="-125.269171"/>
+<trkpt lat="50.034977" lon="-125.268620"/>
+<trkpt lat="50.035381" lon="-125.268742"/>
+<trkpt lat="50.035912" lon="-125.267819"/>
+<trkpt lat="50.036456" lon="-125.265996"/>
+<trkpt lat="50.037035" lon="-125.265738"/>
+<trkpt lat="50.037351" lon="-125.266678"/>
+<trkpt lat="50.038034" lon="-125.266736"/>
+<trkpt lat="50.038771" lon="-125.268045"/>
+<trkpt lat="50.039228" lon="-125.268092"/>
+<trkpt lat="50.039729" lon="-125.269247"/>
+<trkpt lat="50.040112" lon="-125.270457"/>
+</trkseg>
+<trkseg>
+<trkpt lat="50.040102" lon="-125.270425"/>
+<trkpt lat="50.039248" lon="-125.271040"/>
+</trkseg>
+<trkseg>
+<trkpt lat="50.039337" lon="-125.270977"/>
+<trkpt lat="50.039355" lon="-125.271408"/>
+</trkseg>
+<trkseg>
+<trkpt lat="50.039299" lon="-125.271220"/>
+<trkpt lat="50.040688" lon="-125.275921"/>
+<trkpt lat="50.041370" lon="-125.276625"/>
+<trkpt lat="50.042186" lon="-125.277450"/>
+<trkpt lat="50.043234" lon="-125.279263"/>
+<trkpt lat="50.043801" lon="-125.280363"/>
+<trkpt lat="50.043806" lon="-125.282618"/>
+<trkpt lat="50.043136" lon="-125.284855"/>
+<trkpt lat="50.040708" lon="-125.287972"/>
+<trkpt lat="50.040615" lon="-125.288190"/>
+<trkpt lat="50.041000" lon="-125.292042"/>
+</trkseg>
+<trkseg>
+<trkpt lat="50.034519" lon="-125.278884"/>
+<trkpt lat="50.033395" lon="-125.275279"/>
+<trkpt lat="50.033288" lon="-125.274844"/>
+<trkpt lat="50.033041" lon="-125.273277"/>
+<trkpt lat="50.032969" lon="-125.272971"/>
+<trkpt lat="50.032580" lon="-125.270575"/>
+</trkseg>
+</trk>
+</gpx>

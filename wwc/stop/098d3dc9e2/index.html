@@ -20,7 +20,8 @@
 <meta property="og:description" content="Twin Sails Brewing opened in 2015 on Port Moody&amp;#x27;s &amp;#x27;Brewers Row&amp;#x27;, founded by identical twin brothers whose name also nods to the sailboats visible on…">
 <meta name="twitter:description" content="Twin Sails Brewing opened in 2015 on Port Moody&amp;#x27;s &amp;#x27;Brewers Row&amp;#x27;, founded by identical twin brothers whose name also nods to the sailboats visible on…">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":[]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BarOrPub", "name": "Twin Sails Brewery", "description": "Twin Sails Brewing opened in 2015 on Port Moody's 'Brewers Row', founded by identical twin brothers whose name also nods to the sailboats visible on Burrard Inlet right out front. The brewery specialises in progressive American IPAs, stouts, sours, and wild barrel ales, with a taproom, patio, arcade, and a weekend food truck (Mama Said's Pizza) on site. Dogs are welcome on the patio and guests may bring outside food, making it a convivial stop for cyclists riding the Burrard Inlet corridor.", "address": "2821 Murray Street, Port Moody, BC V3H 1X3", "telephone": "604.492.4234", "url": "https://twinsailsbrewing.com/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"We Welcome Cyclists","item":"https://bccycletourism.ca/wwc/"},{"@type":"ListItem","position":2,"name":"Twin Sails Brewery","item":"https://bccycletourism.ca/wwc/stop/098d3dc9e2/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BarOrPub", "name": "Twin Sails Brewery", "description": "Twin Sails Brewing opened in 2015 on Port Moody's 'Brewers Row', founded by identical twin brothers whose name also nods to the sailboats visible on Burrard Inlet right out front. The brewery specialises in progressive American IPAs, stouts, sours, and wild barrel ales, with a taproom, patio, arcade, and a weekend food truck (Mama Said's Pizza) on site. Dogs are welcome on the patio and guests may bring outside food, making it a convivial stop for cyclists riding the Burrard Inlet corridor.", "address": "2821 Murray Street, Port Moody, BC V3H 1X3", "telephone": "604.492.4234", "url": "https://twinsailsbrewing.com/", "priceRange": "$$"}</script>
 <style>
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -55,6 +56,11 @@ body {
 .g-main a { color: #1E7D96; }
 .g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: 1200px; margin: 0 auto; padding: 64px 40px 72px; display: flex; align-items: flex-start; justify-content: space-between; }
 .g-footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .g-footer-brand img { width: 48px; height: 48px; }
@@ -83,12 +89,40 @@ body {
 }
 
 .listing-main { max-width: 800px; margin: 0 auto; padding: 28px 24px 64px; }
-.listing-breadcrumb { font-size: 13px; color: #9CA3AF; margin-bottom: 24px; }
-.listing-breadcrumb a { color: #1E7D96; text-decoration: none; }
+.listing-main.ls-two-col { max-width: 1160px; }
+.ls-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+.ls-col-right { position: sticky; top: 20px; }
+.ls-col-right .ls-band { margin: 0; grid-template-columns: 1fr; gap: 0; }
+.ls-col-right .ls-card { border-radius: 0; }
+.ls-col-right .ls-card:first-child { border-radius: 12px 12px 0 0; border-bottom: none; }
+.ls-col-right .ls-card:last-child { border-radius: 0 0 12px 12px; border-top: none; }
+.ls-col-right .ls-bpnote { margin: 14px 0 0; }
+@media (max-width: 860px) { .ls-layout { grid-template-columns: 1fr; } .ls-col-right { position: static; } }
 .listing-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: -0.03em; color: #1F514C; margin-bottom: 8px; }
-.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.badge-accredited { display: inline-flex; align-items: center; gap: 4px; background: #1E7D96; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-accredited .seal { color: #F0C948; }
+.badge-welcoming { display: inline-flex; align-items: center; background: #FEF3C7; color: #92400E; border: 1px solid #F5D98B; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-info { display: inline-flex; align-items: center; background: #F3F4F6; color: #6B7280; border: 1px solid #E5E7EB; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-unwelcome { display: inline-flex; align-items: center; background: #DC2626; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.ls-meta-sep { width: 1px; height: 14px; background: #E5E7EB; }
+.ls-meta-type { font-weight: 600; color: #6B7280; }
+.ls-meta-city { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-meta-city:hover { text-decoration: underline; }
+.ls-meta-price { display: inline-flex; align-items: center; background: #FFF6E5; border: 1px solid #F0E6C5; border-radius: 999px; padding: 3px 11px; font-weight: 700; color: #2D2D2D; letter-spacing: 0.4px; font-size: 12.5px; }
 .listing-desc { font-size: 15px; line-height: 1.65; color: #2D2D2D; margin-bottom: 24px; }
-.listing-section { margin-bottom: 20px; border-top: 1px solid #E5E7EB; padding-top: 16px; }
+.listing-web-top { font-size: 14px; margin: -12px 0 24px; display: flex; gap: 8px; align-items: baseline; }
+.listing-web-top .ico { flex-shrink: 0; }
+.listing-web-top a { color: #1E7D96; text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
+.listing-web-top a:hover { text-decoration: underline; }
+.listing-bike-info { margin-top: -16px; }
+.listing-bike-info a { font-weight: 600; }
+.listing-pull { border-left: 4px solid #C9A83E; padding: 6px 0 6px 20px; margin: 26px 0 30px; }
+.listing-pull .q { font-family: "Archivo", sans-serif; font-size: 21px; font-weight: 400; letter-spacing: -0.01em; color: #1F514C; line-height: 1.45; }
+.listing-pull .who { font-size: 13px; color: #9CA3AF; margin-top: 6px; }
+.listing-pull .who a { color: #9CA3AF; text-decoration: none; }
+.listing-pull .who a:hover { color: #1E7D96; text-decoration: underline; }
+.listing-section { margin-bottom: 28px; }
 .listing-section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 10px; }
 .listing-detail-row { font-size: 14px; color: #2D2D2D; margin-bottom: 6px; }
 .listing-detail-row a { color: #1E7D96; }
@@ -107,15 +141,96 @@ body {
 .listing-indig-attr a { color: #1E7D96; text-decoration: none; }
 .listing-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
 .listing-verify a { color: #1E7D96; }
+.listing-section-sub { font-size: 13px; color: #6B7280; margin: -4px 0 12px; line-height: 1.5; }
+.listing-owner-cta { margin-top: 14px; background: #F5FAFB; border: 1px solid #BFDDE7; border-radius: 8px; padding: 12px 16px; font-size: 13.5px; color: #14586B; line-height: 1.6; }
+.listing-owner-cta strong { color: #14586B; }
+.listing-owner-cta a { color: #1E7D96; font-weight: 600; }
+.ls-notable-hero { border-top: 3px solid #1F514C; border-bottom: 3px solid #1F514C; padding: 24px 2px 26px; margin: 18px 0 30px; }
+.ls-notable-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1E7D96; margin-bottom: 8px; }
+.ls-notable-eyebrow .star { color: #1F514C; }
+.ls-notable-line { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; color: #1F514C; line-height: 1.4; }
+@media (max-width: 700px) { .ls-notable-line { font-size: 20px; } }
+.ls-ribbon { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.ls-rib { display: inline-flex; align-items: center; gap: 7px; background: #EDF6F8; border: 1px solid #BEDDE6; border-radius: 10px; padding: 8px 13px; font-size: 13px; font-weight: 600; color: #1E7D96; }
+.ls-sec-title { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; margin-bottom: 4px; }
+.ls-vrow { padding: 10px 0; border-bottom: 1px dashed #EDE9DA; font-size: 14px; }
+.ls-vrow:last-of-type { border-bottom: none; }
+.ls-vrow-main { display: flex; gap: 12px; align-items: baseline; }
+.ls-vrow .tick { color: #2E8A36; font-weight: 700; flex-shrink: 0; width: 16px; }
+.ls-vrow .k { font-weight: 700; color: #1F514C; }
+.ls-vrow .d { display: block; color: #57534E; line-height: 1.55; margin: 4px 0 0 28px; font-size: 13.5px; }
+.ls-pills-label { font-size: 12px; color: #9CA3AF; margin-top: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; }
+.ls-bpnote { display: flex; gap: 12px; background: #EAF3EC; border-radius: 10px; padding: 13px 16px; margin-top: 14px; font-size: 14px; color: #1C5240; line-height: 1.55; }
+.ls-bpnote .ico { font-size: 18px; line-height: 1.3; flex-shrink: 0; }
+.ls-bpnote details { margin-top: 6px; }
+.ls-bpnote summary { cursor: pointer; color: #1C5240; font-weight: 600; }
+.ls-bpnote ul { list-style: none; margin: 8px 0 0; padding: 0; }
+.ls-bpnote li { font-size: 13px; padding: 2px 0; color: #1C5240; }
 .listing-routes { display: flex; flex-wrap: wrap; gap: 8px; }
 .listing-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
 .listing-route-tag:hover { background: #DBEAFE; }
+.listing-trail-list { list-style: none; padding: 0; margin: 0; }
+.listing-trail-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-trail-name { color: #047857; text-decoration: none; }
+a.listing-trail-name:hover { text-decoration: underline; }
+.listing-trail-item.dest .listing-trail-name { font-weight: 700; }
+.listing-trail-dist { color: #9CA3AF; font-size: 13px; }
+.listing-near-group { margin-bottom: 14px; }
+.listing-near-grouptitle { font-size: 11px; font-weight: 700; color: #78716C; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.listing-near-list { list-style: none; padding: 0; margin: 0; }
+.listing-near-item { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-near-name { color: #1E7D96; text-decoration: none; }
+.listing-near-name:hover { text-decoration: underline; }
+.listing-near-subcat { color: #9CA3AF; font-size: 13px; }
+.listing-near-badge { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 20px; }
+.listing-near-dist { color: #9CA3AF; font-size: 13px; }
+.listing-bp-list { list-style: none; padding: 0; margin: 0; }
+.listing-bp-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-bp-dist { color: #9CA3AF; font-size: 13px; }
+/* Map + "Find them" band (Mockup C reflow Step 7) */
+.ls-band { display: grid; grid-template-columns: 1fr 300px; gap: 14px; margin: 24px 0 30px; align-items: start; }
+.ls-band.ls-band-solo { grid-template-columns: 1fr; }
+.ls-card { background: #fff; border: 1px solid #E7E2D0; border-radius: 12px; overflow: hidden; }
+/* Map keeps the shared .wwc-map fixed height (no flex/resize hacks — same as every
+   other embedded map); only strip its own border/radius since the card supplies them. */
+.ls-card-map .wwc-map { max-width: none; border: 0; border-radius: 0; }
+.ls-card-map .wwc-map-ctrls { margin: 0; padding: 10px 14px; }
+.ls-card-pad { padding: 14px 16px; }
+.ls-card-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1E7D96; margin-bottom: 9px; }
+.ls-contact-row { font-size: 13.5px; color: #2D2D2D; margin-bottom: 7px; display: flex; gap: 8px; }
+.ls-contact-row .ico { width: 18px; flex-shrink: 0; text-align: center; }
+.ls-contact-row span { min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a { color: #1E7D96; text-decoration: none; min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a:hover { text-decoration: underline; }
+.ls-route-tag { display: inline-flex; align-items: center; gap: 6px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; font-weight: 600; margin: 0 4px 4px 0; }
+.ls-route-tag:hover { background: #DBEAFE; }
+.ls-trail-line { font-size: 13px; padding: 2px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ls-trail-line a { color: #141414; text-decoration: none; font-weight: 400; }
+.ls-trail-line a:hover { text-decoration: underline; }
+.ls-trail-line .dist { color: #9CA3AF; font-size: 12px; flex-shrink: 0; }
+/* "Around you, by need" grid (Mockup C reflow Step 6) */
+.ls-needs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.ls-need { background: #FCFBF6; border: 1px solid #E7E2D0; border-radius: 12px; padding: 14px 16px; }
+.ls-need-title { font-size: 13px; font-weight: 700; color: #1F514C; margin-bottom: 9px; }
+.ls-need ul { list-style: none; padding: 0; margin: 0; }
+.ls-need li { display: flex; align-items: baseline; gap: 8px; font-size: 13.5px; padding: 3px 0; }
+.ls-need .nm { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-need .nm:hover { text-decoration: underline; }
+.ls-need .dist { color: #9CA3AF; font-size: 12px; margin-left: auto; white-space: nowrap; }
+.ls-need .wbadge { font-size: 10px; font-weight: 700; background: #EAF3EC; color: #1C5240; border-radius: 20px; padding: 1px 6px; }
+.ls-need .wbadge.no { background: #FDECEC; color: #B91C1C; }
+@media (max-width: 700px) { .ls-band { grid-template-columns: 1fr; } .ls-needs { grid-template-columns: 1fr; } }
 .listing-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .listing-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .listing-attribution a { color: #9CA3AF; }
 .listing-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
 .listing-suggest a { color: #1E7D96; }
+.listing-json { text-align: right; margin-top: 14px; }
+.listing-json a { font-size: 11px; color: #C9CDD3; text-decoration: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .03em; }
+.listing-json a:hover { color: #9CA3AF; text-decoration: underline; }
 .listing-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
+.badge-notable { display: inline-flex; align-items: center; background: #1F514C; color: #fff; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; letter-spacing: 0.2px; }
+.listing-notable { font-size: 14.5px; color: #1F514C; font-style: italic; margin: -8px 0 18px; line-height: 1.5; }
 
 </style>
 </head>
@@ -142,20 +257,52 @@ body {
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
 </script>
-<main class="listing-main">
-<nav class="listing-breadcrumb"><a href="/wwc/" id="listing-back" onclick="history.back();return false;">← <span id="listing-back-label">All listings</span></a> / Food &amp; Drink</nav>
-<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('listing-back-label').textContent=f.label;}}catch(e){}})();</script>
+<main class="listing-main ls-two-col">
+<div class="ls-layout"><div class="ls-col-left"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/wwc/">We Welcome Cyclists</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Twin Sails Brewery</span></nav>
 <h1 class="listing-h1">Twin Sails Brewery</h1>
-<div class="listing-meta"><span class="badge badge-welcoming">Welcoming</span>  ·  <span style="font-weight:600;"><img src="/img/bc-flag.png" alt="" width="20" height="14" style="vertical-align:-2px;margin-right:5px;border-radius:2px;">Buy BC (independent)</span>  ·  Brewery / Pub  ·  North Vancouver</div>
+<div class="listing-meta"><span class="badge badge-welcoming">Welcoming</span><span class="ls-meta-sep"></span><span class="ls-meta-type"><img src="/img/bc-flag.png" alt="" width="20" height="14" style="vertical-align:-2px;margin-right:5px;border-radius:2px;">Buy BC (independent) &middot; Brewery / Pub</span><a href="/wwc/community/port-moody/" class="ls-meta-city">&#128205; Port Moody</a><span class="ls-meta-price">$$ · Casual</span></div>
+
+<div class="ls-ribbon"><span class="ls-rib">Bike parking or bike visibility</span><span class="ls-rib">Water bottle refill</span><span class="ls-rib">Washrooms</span><span class="ls-rib">Takeout</span><span class="ls-rib">Vegetarian / vegan / GF</span><span class="ls-rib">Public rack nearby</span></div>
 <p class="listing-desc">Twin Sails Brewing opened in 2015 on Port Moody&#x27;s &#x27;Brewers Row&#x27;, founded by identical twin brothers whose name also nods to the sailboats visible on Burrard Inlet right out front. The brewery specialises in progressive American IPAs, stouts, sours, and wild barrel ales, with a taproom, patio, arcade, and a weekend food truck (Mama Said&#x27;s Pizza) on site. Dogs are welcome on the patio and guests may bring outside food, making it a convivial stop for cyclists riding the Burrard Inlet corridor.</p>
-<div class="listing-verify">Amenities assumed from location and public data. <a href="/suggest#edit=Twin Sails Brewery">Confirm or update this listing →</a></div>
-<div class="listing-section"><div class="listing-section-title">Contact</div><div class="listing-detail-row"><strong>Address:</strong> 2821 Murray Street, Port Moody, BC V3H 1X3</div><div class="listing-detail-row"><strong>Phone:</strong> 604.492.4234</div><div class="listing-detail-row"><strong>Website:</strong> <a href="https://twinsailsbrewing.com/" target="_blank" rel="noopener">https://twinsailsbrewing.com/</a></div></div>
+<p class="listing-web-top"><span class="ico">🌐</span><a href="https://twinsailsbrewing.com/" target="_blank" rel="noopener">Main website &rsaquo;</a></p>
 
-<div class="listing-section"><div class="listing-section-title">Required Criteria</div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Bike parking or bike visibility</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Water bottle refill</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Washrooms</span></div></div>
-<div class="listing-section"><div class="listing-section-title">Amenities</div><div class="listing-pills"><span class="listing-pill-yes">Takeout</span><span class="listing-pill-no">Packed lunches</span><span class="listing-pill-no">Water without purchase</span><span class="listing-pill-yes">Vegetarian / vegan / GF*</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-yes">Public rack nearby</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span><span class="listing-pill-no">Wi-Fi</span></div><div class="listing-amenity-note"><div><strong>Vegetarian / vegan / GF:</strong> FAQs state: &#x27;We do! Although we don&#x27;t make any gluten free beers in house, we have several gluten free options available in our taproom.&#x27; No explicit vegetarian/vegan claim found</div></div></div>
 
-<div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: AI sources with manual review · OpenStreetMap</div></div>
+<div class="listing-section"><div class="ls-sec-title">What's here for you</div><div class="listing-section-sub">Gathered from publicly available data and OpenStreetMap. Not confirmed by the owner yet.</div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Bike parking or bike visibility</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Water bottle refill</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Washrooms</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Takeout</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Vegetarian / vegan / GF</span></div><span class="d">FAQs state: &#x27;We do! Although we don&#x27;t make any gluten free beers in house, we have several gluten free options available in our taproom.&#x27; No explicit vegetarian/vegan claim found</span></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Public rack nearby</span></div></div><div class="ls-pills-label">Not confirmed yet</div><div class="listing-pills"><span class="listing-pill-no">Packed lunches</span><span class="listing-pill-no">Water without purchase</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span><span class="listing-pill-no">Wi-Fi</span></div><div class="listing-owner-cta"><strong>Run this place?</strong> <a href="/apply">Confirm your details</a> and we'll mark them verified. Spotted an error? <a href="/suggest#edit=Twin Sails Brewery">Suggest an edit</a>.</div></div>
+
+
+<div class="listing-section"><div class="ls-sec-title">Around here</div><div class="listing-section-sub">The closest options for the things touring cyclists actually look for.</div><div class="ls-needs"><div class="ls-need"><div class="ls-need-title">🔧 Fix &amp; supply</div><ul><li><a class="nm" href="/wwc/stop/49a44dc756/">Andes Latin Foods</a><span class="dist">0.2 km</span></li><li><a class="nm" href="/wwc/stop/f68a9622b4/">Port Moody Liquor Store</a><span class="dist">0.3 km</span></li><li><a class="nm" href="/wwc/stop/a6655cafd7/">Cit-E Cycles</a><span class="dist">0.4 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🍽 Eat nearby</div><ul><li><a class="nm" href="/wwc/stop/411362b731/">Yellow Dog Brewing</a><span class="wbadge">Welcoming</span><span class="dist">right here</span></li><li><a class="nm" href="/wwc/stop/810ead037f/">Hightop Pizza</a><span class="wbadge">Welcoming</span><span class="dist">0.1 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🛏 Sleep nearby</div><ul><li><a class="nm" href="/wwc/stop/327013114e/">At The Beach Retreat</a><span class="dist">1.8 km</span></li><li><a class="nm" href="/wwc/stop/aedac6dd87/">Anmore Camp &amp; RV Park</a><span class="dist">4.8 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🎭 While you're here</div><ul><li><a class="nm" href="/wwc/stop/4ae600fbf7/">Rocky Point Swimming Pool</a><span class="wbadge">Welcoming</span><span class="dist">0.2 km</span></li><li><a class="nm" href="/wwc/stop/7d0c851703/">PoMo Museum</a><span class="wbadge">Welcoming</span><span class="dist">0.2 km</span></li><li><a class="nm" href="/wwc/stop/b3255b08c3/">Port Moody Arts Centre (Old City Hall)</a><span class="wbadge">Welcoming</span><span class="dist">0.7 km</span></li></ul></div></div></div>
+<div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: OpenStreetMap · Public data, AI sources with manual review</div></div>
 <div class="listing-suggest"><a href="/suggest#edit=Twin Sails Brewery">Suggest an edit to this listing</a></div>
+<div class="listing-json"><a href="/wwc/stop/098d3dc9e2.json" rel="nofollow">JSON</a></div></div><aside class="ls-col-right"><div class="ls-band"><div class="ls-card ls-card-map"><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div id="stopmap" class="wwc-map compact"></div><div class="wwc-map-ctrls"><span class="stopmap-lgd" style="color:#14807A"><span class="stopmap-lgd-sw" style="background:#14807A"></span> Bike network</span><span class="stopmap-lgd"><span class="stopmap-lgd-sw"></span> Nearby bike routes</span></div><script src="/map/lib/maplibre-gl.js"></script>
+<script src="/map/lib/pmtiles.js"></script>
+<script>
+(function(){
+  var protocol=new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile);
+  var map=new maplibregl.Map(Object.assign(
+    {container:"stopmap", style:location.origin+"/map/style/style.json", attributionControl:false},
+    {"center": [-122.848401, 49.278541], "zoom": 13}));
+  map.addControl(new maplibregl.NavigationControl(), "top-right");
+  var _attrib=new maplibregl.AttributionControl({compact:true,
+    customAttribution:'\u00a9 <a href="https://www.openmaptiles.org/">OpenMapTiles</a> \u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  map.addControl(_attrib);
+  // Compact mode initializes expanded; collapse it to the small "i" so the map
+  // opens clean. Clicking the button still expands the credit.
+  if(_attrib._container){_attrib._container.classList.remove("maplibregl-compact-show");}
+  map.on("load", function(){
+    map.addSource("stoptrails",{type:"geojson",data:{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "MultiLineString", "coordinates": [[[-122.8502765, 49.27766139999999], [-122.8500357, 49.27765919999998]], [[-122.8500704, 49.277846300000064], [-122.8500357, 49.27765919999998]], [[-122.8500704, 49.277846300000064], [-122.8500788, 49.277900300000034]], [[-122.8500788, 49.277900300000034], [-122.8500662, 49.279143600000005]], [[-122.8500662, 49.279143600000005], [-122.84997409999998, 49.27976340000001], [-122.8499264, 49.279427799999986]], [[-122.8499264, 49.279427799999986], [-122.8499241, 49.278949800000014]], [[-122.8499241, 49.278949800000014], [-122.8487513, 49.27895620000002]], [[-122.8487513, 49.27895620000002], [-122.8486794, 49.27895649999994]], [[-122.8486794, 49.27895649999994], [-122.8485038, 49.2789573]], [[-122.8485038, 49.2789573], [-122.84842619999999, 49.27895770000006]], [[-122.84842619999999, 49.27895770000006], [-122.84791280000002, 49.27895830000001]], [[-122.84791280000002, 49.27895830000001], [-122.84778870000001, 49.2789579]], [[-122.84778870000001, 49.2789579], [-122.8475654, 49.27895319999998]], [[-122.8475654, 49.27895319999998], [-122.8458368, 49.278953700000024]], [[-122.8458368, 49.278953700000024], [-122.8457222, 49.2789532]], [[-122.8457222, 49.2789532], [-122.8454697, 49.27895199999993]], [[-122.84535750000002, 49.27895160000001], [-122.8454697, 49.27895199999993]], [[-122.8445866, 49.27894870000003], [-122.84535750000002, 49.27895160000001]], [[-122.84446520000002, 49.278948199999945], [-122.8445866, 49.27894870000003]], [[-122.8439926, 49.27894629999998], [-122.84446520000002, 49.278948199999945]], [[-122.8438516, 49.27894569999995], [-122.8439926, 49.27894629999998]], [[-122.8434441, 49.27894400000005], [-122.8438516, 49.27894569999995]], [[-122.84336399999998, 49.278943399999946], [-122.8434441, 49.27894400000005]], [[-122.84298290000001, 49.278940800000036], [-122.84336399999998, 49.278943399999946]], [[-122.8428756, 49.27894049999997], [-122.84298290000001, 49.278940800000036]], [[-122.84139300000001, 49.27893609999998], [-122.8428756, 49.27894049999997]], [[-122.84130030000001, 49.27893330000003], [-122.84139300000001, 49.27893609999998]], [[-122.84012480000001, 49.27897430000003], [-122.84130030000001, 49.27893330000003]], [[-122.84012480000001, 49.27897430000003], [-122.8395332, 49.27909270000005]], [[-122.83734210000001, 49.28068400000002], [-122.8395332, 49.27909270000005]], [[-122.83734210000001, 49.28068400000002], [-122.83239089999998, 49.28066990000002]], [[-122.83239089999998, 49.28066990000002], [-122.8327157, 49.281425900000016]], [[-122.8327157, 49.281425900000016], [-122.83277220000001, 49.2815286]], [[-122.83277220000001, 49.2815286], [-122.83384710000001, 49.28312649999999]], [[-122.83384710000001, 49.28312649999999], [-122.833471, 49.2832342], [-122.8334833, 49.28349729999998], [-122.8323514, 49.28378510000001]], [[-122.8312391, 49.28406680000005], [-122.831477, 49.284178600000025], [-122.8323514, 49.28378510000001]], [[-122.83113610000001, 49.28397770000008], [-122.8312391, 49.28406680000005]], [[-122.82986129999999, 49.28307889999998], [-122.8304935, 49.28378510000001], [-122.83113610000001, 49.28397770000008]], [[-122.8294953, 49.283167399999975], [-122.82986129999999, 49.28307889999998]], [[-122.8287366, 49.282268800000004], [-122.8294953, 49.283167399999975]], [[-122.8287366, 49.282268800000004], [-122.8280461, 49.28234699999997]], [[-122.8280461, 49.28234699999997], [-122.8278875, 49.28236599999998]], [[-122.8278875, 49.28236599999998], [-122.82741810000002, 49.2824657]], [[-122.82741810000002, 49.2824657], [-122.8272895, 49.282481899999986]], [[-122.8272895, 49.282481899999986], [-122.8271678, 49.28249720000001]], [[-122.82741810000002, 49.2824657], [-122.82790939999998, 49.282438899999995]], [[-122.82790939999998, 49.282438899999995], [-122.8288027, 49.282339499999985]], [[-122.8395332, 49.27909270000005], [-122.84012480000001, 49.27897430000003]], [[-122.84984200000001, 49.28157000000002], [-122.8498412, 49.28152919999996]], [[-122.84984469999999, 49.28167450000003], [-122.84984200000001, 49.28157000000002]], [[-122.850156, 49.27777240000003], [-122.85092510000001, 49.27776340000004]], [[-122.85092510000001, 49.27776340000004], [-122.8514212, 49.27775899999996]], [[-122.8514212, 49.27775899999996], [-122.8642703, 49.277737000000016]], [[-122.8642703, 49.277737000000016], [-122.8642845, 49.278288999999994]], [[-122.8642845, 49.278288999999994], [-122.8643058, 49.27882869999999]], [[-122.8643058, 49.27882869999999], [-122.86543429999999, 49.27945939999994]], [[-122.86543429999999, 49.27945939999994], [-122.8657062, 49.2795546]], [[-122.8657062, 49.2795546], [-122.86581479999998, 49.27957179999998]], [[-122.86581479999998, 49.27957179999998], [-122.86603139999998, 49.279712800000006]], [[-122.86603139999998, 49.279712800000006], [-122.8660906, 49.27975880000004]], [[-122.8660906, 49.27975880000004], [-122.8668008, 49.285903799999964], [-122.8672463, 49.286888399999995], [-122.86864000000001, 49.288773199999966], [-122.87037629999999, 49.29007699999999], [-122.8722873, 49.29073740000002]], [[-122.8722873, 49.29073740000002], [-122.872345, 49.2907925]], [[-122.872345, 49.2907925], [-122.8736587, 49.2914449], [-122.8768536, 49.291582499999976]], [[-122.8768536, 49.291582499999976], [-122.8774966, 49.291389399999964]], [[-122.877557, 49.291373899999996], [-122.8774966, 49.291389399999964]], [[-122.877557, 49.291373899999996], [-122.8776809, 49.29144430000001]], [[-122.8776809, 49.29144430000001], [-122.8808854, 49.291138200000006]], [[-122.8808854, 49.291138200000006], [-122.8811557, 49.29091910000004], [-122.88130010000002, 49.29104229999998], [-122.88324910000001, 49.2905983]], [[-122.88324910000001, 49.2905983], [-122.88336400000001, 49.29059560000001]], [[-122.88336400000001, 49.29059560000001], [-122.88703030000002, 49.2904971]], [[-122.88703030000002, 49.2904971], [-122.8871224, 49.290489999999956]], [[-122.8871224, 49.290489999999956], [-122.88813900000001, 49.290499200000006]], [[-122.88813900000001, 49.290499200000006], [-122.88828539999999, 49.29055069999996]], [[-122.88828539999999, 49.29055069999996], [-122.89043740000001, 49.29101119999998], [-122.8923481, 49.290507999999996], [-122.8936521, 49.29042560000004]], [[-122.88828539999999, 49.29055069999996], [-122.89043740000001, 49.29101119999998], [-122.8923481, 49.290507999999996], [-122.8936521, 49.29042560000004]], [[-122.89438630630649, 49.290019489466715], [-122.8936521, 49.29042560000004]], [[-122.8936521, 49.29042560000004], [-122.89381569999999, 49.29043369999999]], [[-122.89381569999999, 49.29043369999999], [-122.89438630630649, 49.290114656588905]], [[-122.8024156936935, 49.285236052161345], [-122.8058959, 49.285047499999976], [-122.80953880000001, 49.28451549999998]], [[-122.80953880000001, 49.28451549999998], [-122.8098421, 49.284445500000004]], [[-122.8098421, 49.284445500000004], [-122.81021390000001, 49.28436170000003]], [[-122.81021390000001, 49.28436170000003], [-122.8104354, 49.284298400000026]], [[-122.8104354, 49.284298400000026], [-122.8109638, 49.28412080000002]], [[-122.8109638, 49.28412080000002], [-122.8112428, 49.28401509999998]], [[-122.8112428, 49.28401509999998], [-122.81299090000002, 49.2835306], [-122.81473400000002, 49.2834899], [-122.8160309, 49.283731199999984], [-122.8182808, 49.2845568]], [[-122.8182808, 49.2845568], [-122.8185322, 49.28465189999999]], [[-122.8185322, 49.28465189999999], [-122.81862210000001, 49.28468589999996]], [[-122.81862210000001, 49.28468589999996], [-122.8189117, 49.284771899999946]], [[-122.8189117, 49.284771899999946], [-122.82058430000001, 49.28484729999997]], [[-122.82058430000001, 49.28484729999997], [-122.821681, 49.284567300000006]], [[-122.821681, 49.284567300000006], [-122.82306309999998, 49.28370769999997]], [[-122.82306309999998, 49.28370769999997], [-122.8236153, 49.283672300000006]], [[-122.82330339999999, 49.28354190000001], [-122.8236153, 49.283672300000006]], [[-122.8232071, 49.283487999999956], [-122.82330339999999, 49.28354190000001]], [[-122.8232071, 49.283487999999956], [-122.821594, 49.28449390000001]], [[-122.821594, 49.28449390000001], [-122.8208682, 49.28469829999998]], [[-122.8208682, 49.28469829999998], [-122.81870120000002, 49.28449170000001]], [[-122.81870120000002, 49.28449170000001], [-122.81844930000001, 49.28439929999996]], [[-122.81844930000001, 49.28439929999996], [-122.81832050000001, 49.28434570000004]], [[-122.81832050000001, 49.28434570000004], [-122.8180927, 49.28425939999999]], [[-122.8180927, 49.28425939999999], [-122.81534370000001, 49.28336070000002], [-122.8129409, 49.28333419999999]], [[-122.8129409, 49.28333419999999], [-122.8126929, 49.283373800000014]], [[-122.8126929, 49.283373800000014], [-122.81075240000001, 49.28396819999997]], [[-122.81075240000001, 49.28396819999997], [-122.8105623, 49.28403219999996]], [[-122.8105623, 49.28403219999996], [-122.80975510000002, 49.28426380000006]], [[-122.80975510000002, 49.28426380000006], [-122.80944400000001, 49.28433169999998]], [[-122.80944400000001, 49.28433169999998], [-122.80531629999999, 49.28489199999996], [-122.8024156936935, 49.28504256374559]], [[-122.8236153, 49.283672300000006], [-122.82411690000002, 49.28387489999995]], [[-122.82411690000002, 49.28387489999995], [-122.8257386, 49.284382100000016]], [[-122.8271678, 49.28249720000001], [-122.8264927, 49.28258430000003], [-122.8258834, 49.28298999999999], [-122.8257386, 49.284382100000016]]]}, "properties": {"name": "Trans Canada Trail"}}]}});
+    map.addLayer({id:"stoptrails-casing",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#ffffff","line-width":6,"line-opacity":0.9}});
+    map.addLayer({id:"stoptrails-line",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#5f259f","line-width":3}});
+    var mk=new maplibregl.Marker({color:"#1F514C"}).setLngLat([-122.848401, 49.278541]);
+    var pop=new maplibregl.Popup({closeButton:true,closeOnClick:false,focusAfterOpen:false}).setHTML("<b>Twin Sails Brewery<\/b>");
+    mk.setPopup(pop).addTo(map);
+  });
+})();
+</script></div><div class="ls-card"><div class="ls-card-pad"><div class="ls-card-title">Location</div><div class="ls-contact-row"><span class="ico">📍</span><span>2821 Murray Street, Port Moody, BC V3H 1X3</span></div><div class="ls-contact-row"><span class="ico">📞</span><span>604.492.4234</span></div><div class="ls-contact-row"><span class="ico">🌐</span><a href="https://twinsailsbrewing.com/" target="_blank" rel="noopener">https://twinsailsbrewing.com/</a></div><div class="ls-card-title" style="margin-top:14px;color:#5f259f;">Nearby bike routes</div><div class="ls-trail-line"><a href="/trail/trans-canada-trail/" style="">Trans Canada Trail</a> <span class="dist">50 m</span></div></div></div></div><div class="ls-bpnote"><span class="ico">&#128690;</span><span><strong>Bike parking nearby:</strong> 3 public racks with 16 spaces within 100 m. Nearest is 73 m away.<details><summary>Full list &rsaquo;</summary><ul><li>Bike parking (73 m)</li><li>Stands, 8 spaces, uncovered, free (88 m)</li><li>Stands, 8 spaces, uncovered, free (92 m)</li></ul></details></span></div></aside></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">
@@ -167,7 +314,6 @@ body {
       <a href="/">Home</a>
       <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
-      <a href="/routes">Routes</a>
     </div>
     <div class="g-footer-col">
       <a href="/about">About</a>

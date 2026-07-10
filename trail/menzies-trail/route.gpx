@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Menzies Trail</name>
+<link href="https://bccycletourism.ca/trail/menzies-trail/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.323858" lon="-122.466277">
+<name>Woodlands Groupsite</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="49.328587" lon="-122.459291">
+<name>Golden Ears Groupsite</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="49.324458" lon="-122.462304">
+<name>Golden Ears Store</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<trk><name>Menzies Trail</name>
+<trkseg>
+<trkpt lat="49.328768" lon="-122.464210"/>
+<trkpt lat="49.327741" lon="-122.466218"/>
+<trkpt lat="49.325708" lon="-122.467484"/>
+<trkpt lat="49.324033" lon="-122.470234"/>
+<trkpt lat="49.323453" lon="-122.470389"/>
+<trkpt lat="49.323111" lon="-122.470846"/>
+<trkpt lat="49.322390" lon="-122.470459"/>
+<trkpt lat="49.321116" lon="-122.471614"/>
+<trkpt lat="49.320726" lon="-122.472774"/>
+<trkpt lat="49.319919" lon="-122.474058"/>
+<trkpt lat="49.318607" lon="-122.474333"/>
+<trkpt lat="49.317882" lon="-122.473723"/>
+<trkpt lat="49.317681" lon="-122.472819"/>
+<trkpt lat="49.317166" lon="-122.472797"/>
+<trkpt lat="49.315510" lon="-122.474844"/>
+<trkpt lat="49.315216" lon="-122.475376"/>
+<trkpt lat="49.315059" lon="-122.476512"/>
+<trkpt lat="49.314436" lon="-122.477101"/>
+<trkpt lat="49.314468" lon="-122.477220"/>
+<trkpt lat="49.314284" lon="-122.477792"/>
+<trkpt lat="49.313494" lon="-122.478559"/>
+<trkpt lat="49.312770" lon="-122.480774"/>
+<trkpt lat="49.311687" lon="-122.481027"/>
+<trkpt lat="49.310924" lon="-122.482260"/>
+<trkpt lat="49.310761" lon="-122.483442"/>
+<trkpt lat="49.310194" lon="-122.484724"/>
+<trkpt lat="49.310178" lon="-122.484799"/>
+<trkpt lat="49.309299" lon="-122.485812"/>
+<trkpt lat="49.308958" lon="-122.485748"/>
+<trkpt lat="49.308073" lon="-122.487273"/>
+<trkpt lat="49.306153" lon="-122.487978"/>
+<trkpt lat="49.305894" lon="-122.488976"/>
+<trkpt lat="49.304907" lon="-122.489845"/>
+<trkpt lat="49.304153" lon="-122.491621"/>
+<trkpt lat="49.303338" lon="-122.492398"/>
+<trkpt lat="49.302410" lon="-122.492646"/>
+<trkpt lat="49.301687" lon="-122.494538"/>
+<trkpt lat="49.300104" lon="-122.496425"/>
+<trkpt lat="49.299243" lon="-122.496767"/>
+<trkpt lat="49.297626" lon="-122.499127"/>
+<trkpt lat="49.287903" lon="-122.506763"/>
+<trkpt lat="49.285119" lon="-122.510901"/>
+<trkpt lat="49.284583" lon="-122.511190"/>
+<trkpt lat="49.284964" lon="-122.512510"/>
+<trkpt lat="49.284337" lon="-122.513017"/>
+<trkpt lat="49.284050" lon="-122.513831"/>
+<trkpt lat="49.284025" lon="-122.515322"/>
+<trkpt lat="49.283391" lon="-122.515690"/>
+<trkpt lat="49.283189" lon="-122.515214"/>
+<trkpt lat="49.282745" lon="-122.515148"/>
+<trkpt lat="49.277229" lon="-122.517552"/>
+<trkpt lat="49.276438" lon="-122.517148"/>
+<trkpt lat="49.276187" lon="-122.516702"/>
+</trkseg>
+</trk>
+</gpx>

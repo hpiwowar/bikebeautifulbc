@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Colebrook Road</name>
+<link href="https://bccycletourism.ca/trail/colebrook-road/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.093315" lon="-122.818887">
+<name>Surrey Farms</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.096215" lon="-122.800020">
+<name>Surrey Farms</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<trk><name>Colebrook Road</name>
+<trkseg>
+<trkpt lat="49.093816" lon="-122.884737"/>
+<trkpt lat="49.094379" lon="-122.874815"/>
+<trkpt lat="49.094147" lon="-122.874647"/>
+<trkpt lat="49.094439" lon="-122.869621"/>
+<trkpt lat="49.095138" lon="-122.858817"/>
+<trkpt lat="49.095509" lon="-122.852527"/>
+<trkpt lat="49.095833" lon="-122.850831"/>
+<trkpt lat="49.095689" lon="-122.849401"/>
+<trkpt lat="49.096319" lon="-122.843192"/>
+<trkpt lat="49.097679" lon="-122.820621"/>
+<trkpt lat="49.097897" lon="-122.819103"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.097897" lon="-122.819103"/>
+<trkpt lat="49.097963" lon="-122.817954"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.097280" lon="-122.817658"/>
+<trkpt lat="49.093970" lon="-122.817259"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.093628" lon="-122.818260"/>
+<trkpt lat="49.093780" lon="-122.818413"/>
+<trkpt lat="49.097217" lon="-122.819015"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.097217" lon="-122.819015"/>
+<trkpt lat="49.097897" lon="-122.819103"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.097217" lon="-122.819015"/>
+<trkpt lat="49.098307" lon="-122.800785"/>
+</trkseg>
+</trk>
+</gpx>

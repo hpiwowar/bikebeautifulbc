@@ -20,7 +20,7 @@
 <meta property="og:description" content="5 places to stay, eat, resupply, and find bike services in Fife, Thompson Okanagan, for touring cyclists.">
 <meta name="twitter:description" content="5 places to stay, eat, resupply, and find bike services in Fife, Thompson Okanagan, for touring cyclists.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":[]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"We Welcome Cyclists","item":"https://bccycletourism.ca/we-welcome-cyclists/"},{"@type":"ListItem","position":2,"name":"Communities","item":"https://bccycletourism.ca/wwc/communities/"},{"@type":"ListItem","position":3,"name":"Fife","item":"https://bccycletourism.ca/wwc/community/fife/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"We Welcome Cyclists","item":"https://bccycletourism.ca/wwc/"},{"@type":"ListItem","position":2,"name":"Communities","item":"https://bccycletourism.ca/wwc/communities/"},{"@type":"ListItem","position":3,"name":"Fife","item":"https://bccycletourism.ca/wwc/community/fife/"}]}</script>
 <style>
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
@@ -51,6 +51,11 @@ body {
 .g-main a { color: #1E7D96; }
 .g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: 1200px; margin: 0 auto; padding: 64px 40px 72px; display: flex; align-items: flex-start; justify-content: space-between; }
 .g-footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .g-footer-brand img { width: 48px; height: 48px; }
@@ -106,8 +111,6 @@ body {
 <div class="g-main">
 <style>
 .guide-wrap { max-width: 920px; margin: 0 auto; }
-.guide-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
-.guide-crumb a { color: #1E7D96; text-decoration: none; }
 .guide-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: -0.03em; color: #1F514C; margin-bottom: 8px; }
 .guide-sub { font-size: 16px; color: #4b5563; line-height: 1.55; margin-bottom: 22px; max-width: 720px; }
 .guide-scale { font-size: 15px; font-weight: 600; color: #1E7D96; margin-bottom: 22px; }
@@ -120,7 +123,7 @@ body {
 .guide-rows { display: flex; flex-direction: column; }
 .guide-row { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; border-top: 0.5px solid #EEE; font-size: 14px; flex-wrap: wrap; }
 .guide-tier { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 10px; white-space: nowrap; }
-.guide-tier-accredited { background: #DCFCE7; color: #166534; }
+.guide-tier-accredited { background: #DCEEF3; color: #1E7D96; }
 .guide-tier-welcoming { background: #E1F5EE; color: #0F6E56; }
 .guide-tier-info { background: #F3F4F6; color: #6B7280; }
 .guide-tier-unwelcome { background: #FEF2F2; color: #DC2626; }
@@ -137,6 +140,9 @@ body {
 .guide-getting { background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: 10px; padding: 14px 18px; margin: 18px 0; font-size: 14px; color: #2D2D2D; }
 .guide-getting a { color: #1E7D96; font-weight: 600; }
 .guide-wrap a.guide-cta { display: inline-block; margin: 8px 0 24px; padding: 11px 22px; background: #1E7D96; color: #fff; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; }
+.guide-dl { margin: 12px 0 24px; }
+.guide-dl-btn { display: inline-block; padding: 9px 18px; border: 1.5px solid #1E7D96; color: #1E7D96; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; }
+.guide-dl-btn:hover { background: #1E7D96; color: #fff; }
 .guide-region-blk { margin-bottom: 22px; }
 .guide-region-blk h2 { font-size: 16px; border-bottom: 1px solid #EEE; padding-bottom: 6px; }
 .guide-comm-list { columns: 210px auto; column-gap: 28px; }
@@ -155,7 +161,47 @@ body {
 .guide-chip-am { font-size: 12px; padding: 3px 11px; border-radius: 12px; background: #E8F3EE; color: #0F6E56; white-space: nowrap; }
 .guide-chip-more { font-size: 12px; color: #9CA3AF; padding: 3px 2px; }
 .guide-card-empty { font-size: 13px; color: #9CA3AF; font-style: italic; }
-</style><div class="guide-wrap"><div class="guide-crumb"><a href="/we-welcome-cyclists/">We Welcome Cyclists</a> / <a href="/wwc/communities/">Communities guide</a> / Fife</div><h1 class="guide-h1">Cycling stops in Fife</h1><p class="guide-scale">5 cycling stops in Fife, Thompson Okanagan.</p><div class="guide-chips"><a class="guide-chip" href="/wwc/guide/accommodation/">Accommodation <b>2</b></a><a class="guide-chip" href="/wwc/guide/food-drink/">Food &amp; Drink <b>2</b></a><a class="guide-chip" href="/wwc/guide/supplies/">Supplies <b>1</b></a></div><p style="margin:0 0 18px;"><a class="guide-morelink" href="/wwc/#view=all&community=fife">Browse all 5 Fife stops in the interactive directory →</a></p><div class="guide-getting"><strong>Getting there with a bike:</strong> province-wide buses, ferries, and shuttles are listed under <a href="/wwc/guide/transport/">Transport</a> (some serving Fife may be listed there rather than here).</div><div class="guide-catgrp"><h3>Accommodation (2)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/0d98ce45ad/">New Horizon Motel</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Hotel / Motel · $$ · Budget</span></div><div class="guide-row"><a href="/wwc/stop/034656aa67/">Parklane Resort &amp; Motel</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Hotel / Motel · $$ · Budget</span></div></div></div><div class="guide-catgrp"><h3>Food &amp; Drink (2)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/b38a668261/">Kool Treat</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Ice Cream · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/15898d800f/">Smoochies Brewing Co</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Café / Coffee · $ · Cheap eats</span></div></div></div><div class="guide-catgrp"><h3>Supplies (1)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/e5837f16e8/">Wild Ways Adventure Sports</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Outdoor Gear</span></div></div></div><a class="guide-cta" href="/wwc/#view=all&community=fife">Browse all listings interactively →</a></div><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Cycling stops in Fife", "url": "https://bccycletourism.ca/wwc/community/fife/", "isPartOf": {"@type": "WebSite", "name": "We Welcome Cyclists", "url": "https://bccycletourism.ca/we-welcome-cyclists/"}}</script>
+</style><div class="guide-wrap"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/wwc/">We Welcome Cyclists</a><span class="g-crumb-sep">/</span><a href="/wwc/communities/">Communities</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Fife</span></nav><h1 class="guide-h1">Cycling stops in Fife</h1><p class="guide-scale">5 cycling stops in Fife, Thompson Okanagan.</p><div class="guide-chips"><a class="guide-chip" href="/wwc/guide/accommodation/">Accommodation <b>2</b></a><a class="guide-chip" href="/wwc/guide/food-drink/">Food &amp; Drink <b>2</b></a><a class="guide-chip" href="/wwc/guide/supplies/">Supplies <b>1</b></a></div><p style="margin:0 0 18px;"><a class="guide-morelink" href="/wwc/#view=all&community=fife">Browse all 5 Fife stops in the interactive directory →</a></p><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div class="guide-section wwc-map-wrap"><h2>Map</h2><div id="commmap" class="wwc-map"></div><div class="wwc-map-ctrls"><label><input type="checkbox" id="commmap-mute" checked> Mute other bike routes</label><div class="wwc-map-legend"><span class="row"><span class="d" style="background:#e8590c"></span>Food &amp; Drink</span><span class="row"><span class="d" style="background:#2b8a3e"></span>Supplies</span><span class="row"><span class="d" style="background:#c2255c"></span>Accommodation</span></div></div></div><script src="/map/lib/maplibre-gl.js"></script>
+<script src="/map/lib/pmtiles.js"></script>
+<script>
+(function(){
+  var protocol=new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile);
+  var map=new maplibregl.Map(Object.assign(
+    {container:"commmap", style:location.origin+"/map/style/style.json", attributionControl:false},
+    {"bounds": [-118.2157865, 49.0533699, -118.211688, 49.060433], "fitBoundsOptions": {"padding": 40}}));
+  map.addControl(new maplibregl.NavigationControl(), "top-right");
+  var _attrib=new maplibregl.AttributionControl({compact:true,
+    customAttribution:'\u00a9 <a href="https://www.openmaptiles.org/">OpenMapTiles</a> \u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  map.addControl(_attrib);
+  // Compact mode initializes expanded; collapse it to the small "i" so the map
+  // opens clean. Clicking the button still expands the credit.
+  if(_attrib._container){_attrib._container.classList.remove("maplibregl-compact-show");}
+  map.on("load", function(){
+    var STOPS={"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.2141021, 49.0550882]}, "properties": {"name": "Wild Ways Adventure Sports", "category": "Supplies", "color": "#2b8a3e", "tier": "info"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.213803, 49.0572869]}, "properties": {"name": "Kool Treat", "category": "Food & Drink", "color": "#e8590c", "tier": "info"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.2137114, 49.060433]}, "properties": {"name": "New Horizon Motel", "category": "Accommodation", "color": "#c2255c", "tier": "info"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.2157865, 49.0581228]}, "properties": {"name": "Parklane Resort & Motel", "category": "Accommodation", "color": "#c2255c", "tier": "info"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.211688, 49.0533699]}, "properties": {"name": "Smoochies Brewing Co", "category": "Food & Drink", "color": "#e8590c", "tier": "info"}}]};
+    map.addSource("stops",{type:"geojson",data:STOPS});
+    map.addLayer({id:"stops-circ",type:"circle",source:"stops",
+      paint:{"circle-radius":["interpolate",["linear"],["zoom"],9,4,14,7],
+        "circle-color":["get","color"],"circle-stroke-color":"#ffffff","circle-stroke-width":1.5}});
+    var popup=new maplibregl.Popup({closeButton:false});
+    var TIER={welcoming:"Welcoming",accredited:"Accredited"};
+    map.on("mouseenter","stops-circ",function(e){
+      map.getCanvas().style.cursor="pointer";
+      var p=e.features[0].properties;
+      var tag=TIER[p.tier]?'<br><span class="wwc-map-tag '+p.tier+'">'+TIER[p.tier]+'</span>':'';
+      popup.setLngLat(e.features[0].geometry.coordinates)
+        .setHTML('<b>'+p.name+'</b><br><span class="wwc-map-pop-cat">'+p.category+'</span>'+tag).addTo(map);
+    });
+    map.on("mouseleave","stops-circ",function(){map.getCanvas().style.cursor="";popup.remove();});
+    var muteIds=map.getStyle().layers.map(function(l){return l.id;})
+      .filter(function(id){return id.indexOf("bcc-")===0||id==="cycleway-highlight";});
+    var mc=document.getElementById("commmap-mute");
+    var applyMute=function(){muteIds.forEach(function(id){if(map.getLayer(id))
+      map.setLayoutProperty(id,"visibility",mc.checked?"none":"visible");});};
+    mc.addEventListener("change",applyMute); applyMute();
+  });
+})();
+</script><div class="guide-section"><h2>Cycle trails through Fife</h2><div class="guide-chips"><a class="guide-chip" href="/trail/columbia-western-rail-trail/">Columbia &amp; Western Rail Trail</a></div></div><div class="guide-getting"><strong>Getting there with a bike:</strong> province-wide buses, ferries, and shuttles are listed under <a href="/wwc/guide/transport/">Transport</a> (some serving Fife may be listed there rather than here).</div><div class="guide-catgrp"><h3>Accommodation (2)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/0d98ce45ad/">New Horizon Motel</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Hotel / Motel · $$ · Budget</span></div><div class="guide-row"><a href="/wwc/stop/034656aa67/">Parklane Resort &amp; Motel</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Hotel / Motel · $$ · Budget</span></div></div></div><div class="guide-catgrp"><h3>Food &amp; Drink (2)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/b38a668261/">Kool Treat</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Ice Cream · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/15898d800f/">Smoochies Brewing Co</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Café / Coffee · $ · Cheap eats</span></div></div></div><div class="guide-catgrp"><h3>Supplies (1)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/e5837f16e8/">Wild Ways Adventure Sports</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Outdoor Gear</span></div></div></div><a class="guide-cta" href="/wwc/#view=all&community=fife">Browse all listings interactively →</a></div><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Cycling stops in Fife", "url": "https://bccycletourism.ca/wwc/community/fife/", "isPartOf": {"@type": "WebSite", "name": "We Welcome Cyclists", "url": "https://bccycletourism.ca/we-welcome-cyclists/"}}</script>
 </div>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">
@@ -167,7 +213,6 @@ body {
       <a href="/">Home</a>
       <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
-      <a href="/routes">Routes</a>
     </div>
     <div class="g-footer-col">
       <a href="/about">About</a>

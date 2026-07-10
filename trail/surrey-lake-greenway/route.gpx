@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Surrey Lake Greenway</name>
+<link href="https://bccycletourism.ca/trail/surrey-lake-greenway/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.148100" lon="-122.781515">
+<name>Fleetwood Gardens</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<trk><name>Surrey Lake Greenway</name>
+<trkseg>
+<trkpt lat="49.133764" lon="-122.800921"/>
+<trkpt lat="49.144668" lon="-122.800964"/>
+<trkpt lat="49.144869" lon="-122.800967"/>
+<trkpt lat="49.145136" lon="-122.800960"/>
+<trkpt lat="49.145286" lon="-122.800954"/>
+<trkpt lat="49.145315" lon="-122.800636"/>
+<trkpt lat="49.145992" lon="-122.800848"/>
+<trkpt lat="49.148023" lon="-122.801042"/>
+<trkpt lat="49.150076" lon="-122.801100"/>
+<trkpt lat="49.150166" lon="-122.801099"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.146079" lon="-122.790058"/>
+<trkpt lat="49.146316" lon="-122.783412"/>
+<trkpt lat="49.146317" lon="-122.783225"/>
+<trkpt lat="49.146287" lon="-122.778954"/>
+<trkpt lat="49.146287" lon="-122.778909"/>
+<trkpt lat="49.146288" lon="-122.778818"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.146047" lon="-122.787929"/>
+<trkpt lat="49.145516" lon="-122.787961"/>
+<trkpt lat="49.145473" lon="-122.787968"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.139896" lon="-122.790087"/>
+<trkpt lat="49.139311" lon="-122.790248"/>
+<trkpt lat="49.138998" lon="-122.792951"/>
+<trkpt lat="49.137997" lon="-122.795802"/>
+<trkpt lat="49.139254" lon="-122.797118"/>
+<trkpt lat="49.139451" lon="-122.797941"/>
+<trkpt lat="49.139378" lon="-122.799635"/>
+<trkpt lat="49.139443" lon="-122.799970"/>
+<trkpt lat="49.139444" lon="-122.800422"/>
+<trkpt lat="49.139458" lon="-122.800983"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.137997" lon="-122.795802"/>
+<trkpt lat="49.137569" lon="-122.795680"/>
+<trkpt lat="49.137461" lon="-122.794755"/>
+<trkpt lat="49.136332" lon="-122.793674"/>
+<trkpt lat="49.135897" lon="-122.792797"/>
+<trkpt lat="49.135813" lon="-122.791078"/>
+<trkpt lat="49.136611" lon="-122.790215"/>
+<trkpt lat="49.137144" lon="-122.790453"/>
+<trkpt lat="49.137778" lon="-122.790149"/>
+<trkpt lat="49.139311" lon="-122.790248"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.149899" lon="-122.814054"/>
+<trkpt lat="49.149507" lon="-122.813990"/>
+<trkpt lat="49.149327" lon="-122.814274"/>
+<trkpt lat="49.149224" lon="-122.815724"/>
+<trkpt lat="49.148727" lon="-122.816980"/>
+<trkpt lat="49.148926" lon="-122.817655"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.149158" lon="-122.817665"/>
+<trkpt lat="49.147754" lon="-122.817844"/>
+</trkseg>
+</trk>
+</gpx>

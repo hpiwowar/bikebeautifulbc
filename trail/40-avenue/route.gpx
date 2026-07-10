@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>40 Avenue</name>
+<link href="https://bccycletourism.ca/trail/40-avenue/"><text>We Welcome Cyclists</text></link>
+</metadata>
+<wpt lat="49.076538" lon="-122.820249">
+<name>Peace Arch RV Park</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="49.077045" lon="-122.822763">
+<name>BCB Honey Farm</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.081537" lon="-122.821186">
+<name>Hungry Otters</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>40 Avenue</name>
+<trkseg>
+<trkpt lat="49.077938" lon="-122.821831"/>
+<trkpt lat="49.077639" lon="-122.820949"/>
+<trkpt lat="49.075081" lon="-122.820030"/>
+<trkpt lat="49.074711" lon="-122.819451"/>
+<trkpt lat="49.074642" lon="-122.801266"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.074635" lon="-122.801069"/>
+<trkpt lat="49.074643" lon="-122.793422"/>
+<trkpt lat="49.074643" lon="-122.792736"/>
+<trkpt lat="49.074936" lon="-122.756805"/>
+<trkpt lat="49.074585" lon="-122.735693"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.074582" lon="-122.735512"/>
+<trkpt lat="49.074594" lon="-122.713513"/>
+<trkpt lat="49.074762" lon="-122.691682"/>
+</trkseg>
+</trk>
+</gpx>

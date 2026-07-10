@@ -20,7 +20,8 @@
 <meta property="og:description" content="McArthur Island Sport and Event Centre is a City of Kamloops municipal facility situated on McArthur Island in the Thompson River, primarily serving…">
 <meta name="twitter:description" content="McArthur Island Sport and Event Centre is a City of Kamloops municipal facility situated on McArthur Island in the Thompson River, primarily serving…">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":[]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TouristAttraction", "name": "McArthur Island Sport and Event Centre", "description": "McArthur Island Sport and Event Centre is a City of Kamloops municipal facility situated on McArthur Island in the Thompson River, primarily serving lacrosse and multi-sport events. The island setting is accessible via a short bridge and sits within a larger park complex that is popular with walkers and cyclists riding the river trail network. As a public facility it may offer services useful to touring cyclists passing through Kamloops, though specific amenities are unconfirmed.", "address": "1665 Island Parkway, Kamloops", "url": "https://www.kamloops.ca/recreation-culture/facilities/mcarthur-island-sport-event-centre", "priceRange": "$"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"We Welcome Cyclists","item":"https://bccycletourism.ca/wwc/"},{"@type":"ListItem","position":2,"name":"McArthur Island Sport and Event Centre","item":"https://bccycletourism.ca/wwc/stop/9a46de0134/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TouristAttraction", "name": "McArthur Island Sport and Event Centre", "description": "McArthur Island Sport and Event Centre is a City of Kamloops municipal facility situated on McArthur Island in the Thompson River, primarily serving lacrosse and multi-sport events. The island setting is accessible via a short bridge and sits within a larger park complex that is popular with walkers and cyclists riding the river trail network. As a public facility it may offer services useful to touring cyclists passing through Kamloops, though specific amenities are unconfirmed.", "address": "1665 Island Parkway, Kamloops", "url": "https://www.kamloops.ca/recreation-culture/facilities/mcarthur-island-sport-event-centre", "priceRange": "$", "additionalProperty": [{"@type": "PropertyValue", "name": "Time to allow", "value": "Half a day"}, {"@type": "PropertyValue", "name": "Planning", "value": "Check ahead before you go"}, {"@type": "PropertyValue", "name": "Kid-friendly", "value": true}]}</script>
 <style>
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -55,6 +56,11 @@ body {
 .g-main a { color: #1E7D96; }
 .g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: 1200px; margin: 0 auto; padding: 64px 40px 72px; display: flex; align-items: flex-start; justify-content: space-between; }
 .g-footer-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .g-footer-brand img { width: 48px; height: 48px; }
@@ -83,12 +89,40 @@ body {
 }
 
 .listing-main { max-width: 800px; margin: 0 auto; padding: 28px 24px 64px; }
-.listing-breadcrumb { font-size: 13px; color: #9CA3AF; margin-bottom: 24px; }
-.listing-breadcrumb a { color: #1E7D96; text-decoration: none; }
+.listing-main.ls-two-col { max-width: 1160px; }
+.ls-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+.ls-col-right { position: sticky; top: 20px; }
+.ls-col-right .ls-band { margin: 0; grid-template-columns: 1fr; gap: 0; }
+.ls-col-right .ls-card { border-radius: 0; }
+.ls-col-right .ls-card:first-child { border-radius: 12px 12px 0 0; border-bottom: none; }
+.ls-col-right .ls-card:last-child { border-radius: 0 0 12px 12px; border-top: none; }
+.ls-col-right .ls-bpnote { margin: 14px 0 0; }
+@media (max-width: 860px) { .ls-layout { grid-template-columns: 1fr; } .ls-col-right { position: static; } }
 .listing-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: -0.03em; color: #1F514C; margin-bottom: 8px; }
-.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.badge-accredited { display: inline-flex; align-items: center; gap: 4px; background: #1E7D96; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-accredited .seal { color: #F0C948; }
+.badge-welcoming { display: inline-flex; align-items: center; background: #FEF3C7; color: #92400E; border: 1px solid #F5D98B; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-info { display: inline-flex; align-items: center; background: #F3F4F6; color: #6B7280; border: 1px solid #E5E7EB; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-unwelcome { display: inline-flex; align-items: center; background: #DC2626; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.ls-meta-sep { width: 1px; height: 14px; background: #E5E7EB; }
+.ls-meta-type { font-weight: 600; color: #6B7280; }
+.ls-meta-city { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-meta-city:hover { text-decoration: underline; }
+.ls-meta-price { display: inline-flex; align-items: center; background: #FFF6E5; border: 1px solid #F0E6C5; border-radius: 999px; padding: 3px 11px; font-weight: 700; color: #2D2D2D; letter-spacing: 0.4px; font-size: 12.5px; }
 .listing-desc { font-size: 15px; line-height: 1.65; color: #2D2D2D; margin-bottom: 24px; }
-.listing-section { margin-bottom: 20px; border-top: 1px solid #E5E7EB; padding-top: 16px; }
+.listing-web-top { font-size: 14px; margin: -12px 0 24px; display: flex; gap: 8px; align-items: baseline; }
+.listing-web-top .ico { flex-shrink: 0; }
+.listing-web-top a { color: #1E7D96; text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
+.listing-web-top a:hover { text-decoration: underline; }
+.listing-bike-info { margin-top: -16px; }
+.listing-bike-info a { font-weight: 600; }
+.listing-pull { border-left: 4px solid #C9A83E; padding: 6px 0 6px 20px; margin: 26px 0 30px; }
+.listing-pull .q { font-family: "Archivo", sans-serif; font-size: 21px; font-weight: 400; letter-spacing: -0.01em; color: #1F514C; line-height: 1.45; }
+.listing-pull .who { font-size: 13px; color: #9CA3AF; margin-top: 6px; }
+.listing-pull .who a { color: #9CA3AF; text-decoration: none; }
+.listing-pull .who a:hover { color: #1E7D96; text-decoration: underline; }
+.listing-section { margin-bottom: 28px; }
 .listing-section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 10px; }
 .listing-detail-row { font-size: 14px; color: #2D2D2D; margin-bottom: 6px; }
 .listing-detail-row a { color: #1E7D96; }
@@ -107,15 +141,96 @@ body {
 .listing-indig-attr a { color: #1E7D96; text-decoration: none; }
 .listing-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
 .listing-verify a { color: #1E7D96; }
+.listing-section-sub { font-size: 13px; color: #6B7280; margin: -4px 0 12px; line-height: 1.5; }
+.listing-owner-cta { margin-top: 14px; background: #F5FAFB; border: 1px solid #BFDDE7; border-radius: 8px; padding: 12px 16px; font-size: 13.5px; color: #14586B; line-height: 1.6; }
+.listing-owner-cta strong { color: #14586B; }
+.listing-owner-cta a { color: #1E7D96; font-weight: 600; }
+.ls-notable-hero { border-top: 3px solid #1F514C; border-bottom: 3px solid #1F514C; padding: 24px 2px 26px; margin: 18px 0 30px; }
+.ls-notable-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1E7D96; margin-bottom: 8px; }
+.ls-notable-eyebrow .star { color: #1F514C; }
+.ls-notable-line { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; color: #1F514C; line-height: 1.4; }
+@media (max-width: 700px) { .ls-notable-line { font-size: 20px; } }
+.ls-ribbon { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.ls-rib { display: inline-flex; align-items: center; gap: 7px; background: #EDF6F8; border: 1px solid #BEDDE6; border-radius: 10px; padding: 8px 13px; font-size: 13px; font-weight: 600; color: #1E7D96; }
+.ls-sec-title { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; margin-bottom: 4px; }
+.ls-vrow { padding: 10px 0; border-bottom: 1px dashed #EDE9DA; font-size: 14px; }
+.ls-vrow:last-of-type { border-bottom: none; }
+.ls-vrow-main { display: flex; gap: 12px; align-items: baseline; }
+.ls-vrow .tick { color: #2E8A36; font-weight: 700; flex-shrink: 0; width: 16px; }
+.ls-vrow .k { font-weight: 700; color: #1F514C; }
+.ls-vrow .d { display: block; color: #57534E; line-height: 1.55; margin: 4px 0 0 28px; font-size: 13.5px; }
+.ls-pills-label { font-size: 12px; color: #9CA3AF; margin-top: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; }
+.ls-bpnote { display: flex; gap: 12px; background: #EAF3EC; border-radius: 10px; padding: 13px 16px; margin-top: 14px; font-size: 14px; color: #1C5240; line-height: 1.55; }
+.ls-bpnote .ico { font-size: 18px; line-height: 1.3; flex-shrink: 0; }
+.ls-bpnote details { margin-top: 6px; }
+.ls-bpnote summary { cursor: pointer; color: #1C5240; font-weight: 600; }
+.ls-bpnote ul { list-style: none; margin: 8px 0 0; padding: 0; }
+.ls-bpnote li { font-size: 13px; padding: 2px 0; color: #1C5240; }
 .listing-routes { display: flex; flex-wrap: wrap; gap: 8px; }
 .listing-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
 .listing-route-tag:hover { background: #DBEAFE; }
+.listing-trail-list { list-style: none; padding: 0; margin: 0; }
+.listing-trail-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-trail-name { color: #047857; text-decoration: none; }
+a.listing-trail-name:hover { text-decoration: underline; }
+.listing-trail-item.dest .listing-trail-name { font-weight: 700; }
+.listing-trail-dist { color: #9CA3AF; font-size: 13px; }
+.listing-near-group { margin-bottom: 14px; }
+.listing-near-grouptitle { font-size: 11px; font-weight: 700; color: #78716C; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.listing-near-list { list-style: none; padding: 0; margin: 0; }
+.listing-near-item { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-near-name { color: #1E7D96; text-decoration: none; }
+.listing-near-name:hover { text-decoration: underline; }
+.listing-near-subcat { color: #9CA3AF; font-size: 13px; }
+.listing-near-badge { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 20px; }
+.listing-near-dist { color: #9CA3AF; font-size: 13px; }
+.listing-bp-list { list-style: none; padding: 0; margin: 0; }
+.listing-bp-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
+.listing-bp-dist { color: #9CA3AF; font-size: 13px; }
+/* Map + "Find them" band (Mockup C reflow Step 7) */
+.ls-band { display: grid; grid-template-columns: 1fr 300px; gap: 14px; margin: 24px 0 30px; align-items: start; }
+.ls-band.ls-band-solo { grid-template-columns: 1fr; }
+.ls-card { background: #fff; border: 1px solid #E7E2D0; border-radius: 12px; overflow: hidden; }
+/* Map keeps the shared .wwc-map fixed height (no flex/resize hacks — same as every
+   other embedded map); only strip its own border/radius since the card supplies them. */
+.ls-card-map .wwc-map { max-width: none; border: 0; border-radius: 0; }
+.ls-card-map .wwc-map-ctrls { margin: 0; padding: 10px 14px; }
+.ls-card-pad { padding: 14px 16px; }
+.ls-card-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1E7D96; margin-bottom: 9px; }
+.ls-contact-row { font-size: 13.5px; color: #2D2D2D; margin-bottom: 7px; display: flex; gap: 8px; }
+.ls-contact-row .ico { width: 18px; flex-shrink: 0; text-align: center; }
+.ls-contact-row span { min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a { color: #1E7D96; text-decoration: none; min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a:hover { text-decoration: underline; }
+.ls-route-tag { display: inline-flex; align-items: center; gap: 6px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; font-weight: 600; margin: 0 4px 4px 0; }
+.ls-route-tag:hover { background: #DBEAFE; }
+.ls-trail-line { font-size: 13px; padding: 2px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ls-trail-line a { color: #141414; text-decoration: none; font-weight: 400; }
+.ls-trail-line a:hover { text-decoration: underline; }
+.ls-trail-line .dist { color: #9CA3AF; font-size: 12px; flex-shrink: 0; }
+/* "Around you, by need" grid (Mockup C reflow Step 6) */
+.ls-needs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.ls-need { background: #FCFBF6; border: 1px solid #E7E2D0; border-radius: 12px; padding: 14px 16px; }
+.ls-need-title { font-size: 13px; font-weight: 700; color: #1F514C; margin-bottom: 9px; }
+.ls-need ul { list-style: none; padding: 0; margin: 0; }
+.ls-need li { display: flex; align-items: baseline; gap: 8px; font-size: 13.5px; padding: 3px 0; }
+.ls-need .nm { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-need .nm:hover { text-decoration: underline; }
+.ls-need .dist { color: #9CA3AF; font-size: 12px; margin-left: auto; white-space: nowrap; }
+.ls-need .wbadge { font-size: 10px; font-weight: 700; background: #EAF3EC; color: #1C5240; border-radius: 20px; padding: 1px 6px; }
+.ls-need .wbadge.no { background: #FDECEC; color: #B91C1C; }
+@media (max-width: 700px) { .ls-band { grid-template-columns: 1fr; } .ls-needs { grid-template-columns: 1fr; } }
 .listing-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
 .listing-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
 .listing-attribution a { color: #9CA3AF; }
 .listing-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
 .listing-suggest a { color: #1E7D96; }
+.listing-json { text-align: right; margin-top: 14px; }
+.listing-json a { font-size: 11px; color: #C9CDD3; text-decoration: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .03em; }
+.listing-json a:hover { color: #9CA3AF; text-decoration: underline; }
 .listing-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
+.badge-notable { display: inline-flex; align-items: center; background: #1F514C; color: #fff; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; letter-spacing: 0.2px; }
+.listing-notable { font-size: 14.5px; color: #1F514C; font-style: italic; margin: -8px 0 18px; line-height: 1.5; }
 
 </style>
 </head>
@@ -142,20 +257,52 @@ body {
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
 </script>
-<main class="listing-main">
-<nav class="listing-breadcrumb"><a href="/wwc/" id="listing-back" onclick="history.back();return false;">← <span id="listing-back-label">All listings</span></a> / Attractions</nav>
-<script>(function(){try{var f=JSON.parse(sessionStorage.getItem('_wwc_from')||'null');if(f&&f.label){document.getElementById('listing-back-label').textContent=f.label;}}catch(e){}})();</script>
+<main class="listing-main ls-two-col">
+<div class="ls-layout"><div class="ls-col-left"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/wwc/">We Welcome Cyclists</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">McArthur Island Sport and Event Centre</span></nav>
 <h1 class="listing-h1">McArthur Island Sport and Event Centre</h1>
-<div class="listing-meta"><span class="badge badge-info">Info</span>  ·  <span style="font-weight:600;">🏛️ Public</span>  ·  Community Centre  ·  Kamloops  ·  $</div>
-<p class="listing-desc">McArthur Island Sport and Event Centre is a City of Kamloops municipal facility situated on McArthur Island in the Thompson River, primarily serving lacrosse and multi-sport events. The island setting is accessible via a short bridge and sits within a larger park complex that is popular with walkers and cyclists riding the river trail network. As a public facility it may offer services useful to touring cyclists passing through Kamloops, though specific amenities are unconfirmed.</p>
-<div class="listing-verify">Amenities assumed from location and public data. <a href="/suggest#edit=McArthur Island Sport and Event Centre">Confirm or update this listing →</a></div>
-<div class="listing-section"><div class="listing-section-title">Contact</div><div class="listing-detail-row"><strong>Address:</strong> 1665 Island Parkway, Kamloops</div><div class="listing-detail-row"><strong>Website:</strong> <a href="https://www.kamloops.ca/recreation-culture/facilities/mcarthur-island-sport-event-centre" target="_blank" rel="noopener">https://www.kamloops.ca/recreation-culture/facilities/mcarthur-island-sport-event-centre</a></div></div>
+<div class="listing-meta"><span class="badge badge-info">Info</span><span class="ls-meta-sep"></span><span class="ls-meta-type">🏛️ Public &middot; Community Centre</span><a href="/wwc/community/kamloops/" class="ls-meta-city">&#128205; Kamloops</a><span class="ls-meta-price">$</span></div>
 
-<div class="listing-section"><div class="listing-section-title">Required Criteria</div><div class="req-row req-null"><span class="req-sym">?</span><span>Bike parking</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Water bottle refill</span></div><div class="req-row req-yes"><span class="req-sym">✓</span><span>Washrooms</span></div></div>
-<div class="listing-section"><div class="listing-section-title">Amenities</div><div class="listing-pills"><span class="listing-pill-no">Showers (drop-in or fee)</span><span class="listing-pill-no">Café or food on site</span><span class="listing-pill-no">Water without admission</span><span class="listing-pill-no">Luggage / bag storage</span><span class="listing-pill-no">Vending machines</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-no">Public rack nearby</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">Wi-Fi</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span><span class="listing-pill-no">Discount for arriving by bike</span></div></div>
-<div class="listing-section"><div class="listing-section-title">Routes nearby</div><div class="listing-routes"><a class="listing-route-tag" href="/route/lac-du-bois-tranquility/">🚴 Lac Du Bois Tranquility</a></div></div>
-<div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: AI sources with manual review</div></div>
+<div class="ls-ribbon"><span class="ls-rib">Water bottle refill</span><span class="ls-rib">Washrooms</span></div>
+<p class="listing-desc">McArthur Island Sport and Event Centre is a City of Kamloops municipal facility situated on McArthur Island in the Thompson River, primarily serving lacrosse and multi-sport events. The island setting is accessible via a short bridge and sits within a larger park complex that is popular with walkers and cyclists riding the river trail network. As a public facility it may offer services useful to touring cyclists passing through Kamloops, though specific amenities are unconfirmed.</p>
+<p class="listing-web-top"><span class="ico">🌐</span><a href="https://www.kamloops.ca/recreation-culture/facilities/mcarthur-island-sport-event-centre" target="_blank" rel="noopener">Main website &rsaquo;</a></p>
+
+
+<div class="listing-section"><div class="ls-sec-title">What's here for you</div><div class="listing-section-sub">Gathered from publicly available data and OpenStreetMap. Not confirmed by the owner yet.</div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Water bottle refill</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Washrooms</span></div></div><div class="ls-pills-label">Not confirmed yet</div><div class="listing-pills"><span class="listing-pill-no">Bike parking</span><span class="listing-pill-no">Showers (drop-in or fee)</span><span class="listing-pill-no">Café or food on site</span><span class="listing-pill-no">Water without admission</span><span class="listing-pill-no">Luggage / bag storage</span><span class="listing-pill-no">Vending machines</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-no">Public rack nearby</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">Wi-Fi</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span><span class="listing-pill-no">Discount for arriving by bike</span></div><div class="listing-owner-cta"><strong>Run this place?</strong> <a href="/apply">Confirm your details</a> and we'll mark them verified. Spotted an error? <a href="/suggest#edit=McArthur Island Sport and Event Centre">Suggest an edit</a>.</div></div>
+<div class="listing-section"><div class="listing-section-title">Good to know</div><div class="listing-detail-row">Kid-friendly</div><div class="listing-detail-row"><strong>Time to allow:</strong> Half a day</div><div class="listing-detail-row"><strong>Planning:</strong> Check ahead before you go</div></div>
+
+<div class="listing-section"><div class="ls-sec-title">Around here</div><div class="listing-section-sub">The closest options for the things touring cyclists actually look for.</div><div class="ls-needs"><div class="ls-need"><div class="ls-need-title">🔧 Fix &amp; supply</div><ul><li><a class="nm" href="/wwc/stop/916677a518/">One Stop #502 Tranquille Market</a><span class="dist">0.7 km</span></li><li><a class="nm" href="/wwc/stop/4056ab3a85/">BC Liquor Store</a><span class="dist">0.8 km</span></li><li><a class="nm" href="/wwc/stop/b7cef4bb1d/">Spoke N&#x27; Motion</a><span class="dist">2.7 km</span></li><li><a class="nm" href="/wwc/stop/bd9b2344b9/">Pedal Bros. Cycle Shop</a><span class="dist">3.2 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🍽 Eat nearby</div><ul><li><a class="nm" href="/wwc/stop/38146a8e66/">Starbucks</a><span class="dist">0.7 km</span></li><li><a class="nm" href="/wwc/stop/889fed13b4/">Moon Wok</a><span class="dist">0.7 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🛏 Sleep nearby</div><ul><li><a class="nm" href="/wwc/stop/36ca2c3cac/">Holiday Inn</a><span class="dist">0.8 km</span></li><li><a class="nm" href="/wwc/stop/ad13639ee0/">Hospitality Inn</a><span class="dist">2.6 km</span></li><li><a class="nm" href="/wwc/stop/433dd65159/">Copper Quarter Campground</a><span class="dist">3.4 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🎭 While you're here</div><ul><li><a class="nm" href="/wwc/stop/0e1150d867/">North Kamloops Library</a><span class="dist">0.7 km</span></li><li><a class="nm" href="/wwc/stop/af00b52c00/">Parkview Activity Centre</a><span class="dist">0.9 km</span></li><li><a class="nm" href="/wwc/stop/75dfe821ce/">No Limits Fitness</a><span class="dist">1.0 km</span></li><li><a class="nm" href="/wwc/stop/bce876ed22/">Fort Kamloops</a><span class="dist">1.6 km</span></li></ul></div></div></div>
+<div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: Public data, AI sources with manual review</div></div>
 <div class="listing-suggest"><a href="/suggest#edit=McArthur Island Sport and Event Centre">Suggest an edit to this listing</a></div>
+<div class="listing-json"><a href="/wwc/stop/9a46de0134.json" rel="nofollow">JSON</a></div></div><aside class="ls-col-right"><div class="ls-band"><div class="ls-card ls-card-map"><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div id="stopmap" class="wwc-map compact"></div><div class="wwc-map-ctrls"><span class="stopmap-lgd" style="color:#14807A"><span class="stopmap-lgd-sw" style="background:#14807A"></span> Bike network</span><span class="stopmap-lgd"><span class="stopmap-lgd-sw"></span> Nearby bike routes</span></div><script src="/map/lib/maplibre-gl.js"></script>
+<script src="/map/lib/pmtiles.js"></script>
+<script>
+(function(){
+  var protocol=new pmtiles.Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile);
+  var map=new maplibregl.Map(Object.assign(
+    {container:"stopmap", style:location.origin+"/map/style/style.json", attributionControl:false},
+    {"center": [-120.3716699, 50.6946679], "zoom": 13}));
+  map.addControl(new maplibregl.NavigationControl(), "top-right");
+  var _attrib=new maplibregl.AttributionControl({compact:true,
+    customAttribution:'\u00a9 <a href="https://www.openmaptiles.org/">OpenMapTiles</a> \u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  map.addControl(_attrib);
+  // Compact mode initializes expanded; collapse it to the small "i" so the map
+  // opens clean. Clicking the button still expands the credit.
+  if(_attrib._container){_attrib._container.classList.remove("maplibregl-compact-show");}
+  map.on("load", function(){
+    map.addSource("stoptrails",{type:"geojson",data:{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "MultiLineString", "coordinates": [[[-120.38424139999998, 50.699308899999984], [-120.3843098, 50.69931620000002]], [[-120.3931441, 50.69800849999999], [-120.3893191, 50.69779239999996], [-120.3843098, 50.69931620000002]], [[-120.393115, 50.700048699999996], [-120.3931441, 50.69800849999999]], [[-120.397534, 50.69962450000003], [-120.39483360000001, 50.6995649], [-120.39329759999998, 50.699863500000006], [-120.3931209, 50.69953549999999]], [[-120.38424139999998, 50.699308899999984], [-120.38417280000002, 50.69809150000001]], [[-120.38030679999999, 50.698249200000035], [-120.38417280000002, 50.69809150000001]], [[-120.3801277, 50.69806710000002], [-120.38030679999999, 50.698249200000035]], [[-120.38003820000002, 50.697981899999995], [-120.3801277, 50.69806710000002]], [[-120.3797405, 50.69772830000001], [-120.38003820000002, 50.697981899999995]], [[-120.3797405, 50.69772830000001], [-120.3780685, 50.698502899999994], [-120.37703, 50.698570999999994], [-120.37564, 50.69847699999996], [-120.3726119, 50.69768929999998]], [[-120.3976079, 50.699670799999986], [-120.397534, 50.69962450000003]], [[-120.39763980000001, 50.69967559999999], [-120.3976079, 50.699670799999986]], [[-120.39770999999999, 50.69967830000002], [-120.39763980000001, 50.69967559999999]], [[-120.39785379999998, 50.69967789999998], [-120.39770999999999, 50.69967830000002]], [[-120.400357, 50.69987419999999], [-120.39785379999998, 50.69967789999998]], [[-120.41902938116205, 50.70179359110483], [-120.4115829, 50.701487700000015], [-120.4042014, 50.7001404], [-120.400357, 50.69987419999999]], [[-120.35796729999998, 50.71885969999999], [-120.35745009999998, 50.71885890000006], [-120.356887, 50.713675], [-120.356088, 50.710932], [-120.3557337, 50.703116400000006], [-120.35446500000002, 50.70085], [-120.35159, 50.69704900000001], [-120.34977900000001, 50.693315000000005], [-120.34526300000002, 50.68921499999998], [-120.343102, 50.68624300000003], [-120.34308099999998, 50.68475399999999], [-120.343533, 50.684066999999985], [-120.34396000000001, 50.6840738]], [[-120.34669960000001, 50.684751500000004], [-120.34702650000001, 50.684805300000015]], [[-120.34669960000001, 50.684751500000004], [-120.3438156, 50.68403660000007]], [[-120.35951630000001, 50.718693899999984], [-120.3579578, 50.71880340000003]], [[-120.3726119, 50.69768929999998], [-120.37084399999999, 50.696148000000015], [-120.37045000000002, 50.69480699999998]], [[-120.37040959999999, 50.694719500000005], [-120.37045000000002, 50.69480699999998]], [[-120.36905640000002, 50.69469200000001], [-120.37040959999999, 50.694719500000005]], [[-120.3658211, 50.68905309999999], [-120.3662201, 50.6888199], [-120.3665256, 50.68896779999998], [-120.3699524, 50.69186550000001], [-120.36905640000002, 50.69469200000001]], [[-120.3658211, 50.68905309999999], [-120.36358159999999, 50.688074700000016]], [[-120.36358159999999, 50.688074700000016], [-120.3616316, 50.6872569]], [[-120.3616316, 50.6872569], [-120.35935760000001, 50.6862496]], [[-120.35935760000001, 50.6862496], [-120.35915599999998, 50.686440400000016]], [[-120.35915599999998, 50.686440400000016], [-120.35631200000002, 50.68523290000003]], [[-120.35631200000002, 50.68523290000003], [-120.3552711, 50.685027899999966]], [[-120.3552711, 50.685027899999966], [-120.3551382, 50.68503769999998]], [[-120.3551382, 50.68503769999998], [-120.35280050000001, 50.684465700000025], [-120.3515498, 50.6847269]], [[-120.3515498, 50.6847269], [-120.35137480000002, 50.684757900000015]], [[-120.35137480000002, 50.684757900000015], [-120.35092170000001, 50.68484019999999]], [[-120.35092170000001, 50.68484019999999], [-120.35076790000001, 50.6848676]], [[-120.35076790000001, 50.6848676], [-120.34992299999999, 50.684887999999994], [-120.348465, 50.684463000000015], [-120.3483952, 50.68397009999999], [-120.34920470000002, 50.682919199999986]], [[-120.3492592, 50.68268420000001], [-120.34920470000002, 50.682919199999986]], [[-120.3490053, 50.682601000000034], [-120.3492592, 50.68268420000001]], [[-120.3488773, 50.6825683], [-120.3490053, 50.682601000000034]], [[-120.3488773, 50.6825683], [-120.3487353, 50.682749799999996]], [[-120.3487353, 50.682749799999996], [-120.346739, 50.68397700000003], [-120.346703, 50.68442899999998], [-120.347227, 50.685], [-120.346685, 50.68634599999997]], [[-120.346685, 50.68634599999997], [-120.34577610000001, 50.68763800000001]], [[-120.34577610000001, 50.68763800000001], [-120.34503239999998, 50.688690599999994]], [[-120.34503239999998, 50.688690599999994], [-120.34493570000001, 50.68872090000001]], [[-120.34887790000002, 50.682793399999966], [-120.3487353, 50.682749799999996]], [[-120.35108439999999, 50.679942799999985], [-120.34887790000002, 50.682793399999966]], [[-120.34903520000002, 50.67916859999998], [-120.35108439999999, 50.679942799999985]], [[-120.3438655, 50.6780087], [-120.34903520000002, 50.67916859999998]], [[-120.341701, 50.67830710000001], [-120.3432992, 50.678303899999996], [-120.3438655, 50.6780087]], [[-120.33896879999999, 50.67899580000001], [-120.3407163, 50.67871380000006], [-120.341701, 50.67830710000001]], [[-120.3351703, 50.67971150000001], [-120.33609999999999, 50.67924129999999], [-120.33896879999999, 50.67899580000001]], [[-120.33398600000001, 50.67968299999999], [-120.3351703, 50.67971150000001]], [[-120.32431041883795, 50.67947425362949], [-120.3260723, 50.679576900000015], [-120.327228, 50.6792654], [-120.33398600000001, 50.67968299999999]], [[-120.32431041883795, 50.6790102905958], [-120.32480040000002, 50.679091000000014]], [[-120.32480040000002, 50.679091000000014], [-120.32490460000001, 50.67940640000001]]]}, "properties": {"name": "Rivers Trail"}}]}});
+    map.addLayer({id:"stoptrails-casing",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#ffffff","line-width":6,"line-opacity":0.9}});
+    map.addLayer({id:"stoptrails-line",type:"line",source:"stoptrails",
+      layout:{"line-cap":"round","line-join":"round"},
+      paint:{"line-color":"#5f259f","line-width":3}});
+    var mk=new maplibregl.Marker({color:"#1F514C"}).setLngLat([-120.3716699, 50.6946679]);
+    var pop=new maplibregl.Popup({closeButton:true,closeOnClick:false,focusAfterOpen:false}).setHTML("<b>McArthur Island Sport and Event Centre<\/b>");
+    mk.setPopup(pop).addTo(map);
+  });
+})();
+</script></div><div class="ls-card"><div class="ls-card-pad"><div class="ls-card-title">Location</div><div class="ls-contact-row"><span class="ico">📍</span><span>1665 Island Parkway, Kamloops</span></div><div class="ls-contact-row"><span class="ico">🌐</span><a href="https://www.kamloops.ca/recreation-culture/facilities/mcarthur-island-sport-event-centre" target="_blank" rel="noopener">https://www.kamloops.ca/recreation-culture/facilities/mcarthur-island-sport-event-centre</a></div><div class="ls-card-title" style="margin-top:14px;color:#5f259f;">Nearby bike routes</div><div class="ls-trail-line"><a href="/trail/rivers-trail/" style="">Rivers Trail</a> <span class="dist">90 m</span></div></div></div></div></aside></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">
@@ -167,7 +314,6 @@ body {
       <a href="/">Home</a>
       <a href="/wwc/">Plan Your Ride</a>
       <a href="/we-welcome-cyclists">We Welcome Cyclists</a>
-      <a href="/routes">Routes</a>
     </div>
     <div class="g-footer-col">
       <a href="/about">About</a>
