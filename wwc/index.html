@@ -80,7 +80,7 @@ body {
   .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
   .g-header-nav a:last-child { border-bottom: none; }
   .g-footer { flex-direction: column; gap: 32px; padding: 48px 20px 56px; }
-  .g-footer-nav { gap: 48px; }
+  .g-footer-nav { gap: 32px 40px; flex-wrap: wrap; }
 }
 
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -232,7 +232,7 @@ body {
 .filter-bar { padding: 16px 36px; border-bottom: 1px solid #EEE; background: #FFFDF9; }
 .filter-bar-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
 .filter-bar-top label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #999; flex-shrink: 0; }
-.search-input { padding: 12px 15px; border: 1px solid #DDD8C7; border-radius: 9px; font-size: 15px; color: #141414; background: #FFFFFF; width: 320px; max-width: 100%; }
+.search-input { padding: 12px 15px; border: 1px solid #DDD8C7; border-radius: 9px; font-size: 16px; color: #141414; background: #FFFFFF; width: 320px; max-width: 100%; }
 .search-input::placeholder { color: #BBB; }
 .all-listings-title-area { display: flex; flex-direction: column; gap: 2px; }
 .all-count-subtitle { font-size: 14px; color: #4b5563; }
@@ -449,7 +449,7 @@ body {
 .dir-showing { font-size:14px; color:#3C4A43; }
 .dir-sortwrap { margin-left:auto; display:inline-flex; align-items:center; gap:6px; }
 .dir-sortlbl { font-size:14px; color:#6B746B; }
-.dir-sortbtn { border:1px solid #DDD8C7; border-radius:8px; background:#fff; padding:8px 12px; font-size:14px; color:#3C4A43; font-family:inherit; cursor:pointer; }
+.dir-sortbtn { border:1px solid #DDD8C7; border-radius:8px; background:#fff; padding:8px 12px; font-size:16px; color:#3C4A43; font-family:inherit; cursor:pointer; }
 .assumed-note { font-size:13px; color:#9AA29A; margin:0 0 8px; text-align:right; }
 .assumed-note code { font-family:ui-monospace,Menlo,monospace; }
 .desc-toggle { font-size:14px; border:1px solid #DDD8C7; border-radius:8px; background:#fff; padding:8px 12px; color:#3C4A43; text-decoration:none; white-space:nowrap; }
@@ -523,6 +523,9 @@ body.wwc-show-full .ldesc { -webkit-line-clamp: unset; display:block; overflow:v
   .sheet-head .h { font-size:18px; font-weight:700; color:#0D2E1E; }
   .sheet-apply { display:block; position:sticky; bottom:0; width:100%; background:#1E7D96; color:#fff; font-weight:600; font-size:16px; border:none; border-radius:11px; padding:14px; margin-top:8px; cursor:pointer; }
   .res-head h2 { font-size:23px; }
+  .ltitle-row { flex-wrap:wrap; }
+  .lbadges { flex-wrap:wrap; }
+  .fg-pop { left:50%; transform:translateX(-50%); }
 }
 </style>
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
