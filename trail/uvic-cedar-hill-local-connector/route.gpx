@@ -277,4 +277,96 @@
 <sym>Dot</sym>
 <type>rest_area</type>
 </wpt>
+<trk><name>UVic / Cedar Hill Local Connector</name>
+<trkseg>
+<trkpt lat="48.454416" lon="-123.353316"/>
+<trkpt lat="48.455379" lon="-123.352548"/>
+<trkpt lat="48.455503" lon="-123.351296"/>
+<trkpt lat="48.455258" lon="-123.348050"/>
+<trkpt lat="48.455315" lon="-123.347892"/>
+<trkpt lat="48.455303" lon="-123.347074"/>
+<trkpt lat="48.454519" lon="-123.345488"/>
+<trkpt lat="48.454531" lon="-123.345021"/>
+<trkpt lat="48.454934" lon="-123.344843"/>
+<trkpt lat="48.454988" lon="-123.344201"/>
+<trkpt lat="48.455017" lon="-123.343958"/>
+<trkpt lat="48.455021" lon="-123.342994"/>
+<trkpt lat="48.455191" lon="-123.342911"/>
+<trkpt lat="48.455250" lon="-123.342878"/>
+<trkpt lat="48.455239" lon="-123.340730"/>
+<trkpt lat="48.457460" lon="-123.340751"/>
+<trkpt lat="48.457394" lon="-123.339052"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.457394" lon="-123.339052"/>
+<trkpt lat="48.457323" lon="-123.339071"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.457394" lon="-123.339052"/>
+<trkpt lat="48.457640" lon="-123.338837"/>
+<trkpt lat="48.458372" lon="-123.338635"/>
+<trkpt lat="48.458437" lon="-123.338702"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.458437" lon="-123.338702"/>
+<trkpt lat="48.458198" lon="-123.338785"/>
+<trkpt lat="48.457394" lon="-123.339052"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.457394" lon="-123.339052"/>
+<trkpt lat="48.457383" lon="-123.338932"/>
+<trkpt lat="48.457322" lon="-123.338928"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.458437" lon="-123.338702"/>
+<trkpt lat="48.458477" lon="-123.335214"/>
+<trkpt lat="48.458493" lon="-123.333324"/>
+<trkpt lat="48.458496" lon="-123.332981"/>
+<trkpt lat="48.458499" lon="-123.332683"/>
+<trkpt lat="48.458530" lon="-123.332046"/>
+<trkpt lat="48.458668" lon="-123.331588"/>
+<trkpt lat="48.459271" lon="-123.330733"/>
+<trkpt lat="48.459899" lon="-123.330084"/>
+<trkpt lat="48.460073" lon="-123.330195"/>
+<trkpt lat="48.460389" lon="-123.330301"/>
+<trkpt lat="48.460448" lon="-123.330287"/>
+<trkpt lat="48.460846" lon="-123.330264"/>
+<trkpt lat="48.461285" lon="-123.330255"/>
+<trkpt lat="48.461454" lon="-123.330252"/>
+<trkpt lat="48.461453" lon="-123.329036"/>
+<trkpt lat="48.463584" lon="-123.328890"/>
+<trkpt lat="48.463546" lon="-123.321927"/>
+<trkpt lat="48.463544" lon="-123.320768"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.463546" lon="-123.320386"/>
+<trkpt lat="48.463575" lon="-123.320768"/>
+<trkpt lat="48.463544" lon="-123.320874"/>
+<trkpt lat="48.463499" lon="-123.320767"/>
+<trkpt lat="48.463546" lon="-123.320386"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.463546" lon="-123.320386"/>
+<trkpt lat="48.463151" lon="-123.318126"/>
+<trkpt lat="48.463351" lon="-123.316121"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.459541" lon="-123.332948"/>
+<trkpt lat="48.458740" lon="-123.332973"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.454416" lon="-123.353316"/>
+<trkpt lat="48.454680" lon="-123.355347"/>
+<trkpt lat="48.454017" lon="-123.356627"/>
+<trkpt lat="48.454682" lon="-123.357604"/>
+<trkpt lat="48.453320" lon="-123.358253"/>
+<trkpt lat="48.449221" lon="-123.359710"/>
+<trkpt lat="48.449301" lon="-123.358869"/>
+<trkpt lat="48.449428" lon="-123.357639"/>
+<trkpt lat="48.450741" lon="-123.357154"/>
+<trkpt lat="48.453566" lon="-123.355961"/>
+<trkpt lat="48.453139" lon="-123.355325"/>
+<trkpt lat="48.454416" lon="-123.353316"/>
+</trkseg>
+</trk>
 </gpx>

@@ -179,4 +179,98 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>Masumi Mitsui Greenway</name>
+<trkseg>
+<trkpt lat="49.217734" lon="-123.148263"/>
+<trkpt lat="49.217684" lon="-123.143930"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.217681" lon="-123.143792"/>
+<trkpt lat="49.217570" lon="-123.140897"/>
+<trkpt lat="49.217485" lon="-123.140619"/>
+<trkpt lat="49.217465" lon="-123.140393"/>
+<trkpt lat="49.217446" lon="-123.140080"/>
+<trkpt lat="49.217348" lon="-123.139415"/>
+<trkpt lat="49.217347" lon="-123.137561"/>
+<trkpt lat="49.217258" lon="-123.134174"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.217255" lon="-123.134032"/>
+<trkpt lat="49.217021" lon="-123.123986"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.217019" lon="-123.123853"/>
+<trkpt lat="49.216967" lon="-123.118673"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.216967" lon="-123.118673"/>
+<trkpt lat="49.217012" lon="-123.117140"/>
+<trkpt lat="49.217011" lon="-123.117115"/>
+<trkpt lat="49.216989" lon="-123.117083"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.216989" lon="-123.117083"/>
+<trkpt lat="49.216963" lon="-123.118288"/>
+<trkpt lat="49.216967" lon="-123.118673"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.216989" lon="-123.117083"/>
+<trkpt lat="49.216992" lon="-123.116889"/>
+<trkpt lat="49.216995" lon="-123.116795"/>
+<trkpt lat="49.216998" lon="-123.116636"/>
+<trkpt lat="49.217799" lon="-123.116607"/>
+<trkpt lat="49.217838" lon="-123.116609"/>
+<trkpt lat="49.217756" lon="-123.113337"/>
+<trkpt lat="49.217694" lon="-123.111015"/>
+<trkpt lat="49.217691" lon="-123.109711"/>
+<trkpt lat="49.217660" lon="-123.107541"/>
+<trkpt lat="49.217710" lon="-123.106360"/>
+<trkpt lat="49.217716" lon="-123.106223"/>
+<trkpt lat="49.216823" lon="-123.106260"/>
+<trkpt lat="49.216675" lon="-123.097842"/>
+<trkpt lat="49.216548" lon="-123.091005"/>
+<trkpt lat="49.216514" lon="-123.087948"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.216511" lon="-123.087789"/>
+<trkpt lat="49.216436" lon="-123.083149"/>
+<trkpt lat="49.216422" lon="-123.081632"/>
+<trkpt lat="49.216408" lon="-123.080183"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.216411" lon="-123.080028"/>
+<trkpt lat="49.216400" lon="-123.077820"/>
+<trkpt lat="49.216396" lon="-123.077064"/>
+<trkpt lat="49.216386" lon="-123.075546"/>
+<trkpt lat="49.216329" lon="-123.074052"/>
+<trkpt lat="49.216291" lon="-123.072018"/>
+<trkpt lat="49.216339" lon="-123.071910"/>
+<trkpt lat="49.217240" lon="-123.071607"/>
+<trkpt lat="49.217368" lon="-123.071286"/>
+<trkpt lat="49.217067" lon="-123.070271"/>
+<trkpt lat="49.217807" lon="-123.069159"/>
+<trkpt lat="49.218063" lon="-123.068068"/>
+<trkpt lat="49.218011" lon="-123.062137"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.218008" lon="-123.061981"/>
+<trkpt lat="49.217967" lon="-123.057057"/>
+<trkpt lat="49.217636" lon="-123.055825"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.217636" lon="-123.055825"/>
+<trkpt lat="49.218477" lon="-123.054765"/>
+<trkpt lat="49.218544" lon="-123.054723"/>
+<trkpt lat="49.218496" lon="-123.054637"/>
+<trkpt lat="49.218415" lon="-123.054609"/>
+<trkpt lat="49.217988" lon="-123.054215"/>
+<trkpt lat="49.218078" lon="-123.050576"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.217061" lon="-123.050606"/>
+<trkpt lat="49.217079" lon="-123.054472"/>
+<trkpt lat="49.216963" lon="-123.055161"/>
+<trkpt lat="49.217636" lon="-123.055825"/>
+</trkseg>
+</trk>
 </gpx>

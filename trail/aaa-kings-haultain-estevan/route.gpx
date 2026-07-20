@@ -445,4 +445,77 @@
 <sym>Dot</sym>
 <type>rest_area</type>
 </wpt>
+<trk><name>AAA Kings - Haultain - Estevan</name>
+<trkseg>
+<trkpt lat="48.438675" lon="-123.365061"/>
+<trkpt lat="48.438587" lon="-123.365010"/>
+<trkpt lat="48.438241" lon="-123.364808"/>
+<trkpt lat="48.437698" lon="-123.364498"/>
+<trkpt lat="48.436808" lon="-123.363991"/>
+<trkpt lat="48.436926" lon="-123.363116"/>
+<trkpt lat="48.436966" lon="-123.362862"/>
+<trkpt lat="48.437000" lon="-123.362656"/>
+<trkpt lat="48.437120" lon="-123.361384"/>
+<trkpt lat="48.437488" lon="-123.358627"/>
+<trkpt lat="48.437674" lon="-123.357273"/>
+<trkpt lat="48.437775" lon="-123.356547"/>
+<trkpt lat="48.437852" lon="-123.355947"/>
+<trkpt lat="48.437919" lon="-123.355384"/>
+<trkpt lat="48.438015" lon="-123.354602"/>
+<trkpt lat="48.438054" lon="-123.354246"/>
+<trkpt lat="48.438210" lon="-123.353321"/>
+<trkpt lat="48.438160" lon="-123.353157"/>
+<trkpt lat="48.436530" lon="-123.352618"/>
+<trkpt lat="48.436410" lon="-123.352121"/>
+<trkpt lat="48.436397" lon="-123.351839"/>
+<trkpt lat="48.436246" lon="-123.346882"/>
+<trkpt lat="48.436219" lon="-123.344952"/>
+<trkpt lat="48.436189" lon="-123.342345"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.436189" lon="-123.342345"/>
+<trkpt lat="48.436231" lon="-123.342265"/>
+<trkpt lat="48.436187" lon="-123.342210"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.436187" lon="-123.342210"/>
+<trkpt lat="48.436143" lon="-123.342268"/>
+<trkpt lat="48.436189" lon="-123.342345"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.436187" lon="-123.342210"/>
+<trkpt lat="48.436111" lon="-123.336251"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.436111" lon="-123.336251"/>
+<trkpt lat="48.436160" lon="-123.336172"/>
+<trkpt lat="48.436110" lon="-123.336102"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.436110" lon="-123.336102"/>
+<trkpt lat="48.436061" lon="-123.336174"/>
+<trkpt lat="48.436111" lon="-123.336251"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.436110" lon="-123.336102"/>
+<trkpt lat="48.436034" lon="-123.333582"/>
+<trkpt lat="48.435922" lon="-123.328690"/>
+<trkpt lat="48.435869" lon="-123.324943"/>
+<trkpt lat="48.435855" lon="-123.323749"/>
+<trkpt lat="48.435846" lon="-123.322252"/>
+<trkpt lat="48.435814" lon="-123.320821"/>
+<trkpt lat="48.435786" lon="-123.319474"/>
+<trkpt lat="48.435763" lon="-123.318729"/>
+<trkpt lat="48.435915" lon="-123.317546"/>
+<trkpt lat="48.436415" lon="-123.316873"/>
+<trkpt lat="48.437485" lon="-123.316227"/>
+<trkpt lat="48.437848" lon="-123.315639"/>
+<trkpt lat="48.438159" lon="-123.314624"/>
+<trkpt lat="48.438184" lon="-123.312764"/>
+<trkpt lat="48.438140" lon="-123.309580"/>
+<trkpt lat="48.437702" lon="-123.308301"/>
+<trkpt lat="48.436173" lon="-123.303734"/>
+<trkpt lat="48.435725" lon="-123.302397"/>
+</trkseg>
+</trk>
 </gpx>

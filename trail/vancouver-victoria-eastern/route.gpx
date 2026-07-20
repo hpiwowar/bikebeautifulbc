@@ -95,4 +95,19 @@
 <sym>Dot</sym>
 <type>shelter</type>
 </wpt>
+<trk><name>Vancouver, Victoria &amp; Eastern</name>
+<trkseg>
+<trkpt lat="49.203504" lon="-119.805509"/>
+<trkpt lat="49.203598" lon="-119.814055"/>
+<trkpt lat="49.204155" lon="-119.859709"/>
+<trkpt lat="49.204287" lon="-119.867004"/>
+<trkpt lat="49.205014" lon="-119.873988"/>
+<trkpt lat="49.204540" lon="-119.880898"/>
+<trkpt lat="49.204402" lon="-119.882530"/>
+<trkpt lat="49.204026" lon="-119.887619"/>
+<trkpt lat="49.203874" lon="-119.889668"/>
+<trkpt lat="49.204045" lon="-119.892251"/>
+<trkpt lat="49.204827" lon="-119.894528"/>
+</trkseg>
+</trk>
 </gpx>

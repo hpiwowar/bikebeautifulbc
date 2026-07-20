@@ -88,4 +88,61 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
+<trk><name>Mundy Park Bike Paths</name>
+<trkseg>
+<trkpt lat="49.252265" lon="-122.835477"/>
+<trkpt lat="49.252326" lon="-122.834049"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.252083" lon="-122.834014"/>
+<trkpt lat="49.252326" lon="-122.834049"/>
+<trkpt lat="49.252550" lon="-122.833147"/>
+<trkpt lat="49.253417" lon="-122.832909"/>
+<trkpt lat="49.254796" lon="-122.833578"/>
+<trkpt lat="49.255427" lon="-122.833800"/>
+<trkpt lat="49.256130" lon="-122.835079"/>
+<trkpt lat="49.256712" lon="-122.834678"/>
+<trkpt lat="49.256730" lon="-122.834788"/>
+<trkpt lat="49.258408" lon="-122.834683"/>
+<trkpt lat="49.258633" lon="-122.834671"/>
+<trkpt lat="49.260990" lon="-122.834823"/>
+<trkpt lat="49.261535" lon="-122.834368"/>
+<trkpt lat="49.261612" lon="-122.835144"/>
+<trkpt lat="49.261699" lon="-122.835153"/>
+<trkpt lat="49.262741" lon="-122.835093"/>
+<trkpt lat="49.262775" lon="-122.834326"/>
+<trkpt lat="49.263177" lon="-122.834282"/>
+<trkpt lat="49.263018" lon="-122.818137"/>
+<trkpt lat="49.261572" lon="-122.817617"/>
+<trkpt lat="49.260354" lon="-122.816760"/>
+<trkpt lat="49.258436" lon="-122.815915"/>
+<trkpt lat="49.257576" lon="-122.816351"/>
+<trkpt lat="49.255878" lon="-122.816522"/>
+<trkpt lat="49.254104" lon="-122.815819"/>
+<trkpt lat="49.253206" lon="-122.816104"/>
+<trkpt lat="49.249222" lon="-122.815893"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.253009" lon="-122.816101"/>
+<trkpt lat="49.252729" lon="-122.817314"/>
+<trkpt lat="49.251100" lon="-122.817814"/>
+<trkpt lat="49.250976" lon="-122.819672"/>
+<trkpt lat="49.251174" lon="-122.820747"/>
+<trkpt lat="49.251103" lon="-122.821833"/>
+<trkpt lat="49.250290" lon="-122.821883"/>
+<trkpt lat="49.249823" lon="-122.822589"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.256930" lon="-122.830113"/>
+<trkpt lat="49.256915" lon="-122.830082"/>
+<trkpt lat="49.257051" lon="-122.828554"/>
+<trkpt lat="49.258320" lon="-122.827566"/>
+<trkpt lat="49.258507" lon="-122.828615"/>
+<trkpt lat="49.256930" lon="-122.830113"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.262814" lon="-122.817796"/>
+<trkpt lat="49.263165" lon="-122.817759"/>
+</trkseg>
+</trk>
 </gpx>

@@ -11,4 +11,41 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>Boundary Bay Cycleway</name>
+<trkseg>
+<trkpt lat="49.034638" lon="-123.054029"/>
+<trkpt lat="49.034669" lon="-123.052802"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.059593" lon="-123.024049"/>
+<trkpt lat="49.062184" lon="-123.016182"/>
+<trkpt lat="49.064476" lon="-123.006330"/>
+<trkpt lat="49.065502" lon="-122.996973"/>
+<trkpt lat="49.068494" lon="-122.975730"/>
+<trkpt lat="49.069241" lon="-122.971848"/>
+<trkpt lat="49.071081" lon="-122.960627"/>
+<trkpt lat="49.073351" lon="-122.948218"/>
+<trkpt lat="49.075145" lon="-122.942314"/>
+<trkpt lat="49.076929" lon="-122.934758"/>
+<trkpt lat="49.079487" lon="-122.925912"/>
+<trkpt lat="49.083157" lon="-122.916293"/>
+<trkpt lat="49.083489" lon="-122.914235"/>
+<trkpt lat="49.083943" lon="-122.913574"/>
+<trkpt lat="49.083828" lon="-122.911820"/>
+<trkpt lat="49.085309" lon="-122.906526"/>
+<trkpt lat="49.085458" lon="-122.903671"/>
+<trkpt lat="49.086918" lon="-122.902873"/>
+<trkpt lat="49.087384" lon="-122.902109"/>
+<trkpt lat="49.088101" lon="-122.900018"/>
+<trkpt lat="49.089744" lon="-122.898490"/>
+<trkpt lat="49.089931" lon="-122.894872"/>
+<trkpt lat="49.090764" lon="-122.893002"/>
+<trkpt lat="49.091684" lon="-122.892348"/>
+<trkpt lat="49.091613" lon="-122.890399"/>
+<trkpt lat="49.091490" lon="-122.889448"/>
+<trkpt lat="49.091668" lon="-122.888615"/>
+<trkpt lat="49.090768" lon="-122.874793"/>
+<trkpt lat="49.089752" lon="-122.861167"/>
+</trkseg>
+</trk>
 </gpx>

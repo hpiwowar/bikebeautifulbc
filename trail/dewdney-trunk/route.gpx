@@ -11,4 +11,19 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>Dewdney Trunk</name>
+<trkseg>
+<trkpt lat="49.242276" lon="-122.644738"/>
+<trkpt lat="49.242268" lon="-122.655860"/>
+<trkpt lat="49.242286" lon="-122.667002"/>
+<trkpt lat="49.242279" lon="-122.670161"/>
+<trkpt lat="49.242280" lon="-122.670381"/>
+<trkpt lat="49.242293" lon="-122.678222"/>
+<trkpt lat="49.242286" lon="-122.689503"/>
+<trkpt lat="49.244127" lon="-122.689526"/>
+<trkpt lat="49.244236" lon="-122.718108"/>
+<trkpt lat="49.243392" lon="-122.719120"/>
+<trkpt lat="49.243072" lon="-122.719437"/>
+</trkseg>
+</trk>
 </gpx>

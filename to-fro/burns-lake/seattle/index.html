@@ -168,12 +168,14 @@
 window.addEventListener('load', (event) => {
   document.querySelectorAll('a').forEach(item => {
     item.addEventListener('click', event => {
-      let linkUrl = new URL(item.getAttribute('href'), window.location.href);
-      let currentHostname = window.location.hostname;
-      if (linkUrl.hostname !== currentHostname) {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
         let domainParts = linkUrl.hostname.split('.');
         let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
-        fathom.trackEvent(`External link clicked: ${domainName}`);
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
       }
     });
   });

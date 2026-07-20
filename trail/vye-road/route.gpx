@@ -18,4 +18,69 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
+<trk><name>Vye Road</name>
+<trkseg>
+<trkpt lat="49.016870" lon="-122.293686"/>
+<trkpt lat="49.016909" lon="-122.275019"/>
+<trkpt lat="49.016921" lon="-122.273694"/>
+<trkpt lat="49.016931" lon="-122.272401"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.016931" lon="-122.272401"/>
+<trkpt lat="49.017022" lon="-122.272051"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.016863" lon="-122.272065"/>
+<trkpt lat="49.016931" lon="-122.272401"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.016792" lon="-122.271899"/>
+<trkpt lat="49.017075" lon="-122.271823"/>
+<trkpt lat="49.016960" lon="-122.272092"/>
+<trkpt lat="49.016792" lon="-122.271899"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.016850" lon="-122.271699"/>
+<trkpt lat="49.016902" lon="-122.271245"/>
+<trkpt lat="49.016915" lon="-122.270454"/>
+<trkpt lat="49.016935" lon="-122.269066"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.016935" lon="-122.269066"/>
+<trkpt lat="49.016966" lon="-122.270419"/>
+<trkpt lat="49.016956" lon="-122.271250"/>
+<trkpt lat="49.017015" lon="-122.271693"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.016935" lon="-122.269066"/>
+<trkpt lat="49.016934" lon="-122.268117"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.016934" lon="-122.268117"/>
+<trkpt lat="49.016962" lon="-122.267239"/>
+<trkpt lat="49.016965" lon="-122.266718"/>
+<trkpt lat="49.016989" lon="-122.265743"/>
+<trkpt lat="49.016948" lon="-122.265560"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.016948" lon="-122.265560"/>
+<trkpt lat="49.016905" lon="-122.265805"/>
+<trkpt lat="49.016906" lon="-122.266654"/>
+<trkpt lat="49.016934" lon="-122.268117"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.016948" lon="-122.265560"/>
+<trkpt lat="49.016950" lon="-122.265322"/>
+<trkpt lat="49.016933" lon="-122.263985"/>
+<trkpt lat="49.016935" lon="-122.260661"/>
+<trkpt lat="49.016976" lon="-122.251213"/>
+<trkpt lat="49.017041" lon="-122.224293"/>
+<trkpt lat="49.017058" lon="-122.222008"/>
+<trkpt lat="49.017058" lon="-122.221544"/>
+<trkpt lat="49.017073" lon="-122.220135"/>
+<trkpt lat="49.017110" lon="-122.217114"/>
+<trkpt lat="49.017108" lon="-122.215294"/>
+<trkpt lat="49.017085" lon="-122.205852"/>
+</trkseg>
+</trk>
 </gpx>

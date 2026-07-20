@@ -697,4 +697,75 @@
 <sym>Dot</sym>
 <type>shelter</type>
 </wpt>
+<trk><name>Courtenay Riverway Heritage Walk</name>
+<trkseg>
+<trkpt lat="49.661431" lon="-124.969599"/>
+<trkpt lat="49.661769" lon="-124.969203"/>
+<trkpt lat="49.662778" lon="-124.970375"/>
+<trkpt lat="49.665992" lon="-124.972293"/>
+<trkpt lat="49.666713" lon="-124.973427"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.666760" lon="-124.973492"/>
+<trkpt lat="49.667982" lon="-124.975027"/>
+<trkpt lat="49.670147" lon="-124.977671"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.670368" lon="-124.977019"/>
+<trkpt lat="49.670612" lon="-124.976520"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.670612" lon="-124.976520"/>
+<trkpt lat="49.671163" lon="-124.977787"/>
+<trkpt lat="49.672090" lon="-124.978529"/>
+<trkpt lat="49.673592" lon="-124.979562"/>
+<trkpt lat="49.675291" lon="-124.979303"/>
+<trkpt lat="49.675668" lon="-124.979825"/>
+<trkpt lat="49.676068" lon="-124.979763"/>
+<trkpt lat="49.676477" lon="-124.979760"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.676477" lon="-124.979760"/>
+<trkpt lat="49.678068" lon="-124.980609"/>
+<trkpt lat="49.681427" lon="-124.984908"/>
+<trkpt lat="49.681901" lon="-124.984456"/>
+<trkpt lat="49.682109" lon="-124.984578"/>
+<trkpt lat="49.682476" lon="-124.983987"/>
+<trkpt lat="49.682726" lon="-124.985004"/>
+<trkpt lat="49.683126" lon="-124.985258"/>
+<trkpt lat="49.685499" lon="-124.989500"/>
+<trkpt lat="49.686669" lon="-124.991117"/>
+<trkpt lat="49.686908" lon="-124.992060"/>
+<trkpt lat="49.687380" lon="-124.992702"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.687465" lon="-124.992780"/>
+<trkpt lat="49.688312" lon="-124.993796"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.688405" lon="-124.993954"/>
+<trkpt lat="49.690865" lon="-124.996108"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.681668" lon="-124.984384"/>
+<trkpt lat="49.682000" lon="-124.982865"/>
+<trkpt lat="49.681504" lon="-124.981582"/>
+<trkpt lat="49.680994" lon="-124.981036"/>
+<trkpt lat="49.679733" lon="-124.977089"/>
+<trkpt lat="49.679275" lon="-124.976998"/>
+<trkpt lat="49.678527" lon="-124.978076"/>
+<trkpt lat="49.678341" lon="-124.978352"/>
+<trkpt lat="49.677943" lon="-124.978661"/>
+<trkpt lat="49.677345" lon="-124.978173"/>
+<trkpt lat="49.676692" lon="-124.978454"/>
+<trkpt lat="49.676467" lon="-124.978922"/>
+<trkpt lat="49.676477" lon="-124.979760"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.670612" lon="-124.976520"/>
+<trkpt lat="49.670444" lon="-124.975882"/>
+<trkpt lat="49.669652" lon="-124.974943"/>
+<trkpt lat="49.668546" lon="-124.975793"/>
+</trkseg>
+</trk>
 </gpx>

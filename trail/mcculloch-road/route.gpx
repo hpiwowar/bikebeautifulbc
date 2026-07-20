@@ -32,4 +32,31 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>McCulloch Road</name>
+<trkseg>
+<trkpt lat="49.838591" lon="-119.372052"/>
+<trkpt lat="49.837729" lon="-119.372695"/>
+<trkpt lat="49.834313" lon="-119.372698"/>
+<trkpt lat="49.834509" lon="-119.373767"/>
+<trkpt lat="49.836163" lon="-119.378364"/>
+<trkpt lat="49.837395" lon="-119.380220"/>
+<trkpt lat="49.837793" lon="-119.381372"/>
+<trkpt lat="49.837838" lon="-119.381721"/>
+<trkpt lat="49.837907" lon="-119.382581"/>
+<trkpt lat="49.837886" lon="-119.387516"/>
+<trkpt lat="49.837581" lon="-119.391045"/>
+<trkpt lat="49.838135" lon="-119.393395"/>
+<trkpt lat="49.839720" lon="-119.396764"/>
+<trkpt lat="49.841034" lon="-119.409282"/>
+<trkpt lat="49.841614" lon="-119.409852"/>
+<trkpt lat="49.852338" lon="-119.409855"/>
+<trkpt lat="49.852733" lon="-119.413642"/>
+<trkpt lat="49.853867" lon="-119.418191"/>
+<trkpt lat="49.854732" lon="-119.418416"/>
+<trkpt lat="49.855486" lon="-119.417751"/>
+<trkpt lat="49.857233" lon="-119.417041"/>
+<trkpt lat="49.859830" lon="-119.418213"/>
+<trkpt lat="49.859941" lon="-119.423816"/>
+</trkseg>
+</trk>
 </gpx>

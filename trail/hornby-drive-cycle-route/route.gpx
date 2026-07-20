@@ -25,4 +25,28 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
+<trk><name>Hornby Drive Cycle Route</name>
+<trkseg>
+<trkpt lat="49.089552" lon="-122.962928"/>
+<trkpt lat="49.089041" lon="-122.962637"/>
+<trkpt lat="49.089011" lon="-122.959985"/>
+<trkpt lat="49.090052" lon="-122.957132"/>
+<trkpt lat="49.090077" lon="-122.926409"/>
+<trkpt lat="49.090583" lon="-122.923830"/>
+<trkpt lat="49.090722" lon="-122.921794"/>
+<trkpt lat="49.090059" lon="-122.918939"/>
+<trkpt lat="49.090076" lon="-122.912618"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.083865" lon="-122.912586"/>
+<trkpt lat="49.084070" lon="-122.912582"/>
+<trkpt lat="49.091194" lon="-122.912608"/>
+<trkpt lat="49.091706" lon="-122.912612"/>
+<trkpt lat="49.098236" lon="-122.912695"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.090066" lon="-122.934928"/>
+<trkpt lat="49.076929" lon="-122.934758"/>
+</trkseg>
+</trk>
 </gpx>

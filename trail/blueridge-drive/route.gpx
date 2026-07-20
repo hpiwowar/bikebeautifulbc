@@ -109,4 +109,75 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>Blueridge Drive</name>
+<trkseg>
+<trkpt lat="49.065716" lon="-122.377552"/>
+<trkpt lat="49.065762" lon="-122.377163"/>
+<trkpt lat="49.065891" lon="-122.375334"/>
+<trkpt lat="49.065891" lon="-122.375311"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.065891" lon="-122.375311"/>
+<trkpt lat="49.065922" lon="-122.373197"/>
+<trkpt lat="49.065924" lon="-122.372749"/>
+<trkpt lat="49.065928" lon="-122.370770"/>
+<trkpt lat="49.066006" lon="-122.367414"/>
+<trkpt lat="49.066411" lon="-122.366221"/>
+<trkpt lat="49.067271" lon="-122.364754"/>
+<trkpt lat="49.067642" lon="-122.363285"/>
+<trkpt lat="49.067668" lon="-122.362409"/>
+<trkpt lat="49.067673" lon="-122.362104"/>
+<trkpt lat="49.067682" lon="-122.361718"/>
+<trkpt lat="49.067713" lon="-122.359817"/>
+<trkpt lat="49.067698" lon="-122.358790"/>
+<trkpt lat="49.067651" lon="-122.357928"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.067651" lon="-122.357928"/>
+<trkpt lat="49.067648" lon="-122.359818"/>
+<trkpt lat="49.067634" lon="-122.360902"/>
+<trkpt lat="49.067617" lon="-122.361547"/>
+<trkpt lat="49.067595" lon="-122.362596"/>
+<trkpt lat="49.067295" lon="-122.364474"/>
+<trkpt lat="49.066356" lon="-122.366158"/>
+<trkpt lat="49.065941" lon="-122.367387"/>
+<trkpt lat="49.065847" lon="-122.370768"/>
+<trkpt lat="49.065842" lon="-122.372746"/>
+<trkpt lat="49.065845" lon="-122.373196"/>
+<trkpt lat="49.065891" lon="-122.375311"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.065716" lon="-122.377552"/>
+<trkpt lat="49.065643" lon="-122.379223"/>
+<trkpt lat="49.065618" lon="-122.381209"/>
+<trkpt lat="49.065560" lon="-122.379276"/>
+<trkpt lat="49.065716" lon="-122.377552"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.067651" lon="-122.357928"/>
+<trkpt lat="49.067611" lon="-122.355514"/>
+<trkpt lat="49.067604" lon="-122.354915"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.067604" lon="-122.354915"/>
+<trkpt lat="49.067454" lon="-122.348729"/>
+<trkpt lat="49.067143" lon="-122.345392"/>
+<trkpt lat="49.066771" lon="-122.344264"/>
+<trkpt lat="49.065078" lon="-122.343096"/>
+<trkpt lat="49.064719" lon="-122.342287"/>
+<trkpt lat="49.064648" lon="-122.341134"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.064648" lon="-122.341134"/>
+<trkpt lat="49.065139" lon="-122.343031"/>
+<trkpt lat="49.066820" lon="-122.344192"/>
+<trkpt lat="49.067215" lon="-122.345367"/>
+<trkpt lat="49.067523" lon="-122.348729"/>
+<trkpt lat="49.067604" lon="-122.354915"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.064648" lon="-122.341134"/>
+<trkpt lat="49.064570" lon="-122.338080"/>
+</trkseg>
+</trk>
 </gpx>

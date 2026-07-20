@@ -319,4 +319,64 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>Salt Spring Island Bicycle Network</name>
+<trkseg>
+<trkpt lat="48.881253" lon="-123.573386"/>
+<trkpt lat="48.881192" lon="-123.572760"/>
+<trkpt lat="48.881741" lon="-123.572518"/>
+<trkpt lat="48.881852" lon="-123.572351"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.881852" lon="-123.572351"/>
+<trkpt lat="48.881906" lon="-123.572439"/>
+<trkpt lat="48.882137" lon="-123.572811"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.881852" lon="-123.572351"/>
+<trkpt lat="48.881278" lon="-123.571360"/>
+<trkpt lat="48.880339" lon="-123.567681"/>
+<trkpt lat="48.880082" lon="-123.565344"/>
+<trkpt lat="48.878903" lon="-123.561516"/>
+<trkpt lat="48.878904" lon="-123.559318"/>
+<trkpt lat="48.878924" lon="-123.558766"/>
+<trkpt lat="48.877744" lon="-123.555274"/>
+<trkpt lat="48.876180" lon="-123.551200"/>
+<trkpt lat="48.877478" lon="-123.548902"/>
+<trkpt lat="48.877649" lon="-123.547884"/>
+<trkpt lat="48.875918" lon="-123.542816"/>
+<trkpt lat="48.875358" lon="-123.539854"/>
+<trkpt lat="48.875398" lon="-123.534771"/>
+<trkpt lat="48.873914" lon="-123.532316"/>
+<trkpt lat="48.873124" lon="-123.529275"/>
+<trkpt lat="48.868359" lon="-123.529064"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.861841" lon="-123.515151"/>
+<trkpt lat="48.858487" lon="-123.514970"/>
+<trkpt lat="48.858434" lon="-123.512221"/>
+<trkpt lat="48.857980" lon="-123.510983"/>
+<trkpt lat="48.857736" lon="-123.509108"/>
+<trkpt lat="48.857270" lon="-123.507597"/>
+<trkpt lat="48.856957" lon="-123.504653"/>
+<trkpt lat="48.856080" lon="-123.501110"/>
+</trkseg>
+<trkseg>
+<trkpt lat="48.865358" lon="-123.500942"/>
+<trkpt lat="48.865407" lon="-123.498550"/>
+<trkpt lat="48.864995" lon="-123.497091"/>
+<trkpt lat="48.860140" lon="-123.486950"/>
+<trkpt lat="48.857351" lon="-123.480785"/>
+<trkpt lat="48.853789" lon="-123.471533"/>
+<trkpt lat="48.853452" lon="-123.470287"/>
+<trkpt lat="48.853440" lon="-123.468674"/>
+<trkpt lat="48.853472" lon="-123.465689"/>
+<trkpt lat="48.851960" lon="-123.459982"/>
+<trkpt lat="48.851467" lon="-123.454657"/>
+<trkpt lat="48.850716" lon="-123.451495"/>
+<trkpt lat="48.850591" lon="-123.450064"/>
+<trkpt lat="48.850660" lon="-123.448244"/>
+<trkpt lat="48.851166" lon="-123.446139"/>
+<trkpt lat="48.851355" lon="-123.445408"/>
+</trkseg>
+</trk>
 </gpx>

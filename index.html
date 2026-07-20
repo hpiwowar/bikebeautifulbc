@@ -137,11 +137,12 @@ body {
 .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-btn {
   padding: 16px 32px; border-radius: 24px; font-size: 16px; font-weight: 500;
+  border: 2px solid transparent;
   text-decoration: none; text-align: center; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .hero-btn-light { background: #FFFDF9; color: #2C4C3B; }
 .hero-btn-light:hover { background: #1E7D96; color: white; transform: translateY(-1px); }
-.hero-btn-outline { background: transparent; color: white; border: 2px solid white; }
+.hero-btn-outline { background: transparent; color: white; border-color: white; }
 .hero-btn-outline:hover { background: #1E7D96; color: white; border-color: #1E7D96; transform: translateY(-1px); }
 .hero-img {
   background: url('/img/home/main_page_Small-1200px-233885.jpg') center/cover;
@@ -651,6 +652,7 @@ function submitForm(formEl, successHtml) {
 
 function submitNewsletter(e) {
   e.preventDefault();
+  if (window.fathom) fathom.trackEvent('Field Notes subscribe');
   submitForm(document.getElementById('newsletter-form'),
     '<div style="padding:40px 0;"><p style="font-family:Archivo,sans-serif;font-size:32px;font-weight:400;color:#0D2E1E;letter-spacing:-0.03em;margin-bottom:8px;">Thanks!</p><p style="font-size:17px;color:rgba(13,64,112,0.5);">You are signed up. We will be in touch.</p></div>');
   return false;
@@ -658,13 +660,26 @@ function submitNewsletter(e) {
 
 function submitContact(e) {
   e.preventDefault();
+  if (window.fathom) fathom.trackEvent('Contact form submitted');
   submitForm(document.getElementById('contact-form'),
     '<div style="padding:20px 0;"><p style="font-family:Archivo,sans-serif;font-size:28px;font-weight:400;color:white;letter-spacing:-0.03em;margin-bottom:6px;">Thanks!</p><p style="font-size:16px;color:rgba(255,255,255,0.7);">We will be in touch.</p></div>');
   return false;
 }
 </script>
 <script>
+// Homepage analytics: phone/email/external events as everywhere else, plus a
+// named event for every internal link, labeled by the homepage section it sits
+// in so hero vs journey-panel vs footer clicks are distinguishable in Fathom.
 window.addEventListener('load', (event) => {
+  var zones = [
+    ['.g-header', 'Home header'],
+    ['.g-footer', 'Home footer'],
+    ['.hero-section', 'Home hero'],
+    ['.partners', 'Home partners'],
+    ['.journey', 'Home journey'],
+    ['.newsletter-wrap', 'Home newsletter'],
+    ['.contact-section', 'Home contact'],
+  ];
   document.querySelectorAll('a').forEach(item => {
     item.addEventListener('click', event => {
       let href = item.getAttribute('href') || '';
@@ -675,7 +690,11 @@ window.addEventListener('load', (event) => {
         let domainParts = linkUrl.hostname.split('.');
         let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
         if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+        return;
       }
+      let zone = 'Home';
+      for (const z of zones) { if (item.closest(z[0])) { zone = z[1]; break; } }
+      if (window.fathom) fathom.trackEvent(zone + ': ' + linkUrl.pathname + (linkUrl.hash || ''));
     });
   });
 });

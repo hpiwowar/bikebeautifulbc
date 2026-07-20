@@ -389,4 +389,26 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
+<trk><name>Marine Drive Bike Route</name>
+<trkseg>
+<trkpt lat="49.016586" lon="-122.779269"/>
+<trkpt lat="49.016603" lon="-122.788879"/>
+<trkpt lat="49.016640" lon="-122.790340"/>
+<trkpt lat="49.017779" lon="-122.793979"/>
+<trkpt lat="49.018982" lon="-122.797798"/>
+<trkpt lat="49.019971" lon="-122.800996"/>
+<trkpt lat="49.022215" lon="-122.808709"/>
+<trkpt lat="49.023292" lon="-122.812324"/>
+<trkpt lat="49.023332" lon="-122.812452"/>
+<trkpt lat="49.024481" lon="-122.816524"/>
+<trkpt lat="49.025036" lon="-122.820404"/>
+<trkpt lat="49.025697" lon="-122.822987"/>
+<trkpt lat="49.025765" lon="-122.823249"/>
+<trkpt lat="49.026303" lon="-122.826090"/>
+<trkpt lat="49.026718" lon="-122.830482"/>
+<trkpt lat="49.027239" lon="-122.832083"/>
+<trkpt lat="49.027544" lon="-122.834518"/>
+<trkpt lat="49.027176" lon="-122.845465"/>
+</trkseg>
+</trk>
 </gpx>

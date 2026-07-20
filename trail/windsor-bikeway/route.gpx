@@ -753,4 +753,138 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>Windsor Bikeway</name>
+<trkseg>
+<trkpt lat="49.230988" lon="-123.085045"/>
+<trkpt lat="49.230909" lon="-123.083331"/>
+<trkpt lat="49.230895" lon="-123.082633"/>
+<trkpt lat="49.230860" lon="-123.079951"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.231236" lon="-123.085018"/>
+<trkpt lat="49.232824" lon="-123.084962"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.232824" lon="-123.084962"/>
+<trkpt lat="49.232826" lon="-123.085147"/>
+<trkpt lat="49.231243" lon="-123.085177"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.231247" lon="-123.085070"/>
+<trkpt lat="49.231142" lon="-123.085312"/>
+<trkpt lat="49.230982" lon="-123.085129"/>
+<trkpt lat="49.231247" lon="-123.085070"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.232824" lon="-123.084962"/>
+<trkpt lat="49.232822" lon="-123.084807"/>
+<trkpt lat="49.235580" lon="-123.084769"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.235676" lon="-123.084765"/>
+<trkpt lat="49.238200" lon="-123.084660"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.238280" lon="-123.084659"/>
+<trkpt lat="49.240270" lon="-123.084614"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.240270" lon="-123.084614"/>
+<trkpt lat="49.240296" lon="-123.084653"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.240296" lon="-123.084653"/>
+<trkpt lat="49.240311" lon="-123.084579"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.240311" lon="-123.084579"/>
+<trkpt lat="49.240296" lon="-123.084653"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.240296" lon="-123.084653"/>
+<trkpt lat="49.240270" lon="-123.084614"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.240270" lon="-123.084614"/>
+<trkpt lat="49.240295" lon="-123.084579"/>
+<trkpt lat="49.240311" lon="-123.084579"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.240311" lon="-123.084579"/>
+<trkpt lat="49.240467" lon="-123.084187"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.240467" lon="-123.084187"/>
+<trkpt lat="49.240514" lon="-123.084106"/>
+<trkpt lat="49.240586" lon="-123.084115"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.240586" lon="-123.084115"/>
+<trkpt lat="49.240467" lon="-123.084187"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.240586" lon="-123.084115"/>
+<trkpt lat="49.242474" lon="-123.084050"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.242566" lon="-123.084049"/>
+<trkpt lat="49.244578" lon="-123.083986"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.244665" lon="-123.083981"/>
+<trkpt lat="49.245416" lon="-123.083963"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.245502" lon="-123.083958"/>
+<trkpt lat="49.248536" lon="-123.083896"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.248615" lon="-123.083893"/>
+<trkpt lat="49.249109" lon="-123.083888"/>
+<trkpt lat="49.251784" lon="-123.083789"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.251866" lon="-123.083790"/>
+<trkpt lat="49.252677" lon="-123.083751"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.252762" lon="-123.083749"/>
+<trkpt lat="49.255428" lon="-123.083654"/>
+<trkpt lat="49.256294" lon="-123.083623"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.256381" lon="-123.083620"/>
+<trkpt lat="49.256919" lon="-123.083601"/>
+<trkpt lat="49.256912" lon="-123.083438"/>
+<trkpt lat="49.257830" lon="-123.083415"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.257899" lon="-123.083414"/>
+<trkpt lat="49.258734" lon="-123.083394"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.258803" lon="-123.083393"/>
+<trkpt lat="49.260540" lon="-123.083353"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.260625" lon="-123.083351"/>
+<trkpt lat="49.261440" lon="-123.083337"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.261480" lon="-123.083271"/>
+<trkpt lat="49.261466" lon="-123.081465"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.261513" lon="-123.081395"/>
+<trkpt lat="49.261916" lon="-123.081390"/>
+<trkpt lat="49.262219" lon="-123.081384"/>
+<trkpt lat="49.262414" lon="-123.081379"/>
+<trkpt lat="49.264226" lon="-123.081331"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.264315" lon="-123.081340"/>
+<trkpt lat="49.265233" lon="-123.081320"/>
+<trkpt lat="49.265345" lon="-123.081319"/>
+</trkseg>
+</trk>
 </gpx>

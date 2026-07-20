@@ -676,4 +676,57 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>Richter Street</name>
+<trkseg>
+<trkpt lat="49.855223" lon="-119.490317"/>
+<trkpt lat="49.855354" lon="-119.490026"/>
+<trkpt lat="49.855606" lon="-119.489616"/>
+<trkpt lat="49.861484" lon="-119.488270"/>
+<trkpt lat="49.861841" lon="-119.488234"/>
+<trkpt lat="49.865402" lon="-119.488222"/>
+<trkpt lat="49.878538" lon="-119.488397"/>
+<trkpt lat="49.878663" lon="-119.488450"/>
+<trkpt lat="49.879854" lon="-119.488495"/>
+<trkpt lat="49.880789" lon="-119.488493"/>
+<trkpt lat="49.880978" lon="-119.488496"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.880978" lon="-119.488496"/>
+<trkpt lat="49.881732" lon="-119.488618"/>
+<trkpt lat="49.882646" lon="-119.488617"/>
+<trkpt lat="49.883590" lon="-119.488623"/>
+<trkpt lat="49.883709" lon="-119.488618"/>
+<trkpt lat="49.884506" lon="-119.488515"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.884506" lon="-119.488515"/>
+<trkpt lat="49.886321" lon="-119.488484"/>
+<trkpt lat="49.889002" lon="-119.488481"/>
+<trkpt lat="49.891332" lon="-119.488479"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.891332" lon="-119.488479"/>
+<trkpt lat="49.891663" lon="-119.488415"/>
+<trkpt lat="49.891925" lon="-119.488467"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.891925" lon="-119.488467"/>
+<trkpt lat="49.893583" lon="-119.488470"/>
+<trkpt lat="49.903499" lon="-119.488449"/>
+<trkpt lat="49.903663" lon="-119.488502"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.891925" lon="-119.488467"/>
+<trkpt lat="49.891663" lon="-119.488516"/>
+<trkpt lat="49.891332" lon="-119.488479"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.884506" lon="-119.488515"/>
+<trkpt lat="49.883712" lon="-119.488461"/>
+<trkpt lat="49.883590" lon="-119.488463"/>
+<trkpt lat="49.882648" lon="-119.488458"/>
+<trkpt lat="49.881728" lon="-119.488456"/>
+<trkpt lat="49.880978" lon="-119.488496"/>
+</trkseg>
+</trk>
 </gpx>

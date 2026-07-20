@@ -137,4 +137,32 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>Mount Lehman Road</name>
+<trkseg>
+<trkpt lat="49.031880" lon="-122.378566"/>
+<trkpt lat="49.037548" lon="-122.378376"/>
+<trkpt lat="49.038696" lon="-122.378759"/>
+<trkpt lat="49.040395" lon="-122.380696"/>
+<trkpt lat="49.041551" lon="-122.381200"/>
+<trkpt lat="49.046155" lon="-122.381276"/>
+<trkpt lat="49.046594" lon="-122.381268"/>
+<trkpt lat="49.050560" lon="-122.381180"/>
+<trkpt lat="49.052861" lon="-122.381174"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.065618" lon="-122.381209"/>
+<trkpt lat="49.066445" lon="-122.381190"/>
+<trkpt lat="49.066828" lon="-122.381194"/>
+<trkpt lat="49.069503" lon="-122.381196"/>
+<trkpt lat="49.069790" lon="-122.381188"/>
+<trkpt lat="49.074751" lon="-122.381162"/>
+<trkpt lat="49.075039" lon="-122.381172"/>
+<trkpt lat="49.086683" lon="-122.381187"/>
+<trkpt lat="49.087734" lon="-122.382121"/>
+<trkpt lat="49.089200" lon="-122.382402"/>
+<trkpt lat="49.092232" lon="-122.382024"/>
+<trkpt lat="49.097028" lon="-122.382008"/>
+<trkpt lat="49.104009" lon="-122.382016"/>
+</trkseg>
+</trk>
 </gpx>

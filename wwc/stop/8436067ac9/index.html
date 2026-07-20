@@ -256,6 +256,7 @@ a.listing-trail-name:hover { text-decoration: underline; }
 .listing-notable { font-size: 14.5px; color: #1F514C; font-style: italic; margin: -8px 0 18px; line-height: 1.5; }
 
 </style>
+<script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
 </head>
 <body>
 <div class="g-header">
@@ -354,6 +355,23 @@ a.listing-trail-name:hover { text-decoration: underline; }
     slot.appendChild(a);
   } catch(err) {}
 })();
+</script>
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
 </script>
 </body>
 </html>

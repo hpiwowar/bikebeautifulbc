@@ -11,4 +11,27 @@
 <sym>Dot</sym>
 <type>overlook</type>
 </wpt>
+<trk><name>Pitt River East Dyke/Rennie Dyke</name>
+<trkseg>
+<trkpt lat="49.349013" lon="-122.616575"/>
+<trkpt lat="49.348894" lon="-122.617435"/>
+<trkpt lat="49.347177" lon="-122.620940"/>
+<trkpt lat="49.344988" lon="-122.623875"/>
+<trkpt lat="49.342352" lon="-122.628258"/>
+<trkpt lat="49.339332" lon="-122.630859"/>
+<trkpt lat="49.335564" lon="-122.635816"/>
+<trkpt lat="49.334844" lon="-122.639357"/>
+<trkpt lat="49.334309" lon="-122.639711"/>
+<trkpt lat="49.333977" lon="-122.640537"/>
+<trkpt lat="49.333723" lon="-122.642141"/>
+<trkpt lat="49.334147" lon="-122.642976"/>
+<trkpt lat="49.333366" lon="-122.646824"/>
+<trkpt lat="49.328181" lon="-122.654919"/>
+<trkpt lat="49.323552" lon="-122.662177"/>
+<trkpt lat="49.320258" lon="-122.666121"/>
+<trkpt lat="49.318499" lon="-122.667697"/>
+<trkpt lat="49.317127" lon="-122.670720"/>
+<trkpt lat="49.314761" lon="-122.673919"/>
+</trkseg>
+</trk>
 </gpx>

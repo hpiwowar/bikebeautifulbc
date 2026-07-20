@@ -67,4 +67,120 @@
 <sym>Dot</sym>
 <type>rest_area</type>
 </wpt>
+<trk><name>Fraser Heights Crosstown</name>
+<trkseg>
+<trkpt lat="49.206046" lon="-122.800810"/>
+<trkpt lat="49.205154" lon="-122.800769"/>
+<trkpt lat="49.205012" lon="-122.796824"/>
+<trkpt lat="49.203456" lon="-122.796283"/>
+<trkpt lat="49.203359" lon="-122.795439"/>
+<trkpt lat="49.203360" lon="-122.795317"/>
+<trkpt lat="49.202490" lon="-122.795292"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.202490" lon="-122.795292"/>
+<trkpt lat="49.202477" lon="-122.793995"/>
+<trkpt lat="49.202515" lon="-122.789804"/>
+<trkpt lat="49.202468" lon="-122.787043"/>
+<trkpt lat="49.202074" lon="-122.786014"/>
+<trkpt lat="49.199747" lon="-122.784746"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.199747" lon="-122.784746"/>
+<trkpt lat="49.202032" lon="-122.786090"/>
+<trkpt lat="49.202418" lon="-122.787140"/>
+<trkpt lat="49.202449" lon="-122.789804"/>
+<trkpt lat="49.202490" lon="-122.795292"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.199747" lon="-122.784746"/>
+<trkpt lat="49.199278" lon="-122.784326"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.199278" lon="-122.784326"/>
+<trkpt lat="49.198952" lon="-122.784324"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198952" lon="-122.784324"/>
+<trkpt lat="49.198955" lon="-122.784151"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198955" lon="-122.784151"/>
+<trkpt lat="49.199278" lon="-122.784326"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198952" lon="-122.784324"/>
+<trkpt lat="49.198765" lon="-122.784328"/>
+<trkpt lat="49.198810" lon="-122.784078"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198810" lon="-122.784078"/>
+<trkpt lat="49.198904" lon="-122.784078"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198904" lon="-122.784078"/>
+<trkpt lat="49.198955" lon="-122.784151"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198904" lon="-122.784078"/>
+<trkpt lat="49.198839" lon="-122.783574"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198839" lon="-122.783574"/>
+<trkpt lat="49.198810" lon="-122.784078"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198839" lon="-122.783574"/>
+<trkpt lat="49.198817" lon="-122.781099"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198817" lon="-122.781099"/>
+<trkpt lat="49.198842" lon="-122.778680"/>
+<trkpt lat="49.198813" lon="-122.776939"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198813" lon="-122.776939"/>
+<trkpt lat="49.198772" lon="-122.778543"/>
+<trkpt lat="49.198773" lon="-122.778713"/>
+<trkpt lat="49.198775" lon="-122.779591"/>
+<trkpt lat="49.198817" lon="-122.781099"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.198813" lon="-122.776939"/>
+<trkpt lat="49.198843" lon="-122.768367"/>
+<trkpt lat="49.198844" lon="-122.767936"/>
+<trkpt lat="49.198845" lon="-122.767518"/>
+<trkpt lat="49.198859" lon="-122.762762"/>
+<trkpt lat="49.197757" lon="-122.762726"/>
+<trkpt lat="49.197194" lon="-122.761489"/>
+<trkpt lat="49.195789" lon="-122.760046"/>
+<trkpt lat="49.195046" lon="-122.758661"/>
+<trkpt lat="49.193675" lon="-122.758532"/>
+<trkpt lat="49.193678" lon="-122.756499"/>
+<trkpt lat="49.191613" lon="-122.756475"/>
+<trkpt lat="49.188700" lon="-122.756473"/>
+<trkpt lat="49.188213" lon="-122.756483"/>
+<trkpt lat="49.187386" lon="-122.756405"/>
+<trkpt lat="49.185930" lon="-122.750112"/>
+<trkpt lat="49.184720" lon="-122.745491"/>
+<trkpt lat="49.184302" lon="-122.743474"/>
+<trkpt lat="49.184353" lon="-122.737495"/>
+<trkpt lat="49.185374" lon="-122.736029"/>
+<trkpt lat="49.185534" lon="-122.734664"/>
+<trkpt lat="49.185543" lon="-122.734055"/>
+<trkpt lat="49.185540" lon="-122.733041"/>
+<trkpt lat="49.185318" lon="-122.731061"/>
+<trkpt lat="49.184530" lon="-122.730616"/>
+<trkpt lat="49.184214" lon="-122.730619"/>
+<trkpt lat="49.181476" lon="-122.730921"/>
+<trkpt lat="49.180930" lon="-122.730480"/>
+<trkpt lat="49.180639" lon="-122.729711"/>
+<trkpt lat="49.177325" lon="-122.717031"/>
+<trkpt lat="49.177050" lon="-122.715782"/>
+<trkpt lat="49.177009" lon="-122.715121"/>
+<trkpt lat="49.177007" lon="-122.714691"/>
+<trkpt lat="49.177003" lon="-122.711903"/>
+<trkpt lat="49.177298" lon="-122.711275"/>
+</trkseg>
+</trk>
 </gpx>

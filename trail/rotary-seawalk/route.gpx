@@ -158,4 +158,33 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>Rotary Seawalk</name>
+<trkseg>
+<trkpt lat="49.954912" lon="-125.204689"/>
+<trkpt lat="49.955004" lon="-125.204525"/>
+<trkpt lat="49.957658" lon="-125.206797"/>
+<trkpt lat="49.959739" lon="-125.207672"/>
+<trkpt lat="49.961820" lon="-125.209125"/>
+<trkpt lat="49.964958" lon="-125.208619"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.971912" lon="-125.217155"/>
+<trkpt lat="49.972660" lon="-125.218518"/>
+<trkpt lat="49.974284" lon="-125.219895"/>
+<trkpt lat="49.978057" lon="-125.221035"/>
+<trkpt lat="49.979433" lon="-125.222261"/>
+<trkpt lat="49.980725" lon="-125.222925"/>
+<trkpt lat="49.981093" lon="-125.223496"/>
+<trkpt lat="49.983399" lon="-125.223415"/>
+<trkpt lat="49.985030" lon="-125.223943"/>
+<trkpt lat="49.988567" lon="-125.226162"/>
+<trkpt lat="49.994008" lon="-125.228740"/>
+<trkpt lat="49.994679" lon="-125.228916"/>
+<trkpt lat="49.994858" lon="-125.228246"/>
+<trkpt lat="49.995241" lon="-125.229196"/>
+<trkpt lat="50.002284" lon="-125.231116"/>
+<trkpt lat="50.005258" lon="-125.232390"/>
+<trkpt lat="50.006774" lon="-125.233526"/>
+</trkseg>
+</trk>
 </gpx>

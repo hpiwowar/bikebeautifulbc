@@ -109,4 +109,77 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>20 Avenue</name>
+<trkseg>
+<trkpt lat="49.038561" lon="-122.834521"/>
+<trkpt lat="49.038552" lon="-122.834284"/>
+<trkpt lat="49.038534" lon="-122.818153"/>
+<trkpt lat="49.038672" lon="-122.817884"/>
+<trkpt lat="49.038668" lon="-122.817694"/>
+<trkpt lat="49.038530" lon="-122.812373"/>
+<trkpt lat="49.038502" lon="-122.812129"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038408" lon="-122.812213"/>
+<trkpt lat="49.038534" lon="-122.817659"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038534" lon="-122.817659"/>
+<trkpt lat="49.038545" lon="-122.817941"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038545" lon="-122.817941"/>
+<trkpt lat="49.038426" lon="-122.819378"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038426" lon="-122.819378"/>
+<trkpt lat="49.038432" lon="-122.823303"/>
+<trkpt lat="49.038453" lon="-122.825316"/>
+<trkpt lat="49.038461" lon="-122.829377"/>
+<trkpt lat="49.038466" lon="-122.831234"/>
+<trkpt lat="49.038455" lon="-122.832946"/>
+<trkpt lat="49.038476" lon="-122.834390"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038426" lon="-122.819378"/>
+<trkpt lat="49.038382" lon="-122.817964"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038382" lon="-122.817964"/>
+<trkpt lat="49.038392" lon="-122.817633"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038392" lon="-122.817633"/>
+<trkpt lat="49.038534" lon="-122.817659"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038392" lon="-122.817633"/>
+<trkpt lat="49.038392" lon="-122.813515"/>
+<trkpt lat="49.038408" lon="-122.812213"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038408" lon="-122.812213"/>
+<trkpt lat="49.038405" lon="-122.811488"/>
+<trkpt lat="49.038401" lon="-122.811002"/>
+<trkpt lat="49.038388" lon="-122.807433"/>
+<trkpt lat="49.038381" lon="-122.806736"/>
+<trkpt lat="49.038356" lon="-122.802307"/>
+<trkpt lat="49.038351" lon="-122.801708"/>
+<trkpt lat="49.038347" lon="-122.801209"/>
+<trkpt lat="49.038351" lon="-122.800421"/>
+<trkpt lat="49.038352" lon="-122.797101"/>
+<trkpt lat="49.038351" lon="-122.795695"/>
+<trkpt lat="49.038357" lon="-122.794587"/>
+<trkpt lat="49.038347" lon="-122.791522"/>
+<trkpt lat="49.038342" lon="-122.790216"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038309" lon="-122.812477"/>
+<trkpt lat="49.038351" lon="-122.817467"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.038382" lon="-122.817964"/>
+<trkpt lat="49.038545" lon="-122.817941"/>
+</trkseg>
+</trk>
 </gpx>

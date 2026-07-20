@@ -830,4 +830,109 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<trk><name>Frances/Union Bikeway</name>
+<trkseg>
+<trkpt lat="49.277453" lon="-123.023445"/>
+<trkpt lat="49.277468" lon="-123.023413"/>
+<trkpt lat="49.277569" lon="-123.023129"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.277569" lon="-123.023129"/>
+<trkpt lat="49.277590" lon="-123.023225"/>
+<trkpt lat="49.277570" lon="-123.023304"/>
+<trkpt lat="49.277565" lon="-123.023444"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.277569" lon="-123.023129"/>
+<trkpt lat="49.277567" lon="-123.022748"/>
+<trkpt lat="49.277515" lon="-123.018662"/>
+<trkpt lat="49.279300" lon="-123.018657"/>
+<trkpt lat="49.279285" lon="-123.016294"/>
+<trkpt lat="49.279278" lon="-123.014281"/>
+<trkpt lat="49.279276" lon="-123.014169"/>
+<trkpt lat="49.279251" lon="-123.011513"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.279249" lon="-123.011406"/>
+<trkpt lat="49.279187" lon="-123.003162"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.279187" lon="-123.003162"/>
+<trkpt lat="49.279222" lon="-123.003065"/>
+<trkpt lat="49.279191" lon="-123.002934"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.279191" lon="-123.002934"/>
+<trkpt lat="49.279160" lon="-123.003063"/>
+<trkpt lat="49.279187" lon="-123.003162"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.279191" lon="-123.002934"/>
+<trkpt lat="49.279168" lon="-122.997497"/>
+<trkpt lat="49.279159" lon="-122.994715"/>
+<trkpt lat="49.279147" lon="-122.992116"/>
+<trkpt lat="49.279101" lon="-122.980957"/>
+<trkpt lat="49.279194" lon="-122.977477"/>
+<trkpt lat="49.279187" lon="-122.976800"/>
+<trkpt lat="49.279164" lon="-122.975579"/>
+<trkpt lat="49.279901" lon="-122.975440"/>
+<trkpt lat="49.280130" lon="-122.975094"/>
+<trkpt lat="49.280188" lon="-122.973522"/>
+<trkpt lat="49.280129" lon="-122.973287"/>
+<trkpt lat="49.279474" lon="-122.972624"/>
+<trkpt lat="49.277753" lon="-122.970150"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.277753" lon="-122.970150"/>
+<trkpt lat="49.277758" lon="-122.970000"/>
+<trkpt lat="49.277808" lon="-122.969551"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.277808" lon="-122.969551"/>
+<trkpt lat="49.277839" lon="-122.969778"/>
+<trkpt lat="49.277799" lon="-122.970023"/>
+<trkpt lat="49.277753" lon="-122.970150"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.277808" lon="-122.969551"/>
+<trkpt lat="49.277793" lon="-122.959046"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.277792" lon="-122.958921"/>
+<trkpt lat="49.277764" lon="-122.953430"/>
+<trkpt lat="49.279898" lon="-122.953387"/>
+<trkpt lat="49.280331" lon="-122.953389"/>
+<trkpt lat="49.280424" lon="-122.953392"/>
+<trkpt lat="49.280854" lon="-122.953388"/>
+<trkpt lat="49.282961" lon="-122.953379"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.282961" lon="-122.953379"/>
+<trkpt lat="49.283167" lon="-122.953547"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.283193" lon="-122.953437"/>
+<trkpt lat="49.282961" lon="-122.953379"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.283397" lon="-122.953493"/>
+<trkpt lat="49.283581" lon="-122.953448"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.283581" lon="-122.953448"/>
+<trkpt lat="49.283403" lon="-122.953557"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.283402" lon="-122.953524"/>
+<trkpt lat="49.283171" lon="-122.953598"/>
+<trkpt lat="49.283402" lon="-122.953524"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.283581" lon="-122.953448"/>
+<trkpt lat="49.286332" lon="-122.952193"/>
+<trkpt lat="49.287685" lon="-122.950383"/>
+<trkpt lat="49.288227" lon="-122.949571"/>
+<trkpt lat="49.288427" lon="-122.949710"/>
+</trkseg>
+</trk>
 </gpx>

@@ -25,4 +25,16 @@
 <sym>Dot</sym>
 <type>overlook</type>
 </wpt>
+<trk><name>Huntingdon Road</name>
+<trkseg>
+<trkpt lat="49.017106" lon="-122.386507"/>
+<trkpt lat="49.017042" lon="-122.381834"/>
+<trkpt lat="49.016543" lon="-122.340410"/>
+<trkpt lat="49.016711" lon="-122.326381"/>
+<trkpt lat="49.016821" lon="-122.320155"/>
+<trkpt lat="49.016907" lon="-122.314066"/>
+<trkpt lat="49.016909" lon="-122.310011"/>
+<trkpt lat="49.016870" lon="-122.293686"/>
+</trkseg>
+</trk>
 </gpx>

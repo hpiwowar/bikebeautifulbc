@@ -256,6 +256,7 @@ a.listing-trail-name:hover { text-decoration: underline; }
 .listing-notable { font-size: 14.5px; color: #1F514C; font-style: italic; margin: -8px 0 18px; line-height: 1.5; }
 
 </style>
+<script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
 </head>
 <body>
 <div class="g-header">
@@ -344,7 +345,7 @@ a.listing-trail-name:hover { text-decoration: underline; }
     io.observe(el);
   } else { init(); }
 })();
-</script></div><div class="ls-card"><div class="ls-card-pad"><div class="ls-card-title">Location</div><div class="ls-contact-row"><span class="ico">📍</span><span>87 Moody St, Port Moody, BC</span></div><div class="ls-contact-row"><span class="ico">🌐</span><a href="https://www.sweettalkdonuts.com/" target="_blank" rel="noopener">https://www.sweettalkdonuts.com/</a></div><div class="ls-card-title" style="margin-top:14px;color:#5f259f;">Nearby bike routes</div><div class="ls-trail-line"><a href="/trail/trans-canada-trail/" style="">Trans Canada Trail</a> <span class="dist">40 m</span></div></div></div></div><div class="ls-bpnote"><span class="ico">&#128690;</span><span><strong>Bike parking nearby:</strong> 2 public racks within 100 m. Nearest is 42 m away.<details><summary>Full list &rsaquo;</summary><ul><li>Staple, uncovered, free (42 m)</li><li>Staple, uncovered, free (98 m)</li></ul></details></span></div></aside></div>
+</script></div><div class="ls-card"><div class="ls-card-pad"><div class="ls-card-title">Location</div><div class="ls-contact-row"><span class="ico">📍</span><span>87 Moody St, Port Moody, BC</span></div><div class="ls-contact-row"><span class="ico">🌐</span><a href="https://www.sweettalkdonuts.com/" target="_blank" rel="noopener">https://www.sweettalkdonuts.com/</a></div></div></div></div><div class="ls-bpnote"><span class="ico">&#128690;</span><span><strong>Bike parking nearby:</strong> 2 public racks within 100 m. Nearest is 42 m away.<details><summary>Full list &rsaquo;</summary><ul><li>Staple, uncovered, free (42 m)</li><li>Staple, uncovered, free (98 m)</li></ul></details></span></div></aside></div>
 </main>
 <div class="g-footer">
   <a class="g-footer-brand" href="/">
@@ -400,6 +401,23 @@ a.listing-trail-name:hover { text-decoration: underline; }
     slot.appendChild(a);
   } catch(err) {}
 })();
+</script>
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
 </script>
 </body>
 </html>
