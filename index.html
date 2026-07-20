@@ -137,12 +137,11 @@ body {
 .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-btn {
   padding: 16px 32px; border-radius: 24px; font-size: 16px; font-weight: 500;
-  border: 2px solid transparent;
   text-decoration: none; text-align: center; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .hero-btn-light { background: #FFFDF9; color: #2C4C3B; }
 .hero-btn-light:hover { background: #1E7D96; color: white; transform: translateY(-1px); }
-.hero-btn-outline { background: transparent; color: white; border-color: white; }
+.hero-btn-outline { background: transparent; color: white; border: 2px solid white; }
 .hero-btn-outline:hover { background: #1E7D96; color: white; border-color: #1E7D96; transform: translateY(-1px); }
 .hero-img {
   background: url('/img/home/main_page_Small-1200px-233885.jpg') center/cover;
@@ -167,8 +166,88 @@ body {
   font-size: 40px; font-weight: 400; color: #0D2E1E; margin-top: 8px;
   letter-spacing: -0.03em;
 }
-.ready { text-align: center; padding: 0.4rem 1rem 2.2rem; background: #FFF6E5; }
-.ready a { color: #1E7D96; font-weight: 700; font-size: 1rem; text-decoration: none; border-bottom: 2px solid #6EC040; padding-bottom: 2px; }
+/* Journey panel — "how a trip comes together" wander line (2026-07-20) */
+.journey { background: #EAF4F8; padding: 64px 40px 72px; }
+.journey-head { text-align: center; max-width: 640px; margin: 0 auto 34px; }
+.journey-head h2 {
+  font-family: "Archivo", sans-serif;
+  font-size: 27px; font-weight: 500; color: #0D2E1E; letter-spacing: -0.02em;
+}
+.journey-head p { font-size: 15.5px; color: rgba(13,46,30,0.62); margin-top: 8px; }
+.journey-scene { position: relative; max-width: 1040px; margin: 0 auto; aspect-ratio: 1000 / 560; }
+.journey-scene > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.jstop {
+  position: absolute; transform: translate(-50%, -50%);
+  display: block; text-decoration: none; text-align: center;
+  width: 196px; padding: 12px 14px 11px;
+  background: #FFFDF9; border: 1.5px solid #C9E0EB; border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(13,64,112,0.07);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.jstop:hover {
+  transform: translate(-50%, -52%); border-color: #6EC040;
+  box-shadow: 0 6px 18px rgba(13,64,112,0.14);
+}
+.jstop .num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 2px solid #1E7D96; color: #1E7D96;
+  font-size: 13px; font-weight: 700; margin-bottom: 6px; background: #FFFDF9;
+}
+.jstop .lbl { display: block; font-size: 15px; font-weight: 700; color: #0D2E1E; letter-spacing: -0.01em; }
+.jstop .sub { display: block; font-size: 12.5px; color: rgba(13,46,30,0.58); margin-top: 2px; }
+.jfinish { position: absolute; transform: translate(-50%, -50%); text-align: center; width: 200px; }
+.jfinish .lbl {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px; font-weight: 600; color: #0D2E1E; letter-spacing: -0.01em;
+}
+.jspur {
+  position: absolute; transform: translate(-50%, -50%);
+  text-align: center; width: 186px; padding: 9px 12px 8px;
+  border: 1.5px dashed #A8C6D6; border-radius: 12px; background: rgba(255,253,249,0.55);
+}
+.jspur .lbl { display: block; font-size: 12px; font-weight: 800; color: #4A6B7A; letter-spacing: 0.02em; text-transform: uppercase; }
+.jspur a { display: inline-block; font-size: 12.5px; font-weight: 700; color: #1E7D96; text-decoration: none; margin: 3px 4px 0; }
+.jspur a:hover { color: #6EC040; }
+.letsgo {
+  position: absolute; transform: translate(-50%, -50%) rotate(-7deg);
+  font-family: "Bradley Hand", "Segoe Script", "Comic Sans MS", cursive;
+  font-size: 21px; color: #1E7D96; opacity: 0.9; white-space: nowrap;
+}
+.journey-cta { text-align: center; margin-top: 30px; }
+.journey-cta a {
+  display: inline-block; background: #1E7D96; color: #FFFDF9;
+  font-size: 15px; font-weight: 700; text-decoration: none;
+  padding: 13px 26px; border-radius: 999px;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.journey-cta a:hover { background: #0D4070; transform: translateY(-1px); }
+.journey-mobile { display: none; }
+.journey-sidetrips-mobile { display: none; }
+@media (max-width: 760px) {
+  .journey { padding: 48px 20px 56px; }
+  .journey-scene { display: none; }
+  .journey-mobile { display: block; max-width: 380px; margin: 0 auto; list-style: none; padding: 0; }
+  .journey-mobile li { position: relative; padding: 0 0 26px 44px; }
+  .journey-mobile li::before {
+    content: ""; position: absolute; left: 13px; top: 30px; bottom: -4px;
+    border-left: 3px dashed rgba(30,125,150,0.5);
+  }
+  .journey-mobile li:last-child::before { display: none; }
+  .journey-mobile .num {
+    position: absolute; left: 0; top: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 50%;
+    border: 2px solid #1E7D96; color: #1E7D96; background: #FFFDF9;
+    font-size: 13px; font-weight: 700;
+  }
+  .journey-mobile a { text-decoration: none; }
+  .journey-mobile .lbl { display: block; font-size: 16px; font-weight: 700; color: #0D2E1E; }
+  .journey-mobile .sub { display: block; font-size: 13px; color: rgba(13,46,30,0.6); }
+  .journey-mobile .fin .lbl { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 600; }
+  .journey-sidetrips-mobile { display: block; text-align: center; font-size: 13px; color: rgba(13,46,30,0.6); margin-top: 4px; }
+  .journey-sidetrips-mobile a { color: #1E7D96; font-weight: 700; text-decoration: none; }
+}
 
 .newsletter-wrap {
   background: #FFFFFF; padding: 80px 40px; margin: 16px 0;
@@ -343,7 +422,124 @@ body {
   <p class="answer">British Columbia has it all.</p>
 </div>
 
-<div class="ready reveal"><a href="/plan/">Ready? Plan your trip →</a></div>
+<div class="journey">
+  <div class="journey-head reveal">
+    <h2 id="ready-heres-how-a-trip-comes-together">Ready? Here's how a trip comes together.<a class="h-anchor" href="#ready-heres-how-a-trip-comes-together" aria-label="Link to this section">#</a></h2>
+    <p>Seven little steps from daydream to rolling out the door. Click any one to jump in.</p>
+  </div>
+
+  <div class="journey-scene reveal">
+    <svg viewBox="0 0 1000 560" fill="none" aria-hidden="true">
+      <defs>
+        <g id="jbike" stroke="#0D2E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="8"/>
+          <circle cx="39" cy="21" r="8"/>
+          <g stroke-width="1" opacity="0.4">
+            <path d="M9 13 V29 M2.4 17 L15.6 25 M2.4 25 L15.6 17"/>
+            <path d="M39 13 V29 M32.4 17 L45.6 25 M32.4 25 L45.6 17"/>
+          </g>
+          <path d="M9 21 L17 7 M9 21 L24 22 M24 22 L17 7 M17 7 L33 6.5 M24 22 L34 8 M34 8 L39 21 M34 8 L35 4.5"/>
+          <path d="M13 5.5 L20 5.5" stroke-width="3"/>
+          <path d="M31.5 4.5 L38.5 5"/>
+          <circle cx="24" cy="22" r="2.4"/>
+          <path d="M24 22 L27.5 26"/>
+        </g>
+      </defs>
+      <!-- the wander line -->
+      <path d="M 52 96
+               C 90 78, 120 92, 150 86
+               C 250 72, 340 48, 450 62
+               C 560 76, 650 106, 760 92
+               C 850 80, 945 108, 938 168
+               C 934 200, 897 205, 893 180
+               C 890 160, 923 152, 934 176
+               C 952 216, 860 238, 700 232
+               C 560 228, 470 262, 360 252
+               C 230 240, 92 268, 96 316
+               C 100 360, 158 380, 230 398
+               C 340 424, 450 406, 560 385
+               C 672 364, 780 400, 850 420
+               C 900 432, 950 438, 1010 444"
+            stroke="#1E7D96" stroke-width="3.5" stroke-linecap="round"
+            stroke-dasharray="9 13" opacity="0.75"/>
+      <!-- detour spur: wanders off the left turn between stops 5 and 6 -->
+      <path d="M 112 352 C 88 400, 90 440, 112 468"
+            stroke="#6E6E6E" stroke-width="2.5" stroke-linecap="round"
+            stroke-dasharray="4 10" opacity="0.55"/>
+      <!-- mountains at journey's end -->
+      <g stroke="#6E6E6E" stroke-width="2.5" opacity="0.45" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M842 402 L880 358 L918 402"/>
+        <path d="M900 396 L932 364 L964 396"/>
+        <path d="M938 390 L964 368 L990 390"/>
+      </g>
+      <!-- bike setting off -->
+      <use href="#jbike" x="2" y="66"/>
+      <!-- bike riding off the page -->
+      <use href="#jbike" x="962" y="412"/>
+    </svg>
+
+    <a class="jstop" style="left:15%; top:15.4%;" href="/routes/">
+      <span class="num">1</span>
+      <span class="lbl">Get inspired</span>
+      <span class="sub">Watch the reel, dream a little</span>
+    </a>
+    <a class="jstop" style="left:45%; top:11%;" href="/routes/">
+      <span class="num">2</span>
+      <span class="lbl">Explore a region</span>
+      <span class="sub">Where in BC is calling you?</span>
+    </a>
+    <a class="jstop" style="left:76%; top:16.4%;" href="/route-publishers/">
+      <span class="num">3</span>
+      <span class="lbl">Meet the route publishers</span>
+      <span class="sub">The people who map the rides</span>
+    </a>
+    <a class="jstop" style="left:70%; top:41.4%;" href="/routes/">
+      <span class="num">4</span>
+      <span class="lbl">Choose a route</span>
+      <span class="sub">A day ride, or the big loop</span>
+    </a>
+    <a class="jstop" style="left:36%; top:45%;" href="/to-fro/">
+      <span class="num">5</span>
+      <span class="lbl">Plan your To &amp; Fro</span>
+      <span class="sub">You and your bike, there and back</span>
+    </a>
+    <a class="jstop" style="left:23%; top:71%;" href="/wwc/">
+      <span class="num">6</span>
+      <span class="lbl">Pick your stops</span>
+      <span class="sub">Sleep, eat, refill, explore</span>
+    </a>
+    <a class="jstop" style="left:56%; top:68.8%;" href="/be-prepared/">
+      <span class="num">7</span>
+      <span class="lbl">Get prepared</span>
+      <span class="sub">What to pack and know</span>
+    </a>
+    <div class="jfinish" style="left:84%; top:83%;">
+      <span class="lbl">Have a great time exploring BC!</span>
+    </div>
+
+    <div class="jspur" style="left:13%; top:89%;">
+      <span class="lbl">Side trips</span>
+      <a href="/trails/">Named trails &rarr;</a>
+      <a href="/wwc/communities/">Communities &rarr;</a>
+    </div>
+
+    <div class="letsgo" style="left:6%; top:7.5%;">Let's go!</div>
+  </div>
+
+  <ol class="journey-mobile">
+    <li><span class="num">1</span><a href="/routes/"><span class="lbl">Get inspired</span><span class="sub">Watch the reel, dream a little</span></a></li>
+    <li><span class="num">2</span><a href="/routes/"><span class="lbl">Explore a region</span><span class="sub">Where in BC is calling you?</span></a></li>
+    <li><span class="num">3</span><a href="/route-publishers/"><span class="lbl">Meet the route publishers</span><span class="sub">The people who map the rides</span></a></li>
+    <li><span class="num">4</span><a href="/routes/"><span class="lbl">Choose a route</span><span class="sub">A day ride, or the big loop</span></a></li>
+    <li><span class="num">5</span><a href="/to-fro/"><span class="lbl">Plan your To &amp; Fro</span><span class="sub">You and your bike, there and back</span></a></li>
+    <li><span class="num">6</span><a href="/wwc/"><span class="lbl">Pick your stops</span><span class="sub">Sleep, eat, refill, explore</span></a></li>
+    <li><span class="num">7</span><a href="/be-prepared/"><span class="lbl">Get prepared</span><span class="sub">What to pack and know</span></a></li>
+    <li class="fin"><span class="num">★</span><span class="lbl">Have a great time exploring BC!</span></li>
+  </ol>
+  <div class="journey-sidetrips-mobile">Side trips: <a href="/trails/">named trails</a> &middot; <a href="/wwc/communities/">communities</a></div>
+
+  <div class="journey-cta reveal"><a href="/plan/">Start planning your trip &rarr;</a></div>
+</div>
 
 <div class="newsletter-wrap">
 <div id="newsletter" class="newsletter reveal">

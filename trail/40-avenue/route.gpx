@@ -25,25 +25,4 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<trk><name>40 Avenue</name>
-<trkseg>
-<trkpt lat="49.077938" lon="-122.821831"/>
-<trkpt lat="49.077639" lon="-122.820949"/>
-<trkpt lat="49.075081" lon="-122.820030"/>
-<trkpt lat="49.074711" lon="-122.819451"/>
-<trkpt lat="49.074642" lon="-122.801266"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.074635" lon="-122.801069"/>
-<trkpt lat="49.074643" lon="-122.793422"/>
-<trkpt lat="49.074643" lon="-122.792736"/>
-<trkpt lat="49.074936" lon="-122.756805"/>
-<trkpt lat="49.074585" lon="-122.735693"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.074582" lon="-122.735512"/>
-<trkpt lat="49.074594" lon="-122.713513"/>
-<trkpt lat="49.074762" lon="-122.691682"/>
-</trkseg>
-</trk>
 </gpx>

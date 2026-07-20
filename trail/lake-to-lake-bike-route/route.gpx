@@ -557,47 +557,4 @@
 <sym>Dot</sym>
 <type>shelter</type>
 </wpt>
-<trk><name>Lake-to-Lake Bike Route</name>
-<trkseg>
-<trkpt lat="49.453400" lon="-119.579408"/>
-<trkpt lat="49.459488" lon="-119.577938"/>
-<trkpt lat="49.468493" lon="-119.580878"/>
-<trkpt lat="49.469064" lon="-119.581082"/>
-<trkpt lat="49.469277" lon="-119.581481"/>
-<trkpt lat="49.469998" lon="-119.581366"/>
-<trkpt lat="49.471837" lon="-119.581946"/>
-<trkpt lat="49.472004" lon="-119.583450"/>
-<trkpt lat="49.471656" lon="-119.585972"/>
-<trkpt lat="49.481304" lon="-119.589246"/>
-<trkpt lat="49.483201" lon="-119.589251"/>
-<trkpt lat="49.483330" lon="-119.590318"/>
-<trkpt lat="49.484299" lon="-119.590302"/>
-<trkpt lat="49.484227" lon="-119.592473"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.484125" lon="-119.592517"/>
-<trkpt lat="49.490819" lon="-119.589638"/>
-<trkpt lat="49.491882" lon="-119.589782"/>
-<trkpt lat="49.492545" lon="-119.590430"/>
-<trkpt lat="49.502469" lon="-119.595435"/>
-<trkpt lat="49.502492" lon="-119.595789"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.483366" lon="-119.590318"/>
-<trkpt lat="49.483407" lon="-119.589109"/>
-<trkpt lat="49.481447" lon="-119.589168"/>
-<trkpt lat="49.471674" lon="-119.585848"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.471753" lon="-119.586006"/>
-<trkpt lat="49.472116" lon="-119.583458"/>
-<trkpt lat="49.471837" lon="-119.581946"/>
-<trkpt lat="49.471858" lon="-119.581800"/>
-<trkpt lat="49.469907" lon="-119.581127"/>
-<trkpt lat="49.469363" lon="-119.580704"/>
-<trkpt lat="49.468777" lon="-119.580775"/>
-<trkpt lat="49.459452" lon="-119.577785"/>
-<trkpt lat="49.453397" lon="-119.579350"/>
-</trkseg>
-</trk>
 </gpx>

@@ -74,19 +74,4 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
-<trk><name>Coombs to Parksville Rail Trail</name>
-<trkseg>
-<trkpt lat="49.305455" lon="-124.417900"/>
-<trkpt lat="49.305645" lon="-124.417538"/>
-<trkpt lat="49.307439" lon="-124.375304"/>
-<trkpt lat="49.309714" lon="-124.358034"/>
-<trkpt lat="49.309217" lon="-124.339569"/>
-<trkpt lat="49.308114" lon="-124.331514"/>
-<trkpt lat="49.308331" lon="-124.330811"/>
-<trkpt lat="49.308636" lon="-124.330587"/>
-<trkpt lat="49.309909" lon="-124.330218"/>
-<trkpt lat="49.311261" lon="-124.332780"/>
-<trkpt lat="49.312008" lon="-124.332735"/>
-</trkseg>
-</trk>
 </gpx>

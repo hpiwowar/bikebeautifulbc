@@ -11,40 +11,4 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<trk><name>Tabor</name>
-<trkseg>
-<trkpt lat="53.910284" lon="-122.807128"/>
-<trkpt lat="53.910428" lon="-122.807121"/>
-<trkpt lat="53.914868" lon="-122.807162"/>
-<trkpt lat="53.917726" lon="-122.807190"/>
-<trkpt lat="53.920569" lon="-122.807701"/>
-<trkpt lat="53.920679" lon="-122.807701"/>
-<trkpt lat="53.921661" lon="-122.807697"/>
-<trkpt lat="53.922542" lon="-122.807075"/>
-<trkpt lat="53.925681" lon="-122.803492"/>
-<trkpt lat="53.927103" lon="-122.803188"/>
-<trkpt lat="53.927833" lon="-122.803176"/>
-</trkseg>
-<trkseg>
-<trkpt lat="53.927833" lon="-122.803176"/>
-<trkpt lat="53.927100" lon="-122.803051"/>
-<trkpt lat="53.925656" lon="-122.803280"/>
-<trkpt lat="53.922469" lon="-122.806898"/>
-<trkpt lat="53.921915" lon="-122.807410"/>
-<trkpt lat="53.920679" lon="-122.807493"/>
-<trkpt lat="53.920568" lon="-122.807494"/>
-<trkpt lat="53.917731" lon="-122.806983"/>
-<trkpt lat="53.914868" lon="-122.806967"/>
-<trkpt lat="53.910427" lon="-122.806921"/>
-<trkpt lat="53.910283" lon="-122.806926"/>
-</trkseg>
-<trkseg>
-<trkpt lat="53.927833" lon="-122.803176"/>
-<trkpt lat="53.929853" lon="-122.803988"/>
-<trkpt lat="53.935583" lon="-122.803941"/>
-<trkpt lat="53.936011" lon="-122.802823"/>
-<trkpt lat="53.935634" lon="-122.800372"/>
-<trkpt lat="53.935933" lon="-122.798747"/>
-</trkseg>
-</trk>
 </gpx>

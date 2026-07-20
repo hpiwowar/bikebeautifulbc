@@ -1131,36 +1131,4 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<trk><name>Middle Arm Trail</name>
-<trkseg>
-<trkpt lat="49.175149" lon="-123.195064"/>
-<trkpt lat="49.175172" lon="-123.193962"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.175124" lon="-123.193986"/>
-<trkpt lat="49.175349" lon="-123.193769"/>
-<trkpt lat="49.174857" lon="-123.191224"/>
-<trkpt lat="49.174155" lon="-123.181297"/>
-<trkpt lat="49.174146" lon="-123.181022"/>
-<trkpt lat="49.173631" lon="-123.173379"/>
-<trkpt lat="49.173685" lon="-123.169353"/>
-<trkpt lat="49.173566" lon="-123.164299"/>
-<trkpt lat="49.174017" lon="-123.159362"/>
-<trkpt lat="49.174077" lon="-123.158911"/>
-<trkpt lat="49.174084" lon="-123.158839"/>
-<trkpt lat="49.174654" lon="-123.155497"/>
-<trkpt lat="49.176205" lon="-123.150975"/>
-<trkpt lat="49.178020" lon="-123.146631"/>
-<trkpt lat="49.179608" lon="-123.143641"/>
-<trkpt lat="49.180113" lon="-123.142496"/>
-<trkpt lat="49.181939" lon="-123.140691"/>
-<trkpt lat="49.184220" lon="-123.139088"/>
-<trkpt lat="49.184964" lon="-123.138567"/>
-<trkpt lat="49.186221" lon="-123.137761"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.184725" lon="-123.138514"/>
-<trkpt lat="49.189010" lon="-123.135791"/>
-</trkseg>
-</trk>
 </gpx>

@@ -53,46 +53,4 @@
 <sym>Dot</sym>
 <type>shelter</type>
 </wpt>
-<trk><name>Railway Greenway</name>
-<trkseg>
-<trkpt lat="49.121627" lon="-123.169060"/>
-<trkpt lat="49.121964" lon="-123.169019"/>
-<trkpt lat="49.122857" lon="-123.169957"/>
-<trkpt lat="49.123212" lon="-123.169934"/>
-<trkpt lat="49.123312" lon="-123.170003"/>
-<trkpt lat="49.125071" lon="-123.170017"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.129247" lon="-123.170001"/>
-<trkpt lat="49.129410" lon="-123.170002"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.129410" lon="-123.170002"/>
-<trkpt lat="49.133635" lon="-123.169991"/>
-<trkpt lat="49.133824" lon="-123.169974"/>
-<trkpt lat="49.140959" lon="-123.169991"/>
-<trkpt lat="49.141121" lon="-123.169988"/>
-<trkpt lat="49.145793" lon="-123.169949"/>
-<trkpt lat="49.145900" lon="-123.169950"/>
-<trkpt lat="49.148294" lon="-123.169990"/>
-<trkpt lat="49.148475" lon="-123.169991"/>
-<trkpt lat="49.155532" lon="-123.169981"/>
-<trkpt lat="49.155712" lon="-123.169981"/>
-<trkpt lat="49.162786" lon="-123.170168"/>
-<trkpt lat="49.162944" lon="-123.170178"/>
-<trkpt lat="49.170076" lon="-123.170147"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.169853" lon="-123.170132"/>
-<trkpt lat="49.170078" lon="-123.169919"/>
-<trkpt lat="49.170224" lon="-123.169922"/>
-<trkpt lat="49.173553" lon="-123.169804"/>
-<trkpt lat="49.173621" lon="-123.169804"/>
-<trkpt lat="49.173685" lon="-123.169353"/>
-</trkseg>
-<trkseg>
-<trkpt lat="49.129410" lon="-123.170002"/>
-<trkpt lat="49.129329" lon="-123.169886"/>
-</trkseg>
-</trk>
 </gpx>

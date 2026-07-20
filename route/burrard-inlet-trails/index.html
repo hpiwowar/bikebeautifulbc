@@ -320,7 +320,7 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
       // opens clean. Clicking the button still expands the credit.
       if(_attrib._container){_attrib._container.classList.remove("maplibregl-compact-show");}
       map.on("load", function(){
-    var TRAIL={"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "LineString", "coordinates": [[-122.94085, 49.28974], [-122.93405, 49.29043], [-122.9191, 49.2865], [-122.89996, 49.28593], [-122.89399, 49.29036], [-122.87406, 49.29148], [-122.86822, 49.28836], [-122.86589, 49.27958]]}, "properties": {}}]};
+    var TRAIL={"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "LineString", "coordinates": [[-122.9409, 49.2897], [-122.8741, 49.2915], [-122.8659, 49.2796]]}, "properties": {}}]};
     map.addSource("trail",{type:"geojson",data:TRAIL});
     map.addLayer({id:"trail-casing",type:"line",source:"trail",
       layout:{"line-cap":"round","line-join":"round"},
@@ -328,7 +328,7 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
     map.addLayer({id:"trail-line",type:"line",source:"trail",
       layout:{"line-cap":"round","line-join":"round"},
       paint:{"line-color":"#5f259f","line-width":4}});
-    var STOPS={"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.9403961, 49.2894019]}, "properties": {"name": "Harry Jerome Sports Centre", "category": "Attractions", "subcategory": "Community Centre", "color": "#9775fa", "tier": "info"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.9214474, 49.2899469]}, "properties": {"name": "Barnet Beach Cafe", "category": "Food & Drink", "subcategory": "Fast Food / Chain", "color": "#e8590c", "tier": "info"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.8815053, 49.2915404]}, "properties": {"name": "Float30", "category": "Food & Drink", "subcategory": "Restaurant", "color": "#e8590c", "tier": "info"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.8620718, 49.2774954]}, "properties": {"name": "Originals Mexicano", "category": "Food & Drink", "subcategory": "Restaurant", "color": "#e8590c", "tier": "info"}}]};
+    var STOPS={"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.8815053, 49.2915404]}, "properties": {"name": "Float30", "category": "Food & Drink", "subcategory": "Restaurant", "color": "#e8590c", "tier": "info"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.8620718, 49.2774954]}, "properties": {"name": "Originals Mexicano", "category": "Food & Drink", "subcategory": "Restaurant", "color": "#e8590c", "tier": "info"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.9214474, 49.2899469]}, "properties": {"name": "Barnet Beach Cafe", "category": "Food & Drink", "subcategory": "Fast Food / Chain", "color": "#e8590c", "tier": "info"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.9403961, 49.2894019]}, "properties": {"name": "Harry Jerome Sports Centre", "category": "Attractions", "subcategory": "Community Centre", "color": "#9775fa", "tier": "info"}}]};
     map.addSource("stops",{type:"geojson",data:STOPS});
     map.addLayer({id:"stops-circ",type:"circle",source:"stops",
       paint:{"circle-radius":["interpolate",["linear"],["zoom"],9,4,14,7],

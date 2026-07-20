@@ -67,39 +67,4 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<trk><name>Pelmewash Parkway Multi-use Pathway</name>
-<trkseg>
-<trkpt lat="50.055139" lon="-119.409523"/>
-<trkpt lat="50.055100" lon="-119.409085"/>
-<trkpt lat="50.055844" lon="-119.408420"/>
-<trkpt lat="50.057010" lon="-119.408208"/>
-<trkpt lat="50.057942" lon="-119.408579"/>
-<trkpt lat="50.058881" lon="-119.407600"/>
-<trkpt lat="50.060110" lon="-119.407434"/>
-<trkpt lat="50.065689" lon="-119.408036"/>
-<trkpt lat="50.069596" lon="-119.406825"/>
-<trkpt lat="50.071898" lon="-119.405475"/>
-<trkpt lat="50.074794" lon="-119.402504"/>
-<trkpt lat="50.077759" lon="-119.400676"/>
-<trkpt lat="50.081456" lon="-119.397882"/>
-<trkpt lat="50.085102" lon="-119.398094"/>
-<trkpt lat="50.086199" lon="-119.397509"/>
-<trkpt lat="50.088281" lon="-119.397127"/>
-<trkpt lat="50.090125" lon="-119.397669"/>
-<trkpt lat="50.091813" lon="-119.397441"/>
-<trkpt lat="50.093984" lon="-119.396737"/>
-<trkpt lat="50.096014" lon="-119.395325"/>
-<trkpt lat="50.100695" lon="-119.392911"/>
-<trkpt lat="50.104876" lon="-119.392161"/>
-<trkpt lat="50.108556" lon="-119.388327"/>
-<trkpt lat="50.109388" lon="-119.387694"/>
-<trkpt lat="50.110227" lon="-119.387518"/>
-<trkpt lat="50.110518" lon="-119.386814"/>
-<trkpt lat="50.110343" lon="-119.383868"/>
-</trkseg>
-<trkseg>
-<trkpt lat="50.110341" lon="-119.387373"/>
-<trkpt lat="50.110579" lon="-119.387589"/>
-</trkseg>
-</trk>
 </gpx>

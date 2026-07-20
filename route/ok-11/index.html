@@ -320,7 +320,7 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
       // opens clean. Clicking the button still expands the credit.
       if(_attrib._container){_attrib._container.classList.remove("maplibregl-compact-show");}
       map.on("load", function(){
-    var TRAIL={"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "LineString", "coordinates": [[-119.35748, 49.79485], [-119.35005, 49.7955], [-119.33989, 49.79179], [-119.33253, 49.79528], [-119.32703, 49.79144], [-119.32749, 49.78848], [-119.32302, 49.78429], [-119.32872, 49.77298], [-119.32469, 49.77272], [-119.31785, 49.77843], [-119.31275, 49.77468], [-119.30847, 49.77375], [-119.30692, 49.77514], [-119.30855, 49.77801], [-119.30351, 49.78085], [-119.30815, 49.78295], [-119.30815, 49.78738], [-119.31224, 49.78974], [-119.31065, 49.79365], [-119.31408, 49.79611], [-119.31217, 49.8001], [-119.31308, 49.80106]]}, "properties": {}}]};
+    var TRAIL={"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "LineString", "coordinates": [[-119.3575, 49.7948], [-119.3325, 49.7953], [-119.3287, 49.773], [-119.3085, 49.7737], [-119.3131, 49.8011]]}, "properties": {}}]};
     map.addSource("trail",{type:"geojson",data:TRAIL});
     map.addLayer({id:"trail-casing",type:"line",source:"trail",
       layout:{"line-cap":"round","line-join":"round"},
