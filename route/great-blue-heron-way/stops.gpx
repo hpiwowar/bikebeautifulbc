@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Great Blue Heron Way — cycling stops</name>
+<link href="https://bccycletourism.ca/route/great-blue-heron-way/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.033520" lon="-123.095712">
+<name>ParkCanada RV Park</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="49.033064" lon="-123.092280">
+<name>Big Splash Water Slide Park</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+</gpx>

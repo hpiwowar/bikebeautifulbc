@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Gabriola Group Ride — cycling stops</name>
+<link href="https://bccycletourism.ca/route/gb-2025-rally-gabriola-group-ride/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.155702" lon="-123.754842">
+<name>Elder Cedar Nature Reserve</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.182270" lon="-123.858959">
+<name>Descanso Bay Regional Park</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="49.171384" lon="-123.848284">
+<name>Gabriola Museum</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.174055" lon="-123.849115">
+<name>Woodfire</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.174098" lon="-123.848769">
+<name>Mad Rona's Coffee Bar</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.174348" lon="-123.846502">
+<name>BC Liqour Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.173226" lon="-123.845161">
+<name>Nesters Market</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.173358" lon="-123.844622">
+<name>Gabriola Island Library Branch</name>
+<cmt>library</cmt>
+<desc>Library</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.174313" lon="-123.845554">
+<name>Ground Up</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.174304" lon="-123.844358">
+<name>Colleen's Home &amp; Fashion Centre</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.174334" lon="-123.843524">
+<name>Island Meat and Deli</name>
+<cmt>convenience_store</cmt>
+<desc>Specialty / Health Food</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.186235" lon="-123.855010">
+<name>Cyqule</name>
+<cmt>bike_shop</cmt>
+<desc>Rentals</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+</gpx>

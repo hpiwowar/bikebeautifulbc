@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Myra Canyon — cycling stops</name>
+<link href="https://bccycletourism.ca/route/ok-11/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.778290" lon="-119.308278">
+<name>Kettle Valley Rail Trail</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.802547" lon="-119.312339">
+<name>Myra Canyon Bicycle Rental and Tours Inc.</name>
+<cmt>viewpoint</cmt>
+<desc>Activity / Experience</desc>
+<sym>Dot</sym>
+<type>overlook</type>
+</wpt>
+</gpx>

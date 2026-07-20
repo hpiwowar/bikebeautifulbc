@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Golden Mile — cycling stops</name>
+<link href="https://bccycletourism.ca/route/ok-3/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.095503" lon="-119.561500">
+<name>Maverick Estate Winery</name>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.098293" lon="-119.563815">
+<name>Kismet Estate Winery</name>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.082336" lon="-119.544372">
+<name>Orchard Hill Estate Cidery &amp; Fruit Market</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.150084" lon="-119.591115">
+<name>Tinhorn Creek Winery</name>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.138892" lon="-119.566263">
+<name>Stoneboat Vineyards</name>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.136630" lon="-119.572502">
+<name>Silver Sage Winery</name>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.149150" lon="-119.580171">
+<name>Road 7 Country Fruit Stand</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.146726" lon="-119.596535">
+<name>Gehringer Brothers Estate Winery</name>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+</gpx>

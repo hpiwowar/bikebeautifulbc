@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Boundary Bay Dyke Trail — cycling stops</name>
+<link href="https://bccycletourism.ca/route/boundary-bay-dyke-trail/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.008445" lon="-123.049435">
+<name>Earthwise Society Garden and Farm</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.015006" lon="-123.040308">
+<name>Emdee's Fish and Chips</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.025749" lon="-123.058439">
+<name>Beach Grove Cafe &amp; Boutique</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.024923" lon="-123.059562">
+<name>Beach Grove Motel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.024218" lon="-123.059567">
+<name>Beach Grove Golf Club Lounge</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.007287" lon="-123.048699">
+<name>Southlands Grange Centre For Farming And Food</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.007280" lon="-123.046930">
+<name>L'aromas Coffee Southlands</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.007194" lon="-123.046487">
+<name>Pedego Electric Bikes Delta</name>
+<cmt>bike_shop</cmt>
+<desc>Repair Shop</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+<wpt lat="49.007169" lon="-123.046926">
+<name>Cookie's Ice Cream</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.064637" lon="-123.022618">
+<name>Kings Links Clubhouse</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.007121" lon="-123.047484">
+<name>Four Winds Beach House &amp; Brewery</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+</gpx>

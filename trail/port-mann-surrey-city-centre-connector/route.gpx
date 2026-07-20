@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Port Mann - Surrey City Centre Connector</name>
+<link href="https://bccycletourism.ca/trail/port-mann-surrey-city-centre-connector/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.203502" lon="-122.850528">
+<name>Days Inn by Wyndham Surrey</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.199327" lon="-122.845622">
+<name>Di Reggae Cafe</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.198479" lon="-122.822514">
+<name>7-Eleven</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.199603" lon="-122.849153">
+<name>Nesters Market</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.199643" lon="-122.811558">
+<name>Mauna Sushi</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.199643" lon="-122.811421">
+<name>Panago</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.199590" lon="-122.810525">
+<name>Buy-Low Foods</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.199432" lon="-122.813706">
+<name>UR Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.198146" lon="-122.846162">
+<name>BC Liquor Store</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.198081" lon="-122.845844">
+<name>African Superstore</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.198110" lon="-122.846706">
+<name>Royal Canadian Legion Branch #229</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.199225" lon="-122.812933">
+<name>Tom's Food Market</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.199138" lon="-122.816616">
+<name>Polonia Bakery &amp; Deli</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.199061" lon="-122.813449">
+<name>Cabizerra Bistro</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.199042" lon="-122.813600">
+<name>Al Baraka Specialty Foods &amp; Bakery LTD</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.199041" lon="-122.816089">
+<name>Greek Island Pizza</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.199039" lon="-122.816416">
+<name>Sarpanch Sweets &amp; Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.199032" lon="-122.812957">
+<name>A1 Coffee &amp; Donuts</name>
+<cmt>food</cmt>
+<desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.198991" lon="-122.811544">
+<name>Jolly Mac's</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.198982" lon="-122.814281">
+<name>Malaysian Hut</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.198910" lon="-122.813989">
+<name>Dairy Queen</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.198933" lon="-122.810257">
+<name>Church's Chicken</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.209609" lon="-122.805720">
+<name>Dogwood Campgrounds &amp; RV Park</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="49.198720" lon="-122.851102">
+<name>Waves Coffee House</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.198574" lon="-122.834780">
+<name>Pizza Nation</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.198563" lon="-122.834533">
+<name>Soo's Grocery</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.198060" lon="-122.842110">
+<name>Domino's</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.198426" lon="-122.811972">
+<name>Circle K</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.198242" lon="-122.811976">
+<name>Donair Affair</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.198074" lon="-122.812044">
+<name>Subway</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.196735" lon="-122.845788">
+<name>Beauty 4 Ashes</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.196735" lon="-122.846061">
+<name>Taqueria Jalisco Mexican Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.196731" lon="-122.845660">
+<name>Guacamole Mexican Grill</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<trk><name>Port Mann - Surrey City Centre Connector</name>
+<trkseg>
+<trkpt lat="49.202466" lon="-122.851071"/>
+<trkpt lat="49.202495" lon="-122.851023"/>
+<trkpt lat="49.202678" lon="-122.850728"/>
+<trkpt lat="49.202602" lon="-122.850560"/>
+<trkpt lat="49.202846" lon="-122.850169"/>
+<trkpt lat="49.202812" lon="-122.850117"/>
+<trkpt lat="49.203425" lon="-122.849174"/>
+<trkpt lat="49.201155" lon="-122.845768"/>
+<trkpt lat="49.201486" lon="-122.845247"/>
+<trkpt lat="49.201537" lon="-122.845200"/>
+<trkpt lat="49.202006" lon="-122.844475"/>
+<trkpt lat="49.202010" lon="-122.844386"/>
+<trkpt lat="49.204571" lon="-122.839728"/>
+<trkpt lat="49.202188" lon="-122.836742"/>
+<trkpt lat="49.204996" lon="-122.831479"/>
+<trkpt lat="49.203816" lon="-122.828325"/>
+<trkpt lat="49.203440" lon="-122.825107"/>
+<trkpt lat="49.200714" lon="-122.825028"/>
+<trkpt lat="49.200740" lon="-122.824933"/>
+<trkpt lat="49.200740" lon="-122.824481"/>
+<trkpt lat="49.200732" lon="-122.823481"/>
+<trkpt lat="49.200800" lon="-122.823083"/>
+<trkpt lat="49.200798" lon="-122.823009"/>
+<trkpt lat="49.201450" lon="-122.822961"/>
+<trkpt lat="49.202423" lon="-122.822280"/>
+<trkpt lat="49.202433" lon="-122.812607"/>
+<trkpt lat="49.202421" lon="-122.811798"/>
+<trkpt lat="49.202399" lon="-122.811739"/>
+<trkpt lat="49.202499" lon="-122.810694"/>
+<trkpt lat="49.202513" lon="-122.810624"/>
+<trkpt lat="49.203802" lon="-122.810686"/>
+<trkpt lat="49.204397" lon="-122.810265"/>
+<trkpt lat="49.204024" lon="-122.809269"/>
+<trkpt lat="49.204028" lon="-122.808464"/>
+<trkpt lat="49.204529" lon="-122.808343"/>
+<trkpt lat="49.205202" lon="-122.808248"/>
+<trkpt lat="49.205183" lon="-122.806335"/>
+<trkpt lat="49.206045" lon="-122.806332"/>
+<trkpt lat="49.206064" lon="-122.804486"/>
+<trkpt lat="49.205999" lon="-122.804319"/>
+<trkpt lat="49.206058" lon="-122.803716"/>
+<trkpt lat="49.206031" lon="-122.803585"/>
+<trkpt lat="49.206016" lon="-122.803065"/>
+<trkpt lat="49.205999" lon="-122.801823"/>
+<trkpt lat="49.205794" lon="-122.801232"/>
+<trkpt lat="49.206057" lon="-122.801035"/>
+<trkpt lat="49.206053" lon="-122.800908"/>
+<trkpt lat="49.206046" lon="-122.800810"/>
+</trkseg>
+</trk>
+</gpx>

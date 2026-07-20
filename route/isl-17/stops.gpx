@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Thetis Island — cycling stops</name>
+<link href="https://bccycletourism.ca/route/isl-17/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="48.977451" lon="-123.670043">
+<name>Thetis Island Marina Pub</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="48.988524" lon="-123.678468">
+<name>Thetis Island Community Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="48.989012" lon="-123.655125">
+<name>Cedar Beach Ocean Lodge</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+</gpx>

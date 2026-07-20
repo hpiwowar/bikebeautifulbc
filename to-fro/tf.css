@@ -1,0 +1,281 @@
+
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scrollbar-gutter: stable; }
+/* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
+   --rail   chrome (header + footer), frames the page
+   --w-read the content column and prose cap, used by nearly every page
+   --w-wide the exception: sidebar filters, two-column stop pages */
+:root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
+.g-banner strong { font-weight: 700; }
+.g-header { padding: 14px 40px; }
+.g-header-inner { max-width: var(--rail, 1200px); margin: 0 auto; display: flex; align-items: center; gap: 64px; }
+.g-header-left { display: flex; align-items: center; text-decoration: none; }
+.g-header-left img { height: 50px; width: auto; max-width: 100%; }
+.g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
+.g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
+.g-header-nav a:hover { color: #1E7D96; }
+.g-header-nav a.active { color: #1E7D96; font-weight: 600; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: #4b5563; margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: #1E7D96; }
+.g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
+.g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
+.g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
+.g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
+.g-footer-brand img { height: 32px; width: auto; max-width: 100%; }
+.g-footer-nav { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.g-footer-col { }
+.g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
+.g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
+.g-footer-col a:hover { color: #0D4070; }
+.section-divider { border: none; border-top: 1px solid #EEE; margin: 28px 0; }
+.bio { margin-bottom: 20px; }
+.bio strong { color: #1F514C; font-size: 15px; }
+.bio > em { color: #636363; font-size: 13px; }
+.bio p { font-size: 14px; margin-top: 6px; }
+@media (max-width: 700px) {
+  .g-banner { padding: 6px 14px; font-size: 11px; }
+  .g-header { padding: 12px 16px; position: relative; z-index: 300; }
+  .g-header-inner { gap: 0; }
+  .g-main { padding: 24px 14px 16px; }
+  .g-hamburger { display: block; }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #FFFDF9; border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav.open { display: flex; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
+  .g-header-nav a:last-child { border-bottom: none; }
+  .g-footer { padding: 40px 20px 48px; }
+  .g-footer-nav { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+}
+
+/* Section anchors. Every h2 gets a quiet "#" that hands you a link to that
+   section. Grey at rest so it reads as a tool rather than content, teal at the
+   moment you are about to click it. Touch devices have no hover, so it sits
+   faintly visible there instead of being unreachable. */
+.h-anchor { margin-left: .35em; color: #6E6E6E; opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+h2:hover > .h-anchor { opacity: .55; }
+.h-anchor:hover, .h-anchor:focus { color: #1E7D96; opacity: 1; }
+@media (hover: none) {
+  .h-anchor { opacity: .35; }
+}
+
+.tf-wrap { max-width: var(--w-read, 720px); margin: 0 auto; padding: 0 24px 64px; }
+.tf-eyebrow { font-family: "Archivo", sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 0.09em; text-transform: uppercase; color: #1E7D96; margin-bottom: 14px; }
+.tf-sentence { font-family: "Archivo", sans-serif; font-size: clamp(26px, 4.5vw, 34px);
+  font-weight: 400; letter-spacing: -0.02em; color: #1F514C; line-height: 1.6; margin-bottom: 20px; }
+/* custom combobox — replaces the native <select> so the open list font/spacing
+   is ours to style (macOS ignores CSS font-size on the native popup). */
+.tf-combo-btn { font-family: "Archivo", sans-serif; font-size: 0.6em; font-weight: 700;
+  color: #1E7D96; border: none; border-bottom: 3px solid #C9A83E; background: transparent;
+  padding: 0 20px 2px 2px; cursor: pointer; max-width: 100%; text-align: left;
+  line-height: inherit; position: relative; white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis; vertical-align: baseline; }
+.tf-combo-btn::after { content: ""; position: absolute; right: 4px; top: 50%;
+  width: 0; height: 0; margin-top: -2px; border-left: 5px solid transparent;
+  border-right: 5px solid transparent; border-top: 6px solid #C9A83E; }
+.tf-combo-btn:focus-visible { outline: none; border-bottom-color: #1E7D96; }
+.tf-combo-btn[aria-expanded="true"] { border-bottom-color: #1E7D96; }
+.tf-pop-backdrop { position: fixed; inset: 0; z-index: 999; background: rgba(20,20,20,0.28); }
+.tf-pop-backdrop[hidden] { display: none; }
+.tf-pop { position: absolute; z-index: 1000; background: #fff; border: 1px solid #E0DAC6;
+  border-radius: 12px; box-shadow: 0 12px 32px rgba(31,81,76,0.18); padding: 0 0 6px;
+  max-height: 340px; overflow-y: auto; min-width: 190px; max-width: 320px;
+  font-family: "Archivo", sans-serif; }
+.tf-pop[hidden] { display: none; }
+/* sticky search sits flush across the popup top as an opaque strip, so
+   scrolled list rows can't peek through above or beside it (#14 polish,
+   2026-07-13) */
+.tf-pop-search { display: block; box-sizing: border-box; width: 100%;
+  margin: 0 0 6px; padding: 10px 14px; font-size: 14px; font-family: inherit;
+  color: #2D2D2D; border: none; border-bottom: 1px solid #E0DAC6;
+  border-radius: 12px 12px 0 0; background: #FBFAF6;
+  position: sticky; top: 0; z-index: 1; }
+.tf-pop-search:focus { outline: none; border-color: #1E7D96; }
+.tf-pop-opt { font-size: 14px; color: #2D2D2D; padding: 6px 16px 6px 30px; cursor: pointer;
+  position: relative; line-height: 1.35; white-space: nowrap; }
+.tf-pop-opt:hover, .tf-pop-opt.tf-active { background: #EAF4F6; color: #14586B; }
+.tf-pop-opt[aria-selected="true"] { color: #1E7D96; font-weight: 700; }
+.tf-pop-opt[aria-selected="true"]::before { content: "\2713"; position: absolute;
+  left: 12px; font-weight: 700; }
+.tf-pop-empty { font-size: 13.5px; color: #9CA3AF; padding: 8px 16px; font-style: italic; }
+.tf-go { border: none; background: #1E7D96; color: #fff; font-family: inherit; font-size: 16px;
+  font-weight: 700; border-radius: 10px; padding: 12px 26px; cursor: pointer; }
+.tf-go:hover { background: #196A80; }
+.tf-asknote { font-size: 13.5px; color: #9CA3AF; margin: 18px 0 6px; max-width: 560px;
+  line-height: 1.6; }
+.tf-results { margin-top: 40px; }
+.tf-lede { font-size: 16px; color: #2D2D2D; margin-bottom: 24px; line-height: 1.65; }
+.tf-lede strong { color: #1F514C; }
+.tf-opt { border-top: 3px solid #1F514C; padding: 18px 0 26px; }
+.tf-kicker { font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+  color: #9CA3AF; margin-bottom: 6px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.tf-flag { font-size: 11px; font-weight: 700; border-radius: 20px; padding: 1px 9px;
+  letter-spacing: 0.03em; text-transform: none; }
+.tf-flag-splurge { background: #FBF3D9; color: #8A6D1F; border: 1px solid #E3C96B; }
+.tf-flag-seasonal { background: #EAF4F6; color: #14586B; border: 1px solid #BFDDE5; }
+.tf-flag-limited { background: #FDF0E3; color: #8A4B1F; border: 1px solid #E8C49A; }
+.tf-flag-ondemand { background: #F3EFFA; color: #4B3A78; border: 1px solid #CFC2E8; }
+.tf-title { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 400;
+  letter-spacing: -0.02em; color: #1F514C; margin-bottom: 12px; }
+/* D2 "checklist timetable" — one row per boarding leg, a dedicated Your-bike
+   column of severity-dotted plain-text facts (lifted from the to-fro-4d2
+   mockup). Access/link legs become full-width dashed cream tt-hop rows. */
+.tt { border: 1.5px solid #E0DAC6; border-radius: 12px; overflow: hidden;
+  background: #fff; margin-bottom: 4px; }
+.tt-head { display: grid; grid-template-columns: 48px 1.1fr 1fr 218px; gap: 12px;
+  padding: 8px 16px 8px 10px; background: #F6F3EA; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: #9CA3AF; }
+.tt-row { display: grid; grid-template-columns: 48px 1.1fr 1fr 218px; gap: 12px;
+  padding: 13px 16px 12px 10px; border-top: 1px solid #EFEAD9; font-size: 14px;
+  align-items: start; }
+.tt-row .emoji { font-size: 26px; line-height: 1.2; text-align: center; }
+.tt-who { font-weight: 700; color: #1F514C; line-height: 1.35; padding-top: 2px; }
+.tt-who a { color: inherit; text-decoration: none; }
+.tt-who a:hover { text-decoration: underline; text-decoration-color: #C9A83E; }
+.tt-who .route { display: block; font-size: 12px; font-weight: 500; color: #9CA3AF; }
+.tt-od { color: #57534E; line-height: 1.4; padding-top: 2px; }
+.tt-od strong { color: #2D2D2D; display: block; }
+.tt-od .from { font-size: 12.5px; }
+.tt-od .tt-km { font-size: 12.5px; color: #9CA3AF; }
+.tt-place { color: #6B7280; }
+.tt-bike { display: flex; flex-direction: column; gap: 4px; }
+.fact { font-size: 12.5px; line-height: 1.45; padding-left: 15px; position: relative;
+  color: #57534E; font-weight: 600; }
+.fact::before { content: ""; position: absolute; left: 1px; top: 5.5px; width: 7px;
+  height: 7px; border-radius: 50%; }
+.fact .detail { font-weight: 400; color: #6B7280; }
+.fact-ok::before   { background: #4C9067; }
+.fact-fee::before  { background: #C9BFA2; }
+.fact-prep::before { background: #C9A83E; }
+.fact-warn::before { background: #B14A4A; }
+.fact-prep { color: #8A6D1F; }
+.fact-warn { color: #8C2F2F; }
+.tt-note { grid-column: 2 / -1; font-size: 12.5px; color: #8A6D1F; line-height: 1.5;
+  margin-top: 4px; }
+.tt-hop { display: grid; grid-template-columns: 48px 1fr; gap: 12px;
+  padding: 9px 16px 9px 10px; border-top: 1px dashed #E0DAC6; background: #FBF9F2;
+  font-size: 13px; font-style: italic; color: #57534E; }
+.tt-hop-arrive { font-style: normal; }
+.tt-hop .emoji { font-size: 20px; text-align: center; line-height: 1.3; }
+.tt-hop a { font-weight: 600; }
+/* twin-route footnote ("Or: the 900 Bike Bus works for this hop too") —
+   rendered inside the carrier cell under the route sub-line */
+.tt-or { display: block; font-size: 12px; font-weight: 500; color: #57534E;
+  margin-top: 3px; }
+.tt-or strong { color: #1F514C; font-weight: 600; }
+.tt-or .tf-or-freq { color: #6B7280; font-weight: 400; }
+/* "more ways" fold: the page shows the top four options, the rest sit
+   inside a native <details>; the pill summary swaps its label when open. */
+.tf-more > summary { list-style: none; cursor: pointer; display: block;
+  width: fit-content; margin: 4px auto 24px; padding: 10px 26px;
+  border: 1.5px solid #1F514C; border-radius: 999px; color: #1F514C;
+  font-weight: 600; font-size: 15px; }
+.tf-more > summary::-webkit-details-marker { display: none; }
+.tf-more > summary:hover { background: rgba(31,81,76,0.06); }
+.tf-more-hide { display: none; }
+.tf-more[open] > summary .tf-more-show { display: none; }
+.tf-more[open] > summary .tf-more-hide { display: inline; }
+/* bikes-impossible options: unmistakably not a choice (SHIP PLAN #8) — red
+   top border + kicker, struck grey title, dimmed table, plus the red banner
+   and badge. Never reads like a normal ranked option. */
+.tf-opt-impossible { border-top-color: #B14A4A; }
+.tf-opt-impossible .tf-kicker { color: #B14A4A; }
+.tf-opt-impossible .tf-title { color: #C2C0BA; text-decoration: line-through;
+  text-decoration-color: rgba(177,74,74,0.55); text-decoration-thickness: 2px; }
+.tf-opt-impossible .tt { opacity: 0.42; }
+.tf-opt-impossible .tt-who, .tf-opt-impossible .tt-od strong { color: #ABABAB; }
+.tf-flag-impossible { background: #FBEFEF; color: #8C2F2F; border: 1px solid #E5B8B8; }
+.tf-capnote { font-size: 14px; color: #8A6D1F; background: #FBF3D9;
+  border: 1px solid #E3C96B; border-radius: 10px; padding: 10px 14px;
+  margin: 0 0 26px; line-height: 1.6; max-width: 560px; }
+.tf-capnote strong { text-transform: uppercase; letter-spacing: 0.05em; font-size: 12.5px; }
+.tf-bikeline-blocked { color: #8C2F2F; background: #FBEFEF; }
+.tf-bikeline { font-size: 14.5px; color: #1C5240; background: #F4FAF5; border-radius: 10px;
+  padding: 10px 14px; margin-bottom: 12px; line-height: 1.6; }
+.tf-honesty { font-size: 14px; color: #4b5563; margin-top: 8px; border-top: 3px solid #1F514C;
+  padding-top: 18px; line-height: 1.7; }
+.tf-honesty a { font-weight: 600; }
+.tf-miss { border-top: 3px solid #1F514C; padding: 18px 0 10px; }
+.tf-miss h2 { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 400;
+  letter-spacing: -0.02em; color: #1F514C; margin-bottom: 10px; }
+.tf-miss p { font-size: 15.5px; line-height: 1.75; color: #2D2D2D; margin-bottom: 12px; }
+.tf-alt a { font-weight: 600; text-decoration: none; margin-right: 16px; font-size: 14px; }
+.tf-examples { margin-top: 34px; font-size: 14.5px; line-height: 2; color: #57534E; }
+.tf-examples a { font-weight: 600; text-decoration: none; }
+#tf-samespot { display:none; font-size: 14.5px; color: #1C5240; background: #F4FAF5;
+  border-radius: 10px; padding: 10px 14px; margin-top: 14px; max-width: 440px; }
+/* JSON link — mirrors the WWC stop-detail treatment (build.py .listing-json) */
+.listing-json { text-align: right; margin-top: 14px; }
+.listing-json a { font-size: 11px; color: #C9CDD3; text-decoration: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .03em; }
+.listing-json a:hover { color: #9CA3AF; text-decoration: underline; }
+/* Orientation header — mode-lede + FOR SCALE rows (routed pairs) or
+   crow/bike/car stat tiles (no-answer pages). Locator map removed 2026-07-13
+   (SHIP PLAN #13). */
+.tf-orient { margin: 4px 0 30px; }
+.tf-stats { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.tf-stat { background: #F7F5EC; border-radius: 10px; padding: 10px 16px; min-width: 118px; }
+.tf-stat-label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #9CA3AF; margin-bottom: 3px; }
+.tf-stat-val { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; }
+.tf-stat-sub { font-size: 12px; color: #6B7280; margin-top: 1px; }
+.tf-stat-err { font-size: 12px; color: #9CA3AF; font-style: italic; }
+.tf-stat-note { font-size: 13px; color: #8A6D1F; background: #FBF3D9; border: 1px solid #E3C96B;
+  border-radius: 8px; padding: 6px 10px; margin-bottom: 14px; line-height: 1.5; max-width: 480px; }
+/* M2b orientation — mode-list lede + FOR SCALE distance rows on routed pair
+   pages; no-answer pages keep the wide .tf-stats treatment above. */
+.dist-rows { display: flex; flex-direction: column; gap: 5px; font-size: 14px; color: #57534E; }
+.dist-rows b { color: #1F514C; font-weight: 700; }
+.dist-rows .lbl { display: inline-block; min-width: 128px; margin-right: 10px; color: #9CA3AF;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.dist-rows > div { white-space: nowrap; }
+.dist-rows .dist-none { font-style: italic; color: #9CA3AF; white-space: normal; }
+.scale-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; color: #9CA3AF; margin: 4px 0 6px; }
+.ways-lede { font-family: "Archivo", sans-serif; font-size: 21px; font-weight: 400;
+  letter-spacing: -0.01em; color: #1F514C; margin: 4px 0 24px; }
+@media (max-width: 700px) {
+  .tt-head { display: none; }
+  .tt-row { grid-template-columns: 40px 1fr; gap: 4px 12px; }
+  .tt-row .emoji { font-size: 22px; }
+  .tt-row .tt-who { grid-column: 2; }
+  .tt-row .tt-od { grid-column: 2; }
+  .tt-row .tt-bike { grid-column: 1 / -1; padding-top: 4px; }
+  .tt-row .tt-note { grid-column: 1 / -1; }
+}
+/* Cross-links (BC-223): "More ways around" on pair pages, "Popular connections"
+   + "All other connections" on the index. */
+.tf-around { margin-top: 34px; border-top: 3px solid #1F514C; padding-top: 18px;
+  font-size: 14.5px; line-height: 1.9; color: #2D2D2D; }
+.tf-around h2 { font-family: "Archivo", sans-serif; font-size: 20px; font-weight: 400;
+  letter-spacing: -0.01em; color: #1F514C; margin-bottom: 12px; }
+.tf-explore-eyebrow { display: block; font-size: .72rem; font-weight: 800; color: #6EC040;
+  letter-spacing: .12em; text-transform: uppercase; margin-bottom: 14px; }
+.tf-around-stops { margin-top: 12px; }
+.tf-around a { font-weight: 600; text-decoration: none; color: #1F514C; }
+.tf-around a:hover { text-decoration: underline; }
+.tf-around-back, .tf-around-row { margin-bottom: 10px; }
+.tf-around-lbl { color: #6B7280; font-weight: 600; margin-right: 4px; }
+.tf-annot { color: #8A8A82; font-weight: 400; font-size: 13px; }
+.tf-around-more { margin: 8px 0; }
+.tf-around-more summary { cursor: pointer; color: #1F514C; font-weight: 600; font-size: 13.5px; }
+.tf-around-full { margin-top: 10px; font-size: 13.5px; line-height: 1.95; color: #57534E; }
+.tf-around-full a { font-weight: 600; }

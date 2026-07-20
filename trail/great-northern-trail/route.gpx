@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
 <metadata>
 <name>Great Northern Trail</name>
-<link href="https://bccycletourism.ca/trail/great-northern-trail/"><text>We Welcome Cyclists</text></link>
+<link href="https://bccycletourism.ca/trail/great-northern-trail/"><text>BC Bike Stops</text></link>
 </metadata>
 <wpt lat="49.194355" lon="-117.279443">
 <name>The Dragon Fly Café</name>
@@ -252,6 +252,9 @@
 <trkpt lat="49.481102" lon="-117.282491"/>
 <trkpt lat="49.486120" lon="-117.279819"/>
 <trkpt lat="49.488494" lon="-117.279737"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.488494" lon="-117.279737"/>
 <trkpt lat="49.491898" lon="-117.280040"/>
 <trkpt lat="49.495807" lon="-117.277013"/>
 <trkpt lat="49.497821" lon="-117.273024"/>
@@ -259,6 +262,26 @@
 <trkpt lat="49.499493" lon="-117.271248"/>
 <trkpt lat="49.500618" lon="-117.268431"/>
 <trkpt lat="49.503319" lon="-117.265599"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.503319" lon="-117.265599"/>
+<trkpt lat="49.500618" lon="-117.268431"/>
+<trkpt lat="49.499493" lon="-117.271248"/>
+<trkpt lat="49.498860" lon="-117.272222"/>
+<trkpt lat="49.497821" lon="-117.273024"/>
+<trkpt lat="49.495807" lon="-117.277013"/>
+<trkpt lat="49.491898" lon="-117.280040"/>
+<trkpt lat="49.488494" lon="-117.279737"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.503319" lon="-117.265599"/>
+<trkpt lat="49.503661" lon="-117.265326"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.503661" lon="-117.265326"/>
+<trkpt lat="49.503319" lon="-117.265599"/>
+</trkseg>
+<trkseg>
 <trkpt lat="49.503661" lon="-117.265326"/>
 <trkpt lat="49.507039" lon="-117.263437"/>
 <trkpt lat="49.508625" lon="-117.263048"/>
@@ -267,14 +290,62 @@
 <trkpt lat="49.515124" lon="-117.260627"/>
 <trkpt lat="49.517345" lon="-117.258493"/>
 <trkpt lat="49.518779" lon="-117.256348"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.518779" lon="-117.256348"/>
+<trkpt lat="49.517345" lon="-117.258493"/>
+<trkpt lat="49.515124" lon="-117.260627"/>
+<trkpt lat="49.513720" lon="-117.261264"/>
+<trkpt lat="49.510876" lon="-117.261490"/>
+<trkpt lat="49.508625" lon="-117.263048"/>
+<trkpt lat="49.507039" lon="-117.263437"/>
+<trkpt lat="49.503661" lon="-117.265326"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.518779" lon="-117.256348"/>
+<trkpt lat="49.519920" lon="-117.255833"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.519920" lon="-117.255833"/>
+<trkpt lat="49.518779" lon="-117.256348"/>
+</trkseg>
+<trkseg>
 <trkpt lat="49.519920" lon="-117.255833"/>
 <trkpt lat="49.520662" lon="-117.254971"/>
 <trkpt lat="49.521335" lon="-117.253138"/>
 <trkpt lat="49.523489" lon="-117.251530"/>
 <trkpt lat="49.524049" lon="-117.250695"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.524049" lon="-117.250695"/>
+<trkpt lat="49.523489" lon="-117.251530"/>
+<trkpt lat="49.521335" lon="-117.253138"/>
+<trkpt lat="49.520662" lon="-117.254971"/>
+<trkpt lat="49.519920" lon="-117.255833"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.524049" lon="-117.250695"/>
 <trkpt lat="49.524587" lon="-117.250236"/>
 <trkpt lat="49.525461" lon="-117.250215"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.525461" lon="-117.250215"/>
+<trkpt lat="49.524587" lon="-117.250236"/>
+<trkpt lat="49.524049" lon="-117.250695"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.525461" lon="-117.250215"/>
 <trkpt lat="49.527677" lon="-117.248632"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.527677" lon="-117.248632"/>
+<trkpt lat="49.525461" lon="-117.250215"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.527677" lon="-117.248632"/>
+<trkpt lat="49.528236" lon="-117.248656"/>
+</trkseg>
+<trkseg>
 <trkpt lat="49.528236" lon="-117.248656"/>
 <trkpt lat="49.528788" lon="-117.248586"/>
 <trkpt lat="49.529982" lon="-117.247693"/>
@@ -286,9 +357,38 @@
 <trkpt lat="49.546407" lon="-117.239369"/>
 <trkpt lat="49.547677" lon="-117.240123"/>
 <trkpt lat="49.548747" lon="-117.239960"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.548747" lon="-117.239960"/>
+<trkpt lat="49.547677" lon="-117.240123"/>
+<trkpt lat="49.546407" lon="-117.239369"/>
+<trkpt lat="49.545672" lon="-117.239335"/>
+<trkpt lat="49.540771" lon="-117.242881"/>
+<trkpt lat="49.535933" lon="-117.245903"/>
+<trkpt lat="49.533481" lon="-117.246335"/>
+<trkpt lat="49.531738" lon="-117.247460"/>
+<trkpt lat="49.529982" lon="-117.247693"/>
+<trkpt lat="49.528788" lon="-117.248586"/>
+<trkpt lat="49.528236" lon="-117.248656"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.528236" lon="-117.248656"/>
+<trkpt lat="49.527677" lon="-117.248632"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.548747" lon="-117.239960"/>
+<trkpt lat="49.548949" lon="-117.239849"/>
+</trkseg>
+<trkseg>
+<trkpt lat="49.548949" lon="-117.239849"/>
+<trkpt lat="49.548747" lon="-117.239960"/>
+</trkseg>
+<trkseg>
 <trkpt lat="49.548949" lon="-117.239849"/>
 <trkpt lat="49.549542" lon="-117.239205"/>
 <trkpt lat="49.549799" lon="-117.238432"/>
+<trkpt lat="49.549542" lon="-117.239205"/>
+<trkpt lat="49.548949" lon="-117.239849"/>
 </trkseg>
 </trk>
 </gpx>

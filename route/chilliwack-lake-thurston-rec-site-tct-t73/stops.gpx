@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Chilliwack Lake to Thurston Rec Site — cycling stops</name>
+<link href="https://bccycletourism.ca/route/chilliwack-lake-thurston-rec-site-tct-t73/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.094689" lon="-121.585493">
+<name>Riverside Campground</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="49.090867" lon="-121.454741">
+<name>Chilliwack Lake Provincial Campground</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="49.076412" lon="-121.748650">
+<name>Thurston Meadows Campground</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+</gpx>

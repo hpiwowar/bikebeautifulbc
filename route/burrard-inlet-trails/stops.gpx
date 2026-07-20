@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Burrard Inlet Trails — cycling stops</name>
+<link href="https://bccycletourism.ca/route/burrard-inlet-trails/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.289402" lon="-122.940396">
+<name>Harry Jerome Sports Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.289947" lon="-122.921447">
+<name>Barnet Beach Cafe</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.291540" lon="-122.881505">
+<name>Float30</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.277495" lon="-122.862072">
+<name>Originals Mexicano</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+</gpx>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Goin' to Bowen (Bowen Island) — cycling stops</name>
+<link href="https://bccycletourism.ca/route/isl-58/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.351032" lon="-123.392997">
+<name>Headwaters Park</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.379963" lon="-123.333685">
+<name>Sp'áḵw'us Gathering Stage</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.379576" lon="-123.334145">
+<name>Tippy's Cookhouse</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.384680" lon="-123.340093">
+<name>Snugglers Cottage</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.371228" lon="-123.363521">
+<name>Grafton Agricultural Commons</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.379538" lon="-123.335853">
+<name>Seabreeze Gallery</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.379531" lon="-123.332530">
+<name>Bowen eBikes</name>
+<cmt>bike_shop</cmt>
+<desc>Rentals</desc>
+<sym>Dot</sym>
+<type>gear</type>
+</wpt>
+<wpt lat="49.380235" lon="-123.333893">
+<name>Bowen Island Visitor Information Centre</name>
+<cmt>generic</cmt>
+<desc>Visitor Centre</desc>
+<sym>Dot</sym>
+<type>generic</type>
+</wpt>
+<wpt lat="49.379507" lon="-123.334536">
+<name>Doc Morgan's Pub &amp; Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.361259" lon="-123.390285">
+<name>Soggy Frog Guest Suite on Bowen</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.379490" lon="-123.337806">
+<name>Catching Stars Gallery</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.379496" lon="-123.334960">
+<name>The Snug on Bowen</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.379489" lon="-123.335380">
+<name>Barcelona Tapas &amp; Wine Bar</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.379479" lon="-123.334678">
+<name>Copper Spirit Distillery</name>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.379466" lon="-123.335526">
+<name>Tuscany Restaurant</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.379928" lon="-123.334257">
+<name>Bowen Island Public Library</name>
+<cmt>library</cmt>
+<desc>Library</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.379451" lon="-123.333845">
+<name>High Tide Grill</name>
+<cmt>food</cmt>
+<desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.380016" lon="-123.338824">
+<name>Bowen Island Historians Museum and Archive</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.379425" lon="-123.337772">
+<name>Bowen Island Pub</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.379424" lon="-123.334552">
+<name>Doc Morgan's</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.379389" lon="-123.338210">
+<name>The Ruddy on Bowen</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.379365" lon="-123.338284">
+<name>The Ruddy Potato</name>
+<cmt>convenience_store</cmt>
+<desc>Grocery Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.351088" lon="-123.415487">
+<name>Caboose</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.379364" lon="-123.333974">
+<name>USSC Marina Ice Cream</name>
+<cmt>food</cmt>
+<desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.361494" lon="-123.389060">
+<name>Woodlands Guesthouse</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.379229" lon="-123.338152">
+<name>Bowen Beer &amp; Wine Cellar</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+<wpt lat="49.380058" lon="-123.331414">
+<name>Branch on Bowen</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.380309" lon="-123.338457">
+<name>Miller Retreats</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.380106" lon="-123.331321">
+<name>tell your friends cafe</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.380850" lon="-123.340335">
+<name>Bowen Island Community Centre</name>
+<cmt>rest_stop</cmt>
+<desc>Community Centre</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.386882" lon="-123.341270">
+<name>Kitoki Inn</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.378765" lon="-123.338175">
+<name>The Village Baker Cafe'</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.380189" lon="-123.344454">
+<name>Artisan Eats Café &amp; Fine Foods</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.380116" lon="-123.344357">
+<name>Artisan Suites on Bowen</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.380282" lon="-123.345391">
+<name>Arts Pacific Gallery</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.381331" lon="-123.352424">
+<name>Carter Park</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="49.357133" lon="-123.395014">
+<name>Wildwood Cabins</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.365974" lon="-123.382862">
+<name>Moonstone Cottage</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.365814" lon="-123.383688">
+<name>Sunstone</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.365854" lon="-123.383623">
+<name>Jasper</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.365897" lon="-123.383551">
+<name>Opal</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.366003" lon="-123.383441">
+<name>Amethyst</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.366057" lon="-123.383291">
+<name>Jade</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.366114" lon="-123.383160">
+<name>Quartz</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.366135" lon="-123.383399">
+<name>Nectar Yoga Retreat</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.356701" lon="-123.396438">
+<name>Alderwood Farm</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.346078" lon="-123.377158">
+<name>The BnB on Bowen Island</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.377119" lon="-123.342492">
+<name>Seaview Cottage</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.378495" lon="-123.346796">
+<name>Rivendell Retreat Centre</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.388905" lon="-123.322913">
+<name>Boho House</name>
+<cmt>lodging</cmt>
+<desc>B&amp;B / Inn</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.362435" lon="-123.401301">
+<name>Riley's Cidery</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+</gpx>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Seymour Valley — cycling stops</name>
+<link href="https://bccycletourism.ca/route/vb-32/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.437365" lon="-122.967083">
+<name>Seymour River Fish Hatchery &amp; Education Centre</name>
+<cmt>viewpoint</cmt>
+<desc>Activity / Experience</desc>
+<sym>Dot</sym>
+<type>overlook</type>
+</wpt>
+<wpt lat="49.343281" lon="-123.018702">
+<name>Lynn Canyon Café</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+</gpx>

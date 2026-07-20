@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
 <metadata>
 <name>E&amp;N Rail Trail</name>
-<link href="https://bccycletourism.ca/trail/e-n-rail-trail/"><text>We Welcome Cyclists</text></link>
+<link href="https://bccycletourism.ca/trail/e-n-rail-trail/"><text>BC Bike Stops</text></link>
 </metadata>
 <wpt lat="48.434477" lon="-123.395176">
 <name>Driftwood Brewing Co.</name>
@@ -1481,24 +1481,10 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="48.452206" lon="-123.433784">
-<name>4 Mile Pub</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="48.452301" lon="-123.433841">
 <name>4 Mile Restaurant &amp; Brewpub</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="48.452368" lon="-123.433830">
-<name>4 Mile Restaurant &amp; Brewpub</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

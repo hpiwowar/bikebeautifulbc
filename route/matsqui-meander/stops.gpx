@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Matsqui Meander — cycling stops</name>
+<link href="https://bccycletourism.ca/route/matsqui-meander/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="49.081853" lon="-122.260845">
+<name>Clayburn Village Store &amp; Gift Shop</name>
+<cmt>coffee</cmt>
+<desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.080456" lon="-122.261363">
+<name>Clayburn Schoolhouse Museum</name>
+<cmt>monument</cmt>
+<desc>Museum / Gallery</desc>
+<sym>Dot</sym>
+<type>info</type>
+</wpt>
+<wpt lat="49.091887" lon="-122.277136">
+<name>Rockweld Farm</name>
+<cmt>convenience_store</cmt>
+<desc>Farmers' Market</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+</gpx>

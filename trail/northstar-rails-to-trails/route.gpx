@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="We Welcome Cyclists (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
 <metadata>
-<name>Northstar Rails to Trails</name>
-<link href="https://bccycletourism.ca/trail/northstar-rails-to-trails/"><text>We Welcome Cyclists</text></link>
+<name>NorthStar Rails to Trails</name>
+<link href="https://bccycletourism.ca/trail/northstar-rails-to-trails/"><text>BC Bike Stops</text></link>
 </metadata>
 <wpt lat="49.674416" lon="-115.976959">
 <name>Kimberley Aquatic Centre</name>
@@ -67,7 +67,7 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<trk><name>Northstar Rails to Trails</name>
+<trk><name>NorthStar Rails to Trails</name>
 <trkseg>
 <trkpt lat="49.676090" lon="-115.977206"/>
 <trkpt lat="49.676194" lon="-115.976776"/>

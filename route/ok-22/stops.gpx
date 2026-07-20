@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Predator Ridge &amp; Ellison Park — cycling stops</name>
+<link href="https://bccycletourism.ca/route/ok-22/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="50.184472" lon="-119.405995">
+<name>Outlook Cabin</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.177421" lon="-119.439123">
+<name>Ellison Provincial Campground</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="50.189260" lon="-119.387110">
+<name>Predator Ridge Resort</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="50.188567" lon="-119.387942">
+<name>Pallino's Italian Bistro</name>
+<cmt>food</cmt>
+<desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.254128" lon="-119.310239">
+<name>Canco</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
+</wpt>
+</gpx>

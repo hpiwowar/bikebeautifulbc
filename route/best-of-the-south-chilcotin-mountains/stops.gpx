@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Best of the South Chilcotin Mountains — cycling stops</name>
+<link href="https://bccycletourism.ca/route/best-of-the-south-chilcotin-mountains/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="50.951965" lon="-122.773602">
+<name>Tyax Lodge &amp; Chalets</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="51.108379" lon="-123.084565">
+<name>Tyax Bear Paw Camp</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="51.018907" lon="-122.970220">
+<name>Tyax Adventures Spruce Camp</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="51.055315" lon="-122.778964">
+<name>Tyaughton Creek Recreation Site Campground</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="50.951871" lon="-122.774732">
+<name>Wolverine Chalet</name>
+<cmt>lodging</cmt>
+<desc>Resort</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="50.951943" lon="-122.771431">
+<name>Tyax Lodge - Campground</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="50.952172" lon="-122.771501">
+<name>Tyax Wilderness Resort and Spa</name>
+<cmt>camping</cmt>
+<desc>Private Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="51.015876" lon="-122.973198">
+<name>Spruce Lake Wilderness Campground</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="51.127302" lon="-123.166944">
+<name>Lorna Lake Wilderness Campground</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+</gpx>

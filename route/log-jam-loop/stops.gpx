@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="BC Bike Stops (bccycletourism.ca)" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata>
+<name>Log Jam Loop — cycling stops</name>
+<link href="https://bccycletourism.ca/route/log-jam-loop/"><text>BC Bike Stops</text></link>
+</metadata>
+<wpt lat="50.232040" lon="-117.569153">
+<name>Little Wilson Lake</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="50.156514" lon="-117.656159">
+<name>Summit Lake Campground</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="50.089828" lon="-117.464990">
+<name>Bonanza Marsh Conservation Area (NCC)</name>
+<cmt>park</cmt>
+<desc>Park / Nature</desc>
+<sym>Dot</sym>
+<type>rest_area</type>
+</wpt>
+<wpt lat="50.233947" lon="-117.603655">
+<name>Wilson Lake East</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+<wpt lat="50.035510" lon="-117.401917">
+<name>Rosebery Provicial Campground</name>
+<cmt>camping</cmt>
+<desc>Public Campground</desc>
+<sym>Dot</sym>
+<type>campsite</type>
+</wpt>
+</gpx>
