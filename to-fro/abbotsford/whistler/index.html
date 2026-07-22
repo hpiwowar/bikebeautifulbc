@@ -25,7 +25,7 @@
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
 </head>
 <body>
-<div class="g-header">
+<!--chrome--><div class="g-header">
   <div class="g-header-inner">
     <a href="/" class="g-header-left">
       <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
@@ -46,7 +46,7 @@
   h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
-</script>
+</script><!--/chrome-->
 <div class="g-main">
 <main class="tf-wrap">
 <nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/to-fro/">To &amp; Fro</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Abbotsford to Whistler</span></nav>
@@ -60,7 +60,7 @@
 <div class="tf-asknote">We show what transit connections accept bikes. Check with the operator for prices, schedules, and reservations.</div>
 <div id="tf-samespot">Same place twice. You&rsquo;re already there, so enjoy the ride.</div>
 <script>window.TF_SEL = ["abbotsford", "whistler"];</script>
-<script src="/to-fro/tf.js" defer></script><div class="tf-orient"><p class="tf-lede">Good news: buses and trains can carry you and your bike from <strong>Abbotsford</strong> to <strong>Whistler</strong>.</p><div class="scale-eyebrow">For scale</div><div class="dist-rows"><div><span class="lbl">As the crow flies</span><b>128 km</b></div><div><span class="lbl">Biking whole way</span><b>206 km</b> · 12 h 22 m</div><div><span class="lbl">By car</span><b>194 km</b> · 2 h 19 m</div></div></div><div class="tf-results"><p class="ways-lede">We found five ways to get you there.</p><div class="tf-capnote"><strong>Note:</strong> Most carriers carry only a handful of bikes, and summer weekends fill up fast. Reserve where you can. Where you can't, go early or have a backup plan.</div><div class="tf-opt">
+<script src="/to-fro/tf.js" defer></script><div class="tf-orient"><p class="tf-lede">Good news: buses and trains can carry you and your bike from <strong>Abbotsford</strong> to <strong>Whistler</strong>.</p><div class="scale-eyebrow">For scale</div><div class="dist-rows"><div><span class="lbl">As the crow flies</span><b>128 km</b></div><div><span class="lbl">Biking whole way</span><b>206 km</b> · 12 h 22 m</div><div><span class="lbl">By car</span><b>194 km</b> · 2 h 19 m</div></div></div><div class="tf-results"><p class="ways-lede">We found five ways to get you there.</p><div class="tf-coachtip">🎒 <strong>Riding a coach?</strong> Most BC coach operators want your bike bagged or boxed. Our field note walks through packing it, including an inexpensive packable bike bag we like: <a href="/field-note/howto-coach-bus/">How to bike-and-bus in BC &rsaquo;</a></div><div class="tf-capnote"><strong>Note:</strong> Most carriers carry only a handful of bikes, and summer weekends fill up fast. Reserve where you can. Where you can't, go early or have a backup plan.</div><div class="tf-opt">
   <div class="tf-kicker">Option one &middot; three legs</div>
   <div class="tf-title">Pedal the first stretch, then let the coach buses take over.</div>
   
@@ -101,7 +101,7 @@
 </script>
 </main>
 </div>
-<div class="g-footer">
+<!--chrome--><div class="g-footer">
   <a class="g-footer-brand" href="/">
     <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
   </a>
@@ -109,7 +109,8 @@
     <div class="g-footer-col">
       <div class="g-footer-h">Dream</div>
       <a href="/routes/">Get Inspired</a>
-      <a href="/route-publishers/">Browse routes</a>
+      <a href="/routes/all/">Browse routes</a>
+      <a href="/route-publishers/">Meet our route makers</a>
       <a href="/trails/">Discover trails</a>
       <a href="/wwc/communities/">Explore our communities</a>
       <a href="/field-notes">Read Field Notes</a>
@@ -138,7 +139,7 @@
       <a href="/land-acknowledgement">Land acknowledgement</a>
     </div>
   </div>
-</div>
+</div><!--/chrome-->
 <script>
 window.addEventListener('load', (event) => {
   document.querySelectorAll('a').forEach(item => {

@@ -401,7 +401,7 @@ body {
 </head>
 <body>
 
-<div class="g-header" style="animation: fadeSlideDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) both">
+<!--chrome--><div class="g-header" style="animation: fadeSlideDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) both">
   <div class="g-header-inner">
     <a href="/" class="g-header-left">
       <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
@@ -422,7 +422,7 @@ body {
   h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
-</script>
+</script><!--/chrome-->
 
 <div class="hero-section">
   <div class="hero-card">
@@ -550,7 +550,7 @@ body {
       <span class="num">4</span>
       <span class="lbl">Find your ride</span>
       <div class="doors">
-        <a href="/route-publishers/">Choose a route</a>
+        <a href="/routes/all/">Choose a route</a>
         <a href="/bike-together/">Bike together</a>
         <a href="/design-your-own-route/">Go your own way</a>
       </div>
@@ -593,7 +593,7 @@ body {
       <span class="stepword">Find your ride</span>
       <span class="stepsub">Three ways in, all equally good</span>
       <div class="fork-opts">
-        <a class="fopt" href="/route-publishers/"><span class="lbl">Choose a route</span><span class="sub">Pick one that speaks to you</span></a>
+        <a class="fopt" href="/routes/all/"><span class="lbl">Choose a route</span><span class="sub">Pick one that speaks to you</span></a>
         <a class="fopt" href="/bike-together/"><span class="lbl">Bike together</span><span class="sub">Find a guided tour or group</span></a>
         <a class="fopt" href="/design-your-own-route/"><span class="lbl">Go your own way</span><span class="sub">Design a route that's all yours</span></a>
       </div>
@@ -648,7 +648,7 @@ body {
   </div>
 </div>
 
-<div class="g-footer">
+<!--chrome--><div class="g-footer">
   <a class="g-footer-brand" href="/">
     <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
   </a>
@@ -656,7 +656,8 @@ body {
     <div class="g-footer-col">
       <div class="g-footer-h">Dream</div>
       <a href="/routes/">Get Inspired</a>
-      <a href="/route-publishers/">Browse routes</a>
+      <a href="/routes/all/">Browse routes</a>
+      <a href="/route-publishers/">Meet our route makers</a>
       <a href="/trails/">Discover trails</a>
       <a href="/wwc/communities/">Explore our communities</a>
       <a href="/field-notes">Read Field Notes</a>
@@ -685,7 +686,7 @@ body {
       <a href="/land-acknowledgement">Land acknowledgement</a>
     </div>
   </div>
-</div>
+</div><!--/chrome-->
 
 <script>
 var observer = new IntersectionObserver(function(entries) {

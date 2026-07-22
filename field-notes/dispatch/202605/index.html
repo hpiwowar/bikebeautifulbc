@@ -196,7 +196,7 @@ body { background: #FFFDF9; }
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
 </head>
 <body>
-<div class="g-header">
+<!--chrome--><div class="g-header">
   <div class="g-header-inner">
     <a href="/" class="g-header-left">
       <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
@@ -217,7 +217,7 @@ body { background: #FFFDF9; }
   h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
-</script>
+</script><!--/chrome-->
 <div class="dispatch-crumbwrap"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/field-notes/">Field Notes</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">May/June 2026 Dispatch</span></nav></div>
 <div class="dispatch-wrap">
 
@@ -376,7 +376,7 @@ body { background: #FFFDF9; }
   </div>
 </div>
 
-<div class="g-footer">
+<!--chrome--><div class="g-footer">
   <a class="g-footer-brand" href="/">
     <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
   </a>
@@ -384,7 +384,8 @@ body { background: #FFFDF9; }
     <div class="g-footer-col">
       <div class="g-footer-h">Dream</div>
       <a href="/routes/">Get Inspired</a>
-      <a href="/route-publishers/">Browse routes</a>
+      <a href="/routes/all/">Browse routes</a>
+      <a href="/route-publishers/">Meet our route makers</a>
       <a href="/trails/">Discover trails</a>
       <a href="/wwc/communities/">Explore our communities</a>
       <a href="/field-notes">Read Field Notes</a>
@@ -413,7 +414,7 @@ body { background: #FFFDF9; }
       <a href="/land-acknowledgement">Land acknowledgement</a>
     </div>
   </div>
-</div>
+</div><!--/chrome-->
 <script>
 window.addEventListener('load', (event) => {
   document.querySelectorAll('a').forEach(item => {

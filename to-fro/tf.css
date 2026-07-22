@@ -208,6 +208,10 @@ h2:hover > .h-anchor { opacity: .55; }
   border: 1px solid #E3C96B; border-radius: 10px; padding: 10px 14px;
   margin: 0 0 26px; line-height: 1.6; max-width: 560px; }
 .tf-capnote strong { text-transform: uppercase; letter-spacing: 0.05em; font-size: 12.5px; }
+.tf-coachtip { font-size: 14px; color: #1F514C; background: #EAF6F2;
+  border: 1px solid #BFE3D4; border-radius: 10px; padding: 10px 14px;
+  margin: 0 0 26px; line-height: 1.6; max-width: 560px; }
+.tf-coachtip a { color: #1E7D96; font-weight: 600; }
 .tf-bikeline-blocked { color: #8C2F2F; background: #FBEFEF; }
 .tf-bikeline { font-size: 14.5px; color: #1C5240; background: #F4FAF5; border-radius: 10px;
   padding: 10px 14px; margin-bottom: 12px; line-height: 1.6; }

@@ -153,7 +153,7 @@ body {
 </head>
 <body>
 
-<div class="g-header">
+<!--chrome--><div class="g-header">
   <div class="g-header-inner">
     <a href="/" class="g-header-left">
       <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
@@ -174,7 +174,7 @@ body {
   h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
-</script>
+</script><!--/chrome-->
 
 <main class="plan-page">
 
@@ -195,6 +195,7 @@ body {
       <span class="qq">Where do you want to ride?</span>
       <span class="ans">Hundreds of routes across six regions, hand-picked from publishers who've ridden every kilometre.</span>
       <a class="go" href="/routes/">Browse trip ideas →</a>
+      <a class="go" href="/routes/all/">See every route in one sortable list →</a>
     </div>
   </div>
 
@@ -251,12 +252,17 @@ body {
         <div class="d">DIY route-builder tools, where to find stops, and what we're building next.</div>
         <span class="g">Start designing →</span>
       </a>
+      <a class="deepcard" href="/route-publishers/">
+        <span class="t">Meet BC's route makers</span>
+        <div class="d">The people and publishers who mapped the rides.</div>
+        <span class="g">Meet the route makers →</span>
+      </a>
     </div>
   </div>
 
 </main>
 
-<div class="g-footer">
+<!--chrome--><div class="g-footer">
   <a class="g-footer-brand" href="/">
     <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
   </a>
@@ -264,7 +270,8 @@ body {
     <div class="g-footer-col">
       <div class="g-footer-h">Dream</div>
       <a href="/routes/">Get Inspired</a>
-      <a href="/route-publishers/">Browse routes</a>
+      <a href="/routes/all/">Browse routes</a>
+      <a href="/route-publishers/">Meet our route makers</a>
       <a href="/trails/">Discover trails</a>
       <a href="/wwc/communities/">Explore our communities</a>
       <a href="/field-notes">Read Field Notes</a>
@@ -293,7 +300,7 @@ body {
       <a href="/land-acknowledgement">Land acknowledgement</a>
     </div>
   </div>
-</div>
+</div><!--/chrome-->
 
 <script>
 window.addEventListener('load', (event) => {

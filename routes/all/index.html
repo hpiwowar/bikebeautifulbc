@@ -301,7 +301,7 @@ body{background:var(--paper)}
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
 </head>
 <body>
-<div class="g-header">
+<!--chrome--><div class="g-header">
   <div class="g-header-inner">
     <a href="/" class="g-header-left">
       <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
@@ -322,7 +322,7 @@ body{background:var(--paper)}
   h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
 })();
-</script>
+</script><!--/chrome-->
 <style>
 .rb-wrap{max-width:1150px;margin:0 auto;padding:8px 6vw 80px}
 .rb-head h1{font-family:"Archivo","Inter",sans-serif;font-size:clamp(26px,3.4vw,36px);font-weight:800;letter-spacing:-.01em;color:var(--herodark);margin:14px 0 0}
@@ -377,7 +377,7 @@ body{background:var(--paper)}
 .rb-row .rb-pub{font-size:12px;color:var(--muted);margin-top:1px;display:block}
 .rb-row .rb-num{font-size:13.5px;font-weight:700;text-align:right;white-space:nowrap}
 .rb-row .rb-num small{font-weight:400;color:var(--muted)}
-.rb-row .rb-chips{display:flex;flex-wrap:wrap;gap:4px}
+.rb-row .rb-chips{display:flex;flex-wrap:wrap;gap:4px;min-width:0}
 .rb-row .rb-chips .chip{font-size:11px;padding:2px 9px}
 .rb-empty{padding:44px;text-align:center;color:var(--muted);background:#fff;border:1px dashed #dbe3db;border-radius:12px}
 .rb-loadmore{display:block;margin:18px auto 0;padding:10px 24px;background:#1E7D96;color:#fff;border:none;border-radius:20px;font-size:14px;font-weight:600;cursor:pointer}
@@ -405,7 +405,7 @@ body{background:var(--paper)}
   <div class="gi-crumbwrap" style="padding:0"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/routes/">Get Inspired</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">All routes</span></nav></div>
   <div class="rb-head">
     <h1>Every route, one list</h1>
-    <p>All 327 published BC routes we track, ready to slice by region, distance, climbing, comfort, and surface. Click any route for its full page: welcoming stops, map, and getting there.</p>
+    <p>All 327 published BC routes we track, ready to slice by region, distance, climbing, comfort, and surface. Click any route for its full page: welcoming stops, map, and getting there. Every one comes from a route maker who's ridden it. <a href="/route-publishers/">Meet BC's route makers →</a></p>
   </div>
   <div class="rb-topbar">
     <input class="rb-search" id="rb-q" placeholder="Search names, towns, regions, publishers, descriptions…">
@@ -437,7 +437,7 @@ body{background:var(--paper)}
   </div>
 </div>
 
-<div class="g-footer">
+<!--chrome--><div class="g-footer">
   <a class="g-footer-brand" href="/">
     <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
   </a>
@@ -445,7 +445,8 @@ body{background:var(--paper)}
     <div class="g-footer-col">
       <div class="g-footer-h">Dream</div>
       <a href="/routes/">Get Inspired</a>
-      <a href="/route-publishers/">Browse routes</a>
+      <a href="/routes/all/">Browse routes</a>
+      <a href="/route-publishers/">Meet our route makers</a>
       <a href="/trails/">Discover trails</a>
       <a href="/wwc/communities/">Explore our communities</a>
       <a href="/field-notes">Read Field Notes</a>
@@ -474,7 +475,7 @@ body{background:var(--paper)}
       <a href="/land-acknowledgement">Land acknowledgement</a>
     </div>
   </div>
-</div>
+</div><!--/chrome-->
 <script>
 window.addEventListener('load', (event) => {
   document.querySelectorAll('a').forEach(item => {
