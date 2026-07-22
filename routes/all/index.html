@@ -324,7 +324,7 @@ body{background:var(--paper)}
 })();
 </script><!--/chrome-->
 <style>
-.rb-wrap{max-width:1150px;margin:0 auto;padding:8px 6vw 80px}
+.rb-wrap{max-width:1150px;margin:0 auto;padding:8px clamp(16px,6vw,48px) 80px}
 .rb-head h1{font-family:"Archivo","Inter",sans-serif;font-size:clamp(26px,3.4vw,36px);font-weight:800;letter-spacing:-.01em;color:var(--herodark);margin:14px 0 0}
 .rb-head p{color:var(--muted);margin-top:10px;max-width:640px}
 .rb-topbar{display:flex;gap:12px;align-items:center;margin:22px 0 4px;flex-wrap:wrap}
@@ -384,7 +384,7 @@ body{background:var(--paper)}
 .rb-overlay{display:none;position:fixed;inset:0;background:rgba(28,40,33,.42);z-index:40}
 .rb-overlay.open{display:block}
 .rb-sheet-head,.rb-sheet-apply,.rb-sheet-grip{display:none}
-@media(max-width:880px){
+@media(max-width:1175px){
   .rb-sidebar-inner{border-right:none;padding-right:0}
   .rb-sidebar{position:fixed;left:0;right:0;bottom:0;width:auto;background:#fff;border-radius:22px 22px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.18);max-height:86vh;overflow:auto;z-index:50;padding:0 20px 20px;transform:translateY(101%);visibility:hidden;transition:transform .26s ease,visibility .26s}
   .rb-sidebar.open{transform:translateY(0);visibility:visible}
