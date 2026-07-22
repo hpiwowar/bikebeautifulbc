@@ -411,11 +411,11 @@ body{background:var(--paper)}
     <input class="rb-search" id="rb-q" placeholder="Search names, towns, regions, publishers, descriptions…">
     <button class="rb-filterbtn" id="rb-filterbtn">Filters <span class="badge-n" id="rb-fbadge" style="display:none"></span></button>
     <select id="rb-sort">
+      <option value="name">Name A–Z</option>
       <option value="d-asc">Distance: short → long</option>
       <option value="d-desc">Distance: long → short</option>
       <option value="c-asc">Climb: least → most</option>
       <option value="c-desc">Climb: most → least</option>
-      <option value="name">Name A–Z</option>
     </select>
     <span class="rb-count" id="rb-count"></span>
   </div>
@@ -525,7 +525,7 @@ const GROUPS = {
   pub: {title:"Route maker", opts:PUBS, test:(r,v)=>r.pk===v, collapse:6},
 };
 const SLIDER_GROUPS = ["dist","climb"];
-const state = {sel:{}, q:"", sort:"d-asc", limit:60, open:{}, range:{}};
+const state = {sel:{}, q:"", sort:"name", limit:60, open:{}, range:{}};
 for (const g in GROUPS) state.sel[g] = [];
 
 const HIST = {};
@@ -669,7 +669,7 @@ function updateHash(){
     if (!GROUPS[g].slider && state.sel[g].length) p.push(g+"="+state.sel[g].join(","));
   for (const k of SLIDER_GROUPS) if (rangeActive(k)) p.push(k+"="+state.range[k].join("-"));
   if (state.q) p.push("q="+encodeURIComponent(state.q));
-  if (state.sort!=="d-asc") p.push("sort="+state.sort);
+  if (state.sort!=="name") p.push("sort="+state.sort);
   history.replaceState(null, "", p.length ? "#"+p.join("&") : location.pathname);
 }
 function readHash(){
