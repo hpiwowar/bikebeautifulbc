@@ -197,6 +197,18 @@ body {
 }
 .jstop .lbl { display: block; font-size: 15px; font-weight: 700; color: #0D2E1E; letter-spacing: -0.01em; }
 .jstop .sub { display: block; font-size: 12.5px; color: rgba(13,46,30,0.58); margin-top: 2px; }
+/* step 4: one stop, three ways in */
+.jchoice { width: 224px; cursor: default; }
+.jchoice .doors { margin-top: 8px; border-top: 1.5px dashed #C9E0EB; }
+.jchoice .doors a {
+  display: block; padding: 7px 6px 6px; text-align: left;
+  font-size: 13.5px; font-weight: 700; color: #1E7D96; text-decoration: none;
+  border-bottom: 1.5px dashed #C9E0EB;
+  transition: color 0.15s ease;
+}
+.jchoice .doors a::before { content: "\2190"; margin-right: 8px; }
+.jchoice .doors a:last-child { border-bottom: none; padding-bottom: 2px; }
+.jchoice .doors a:hover { color: #6EC040; }
 .jfinish { position: absolute; transform: translate(-50%, -50%); text-align: center; width: 200px; }
 .jfinish .lbl {
   font-family: "Archivo", sans-serif;
@@ -214,6 +226,11 @@ body {
   position: absolute; transform: translate(-50%, -50%) rotate(-7deg);
   font-family: "Bradley Hand", "Segoe Script", "Comic Sans MS", cursive;
   font-size: 21px; color: #1E7D96; opacity: 0.9; white-space: nowrap;
+}
+.anypath {
+  position: absolute; transform: translate(-50%, -50%) rotate(-5deg);
+  font-family: "Bradley Hand", "Segoe Script", "Comic Sans MS", cursive;
+  font-size: 16px; color: #1E7D96; opacity: 0.85; width: 140px; text-align: center; line-height: 1.25;
 }
 .journey-cta { text-align: center; margin-top: 30px; }
 .journey-cta a {
@@ -246,6 +263,23 @@ body {
   .journey-mobile .lbl { display: block; font-size: 16px; font-weight: 700; color: #0D2E1E; }
   .journey-mobile .sub { display: block; font-size: 13px; color: rgba(13,46,30,0.6); }
   .journey-mobile .fin .lbl { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 600; }
+  /* the fork on mobile: three equal options hanging off the spine as a comb */
+  .journey-mobile li.fork { padding-bottom: 22px; }
+  .journey-mobile li.fork > .stepword { display: block; font-size: 16px; font-weight: 700; color: #0D2E1E; }
+  .journey-mobile li.fork > .stepsub { display: block; font-size: 13px; color: rgba(13,46,30,0.6); margin-bottom: 12px; }
+  .fork-opts { display: flex; flex-direction: column; gap: 10px; }
+  .fopt {
+    position: relative; display: block; text-decoration: none;
+    background: #FFFDF9; border: 1.5px solid #C9E0EB; border-radius: 12px;
+    padding: 10px 12px 9px 14px;
+    box-shadow: 0 2px 8px rgba(13,64,112,0.06);
+  }
+  .fopt::before {
+    content: ""; position: absolute; left: -31px; top: 50%; width: 29px;
+    border-top: 3px dashed rgba(30,125,150,0.5);
+  }
+  .fopt .lbl { display: block; font-size: 15px; font-weight: 700; color: #0D2E1E; }
+  .fopt .sub { display: block; font-size: 12.5px; color: rgba(13,46,30,0.58); margin-top: 1px; }
   .journey-sidetrips-mobile { display: block; text-align: center; font-size: 13px; color: rgba(13,46,30,0.6); margin-top: 4px; }
   .journey-sidetrips-mobile a { color: #1E7D96; font-weight: 700; text-decoration: none; }
 }
@@ -445,6 +479,12 @@ body {
           <circle cx="24" cy="22" r="2.4"/>
           <path d="M24 22 L27.5 26"/>
         </g>
+        <g id="jtree" stroke="#6E6E6E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M -10 0 L 0 -10 L 10 0 Z"/>
+          <path d="M -8 -7 L 0 -16 L 8 -7 Z"/>
+          <path d="M -5.5 -13 L 0 -21 L 5.5 -13 Z"/>
+          <path d="M 0 0 V 6"/>
+        </g>
       </defs>
       <!-- the wander line -->
       <path d="M 52 96
@@ -458,25 +498,36 @@ body {
                C 560 228, 470 262, 360 252
                C 230 240, 92 268, 96 316
                C 100 360, 158 380, 230 398
-               C 340 424, 450 406, 560 385
-               C 672 364, 780 400, 850 420
-               C 900 432, 950 438, 1010 444"
+               C 340 424, 460 435, 570 431
+               C 680 427, 790 424, 860 428
+               C 908 430, 950 428, 1010 424"
             stroke="#1E7D96" stroke-width="3.5" stroke-linecap="round"
             stroke-dasharray="9 13" opacity="0.75"/>
       <!-- detour spur: wanders off the left turn between stops 5 and 6 -->
       <path d="M 112 352 C 88 400, 90 440, 112 468"
             stroke="#6E6E6E" stroke-width="2.5" stroke-linecap="round"
             stroke-dasharray="4 10" opacity="0.55"/>
+      <!-- a couple of birds up in the big sky -->
+      <g stroke="#6E6E6E" stroke-width="2" opacity="0.5" fill="none" stroke-linecap="round">
+        <path d="M 252 22 q 7 -9 14 0 q 7 -9 14 0"/>
+        <path d="M 290 38 q 6 -7 12 0 q 6 -7 12 0"/>
+      </g>
       <!-- mountains at journey's end -->
       <g stroke="#6E6E6E" stroke-width="2.5" opacity="0.45" stroke-linejoin="round" stroke-linecap="round">
         <path d="M842 402 L880 358 L918 402"/>
         <path d="M900 396 L932 364 L964 396"/>
         <path d="M938 390 L964 368 L990 390"/>
       </g>
+      <!-- a few conifers along the way -->
+      <g opacity="0.45">
+        <use href="#jtree" transform="translate(148,308)"/>
+        <use href="#jtree" transform="translate(56,440) scale(0.9)"/>
+        <use href="#jtree" transform="translate(268,506)"/>
+      </g>
       <!-- bike setting off -->
       <use href="#jbike" x="2" y="66"/>
       <!-- bike riding off the page -->
-      <use href="#jbike" x="962" y="412"/>
+      <use href="#jbike" x="920" y="398"/>
     </svg>
 
     <a class="jstop" style="left:15%; top:15.4%;" href="/routes/">
@@ -491,14 +542,19 @@ body {
     </a>
     <a class="jstop" style="left:76%; top:16.4%;" href="/route-publishers/">
       <span class="num">3</span>
-      <span class="lbl">Meet the route publishers</span>
+      <span class="lbl">Meet BC's route makers</span>
       <span class="sub">The people who map the rides</span>
     </a>
-    <a class="jstop" style="left:70%; top:41.4%;" href="/routes/">
+    <!-- step 4: one stop, three ways in -->
+    <div class="jstop jchoice" style="left:68%; top:47%;">
       <span class="num">4</span>
-      <span class="lbl">Choose a route</span>
-      <span class="sub">A day ride, or the big loop</span>
-    </a>
+      <span class="lbl">Find your ride</span>
+      <div class="doors">
+        <a href="/route-publishers/">Choose a route</a>
+        <a href="/bike-together/">Bike together</a>
+        <a href="/design-your-own-route/">Go your own way</a>
+      </div>
+    </div>
     <a class="jstop" style="left:36%; top:45%;" href="/to-fro/">
       <span class="num">5</span>
       <span class="lbl">Plan your To &amp; Fro</span>
@@ -509,7 +565,7 @@ body {
       <span class="lbl">Pick your stops</span>
       <span class="sub">Sleep, eat, refill, explore</span>
     </a>
-    <a class="jstop" style="left:56%; top:68.8%;" href="/be-prepared/">
+    <a class="jstop" style="left:57%; top:77%;" href="/be-prepared/">
       <span class="num">7</span>
       <span class="lbl">Get prepared</span>
       <span class="sub">What to pack and know</span>
@@ -525,13 +581,23 @@ body {
     </div>
 
     <div class="letsgo" style="left:6%; top:7.5%;">Let's go!</div>
+    <div class="anypath" style="left:88.5%; top:47.5%;">any path works!</div>
   </div>
 
   <ol class="journey-mobile">
     <li><span class="num">1</span><a href="/routes/"><span class="lbl">Get inspired</span><span class="sub">Watch the reel, dream a little</span></a></li>
     <li><span class="num">2</span><a href="/routes/"><span class="lbl">Explore a region</span><span class="sub">Where in BC is calling you?</span></a></li>
-    <li><span class="num">3</span><a href="/route-publishers/"><span class="lbl">Meet the route publishers</span><span class="sub">The people who map the rides</span></a></li>
-    <li><span class="num">4</span><a href="/routes/"><span class="lbl">Choose a route</span><span class="sub">A day ride, or the big loop</span></a></li>
+    <li><span class="num">3</span><a href="/route-publishers/"><span class="lbl">Meet BC's route makers</span><span class="sub">The people who map the rides</span></a></li>
+    <li class="fork">
+      <span class="num">4</span>
+      <span class="stepword">Find your ride</span>
+      <span class="stepsub">Three ways in, all equally good</span>
+      <div class="fork-opts">
+        <a class="fopt" href="/route-publishers/"><span class="lbl">Choose a route</span><span class="sub">Pick one that speaks to you</span></a>
+        <a class="fopt" href="/bike-together/"><span class="lbl">Bike together</span><span class="sub">Find a guided tour or group</span></a>
+        <a class="fopt" href="/design-your-own-route/"><span class="lbl">Go your own way</span><span class="sub">Design a route that's all yours</span></a>
+      </div>
+    </li>
     <li><span class="num">5</span><a href="/to-fro/"><span class="lbl">Plan your To &amp; Fro</span><span class="sub">You and your bike, there and back</span></a></li>
     <li><span class="num">6</span><a href="/wwc/"><span class="lbl">Pick your stops</span><span class="sub">Sleep, eat, refill, explore</span></a></li>
     <li><span class="num">7</span><a href="/be-prepared/"><span class="lbl">Get prepared</span><span class="sub">What to pack and know</span></a></li>

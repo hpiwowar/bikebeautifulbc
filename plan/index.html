@@ -134,7 +134,7 @@ body {
 .cap-place { position: absolute; right: 12px; bottom: 11px; color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .01em; text-shadow: 0 1px 6px rgba(0,0,0,.6); max-width: 78%; text-align: right; }
 .deeper { background: #fff; border-top: 1px solid #F0E6C5; padding: 2.8rem 2rem 1.9rem; }
 .deeper .step { font-size: .72rem; font-weight: 800; color: #6EC040; letter-spacing: .12em; display: block; margin-bottom: .8rem; }
-.deepgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.deepgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
 .deepcard { display: block; text-decoration: none; border: 1px solid #F0E6C5; border-radius: 10px; padding: 1rem 1.1rem; background: #FFFDF9; transition: border-color .15s; }
 .deepcard:hover { border-color: #1E7D96; }
 .deepcard .t { font-family: "Archivo","Inter",sans-serif; font-size: 1.02rem; font-weight: 700; color: #0D2E1E; letter-spacing: -.01em; }
@@ -240,6 +240,16 @@ body {
         <span class="t">Be Prepared</span>
         <div class="d">Closures, wildlife, rules of the road, and other things worth knowing before you roll out.</div>
         <span class="g">Be prepared →</span>
+      </a>
+      <a class="deepcard" href="/bike-together/">
+        <span class="t">Bike Together</span>
+        <div class="d">Guided and self-guided tour companies, plus groups you can just show up and ride with.</div>
+        <span class="g">Find a tour or group →</span>
+      </a>
+      <a class="deepcard" href="/design-your-own-route/">
+        <span class="t">Design Your Own Route</span>
+        <div class="d">DIY route-builder tools, where to find stops, and what we're building next.</div>
+        <span class="g">Start designing →</span>
       </a>
     </div>
   </div>
