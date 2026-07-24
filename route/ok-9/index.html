@@ -388,7 +388,7 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
     map.addLayer({id:"trail-line",type:"line",source:"trail",
       layout:{"line-cap":"round","line-join":"round"},
       paint:{"line-color":"#5f259f","line-width":4,"line-dasharray":[1.5,2]}});
-    var FASTROAD={"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"c": "e", "road": "Naramata Road"}, "geometry": {"type": "LineString", "coordinates": [[-119.56983, 49.55215], [-119.5829, 49.5816], [-119.58005, 49.58727]]}}, {"type": "Feature", "properties": {"c": "e", "road": "Naramata Road"}, "geometry": {"type": "LineString", "coordinates": [[-119.58005, 49.58727], [-119.5797, 49.58957]]}}, {"type": "Feature", "properties": {"c": "e", "road": "Naramata Road"}, "geometry": {"type": "LineString", "coordinates": [[-119.55816, 49.52283], [-119.5645, 49.54054], [-119.56978, 49.5455], [-119.56983, 49.55213]]}}]};
+    var FASTROAD={"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"c": "e", "road": "Naramata Road"}, "geometry": {"type": "LineString", "coordinates": [[-119.58005, 49.58727], [-119.5797, 49.58957]]}}, {"type": "Feature", "properties": {"c": "e", "road": "Naramata Road"}, "geometry": {"type": "LineString", "coordinates": [[-119.55816, 49.52283], [-119.5645, 49.54054], [-119.56978, 49.5455], [-119.56983, 49.55213]]}}, {"type": "Feature", "properties": {"c": "e", "road": "Naramata Road"}, "geometry": {"type": "LineString", "coordinates": [[-119.56983, 49.55215], [-119.5829, 49.5816], [-119.58005, 49.58727]]}}]};
     map.addSource("fastroad",{type:"geojson",data:FASTROAD});
     map.addLayer({id:"fastroad-line",type:"line",source:"fastroad",
       layout:{"line-cap":"round","line-join":"round"},

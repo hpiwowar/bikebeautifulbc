@@ -388,7 +388,7 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
     map.addLayer({id:"trail-line",type:"line",source:"trail",
       layout:{"line-cap":"round","line-join":"round"},
       paint:{"line-color":"#5f259f","line-width":4,"line-dasharray":[1.5,2]}});
-    var FASTROAD={"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"c": "r", "road": "Long Harbour Road"}, "geometry": {"type": "LineString", "coordinates": [[-123.50094, 48.86536], [-123.48695, 48.86014]]}}, {"type": "Feature", "properties": {"c": "r", "road": "Long Harbour Road"}, "geometry": {"type": "LineString", "coordinates": [[-123.48695, 48.86014], [-123.46867, 48.85344]]}}, {"type": "Feature", "properties": {"c": "r", "road": "Long Harbour Road"}, "geometry": {"type": "LineString", "coordinates": [[-123.46867, 48.85344], [-123.45466, 48.85147]]}}]};
+    var FASTROAD={"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"c": "r", "road": "Long Harbour Road"}, "geometry": {"type": "LineString", "coordinates": [[-123.46867, 48.85344], [-123.45466, 48.85147]]}}, {"type": "Feature", "properties": {"c": "r", "road": "Long Harbour Road"}, "geometry": {"type": "LineString", "coordinates": [[-123.48695, 48.86014], [-123.46867, 48.85344]]}}, {"type": "Feature", "properties": {"c": "r", "road": "Long Harbour Road"}, "geometry": {"type": "LineString", "coordinates": [[-123.50094, 48.86536], [-123.48695, 48.86014]]}}]};
     map.addSource("fastroad",{type:"geojson",data:FASTROAD});
     map.addLayer({id:"fastroad-line",type:"line",source:"fastroad",
       layout:{"line-cap":"round","line-join":"round"},
