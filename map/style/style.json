@@ -41,7 +41,7 @@
  "sources": {
   "openmaptiles": {
    "type": "vector",
-   "url": "pmtiles://https://s3.public.mtl1.vexxhost.net/9664ed7aa29a485cbff2757884be04b4:osm-bc-tiles/bc.pmtiles"
+   "url": "https://tiles.openfreemap.org/planet"
   },
   "bc-mask": {
    "type": "geojson",
@@ -53,12 +53,12 @@
   },
   "bc-cycling": {
    "type": "vector",
-   "url": "pmtiles:///data/osm/bc-cycling.pmtiles",
+   "url": "pmtiles://https://s3.public.mtl1.vexxhost.net/9664ed7aa29a485cbff2757884be04b4:osm-bc-tiles/bc-cycling.pmtiles",
    "minzoom": 5,
    "maxzoom": 14
   }
  },
- "sprite": "/map/style/sprite/sprite",
+ "sprite": "https://bccycletourism.ca/map/style/sprite/sprite",
  "glyphs": "/map/style/glyphs/{fontstack}/{range}.pbf",
  "layers": [
   {
