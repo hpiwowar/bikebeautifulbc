@@ -276,6 +276,25 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
 .rt-chips .chip.tier.ambitious{background:#fbf0d9;color:#946510;border-color:#efdcae}
 .rt-chips .chip.tier.challenging{background:#fbe6d6;color:#b0551a;border-color:#f0cdae}
 .rt-chips .chip.tier.epic{background:#efe8f8;color:#6b3fa0;border-color:#d9c6ee}
+.rt-chips .chip.fastroad{background:#fbf0d9;color:#946510;border-color:#efdcae}
+/* Route-page chips are buttons (design §2c) — the only surface where a chip isn't
+   inside a link. These four declarations undo the UA button defaults so a button.chip
+   is pixel-identical to the span.chip it replaced. */
+.rt-chips button.chip{font-family:inherit;line-height:normal;text-align:left;cursor:pointer;-webkit-appearance:none;appearance:none}
+.rt-chips button.chip:focus-visible{outline:2px solid #1E7D96;outline-offset:2px}
+.rt-chips .rt-ratelink{align-self:center;font-size:12.5px;font-weight:600;color:#1E7D96;text-decoration:none;margin-left:2px}
+.rt-chips .rt-ratelink:hover{text-decoration:underline}
+.rt-chippanels{position:relative}
+.rt-chippanel{display:none;background:#FCFBF6;border:1px solid #E4DFD0;border-radius:11px;padding:13px 15px;margin:0 0 18px;box-shadow:0 4px 14px rgba(13,64,112,.09)}
+.rt-chippanel.open{display:block}
+.rt-chippanel p{margin:0 0 9px;font-size:14px;line-height:1.55;color:#3C4A43}
+.rt-chippanel p b{color:#1F514C}
+.rt-chippanel .prov{font-size:12.5px;color:#6B7280}
+.rt-chippanel a{color:#1E7D96;font-weight:600;text-decoration:none;font-size:13.5px}
+.rt-chippanel a:hover{text-decoration:underline}
+/* Fine pointer: a small panel anchored under the chip. Coarse pointer keeps the
+   default inline block below the whole row, so it can never clip off a phone. */
+@media (pointer:fine){.rt-chippanel.open{position:absolute;top:0;z-index:20;width:min(340px,100%);margin:0}}
 .rt-dist{font-size:14.5px;color:#3C4A43;font-weight:600;margin:0 0 18px}
 .rt-diffwhy{font-size:14px;color:#4b5563;margin:-10px 0 18px}
 .rt-handoff{background:#FFF6E5;border:1px solid #F0E6C5;border-radius:14px;padding:22px 26px;display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:6px 0 26px}
@@ -313,7 +332,20 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
 .rt-opnote{font-size:14px;color:#3C4A43;line-height:1.6;margin:-6px 0 18px;max-width:70ch}
 .rt-opnote a{color:#1E7D96;font-weight:600;text-decoration:none}
 .rt-opnote a:hover{text-decoration:underline}
-</style><div class="guide-wrap"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/routes/">Get Inspired</a><span class="g-crumb-sep">/</span><a href="/routes/vancouver-coast-and-mountains/">Vancouver, Coast and Mountains</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Canoe Pass Trail (Brunswick Point)</span></nav><h1 class="guide-h1">Canoe Pass Trail (Brunswick Point)</h1><p class="rt-byline">A ride described in <a href="/route-publishers/lets-go-biking/">Let&#x27;s Go Biking</a></p><p class="rt-dist">7 km · Afternoon · Vancouver, Coast and Mountains</p><div class="rt-chips"><span class="chip tier easy">Easy</span><span class="chip comfort">Low-traffic riding</span><span class="chip">Mostly gravel</span><span class="chip">Chunky gravel</span></div><p class="rt-diffwhy">Difficulty: Easy — no major climbing or rough surface.</p><p class="guide-sub">The Canoe Pass Trail at Brunswick Point runs flat and quiet along the dyke near Ladner, 10 to 14 km out and back where the Fraser meets the sea. Wildflowers colour the banks in summer, and this is superb raptor and shorebird country, with snow geese passing through in season. Gravel surface, no hills at all.</p><div class="rt-handoff"><div class="msg"><div class="eyebrow">Our map below is a rough sketch</div><b>How to get the detailed route</b><p>The full map, turn-by-turns, and GPX for this ride are on Let&#x27;s Go Biking. Our map shows roughly where the ride goes, not how to follow it.</p></div><div class="rt-ctacol"><a class="go" href="https://www.letsgobiking.net/shop/lets-go-biking-around-vancouver/" target="_blank" rel="noopener">Get the book from Let's Go Biking →</a><a class="rt-alt" href="https://ridewithgps.com/routes/55682646" target="_blank" rel="noopener">Free route map on Ride with GPS ↗</a></div></div><div class="guide-section"><h2 id="communities-along-this-route">Communities along this route<a class="h-anchor" href="#communities-along-this-route" aria-label="Link to this section">#</a></h2><div class="guide-chips"><a class="guide-chip" href="/wwc/community/delta/">Delta</a></div></div><div class="guide-around rt-tofro"><h2 id="getting-to-this-ride-bike-and-all" class="guide-around-h">Getting to this ride, bike and all<a class="h-anchor" href="#getting-to-this-ride-bike-and-all" aria-label="Link to this section">#</a></h2><p class="guide-around-lede"><a href="/wwc/community/delta/">Delta</a> is the handiest transit doorway for this ride. Buses, the SkyTrain, and ferries will carry you and your bike there:</p><p class="guide-around-picks"><a href="/to-fro/richmond/delta/">Richmond</a> <span class="guide-annot">(best: bus)</span> &middot; <a href="/to-fro/vancouver/delta/">Vancouver</a> <span class="guide-annot">(best: SkyTrain + bus)</span> &middot; <a href="/to-fro/nanaimo/delta/">Nanaimo</a> <span class="guide-annot">(best: ferry)</span> &middot; <a href="/to-fro/victoria/delta/">Victoria</a> <span class="guide-annot">(best: bus + ferry)</span></p><p class="guide-around-tool"><a href="/to-fro/">Or pick any two places on To &amp; Fro &rarr;</a></p></div><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}@media (max-width:700px){.wwc-map{height:300px}.wwc-map.large{height:320px}}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div class="guide-section wwc-map-wrap"><h2 id="roughly-where-this-ride-goes">Roughly where this ride goes<a class="h-anchor" href="#roughly-where-this-ride-goes" aria-label="Link to this section">#</a></h2><div id="routemap" class="wwc-map compact"><a class="rt-approx-badge" href="https://www.letsgobiking.net/shop/lets-go-biking-around-vancouver/" target="_blank" rel="noopener"><span class="d1">Approximate line</span><span class="d2">Get the real route ↗</span></a></div><div class="wwc-map-ctrls"><label><input type="checkbox" id="routemap-mute" checked> Mute other bike routes</label><div class="wwc-map-legend"></div></div><p class="rt-mapnote">The dashed line is our rough sketch, drawn only to show where the ride is. For the real, rideable route, <a href="https://www.letsgobiking.net/shop/lets-go-biking-around-vancouver/" target="_blank" rel="noopener">get the book from Let&#x27;s Go Biking</a>.</p></div><script>
+/* Fast-road stretches (§2c): named list; dot colour echoes the map overlay (RISK
+   #67000d, EXPERIENCED ONLY #a63603) so the list and map read as one system. */
+.rt-fast{margin:0 0 26px}
+.rt-fast h2{font-family:"Archivo","Inter",sans-serif;font-size:20px;font-weight:700;color:#1F514C;margin:0 0 6px}
+.rt-fast .rt-fast-fine{font-size:13.5px;color:#6B7280;margin:0 0 12px;max-width:70ch}
+.rt-fast ul{list-style:none;margin:0;padding:0}
+.rt-fast li{font-size:15px;color:#3C4A43;line-height:1.5;padding:4px 0;display:flex;align-items:baseline;gap:9px}
+.rt-fast li .dot{flex-shrink:0;width:9px;height:9px;border-radius:50%;transform:translateY(1px)}
+.rt-fast li .near{color:#6B7280}
+.rt-fast .rt-fast-more{font-size:13.5px;color:#6B7280;margin:8px 0 0}
+.rt-fastleg{font-size:12.5px;color:#5B6B72;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:14px}
+.rt-fastleg .row{display:inline-flex;align-items:center;gap:6px}
+.rt-fastleg .dot{width:9px;height:9px;border-radius:50%}
+</style><div class="guide-wrap"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/routes/">Get Inspired</a><span class="g-crumb-sep">/</span><a href="/routes/vancouver-coast-and-mountains/">Vancouver, Coast and Mountains</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Canoe Pass Trail (Brunswick Point)</span></nav><h1 class="guide-h1">Canoe Pass Trail (Brunswick Point)</h1><p class="rt-byline">A ride described in <a href="/route-publishers/lets-go-biking/">Let&#x27;s Go Biking</a></p><p class="rt-dist">7 km · Afternoon · Vancouver, Coast and Mountains</p><div class="rt-chips" id="rt-chiprow"><button type="button" class="chip tier easy" data-panel="rtcp0" aria-controls="rtcp0" aria-expanded="false">Easy</button><button type="button" class="chip comfort" data-panel="rtcp1" aria-controls="rtcp1" aria-expanded="false">Low-traffic riding</button><button type="button" class="chip" data-panel="rtcp2" aria-controls="rtcp2" aria-expanded="false">Mostly gravel</button><button type="button" class="chip" data-panel="rtcp3" aria-controls="rtcp3" aria-expanded="false">Chunky gravel</button><a class="rt-ratelink" href="/routes/how-we-describe/">How we describe routes →</a></div><div class="rt-chippanels" id="rt-chippanels"><div class="rt-chippanel" id="rtcp0" role="note" aria-label="Easy"><p class="l"><b>Easy</b> Smooth surfaces and gentle climbing.</p><p class="f"><b>Difficulty</b> Our overall read of how demanding a route is. We score surface roughness, climbing, singletrack, and how far it runs from services. The route publisher&#x27;s own rating, a lot of busy road riding, or sheer scale can push the tier up, never down.</p><p class="prov">Derived from OpenStreetMap. Good data, not perfect. Spot something wrong? <a href="mailto:hello@bccycletourism.ca?subject=Route%20label%20correction">Tell us</a>.</p><a href="/routes/how-we-describe/">How we describe routes →</a></div><div class="rt-chippanel" id="rtcp1" role="note" aria-label="Low-traffic riding"><p class="l"><b>Low-traffic riding</b> At least 75% of the riding we could measure is on bike paths, quiet streets, or car free backcountry roads.</p><p class="f"><b>Comfort</b> How much of the route you spend sharing the road with cars. Bike paths, quiet streets, and car free backcountry roads count as comfortable. Busy or fast roads don&#x27;t.</p><p class="prov">Derived from OpenStreetMap. Good data, not perfect. Spot something wrong? <a href="mailto:hello@bccycletourism.ca?subject=Route%20label%20correction">Tell us</a>.</p><a href="/routes/how-we-describe/">How we describe routes →</a></div><div class="rt-chippanel" id="rtcp2" role="note" aria-label="Mostly gravel"><p class="l"><b>Mostly gravel</b> 50 to 84% unpaved.</p><p class="f"><b>Surface</b> How much of the route is paved versus gravel or dirt, by distance ridden. Surfaces come from OpenStreetMap. Where nothing is mapped we assume ordinary roads are paved and backcountry tracks are gravel, and leave the rest uncounted.</p><p class="prov">Derived from OpenStreetMap. Good data, not perfect. Spot something wrong? <a href="mailto:hello@bccycletourism.ca?subject=Route%20label%20correction">Tell us</a>.</p><a href="/routes/how-we-describe/">How we describe routes →</a></div><div class="rt-chippanel" id="rtcp3" role="note" aria-label="Chunky gravel"><p class="l"><b>Chunky gravel</b> At least 10% of the riding we could measure crosses loose stones, ruts, or sand. Tires of 33 to 40 mm make it a lot more fun.</p><p class="f"><b>Ruggedness</b> Flags for routes where a good share of the riding is rougher than the surface label suggests.</p><p class="prov">Derived from OpenStreetMap. Good data, not perfect. Spot something wrong? <a href="mailto:hello@bccycletourism.ca?subject=Route%20label%20correction">Tell us</a>.</p><a href="/routes/how-we-describe/">How we describe routes →</a></div></div><p class="rt-diffwhy">Difficulty: Easy — no major climbing or rough surface.</p><p class="guide-sub">The Canoe Pass Trail at Brunswick Point runs flat and quiet along the dyke near Ladner, 10 to 14 km out and back where the Fraser meets the sea. Wildflowers colour the banks in summer, and this is superb raptor and shorebird country, with snow geese passing through in season. Gravel surface, no hills at all.</p><div class="rt-handoff"><div class="msg"><div class="eyebrow">Our map below is a rough sketch</div><b>How to get the detailed route</b><p>The full map, turn-by-turns, and GPX for this ride are on Let&#x27;s Go Biking. Our map shows roughly where the ride goes, not how to follow it.</p></div><div class="rt-ctacol"><a class="go" href="https://www.letsgobiking.net/shop/lets-go-biking-around-vancouver/" target="_blank" rel="noopener">Get the book from Let's Go Biking →</a><a class="rt-alt" href="https://ridewithgps.com/routes/55682646" target="_blank" rel="noopener">Free route map on Ride with GPS ↗</a></div></div><div class="guide-section"><h2 id="communities-along-this-route">Communities along this route<a class="h-anchor" href="#communities-along-this-route" aria-label="Link to this section">#</a></h2><div class="guide-chips"><a class="guide-chip" href="/wwc/community/delta/">Delta</a></div></div><div class="guide-around rt-tofro"><h2 id="getting-to-this-ride-bike-and-all" class="guide-around-h">Getting to this ride, bike and all<a class="h-anchor" href="#getting-to-this-ride-bike-and-all" aria-label="Link to this section">#</a></h2><p class="guide-around-lede"><a href="/wwc/community/delta/">Delta</a> is the handiest transit doorway for this ride. Buses, the SkyTrain, and ferries will carry you and your bike there:</p><p class="guide-around-picks"><a href="/to-fro/richmond/delta/">Richmond</a> <span class="guide-annot">(best: bus)</span> &middot; <a href="/to-fro/vancouver/delta/">Vancouver</a> <span class="guide-annot">(best: SkyTrain + bus)</span> &middot; <a href="/to-fro/nanaimo/delta/">Nanaimo</a> <span class="guide-annot">(best: ferry)</span> &middot; <a href="/to-fro/victoria/delta/">Victoria</a> <span class="guide-annot">(best: bus + ferry)</span></p><p class="guide-around-tool"><a href="/to-fro/">Or pick any two places on To &amp; Fro &rarr;</a></p></div><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}@media (max-width:700px){.wwc-map{height:300px}.wwc-map.large{height:320px}}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div class="guide-section wwc-map-wrap"><h2 id="roughly-where-this-ride-goes">Roughly where this ride goes<a class="h-anchor" href="#roughly-where-this-ride-goes" aria-label="Link to this section">#</a></h2><div id="routemap" class="wwc-map compact"><a class="rt-approx-badge" href="https://www.letsgobiking.net/shop/lets-go-biking-around-vancouver/" target="_blank" rel="noopener"><span class="d1">Approximate line</span><span class="d2">Get the real route ↗</span></a></div><div class="wwc-map-ctrls"><label><input type="checkbox" id="routemap-mute" checked> Mute other bike trails</label><div class="wwc-map-legend"></div></div><p class="rt-mapnote">The dashed line is our rough sketch, drawn only to show where the ride is. For the real, rideable route, <a href="https://www.letsgobiking.net/shop/lets-go-biking-around-vancouver/" target="_blank" rel="noopener">get the book from Let&#x27;s Go Biking</a>.</p></div><script>
 (function(){
   var el=document.getElementById("routemap");
   if(!el) return;
@@ -391,7 +423,65 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
     io.observe(el);
   } else { init(); }
 })();
-</script><div class="guide-section"><h2 id="traditional-territories">Traditional territories<a class="h-anchor" href="#traditional-territories" aria-label="Link to this section">#</a></h2><p class="rt-terr">This route travels through the traditional territories of the <a href="https://native-land.ca/listings/territories/cayuse-umatilla-and-walla-walla" target="_blank" rel="noopener">Cayuse, Umatilla and Walla Walla</a>, <a href="https://native-land.ca/listings/territories/hulquminum-treaty-group" target="_blank" rel="noopener">Hul’qumi’num Treaty Group</a>, <a href="https://native-land.ca/listings/territories/quwutsun" target="_blank" rel="noopener">Quw’utsun</a>, <a href="https://native-land.ca/listings/territories/stolo-treaty-association" target="_blank" rel="noopener">S’ólh Téméxw (Stó:lō)</a>, <a href="https://native-land.ca/listings/territories/tsawwassen-sc%cc%93%c9%99wa%ce%b8en" target="_blank" rel="noopener">sc̓əwaθenaɁɬ təməxʷ (Tsawwassen)</a>, <a href="https://native-land.ca/listings/territories/semiahmoo" target="_blank" rel="noopener">Semiahmoo</a>, <a href="https://native-land.ca/listings/territories/stzuminus" target="_blank" rel="noopener">Stz’uminus</a>, and <a href="https://native-land.ca/listings/territories/x%ca%b7m%c9%99%ce%b8k%ca%b7%c9%99y%cc%93%c9%99m" target="_blank" rel="noopener">šxʷməθkʷəy̓əmaɁɬ təməxʷ (Musqueam)</a>.</p><p class="rt-terrnote">Territory data from <a href="https://native-land.ca" target="_blank" rel="noopener">Native Land Digital</a>, for educational purposes only.</p></div><a class="guide-cta" href="/wwc/">Browse all cycling stops →</a><div class="rt-bottom"><p>Ready to ride it?</p><div class="rt-ctacol"><a class="go" href="https://www.letsgobiking.net/shop/lets-go-biking-around-vancouver/" target="_blank" rel="noopener">Get the book from Let's Go Biking →</a><a class="rt-alt" href="https://ridewithgps.com/routes/55682646" target="_blank" rel="noopener">Free route map on Ride with GPS ↗</a></div></div></div><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Canoe Pass Trail (Brunswick Point) — cycling stops", "url": "https://bccycletourism.ca/route/canoe-pass-trail-brunswick-point/", "isPartOf": {"@type": "WebSite", "name": "BC Bike Stops", "url": "https://bccycletourism.ca/wwc/guide/"}}</script>
+</script><div class="guide-section"><h2 id="traditional-territories">Traditional territories<a class="h-anchor" href="#traditional-territories" aria-label="Link to this section">#</a></h2><p class="rt-terr">This route travels through the traditional territories of the <a href="https://native-land.ca/listings/territories/cayuse-umatilla-and-walla-walla" target="_blank" rel="noopener">Cayuse, Umatilla and Walla Walla</a>, <a href="https://native-land.ca/listings/territories/hulquminum-treaty-group" target="_blank" rel="noopener">Hul’qumi’num Treaty Group</a>, <a href="https://native-land.ca/listings/territories/quwutsun" target="_blank" rel="noopener">Quw’utsun</a>, <a href="https://native-land.ca/listings/territories/stolo-treaty-association" target="_blank" rel="noopener">S’ólh Téméxw (Stó:lō)</a>, <a href="https://native-land.ca/listings/territories/tsawwassen-sc%cc%93%c9%99wa%ce%b8en" target="_blank" rel="noopener">sc̓əwaθenaɁɬ təməxʷ (Tsawwassen)</a>, <a href="https://native-land.ca/listings/territories/semiahmoo" target="_blank" rel="noopener">Semiahmoo</a>, <a href="https://native-land.ca/listings/territories/stzuminus" target="_blank" rel="noopener">Stz’uminus</a>, and <a href="https://native-land.ca/listings/territories/x%ca%b7m%c9%99%ce%b8k%ca%b7%c9%99y%cc%93%c9%99m" target="_blank" rel="noopener">šxʷməθkʷəy̓əmaɁɬ təməxʷ (Musqueam)</a>.</p><p class="rt-terrnote">Territory data from <a href="https://native-land.ca" target="_blank" rel="noopener">Native Land Digital</a>, for educational purposes only.</p></div><a class="guide-cta" href="/wwc/">Browse all cycling stops →</a><div class="rt-bottom"><p>Ready to ride it?</p><div class="rt-ctacol"><a class="go" href="https://www.letsgobiking.net/shop/lets-go-biking-around-vancouver/" target="_blank" rel="noopener">Get the book from Let's Go Biking →</a><a class="rt-alt" href="https://ridewithgps.com/routes/55682646" target="_blank" rel="noopener">Free route map on Ride with GPS ↗</a></div></div></div><script>
+(function(){
+  var row = document.getElementById('rt-chiprow');
+  var host = document.getElementById('rt-chippanels');
+  if (!row || !host) return;
+  var fine = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+  var openBtn = null, pinned = false, timer = null;
+  function panelOf(b){ return document.getElementById(b.getAttribute('data-panel')); }
+  function close(refocus){
+    if (!openBtn) { pinned = false; return; }
+    var p = panelOf(openBtn);
+    if (p) { p.classList.remove('open'); p.style.left = ''; }
+    openBtn.setAttribute('aria-expanded', 'false');
+    var prev = openBtn;
+    openBtn = null; pinned = false;
+    if (refocus) prev.focus();
+  }
+  function open(b){
+    if (openBtn === b) return;
+    close(false);
+    var p = panelOf(b);
+    if (!p) return;
+    b.setAttribute('aria-expanded', 'true');
+    p.classList.add('open');
+    if (fine) {
+      var hr = host.getBoundingClientRect(), br = b.getBoundingClientRect();
+      var w = p.offsetWidth || 340;
+      p.style.left = Math.max(0, Math.min(br.left - hr.left, host.clientWidth - w)) + 'px';
+    }
+    openBtn = b;
+  }
+  Array.prototype.forEach.call(row.querySelectorAll('button.chip'), function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      if (openBtn === b && pinned) close(false);
+      else { open(b); pinned = true; }
+    });
+    if (fine) {
+      b.addEventListener('mouseenter', function(){
+        clearTimeout(timer);
+        timer = setTimeout(function(){ if (!pinned) open(b); }, 40);
+      });
+      b.addEventListener('mouseleave', function(){
+        clearTimeout(timer);
+        if (!pinned && openBtn === b) close(false);
+      });
+      b.addEventListener('focus', function(){ if (!pinned) open(b); });
+    }
+  });
+  document.addEventListener('click', function(e){
+    if (!openBtn) return;
+    if (row.contains(e.target) || host.contains(e.target)) return;
+    close(false);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && openBtn) close(true);
+  });
+})();
+</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Canoe Pass Trail (Brunswick Point) — cycling stops", "url": "https://bccycletourism.ca/route/canoe-pass-trail-brunswick-point/", "isPartOf": {"@type": "WebSite", "name": "BC Bike Stops", "url": "https://bccycletourism.ca/wwc/guide/"}}</script>
 </div>
 <!--chrome--><div class="g-footer">
   <a class="g-footer-brand" href="/">
@@ -409,7 +499,8 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
     </div>
     <div class="g-footer-col">
       <div class="g-footer-h">Plan</div>
-      <a href="/to-fro/">Plan To &amp; Fro</a>
+      <a href="/plan/">Plan Your Trip</a>
+      <a href="/to-fro/">To &amp; Fro</a>
       <a href="/be-prepared/">Be Prepared</a>
       <a href="/wwc/guide/">Read BC Bike Stop Guides</a>
       <a href="/wwc/">Explore BC Bike Stops</a>
@@ -425,9 +516,9 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
     <div class="g-footer-col">
       <div class="g-footer-h">About us</div>
       <a href="/about">About</a>
+      <a href="/#contact">Contact</a>
       <a href="/with-thanks/">With thanks</a>
       <a href="/research/">Research</a>
-      <a href="/#contact">Contact</a>
       <a href="/privacy">Privacy</a>
       <a href="/land-acknowledgement">Land acknowledgement</a>
     </div>
