@@ -388,7 +388,7 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
     map.addLayer({id:"trail-line",type:"line",source:"trail",
       layout:{"line-cap":"round","line-join":"round"},
       paint:{"line-color":"#5f259f","line-width":4,"line-dasharray":[1.5,2]}});
-    var FASTROAD={"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"c": "r", "road": "Bamfield Main"}, "geometry": {"type": "LineString", "coordinates": [[-125.11058, 48.79602], [-125.09432, 48.80605], [-125.09332, 48.80895], [-125.08205, 48.81063], [-125.06562, 48.82051]]}}, {"type": "Feature", "properties": {"c": "r", "road": "Bamfield Main"}, "geometry": {"type": "LineString", "coordinates": [[-125.06519, 48.82092], [-125.05864, 48.82544], [-125.05194, 48.82584], [-125.03844, 48.83233], [-125.02885, 48.85638], [-125.01487, 48.86487], [-125.01717, 48.87836]]}}]};
+    var FASTROAD={"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"c": "r", "road": "Bamfield Main"}, "geometry": {"type": "LineString", "coordinates": [[-125.06519, 48.82092], [-125.05864, 48.82544], [-125.05194, 48.82584], [-125.03844, 48.83233], [-125.02885, 48.85638], [-125.01487, 48.86487], [-125.01717, 48.87836]]}}, {"type": "Feature", "properties": {"c": "r", "road": "Bamfield Main"}, "geometry": {"type": "LineString", "coordinates": [[-125.11058, 48.79602], [-125.09432, 48.80605], [-125.09332, 48.80895], [-125.08205, 48.81063], [-125.06562, 48.82051]]}}]};
     map.addSource("fastroad",{type:"geojson",data:FASTROAD});
     map.addLayer({id:"fastroad-line",type:"line",source:"fastroad",
       layout:{"line-cap":"round","line-join":"round"},

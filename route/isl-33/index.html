@@ -388,7 +388,7 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
     map.addLayer({id:"trail-line",type:"line",source:"trail",
       layout:{"line-cap":"round","line-join":"round"},
       paint:{"line-color":"#5f259f","line-width":4,"line-dasharray":[1.5,2]}});
-    var FASTROAD={"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"c": "r", "road": "Tofino-Ucluelet Highway"}, "geometry": {"type": "LineString", "coordinates": [[-125.5871, 48.97985], [-125.58766, 48.99143]]}}, {"type": "Feature", "properties": {"c": "r", "road": "Pacific Rim Highway"}, "geometry": {"type": "LineString", "coordinates": [[-125.8322, 49.09072], [-125.8101, 49.08641]]}}, {"type": "Feature", "properties": {"c": "r", "road": "Pacific Rim Highway"}, "geometry": {"type": "LineString", "coordinates": [[-125.86395, 49.10167], [-125.8631, 49.09936], [-125.84434, 49.09178], [-125.83606, 49.09265]]}}]};
+    var FASTROAD={"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"c": "r", "road": "Tofino-Ucluelet Highway"}, "geometry": {"type": "LineString", "coordinates": [[-125.5871, 48.97985], [-125.58766, 48.99143]]}}, {"type": "Feature", "properties": {"c": "r", "road": "Pacific Rim Highway"}, "geometry": {"type": "LineString", "coordinates": [[-125.86395, 49.10167], [-125.8631, 49.09936], [-125.84434, 49.09178], [-125.83606, 49.09265]]}}, {"type": "Feature", "properties": {"c": "r", "road": "Pacific Rim Highway"}, "geometry": {"type": "LineString", "coordinates": [[-125.8322, 49.09072], [-125.8101, 49.08641]]}}]};
     map.addSource("fastroad",{type:"geojson",data:FASTROAD});
     map.addLayer({id:"fastroad-line",type:"line",source:"fastroad",
       layout:{"line-cap":"round","line-join":"round"},
