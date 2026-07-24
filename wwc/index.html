@@ -1124,6 +1124,12 @@ function renderResults() {
     ? '<div class="res-head"><h2>All stops</h2></div>' +
       '<p class="res-sub">Searching all ' + categories.length + ' categories &middot; about ' + total.toLocaleString() + ' stops province-wide. Each result shows its category.</p>'
     : '<div class="res-head"><h2>' + esc(cat.name) + '</h2><a class="guidelink" href="' + guideHref + '">' + esc(cat.name) + ' guide &rsaquo;</a></div>';
+  // Camping only: point at the host networks the directory doesn't cover.
+  if (!allMode && cat.id === 'campground') {
+    head += '<p class="res-sub" style="font-size:14px;">Also worth a look: ' +
+      '<a href="https://www.hipcamp.com/en-CA/d/canada/british-columbia" target="_blank" rel="noopener" style="color:#1E7D96;font-weight:600;text-decoration:none;">Hipcamp</a> for campsites on private land, and ' +
+      '<a href="https://www.warmshowers.org/" target="_blank" rel="noopener" style="color:#1E7D96;font-weight:600;text-decoration:none;">Warm Showers</a> for cyclist-to-cyclist hosting.</p>';
+  }
 
   var ph = allMode ? 'Search all categories — try gelato community:Vancouver…' : 'Search this category — try gelato community:Vancouver…';
   var search = '<input class="search-in" id="dir-search" placeholder="' + esc(ph) + '" value="' + esc(state.search) + '" oninput="onSearch(this.value)" />' +
