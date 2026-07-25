@@ -6049,7 +6049,7 @@
    "type": "line",
    "source": "bc-cycling",
    "source-layer": "cycling",
-   "minzoom": 5,
+   "minzoom": 9,
    "filter": [
     "all",
     [
@@ -6137,7 +6137,7 @@
    "type": "line",
    "source": "bc-cycling",
    "source-layer": "cycling",
-   "minzoom": 5,
+   "minzoom": 9,
    "filter": [
     "all",
     [
@@ -6221,7 +6221,7 @@
    "type": "line",
    "source": "bc-cycling",
    "source-layer": "cycling",
-   "minzoom": 5,
+   "minzoom": 9,
    "filter": [
     "all",
     [
@@ -6323,7 +6323,7 @@
    "type": "line",
    "source": "bc-cycling",
    "source-layer": "cycling",
-   "minzoom": 5,
+   "minzoom": 9,
    "filter": [
     "all",
     [
