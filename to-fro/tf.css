@@ -78,6 +78,8 @@ h2:hover > .h-anchor { opacity: .55; }
 }
 
 .tf-wrap { max-width: var(--w-read, 720px); margin: 0 auto; padding: 0 24px 64px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .tf-eyebrow { font-family: "Archivo", sans-serif; font-size: 13px; font-weight: 700;
   letter-spacing: 0.09em; text-transform: uppercase; color: #1E7D96; margin-bottom: 14px; }
 .tf-sentence { font-family: "Archivo", sans-serif; font-size: clamp(26px, 4.5vw, 34px);

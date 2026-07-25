@@ -111,7 +111,7 @@ body {
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 .plan-page { max-width: var(--w-wide, 1160px); margin: 0 auto; background: #FFFDF9; }
-.plan-crumb { padding: 14px 20px 0; }
+.plan-crumb { padding: 14px 20px 10px; }
 .hubhero {
   position: relative; min-height: 340px;
   background-size: cover; background-position: center 60%; background-repeat: no-repeat;
@@ -121,6 +121,8 @@ body {
 .hubhero .txt { position: relative; padding: 1.9rem 2rem; color: #fff; }
 .hubhero .txt h1 { font-family: "Archivo","Inter",sans-serif; font-size: 2.4rem; font-weight: 700; letter-spacing: -.01em; line-height: 1.1; margin-bottom: .25rem; color: #fff; }
 .hubhero .txt p { color: #dceadfcc; margin: 0; font-size: 1.05rem; max-width: 640px; }
+.jline { text-align: center; padding: 1.6rem 2rem 1.6rem; font-size: .95rem; color: #555; }
+.jline a { color: #1E7D96; font-weight: 700; text-decoration: none; }
 .band { display: grid; grid-template-columns: 1.1fr 1fr; min-height: 240px; }
 .band.flip { grid-template-columns: 1fr 1.1fr; }
 .band .photo { background-size: cover; background-position: center; position: relative; }
@@ -132,7 +134,7 @@ body {
 .band .go { color: #1E7D96; font-weight: 700; font-size: .95rem; text-decoration: none; margin-top: .35rem; }
 .cap-credit { position: absolute; left: 12px; bottom: 12px; color: #fff; opacity: .62; font-size: 9.5px; letter-spacing: .02em; text-shadow: 0 1px 5px rgba(0,0,0,.6); max-width: 46%; }
 .cap-place { position: absolute; right: 12px; bottom: 11px; color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .01em; text-shadow: 0 1px 6px rgba(0,0,0,.6); max-width: 78%; text-align: right; }
-.deeper { background: #fff; border-top: 1px solid #F0E6C5; padding: 2.8rem 2rem 1.9rem; }
+.deeper { background: #fff; border-top: 1px solid #F0E6C5; padding: 2.8rem 2rem 2.8rem; }
 .deeper .step { font-size: .72rem; font-weight: 800; color: #6EC040; letter-spacing: .12em; display: block; margin-bottom: .8rem; }
 .deepgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
 .deepcard { display: block; text-decoration: none; border: 1px solid #F0E6C5; border-radius: 10px; padding: 1rem 1.1rem; background: #FFFDF9; transition: border-color .15s; }
@@ -188,14 +190,17 @@ body {
     <span class="cap-credit">Photo: Kari Medig</span><span class="cap-place">Thompson Okanagan, BC</span>
   </div>
 
+  <p class="jline">New to trip planning? <a href="/#ready-heres-how-a-trip-comes-together">See how a whole trip comes together, step by step &rarr;</a></p>
+
   <div class="band">
     <div class="photo" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/be217dfb4937bdbc.jpg')"><span class="cap-credit">Photo: Jordan Dyck</span><span class="cap-place">Tofino, BC</span></div>
     <div class="words">
       <span class="step">QUESTION 1</span>
       <span class="qq">Where do you want to ride?</span>
-      <span class="ans">Hundreds of routes across six regions, hand-picked from publishers who've ridden every kilometre.</span>
-      <a class="go" href="/routes/">Browse trip ideas →</a>
-      <a class="go" href="/routes/all/">See every route in one sortable list →</a>
+      <span class="ans">Pick a ready-made route, join a guided tour or group ride, or design something all your own.</span>
+      <a class="go" href="/routes/all/">Choose a route →</a>
+      <a class="go" href="/bike-together/">Join a tour or a group ride →</a>
+      <a class="go" href="/design-your-own-route/">Design your own →</a>
     </div>
   </div>
 
@@ -222,6 +227,16 @@ body {
   <div class="deeper">
     <span class="step">GO DEEPER</span>
     <div class="deepgrid">
+      <a class="deepcard" href="/routes/">
+        <span class="t">Explore our regions</span>
+        <div class="d">Six regions, each with its own riding character. Browse trip ideas region by region.</div>
+        <span class="g">Explore the regions →</span>
+      </a>
+      <a class="deepcard" href="/be-prepared/">
+        <span class="t">Be Prepared</span>
+        <div class="d">Closures, wildlife, rules of the road, and other things worth knowing before you roll out.</div>
+        <span class="g">Be prepared →</span>
+      </a>
       <a class="deepcard" href="/wwc/guide/">
         <span class="t">Guides</span>
         <div class="d">What to expect at hotels, campgrounds, restaurants and more.</div>
@@ -236,21 +251,6 @@ body {
         <span class="t">Communities</span>
         <div class="d">Every place with cyclist-welcoming stops, town by town.</div>
         <span class="g">Browse by community →</span>
-      </a>
-      <a class="deepcard" href="/be-prepared/">
-        <span class="t">Be Prepared</span>
-        <div class="d">Closures, wildlife, rules of the road, and other things worth knowing before you roll out.</div>
-        <span class="g">Be prepared →</span>
-      </a>
-      <a class="deepcard" href="/bike-together/">
-        <span class="t">Bike Together</span>
-        <div class="d">Guided and self-guided tour companies, plus groups you can just show up and ride with.</div>
-        <span class="g">Find a tour or group →</span>
-      </a>
-      <a class="deepcard" href="/design-your-own-route/">
-        <span class="t">Design Your Own Route</span>
-        <div class="d">DIY route-builder tools, where to find stops, and what we're building next.</div>
-        <span class="g">Start designing →</span>
       </a>
       <a class="deepcard" href="/route-publishers/">
         <span class="t">Meet BC's route makers</span>
@@ -278,7 +278,8 @@ body {
     </div>
     <div class="g-footer-col">
       <div class="g-footer-h">Plan</div>
-      <a href="/to-fro/">Plan To &amp; Fro</a>
+      <a href="/plan/">Plan Your Trip</a>
+      <a href="/to-fro/">To &amp; Fro</a>
       <a href="/be-prepared/">Be Prepared</a>
       <a href="/wwc/guide/">Read BC Bike Stop Guides</a>
       <a href="/wwc/">Explore BC Bike Stops</a>
@@ -294,9 +295,9 @@ body {
     <div class="g-footer-col">
       <div class="g-footer-h">About us</div>
       <a href="/about">About</a>
+      <a href="/#contact">Contact</a>
       <a href="/with-thanks/">With thanks</a>
       <a href="/research/">Research</a>
-      <a href="/#contact">Contact</a>
       <a href="/privacy">Privacy</a>
       <a href="/land-acknowledgement">Land acknowledgement</a>
     </div>
