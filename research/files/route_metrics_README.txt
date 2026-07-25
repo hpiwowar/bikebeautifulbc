@@ -29,6 +29,9 @@ same rule the website does, so the two always agree.
 Labels are explained for riders at https://bccycletourism.ca/routes/how-we-
 describe/
 
+How every number here is computed, and what its limits are:
+https://bccycletourism.ca/research/files/route_ratings_methodology.pdf
+
 WHAT THIS FILE DOES NOT TELL YOU
 
 These numbers are derived from OpenStreetMap. We do not yet record which
