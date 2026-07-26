@@ -11,6 +11,25 @@ subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
 
+LICENCE
+
+Licence: Creative Commons Zero 1.0 Universal (CC0). We have waived our copyright
+in this file worldwide. Use it, change it, redistribute it, build on it, sell
+it. No permission needed and no conditions attached.
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Contains information from OpenStreetMap, © OpenStreetMap contributors, available
+under the Open Database Licence (ODbL) 1.0.
+https://opendatacommons.org/licenses/odbl/1-0/
+
+Attribution is not legally required under CC0, but often requested as a
+community norm. A citation facilitates transparency and discovery, so thanks in
+advance!
+
+Suggested citation: BC Cycle Tourism Society (2026). Published BC cycling routes
+— derived metrics [data set]. Version 2026-07-25.
+https://bccycletourism.ca/research/
+
 HOW TO READ THIS FILE
 
 One row per route, 327 rows. The same data ships as .xlsx and .csv.

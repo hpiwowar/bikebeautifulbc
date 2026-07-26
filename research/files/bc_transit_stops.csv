@@ -1,0 +1,905 @@
+route_id,stop_sequence,stop_name,community,node_id,stop_lat,stop_lon,location_type,location_precision
+air:CMA01,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:CMA01,2,YWL,Williams Lake,ywl,52.1831,-122.0542,airport,stop
+air:CMA02,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:CMA02,2,YQZ,Quesnel,yqz,53.0261,-122.5103,airport,stop
+air:CMA03,1,YQZ,Quesnel,yqz,53.0261,-122.5103,airport,stop
+air:CMA03,2,YWL,Williams Lake,ywl,52.1831,-122.0542,airport,stop
+air:CMA04,1,YXS,Prince George,yxs,53.8894,-122.6789,airport,stop
+air:CMA04,2,YLW,Kelowna,ylw,49.9561,-119.3778,airport,stop
+air:CMA05,1,YXS,Prince George,yxs,53.8894,-122.6789,airport,stop
+air:CMA05,2,YXT,Terrace,yxt,54.4686,-128.5764,airport,stop
+air:CMA06,1,YXS,Prince George,yxs,53.8894,-122.6789,airport,stop
+air:CMA06,2,YYE,Fort Nelson,yye,,,,
+air:HA01,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA01,2,Victoria Harbour,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
+air:HA02,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA02,2,Nanaimo Harbour,Nanaimo,nanaimo-harbour,49.1661,-123.9307,dock,stop
+air:HA03,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA03,2,Ganges,Salt Spring Island,ganges,48.8531,-123.4976,dock,stop
+air:HA04,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA04,2,Porpoise Bay,Sechelt,porpoise-bay,49.4828,-123.7575,dock,stop
+air:HA05,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA05,2,Green Lake,Whistler,green-lake,50.1436,-122.9489,dock,stop
+air:HA06,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA06,2,Comox Harbour,Comox,comox-harbour,49.6712,-124.9296,dock,stop
+air:HA07,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA07,2,Tofino Harbour,Tofino,tofino-harbour,49.1509,-125.8954,dock,stop
+air:HA08,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA08,2,Powell Lake,Powell River,powell-lake,49.8852,-124.5446,dock,stop
+air:HA09,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA09,2,Campbell River Harbour,Campbell River,campbell-river-harbour,50.0458,-125.2552,dock,stop
+air:HA10,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA10,2,Ucluelet Harbour,Ucluelet,ucluelet-harbour,48.9487,-125.5599,dock,stop
+air:HA11,1,Victoria Harbour,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
+air:HA11,2,Nanaimo Harbour,Nanaimo,nanaimo-harbour,49.1661,-123.9307,dock,stop
+air:HA12,1,Victoria Harbour,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
+air:HA12,2,Ganges,Salt Spring Island,ganges,48.8531,-123.4976,dock,stop
+air:HA13,1,Porpoise Bay,Sechelt,porpoise-bay,49.4828,-123.7575,dock,stop
+air:HA13,2,Nanaimo Harbour,Nanaimo,nanaimo-harbour,49.1661,-123.9307,dock,stop
+air:HA14,1,Porpoise Bay,Sechelt,porpoise-bay,49.4828,-123.7575,dock,stop
+air:HA14,2,Powell Lake,Powell River,powell-lake,49.8852,-124.5446,dock,stop
+air:HA15,1,YVR South Terminal,Vancouver,yvr-south,49.1773,-123.1681,dock,stop
+air:HA15,2,YYJ,Victoria,yyj,48.6469,-123.4258,airport,stop
+air:HA16,1,YVR South Terminal,Vancouver,yvr-south,49.1773,-123.1681,dock,stop
+air:HA16,2,YAZ,Tofino,yaz,49.0797,-125.7726,airport,stop
+air:HJ01,1,Vancouver Harbour Heliport,Vancouver,vancouver-harbour,,,,
+air:HJ01,2,Victoria Harbour Heliport,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
+air:HJ02,1,Vancouver Harbour Heliport,Vancouver,vancouver-harbour,,,,
+air:HJ02,2,Nanaimo Harbour Heliport,Nanaimo,nanaimo-harbour,49.1661,-123.9307,dock,stop
+air:PCA01,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA01,2,YYJ,Victoria,yyj,48.6469,-123.4258,airport,stop
+air:PCA02,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA02,2,YQQ,Comox,yqq,49.7108,-124.8867,airport,stop
+air:PCA03,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA03,2,YBL,Campbell River,ybl,49.9508,-125.2714,airport,stop
+air:PCA04,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA04,2,YCD,Nanaimo,ycd,49.0547,-123.87,airport,stop
+air:PCA05,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA05,2,YAZ,Tofino,yaz,49.0797,-125.7726,airport,stop
+air:PCA06,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA06,2,YPW,Powell River,ypw,49.8342,-124.5,airport,stop
+air:PCA07,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA07,2,YZT,Port Hardy,yzt,50.6806,-127.3667,airport,stop
+air:PCA08,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA08,2,ZEL,Bella Bella,zel,52.1397,-128.1564,airport,stop
+air:PCA09,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA09,2,QBC,Bella Coola,qbc,52.3875,-126.5964,airport,stop
+air:PCA10,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA10,2,YAA,Anahim Lake,yaa,52.4525,-125.3033,airport,stop
+air:PCA11,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA11,2,YWL,Williams Lake,ywl,52.1831,-122.0542,airport,stop
+air:PCA12,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA12,2,YQZ,Quesnel,yqz,53.0261,-122.5103,airport,stop
+air:PCA13,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA13,2,ZMT,Masset,zmt,54.0275,-132.125,airport,stop
+air:PCA14,1,QBC,Bella Coola,qbc,52.3875,-126.5964,airport,stop
+air:PCA14,2,YAA,Anahim Lake,yaa,52.4525,-125.3033,airport,stop
+air:PCA15,1,YYJ,Victoria,yyj,48.6469,-123.4258,airport,stop
+air:PCA15,2,YLW,Kelowna,ylw,49.9561,-119.3778,airport,stop
+air:PCA16,1,YYJ,Victoria,yyj,48.6469,-123.4258,airport,stop
+air:PCA16,2,YKA,Kamloops,yka,50.7022,-120.4442,airport,stop
+air:PCA17,1,YYJ,Victoria,yyj,48.6469,-123.4258,airport,stop
+air:PCA17,2,YXS,Prince George,yxs,53.8894,-122.6789,airport,stop
+air:PCA18,1,YCD,Nanaimo,ycd,49.0547,-123.87,airport,stop
+air:PCA18,2,YLW,Kelowna,ylw,49.9561,-119.3778,airport,stop
+air:PCA19,1,YQQ,Comox,yqq,49.7108,-124.8867,airport,stop
+air:PCA19,2,YLW,Kelowna,ylw,49.9561,-119.3778,airport,stop
+air:PCA20,1,YLW,Kelowna,ylw,49.9561,-119.3778,airport,stop
+air:PCA20,2,YXS,Prince George,yxs,53.8894,-122.6789,airport,stop
+air:PCA21,1,YLW,Kelowna,ylw,49.9561,-119.3778,airport,stop
+air:PCA21,2,YXC,Cranbrook,yxc,49.6108,-115.7822,airport,stop
+air:PCA22,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA22,2,YZZ,Trail,yzz,49.0556,-117.6094,airport,stop
+air:PCA23,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:PCA23,2,YYF,Penticton,yyf,49.4631,-119.6022,airport,stop
+air:SA01,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:SA01,2,Victoria Harbour,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
+air:SA02,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:SA02,2,Departure Bay,Nanaimo,departure-bay,49.1917,-123.9538,dock,stop
+air:SA03,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SA03,2,Departure Bay,Nanaimo,departure-bay,49.1917,-123.9538,dock,stop
+air:SA04,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:SA04,2,Ganges,Salt Spring Island,ganges,48.8531,-123.4976,dock,stop
+air:SA05,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SA05,2,Ganges,Salt Spring Island,ganges,48.8531,-123.4976,dock,stop
+air:SA06,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SA06,2,Port Washington,Pender Island,port-washington,,,,
+air:SA07,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SA07,2,Telegraph Harbour,Thetis Island,telegraph-harbour,,,,
+air:SA08,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SA08,2,Lyall Harbour,Saturna Island,lyall-harbour,48.798,-123.2012,dock,stop
+air:SA09,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SA09,2,Miners Bay,Mayne Island,miners-bay,,,,
+air:SA10,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SA10,2,Montague Harbour,Galiano Island,montague-harbour,,,,
+air:SS01,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:SS01,2,Ganges,Salt Spring Island,ganges,48.8531,-123.4976,dock,stop
+air:SS02,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SS02,2,Ganges,Salt Spring Island,ganges,48.8531,-123.4976,dock,stop
+air:SS03,1,Ganges,Salt Spring Island,ganges,48.8531,-123.4976,dock,stop
+air:SS03,2,Maple Bay,Maple Bay,maple-bay,,,,
+air:SS04,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SS04,2,Miners Bay,Mayne Island,miners-bay,,,,
+air:SS05,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SS05,2,Port Washington,North Pender Island,port-washington,,,,
+air:SS06,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SS06,2,Bedwell Harbour,South Pender Island,bedwell-harbour,,,,
+air:SS07,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SS07,2,Montague Harbour,Galiano Island,montague-harbour,,,,
+air:SS08,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SS08,2,Lyall Harbour,Saturna Island,lyall-harbour,48.798,-123.2012,dock,stop
+air:SS09,1,YVR Water Aerodrome,Richmond,yvr,49.1945,-123.18386,airport,stop
+air:SS09,2,Telegraph Harbour,Thetis Island,telegraph-harbour,,,,
+air:WS01,1,Port Hardy,Port Hardy,port-hardy,50.724444,-127.498056,town,stop
+air:WS01,2,Bella Bella,Bella Bella,bella-bella,52.16256,-128.14521,town,stop
+air:WS02,1,Bella Bella,Bella Bella,bella-bella,52.16256,-128.14521,town,stop
+air:WS02,2,Klemtu,Klemtu,klemtu,52.588523,-128.520782,town,community centroid
+air:WS03,1,Port Hardy,Port Hardy,port-hardy,50.724444,-127.498056,town,stop
+air:WS03,2,Bella Coola,Bella Coola,bella-coola,52.372961,-126.753506,town,community centroid
+air:WS04,1,Bella Bella,Bella Bella,bella-bella,52.16256,-128.14521,town,stop
+air:WS04,2,Ocean Falls,Ocean Falls,ocean-falls,52.353426,-127.689644,town,community centroid
+air:WS05,1,Port Hardy,Port Hardy,port-hardy,50.724444,-127.498056,town,stop
+air:WS05,2,Rivers Inlet,Rivers Inlet,rivers-inlet,,,,
+air:ac-castlegar,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-castlegar,2,YCG,Castlegar,castlegar,49.324444,-117.666944,airport,community centroid
+air:ac-ycd,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-ycd,2,YCD,Nanaimo,ycd,49.0547,-123.87,airport,stop
+air:ac-yka,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-yka,2,YKA,Kamloops,yka,50.7022,-120.4442,airport,stop
+air:ac-ylw,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-ylw,2,YLW,Kelowna,ylw,49.9561,-119.3778,airport,stop
+air:ac-ypr,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-ypr,2,YPR,Prince Rupert,ypr,54.286272,-130.443456,airport,stop
+air:ac-yqq,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-yqq,2,YQQ,Comox,yqq,49.7108,-124.8867,airport,stop
+air:ac-yxc,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-yxc,2,YXC,Cranbrook,yxc,49.6108,-115.7822,airport,stop
+air:ac-yxj,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-yxj,2,YXJ,Fort St. John,yxj,56.239951,-120.741601,airport,stop
+air:ac-yxs,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-yxs,2,YXS,Prince George,yxs,53.8894,-122.6789,airport,stop
+air:ac-yxt,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-yxt,2,YXT,Terrace,yxt,54.4686,-128.5764,airport,stop
+air:ac-yyd,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-yyd,2,YYD,Smithers,yyd,54.822935,-127.183714,airport,stop
+air:ac-yyj,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-yyj,2,YYJ,Victoria,yyj,48.6469,-123.4258,airport,stop
+air:ac-yzp,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:ac-yzp,2,YZP,Sandspit,yzp,53.253408,-131.813444,airport,stop
+air:alaska,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:alaska,2,Seattle SeaTac Airport WA,Seattle,seattle-seatac-airport-wa,47.4502,-122.3088,town,stop
+air:flair-ylw,1,YLW,Kelowna,ylw,49.9561,-119.3778,airport,stop
+air:flair-ylw,2,Calgary AB,Calgary,calgary-ab,51.0447,-114.0719,town,stop
+air:flair-yvr,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:flair-yvr,2,Calgary AB,Calgary,calgary-ab,51.0447,-114.0719,town,stop
+air:flair-yxx,1,Abbotsford Airport,Abbotsford,abbotsford-airport,49.0253,-122.3606,town,stop
+air:flair-yxx,2,Calgary AB,Calgary,calgary-ab,51.0447,-114.0719,town,stop
+air:flair-yyj,1,YYJ,Victoria,yyj,48.6469,-123.4258,airport,stop
+air:flair-yyj,2,Calgary AB,Calgary,calgary-ab,51.0447,-114.0719,town,stop
+air:wj-ycd,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:wj-ycd,2,YCD,Nanaimo,ycd,49.0547,-123.87,airport,stop
+air:wj-ylw,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:wj-ylw,2,YLW,Kelowna,ylw,49.9561,-119.3778,airport,stop
+air:wj-yxc,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:wj-yxc,2,YXC,Cranbrook,yxc,49.6108,-115.7822,airport,stop
+air:wj-yyj,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
+air:wj-yyj,2,YYJ,Victoria,yyj,48.6469,-123.4258,airport,stop
+bus:1,1,Pacific Central Station,Vancouver,pacific-central-station,49.27314,-123.10044,town,stop
+bus:1,2,Surrey,Surrey,surrey,49.191634,-122.850061,town,community centroid
+bus:1,3,Abbotsford,Abbotsford,abbotsford,49.049808,-122.284595,town,community centroid
+bus:1,4,Chilliwack,Chilliwack,chilliwack,49.157778,-121.950833,town,community centroid
+bus:1,5,Hope,Hope,hope,49.38,-121.441389,town,community centroid
+bus:1,6,Merritt,Merritt,merritt,50.1125,-120.788333,town,community centroid
+bus:1,7,West Kelowna,West Kelowna,west-kelowna,49.82966,-119.6316,town,stop
+bus:1,8,Kelowna Downtown,Kelowna,kelowna-downtown,49.88713,-119.49494,town,stop
+bus:10,1,Vancouver Airport (YVR),Vancouver,yvr,49.1945,-123.18386,airport,stop
+bus:10,2,Downtown Vancouver,Vancouver,downtown-vancouver,49.286,-123.1207,dock,stop
+bus:10,3,Creekside,Whistler,creekside,50.0945,-122.9915,dock,stop
+bus:10,4,Whistler Village,Whistler,whistler-village,50.1158,-122.9563,dock,stop
+bus:11,1,Victoria,Victoria,victoria,48.42771,-123.36446,town,stop
+bus:11,2,Sooke,Sooke,sooke,48.382778,-123.731944,town,community centroid
+bus:11,3,Port Renfrew,Port Renfrew,port-renfrew,48.557072,-124.401264,town,community centroid
+bus:11,4,Gordon River,Gordon River,gordon-river,48.766451,-124.334651,town,community centroid
+bus:11,5,Mesachie Lake,Mesachie Lake,mesachie-lake,48.81003,-124.12429,town,community centroid
+bus:11,6,Honeymoon Bay,Honeymoon Bay,honeymoon-bay,48.814149,-124.171951,town,community centroid
+bus:11,7,Nanaimo,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+bus:11,8,Nitinaht,Nitinaht,nitinaht,48.8074,-124.667,town,stop
+bus:11,9,Pachena Bay,Pachena Bay,pachena-bay,48.793,-125.1152,town,stop
+bus:11,10,Bamfield,Bamfield,bamfield,48.82862,-125.134946,town,community centroid
+bus:12,1,Victoria,Victoria,victoria,48.42771,-123.36446,town,stop
+bus:12,2,Sooke,Sooke,sooke,48.382778,-123.731944,town,community centroid
+bus:12,3,Jordan River,Jordan River,jordan-river,48.4225,-124.0566,town,stop
+bus:12,4,China Beach,China Beach,china-beach,48.4342,-124.0935,town,stop
+bus:12,5,Sombrio Beach,Sombrio Beach,sombrio-beach,48.501,-124.2964,town,stop
+bus:12,6,Port Renfrew,Port Renfrew,port-renfrew,48.557072,-124.401264,town,community centroid
+bus:12,7,Nanaimo,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+bus:13,1,Downtown Vancouver (Burrard Station),Vancouver,downtown-vancouver,49.286,-123.1207,dock,stop
+bus:13,2,Gateway Loop / Village Square,Whistler,whistler,50.1158,-122.9563,town,stop
+bus:14,1,Powell River,Powell River,powell-river,49.835556,-124.524444,town,community centroid
+bus:14,2,Eldred Valley / Knuckleheads / Emma Lake / Freda / South Powell Divide,Remote trailheads,remote-trailheads,,,,
+bus:15,1,Kaslo,Kaslo,kaslo,49.910556,-116.905,town,community centroid
+bus:15,2,Balfour,Balfour,balfour,49.625575,-116.968009,town,community centroid
+bus:15,3,Nelson,Nelson,nelson,49.49047,-117.29541,town,stop
+bus:15,4,Castlegar,Castlegar,castlegar,49.324444,-117.666944,airport,community centroid
+bus:15,5,Christina Lake,Christina Lake,christina-lake,49.042906,-118.209464,town,community centroid
+bus:15,6,Grand Forks,Grand Forks,grand-forks,49.031111,-118.439167,town,community centroid
+bus:15,7,Greenwood,Greenwood,greenwood,49.088333,-118.676389,town,community centroid
+bus:15,8,Rock Creek,Rock Creek,rock-creek,49.05669,-118.998657,town,community centroid
+bus:15,9,Osoyoos,Osoyoos,osoyoos,49.03288,-119.46877,town,stop
+bus:15,10,Keremeos,Keremeos,keremeos,49.20492,-119.83271,town,stop
+bus:15,11,Princeton,Princeton,princeton,49.45614,-120.5079,town,stop
+bus:15,12,Manning Park,Manning Park,manning-park,49.063541,-120.782188,town,community centroid
+bus:15,13,Hope,Hope,hope,49.38,-121.441389,town,community centroid
+bus:15,14,Chilliwack,Chilliwack,chilliwack,49.157778,-121.950833,town,community centroid
+bus:15,15,Abbotsford,Abbotsford,abbotsford,49.049808,-122.284595,town,community centroid
+bus:15,16,Langley,Langley,langley,49.104452,-122.659058,town,community centroid
+bus:15,17,New Westminster,New Westminster,new-westminster,49.20131,-122.91264,town,stop
+bus:15,18,Vancouver,Vancouver,vancouver,49.261111,-123.113889,town,community centroid
+bus:16,1,Kaslo,Kaslo,kaslo,49.910556,-116.905,town,community centroid
+bus:16,2,Balfour,Balfour,balfour,49.625575,-116.968009,town,community centroid
+bus:16,3,Nelson,Nelson,nelson,49.49047,-117.29541,town,stop
+bus:16,4,Salmo,Salmo,salmo,49.193333,-117.278611,town,community centroid
+bus:16,5,Creston,Creston,creston,49.0975,-116.513056,town,community centroid
+bus:16,6,Cranbrook,Cranbrook,cranbrook,49.508056,-115.746944,town,community centroid
+bus:16,7,Fernie,Fernie,fernie,49.504167,-115.062778,town,community centroid
+bus:16,8,Sparwood,Sparwood,sparwood,49.733218,-114.884368,town,community centroid
+bus:17,1,Trail (A&W 1136 Bay Ave),Trail,trail,49.0965,-117.7105,town,stop
+bus:17,2,Nelson (Visitor Centre),Nelson,nelson,49.49047,-117.29541,town,stop
+bus:17,3,Castlegar (A&W 1982 Columbia Ave),Castlegar,castlegar,49.324444,-117.666944,airport,community centroid
+bus:17,4,Grand Forks (CANCO Gas),Grand Forks,grand-forks,49.031111,-118.439167,town,community centroid
+bus:17,5,Greenwood (CANCO Gas),Greenwood,greenwood,49.088333,-118.676389,town,community centroid
+bus:17,6,Midway (AFD Gas),Midway,midway,49.0103,-118.7753,town,stop
+bus:17,7,Rock Creek (Centex Gas),Rock Creek,rock-creek,49.05669,-118.998657,town,community centroid
+bus:17,8,Kelowna (Orchard Park Mall),Kelowna,kelowna-downtown,49.88713,-119.49494,town,stop
+bus:2,1,Pacific Central Station,Vancouver,pacific-central-station,49.27314,-123.10044,town,stop
+bus:2,2,Surrey,Surrey,surrey,49.191634,-122.850061,town,community centroid
+bus:2,3,Abbotsford,Abbotsford,abbotsford,49.049808,-122.284595,town,community centroid
+bus:2,4,Chilliwack,Chilliwack,chilliwack,49.157778,-121.950833,town,community centroid
+bus:2,5,Hope,Hope,hope,49.38,-121.441389,town,community centroid
+bus:2,6,Merritt,Merritt,merritt,50.1125,-120.788333,town,community centroid
+bus:2,7,Kamloops,Kamloops,kamloops,50.675833,-120.339444,town,community centroid
+bus:3,1,Kamloops,Kamloops,kamloops,50.675833,-120.339444,town,community centroid
+bus:3,2,Chase,Chase,chase,50.819167,-119.686111,town,community centroid
+bus:3,3,Sorrento,Sorrento,sorrento,50.876944,-119.466944,town,community centroid
+bus:3,4,Salmon Arm,Salmon Arm,salmon-arm,50.699846,-119.267891,town,community centroid
+bus:3,5,Enderby,Enderby,enderby,50.550556,-119.139444,town,community centroid
+bus:3,6,Armstrong,Armstrong,armstrong,50.448333,-119.196667,town,community centroid
+bus:3,7,Vernon,Vernon,vernon,50.26453,-119.27129,town,stop
+bus:3,8,Kelowna Airport,Kelowna,ylw,49.9561,-119.3778,airport,stop
+bus:3,9,Kelowna Downtown,Kelowna,kelowna-downtown,49.88713,-119.49494,town,stop
+bus:4,1,Kelowna Downtown,Kelowna,kelowna-downtown,49.88713,-119.49494,town,stop
+bus:4,2,Kelowna Airport,Kelowna,ylw,49.9561,-119.3778,airport,stop
+bus:4,3,Vernon,Vernon,vernon,50.26453,-119.27129,town,stop
+bus:4,4,Armstrong,Armstrong,armstrong,50.448333,-119.196667,town,community centroid
+bus:4,5,Enderby,Enderby,enderby,50.550556,-119.139444,town,community centroid
+bus:4,6,Salmon Arm,Salmon Arm,salmon-arm,50.699846,-119.267891,town,community centroid
+bus:4,7,Sicamous,Sicamous,sicamous,50.836111,-118.98,town,community centroid
+bus:4,8,Revelstoke,Revelstoke,revelstoke,50.998175,-118.19605,town,community centroid
+bus:4,9,Golden,Golden,golden,51.297778,-116.964722,town,community centroid
+bus:5,1,Kamloops,Kamloops,kamloops,50.675833,-120.339444,town,community centroid
+bus:5,2,Savona,Savona,savona,50.752992,-120.842675,town,community centroid
+bus:5,3,Cache Creek,Cache Creek,cache-creek,50.811944,-121.323333,town,community centroid
+bus:5,4,Clinton,Clinton,clinton,51.091667,-121.586667,town,community centroid
+bus:5,5,70 Mile House,70 Mile House,70-mile-house,51.303971,-121.396414,town,community centroid
+bus:5,6,100 Mile House,100 Mile House,100-mile-house,51.642778,-121.295556,town,community centroid
+bus:5,7,Lac La Hache,Lac La Hache,lac-la-hache,51.799832,-121.484644,town,community centroid
+bus:5,8,Williams Lake,Williams Lake,williams-lake,52.129167,-122.14,town,community centroid
+bus:5,9,Quesnel,Quesnel,quesnel,52.97897,-122.49628,town,stop
+bus:5,10,Hixon,Hixon,hixon,53.40678,-122.573619,town,community centroid
+bus:5,11,Prince George,Prince George,prince-george,53.9137,-122.74808,town,stop
+bus:6,1,Adventure Centre,Squamish,adventure-centre,49.707,-123.146,dock,stop
+bus:6,2,London Drugs / Garibaldi,Squamish,squamish,49.7387,-123.1333,town,stop
+bus:6,3,Sea to Sky Gondola,Squamish,sea-to-sky-gondola,49.6752,-123.157,dock,stop
+bus:6,4,Britannia Mine Museum,Britannia Beach,britannia-mine-museum,49.6237,-123.205,dock,stop
+bus:6,5,Horseshoe Bay Ferry Terminal,Horseshoe Bay,horseshoe-bay,49.37105,-123.280676,town,community centroid
+bus:6,6,Park Royal / Taylor Way,West Vancouver,west-vancouver,49.327,-123.13857,dock,stop
+bus:6,7,Waterfront Station,Vancouver,waterfront,49.28591,-123.11151,town,stop
+bus:7,1,Pacific Central Station,Vancouver,pacific-central-station,49.27314,-123.10044,town,stop
+bus:7,2,Surrey,Surrey,surrey,49.191634,-122.850061,town,community centroid
+bus:7,3,Abbotsford,Abbotsford,abbotsford,49.049808,-122.284595,town,community centroid
+bus:7,4,Chilliwack,Chilliwack,chilliwack,49.157778,-121.950833,town,community centroid
+bus:7,5,Hope,Hope,hope,49.38,-121.441389,town,community centroid
+bus:7,6,Merritt,Merritt,merritt,50.1125,-120.788333,town,community centroid
+bus:7,7,Kamloops,Kamloops,kamloops,50.675833,-120.339444,town,community centroid
+bus:7,8,Chase,Chase,chase,50.819167,-119.686111,town,community centroid
+bus:7,9,Sorrento,Sorrento,sorrento,50.876944,-119.466944,town,community centroid
+bus:7,10,Salmon Arm,Salmon Arm,salmon-arm,50.699846,-119.267891,town,community centroid
+bus:7,11,Sicamous,Sicamous,sicamous,50.836111,-118.98,town,community centroid
+bus:7,12,Revelstoke,Revelstoke,revelstoke,50.998175,-118.19605,town,community centroid
+bus:7,13,Golden,Golden,golden,51.297778,-116.964722,town,community centroid
+bus:7,14,Field,Field,field,51.395833,-116.488333,town,community centroid
+bus:8,1,Vancouver Airport (YVR),Vancouver,yvr,49.1945,-123.18386,airport,stop
+bus:8,2,Downtown Vancouver,Vancouver,downtown-vancouver,49.286,-123.1207,dock,stop
+bus:8,3,Adventure Centre,Squamish,adventure-centre,49.707,-123.146,dock,stop
+bus:8,4,Creekside,Whistler,creekside,50.0945,-122.9915,dock,stop
+bus:8,5,Gateway Loop / Village,Whistler,whistler,50.1158,-122.9563,town,stop
+bus:9,1,Langdale Ferry Terminal,Langdale,langdale,49.433374,-123.478405,town,community centroid
+bus:9,2,Gibsons,Gibsons,gibsons,49.400278,-123.508889,town,community centroid
+bus:9,3,Sechelt,Sechelt,sechelt,49.47235,-123.75953,town,stop
+bus:9,4,Halfmoon Bay,Halfmoon Bay,halfmoon-bay,49.51308,-123.91704,town,community centroid
+bus:9,5,Secret Cove,Secret Cove,secret-cove,49.533124,-123.951326,town,community centroid
+bus:9,6,Madeira Park,Madeira Park,madeira-park,49.6205,-124.02326,town,community centroid
+bus:9,7,Pender Harbour,Pender Harbour,pender-harbour,49.6225,-124.0253,town,stop
+bus:9,8,Ruby Lake,Ruby Lake,ruby-lake,49.7122,-123.9676,town,stop
+bus:9,9,Earls Cove Ferry Terminal,Earls Cove,earls-cove,49.751944,-124.009167,town,community centroid
+bus:9,10,Saltery Bay,Saltery Bay,saltery-bay,49.783235,-124.179075,town,community centroid
+bus:9,11,Powell River,Powell River,powell-river,49.835556,-124.524444,town,community centroid
+bus:bcfc-vic-van,1,Downtown Vancouver,Vancouver,downtown-vancouver,49.286,-123.1207,dock,stop
+bus:bcfc-vic-van,2,Tsawwassen Ferry Terminal,Tsawwassen (Metro Vancouver),tsawwassen,49.008056,-123.128333,town,community centroid
+bus:bcfc-vic-van,3,Swartz Bay Ferry Terminal,Victoria (Vancouver Island),swartz-bay,48.6886,-123.4114,dock,stop
+bus:bcfc-vic-van,4,Downtown Victoria,Victoria,victoria,48.42771,-123.36446,town,stop
+bus:bcn-16w,1,Prince George,Prince George,prince-george,53.9137,-122.74808,town,stop
+bus:bcn-16w,2,Vanderhoof,Vanderhoof,vanderhoof,54.01495,-124.0089,town,stop
+bus:bcn-16w,3,Fort Fraser,Fort Fraser,fort-fraser,54.06187,-124.552566,town,community centroid
+bus:bcn-16w,4,Fraser Lake,Fraser Lake,fraser-lake,54.060278,-124.843889,town,community centroid
+bus:bcn-16w,5,Burns Lake,Burns Lake,burns-lake,54.230278,-125.764444,town,community centroid
+bus:bcn-16w,6,Topley,Topley,topley,54.50441,-126.2979,town,community centroid
+bus:bcn-16w,7,Houston,Houston,houston,54.398333,-126.648333,town,community centroid
+bus:bcn-16w,8,Telkwa,Telkwa,telkwa,54.696667,-127.050833,town,community centroid
+bus:bcn-16w,9,Smithers,Smithers,smithers,54.779167,-127.176111,town,community centroid
+bus:bcn-16w,10,Witset,Witset,witset,55.0086,-127.3386,town,stop
+bus:bcn-16w,11,New Hazelton,New Hazelton,new-hazelton,55.243333,-127.586944,town,community centroid
+bus:bcn-16w,12,Gitsegukla,Gitsegukla,gitsegukla,55.1064,-127.9711,town,stop
+bus:bcn-16w,13,Kitwanga Junction,Kitwanga Junction,kitwanga-junction,55.1044,-128.0561,town,stop
+bus:bcn-16w,14,Terrace,Terrace,terrace,54.51701,-128.59612,town,stop
+bus:bcn-16w,15,Port Edward,Port Edward,port-edward,54.220556,-130.289444,town,community centroid
+bus:bcn-16w,16,Prince Rupert,Prince Rupert,prince-rupert,54.312778,-130.325278,town,community centroid
+bus:cvx-66,1,Village Green Mall (Duncan),Duncan,duncan,48.77465,-123.7016,town,stop
+bus:cvx-66,2,Deloume Park & Ride (Mill Bay),Mill Bay,mill-bay,48.6513,-123.5617,town,stop
+bus:cvx-66,3,Legislature Exchange (Downtown Victoria),Victoria,victoria,48.42771,-123.36446,town,stop
+bus:ebus-calgary,1,Vancouver Pacific Central,Vancouver Pacific Central,pacific-central-station,49.27314,-123.10044,town,stop
+bus:ebus-calgary,2,Surrey,Surrey,surrey,49.191634,-122.850061,town,community centroid
+bus:ebus-calgary,3,Abbotsford Airport,Abbotsford Airport,abbotsford-airport,49.0253,-122.3606,town,stop
+bus:ebus-calgary,4,Chilliwack,Chilliwack,chilliwack,49.157778,-121.950833,town,community centroid
+bus:ebus-calgary,5,Hope,Hope,hope,49.38,-121.441389,town,community centroid
+bus:ebus-calgary,6,Merritt,Merritt,merritt,50.1125,-120.788333,town,community centroid
+bus:ebus-calgary,7,Kamloops,Kamloops,kamloops,50.675833,-120.339444,town,community centroid
+bus:ebus-calgary,8,Chase,Chase,chase,50.819167,-119.686111,town,community centroid
+bus:ebus-calgary,9,Sorrento,Sorrento,sorrento,50.876944,-119.466944,town,community centroid
+bus:ebus-calgary,10,Salmon Arm,Salmon Arm,salmon-arm,50.699846,-119.267891,town,community centroid
+bus:ebus-calgary,11,Sicamous,Sicamous,sicamous,50.836111,-118.98,town,community centroid
+bus:ebus-calgary,12,Revelstoke,Revelstoke,revelstoke,50.998175,-118.19605,town,community centroid
+bus:ebus-calgary,13,Golden,Golden,golden,51.297778,-116.964722,town,community centroid
+bus:ebus-calgary,14,Lake Louise AB,Lake Louise AB,lake-louise-ab,51.4254,-116.1773,town,stop
+bus:ebus-calgary,15,Banff AB,Banff AB,banff-ab,51.1784,-115.5708,town,stop
+bus:ebus-calgary,16,Canmore AB,Canmore AB,canmore-ab,51.0899,-115.3592,town,stop
+bus:ebus-calgary,17,Calgary AB,Calgary AB,calgary-ab,51.0447,-114.0719,town,stop
+bus:flixbus-seattle,1,Vancouver Waterfront Station,Vancouver Waterfront Station,waterfront,49.28591,-123.11151,town,stop
+bus:flixbus-seattle,2,Vancouver Pacific Central,Vancouver Pacific Central,pacific-central-station,49.27314,-123.10044,town,stop
+bus:flixbus-seattle,3,Bellingham WA,Bellingham WA,bellingham-wa,48.7519,-122.4787,town,stop
+bus:flixbus-seattle,4,Everett WA,Everett WA,everett-wa,47.979,-122.2021,town,stop
+bus:flixbus-seattle,5,Seattle WA,Seattle WA,seattle-downtown-wa,47.6062,-122.3321,town,stop
+bus:fvx-66,1,Downtown Chilliwack,Chilliwack,chilliwack,49.157778,-121.950833,town,community centroid
+bus:fvx-66,2,Abbotsford (Highstreet Mall),Abbotsford,abbotsford,49.049808,-122.284595,town,community centroid
+bus:fvx-66,3,Carvolth Exchange,Langley,carvolth,49.16078,-122.66032,dock,stop
+bus:fvx-66,4,Lougheed Town Centre Station,Burnaby,lougheed-town-centre,49.24856,-122.89664,dock,stop
+bus:il-island,1,Nanaimo,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+bus:il-island,2,Courtenay Exchange,Courtenay,courtenay-exchange,49.6919376,-124.998225,town,stop
+bus:il-island,3,Campbell River,Campbell River,campbell-river,50.023056,-125.243611,town,community centroid
+bus:il-tofino,1,Nanaimo,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+bus:il-tofino,2,Port Alberni,Port Alberni,port-alberni,49.2339,-124.8055,town,stop
+bus:il-tofino,3,Ucluelet Medical Centre,Ucluelet,ucluelet-medical-centre,48.94615,-125.56382,dock,stop
+bus:il-tofino,4,Tofino (1st Street),Tofino,1st-street,49.1535,-125.9013,town,stop
+bus:il-victoria,1,Victoria,Victoria,victoria,48.42771,-123.36446,town,stop
+bus:il-victoria,2,Nanaimo,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+bus:mmm-calgary,1,Kaslo,Kaslo,kaslo,49.910556,-116.905,town,community centroid
+bus:mmm-calgary,2,Balfour,Balfour,balfour,49.625575,-116.968009,town,community centroid
+bus:mmm-calgary,3,Nelson,Nelson,nelson,49.49047,-117.29541,town,stop
+bus:mmm-calgary,4,Salmo,Salmo,salmo,49.193333,-117.278611,town,community centroid
+bus:mmm-calgary,5,Creston,Creston,creston,49.0975,-116.513056,town,community centroid
+bus:mmm-calgary,6,Cranbrook,Cranbrook,cranbrook,49.508056,-115.746944,town,community centroid
+bus:mmm-calgary,7,Fernie,Fernie,fernie,49.504167,-115.062778,town,community centroid
+bus:mmm-calgary,8,Sparwood,Sparwood,sparwood,49.733218,-114.884368,town,community centroid
+bus:mmm-calgary,9,Pincher Creek AB,Pincher Creek AB,pincher-creek-ab,49.4875,-113.9541,town,stop
+bus:mmm-calgary,10,Fort Macleod AB,Fort Macleod AB,fort-macleod-ab,49.7166,-113.4116,town,stop
+bus:mmm-calgary,11,Claresholm AB,Claresholm AB,claresholm-ab,50.0264,-113.5836,town,stop
+bus:mmm-calgary,12,High River AB,High River AB,high-river-ab,50.5808,-113.8746,town,stop
+bus:mmm-calgary,13,Okotoks AB,Okotoks AB,okotoks-ab,50.7256,-113.9749,town,stop
+bus:mmm-calgary,14,Calgary AB,Calgary AB,calgary-ab,51.0447,-114.0719,town,stop
+bus:quick-seattle,1,Vancouver Waterfront Station,Vancouver Waterfront Station,waterfront,49.28591,-123.11151,town,stop
+bus:quick-seattle,2,Vancouver Canada Place,Vancouver Canada Place,waterfront,49.28591,-123.11151,town,stop
+bus:quick-seattle,3,Richmond River Rock,Richmond River Rock,richmond-river-rock,49.1948,-123.136,town,stop
+bus:quick-seattle,4,Surrey,Surrey,surrey,49.191634,-122.850061,town,community centroid
+bus:quick-seattle,5,Bellingham Airport WA,Bellingham Airport WA,bellingham-airport-wa,48.7927,-122.5375,town,stop
+bus:quick-seattle,6,Tulalip WA,Tulalip WA,tulalip-wa,48.0607,-122.2846,town,stop
+bus:quick-seattle,7,Seattle Downtown WA,Seattle Downtown WA,seattle-downtown-wa,47.6062,-122.3321,town,stop
+bus:quick-seattle,8,Seattle SeaTac Airport WA,Seattle SeaTac Airport WA,seattle-seatac-airport-wa,47.4502,-122.3088,town,stop
+bus:rider-calgary,1,Vancouver,Vancouver,vancouver,49.261111,-123.113889,town,community centroid
+bus:rider-calgary,2,Surrey,Surrey,surrey,49.191634,-122.850061,town,community centroid
+bus:rider-calgary,3,Abbotsford,Abbotsford,abbotsford,49.049808,-122.284595,town,community centroid
+bus:rider-calgary,4,Chilliwack,Chilliwack,chilliwack,49.157778,-121.950833,town,community centroid
+bus:rider-calgary,5,Hope,Hope,hope,49.38,-121.441389,town,community centroid
+bus:rider-calgary,6,Merritt,Merritt,merritt,50.1125,-120.788333,town,community centroid
+bus:rider-calgary,7,Kamloops,Kamloops,kamloops,50.675833,-120.339444,town,community centroid
+bus:rider-calgary,8,Chase,Chase,chase,50.819167,-119.686111,town,community centroid
+bus:rider-calgary,9,Sorrento,Sorrento,sorrento,50.876944,-119.466944,town,community centroid
+bus:rider-calgary,10,Salmon Arm,Salmon Arm,salmon-arm,50.699846,-119.267891,town,community centroid
+bus:rider-calgary,11,Sicamous,Sicamous,sicamous,50.836111,-118.98,town,community centroid
+bus:rider-calgary,12,Revelstoke,Revelstoke,revelstoke,50.998175,-118.19605,town,community centroid
+bus:rider-calgary,13,Golden,Golden,golden,51.297778,-116.964722,town,community centroid
+bus:rider-calgary,14,Field,Field,field,51.395833,-116.488333,town,community centroid
+bus:rider-calgary,15,Lake Louise AB,Lake Louise AB,lake-louise-ab,51.4254,-116.1773,town,stop
+bus:rider-calgary,16,Banff AB,Banff AB,banff-ab,51.1784,-115.5708,town,stop
+bus:rider-calgary,17,Canmore AB,Canmore AB,canmore-ab,51.0899,-115.3592,town,stop
+bus:rider-calgary,18,Calgary AB,Calgary AB,calgary-ab,51.0447,-114.0719,town,stop
+carpool:pop-hwy4,1,Nanaimo,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+carpool:pop-hwy4,2,Port Alberni,Port Alberni,port-alberni,49.2339,-124.8055,town,stop
+carpool:pop-hwy4,3,Ucluelet,Ucluelet,ucluelet,48.942778,-125.546111,town,community centroid
+carpool:pop-hwy4,4,Tofino,Tofino,1st-street,49.1535,-125.9013,town,stop
+carpool:pop-island1,1,Victoria,Victoria,victoria,48.42771,-123.36446,town,stop
+carpool:pop-island1,2,Duncan,Duncan,duncan,48.77465,-123.7016,town,stop
+carpool:pop-island1,3,Nanaimo,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+carpool:pop-island19,1,Nanaimo,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+carpool:pop-island19,2,Courtenay,Courtenay,courtenay-exchange,49.6919376,-124.998225,town,stop
+carpool:pop-sea2sky,1,Vancouver,Vancouver,vancouver,49.261111,-123.113889,town,community centroid
+carpool:pop-sea2sky,2,Squamish,Squamish,squamish,49.7387,-123.1333,town,stop
+carpool:pop-sea2sky,3,Whistler,Whistler,whistler,50.1158,-122.9563,town,stop
+ferry:1,1,Tsawwassen,Tsawwassen (Metro Vancouver),tsawwassen,49.008056,-123.128333,town,community centroid
+ferry:1,2,Swartz Bay,Victoria (Vancouver Island),swartz-bay,48.6886,-123.4114,dock,stop
+ferry:10,1,Bear Cove,Port Hardy (Vancouver Island),bear-cove,50.7256,-127.4556,dock,stop
+ferry:10,2,Prince Rupert,Prince Rupert (North Coast),prince-rupert,54.312778,-130.325278,town,community centroid
+ferry:11,1,Prince Rupert,Prince Rupert (North Coast),prince-rupert,54.312778,-130.325278,town,community centroid
+ferry:11,2,Skidegate,Skidegate (Graham Island),skidegate,53.266379,-131.991971,town,community centroid
+ferry:12,1,Brentwood Bay,Brentwood Bay (Vancouver Island),brentwood-bay,48.572537,-123.451469,town,community centroid
+ferry:12,2,Mill Bay,Mill Bay (Vancouver Island),mill-bay,48.6513,-123.5617,town,stop
+ferry:17,1,Westview,Powell River (Sunshine Coast),westview,49.8371,-124.5289,dock,stop
+ferry:17,2,Little River,Comox (Vancouver Island),little-river,49.7402,-124.925,dock,stop
+ferry:18,1,Westview,Powell River (Sunshine Coast),westview,49.8371,-124.5289,dock,stop
+ferry:18,2,Blubber Bay,Texada Island,blubber-bay,49.7948,-124.6204,dock,stop
+ferry:19,1,Nanaimo Harbour,Nanaimo (Vancouver Island),nanaimo-harbour,49.1661,-123.9307,dock,stop
+ferry:19,2,Descanso Bay,Gabriola Island,descanso-bay,49.1778,-123.8584,dock,stop
+ferry:2,1,Horseshoe Bay,West Vancouver (Metro Vancouver),horseshoe-bay,49.37105,-123.280676,town,community centroid
+ferry:2,2,Departure Bay,Nanaimo (Vancouver Island),departure-bay,49.1917,-123.9538,dock,stop
+ferry:20,1,Chemainus,Chemainus (Vancouver Island),chemainus,48.916458,-123.717969,town,community centroid
+ferry:20,2,Preedy Harbour,Thetis Island,preedy-harbour,48.981,-123.6782,dock,stop
+ferry:20,3,Penelakut Island,Penelakut Island,penelakut-island,48.9717,-123.6602,town,stop
+ferry:21,1,Buckley Bay,Buckley Bay (Vancouver Island),buckley-bay,49.532288,-124.857145,town,community centroid
+ferry:21,2,Denman Island West,Denman Island,denman-island-west,49.5348,-124.8231,dock,stop
+ferry:22,1,Gravelly Bay,Denman Island,gravelly-bay,49.4939,-124.7088,dock,stop
+ferry:22,2,Shingle Spit,Hornby Island,shingle-spit,49.5121,-124.7047,dock,stop
+ferry:23,1,Campbell River,Campbell River (Vancouver Island),campbell-river,50.023056,-125.243611,town,community centroid
+ferry:23,2,Quathiaski Cove,Quadra Island,quathiaski-cove,50.0422,-125.2159,dock,stop
+ferry:24,1,Heriot Bay,Quadra Island,heriot-bay,50.1032,-125.2093,dock,stop
+ferry:24,2,Whaletown,Cortes Island,whaletown,50.1107,-125.0544,dock,stop
+ferry:25,1,Port McNeill,Port McNeill (Vancouver Island),port-mcneill,50.589444,-127.083611,town,community centroid
+ferry:25,2,Sointula,Malcolm Island,sointula,50.6268,-127.0179,dock,stop
+ferry:25,3,Alert Bay,Cormorant Island,alert-bay,50.5878,-126.9308,dock,stop
+ferry:26,1,Skidegate,Graham Island,skidegate,53.266379,-131.991971,town,community centroid
+ferry:26,2,Alliford Bay,Moresby Island,alliford-bay,53.2118,-131.9882,dock,stop
+ferry:28,1,Bear Cove,Port Hardy (Vancouver Island),bear-cove,50.7256,-127.4556,dock,stop
+ferry:28,2,McLoughlin Bay,Bella Bella (Central Coast),mcloughlin-bay,52.1388,-128.1438,dock,stop
+ferry:28,3,Shearwater,Denny Island,shearwater,52.1485,-128.0916,dock,stop
+ferry:28,4,Ocean Falls,Ocean Falls (Central Coast),ocean-falls,52.353426,-127.689644,town,community centroid
+ferry:28,5,Bella Coola,Bella Coola (Central Coast),bella-coola,52.372961,-126.753506,town,community centroid
+ferry:28A,1,McLoughlin Bay,Bella Bella (Central Coast),mcloughlin-bay,52.1388,-128.1438,dock,stop
+ferry:28A,2,Shearwater,Denny Island,shearwater,52.1485,-128.0916,dock,stop
+ferry:28A,3,Ocean Falls,Ocean Falls (Central Coast),ocean-falls,52.353426,-127.689644,town,community centroid
+ferry:28A,4,Bella Coola,Bella Coola (Central Coast),bella-coola,52.372961,-126.753506,town,community centroid
+ferry:3,1,Horseshoe Bay,West Vancouver (Metro Vancouver),horseshoe-bay,49.37105,-123.280676,town,community centroid
+ferry:3,2,Langdale,Gibsons (Sunshine Coast),langdale,49.433374,-123.478405,town,community centroid
+ferry:30,1,Tsawwassen,Tsawwassen (Metro Vancouver),tsawwassen,49.008056,-123.128333,town,community centroid
+ferry:30,2,Duke Point,Nanaimo (Vancouver Island),duke-point,49.162,-123.8919,dock,stop
+ferry:4,1,Fulford Harbour,Salt Spring Island,fulford-harbour,48.7693,-123.4501,dock,stop
+ferry:4,2,Swartz Bay,Victoria (Vancouver Island),swartz-bay,48.6886,-123.4114,dock,stop
+ferry:5,1,Swartz Bay,Victoria (Vancouver Island),swartz-bay,48.6886,-123.4114,dock,stop
+ferry:5,2,Otter Bay,Pender Island,otter-bay,48.8011,-123.3155,dock,stop
+ferry:5,3,Village Bay,Mayne Island,village-bay,48.8444,-123.3238,dock,stop
+ferry:5,4,Sturdies Bay,Galiano Island,sturdies-bay,48.8788,-123.3178,dock,stop
+ferry:5,5,Lyall Harbour,Saturna Island,lyall-harbour,48.798,-123.2012,dock,stop
+ferry:5,6,Long Harbour,Salt Spring Island,long-harbour,48.8516,-123.4458,dock,stop
+ferry:6,1,Vesuvius Bay,Salt Spring Island,vesuvius-bay,48.8819,-123.5725,dock,stop
+ferry:6,2,Crofton,Crofton (Vancouver Island),crofton,48.865846,-123.648922,town,community centroid
+ferry:7,1,Earls Cove,Sunshine Coast,earls-cove,49.751944,-124.009167,town,community centroid
+ferry:7,2,Saltery Bay,Powell River (Sunshine Coast),saltery-bay,49.783235,-124.179075,town,community centroid
+ferry:8,1,Horseshoe Bay,West Vancouver (Metro Vancouver),horseshoe-bay,49.37105,-123.280676,town,community centroid
+ferry:8,2,Snug Cove,Bowen Island (Metro Vancouver),snug-cove,49.3789,-123.3306,dock,stop
+ferry:9,1,Tsawwassen,Tsawwassen (Metro Vancouver),tsawwassen,49.008056,-123.128333,town,community centroid
+ferry:9,2,Otter Bay,Pender Island,otter-bay,48.8011,-123.3155,dock,stop
+ferry:9,3,Village Bay,Mayne Island,village-bay,48.8444,-123.3238,dock,stop
+ferry:9,4,Sturdies Bay,Galiano Island,sturdies-bay,48.8788,-123.3178,dock,stop
+ferry:9,5,Lyall Harbour,Saturna Island,lyall-harbour,48.798,-123.2012,dock,stop
+ferry:9,6,Long Harbour,Salt Spring Island,long-harbour,48.8516,-123.4458,dock,stop
+ferry:HULLO,1,Hullo Nanaimo Terminal (Port Way),Nanaimo,nanaimo-hullo,49.1726,-123.938,dock,stop
+ferry:HULLO,2,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+ferry:NEWCASTLE,1,Maffeo Sutton Park Dock,Nanaimo,nanaimo-hullo,49.1726,-123.938,dock,stop
+ferry:NEWCASTLE,2,Saysutshun (Newcastle Island) Dock,Nanaimo,saysutshun-newcastle-dock,49.180092,-123.928773,dock,stop
+ferry:seabus,1,Waterfront,Vancouver,waterfront,49.28591,-123.11151,town,stop
+ferry:seabus,2,Lonsdale Quay,North Vancouver,lonsdale-quay,49.31078,-123.08121,dock,stop
+inland-ferry:IF01,1,Balfour Terminal,Balfour,balfour,49.625575,-116.968009,town,community centroid
+inland-ferry:IF01,2,Kootenay Bay Terminal,Kootenay Bay,kootenay-bay,49.68487,-116.866605,town,community centroid
+inland-ferry:IF02,1,Shelter Bay Terminal,Shelter Bay,shelter-bay,50.633194,-117.934493,town,community centroid
+inland-ferry:IF02,2,Galena Bay Terminal,Galena Bay,galena-bay,50.666529,-117.851157,town,community centroid
+inland-ferry:IF03,1,Fauquier Terminal,Fauquier,fauquier,49.87184,-118.068668,town,community centroid
+inland-ferry:IF03,2,Needles Terminal,Needles,needles,49.873333,-118.100833,town,community centroid
+inland-ferry:IF04,1,Arrow Park East Landing,Arrow Park,arrow-park-east,50.1043,-117.9029,dock,stop
+inland-ferry:IF04,2,Arrow Park West Landing,Arrow Park,arrow-park-west,50.1037,-117.93,dock,stop
+inland-ferry:IF05,1,Adams Lake West Landing,Adams Lake,adams-lake-west,50.9529,-119.6745,dock,stop
+inland-ferry:IF05,2,Adams Lake East Landing,Adams Lake,adams-lake-east,50.953,-119.661,dock,stop
+inland-ferry:IF06,1,Francois Lake (North) Terminal,Francois Lake,francois-lake,54.066,-125.756,town,stop
+inland-ferry:IF06,2,Southbank Terminal,Southbank,southbank,54.02291,-125.76385,town,community centroid
+inland-ferry:IF07,1,Harrop Landing,Harrop,harrop,49.606022,-117.053888,town,community centroid
+inland-ferry:IF07,2,Procter Landing,Procter,procter,49.617778,-116.961111,town,community centroid
+inland-ferry:IF08,1,Glade Landing,Glade,glade,49.408224,-117.541475,town,community centroid
+inland-ferry:IF08,2,Highway 3A Landing,Thrums,highway-3a,49.3947,-117.5406,dock,stop
+inland-ferry:IF09,1,Port Kells Landing,Port Kells (Surrey),port-kells,49.162839,-122.699723,town,community centroid
+inland-ferry:IF09,2,Barnston Island Landing,Barnston Island,barnston-island,49.19271,-122.72242,town,community centroid
+inland-ferry:IF10,1,Lytton East Landing,Lytton,lytton-east,50.2478,-121.5909,dock,stop
+inland-ferry:IF10,2,Lytton West Landing,Lytton,lytton-west,50.247,-121.5945,dock,stop
+inland-ferry:IF11,1,Big Bar East Landing,Big Bar Creek,big-bar-east,51.1832,-122.133,dock,stop
+inland-ferry:IF11,2,Big Bar West Landing,Jesmond,big-bar-west,51.1838,-122.139,dock,stop
+inland-ferry:IF12,1,South Usk Landing,Usk,south-usk,54.634,-128.414,dock,stop
+inland-ferry:IF12,2,North Usk Landing,Usk,north-usk,54.6362,-128.416,dock,stop
+inland-ferry:IF13,1,Little Fort East Landing,Little Fort,little-fort-east,51.4222,-120.2013,dock,stop
+inland-ferry:IF13,2,Little Fort West Landing,Little Fort,little-fort-west,51.4225,-120.2045,dock,stop
+inland-ferry:IF14,1,McLure East Landing,McLure,mclure-east,51.0409,-120.2402,dock,stop
+inland-ferry:IF14,2,McLure West Landing,McLure,mclure-west,51.0412,-120.2435,dock,stop
+local-bus:900,1,Bridgeport,Richmond,bridgeport,49.19514,-123.13369,dock,stop
+local-bus:900,2,Ladner Exchange,Delta,ladner-exchange,49.0903,-123.0814,dock,stop
+local-bus:900,3,Tsawwassen,Tsawwassen (Metro Vancouver),tsawwassen,49.008056,-123.128333,town,community centroid
+local-bus:GM01,1,Massey Shuttle Delta stop (Hwy 17A),Delta,ladner-exchange,49.0903,-123.0814,dock,stop
+local-bus:GM01,2,Massey Shuttle Richmond stop (Rice Mill Rd),Richmond,massey-shuttle-richmond,49.1375,-123.0805,dock,stop
+local-bus:clw-10,1,Aberdeen Mall,Kamloops,aberdeen-mall,50.65569,-120.37214,dock,stop
+local-bus:clw-10,2,Clearwater Medical Centre,Clearwater,clearwater-medical-centre,51.64994,-120.03784,dock,stop
+local-bus:cv-1,1,Comox Mall Bay B,Comox,comox-mall-bay-b,49.67367,-124.92517,dock,stop
+local-bus:cv-1,2,Anfield Centre,Courtenay,anfield-centre,49.6683,-124.97996,dock,stop
+local-bus:cv-10,1,Downtown Courtenay Exchange,Courtenay,courtenay-exchange,49.6919376,-124.998225,town,stop
+local-bus:cv-10,2,Island Hwy at Buckley Bay,Buckley Bay,buckley-bay,49.532288,-124.857145,town,community centroid
+local-bus:cv-11,1,Little River Ferry Terminal,Comox,little-river,49.7402,-124.925,dock,stop
+local-bus:cv-11,2,Comox Airport (YQQ),Comox,yqq,49.7108,-124.8867,airport,stop
+local-bus:cv-11,3,Downtown Exchange (Courtenay),Courtenay,courtenay-exchange,49.6919376,-124.998225,town,stop
+local-bus:cvt-34,1,Coronation Mall,Ladysmith,coronation-mall,48.97871,-123.80471,dock,stop
+local-bus:cvt-34,2,Pine & Daniel,North Cowichan,pine-daniel,48.92664,-123.72684,dock,stop
+local-bus:cvt-36,1,Coronation Mall,Ladysmith,coronation-mall,48.97871,-123.80471,dock,stop
+local-bus:cvt-36,2,Cowichan Commons,North Cowichan,cowichan-commons,48.80133,-123.72058,dock,stop
+local-bus:cvt-36,3,Village Green Mall,Duncan,duncan,48.77465,-123.7016,town,stop
+local-bus:cvt-6,1,Joan & Queen - Saltspring Ferry,North Cowichan,joan-queen-saltspring-ferry,48.86472,-123.64166,dock,stop
+local-bus:cvt-6,2,Village Green Mall,Duncan,duncan,48.77465,-123.7016,town,stop
+local-bus:cvt-66,1,Village Green Mall,Duncan,duncan,48.77465,-123.7016,town,stop
+local-bus:cvt-66,2,Deloume Park & Ride,Mill Bay,mill-bay,48.6513,-123.5617,town,stop
+local-bus:cvt-66,3,Hwy 1 ramp & Leigh,Langford,hwy-1-ramp-leigh,48.45426,-123.51847,dock,stop
+local-bus:cvt-66,4,Hwy 1 ramp & Helmcken,View Royal,hwy-1-ramp-helmcken,48.46448,-123.43042,dock,stop
+local-bus:cvt-66,5,Hwy 1 & Tillicum,Saanich,hwy-1-tillicum,48.45839,-123.39418,dock,stop
+local-bus:cvt-66,6,Legislature Terminal,Victoria,legislature,48.41827,-123.36805,dock,stop
+local-bus:cvt-66,7,Hwy 1 & Boys Rd,North Cowichan,hwy-1-boys-rd,48.77039,-123.6987,dock,stop
+local-bus:ea-goose,1,Atkins Road Park & Ride,View Royal,atkins-road-park-ride,48.45063,-123.46961,dock,stop
+local-bus:ea-goose,2,Rocky Point Road Parking Lot,Metchosin,rocky-point-road-parking-lot,48.37389,-123.5447,dock,stop
+local-bus:ea-goose,3,Sooke Potholes Parking Lot 3,Sooke,sooke-potholes-parking-lot-3,48.44329,-123.72158,dock,stop
+local-bus:ek-22,1,12th Ave N at Kootenay (SB),Cranbrook,12th-ave-n-at-kootenay,49.51305,-115.76488,dock,stop
+local-bus:ek-22,2,Kimberley Conference Centre,Kimberley,kimberley-conference-centre,49.68834,-116.00411,dock,stop
+local-bus:fv-21,1,276 St at Fraser Hwy,Langley,276-st-at-fraser-hwy,49.05696,-122.45979,dock,stop
+local-bus:fv-21,2,South Fraser Way at Center St,Abbotsford,south-fraser-way-at-center-st,49.04771,-122.34275,dock,stop
+local-bus:fv-21a,1,276 St at Fraser Hwy,Langley,276-st-at-fraser-hwy,49.05696,-122.45979,dock,stop
+local-bus:fv-21a,2,South Fraser Way at Center St,Abbotsford,south-fraser-way-at-center-st,49.04771,-122.34275,dock,stop
+local-bus:fv-31,1,Junction Mall,Mission,junction-mall,49.13014,-122.31907,dock,stop
+local-bus:fv-31,2,G Ferguson Way at McCallum Rd,Abbotsford,g-ferguson-way-at-mccallum-rd,49.05013,-122.29275,dock,stop
+local-bus:fv-31a,1,Junction Mall,Mission,junction-mall,49.13014,-122.31907,dock,stop
+local-bus:fv-31a,2,Riverside St at Fore Rd,Abbotsford,riverside-st-at-fore-rd,49.11183,-122.29428,dock,stop
+local-bus:fv-31x,1,Bourquin Cres W at Ventura Ave,Abbotsford,bourquin-cres-w-at-ventura-ave,49.05196,-122.31025,dock,stop
+local-bus:fv-31x,2,Lougheed Hwy at Haig St,Mission,mission-city,49.13289,-122.3211,dock,stop
+local-bus:fv-55,1,Vedder Rd at Wren Rd,Chilliwack,vedder-rd-at-wren-rd,49.10582,-121.96115,dock,stop
+local-bus:fv-55,2,Boundary Rd at Berry Rd,Abbotsford,boundary-rd-at-berry-rd,49.09197,-122.08047,dock,stop
+local-bus:fv-66,1,Downtown Chilliwack Bay B,Chilliwack,downtown-chilliwack-bay-b,49.16883,-121.9558,dock,stop
+local-bus:fv-66,2,Highstreet Mall,Abbotsford,highstreet-mall,49.05675,-122.37452,dock,stop
+local-bus:fv-66,3,Carvolth Exch Bay 13,Langley,carvolth,49.16078,-122.66032,dock,stop
+local-bus:fv-66,4,Lougheed Stn Bay 5,Burnaby,lougheed-town-centre,49.24856,-122.89664,dock,stop
+local-bus:fv-71,1,St Alice St at Esplanade Ave,Harrison Hot Springs,st-alice-st-at-esplanade-ave,49.30354,-121.78791,dock,stop
+local-bus:fv-71,2,Downtown Chilliwack Bay B,Chilliwack,downtown-chilliwack-bay-b,49.16883,-121.9558,dock,stop
+local-bus:krt-23,1,Kelowna Airport (YLW),Kelowna,ylw,49.9561,-119.3778,airport,stop
+local-bus:krt-23,2,UBCO Transit Exchange,Kelowna,ubco,49.93997,-119.39438,dock,stop
+local-bus:krt-97,1,UBCO Transit Exchange,Kelowna,ubco,49.93997,-119.39438,dock,stop
+local-bus:krt-97,2,Queensway Transit Exchange (Downtown Kelowna),Kelowna,kelowna-downtown,49.88713,-119.49494,town,stop
+local-bus:mtw-1,1,Port Hardy,Port Hardy,port-hardy,50.724444,-127.498056,town,stop
+local-bus:mtw-1,2,Port McNeill Ferry Terminal,Port McNeill,port-mcneill,50.589444,-127.083611,town,community centroid
+local-bus:pg-161,1,Burrard Vanderhoof Co-op,Vanderhoof,vanderhoof,54.01495,-124.0089,town,stop
+local-bus:pg-161,2,Downtown Exch Bay B,Prince George,prince-george,53.9137,-122.74808,town,stop
+local-bus:plr-12,1,Scotch Fir Point & Roberts,Stillwater,scotch-fir-point-roberts,49.76348,-124.29683,dock,stop
+local-bus:plr-12,2,Town Centre Mall Bay A,Powell River,town-centre-mall-bay-a,49.84384,-124.51728,dock,stop
+local-bus:pmb-99,1,Whistler Village (Gondola Transit Exchange),Whistler,whistler,50.1158,-122.9563,town,stop
+local-bus:pmb-99,2,Meadow Park Sports Centre,Whistler,meadow-park-sports-centre,50.14444,-122.96024,dock,stop
+local-bus:pmb-99,3,Frontier at Aster (NB),Pemberton,frontier-at-aster,50.32133,-122.80628,dock,stop
+local-bus:pr-55,1,Fairview Bay,Prince Rupert,fairview-bay,54.2941048,-130.3538988,dock,stop
+local-bus:pr-55,2,Downtown Prince Rupert (2nd Ave at 3rd St),Prince Rupert,prince-rupert,54.312778,-130.325278,town,community centroid
+local-bus:qnl-30,1,St Laurent Ave at Reid St,Quesnel,quesnel,52.97897,-122.49628,town,stop
+local-bus:qnl-30,2,Barkerville Visitor Centre,Barkerville,barkerville-visitor-centre,53.06911,-121.51474,dock,stop
+local-bus:rdn-1,1,Bay B at Woodgrove Exch,Nanaimo,bay-b-at-woodgrove-exch,49.23685,-124.05317,dock,stop
+local-bus:rdn-1,2,Downtown Nanaimo Exchange,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+local-bus:rdn-20,1,Departure Bay Ferry Terminal,Nanaimo,departure-bay,49.1917,-123.9538,dock,stop
+local-bus:rdn-20,2,Downtown Nanaimo Exchange,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+local-bus:rdn-25,1,Departure Bay Ferry Terminal,Nanaimo,departure-bay,49.1917,-123.9538,dock,stop
+local-bus:rdn-25,2,Downtown Nanaimo Exchange,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
+local-bus:rdn-70,1,Bay D at Downtown Nanaimo Exch,Nanaimo,bay-d-at-downtown-nanaimo-exch,49.16396,-123.93181,dock,stop
+local-bus:rdn-70,2,1st Ave at Hwy 1,Ladysmith,1st-ave-at-hwy-1,48.99808,-123.82432,dock,stop
+local-bus:rdn-70,3,Drinkwater Rd at Cowichan Commons,North Cowichan,drinkwater-rd-at-cowichan-commons,48.80307,-123.71996,dock,stop
+local-bus:rdn-70,4,Village Green Mall,Duncan,duncan,48.77465,-123.7016,town,stop
+local-bus:rdn-9,1,Ravensong Exch,Qualicum Beach,ravensong-exch,49.34589,-124.45012,dock,stop
+local-bus:rdn-9,2,Island Hwy W at Wembley Centre,Parksville,island-hwy-w-at-wembley-centre,49.33186,-124.34487,dock,stop
+local-bus:rdn-9,3,Bay B at Woodgrove Exch,Nanaimo,bay-b-at-woodgrove-exch,49.23685,-124.05317,dock,stop
+local-bus:sc-1,1,Gower Point Rd at Glassford Rd,Gibsons,gower-point-rd-at-glassford-rd,49.39241,-123.51266,dock,stop
+local-bus:sc-1,2,Cowrie St at Trail Ave,Sechelt,sechelt,49.47235,-123.75953,town,stop
+local-bus:sc-90,1,Cowrie St at Trail Ave,Sechelt,sechelt,49.47235,-123.75953,town,stop
+local-bus:sc-90,2,Gibsons Way at Seamount Way,Gibsons,gibsons-way-at-seamount-way,49.40674,-123.52537,dock,stop
+local-bus:skn-11,1,Lakelse at Skeena Mall,Terrace,terrace,54.51701,-128.59612,town,stop
+local-bus:skn-11,2,Kitimat City Centre,Kitimat,kitimat-city-centre,54.05333,-128.65434,dock,stop
+local-bus:sok-30,1,Duncan & Main (Plaza),Penticton,duncan-main,49.48392,-119.585,dock,stop
+local-bus:sok-30,2,Wharton at Kelly,Summerland,wharton-at-kelly,49.60097,-119.67987,dock,stop
+local-bus:sok-40,1,Main & 89th St,Osoyoos,osoyoos,49.03288,-119.46877,town,stop
+local-bus:sok-40,2,Fairview at Panorama,Oliver,fairview-at-panorama,49.17856,-119.56004,dock,stop
+local-bus:sok-40,3,Duncan & Main (Plaza),Penticton,duncan-main,49.48392,-119.585,dock,stop
+local-bus:sok-50,1,Princeton Chevron,Princeton,princeton,49.45614,-120.5079,town,stop
+local-bus:sok-50,2,South Similkameen Health Centre,Keremeos,keremeos,49.20492,-119.83271,town,stop
+local-bus:sok-50,3,Cherry Lane Shopping Centre,Penticton,cherry-lane-shopping-centre,49.47372,-119.58583,dock,stop
+local-bus:sok-70,1,Duncan & Main (Plaza),Penticton,duncan-main,49.48392,-119.585,dock,stop
+local-bus:sok-70,2,Prairie Valley at Atkinson,Summerland,prairie-valley-at-atkinson,49.60296,-119.66794,dock,stop
+local-bus:sok-70,3,Westbank Exch,West Kelowna,west-kelowna,49.82966,-119.6316,town,stop
+local-bus:sok-70,4,Queensway Exch (Kelowna),Kelowna,kelowna-downtown,49.88713,-119.49494,town,stop
+local-bus:tl-229,1,Lonsdale Quay,North Vancouver,lonsdale-quay,49.31078,-123.08121,dock,stop
+local-bus:tl-229,2,Lynn Valley Bay 1,North Vancouver,lynn-valley,49.33661,-123.03876,dock,stop
+local-bus:tl-257,1,Horseshoe Bay Ferry Terminal,West Vancouver,horseshoe-bay,49.37105,-123.280676,town,community centroid
+local-bus:tl-257,2,Park Royal,West Vancouver,west-vancouver,49.327,-123.13857,dock,stop
+local-bus:tl-257,3,Downtown Vancouver (Dunsmuir at Cambie),Vancouver,vancouver,49.261111,-123.113889,town,community centroid
+local-bus:tl-620,1,Tsawwassen Ferry Terminal,Delta,tsawwassen,49.008056,-123.128333,town,community centroid
+local-bus:tl-620,2,Ladner Exchange,Delta,ladner-exchange,49.0903,-123.0814,dock,stop
+local-bus:tl-620,3,Bridgeport Station,Richmond,bridgeport,49.19514,-123.13369,dock,stop
+local-bus:tl-701,1,Coquitlam Central Station,Coquitlam,coquitlam-central,49.27908,-122.8005,dock,stop
+local-bus:tl-701,2,Haney Place,Maple Ridge,haney-place,49.2203566,-122.5988275,dock,stop
+local-bus:tl-701-mission,1,Haney Place,Maple Ridge,haney-place,49.2203566,-122.5988275,dock,stop
+local-bus:tl-701-mission,2,Mission City Station,Mission,mission-city,49.13289,-122.3211,dock,stop
+local-bus:tl-r2,1,Lonsdale Quay,North Vancouver,lonsdale-quay,49.31078,-123.08121,dock,stop
+local-bus:tl-r2,2,Park Royal,West Vancouver,west-vancouver,49.327,-123.13857,dock,stop
+local-bus:vrt-61,1,Douglas St at Finlayson St,Victoria,douglas-st-at-finlayson-st,48.44449,-123.37065,dock,stop
+local-bus:vrt-61,2,Douglas St at Kelvin Rd,Saanich,douglas-st-at-kelvin-rd,48.44964,-123.37376,dock,stop
+local-bus:vrt-61,3,Island Hwy at Wilfert Rd,View Royal,island-hwy-at-wilfert-rd,48.45257,-123.46278,dock,stop
+local-bus:vrt-61,4,Jacklin Rd at Sunridge Valley Dr,Colwood,jacklin-rd-at-sunridge-valley-dr,48.43548,-123.51428,dock,stop
+local-bus:vrt-61,5,Langford Exch Bay A,Langford,langford-exch-bay-a,48.44533,-123.50575,dock,stop
+local-bus:vrt-61,6,Sooke Rd at Brownsey Blvd,Sooke,sooke-rd-at-brownsey-blvd,48.37834,-123.72201,dock,stop
+local-bus:vrt-64,1,SEAPARC Recreation Centre,Sooke,seaparc-recreation-centre,48.38628,-123.7088,dock,stop
+local-bus:vrt-64,2,Langford Exch Bay A,Langford,langford-exch-bay-a,48.44533,-123.50575,dock,stop
+local-bus:vrt-64,3,Jacklin Rd at Sunridge Valley Dr,Colwood,jacklin-rd-at-sunridge-valley-dr,48.43548,-123.51428,dock,stop
+local-bus:vrt-65,1,Douglas St at Pandora Ave,Victoria,victoria,48.42771,-123.36446,town,stop
+local-bus:vrt-65,2,Douglas St at Kelvin Rd,Saanich,douglas-st-at-kelvin-rd,48.44964,-123.37376,dock,stop
+local-bus:vrt-65,3,Hwy 1 at Helmcken Rd,View Royal,hwy-1-at-helmcken-rd,48.46446,-123.43038,dock,stop
+local-bus:vrt-65,4,Veterans Memorial Pky at Station Ave,Langford,veterans-memorial-pky-at-station-ave,48.44597,-123.49652,dock,stop
+local-bus:vrt-65,5,Otter Point Rd at Ayre Rd,Sooke,otter-point-rd-at-ayre-rd,48.37852,-123.72453,dock,stop
+local-bus:vrt-70,1,Swartz Bay Ferry Terminal,Victoria,swartz-bay,48.6886,-123.4114,dock,stop
+local-bus:vrt-70,2,Legislature Exchange (Downtown Victoria),Victoria,victoria,48.42771,-123.36446,town,stop
+local-bus:vrt-72,1,Swartz Bay Ferry Terminal,Victoria,swartz-bay,48.6886,-123.4114,dock,stop
+local-bus:vrt-72,2,Legislature Exchange (Downtown Victoria),Victoria,victoria,48.42771,-123.36446,town,stop
+local-bus:vs-90,1,UBCO Exchange,Kelowna,ubco,49.93997,-119.39438,dock,stop
+local-bus:vs-90,2,Hwy 97 & Okanagan Centre,Lake Country,hwy-97-okanagan-centre,50.0218,-119.40668,dock,stop
+local-bus:vs-90,3,Downtown Exchange,Vernon,vernon,50.26453,-119.27129,town,stop
+local-bus:wct-1,1,Ucluelet Medical Centre,Ucluelet,ucluelet-medical-centre,48.94615,-125.56382,dock,stop
+local-bus:wct-1,2,Pacific Rim Visitor Center,Tlakmaqis,pacific-rim-visitor-center,48.9928,-125.58798,dock,stop
+local-bus:wct-1,3,Tofino Visitor Center,Tofino,tofino-visitor-center,49.10651,-125.86747,dock,stop
+local-bus:wk-45,1,Columbia Ave at Spokane St,Rossland,columbia-ave-at-spokane-st,49.07697,-117.80165,dock,stop
+local-bus:wk-45,2,Cedar Ave at Spokane St,Trail,cedar-ave-at-spokane-st,49.09478,-117.70785,dock,stop
+local-bus:wk-46,1,Cedar Ave at Farwell St,Trail,cedar-ave-at-farwell-st,49.09666,-117.71003,dock,stop
+local-bus:wk-46,2,Columbia Ave at Spokane St,Rossland,columbia-ave-at-spokane-st,49.07697,-117.80165,dock,stop
+local-bus:wk-98,1,Castlegar Airport,Castlegar,castlegar-airport,49.30086,-117.63693,dock,stop
+local-bus:wk-98,2,Cedar Ave at Spokane St,Trail,cedar-ave-at-spokane-st,49.09478,-117.70785,dock,stop
+local-bus:wk-99,1,Nelson Exchange Bay A,Nelson,nelson,49.49047,-117.29541,town,stop
+local-bus:wk-99,2,Hwy 3A at Ootischenia Rd,Castlegar,hwy-3a-at-ootischenia-rd,49.31403,-117.63209,dock,stop
+local-train:WCE,1,Waterfront,Vancouver,waterfront,49.28591,-123.11151,town,stop
+local-train:WCE,2,Moody Centre,Coquitlam,moody-centre,49.27944,-122.84292,dock,stop
+local-train:WCE,3,Coquitlam Central,Port Moody,coquitlam-central,49.27908,-122.8005,dock,stop
+local-train:WCE,4,Port Coquitlam Station,Port Coquitlam,port-coquitlam,49.2353,-122.7787,dock,stop
+local-train:WCE,5,Pitt Meadows Station,Pitt Meadows,pitt-meadows,49.2218,-122.6885,dock,stop
+local-train:WCE,6,Maple Meadows Station,Maple Ridge,maple-meadows,49.2207,-122.6447,dock,stop
+local-train:WCE,7,Port Haney Station,Maple Ridge,port-haney,49.2106,-122.5985,dock,stop
+local-train:WCE,8,Mission City Station,Mission,mission-city,49.13289,-122.3211,dock,stop
+rental:bud-cr-nan,1,Campbell River,Campbell River,rental-budget-campbell-river,50.025,-125.247,town,stop
+rental:bud-cr-nan,2,Downtown Nanaimo,Nanaimo,rental-budget-nanaimo,49.169,-123.9365,dock,stop
+rental:bud-nan-vic,1,Downtown Nanaimo,Nanaimo,rental-budget-nanaimo,49.169,-123.9365,dock,stop
+rental:bud-nan-vic,2,Downtown Victoria,Victoria,rental-budget-victoria,48.42,-123.367,dock,stop
+rental:bud-pa-nan,1,Port Alberni,Port Alberni,rental-budget-port-alberni,49.2413,-124.806,town,stop
+rental:bud-pa-nan,2,Downtown Nanaimo,Nanaimo,rental-budget-nanaimo,49.169,-123.9365,dock,stop
+rental:bud-ph-nan,1,Port Hardy Airport,Port Hardy,yzt,50.6806,-127.3667,airport,stop
+rental:bud-ph-nan,2,Downtown Nanaimo,Nanaimo,rental-budget-nanaimo,49.169,-123.9365,dock,stop
+rental:nat-cr-cx,1,Campbell River Airport,Campbell River,ybl,49.9508,-125.2714,airport,stop
+rental:nat-cr-cx,2,Comox Valley Airport,Comox,yqq,49.7108,-124.8867,airport,stop
+rental:nat-cr-nan,1,Campbell River Airport,Campbell River,ybl,49.9508,-125.2714,airport,stop
+rental:nat-cr-nan,2,Downtown Nanaimo,Nanaimo,rental-national-nanaimo,49.1863,-123.9698,dock,stop
+rental:nat-cr-ph,1,Campbell River Airport,Campbell River,ybl,49.9508,-125.2714,airport,stop
+rental:nat-cr-ph,2,Port Hardy Airport,Port Hardy,yzt,50.6806,-127.3667,airport,stop
+rental:nat-cx-nan,1,Comox Valley Airport,Comox,yqq,49.7108,-124.8867,airport,stop
+rental:nat-cx-nan,2,Downtown Nanaimo,Nanaimo,rental-national-nanaimo,49.1863,-123.9698,dock,stop
+rental:nat-cx-ph,1,Comox Valley Airport,Comox,yqq,49.7108,-124.8867,airport,stop
+rental:nat-cx-ph,2,Port Hardy Airport,Port Hardy,yzt,50.6806,-127.3667,airport,stop
+rental:nat-nan-vic,1,Downtown Nanaimo,Nanaimo,rental-national-nanaimo,49.1863,-123.9698,dock,stop
+rental:nat-nan-vic,2,Downtown Victoria,Victoria,rental-national-victoria,48.4229,-123.3671,dock,stop
+rental:nat-ph-nan,1,Port Hardy Airport,Port Hardy,yzt,50.6806,-127.3667,airport,stop
+rental:nat-ph-nan,2,Downtown Nanaimo,Nanaimo,rental-national-nanaimo,49.1863,-123.9698,dock,stop
+skytrain:1,1,Waterfront,Vancouver,waterfront,49.28591,-123.11151,town,stop
+skytrain:1,2,Burrard,Vancouver,burrard,49.28556,-123.11991,dock,stop
+skytrain:1,3,Granville,Vancouver,granville,49.28336,-123.11611,dock,stop
+skytrain:1,4,Stadium-Chinatown,Vancouver,stadium-chinatown,49.27969,-123.10936,dock,stop
+skytrain:1,5,Main Street-Science World,Vancouver,pacific-central-station,49.27314,-123.10044,town,stop
+skytrain:1,6,Commercial-Broadway,Vancouver,commercial-broadway,49.2625,-123.06947,dock,stop
+skytrain:1,7,Nanaimo,Vancouver,nanaimo-station,49.24842,-123.05606,dock,stop
+skytrain:1,8,29th Avenue,Vancouver,29th-avenue,49.24428,-123.04604,dock,stop
+skytrain:1,9,Joyce-Collingwood,Vancouver,joyce-collingwood,49.23825,-123.03178,dock,stop
+skytrain:1,10,Patterson,Burnaby,patterson,49.22928,-123.01142,dock,stop
+skytrain:1,11,Metrotown,Burnaby,metrotown,49.22597,-123.00372,dock,stop
+skytrain:1,12,Royal Oak,Burnaby,royal-oak,49.21931,-122.9878,dock,stop
+skytrain:1,13,Edmonds,Burnaby,edmonds,49.21111,-122.95867,dock,stop
+skytrain:1,14,22nd Street,New Westminster,22nd-street,49.20039,-122.949,dock,stop
+skytrain:1,15,New Westminster,New Westminster,new-westminster,49.20131,-122.91264,town,stop
+skytrain:1,16,Columbia,New Westminster,columbia,49.20492,-122.9064,dock,stop
+skytrain:1,17,Scott Road,Surrey,scott-road,49.19528,-122.87411,dock,stop
+skytrain:1,18,Gateway,Surrey,gateway,49.18933,-122.85047,dock,stop
+skytrain:1,19,Surrey Central,Surrey,surrey-central,49.18922,-122.84817,dock,stop
+skytrain:1,20,King George,Surrey,king-george,49.18278,-122.84522,dock,stop
+skytrain:1,21,Sapperton,New Westminster,sapperton,49.22142,-122.88922,dock,stop
+skytrain:1,22,Braid,New Westminster,braid,49.23425,-122.88061,dock,stop
+skytrain:1,23,Lougheed Town Centre,Burnaby,lougheed-town-centre,49.24856,-122.89664,dock,stop
+skytrain:1,24,Production Way-University,Burnaby,production-way-university,49.25272,-122.91804,dock,stop
+skytrain:1,25,VCC-Clark,Vancouver,vcc-clark,49.26566,-123.07897,dock,stop
+skytrain:1,26,Renfrew,Vancouver,renfrew,49.25889,-123.04611,dock,stop
+skytrain:1,27,Rupert,Vancouver,rupert,49.26075,-123.03386,dock,stop
+skytrain:1,28,Gilmore,Burnaby,gilmore,49.26553,-123.00472,dock,stop
+skytrain:1,29,Brentwood Town Centre,Burnaby,brentwood-town-centre,49.26636,-122.99672,dock,stop
+skytrain:1,30,Holdom,Burnaby,holdom,49.26461,-122.97228,dock,stop
+skytrain:1,31,Sperling-Burnaby Lake,Burnaby,sperling-burnaby-lake,49.26239,-122.95147,dock,stop
+skytrain:1,32,Lake City Way,Burnaby,lake-city-way,49.25869,-122.93372,dock,stop
+skytrain:1,33,Burquitlam,Coquitlam,burquitlam,49.26122,-122.8895,dock,stop
+skytrain:1,34,Moody Centre,Coquitlam,moody-centre,49.27944,-122.84292,dock,stop
+skytrain:1,35,Inlet Centre,Port Moody,inlet-centre,49.27744,-122.82389,dock,stop
+skytrain:1,36,Coquitlam Central,Port Moody,coquitlam-central,49.27908,-122.8005,dock,stop
+skytrain:1,37,Lincoln,Coquitlam,lincoln,49.28344,-122.79406,dock,stop
+skytrain:1,38,Lafarge Lake-Douglas,Coquitlam,lafarge-lake-douglas,49.28556,-122.79325,dock,stop
+skytrain:1,39,Vancouver City Centre,Vancouver,vancouver-city-centre,49.2831,-123.11856,dock,stop
+skytrain:1,40,Yaletown-Roundhouse,Vancouver,yaletown-roundhouse,49.2745,-123.12198,dock,stop
+skytrain:1,41,Olympic Village,Vancouver,olympic-village,49.26637,-123.11578,dock,stop
+skytrain:1,42,Broadway-City Hall,Vancouver,broadway-city-hall,49.26269,-123.11469,dock,stop
+skytrain:1,43,King Edward,Vancouver,king-edward,49.24906,-123.11578,dock,stop
+skytrain:1,44,Oakridge-41st Avenue,Vancouver,oakridge-41st-avenue,49.23339,-123.11689,dock,stop
+skytrain:1,45,Langara-49th Avenue,Vancouver,langara-49th-avenue,49.22639,-123.11644,dock,stop
+skytrain:1,46,Marine Drive,Vancouver,marine-drive,49.20978,-123.1165,dock,stop
+skytrain:1,47,Bridgeport,Richmond,bridgeport,49.19514,-123.13369,dock,stop
+skytrain:1,48,Aberdeen,Richmond,aberdeen,49.18467,-123.13658,dock,stop
+skytrain:1,49,Lansdowne,Richmond,lansdowne,49.17369,-123.13594,dock,stop
+skytrain:1,50,Capstan,Richmond,capstan,49.18883,-123.13569,dock,stop
+skytrain:1,51,Richmond-Brighouse,Richmond,richmond-brighouse,49.16728,-123.13647,dock,stop
+skytrain:1,52,Templeton,Richmond,templeton,49.19639,-123.15083,dock,stop
+skytrain:1,53,Sea Island Centre,Richmond,sea-island-centre,49.19444,-123.15917,dock,stop
+skytrain:1,54,YVR-Airport,Richmond,yvr,49.1945,-123.18386,airport,stop
+train:amtrak-cascades,1,Vancouver Pacific Central,Vancouver Pacific Central,pacific-central-station,49.27314,-123.10044,town,stop
+train:amtrak-cascades,2,Seattle Downtown WA,Seattle Downtown WA,seattle-downtown-wa,47.6062,-122.3321,town,stop
+train:via-canadian,1,Vancouver Pacific Central,Vancouver Pacific Central,pacific-central-station,49.27314,-123.10044,town,stop
+train:via-canadian,2,Kamloops North,Kamloops North,kamloops-north,50.7159,-120.3378,town,stop
+train:via-canadian,3,Jasper AB,Jasper AB,jasper-ab,52.8737,-118.0814,town,stop
+train:via-skeena,1,Prince Rupert,Prince Rupert,prince-rupert,54.312778,-130.325278,town,community centroid
+train:via-skeena,2,Terrace,Terrace,terrace,54.51701,-128.59612,town,stop
+train:via-skeena,3,New Hazelton,New Hazelton,new-hazelton,55.243333,-127.586944,town,community centroid
+train:via-skeena,4,Smithers,Smithers,smithers,54.779167,-127.176111,town,community centroid
+train:via-skeena,5,Houston,Houston,houston,54.398333,-126.648333,town,community centroid
+train:via-skeena,6,Burns Lake,Burns Lake,burns-lake,54.230278,-125.764444,town,community centroid
+train:via-skeena,7,Vanderhoof,Vanderhoof,vanderhoof,54.01495,-124.0089,town,stop
+train:via-skeena,8,Prince George,Prince George,prince-george,53.9137,-122.74808,town,stop
+train:via-skeena,9,McBride,McBride,mcbride,53.304167,-120.163889,town,community centroid
+train:via-skeena,10,Jasper AB,Jasper AB,jasper-ab,52.8737,-118.0814,town,stop
+water-taxi:wt001,1,Empress Dock,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
+water-taxi:wt001,2,Fisherman's Wharf,Victoria,victoria-fishermans,,,,
+water-taxi:wt001,3,Old Town / Chinatown dock,Victoria,victoria,48.42771,-123.36446,town,stop
+water-taxi:wt001,4,West Bay,Esquimalt,west-bay,,,,
+water-taxi:wt002,1,Empress Dock,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
+water-taxi:wt002,2,Point Ellice House dock,Victoria,point-ellice-house,,,,
+water-taxi:wt002,3,Selkirk Landing,Victoria (Victoria West),selkirk,,,,
+water-taxi:wt003,1,Snug Cove government dock,Bowen Island,snug-cove,49.3789,-123.3306,dock,stop
+water-taxi:wt003,2,Coal Harbour,Vancouver,coal-harbour,,,,
+water-taxi:wt004,1,Snug Cove,Bowen Island,snug-cove,49.3789,-123.3306,dock,stop
+water-taxi:wt004,2,Granville Island,Vancouver,granville-island,,,,
+water-taxi:wt005,1,Horseshoe Bay government dock,West Vancouver,horseshoe-bay,49.37105,-123.280676,town,community centroid
+water-taxi:wt005,2,Snug Cove government dock,Bowen Island,snug-cove,49.3789,-123.3306,dock,stop
+water-taxi:wt006,1,Horseshoe Bay / Sunset Marina,West Vancouver,west-vancouver,49.327,-123.13857,dock,stop
+water-taxi:wt006,2,Gambier Harbour,Gambier Island,gambier-harbour,,,,
+water-taxi:wt007,1,Lund Harbour,Lund,lund-harbour,49.9805,-124.7624,dock,stop
+water-taxi:wt007,2,Savary Island public wharf,Savary Island,savary-island,49.945,-124.7785,town,stop
+water-taxi:wt008,1,Lund (behind Lund Hotel),Lund,lund,,,,
+water-taxi:wt008,2,Savary Island wharf,Savary Island,savary-island,49.945,-124.7785,town,stop
+water-taxi:wt009,1,Fishermans Wharf,Campbell River,campbell-river-fishermans,50.0222,-125.2391,dock,stop
+water-taxi:wt009,2,Cortes Island landing,Cortes Island,cortes-island,50.0637,-124.9816,town,stop
+water-taxi:wt010,1,Coast Marina (Island Hwy),Campbell River,coast,50.0264,-125.242,dock,stop
+water-taxi:wt010,2,Manson's Landing,Cortes Island,mansons,50.0637,-124.9816,dock,stop
+water-taxi:wt010,3,Hernando Island,Hernando Island,hernando-island,49.9817,-124.9164,town,stop
+water-taxi:wt010,4,Savary Island Government Dock,Savary Island,savary-island,49.945,-124.7785,town,stop
+water-taxi:wt011,1,1st Street Dock,Tofino,1st-street,49.1535,-125.9013,town,stop
+water-taxi:wt011,2,Maaqutusiis,Ahousaht (Flores Island),maaqutusiis,49.2789,-126.0589,dock,stop
+water-taxi:wt012,1,1st Street Dock,Tofino,1st-street,49.1535,-125.9013,town,stop
+water-taxi:wt012,2,Maaqutusiis / Marktosis,Ahousaht (Flores Island),ahousaht,,,,
+water-taxi:wt013,1,French Creek Government Wharf,French Creek (Qualicum Beach),french-creek,49.345657,-124.360274,town,community centroid
+water-taxi:wt013,2,False Bay,Lasqueti Island,false-bay,49.4913,-124.3516,dock,stop
+water-taxi:wt014,1,Cow Bay Marina,Prince Rupert,cow-bay,54.3191,-130.3208,dock,stop
+water-taxi:wt014,2,Dodge Cove dock,Dodge Cove (Digby Island),dodge-cove,54.288086,-130.387814,town,community centroid
+water-taxi:wt015,1,Cow Bay Marina,Prince Rupert,cow-bay,54.3191,-130.3208,dock,stop
+water-taxi:wt015,2,Airport dock,Digby Island,airport,54.2937,-130.3538,dock,stop
+water-taxi:wt016,1,Cow Bay Marina,Prince Rupert,cow-bay,54.3191,-130.3208,dock,stop
+water-taxi:wt016,2,Metlakatla dock,Metlakatla,metlakatla,54.336944,-130.446111,town,community centroid
+water-taxi:wt017,1,Cow Bay Marina,Prince Rupert,cow-bay,54.3191,-130.3208,dock,stop
+water-taxi:wt017,2,Oona River dock,Oona River (Porcher Island),oona-river,53.949744,-130.251668,town,community centroid
+water-taxi:wt018,1,Metlakatla ferry dock (Cow Bay),Prince Rupert,metlakatla,54.336944,-130.446111,town,community centroid
+water-taxi:wt019,1,Bella Bella dock,Bella Bella,bella-bella,52.16256,-128.14521,town,stop
+water-taxi:wt019,2,Klemtu dock,Klemtu,klemtu,52.588523,-128.520782,town,community centroid
+water-taxi:wt020,1,Lund Harbour,Lund,lund-harbour,49.9805,-124.7624,dock,stop
+water-taxi:wt020,2,Sarah Point (SCT trailhead),Sarah Point (Malaspina Peninsula),sarah-point,,,,
+water-taxi:wt021,1,Port Hardy dock,Port Hardy,port-hardy,50.724444,-127.498056,town,stop
+water-taxi:wt021,2,Shushartie Bay beach landing,Shushartie Bay (Cape Scott Park),shushartie-bay,,,,
+water-taxi:wt022,1,Port Hardy dock,Port Hardy,port-hardy,50.724444,-127.498056,town,stop
+water-taxi:wt022,2,Cape Sutil beach landing,Cape Sutil (Cape Scott Park),cape-sutil,,,,
+water-taxi:wt022,3,Fisherman Bay beach landing,Fisherman Bay (Cape Scott Park),fisherman-bay,,,,
+water-taxi:wt023,1,Port Hardy dock,Port Hardy,port-hardy,50.724444,-127.498056,town,stop
+water-taxi:wt023,2,Port McNeill,Port McNeill,port-mcneill,50.589444,-127.083611,town,community centroid
+water-taxi:wt023,3,Rivers Inlet,Rivers Inlet,rivers-inlet,,,,
+water-taxi:wt023,4,Bella Bella,Bella Bella,bella-bella,52.16256,-128.14521,town,stop
+water-taxi:wt023,5,Klemtu,Klemtu,klemtu,52.588523,-128.520782,town,community centroid
+water-taxi:wt023,6,Bella Coola,Bella Coola,bella-coola,52.372961,-126.753506,town,community centroid
+water-taxi:wt023,7,Calvert Island,Calvert Island,calvert-island,,,,
+water-taxi:wt024,1,Coast Marina (Island Hwy),Campbell River,coast,50.0264,-125.242,dock,stop
+water-taxi:wt024,2,Sonora Resort,Sonora Island,sonora-resort,50.3596,-125.2319,dock,stop
+water-taxi:wt024,3,Stuart Island Community Assoc. Dock,Stuart Island,stuart-island-community-assoc,50.3927,-125.1348,dock,stop
+water-taxi:wt024,4,Read Island,Read Island,read-island,50.183114,-125.084713,town,community centroid
+water-taxi:wt024,5,Surge Narrows,Surge Narrows (Read Island),surge-narrows,50.23291,-125.10614,town,community centroid
+water-taxi:wt024,6,Owen Bay,Owen Bay (Sonora Island),owen-bay,50.316389,-125.221667,town,community centroid
+water-taxi:wt024,7,Maurelle Island,Maurelle Island,maurelle-island,50.2839,-125.1447,town,stop
+water-taxi:wt024,8,Shoal Bay Lodge,East Thurlow Island,shoal-bay-lodge,50.4564,-125.3659,dock,stop
+water-taxi:wt024,9,Dent Island Lodge,Dent Island,dent-island-lodge,50.4079,-125.1849,dock,stop
+water-taxi:wt024,10,Hemming Bay Community Dock,Hemming Bay,hemming-bay-community,50.3935,-125.3768,dock,stop
+water-taxi:wt025,1,Fishermans Wharf,Campbell River,campbell-river-fishermans,50.0222,-125.2391,dock,stop
+water-taxi:wt025,2,Sonora Resort / Owen Bay,Sonora Island,sonora-island,,,,
+water-taxi:wt025,3,Manson's Landing / Whaletown / Squirrel Cove / Gorge Harbour,Cortes Island,cortes-island,50.0637,-124.9816,town,stop
+water-taxi:wt025,4,Stuart Island,Stuart Island,stuart-island,,,,
+water-taxi:wt025,5,Blind Channel,Blind Channel (West Thurlow),blind-channel,,,,
+water-taxi:wt025,6,Homathco / Orford River,Bute Inlet (mainland),bute-inlet,,,,
+water-taxi:wt026,1,Blind Channel Resort dock,Blind Channel (West Thurlow Island),blind-channel-resort,,,,
+water-taxi:wt026,2,Discovery Harbour Marina,Campbell River,discovery-harbour,,,,
+water-taxi:wt026,3,Kelsey Bay,Kelsey Bay (Sayward),kelsey-bay,,,,
+water-taxi:wt026,4,Rock Bay,Rock Bay,rock-bay,,,,
+water-taxi:wt026,5,Quathiaski Cove / Heriot Bay / Granite Bay,Quadra Island,quadra-island,,,,
+water-taxi:wt027,1,Campbell River dock,Campbell River,campbell-river,50.023056,-125.243611,town,community centroid
+water-taxi:wt027,2,Shoal Bay,East Thurlow Island,shoal-bay,,,,
+water-taxi:wt027,3,Nanook Lodge,Stuart Island,nanook-lodge,,,,
+water-taxi:wt027,4,Denham Bay,Frederick Arm (mainland),denham-bay,,,,
+water-taxi:wt028,1,Heriot Bay,Quadra Island,heriot-bay,50.1032,-125.2093,dock,stop
+water-taxi:wt028,2,Cortes Island,Cortes Island,cortes-island,50.0637,-124.9816,town,stop
+water-taxi:wt029,1,Lund Harbour,Lund,lund-harbour,49.9805,-124.7624,dock,stop
+water-taxi:wt029,2,Cortes Island,Cortes Island,cortes-island,50.0637,-124.9816,town,stop
+water-taxi:wt030,1,Tahsis (Westview Marina area),Tahsis,tahsis,49.916389,-126.664444,town,community centroid
+water-taxi:wt030,2,Tongue Point,Tongue Point (Nootka Island),tongue-point,,,,
+water-taxi:wt030,3,Yuquot dock,Yuquot / Friendly Cove (Nootka Island),yuquot,49.5918,-126.6187,dock,stop
+water-taxi:wt031,1,Gold River Marina,Gold River,gold-river,49.781389,-126.046944,town,community centroid
+water-taxi:wt031,2,Yuquot dock,Yuquot / Friendly Cove (Nootka Island),yuquot,49.5918,-126.6187,dock,stop
+water-taxi:wt031,3,Hesquiat (trail access),Hesquiat Peninsula,hesquiat,,,,
+water-taxi:wt032,1,Zeballos dock,Zeballos,zeballos,,,,
+water-taxi:wt032,2,Esperanza,Esperanza,esperanza,49.8725,-126.743333,town,community centroid
+water-taxi:wt032,3,Nuchatlitz Park,Nuchatlitz (Nootka Island),nuchatlitz-park,,,,
+water-taxi:wt032,4,Queen's Cove,Queen's Cove,queens-cove,,,,
+water-taxi:wt032,5,Louie Bay,Louie Bay (Nootka Island),louie-bay,,,,
+water-taxi:wt033,1,MK Bay Marina,Kitimat,mk-bay,,,,
+water-taxi:wt033,2,Hartley Bay dock,Hartley Bay,hartley-bay,53.425278,-129.253889,town,community centroid
+water-taxi:wt033,3,Kemano (Rio Tinto),Kemano,kemano,,,,
+water-taxi:wt034,1,Cow Bay Marina,Prince Rupert,cow-bay,54.3191,-130.3208,dock,stop
+water-taxi:wt034,2,Kitkatla dock (Dolphin Island),Kitkatla (Gitxaała),kitkatla,53.795556,-130.431389,town,community centroid
+water-taxi:wt035,1,Cow Bay Marina,Prince Rupert,cow-bay,54.3191,-130.3208,dock,stop
+water-taxi:wt035,2,Lax Kw'alaams dock,Lax Kw'alaams (Port Simpson),lax-kwalaams,,,,
+water-taxi:wt035,3,Gingolx dock,Gingolx (Kincolith),gingolx,,,,
+water-taxi:wt035,4,Stewart dock,Stewart,stewart,,,,
+water-taxi:wt035,5,Ketchikan,"Ketchikan (Alaska, USA)",ketchikan,,,,
+water-taxi:wt036,1,Metlakatla Ferry Dock,Prince Rupert,metlakatla,54.336944,-130.446111,town,community centroid
+water-taxi:wt036,2,Oona River dock,Oona River (Porcher Island),oona-river,53.949744,-130.251668,town,community centroid
+water-taxi:wt036,3,Hartley Bay dock,Hartley Bay,hartley-bay,53.425278,-129.253889,town,community centroid
+water-taxi:wt036,4,Kitkatla dock,Kitkatla (Gitxaała),kitkatla,53.795556,-130.431389,town,community centroid
+water-taxi:wt037,1,Klemtu dock,Klemtu,klemtu,52.588523,-128.520782,town,community centroid
+water-taxi:wt037,2,Bella Bella dock,Bella Bella,bella-bella,52.16256,-128.14521,town,stop
+water-taxi:wt037,3,Bella Coola,Bella Coola,bella-coola,52.372961,-126.753506,town,community centroid
+water-taxi:wt037,4,Hartley Bay,Hartley Bay,hartley-bay,53.425278,-129.253889,town,community centroid
+water-taxi:wt037,5,Kitamaat Village,Kitamaat Village,kitamaat-village,,,,
+water-taxi:wt037,6,Port Hardy,Port Hardy,port-hardy,50.724444,-127.498056,town,stop
+water-taxi:wt037,7,Prince Rupert,Prince Rupert,prince-rupert,54.312778,-130.325278,town,community centroid
+water-taxi:wt038,1,Gold River Municipal Wharf (Muchalat Inlet),Gold River,gold-river,49.781389,-126.046944,town,community centroid
+water-taxi:wt038,2,Tahsis dock,Tahsis,tahsis,49.916389,-126.664444,town,community centroid
+water-taxi:wt039,1,Gold River Municipal Wharf,Gold River,gold-river,49.781389,-126.046944,town,community centroid
+water-taxi:wt039,2,Yuquot dock,Yuquot / Friendly Cove (Nootka Island),yuquot,49.5918,-126.6187,dock,stop
+water-taxi:wt040,1,Gold River Municipal Wharf,Gold River,gold-river,49.781389,-126.046944,town,community centroid
+water-taxi:wt040,2,Esperanza,Esperanza,esperanza,49.8725,-126.743333,town,community centroid
+water-taxi:wt040,3,Esperanza Inlet stops,Zeballos area (Esperanza Inlet),esperanza-inlet-stops,49.8581,-126.9001,dock,stop
+water-taxi:wt040,4,Kyuquot village,Kyuquot,kyuquot-village,50.0303,-127.3764,dock,stop
