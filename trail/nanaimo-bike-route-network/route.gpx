@@ -53,13 +53,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.170114" lon="-123.939612">
-<name>White Sails Brewery</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.163568" lon="-123.935633">
 <name>The Queen's</name>
 <cmt>bar</cmt>
@@ -89,13 +82,6 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.159063" lon="-123.949851">
-<name>Gateway to India</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.159064" lon="-123.949851">
 <name>Gateway to India Restaurant</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
@@ -284,13 +270,6 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
-<wpt lat="49.141896" lon="-123.931402">
-<name>Wolf Brewing Company</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.134231" lon="-123.921447">
 <name>Bold Knight Restaurant</name>
 <cmt>food</cmt>
@@ -390,7 +369,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.141948" lon="-123.931339">
-<name>Wolf Tasting Room</name>
+<name>Wolf Brewing Company</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>

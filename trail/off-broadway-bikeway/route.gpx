@@ -284,13 +284,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.265839" lon="-123.100632">
-<name>Brassneck Brewery</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.263720" lon="-123.112032">
 <name>Pokerrito</name>
 <cmt>food</cmt>
@@ -838,7 +831,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.267279" lon="-123.103336">
-<name>R &amp; B Brewing</name>
+<name>R &amp; B Ale &amp; Pizza House</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -1261,13 +1254,6 @@
 <name>Evelyn's Coffee and Grill</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.264010" lon="-123.186129">
-<name>The Kitchen Dada</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -1727,7 +1713,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.263654" lon="-123.187192">
-<name>West Point Cycles</name>
+<name>West Point Cycles - West 10th</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>
 <sym>Dot</sym>
@@ -1753,13 +1739,6 @@
 <desc>Restaurant</desc>
 <sym>Dot</sym>
 <type>food</type>
-</wpt>
-<wpt lat="49.263630" lon="-123.187240">
-<name>West Point Cycles - West 10th</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
 </wpt>
 <wpt lat="49.263582" lon="-123.128836">
 <name>Waves Coffee House</name>
@@ -2783,13 +2762,6 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
-<wpt lat="49.267902" lon="-123.144844">
-<name>Comor Sports Outlet Store</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
-</wpt>
 <wpt lat="49.264031" lon="-123.104992">
 <name>Anza Club</name>
 <cmt>bar</cmt>
@@ -3225,7 +3197,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.268209" lon="-123.145272">
-<name>Comor Sports</name>
+<name>Comor Sports Outlet Store</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>
 <sym>Dot</sym>
@@ -3771,7 +3743,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.268448" lon="-123.183494">
-<name>Aphrodite's</name>
+<name>Aphrodite's Organic Cafe</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
 <sym>Dot</sym>
@@ -4379,13 +4351,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.269470" lon="-123.140658">
-<name>Reckless Bike Stores - Kitsilano</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
-</wpt>
 <wpt lat="49.261863" lon="-123.056118">
 <name>Ruka Coffee</name>
 <cmt>coffee</cmt>
@@ -4408,7 +4373,7 @@
 <type>shelter</type>
 </wpt>
 <wpt lat="49.269511" lon="-123.140619">
-<name>Reckless Bike Stores</name>
+<name>Reckless Bike Stores - Kitsilano</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>
 <sym>Dot</sym>

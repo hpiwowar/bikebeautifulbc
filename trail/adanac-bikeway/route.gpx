@@ -19,7 +19,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.277538" lon="-123.074505">
-<name>Bomber Brewing</name>
+<name>Bomber Tasting Room</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -74,13 +74,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.277474" lon="-123.074517">
-<name>Bomber Tasting Room</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.277162" lon="-123.081769">
 <name>La Casa Gelato</name>
 <cmt>food</cmt>
@@ -94,20 +87,6 @@
 <desc>Repair Shop</desc>
 <sym>Dot</sym>
 <type>gear</type>
-</wpt>
-<wpt lat="49.276973" lon="-123.080592">
-<name>Luppolo Brewing</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.278009" lon="-123.076080">
-<name>Off The Rail</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
 </wpt>
 <wpt lat="49.277068" lon="-123.043777">
 <name>Whiskey Six BBQ</name>
@@ -669,13 +648,6 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
-<wpt lat="49.280210" lon="-123.077344">
-<name>Superflux Beer Store</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.280290" lon="-123.101009">
 <name>Uchu Cevicheria &amp; Raw Bar</name>
 <cmt>food</cmt>
@@ -761,7 +733,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.280289" lon="-123.077720">
-<name>Superflux Brewery</name>
+<name>Superflux Beer Store</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -1979,7 +1951,7 @@
 <type>rest_area</type>
 </wpt>
 <wpt lat="49.282149" lon="-123.078740">
-<name>Container Brewing Ltd.</name>
+<name>Container Brewing Lounge</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>

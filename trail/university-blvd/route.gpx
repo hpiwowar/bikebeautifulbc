@@ -187,7 +187,7 @@
 <type>rest_area</type>
 </wpt>
 <wpt lat="49.265856" lon="-123.254440">
-<name>Triple O's</name>
+<name>Triple O's/Trek Express</name>
 <cmt>food</cmt>
 <desc>Fast Food / Chain</desc>
 <sym>Dot</sym>
@@ -202,13 +202,6 @@
 </wpt>
 <wpt lat="49.267271" lon="-123.249929">
 <name>Starbucks</name>
-<cmt>food</cmt>
-<desc>Fast Food / Chain</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.265944" lon="-123.254585">
-<name>Triple O's/Trek Express</name>
 <cmt>food</cmt>
 <desc>Fast Food / Chain</desc>
 <sym>Dot</sym>
@@ -270,15 +263,8 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.269181" lon="-123.248499">
-<name>West Coast Suites at UBC</name>
-<cmt>lodging</cmt>
-<desc>Hotel / Motel</desc>
-<sym>Dot</sym>
-<type>shelter</type>
-</wpt>
 <wpt lat="49.269478" lon="-123.248852">
-<name>West Coast Suites</name>
+<name>West Coast Suites at UBC</name>
 <cmt>lodging</cmt>
 <desc>Hotel / Motel</desc>
 <sym>Dot</sym>
@@ -290,13 +276,6 @@
 <desc>Convenience Store</desc>
 <sym>Dot</sym>
 <type>store</type>
-</wpt>
-<wpt lat="49.269460" lon="-123.250030">
-<name>Gage Suites at UBC</name>
-<cmt>lodging</cmt>
-<desc>Hotel / Motel</desc>
-<sym>Dot</sym>
-<type>shelter</type>
 </wpt>
 <wpt lat="49.269597" lon="-123.249681">
 <name>Gage Apartments at UBC</name>

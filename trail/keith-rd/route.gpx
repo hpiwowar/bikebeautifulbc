@@ -137,13 +137,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.317074" lon="-123.092766">
-<name>Black Kettle Brewing</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.321083" lon="-123.095632">
 <name>Cora</name>
 <cmt>food</cmt>
@@ -227,13 +220,6 @@
 <desc>Liquor Store</desc>
 <sym>Dot</sym>
 <type>store</type>
-</wpt>
-<wpt lat="49.322525" lon="-123.075039">
-<name>Rex Bakery</name>
-<cmt>food</cmt>
-<desc>Bakery / Donuts</desc>
-<sym>Dot</sym>
-<type>food</type>
 </wpt>
 <wpt lat="49.313141" lon="-123.076821">
 <name>Subway</name>

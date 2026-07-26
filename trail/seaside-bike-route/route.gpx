@@ -1635,13 +1635,6 @@
 <sym>Dot</sym>
 <type>info</type>
 </wpt>
-<wpt lat="49.270555" lon="-123.135671">
-<name>Granville Island Brewing Taproom</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.263683" lon="-123.131860">
 <name>Royal Seoul House</name>
 <cmt>food</cmt>
@@ -1702,13 +1695,6 @@
 <name>The Keg</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.270617" lon="-123.135753">
-<name>Granville Island Brewery</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

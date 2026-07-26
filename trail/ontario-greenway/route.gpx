@@ -173,7 +173,7 @@
 <type>info</type>
 </wpt>
 <wpt lat="49.267279" lon="-123.103336">
-<name>R &amp; B Brewing</name>
+<name>R &amp; B Ale &amp; Pizza House</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -1415,13 +1415,6 @@
 <name>Forecast</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.265839" lon="-123.100632">
-<name>Brassneck Brewery</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

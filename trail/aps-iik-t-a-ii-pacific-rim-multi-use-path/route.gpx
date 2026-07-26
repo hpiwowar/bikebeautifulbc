@@ -410,13 +410,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.150031" lon="-125.895907">
-<name>Tofino Resort + Marina</name>
-<cmt>lodging</cmt>
-<desc>Hotel / Motel</desc>
-<sym>Dot</sym>
-<type>shelter</type>
-</wpt>
 <wpt lat="49.152236" lon="-125.902641">
 <name>Wolf in the Fog</name>
 <cmt>food</cmt>
@@ -563,13 +556,6 @@
 <desc>Private Campground</desc>
 <sym>Dot</sym>
 <type>campsite</type>
-</wpt>
-<wpt lat="49.153229" lon="-125.903648">
-<name>Spice Hut Indian Cuisine</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
 </wpt>
 <wpt lat="49.152417" lon="-125.904265">
 <name>Big Daddy's Fish Fry</name>
@@ -745,13 +731,6 @@
 <desc>Restaurant</desc>
 <sym>Dot</sym>
 <type>food</type>
-</wpt>
-<wpt lat="49.079980" lon="-125.783588">
-<name>Long Beach Campground</name>
-<cmt>camping</cmt>
-<desc>Private Campground</desc>
-<sym>Dot</sym>
-<type>campsite</type>
 </wpt>
 <wpt lat="49.105045" lon="-125.872714">
 <name>The SandBar Bistro</name>

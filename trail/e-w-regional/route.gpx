@@ -172,13 +172,6 @@
 <sym>Dot</sym>
 <type>gear</type>
 </wpt>
-<wpt lat="49.269181" lon="-123.248499">
-<name>West Coast Suites at UBC</name>
-<cmt>lodging</cmt>
-<desc>Hotel / Motel</desc>
-<sym>Dot</sym>
-<type>shelter</type>
-</wpt>
 <wpt lat="49.265218" lon="-123.250782">
 <name>Starbucks</name>
 <cmt>food</cmt>
@@ -187,7 +180,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.269478" lon="-123.248852">
-<name>West Coast Suites</name>
+<name>West Coast Suites at UBC</name>
 <cmt>lodging</cmt>
 <desc>Hotel / Motel</desc>
 <sym>Dot</sym>
@@ -202,13 +195,6 @@
 </wpt>
 <wpt lat="49.269597" lon="-123.249681">
 <name>Gage Apartments at UBC</name>
-<cmt>lodging</cmt>
-<desc>Hotel / Motel</desc>
-<sym>Dot</sym>
-<type>shelter</type>
-</wpt>
-<wpt lat="49.269460" lon="-123.250030">
-<name>Gage Suites at UBC</name>
 <cmt>lodging</cmt>
 <desc>Hotel / Motel</desc>
 <sym>Dot</sym>
@@ -992,13 +978,6 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.264010" lon="-123.186129">
-<name>The Kitchen Dada</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.264010" lon="-123.186129">
 <name>The Kitchen Dada Sushi Bar &amp; Grill</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
@@ -1069,7 +1048,7 @@
 <type>shelter</type>
 </wpt>
 <wpt lat="49.263654" lon="-123.187192">
-<name>West Point Cycles</name>
+<name>West Point Cycles - West 10th</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>
 <sym>Dot</sym>
@@ -1081,13 +1060,6 @@
 <desc>Restaurant</desc>
 <sym>Dot</sym>
 <type>food</type>
-</wpt>
-<wpt lat="49.263630" lon="-123.187240">
-<name>West Point Cycles - West 10th</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
 </wpt>
 <wpt lat="49.263959" lon="-123.209590">
 <name>Crazy Zhang Fusion Tea &amp; BBQ Rice</name>
@@ -1475,7 +1447,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.268448" lon="-123.183494">
-<name>Aphrodite's</name>
+<name>Aphrodite's Organic Cafe</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
 <sym>Dot</sym>

@@ -61,13 +61,6 @@
 <type>gear</type>
 </wpt>
 <wpt lat="48.429116" lon="-123.385209">
-<name>Spinnakers</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="48.429023" lon="-123.385133">
 <name>Spinnakers Brewpub</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
@@ -1481,13 +1474,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="48.452301" lon="-123.433841">
-<name>4 Mile Restaurant &amp; Brewpub</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="48.456989" lon="-123.459716">
 <name>Six Mile Liquor Store</name>
 <cmt>convenience_store</cmt>
@@ -1503,7 +1489,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="48.456876" lon="-123.459194">
-<name>Six Mile Pub</name>
+<name>Six Mile Pub &amp; Eatery</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -1513,13 +1499,6 @@
 <name>Nest at the Lake</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="48.456754" lon="-123.459235">
-<name>Six Mile Pub &amp; Eatery</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

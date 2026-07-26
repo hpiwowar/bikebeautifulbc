@@ -25,20 +25,6 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
-<wpt lat="49.515208" lon="-117.619933">
-<name>Slocan Valley Co-op</name>
-<cmt>convenience_store</cmt>
-<desc>Convenience Store</desc>
-<sym>Dot</sym>
-<type>store</type>
-</wpt>
-<wpt lat="49.515313" lon="-117.619526">
-<name>Co-op</name>
-<cmt>convenience_store</cmt>
-<desc>Convenience Store</desc>
-<sym>Dot</sym>
-<type>store</type>
-</wpt>
 <wpt lat="49.697708" lon="-117.493987">
 <name>Lemon Creek Pioneer Campground</name>
 <cmt>camping</cmt>
@@ -52,6 +38,13 @@
 <desc>Private Campground</desc>
 <sym>Dot</sym>
 <type>campsite</type>
+</wpt>
+<wpt lat="49.515313" lon="-117.619526">
+<name>Slocan Valley Co-op</name>
+<cmt>convenience_store</cmt>
+<desc>Convenience Store</desc>
+<sym>Dot</sym>
+<type>store</type>
 </wpt>
 <wpt lat="49.622475" lon="-117.548403">
 <name>Fomi's Bakery</name>

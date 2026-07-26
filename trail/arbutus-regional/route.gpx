@@ -480,13 +480,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.267902" lon="-123.144844">
-<name>Comor Sports Outlet Store</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
-</wpt>
 <wpt lat="49.265019" lon="-123.145884">
 <name>Unchai Thai Restaurant</name>
 <cmt>food</cmt>
@@ -740,7 +733,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.268209" lon="-123.145272">
-<name>Comor Sports</name>
+<name>Comor Sports Outlet Store</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>
 <sym>Dot</sym>
@@ -1026,13 +1019,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.269470" lon="-123.140658">
-<name>Reckless Bike Stores - Kitsilano</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
-</wpt>
 <wpt lat="49.206463" lon="-123.147683">
 <name>Ho Yuen Cafe</name>
 <cmt>coffee</cmt>
@@ -1048,7 +1034,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.269511" lon="-123.140619">
-<name>Reckless Bike Stores</name>
+<name>Reckless Bike Stores - Kitsilano</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>
 <sym>Dot</sym>

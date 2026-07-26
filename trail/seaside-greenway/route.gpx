@@ -795,13 +795,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.270555" lon="-123.135671">
-<name>Granville Island Brewing Taproom</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.288033" lon="-123.116945">
 <name>Giovane Caffè</name>
 <cmt>coffee</cmt>
@@ -841,13 +834,6 @@
 <name>Babylon Cafe</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.270617" lon="-123.135753">
-<name>Granville Island Brewery</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -1088,13 +1074,6 @@
 <desc>Convenience Store</desc>
 <sym>Dot</sym>
 <type>store</type>
-</wpt>
-<wpt lat="49.292300" lon="-123.146409">
-<name>Stanley Park Brewing</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
 </wpt>
 <wpt lat="49.287145" lon="-123.114463">
 <name>Kinton Ramen</name>
@@ -1629,7 +1608,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.288557" lon="-123.140120">
-<name>Bombay Kitchen + Bar</name>
+<name>Bombay Kitchen On Denman</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
 <sym>Dot</sym>
@@ -1684,13 +1663,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.288583" lon="-123.140079">
-<name>Bombay Kitchen On Denman</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.273777" lon="-123.123226">
 <name>Pho Quynh Express</name>
 <cmt>food</cmt>
@@ -1720,7 +1692,7 @@
 <type>shelter</type>
 </wpt>
 <wpt lat="49.269511" lon="-123.140619">
-<name>Reckless Bike Stores</name>
+<name>Reckless Bike Stores - Kitsilano</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>
 <sym>Dot</sym>
@@ -1739,13 +1711,6 @@
 <desc>Restaurant</desc>
 <sym>Dot</sym>
 <type>food</type>
-</wpt>
-<wpt lat="49.269470" lon="-123.140658">
-<name>Reckless Bike Stores - Kitsilano</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
 </wpt>
 <wpt lat="49.288661" lon="-123.139973">
 <name>Kin's Farm Market</name>
@@ -4933,7 +4898,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.268448" lon="-123.183494">
-<name>Aphrodite's</name>
+<name>Aphrodite's Organic Cafe</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
 <sym>Dot</sym>
@@ -6193,7 +6158,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.267279" lon="-123.103336">
-<name>R &amp; B Brewing</name>
+<name>R &amp; B Ale &amp; Pizza House</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -6809,13 +6774,6 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.268209" lon="-123.145272">
-<name>Comor Sports</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
-</wpt>
-<wpt lat="49.267902" lon="-123.144844">
 <name>Comor Sports Outlet Store</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>

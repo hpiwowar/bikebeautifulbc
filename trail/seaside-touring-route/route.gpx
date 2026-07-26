@@ -662,13 +662,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="48.425681" lon="-123.368418">
-<name>Garrick's Head Pub</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="48.422733" lon="-123.383357">
 <name>The Fish Store</name>
 <cmt>food</cmt>
@@ -754,7 +747,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="48.425655" lon="-123.368153">
-<name>Garrick's Head</name>
+<name>Garrick's Head Pub</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>

@@ -47,13 +47,6 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.896241" lon="-119.487394">
-<name>Kettle River Tasting Room</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.896089" lon="-119.487395">
 <name>Kettle River Brewing Company</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
@@ -662,13 +655,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.892974" lon="-119.493800">
-<name>BNA Eatery</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.889646" lon="-119.419504">
 <name>Okanagan Seasons Resort</name>
 <cmt>lodging</cmt>
@@ -680,13 +666,6 @@
 <name>Cactus Club Cafe</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.892916" lon="-119.493903">
-<name>BNA Brewing</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

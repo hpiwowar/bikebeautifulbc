@@ -82,7 +82,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.269511" lon="-123.140619">
-<name>Reckless Bike Stores</name>
+<name>Reckless Bike Stores - Kitsilano</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>
 <sym>Dot</sym>
@@ -115,13 +115,6 @@
 <desc>Café / Coffee</desc>
 <sym>Dot</sym>
 <type>food</type>
-</wpt>
-<wpt lat="49.269470" lon="-123.140658">
-<name>Reckless Bike Stores - Kitsilano</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
 </wpt>
 <wpt lat="49.269314" lon="-123.138567">
 <name>Straight Outta Brooklyn NYC Pizzeria</name>
@@ -571,20 +564,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.270555" lon="-123.135671">
-<name>Granville Island Brewing Taproom</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.270617" lon="-123.135753">
-<name>Granville Island Brewery</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.264573" lon="-123.114471">
 <name>Red Burrito</name>
 <cmt>food</cmt>
@@ -873,7 +852,7 @@
 <type>overlook</type>
 </wpt>
 <wpt lat="49.268209" lon="-123.145272">
-<name>Comor Sports</name>
+<name>Comor Sports Outlet Store</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>
 <sym>Dot</sym>
@@ -1243,13 +1222,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.267902" lon="-123.144844">
-<name>Comor Sports Outlet Store</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
-</wpt>
 <wpt lat="49.273077" lon="-123.100434">
 <name>A&amp;W</name>
 <cmt>food</cmt>
@@ -1426,7 +1398,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.267279" lon="-123.103336">
-<name>R &amp; B Brewing</name>
+<name>R &amp; B Ale &amp; Pizza House</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>

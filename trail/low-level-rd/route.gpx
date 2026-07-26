@@ -95,13 +95,6 @@
 <sym>Dot</sym>
 <type>shelter</type>
 </wpt>
-<wpt lat="49.308336" lon="-123.072745">
-<name>Beere Brewing Tasting Room</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.308706" lon="-123.073396">
 <name>Shaketown Brewing</name>
 <cmt>bar</cmt>
@@ -117,7 +110,7 @@
 <type>gear</type>
 </wpt>
 <wpt lat="49.308430" lon="-123.072729">
-<name>Beere Brewing</name>
+<name>Beere Brewing Tasting Room</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -213,13 +206,6 @@
 <desc>Community Centre</desc>
 <sym>Dot</sym>
 <type>rest_area</type>
-</wpt>
-<wpt lat="49.311287" lon="-123.077945">
-<name>Streetcar Brewing</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
 </wpt>
 <wpt lat="49.309778" lon="-123.078664">
 <name>Welcome Parlour Ice Cream</name>
@@ -355,7 +341,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.309561" lon="-123.073010">
-<name>North Point Brewing</name>
+<name>North Point Tasting Room</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -365,13 +351,6 @@
 <name>Caffè Artigiano</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.309592" lon="-123.073050">
-<name>North Point Tasting Room</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -808,13 +787,6 @@
 <desc>Outdoor Gear</desc>
 <sym>Dot</sym>
 <type>store</type>
-</wpt>
-<wpt lat="49.317074" lon="-123.092766">
-<name>Black Kettle Brewing</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
 </wpt>
 <wpt lat="49.310373" lon="-123.082221">
 <name>Sharky's Chophouse &amp; Eatery</name>

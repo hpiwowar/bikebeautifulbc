@@ -1628,13 +1628,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="48.425681" lon="-123.368418">
-<name>Garrick's Head Pub</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="48.447760" lon="-123.368932">
 <name>Menbow Ramen Express</name>
 <cmt>food</cmt>
@@ -1741,7 +1734,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="48.425655" lon="-123.368153">
-<name>Garrick's Head</name>
+<name>Garrick's Head Pub</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -1951,7 +1944,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="48.456876" lon="-123.459194">
-<name>Six Mile Pub</name>
+<name>Six Mile Pub &amp; Eatery</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -1982,13 +1975,6 @@
 <name>Nest at the Lake</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="48.456754" lon="-123.459235">
-<name>Six Mile Pub &amp; Eatery</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

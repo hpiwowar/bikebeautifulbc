@@ -46,13 +46,6 @@
 <sym>Dot</sym>
 <type>shelter</type>
 </wpt>
-<wpt lat="49.308336" lon="-123.072745">
-<name>Beere Brewing Tasting Room</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.309668" lon="-123.080315">
 <name>Pier 7</name>
 <cmt>bar</cmt>
@@ -75,7 +68,7 @@
 <type>gear</type>
 </wpt>
 <wpt lat="49.308430" lon="-123.072729">
-<name>Beere Brewing</name>
+<name>Beere Brewing Tasting Room</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -361,13 +354,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.310073" lon="-123.033929">
-<name>Bridge Brewing Company</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.307205" lon="-123.067189">
 <name>Ocean Breeze Executive Bed and Breakfast</name>
 <cmt>lodging</cmt>
@@ -544,13 +530,6 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.309561" lon="-123.073010">
-<name>North Point Brewing</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.309592" lon="-123.073050">
 <name>North Point Tasting Room</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
@@ -718,13 +697,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.311287" lon="-123.077945">
-<name>Streetcar Brewing</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.311905" lon="-123.078315">
 <name>Jam Cafe</name>
 <cmt>food</cmt>
@@ -832,13 +804,6 @@
 </wpt>
 <wpt lat="49.317058" lon="-123.092641">
 <name>Black Kettle Tasting Lounge</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.317074" lon="-123.092766">
-<name>Black Kettle Brewing</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>

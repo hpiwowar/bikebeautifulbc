@@ -733,7 +733,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.268209" lon="-123.145272">
-<name>Comor Sports</name>
+<name>Comor Sports Outlet Store</name>
 <cmt>bike_shop</cmt>
 <desc>Repair Shop</desc>
 <sym>Dot</sym>
@@ -822,13 +822,6 @@
 <desc>Liquor Store</desc>
 <sym>Dot</sym>
 <type>store</type>
-</wpt>
-<wpt lat="49.267902" lon="-123.144844">
-<name>Comor Sports Outlet Store</name>
-<cmt>bike_shop</cmt>
-<desc>Repair Shop</desc>
-<sym>Dot</sym>
-<type>gear</type>
 </wpt>
 <wpt lat="49.267968" lon="-123.151311">
 <name>Kagura Hand Roll Bar</name>

@@ -116,15 +116,8 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.896089" lon="-119.487395">
-<name>Kettle River Brewing Company</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.896241" lon="-119.487394">
-<name>Kettle River Tasting Room</name>
+<name>Kettle River Brewing Company</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -515,13 +508,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.892974" lon="-119.493800">
-<name>BNA Eatery</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.892909" lon="-119.493802">
 <name>BNA Tasting Room</name>
 <cmt>bar</cmt>
@@ -535,13 +521,6 @@
 <desc>Museum / Gallery</desc>
 <sym>Dot</sym>
 <type>info</type>
-</wpt>
-<wpt lat="49.892916" lon="-119.493903">
-<name>BNA Brewing</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
 </wpt>
 <wpt lat="49.886167" lon="-119.493960">
 <name>Subcity Donair</name>

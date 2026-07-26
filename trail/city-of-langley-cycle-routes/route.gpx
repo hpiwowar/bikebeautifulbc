@@ -341,7 +341,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.105163" lon="-122.652315">
-<name>Farm Country Brewing</name>
+<name>Farm Country Tasting Room</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -372,13 +372,6 @@
 <name>Firecrust Neapolitan Pizzeria</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.105198" lon="-122.652404">
-<name>Farm Country Tasting Room</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

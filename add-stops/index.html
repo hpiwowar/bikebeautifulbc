@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Add Stops to Your Route — BC Cycle Tourism Society</title>
+<link rel="canonical" href="https://bccycletourism.ca/add-stops/">
+<meta property="og:site_name" content="BC Cycle Tourism Society">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bccycletourism.ca/add-stops/">
+<meta property="og:title" content="Add Stops to Your Route — BC Cycle Tourism Society">
+<meta property="og:image" content="https://bccycletourism.ca/img/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Add Stops to Your Route — BC Cycle Tourism Society">
+<meta name="twitter:image" content="https://bccycletourism.ca/img/og/default.png">
+<meta name="description" content="Have a GPX route? We find the bike-friendly stops near your line, in your browser, and hand the route back with your picks built in as waypoints.">
+<meta property="og:description" content="Have a GPX route? We find the bike-friendly stops near your line, in your browser, and hand the route back with your picks built in as waypoints.">
+<meta name="twitter:description" content="Have a GPX route? We find the bike-friendly stops near your line, in your browser, and hand the route back with your picks built in as waypoints.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":["https://www.linkedin.com/company/bc-cycle-tourism-society/","https://tiabc.ca/members/bc-cycle-tourism-society/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bccycletourism.ca/"},{"@type":"ListItem","position":2,"name":"Plan Your Trip","item":"https://bccycletourism.ca/plan/"},{"@type":"ListItem","position":3,"name":"Add Stops to Your Route","item":"https://bccycletourism.ca/"}]}</script>
+<style>
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scrollbar-gutter: stable; }
+/* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
+   --rail   chrome (header + footer), frames the page
+   --w-read the content column and prose cap, used by nearly every page
+   --w-wide the exception: sidebar filters, two-column stop pages */
+:root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
+.g-banner strong { font-weight: 700; }
+.g-header { padding: 14px 40px; }
+.g-header-inner { max-width: var(--rail, 1200px); margin: 0 auto; display: flex; align-items: center; gap: 64px; }
+.g-header-left { display: flex; align-items: center; text-decoration: none; }
+.g-header-left img { height: 50px; width: auto; max-width: 100%; }
+.g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
+.g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
+.g-header-nav a:hover { color: #1E7D96; }
+.g-header-nav a.active { color: #1E7D96; font-weight: 600; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: #4b5563; margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: #1E7D96; }
+.g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
+.g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
+.g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
+.g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
+.g-footer-brand img { height: 32px; width: auto; max-width: 100%; }
+.g-footer-nav { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.g-footer-col { }
+.g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
+.g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
+.g-footer-col a:hover { color: #0D4070; }
+.section-divider { border: none; border-top: 1px solid #EEE; margin: 28px 0; }
+.bio { margin-bottom: 20px; }
+.bio strong { color: #1F514C; font-size: 15px; }
+.bio > em { color: #636363; font-size: 13px; }
+.bio p { font-size: 14px; margin-top: 6px; }
+@media (max-width: 700px) {
+  .g-banner { padding: 6px 14px; font-size: 11px; }
+  .g-header { padding: 12px 16px; position: relative; z-index: 300; }
+  .g-header-inner { gap: 0; }
+  .g-main { padding: 24px 14px 16px; }
+  .g-hamburger { display: block; }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #FFFDF9; border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav.open { display: flex; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
+  .g-header-nav a:last-child { border-bottom: none; }
+  .g-footer { padding: 40px 20px 48px; }
+  .g-footer-nav { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+}
+
+/* Section anchors. Every h2 gets a quiet "#" that hands you a link to that
+   section. Grey at rest so it reads as a tool rather than content, teal at the
+   moment you are about to click it. Touch devices have no hover, so it sits
+   faintly visible there instead of being unreachable. */
+.h-anchor { margin-left: .35em; color: #6E6E6E; opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+h2:hover > .h-anchor { opacity: .55; }
+.h-anchor:hover, .h-anchor:focus { color: #1E7D96; opacity: 1; }
+@media (hover: none) {
+  .h-anchor { opacity: .35; }
+}
+</style>
+<script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
+</head>
+<body>
+<!--chrome--><div class="g-header">
+  <div class="g-header-inner">
+    <a href="/" class="g-header-left">
+      <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+    </a>
+    <div class="g-header-nav" id="g-nav">
+      <a href="/routes/">Get Inspired</a>
+      <a href="/plan/" class="active">Plan Your Trip</a>
+      <a href="/field-notes">Field Notes</a>
+      <a href="/about">About</a>
+    </div>
+    <button class="g-hamburger" id="g-ham" aria-label="Menu">☰</button>
+  </div>
+</div>
+<script>
+(function(){
+  var h=document.getElementById('g-ham'),n=document.getElementById('g-nav');
+  if(!h||!n)return;
+  h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
+  document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
+})();
+</script><!--/chrome-->
+<div class="g-main">
+<style>
+.privacy { border-left: 3px solid #0FA39F; background: #F0FAF9; padding: 12px 16px; margin: 18px 0; border-radius: 0 6px 6px 0; color: #1F514C; font-size: 15px; }
+.privacy strong { display: block; margin-bottom: 2px; }
+
+.chooser { margin: 22px 0 8px; display: flex; align-items: center; gap: 16px; }
+.btn-primary { display: inline-block; background: #0FA39F; color: #fff; border: 0; border-radius: 8px; padding: 11px 20px; font: inherit; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.btn-primary:hover { background: #0C8A87; }
+.btn-secondary { display: inline-block; background: #fff; color: #1E7D96; border: 1.5px solid #C9DDDC; border-radius: 8px; padding: 10px 18px; font: inherit; font-weight: 600; cursor: pointer; }
+.btn-secondary:hover { border-color: #0FA39F; }
+button:disabled { opacity: 0.45; cursor: default; }
+.or { color: #4b5563; font-size: 15px; }
+
+#status { margin: 16px 0; color: #4b5563; font-style: italic; }
+#status.notice { font-style: normal; border-left: 3px solid #d9a441; background: #fdf6e3; padding: 10px 14px; border-radius: 0 6px 6px 0; }
+
+#picker[hidden], #dl[hidden], #cap-msg[hidden], #status[hidden] { display: none; }
+
+#found { font-weight: 700; color: #1F514C; margin: 22px 0 4px; font-size: 17px; }
+.crow { font-size: 14px; }
+
+.row { margin: 6px 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.row button { font: inherit; font-size: 14px; padding: 7px 12px; border: 1.5px solid #C9DDDC; background: #fff; border-radius: 8px; cursor: pointer; }
+.row button:hover { border-color: #0FA39F; }
+.row button[aria-pressed="true"] { background: #0FA39F; color: #fff; border-color: #0FA39F; }
+.r-chip { text-align: center; line-height: 1.25; padding-top: 6px; padding-bottom: 6px; }
+.r-chip .r-n { display: block; font-size: 11.5px; font-weight: 400; color: #6E6E6E; font-variant-numeric: tabular-nums; }
+.r-chip[aria-pressed="true"] .r-n { color: rgba(255,255,255,0.85); }
+.small-btn { font: inherit; font-size: 13px; padding: 5px 10px; border: 1.5px solid #C9DDDC; background: #fff; border-radius: 8px; cursor: pointer; color: #4b5563; }
+.small-btn:hover { border-color: #0FA39F; }
+.n { color: #6E6E6E; font-variant-numeric: tabular-nums; font-weight: 400; }
+.zero { opacity: 0.45; }
+.hint { font-weight: 400; font-size: 14px; color: #6E6E6E; font-family: "Inter", sans-serif; letter-spacing: 0; }
+
+.cats { border: 1px solid #E5E1D8; border-radius: 8px; padding: 4px 10px; background: #fff; }
+.cat { border-top: 1px solid #F0EDE5; }
+.cat:first-child { border-top: 0; }
+.cat > .cat-head { display: flex; align-items: center; padding: 9px 0; }
+.cat > .cat-head > label { font-weight: 600; color: #1F514C; }
+.twisty { background: none; border: 0; font: inherit; font-size: 19px; line-height: 1; color: #6E6E6E; cursor: pointer; padding: 6px 8px 6px 2px; width: 1.6em; }
+.subs { margin: 0 0 8px 2.4em; display: none; }
+.cat.open .subs { display: block; }
+.subs label { display: block; padding: 6px 0; color: #4b5563; }
+.picker-check { accent-color: #0FA39F; width: 16px; height: 16px; vertical-align: -3px; margin-right: 4px; }
+
+.tier { padding: 5px 0; }
+.tier > label { color: #1F514C; font-weight: 600; }
+.tier-desc { margin: 0 0 4px 26px; font-size: 14px; font-weight: 400; color: #6E6E6E; }
+
+#cap { font: inherit; padding: 6px 10px; border: 1.5px solid #C9DDDC; border-radius: 8px; width: 7em; background: #fff; }
+.note { color: #6E6E6E; font-size: 14px; font-weight: 400; }
+
+#summary { margin: 22px 0 8px; font-size: 14px; font-weight: 400; color: #6E6E6E; }
+#cap-msg { margin: 10px 0; padding: 10px 14px; background: #fdf6e3; border-left: 3px solid #d9a441; border-radius: 0 6px 6px 0; color: #4b5563; font-size: 15px; }
+
+#dl { margin: 14px 0 6px; }
+#dl .note { display: block; margin-top: 8px; }
+
+#results { list-style: none; padding-left: 0; margin: 12px 0 18px; color: #141414; }
+#results li { margin: 3px 0; display: flex; align-items: flex-start; }
+#results li > input.picker-check { flex: none; margin-top: 4px; }
+#results li.off { opacity: 0.4; }
+#results li.mile { display: block; border-bottom: 1px solid #E5E1D8; margin: 26px 0 14px; padding-bottom: 3px; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #9CA3AF; font-variant-numeric: tabular-nums; }
+.d { flex: none; width: 4.8em; color: #6E6E6E; font-variant-numeric: tabular-nums; font-size: 14px; text-align: right; margin-right: .7em; padding-top: 1px; }
+.li-body { flex: 1; min-width: 0; }
+.li-body > a { color: #1E7D96; text-decoration: none; }
+.li-body > a:hover { text-decoration: underline; }
+.m { color: #6E6E6E; font-size: 14px; font-weight: 400; }
+
+@media (max-width: 700px) {
+  .chooser { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+  .or { margin-left: 0; }
+  .btn-primary, .btn-secondary { width: 100%; text-align: center; }
+  #dl button { margin-bottom: 8px; }
+  .subs label, .cat > .cat-head { padding-top: 10px; padding-bottom: 10px; }
+  #results { padding-left: 1.6em; }
+}
+</style><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/plan/">Plan Your Trip</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Add Stops to Your Route</span></nav><h1>Add Stops to Your Route</h1>
+
+<p>Riding a route you already have? Choose its GPX file and we'll find the stops near
+your line: cafés, groceries, campgrounds, bike shops, places to sleep. They come from
+<a href="/wwc/" target="_blank" rel="noopener">BC Bike Stops</a>, our directory of
+cyclist-welcoming places across BC. Pick the ones you want, then download your route
+back with those stops built in, as waypoints your GPS shows along the way.</p>
+
+<div class="privacy">
+  <strong>Your file never leaves your computer.</strong>
+  This whole page runs in your browser. Nothing is uploaded, nothing is stored, and we
+  never see your route.
+</div>
+
+<div class="chooser">
+  <button type="button" class="btn-primary" id="choose" disabled>Choose a GPX file</button>
+  <input id="file" type="file" accept=".gpx,application/gpx+xml" hidden>
+  <span class="or">or see how it works with a
+    <a href="#" id="sample">sample route</a>: a day on the Sea to Sky Trail,
+    Whistler down to Squamish.</span>
+</div>
+
+<p id="status">Getting the directory ready…</p>
+
+<div id="picker" hidden>
+
+  <div id="found"></div>
+  <p class="crow">Distances off your route are as the crow flies, so a stop just across
+  a river can read closer than it really is.</p>
+
+  <h3>How far off your route</h3>
+  <div class="row" id="radius"></div>
+
+  <h3>Which kinds of stop</h3>
+  <div class="row">
+    <button type="button" class="small-btn" id="all-on">Select all</button>
+    <button type="button" class="small-btn" id="all-off">Clear</button>
+  </div>
+  <div class="cats" id="cats"></div>
+
+  <h3>Tier <span class="hint">— tick none to include all three ·
+    <a href="/wwc/guide/" target="_blank" rel="noopener">what the badges mean →</a></span></h3>
+  <div id="tiers"></div>
+
+  <h3>Most stops in the file</h3>
+  <div class="row" style="align-items:center">
+    <input id="cap" type="number" value="200" min="0" step="50">
+    <span class="note">More stops than this? We keep the ones closest to your route.
+      Many head units get unhappy past a few hundred. 0 for no limit.</span>
+  </div>
+
+  <div id="summary"></div>
+  <div id="cap-msg" hidden></div>
+
+  <div id="dl" hidden>
+    <button id="dl-combined" class="btn-primary">Download route + stops (GPX)</button>
+    <button id="dl-wpts" class="btn-secondary">Stops only (GPX)</button>
+    <button id="dl-csv" class="btn-secondary">Stop list (CSV)</button>
+    <span class="note">Some Garmin units ignore waypoints packed inside a course file.
+      If yours does, load the stops-only file alongside your course. The CSV opens in
+      Excel, Numbers, or Google Sheets: your stops in riding order, with addresses and
+      distances.</span>
+  </div>
+
+  <h3>Your stops</h3>
+  <div class="row">
+    <button type="button" class="small-btn" id="list-all">Select all</button>
+    <button type="button" class="small-btn" id="list-none">Clear all</button>
+  </div>
+  <ol id="results"></ol>
+</div><script type="module">
+import { buildIndex, findStopsNearGpx, describe, parseGpx } from '/byor/engine.js';
+import { combinedParts, waypointsOnlyGpx, downloadNames, routeNameFrom, GPX_MIME }
+  from '/byor/gpx_out.js';
+import { facets, allSubKeys, subKey, emptySelection, tally, radiusTally, pick,
+  MATCH_RADIUS_M, RADIUS_CHOICES_M, TIERS } from '/byor/filter.js';
+
+const $ = (id) => document.getElementById(id);
+const statusEl = $('status');
+const resultsEl = $('results');
+
+let poi = null;
+let index = null;
+let matches = [];          // the one wide match, reused for every picker change
+let upload = null;         // { text, filename }
+let addr = {};             // key -> {a: address, c: community}, for the CSV export
+const sel = emptySelection();
+
+const KM = (MATCH_RADIUS_M / 1000) + ' km';
+const tierLabel = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+const track = (n) => { try { if (window.fathom) fathom.trackEvent(n); } catch (e) {} };
+
+let listedKeys = [];   // keys of the rows currently on screen, for the list-wide toggle
+
+// Rows are built once and then only their numbers change, so a click never rebuilds the
+// list it was aimed at.
+const subBoxes = new Map();   // subKey -> checkbox
+const subCounts = new Map();  // subKey -> <span>
+const catBoxes = new Map();   // category index -> { box, count, keys }
+const tierBoxes = new Map();
+const radiusBtns = new Map();
+
+// --- status line ---------------------------------------------------------------------
+//
+// One element carries the whole "while it's working" moment and every empty/error state.
+// Plain italic text while something is genuinely happening; the .notice treatment for
+// anything the rider needs to actually read.
+
+function status(text, { notice = false } = {}) {
+  statusEl.textContent = text;
+  statusEl.classList.toggle('notice', notice);
+  statusEl.hidden = !text;
+}
+
+// The engine runs synchronously, so the status line set just before it would never paint
+// without giving the browser one frame to draw it. The plain timeout backstop matters:
+// requestAnimationFrame never fires in an occluded window, and the work should still run.
+const paint = () => new Promise((r) => {
+  requestAnimationFrame(() => setTimeout(r, 0));
+  setTimeout(r, 150);
+});
+
+// --- load ------------------------------------------------------------------------------
+//
+// One index, at the widest radius the picker offers. Every narrower choice is served by
+// filtering that result, which is exact and costs nothing — see filter.js.
+
+(async function load() {
+  const t0 = performance.now();
+  poi = await (await fetch('/wwc/poi.geojson')).json();
+  index = buildIndex(poi.features, MATCH_RADIUS_M);
+  console.log('poi.geojson: ' + poi.features.length.toLocaleString() + ' stops, load+index '
+    + (performance.now() - t0).toFixed(0) + ' ms');
+
+  buildPicker();
+  $('choose').disabled = false;
+  status('');
+
+  // Addresses ride in a separate file so the map data everyone loads stays slim. If the
+  // fetch fails the CSV simply has emptier columns — never a reason to block the page.
+  fetch('/byor/addresses.json')
+    .then((r) => (r.ok ? r.json() : {}))
+    .then((j) => { addr = j; })
+    .catch(() => {});
+})().catch((e) => {
+  status("We couldn't load the stop directory just now. Refresh to try again.",
+    { notice: true });
+  console.error(e);
+});
+
+// --- building the controls ---------------------------------------------------------------
+
+function buildPicker() {
+  for (const r of RADIUS_CHOICES_M) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'r-chip';
+    b.onclick = () => { sel.radiusM = r; render(); };
+    const dist = document.createElement('span');
+    dist.textContent = r < 1000 ? r + ' m' : (r / 1000) + ' km';
+    const count = document.createElement('span');
+    count.className = 'r-n';
+    b.append(dist, count);
+    $('radius').appendChild(b);
+    radiusBtns.set(r, { btn: b, count });
+  }
+
+  // Same category order as the /wwc directory tabs (amenities_spec.py), not the
+  // count order poi.geojson happens to arrive in. Anything unexpected sorts last.
+  const CAT_ORDER = ['Attractions', 'Accommodation', 'Camping', 'Food & Drink',
+    'Supplies', 'Bike Services'];
+  const catPos = (c) => { const i = CAT_ORDER.indexOf(c.name); return i < 0 ? 99 : i; };
+  for (const cat of [...facets(poi)].sort((a, b) => catPos(a) - catPos(b))) {
+    const wrap = document.createElement('div');
+    wrap.className = 'cat';
+    const head = document.createElement('div');
+    head.className = 'cat-head';
+
+    const twisty = document.createElement('button');
+    twisty.type = 'button';
+    twisty.className = 'twisty';
+    twisty.textContent = '▸';
+    twisty.onclick = () => {
+      wrap.classList.toggle('open');
+      twisty.textContent = wrap.classList.contains('open') ? '▾' : '▸';
+    };
+    head.appendChild(twisty);
+
+    const keys = cat.subs.map((s) => s.key);
+    const label = document.createElement('label');
+    const box = document.createElement('input');
+    box.type = 'checkbox';
+    box.className = 'picker-check';
+    // The category box is a convenience over its children, not a thing in its own right:
+    // ticking it ticks them all, and its own state is derived back from theirs.
+    box.onchange = () => {
+      for (const k of keys) {
+        if (box.checked) sel.subs.add(k); else sel.subs.delete(k);
+        subBoxes.get(k).checked = box.checked;
+      }
+      render();
+    };
+    const count = document.createElement('span');
+    count.className = 'n';
+    label.append(box, ' ' + cat.name + ' ', count);
+    head.appendChild(label);
+    wrap.appendChild(head);
+    catBoxes.set(cat.idx, { box, count, keys });
+
+    const subs = document.createElement('div');
+    subs.className = 'subs';
+    for (const s of cat.subs) {
+      const l = document.createElement('label');
+      const b = document.createElement('input');
+      b.type = 'checkbox';
+      b.className = 'picker-check';
+      b.onchange = () => {
+        if (b.checked) sel.subs.add(s.key); else sel.subs.delete(s.key);
+        render();
+      };
+      const n = document.createElement('span');
+      n.className = 'n';
+      // "(unspecified)" is the classifier's honest shrug; the rider-facing word is Other.
+      l.append(b, ' ' + (s.name === '(unspecified)' ? 'Other' : s.name) + ' ', n);
+      subs.appendChild(l);
+      subBoxes.set(s.key, b);
+      subCounts.set(s.key, n);
+    }
+    wrap.appendChild(subs);
+    $('cats').appendChild(wrap);
+  }
+
+  // The tier definitions are the guide page's "What the badges mean" wording, verbatim,
+  // so this picker and /wwc/guide/ can never drift apart in meaning.
+  const TIER_DESC = {
+    accredited: 'Verified to meet all accreditation criteria, by application, our own '
+      + 'research, or community recommendation.',
+    welcoming: "Meets our cyclist-welcoming criteria on the info we have, but hasn't "
+      + 'been formally accredited.',
+    info: 'Listed for reference; details are mostly assumed from public data.',
+  };
+  for (const t of TIERS) {
+    const wrap = document.createElement('div');
+    wrap.className = 'tier';
+    const l = document.createElement('label');
+    const b = document.createElement('input');
+    b.type = 'checkbox';
+    b.className = 'picker-check';
+    b.onchange = () => { if (b.checked) sel.tiers.add(t); else sel.tiers.delete(t); render(); };
+    const n = document.createElement('span');
+    n.className = 'n';
+    l.append(b, ' ' + tierLabel(t) + ' ', n);
+    const desc = document.createElement('div');
+    desc.className = 'tier-desc';
+    desc.textContent = TIER_DESC[t];
+    wrap.append(l, desc);
+    $('tiers').appendChild(wrap);
+    tierBoxes.set(t, { box: b, count: n });
+  }
+
+  $('all-on').onclick = () => setAll(true);
+  $('all-off').onclick = () => setAll(false);
+  $('list-all').onclick = () => { for (const k of listedKeys) sel.excluded.delete(k); render(); };
+  $('list-none').onclick = () => { for (const k of listedKeys) sel.excluded.add(k); render(); };
+  $('cap').onchange = () => { sel.cap = Math.max(0, Number($('cap').value) || 0); render(); };
+}
+
+// Only the kinds of stop, not the tiers: these two buttons sit under that heading, and an
+// untouched tier row already means "any tier".
+function setAll(on) {
+  sel.subs = new Set(on ? allSubKeys(poi) : []);
+  for (const [k, b] of subBoxes) b.checked = sel.subs.has(k);
+  render();
+}
+
+// --- choosing a file -----------------------------------------------------------------
+
+$('choose').onclick = () => $('file').click();
+
+$('file').addEventListener('change', async function () {
+  const f = this.files[0];
+  if (!f) return;
+  track('BYOR route chosen');
+  $('picker').hidden = true;
+  status('Reading your route…');
+  await paint();
+  let text;
+  try {
+    text = await f.text();
+  } catch (e) {
+    status("We couldn't read that file at all. Try choosing it again.", { notice: true });
+    return;
+  }
+  await runRoute(text, f.name);
+});
+
+$('sample').onclick = async (e) => {
+  e.preventDefault();
+  if (!poi) return;
+  track('BYOR sample tried');
+  $('picker').hidden = true;
+  status('Fetching the sample route…');
+  await paint();
+  const text = await (await fetch('/byor/sample.gpx')).text();
+  await runRoute(text, 'sea-to-sky-trail-whistler-to-squamish.gpx');
+};
+
+// Rough BC bounding box, generous on every side. Only consulted when a route parsed
+// fine but matched nothing, to tell "outside our directory" from "genuinely remote".
+const BC = { latMin: 48.0, latMax: 60.1, lonMin: -139.5, lonMax: -113.5 };
+
+function looksOutsideBC(text) {
+  const pts = parseGpx(text);
+  let lat0 = Infinity, lat1 = -Infinity, lon0 = Infinity, lon1 = -Infinity;
+  for (let i = 0; i < pts.lats.length; i++) {
+    if (pts.lats[i] < lat0) lat0 = pts.lats[i];
+    if (pts.lats[i] > lat1) lat1 = pts.lats[i];
+    if (pts.lons[i] < lon0) lon0 = pts.lons[i];
+    if (pts.lons[i] > lon1) lon1 = pts.lons[i];
+  }
+  return lat1 < BC.latMin || lat0 > BC.latMax || lon1 < BC.lonMin || lon0 > BC.lonMax;
+}
+
+async function runRoute(text, filename) {
+  status('Looking for stops near your line…');
+  await paint();
+
+  const r = findStopsNearGpx(text, poi, { index, radiusM: MATCH_RADIUS_M });
+  console.log(filename, r.stats, r.timings);
+
+  if (r.stats.rawPoints === 0) {
+    status("We couldn't read that as a GPX file. If your route came from Strava, "
+      + 'RideWithGPS, or a head unit, look for Export as GPX. FIT and TCX are different '
+      + 'formats, even though the same devices make them.', { notice: true });
+    return;
+  }
+  if (r.stats.matched === 0) {
+    if (looksOutsideBC(text)) {
+      status("This route looks like it's outside British Columbia, which is the only "
+        + "place our directory covers. If you're riding somewhere else, have a wonderful "
+        + 'trip anyway.', { notice: true });
+    } else {
+      status('No stops within ' + KM + ' of this route. Some of BC is genuinely that '
+        + 'remote. Carry what you need.', { notice: true });
+    }
+    return;
+  }
+
+  matches = r.matches;
+  upload = { text, filename };
+  sel.excluded.clear();
+  status('');
+  // The same tally the radius buttons use, read at the widest radius, so the headline
+  // number and the 5 km button can never disagree (the engine's raw matched count can:
+  // it includes boundary cases and categories the picker doesn't offer).
+  const n = radiusTally(matches, poi, sel).get(MATCH_RADIUS_M);
+  $('found').textContent = n.toLocaleString() + ' stops within ' + KM + ' of your route.';
+  $('picker').hidden = false;
+  // Every kind of stop starts ticked (setAll renders): the first thing a rider sees is
+  // everything their route passes, and unticking is the gesture that narrows it.
+  setAll(true);
+}
+
+// --- drawing the current state ------------------------------------------------------------
+//
+// Everything is recomputed from `sel` on every change. The wide match is already in hand and
+// the picker is three passes over it, so there is nothing to be gained by being clever, and
+// a single path means the numbers can't disagree with the list.
+
+// `relist` is false when the change came from a per-item checkbox. Unchecking one stop cannot
+// alter which stops are listed — the cap is applied before the unchecks, so the set is the
+// same and only that row's styling changes. Rebuilding the list anyway throws away every row
+// and hands back new ones, which drops focus and, on a long list, moves the row under the
+// cursor. Everything else still refreshes: the counts, the summary and the download buttons.
+function render({ relist = true } = {}) {
+  if (!matches.length) return;   // picker is hidden until a route has matched
+  const r = pick(matches, poi, sel);
+  // Riding order, not closest-first: the list (and every file made from it) reads as an
+  // itinerary. The cap has already chosen WHICH stops stay, by closest approach.
+  const byAlong = (a, b) => a.alongM - b.alongM;
+  r.entries.sort(byAlong);
+  r.listed.sort(byAlong);
+  const counts = tally(matches, poi, sel);
+  const radii = radiusTally(matches, poi, sel);
+
+  for (const [r_, o] of radiusBtns) {
+    o.btn.setAttribute('aria-pressed', String(sel.radiusM === r_));
+    o.count.textContent = radii.get(r_).toLocaleString() + ' stops';
+  }
+
+  for (const [key, span] of subCounts) {
+    const n = counts.subs.get(key) || 0;
+    span.textContent = n.toLocaleString();
+    span.parentElement.classList.toggle('zero', n === 0);
+  }
+
+  for (const [idx, o] of catBoxes) {
+    const n = counts.cats.get(idx) || 0;
+    o.count.textContent = n.toLocaleString();
+    o.count.parentElement.parentElement.classList.toggle('zero', n === 0);
+    const on = o.keys.filter((k) => sel.subs.has(k)).length;
+    o.box.checked = on === o.keys.length;
+    o.box.indeterminate = on > 0 && on < o.keys.length;
+  }
+
+  for (const [t, o] of tierBoxes) {
+    const n = counts.tiers.get(t) || 0;
+    o.count.textContent = n.toLocaleString();
+    o.count.parentElement.classList.toggle('zero', n === 0);
+  }
+
+  const msg = $('cap-msg');
+  msg.textContent = r.message;
+  msg.hidden = !r.message;
+
+  $('summary').textContent =
+    r.matched.toLocaleString() + ' stops match your picks · '
+      + r.entries.length.toLocaleString() + ' go into your files'
+      + (r.unchecked ? ' · ' + r.unchecked + ' unticked' : '');
+
+  if (relist) renderList(r.listed);
+  wireDownloads(r.entries);
+}
+
+// The list is the file: what is on screen is what gets written, in the same order. Unchecked
+// stops stay visible and greyed rather than vanishing, because a stop you can't see is a stop
+// you can't change your mind about.
+function renderList(entries) {
+  const frag = document.createDocumentFragment();
+  listedKeys = [];
+  // Milestone dividers turn 200 rows into an itinerary with chapters: a quiet rule at
+  // every 10 km crossing, but only once a route is long enough for chapters to mean
+  // anything — a 12 km loop stays one unbroken list.
+  const total = entries.length ? entries[entries.length - 1].alongM : 0;
+  const mileEvery = total > 20000 ? 10000 : Infinity;
+  let bucket = 0;
+  for (const m of entries) {
+    if (m.alongM >= (bucket + 1) * mileEvery) {
+      bucket = Math.floor(m.alongM / mileEvery);
+      const mile = document.createElement('li');
+      mile.className = 'mile';
+      mile.textContent = 'km ' + (bucket * mileEvery / 1000);
+      frag.appendChild(mile);
+    }
+    const d = describe(m, poi);
+    listedKeys.push(d.key);
+    const li = document.createElement('li');
+    const on = !sel.excluded.has(d.key);
+    li.className = on ? '' : 'off';
+
+    const box = document.createElement('input');
+    box.type = 'checkbox';
+    box.className = 'picker-check';
+    box.checked = on;
+    box.onchange = () => {
+      if (box.checked) sel.excluded.delete(d.key); else sel.excluded.add(d.key);
+      li.classList.toggle('off', !box.checked);
+      render({ relist: false });
+    };
+    li.appendChild(box);
+
+    const dist = document.createElement('span');
+    dist.className = 'd';
+    dist.textContent = 'km ' + (d.alongM / 1000).toFixed(1);
+    li.appendChild(dist);
+
+    // Name links to the stop's directory page, in a new tab so a half-picked list
+    // isn't lost to a click.
+    const body = document.createElement('span');
+    body.className = 'li-body';
+    const a = document.createElement('a');
+    a.href = '/wwc/stop/' + d.key + '/';
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = d.name;
+    const meta = document.createElement('span');
+    meta.className = 'm';
+    meta.textContent = ' · ' + (d.subcategory || d.category) + ' · ' + tierLabel(d.tier)
+      + ' · ' + Math.round(d.distM) + ' m off';
+    body.append(a, meta);
+    li.appendChild(body);
+    frag.appendChild(li);
+  }
+  resultsEl.replaceChildren(frag);
+}
+
+// --- handing it back -----------------------------------------------------------------------
+//
+// Two files, because some Garmin units ignore waypoints bundled inside a course file and a
+// separate waypoints-only file is the workaround.
+//
+// The Blob is built from the pieces the writer returns rather than one joined string, so a
+// 12.5 MB upload doesn't get copied again on its way out.
+
+function wireDownloads(entries) {
+  const names = downloadNames(upload.filename);
+  const csvName = names.combined.replace(/-with-stops\.gpx$/, '') + '-stops.csv';
+  save($('dl-combined'), names.combined,
+    () => combinedParts(upload.text, entries, poi), 'BYOR download combined');
+  save($('dl-wpts'), names.waypoints,
+    () => [waypointsOnlyGpx(entries, poi, routeNameFrom(upload.text, upload.filename))],
+    'BYOR download stops only');
+  save($('dl-csv'), csvName, () => [csvText(entries)], 'BYOR download csv', 'text/csv');
+  $('dl-combined').disabled = $('dl-wpts').disabled = $('dl-csv').disabled =
+    entries.length === 0;
+  $('dl').hidden = false;
+}
+
+// The spreadsheet twin of the waypoints file: same stops, same riding order, plus the
+// columns a trip planner wants on a big screen. Addresses come from the sidecar; a stop
+// the sidecar doesn't know keeps empty cells rather than losing its row.
+function csvText(entries) {
+  const cols = ['Name', 'Category', 'Subcategory', 'Tier', 'Community', 'Address',
+    'Km along route', 'Detour (m, as the crow flies)', 'Latitude', 'Longitude', 'Link'];
+  const cell = (v) => {
+    const s = String(v ?? '');
+    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  };
+  const rows = [cols.map(cell).join(',')];
+  for (const m of entries) {
+    const d = describe(m, poi);
+    const [lon, lat] = m.f.geometry.coordinates;
+    const a = addr[d.key] || {};
+    rows.push([d.name, d.category, d.subcategory, tierLabel(d.tier), a.c || '', a.a || '',
+      (d.alongM / 1000).toFixed(1), Math.round(d.distM), lat.toFixed(5), lon.toFixed(5),
+      'https://bccycletourism.ca/wwc/stop/' + d.key + '/',
+    ].map(cell).join(','));
+  }
+  // The BOM is for Excel, which otherwise guesses the encoding and mangles "Café".
+  return '\ufeff' + rows.join('\r\n') + '\r\n';
+}
+
+function save(btn, filename, parts, event, mime) {
+  btn.onclick = function () {
+    track(event);
+    const url = URL.createObjectURL(new Blob(parts(), { type: mime || GPX_MIME }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.click();
+    // Revoked on the next tick, not immediately: Safari needs the URL to still resolve when
+    // it starts the download.
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+  };
+}
+</script>
+</div>
+<!--chrome--><div class="g-footer">
+  <a class="g-footer-brand" href="/">
+    <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+  </a>
+  <div class="g-footer-nav">
+    <div class="g-footer-col">
+      <div class="g-footer-h">Dream</div>
+      <a href="/routes/">Get Inspired</a>
+      <a href="/routes/all/">Browse routes</a>
+      <a href="/route-publishers/">Meet the route makers</a>
+      <a href="/trails/">Discover trails</a>
+      <a href="/wwc/communities/">Explore our communities</a>
+      <a href="/field-notes">Read Field Notes</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Plan</div>
+      <a href="/plan/">Plan Your Trip</a>
+      <a href="/to-fro/">To &amp; Fro</a>
+      <a href="/add-stops/">Add Stops to Your Route</a>
+      <a href="/wwc/guide/">Read BC Bike Stop Guides</a>
+      <a href="/wwc/">Explore BC Bike Stops</a>
+      <a href="/be-prepared/">Be Prepared</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get involved</div>
+      <a href="/#newsletter">Subscribe to Field Notes</a>
+      <a href="/support/trail-organizations/">Support the trail organizations</a>
+      <a href="/suggest/">Suggest a stop</a>
+      <a href="/apply/">Apply for accreditation</a>
+      <a href="/#contact">Say hi! 🙂</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">About us</div>
+      <a href="/about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/with-thanks/">With thanks</a>
+      <a href="/research/">Research and Data</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/land-acknowledgement">Land acknowledgement</a>
+    </div>
+  </div>
+</div><!--/chrome-->
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
