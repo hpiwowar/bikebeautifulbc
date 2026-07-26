@@ -26,13 +26,13 @@ https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-54951 rows, 7 columns.
+54929 rows, 7 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no. Blanks are common here, because most of these
 places have never been asked.
 
-54951 rows across 18531 places, which is about three amenities each. Most places
+54929 rows across 18524 places, which is about three amenities each. Most places
 have a handful; a few have twenty.
 
 327 of the rows are FALSE, meaning we established that the place does not have

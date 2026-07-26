@@ -1232,8 +1232,6 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 0573551123,Reservations accepted,extra,TRUE,,parks_canada,2026-07-18
 0573551123,Showers,extra,TRUE,,parks_canada,2026-07-18
 0573551123,Washrooms,extra,TRUE,,camping:washroom_type,2026-07-18
-0577164b7e,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-25
-0577164b7e,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-25
 05841efc8c,Bike parking,required for the tier,TRUE,,osm,2026-07-08
 05841efc8c,Public rack nearby,extra,TRUE,,osm,2026-07-08
 058aafebd8,Bike parking,required for the tier,TRUE,,osm,2026-07-08
@@ -4024,8 +4022,6 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 1290fa2841,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 1290fa2841,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 1290fa2841,Takeout,extra,TRUE,,sonnet_4.6,2026-07-18
-12919b07d6,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-25
-12919b07d6,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-25
 12956fcd03,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 12956fcd03,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 12956fcd03,Takeout,extra,TRUE,,sonnet_4.6,2026-07-18
@@ -19058,10 +19054,6 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 599d2e025f,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 599d2e025f,Covered bike parking,extra,TRUE,,osm,2026-07-08
 599d2e025f,Public rack nearby,extra,TRUE,,osm,2026-07-08
-59a68bd4cb,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
-59a68bd4cb,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-25
-59a68bd4cb,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-25
-59a68bd4cb,Public rack nearby,extra,TRUE,,osm,2026-07-08
 59a708dcd8,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 59a708dcd8,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 59aea89609,Water bottle refill,required for the tier,TRUE,,inferred:grocery_chain,2026-07-18
@@ -41629,12 +41621,6 @@ c1c29d8960,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,
 c1c29d8960,Public rack nearby,extra,TRUE,,osm,2026-07-08
 c1c29d8960,Takeout,extra,TRUE,,sonnet_4.6,2026-07-18
 c1c29d8960,Vegetarian / vegan / GF,extra,TRUE,"Sidney menu lists multiple vegetarian dishes: Kadhai Paneer, Paneer Pakora, Vegetable Platter, Vegetable Samosa, Vegetable Pakora, Aloo Tikki, Masala Fries, and others. No explicit vegan or gluten-free designations found",sonnet_4.6,2026-07-18
-c1c8449fd5,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
-c1c8449fd5,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-25
-c1c8449fd5,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-25
-c1c8449fd5,Public rack nearby,extra,TRUE,,osm,2026-07-08
-c1c8449fd5,Takeout,extra,TRUE,,sonnet_4.6,2026-07-18
-c1c8449fd5,Vegetarian / vegan / GF,extra,TRUE,"Website explicitly lists vegan, vegetarian, gluten-free, paleo, and keto options including plant-based entrees and raw-vegan desserts",sonnet_4.6,2026-07-18
 c1cbd5332f,Potable water,extra,TRUE,,bcparks_api,2026-07-18
 c1cbd5332f,Reservations accepted,extra,TRUE,,bcparks_api,2026-07-18
 c1cbd5332f,Washrooms,extra,TRUE,,bcparks_api,2026-07-18
@@ -50932,10 +50918,6 @@ ec8b37f9d3,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-
 ec8b37f9d3,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 ec8b37f9d3,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 ec8b37f9d3,Public rack nearby,extra,TRUE,,osm,2026-07-08
-ec92f15e61,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
-ec92f15e61,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-25
-ec92f15e61,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-25
-ec92f15e61,Public rack nearby,extra,TRUE,,osm,2026-07-08
 ec939282b1,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 ec939282b1,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 ec939282b1,Takeout,extra,TRUE,,haiku_4.5,2026-07-18
@@ -54392,10 +54374,6 @@ fd6842e357,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 fd6842e357,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 fd6842e357,Covered bike parking,extra,TRUE,,osm,2026-07-08
 fd6842e357,Public rack nearby,extra,TRUE,,osm,2026-07-08
-fd6d27582b,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
-fd6d27582b,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-25
-fd6d27582b,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-25
-fd6d27582b,Public rack nearby,extra,TRUE,,osm,2026-07-08
 fd6dd8d3dd,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
 fd6dd8d3dd,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 fd6dd8d3dd,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
