@@ -6,7 +6,7 @@ more than sixty amenities and no place has more than a handful, so a wide table
 would be mostly empty. In this shape it pivots. Join it to the places file on
 listing_key.
 
-Published 2026-07-25 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -21,7 +21,7 @@ that or not. Use it, redistribute it, build on it. If you publish a database
 derived from it, that database has to carry the same licence.
 
 Suggested citation: BC Cycle Tourism Society (2026). What each place in British
-Columbia offers a cyclist [data set]. Version 2026-07-25.
+Columbia offers a cyclist [data set]. Version 2026-07-26.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
@@ -59,7 +59,7 @@ washroom being there at the end of a long day.
 There are no telephone numbers and no email addresses in these files,
 deliberately. Website addresses are here, and every listing's page on our own
 site is one, so a person who wants to make contact can. A bulk file of contact
-details for twelve thousand small businesses is a different object with
+details for fifteen thousand small businesses is a different object with
 different uses, and we would rather not have made it.
 
 We do not run, own, or represent any of these places, and almost none of them

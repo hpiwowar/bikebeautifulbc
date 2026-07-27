@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>The character map — every BC road, seven ways — BC Cycle Tourism Society</title>
+<link rel="canonical" href="https://bccycletourism.ca/research/character-map/">
+<meta property="og:site_name" content="BC Cycle Tourism Society">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bccycletourism.ca/research/character-map/">
+<meta property="og:title" content="The character map — every BC road, seven ways — BC Cycle Tourism Society">
+<meta property="og:image" content="https://bccycletourism.ca/img/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The character map — every BC road, seven ways — BC Cycle Tourism Society">
+<meta name="twitter:image" content="https://bccycletourism.ca/img/og/default.png">
+<meta name="description" content="An interactive map scoring nearly every road and path in British Columbia seven ways: scenic, peaceful, flow, comfort, ruggedness, remoteness, and grade. Click any road to see why it scored what it did.">
+<meta property="og:description" content="An interactive map scoring nearly every road and path in British Columbia seven ways: scenic, peaceful, flow, comfort, ruggedness, remoteness, and grade. Click any road to see why it scored what it did.">
+<meta name="twitter:description" content="An interactive map scoring nearly every road and path in British Columbia seven ways: scenic, peaceful, flow, comfort, ruggedness, remoteness, and grade. Click any road to see why it scored what it did.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":["https://www.linkedin.com/company/bc-cycle-tourism-society/","https://tiabc.ca/members/bc-cycle-tourism-society/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bccycletourism.ca/"},{"@type":"ListItem","position":2,"name":"Research and Data","item":"https://bccycletourism.ca/research/"},{"@type":"ListItem","position":3,"name":"Character map","item":"https://bccycletourism.ca/research/character-map/"}]}</script>
+<style>
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scrollbar-gutter: stable; }
+/* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
+   --rail   chrome (header + footer), frames the page
+   --w-read the content column and prose cap, used by nearly every page
+   --w-wide the exception: sidebar filters, two-column stop pages */
+:root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
+.g-banner strong { font-weight: 700; }
+.g-header { padding: 14px 40px; }
+.g-header-inner { max-width: var(--rail, 1200px); margin: 0 auto; display: flex; align-items: center; gap: 64px; }
+.g-header-left { display: flex; align-items: center; text-decoration: none; }
+.g-header-left img { height: 50px; width: auto; max-width: 100%; }
+.g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
+.g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
+.g-header-nav a:hover { color: #1E7D96; }
+.g-header-nav a.active { color: #1E7D96; font-weight: 600; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: #4b5563; margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: #1E7D96; }
+.g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
+.g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
+.g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
+.g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
+.g-footer-brand img { height: 32px; width: auto; max-width: 100%; }
+.g-footer-nav { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.g-footer-col { }
+.g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
+.g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
+.g-footer-col a:hover { color: #0D4070; }
+.section-divider { border: none; border-top: 1px solid #EEE; margin: 28px 0; }
+.bio { margin-bottom: 20px; }
+.bio strong { color: #1F514C; font-size: 15px; }
+.bio > em { color: #636363; font-size: 13px; }
+.bio p { font-size: 14px; margin-top: 6px; }
+@media (max-width: 700px) {
+  .g-banner { padding: 6px 14px; font-size: 11px; }
+  .g-header { padding: 12px 16px; position: relative; z-index: 300; }
+  .g-header-inner { gap: 0; }
+  .g-main { padding: 24px 14px 16px; }
+  .g-hamburger { display: block; }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #FFFDF9; border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav.open { display: flex; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
+  .g-header-nav a:last-child { border-bottom: none; }
+  .g-footer { padding: 40px 20px 48px; }
+  .g-footer-nav { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+}
+
+/* Section anchors. Every h2 gets a quiet "#" that hands you a link to that
+   section. Grey at rest so it reads as a tool rather than content, teal at the
+   moment you are about to click it. Touch devices have no hover, so it sits
+   faintly visible there instead of being unreachable. */
+.h-anchor { margin-left: .35em; color: #6E6E6E; opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+h2:hover > .h-anchor { opacity: .55; }
+.h-anchor:hover, .h-anchor:focus { color: #1E7D96; opacity: 1; }
+@media (hover: none) {
+  .h-anchor { opacity: .35; }
+}
+</style>
+<link rel="stylesheet" href="/map/lib/maplibre-gl.css">
+<style>
+.cm-wrap{max-width:var(--w-wide, 1160px);margin:0 auto;padding:0 16px 24px}
+.cm-h1{font-family:"Archivo",sans-serif;font-size:32px;font-weight:400;letter-spacing:-0.03em;color:#1F514C;margin:18px 0 6px}
+.cm-sub{color:#57534e;font-size:15px;margin:0 0 14px;max-width:70ch}
+.cm-modes{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.cm-mode{font-size:14px;padding:6px 14px;border:1px solid #e7e5e4;border-radius:16px;cursor:pointer;user-select:none;background:#fff;color:#141414}
+.cm-mode:hover{background:#f5f5f4}
+.cm-mode.on{background:#1F514C;border-color:#1F514C;color:#fff;font-weight:600}
+.cm-blurb{color:#57534e;font-size:14px;margin:0 0 10px;max-width:78ch;min-height:2.6em}
+.cm-legend{max-width:420px;margin:0 0 12px}
+.cm-ramp{height:12px;border-radius:3px}
+.cm-rl{display:flex;justify-content:space-between;font-size:12px;color:#555;margin-top:2px}
+.cm-cleg{display:none;font-size:13px;line-height:1.7;margin:0 0 12px;color:#44403c}
+.cm-cleg span.sw{display:inline-block;width:22px;height:9px;border-radius:2px;margin-right:6px}
+.cm-cleg label{display:block;cursor:pointer;user-select:none}
+.cm-cleg label.off{opacity:0.45}
+.cm-cleg input{margin-right:6px;cursor:pointer}
+.cm-sliders{display:none;align-items:center;gap:8px;font-size:13px;color:#44403c;max-width:420px;margin:2px 0 12px}
+.cm-sliders input{flex:1;min-width:80px;cursor:pointer}
+.cm-sliders .v{min-width:34px;font-variant-numeric:tabular-nums}
+.cm-mapbox{position:relative}
+#charmap{width:100%;height:calc(100dvh - 330px);min-height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}
+@media (max-width:700px){#charmap{height:55vh;min-height:380px}}
+.cm-loading{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:3;background:#fff;
+  border:1px solid #e7e5e4;border-radius:8px;padding:8px 14px;font-size:13px;color:#44403c;
+  box-shadow:0 1px 6px rgba(0,0,0,.12);pointer-events:none}
+.cm-jumps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;font-size:13px}
+.cm-jumps span{color:#78716c}
+.cm-jump{font-size:13px;padding:4px 11px;border:1px solid #e7e5e4;border-radius:16px;cursor:pointer;background:#fff}
+.cm-jump:hover{background:#f5f5f4}
+.cm-prose{max-width:var(--w-read, 720px);margin:26px 0 0}
+.cm-prose h2{font-family:"Archivo",sans-serif;font-size:24px;font-weight:400;color:#1F514C;margin:26px 0 10px}
+.cm-prose p{margin:0 0 12px}
+.cm-prose ul{margin:0 0 12px 22px}
+.cm-prose li{margin:0 0 7px}
+.maplibregl-popup-content{font-size:13px;padding:8px 10px;line-height:1.5}
+</style>
+<script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
+</head>
+<body>
+<!--chrome--><div class="g-header">
+  <div class="g-header-inner">
+    <a href="/" class="g-header-left">
+      <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+    </a>
+    <div class="g-header-nav" id="g-nav">
+      <a href="/routes/">Get Inspired</a>
+      <a href="/plan/">Plan Your Trip</a>
+      <a href="/field-notes">Field Notes</a>
+      <a href="/about">About</a>
+    </div>
+    <button class="g-hamburger" id="g-ham" aria-label="Menu">☰</button>
+  </div>
+</div>
+<script>
+(function(){
+  var h=document.getElementById('g-ham'),n=document.getElementById('g-nav');
+  if(!h||!n)return;
+  h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
+  document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
+})();
+</script><!--/chrome-->
+<main>
+<div class="cm-wrap">
+<nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/research/">Research and Data</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Character map</span></nav>
+<h1 class="cm-h1">The character map</h1>
+<p class="cm-sub">What is it actually like to ride there? Nearly every road and path in BC, scored seven ways from open data. Pick a lens, zoom in, and click any road to see why it scored what it did.</p>
+<div class="cm-modes"><button class="cm-mode" data-m="c">Traffic comfort</button><button class="cm-mode" data-m="g">Grade</button><button class="cm-mode" data-m="r">Surface</button><button class="cm-mode" data-m="f">Flow</button><button class="cm-mode" data-m="q">Quiet</button><button class="cm-mode" data-m="m">Remoteness</button><button class="cm-mode" data-m="s">Scenic</button></div>
+<p class="cm-blurb" id="cm-blurb"></p>
+<div class="cm-legend" id="cm-legend"><div class="cm-ramp" id="cm-ramp"></div>
+<div class="cm-rl"><span id="cm-lo"></span><span id="cm-hi"></span></div></div>
+<div class="cm-sliders" id="cm-sliders"><span>show</span>
+<input type="range" id="cm-fmin" min="0" max="1" step="0.01" value="0"><span class="v" id="cm-fminv">0.00</span>
+<span>to</span>
+<input type="range" id="cm-fmax" min="0" max="1" step="0.01" value="1"><span class="v" id="cm-fmaxv">1.00</span></div>
+<div class="cm-cleg" id="cm-cleg"><label data-cc="MOST"><input type="checkbox" checked><span class="sw" style="background:#1a9641"></span><strong>C1</strong>: separated paths, or slow streets with few cars</label><label data-cc="SOME"><input type="checkbox" checked><span class="sw" style="background:#a6d96a"></span><strong>C2</strong>: sharing light traffic, or bike lanes on calm roads</label><label data-cc="FEW"><input type="checkbox" checked><span class="sw" style="background:#fdae61"></span><strong>C3</strong>: sharing busier traffic, or bike lanes on busy roads</label><label data-cc="VERY FEW"><input type="checkbox" checked><span class="sw" style="background:#f16913"></span><strong>C4</strong>: fast or heavy traffic, a painted line at most</label><label data-cc="EXPERIENCED ONLY"><input type="checkbox" checked><span class="sw" style="background:#a63603"></span><strong>C5</strong>: highway-speed traffic (60+ km/h), a painted line at most</label><label data-cc="RISK"><input type="checkbox" checked><span class="sw" style="background:#67000d"></span><strong>C6</strong>: fast highway traffic (70+ km/h), a painted line at most</label><label data-cc="FORBIDDEN"><input type="checkbox" checked><span class="sw" style="background:#2d004b"></span><strong>FORBIDDEN</strong>: cycling not permitted</label><label data-cc="BACKCOUNTRY"><input type="checkbox" checked><span class="sw" style="background:#7b3294"></span><strong>BACKCOUNTRY</strong>: bare track, beyond traffic data</label></div>
+<div class="cm-cleg" id="cm-rleg"><label data-rr="0"><input type="checkbox" checked><span class="sw" style="background:#2b6cb0"></span><strong>R0</strong> Paved: any bike</label><label data-rr="1"><input type="checkbox" checked><span class="sw" style="background:#2c9e6f"></span><strong>R1</strong> Champagne gravel: almost pavement</label><label data-rr="2"><input type="checkbox" checked><span class="sw" style="background:#9ccb3b"></span><strong>R2</strong> Standard gravel: gravel bike</label><label data-rr="3"><input type="checkbox" checked><span class="sw" style="background:#f0a202"></span><strong>R3</strong> Chunky gravel: wider tires</label><label data-rr="4"><input type="checkbox" checked><span class="sw" style="background:#8c3b2f"></span><strong>R4</strong> Extreme gravel: borders mountain biking</label></div>
+<div class="cm-jumps"><span>Try:</span><button class="cm-jump" data-c="-124.5,54.3" data-z="4.7">All of BC</button><button class="cm-jump" data-c="-123.145,49.305" data-z="13">Stanley Park seawall</button><button class="cm-jump" data-c="-123.42,48.45" data-z="12">Galloping Goose, Victoria</button><button class="cm-jump" data-c="-123.516,48.817" data-z="11.5">Salt Spring Island</button><button class="cm-jump" data-c="-119.40,49.79" data-z="12.5">Myra Canyon (KVR)</button><button class="cm-jump" data-c="-120.327,50.676" data-z="12">Kamloops</button><button class="cm-jump" data-c="-115.063,49.504" data-z="13">Fernie</button><button class="cm-jump" data-c="-117.47,49.70" data-z="11">Slocan Valley</button></div>
+<div class="cm-mapbox">
+<div id="charmap"></div>
+<div class="cm-loading" id="cm-loading">Loading the map… the first view can take 15 to 20 seconds</div>
+</div>
+
+<div class="cm-prose">
+<h2 id="what-youre-looking-at">What you're looking at<a class="h-anchor" href="#what-youre-looking-at" aria-label="Link to this section">#</a></h2>
+<p>Nearly every road, street, and path in British Columbia, scored seven ways from open data. We built these scores to help characterize routes and bike touring options around BC, and they seemed too useful to keep to ourselves.</p>
+<p>Four of the lenses are preferences. More is not better, you just pick the level that suits the ride you want:</p>
+<ul>
+<li><strong>Traffic comfort</strong> classifies how much motor traffic you share the road with, from separated paths through quiet streets to fast highways.</li>
+<li><strong>Grade</strong> measures climbing in the harder direction: steady ascent per kilometre plus the steepest short pitch.</li>
+<li><strong>Surface</strong> rates how rough it is underfoot, from R0 (paved) to R4 (extreme gravel, borders mountain biking).</li>
+<li><strong>Remoteness</strong> measures how far you are from the next place to buy food, using the stores in our <a href="/stops/">BC Bike Stops</a> directory.</li>
+</ul>
+<p>The other three are qualities, where more is better:</p>
+<ul>
+<li><strong>Flow</strong> counts what makes you stop: traffic signals, stop signs, and crossings over the next kilometre of riding.</li>
+<li><strong>Quiet</strong> is about noise. It measures distance from busy roads, rail lines, industrial land, and dense street networks. A road can be gorgeous and loud at the same time.</li>
+<li><strong>Scenic</strong> reads the 100 metres around the road: water, forest, natural grass, farmland, cliffs, waterfalls, viewpoints, and how built-up it is.</li>
+</ul>
+<p>Scenic, quiet, and flow are computed on roughly 100 metre slices of every road, so you can see a street turn from loud to calm as it leaves an arterial. The other four are computed per road segment.</p>
+<h2 id="the-honest-limits">The honest limits<a class="h-anchor" href="#the-honest-limits" aria-label="Link to this section">#</a></h2>
+<p>These scores are computed, not reviewed ride by ride. So far, we've calibrated them most carefully in Metro Vancouver, so expect rougher edges elsewhere in the province. Everything is derived from OpenStreetMap and public land cover and elevation data, so where those sources have gaps, we have gaps too. Remoteness is measured in straight lines, which understates real riding distance and is plain wrong across water. All of it is preliminary and will keep changing as we improve the models.</p>
+
+<p>The traffic comfort ladder is adapted from HUB Cycling's bikeway classification, and we thank them for publishing it. The C1 to C6 labels are our own: HUB's map of Metro Vancouver is checked street by street in a way our computed province-wide estimates are not, so our classes carry our own names.</p>
+<p>If a road you know well scores strangely, we would genuinely like to hear about it: <a href="mailto:heather@bccycletourism.ca">heather@bccycletourism.ca</a>.</p>
+<h2 id="methods-and-licence">Methods and licence<a class="h-anchor" href="#methods-and-licence" aria-label="Link to this section">#</a></h2>
+<p>The full write-up of how these scores are computed, with every rule and threshold and an unsoftened list of limitations, is in the methodology report: <a href="/research/files/character_map_methodology.pdf" onclick="if (window.fathom) fathom.trackEvent('research_download_character_methodology')">How we read the terrain</a> (PDF). More datasets and reports live on our <a href="/research/">Research and Data</a> page. Two naming notes for anyone cross-reading: in the dataset and the methodology PDF, quiet appears under its model name, peaceful, and surface as ruggedness.</p>
+<p>None of this would exist without open data. The datasets this map is built from are credited in full on <a href="/with-thanks/#open-data">our thank-you page</a>.</p>
+<p>This map contains information from OpenStreetMap, © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database Licence</a>. Basemap cartography © <a href="https://www.openmaptiles.org/">OpenMapTiles</a>.</p>
+<p><em style="color:#999;">The research here uses AI assistance (Claude models, Anthropic) for data collection, analysis, and writing. Feel free to ask for more details if you are interested.</em></p>
+</div>
+
+</div>
+</main>
+<!--chrome--><div class="g-footer">
+  <a class="g-footer-brand" href="/">
+    <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+  </a>
+  <div class="g-footer-nav">
+    <div class="g-footer-col">
+      <div class="g-footer-h">Dream</div>
+      <a href="/routes/">Get Inspired</a>
+      <a href="/routes/all/">Browse routes</a>
+      <a href="/route-publishers/">Meet the route makers</a>
+      <a href="/trails/">Discover trails</a>
+      <a href="/wwc/communities/">Explore our communities</a>
+      <a href="/field-notes">Read Field Notes</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Plan</div>
+      <a href="/plan/">Plan Your Trip</a>
+      <a href="/to-fro/">To &amp; Fro</a>
+      <a href="/add-stops/">Add Stops to Your Route</a>
+      <a href="/wwc/guide/">Read BC Bike Stop Guides</a>
+      <a href="/wwc/">Explore BC Bike Stops</a>
+      <a href="/be-prepared/">Be Prepared</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get involved</div>
+      <a href="/#newsletter">Subscribe to Field Notes</a>
+      <a href="/support/trail-organizations/">Support the trail organizations</a>
+      <a href="/suggest/">Suggest a stop</a>
+      <a href="/apply/">Apply for accreditation</a>
+      <a href="/#contact">Contact</a>
+      <a href="/#contact">Say hi! 🙂</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">About us</div>
+      <a href="/about">About</a>
+      <a href="/with-thanks/">With thanks</a>
+      <a href="/advocacy/">Advocacy</a>
+      <a href="/research/">Research and Data</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/land-acknowledgement">Land acknowledgement</a>
+    </div>
+  </div>
+</div><!--/chrome-->
+<script src="/map/lib/maplibre-gl.js"></script>
+<script src="/map/lib/pmtiles.js"></script>
+<script>
+(function(){
+var TILES='https://bcbb-assets.bccycletourism.workers.dev/tiles/character/';
+// Per-mode colour stops, copied from the debug viewer (quantile-placed on the
+// province distribution): scenic/peaceful act in 0-0.65; flow is high-valued.
+var RAMPS={
+  s:[0,'#c8c8ce', 0.07,'#d3d97c', 0.18,'#a6d63d', 0.32,'#57c930', 0.48,'#17c017', 0.65,'#00c400'],
+  q:[0,'#c8c8ce', 0.07,'#d3d97c', 0.18,'#a6d63d', 0.32,'#57c930', 0.48,'#17c017', 0.65,'#00c400'],
+  f:[0,'#c8c8ce', 0.30,'#d3d97c', 0.60,'#a6d63d', 0.80,'#57c930', 0.93,'#17c017', 1.0,'#00c400']
+};
+function ramp(k){ return ['interpolate',['linear'],['get',k]].concat(RAMPS[k]); }
+var RUG={0:'#2b6cb0',1:'#2c9e6f',2:'#9ccb3b',3:'#f0a202',4:'#8c3b2f'};
+var REMOTE=['interpolate',['linear'],['get','remote'],
+  0,'#ffffe5',0.15,'#fff7bc',0.30,'#fee391',0.45,'#fec44f',
+  0.60,'#fe9929',0.72,'#ec7014',0.83,'#cc4c02',0.95,'#8c2d04'];
+var GRADE_COLOR=['interpolate',['linear'],['get','grade'],
+  0,'#2c9e6f',0.3,'#9ccb3b',0.5,'#f0a202',0.7,'#e8590c',1.0,'#8c1c13'];
+var SCORE_RAMP_CSS='linear-gradient(90deg,#d8d8db,#c9cf9c,#9cc47a,#4a9e5c,#0a7d6e)';
+var RUG_RAMP_CSS='linear-gradient(90deg,#2b6cb0 0 20%,#2c9e6f 20% 40%,#9ccb3b 40% 60%,#f0a202 60% 80%,#8c3b2f 80% 100%)';
+var REMOTE_RAMP_CSS='linear-gradient(90deg,#ffffe5,#fff7bc,#fee391,#fec44f,#fe9929,#ec7014,#cc4c02,#8c2d04)';
+var GRADE_RAMP_CSS='linear-gradient(90deg,#2c9e6f,#9ccb3b,#f0a202,#e8590c,#8c1c13)';
+var COMFORT_COLORS={'MOST':'#1a9641','SOME':'#a6d96a','FEW':'#fdae61','VERY FEW':'#f16913',
+  'EXPERIENCED ONLY':'#a63603','RISK':'#67000d','FORBIDDEN':'#2d004b','BACKCOUNTRY':'#7b3294'};
+var MODES={
+  s:{label:'Scenic', blurb:'Natural beauty around the road or path: water, forest, views. Click any road to see why it scored the way it did.',
+     lo:'plain street', hi:'water, forest, views', ramp:SCORE_RAMP_CSS},
+  q:{label:'Quiet', blurb:'How far the riding is from traffic noise, rail lines, and industry. Click a road to see what is (or is not) making noise nearby.',
+     lo:'busy or rail-side', hi:'calm and traffic-free', ramp:SCORE_RAMP_CSS},
+  f:{label:'Flow', blurb:'How rarely you have to stop: traffic signals, stop signs, and crossings over the next kilometre. Click a road to see what interrupts it.',
+     lo:'stop-and-go', hi:'keeps moving', ramp:SCORE_RAMP_CSS},
+  c:{label:'Traffic comfort', blurb:'How much motor traffic you share the road with, from separated paths to busy highways. This one is a preference, not a grade: pick the level you enjoy. Click a way for the details.',
+     lo:'', hi:'', ramp:''},
+  r:{label:'Surface', blurb:'How rough it is underfoot, from smooth pavement to extreme gravel. Faded lines are our best guess where OpenStreetMap has no surface tag. Click a way to see where its rating came from.',
+     lo:'R0 paved', hi:'R4 extreme', ramp:RUG_RAMP_CSS},
+  m:{label:'Remoteness', blurb:'How far you are from the next place to buy food, measured in a straight line to the nearest stores in our BC Bike Stops directory. Some riders want wilderness, some want a caf\u00e9 every 20 km. Click a way for distances.',
+     lo:'town nearby', hi:'deep remote', ramp:REMOTE_RAMP_CSS},
+  g:{label:'Grade', blurb:'How much climbing, measured in the harder direction: the steady grind plus the steepest short pitch. Around 2% is flat-ish, 5% is honest work, 10% and up is brutal. Click a way for both directions.',
+     lo:'flat', hi:'brutal', ramp:GRADE_RAMP_CSS}
+};
+var MODE='c';
+var pc=function(x){ return Math.round((x||0)*100); };
+fetch('/map/style/style.json').then(function(r){ return r.json(); }).then(function(style){
+  // Strip the bcc-* cycling overlay + its source: no clashing neon, no 285 MB fetch.
+  delete style.sources['bc-cycling'];
+  style.layers=style.layers.filter(function(l){ return l.source!=='bc-cycling'; });
+  // Character tile sources (BC-379). scenic/peaceful/flow share one archive.
+  style.sources.spf={type:'vector',url:'pmtiles://'+TILES+'scenic_peaceful_flow.pmtiles'};
+  style.sources.comfort={type:'vector',url:'pmtiles://'+TILES+'comfort.pmtiles'};
+  style.sources.rugged={type:'vector',url:'pmtiles://'+TILES+'ruggedness.pmtiles'};
+  style.sources.remote={type:'vector',url:'pmtiles://'+TILES+'remoteness.pmtiles'};
+  style.sources.grade={type:'vector',url:'pmtiles://'+TILES+'grade.pmtiles'};
+  style.sources['cm-world']={type:'geojson',data:{type:'Feature',properties:{},
+    geometry:{type:'Polygon',coordinates:[[[-180,-85],[180,-85],[180,85],[-180,85],[-180,-85]]]}}};
+  var lw=['interpolate',['linear'],['zoom'],7,0.4,9,0.7,12,1.6,14,3,16,5];
+  var overlays=[
+    // The veil: fades the basemap cartography under the score colours; labels stay above.
+    {id:'cm-veil',type:'fill',source:'cm-world',
+      paint:{'fill-color':'#FFFDF9','fill-opacity':0.6}},
+    // Initial visibilities match the default Traffic comfort mode, so the big
+    // scenic_peaceful_flow archive is not fetched until someone opens s/q/f.
+    {id:'cm-cells',type:'line',source:'spf','source-layer':'scenic_peaceful_flow',
+      layout:{'line-cap':'round',visibility:'none'},
+      paint:{'line-color':ramp('s'),
+        'line-width':['interpolate',['linear'],['zoom'],9,0.5,12,1.6,14,3,16,5],
+        'line-opacity':0.95}},
+    {id:'cm-comfort',type:'line',source:'comfort','source-layer':'comfort',
+      layout:{'line-cap':'round'},
+      paint:{'line-color':['match',['get','comfort'],
+          'MOST','#1a9641','SOME','#a6d96a','FEW','#fdae61',
+          'VERY FEW','#f16913','EXPERIENCED ONLY','#a63603','RISK','#67000d',
+          'FORBIDDEN','#2d004b','BACKCOUNTRY','#7b3294','#c8c8ce'],
+        'line-width':['interpolate',['linear'],['zoom'],9,0.6,12,1.8,14,3,16,5],
+        'line-opacity':0.95}},
+    {id:'cm-rugged',type:'line',source:'rugged','source-layer':'ruggedness',
+      layout:{'line-cap':'round',visibility:'none'},
+      paint:{'line-color':['match',['get','ruggedness'],
+          0,RUG[0],1,RUG[1],2,RUG[2],3,RUG[3],4,RUG[4],'#999999'],
+        'line-width':lw,
+        'line-opacity':['match',['get','confidence'],'tagged',0.95,'rescued',0.9,'defaulted',0.5,0.8]}},
+    {id:'cm-remote',type:'line',source:'remote','source-layer':'remoteness',
+      layout:{'line-cap':'round',visibility:'none'},
+      paint:{'line-color':REMOTE,'line-width':lw,
+        'line-opacity':['match',['get','confidence'],'single_source',0.75,0.95]}},
+    {id:'cm-grade',type:'line',source:'grade','source-layer':'grade',
+      layout:{'line-cap':'round',visibility:'none'},
+      paint:{'line-color':['case',['==',['get','na'],1],'#9aa0a6',GRADE_COLOR],
+        'line-width':lw,'line-opacity':0.95}}
+  ];
+  var symIdx=style.layers.findIndex(function(l){ return l.type==='symbol'; });
+  if(symIdx<0) symIdx=style.layers.length;
+  style.layers.splice.apply(style.layers,[symIdx,0].concat(overlays));
+
+  var protocol=new pmtiles.Protocol();
+  maplibregl.addProtocol('pmtiles',protocol.tile);
+  var map=new maplibregl.Map({container:'charmap',style:style,
+    center:[-124.5,54.3],zoom:4.7,cooperativeGestures:true,attributionControl:false});
+  map.addControl(new maplibregl.NavigationControl(),'top-right');
+  var attrib=new maplibregl.AttributionControl({compact:true,
+    customAttribution:'\u00a9 <a href="https://www.openmaptiles.org/">OpenMapTiles</a> \u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  map.addControl(attrib);
+  if(attrib._container){ attrib._container.classList.remove('maplibregl-compact-show'); }
+  map.once('idle',function(){ var el=document.getElementById('cm-loading'); if(el) el.remove(); });
+
+  // ---- mode switching (paint swap for s/q/f, visibility for the rest) ----
+  // DOM updates run immediately; map layer ops wait for the style to finish
+  // loading (setLayoutProperty on a still-loading style throws, which would
+  // silently kill the rest of init inside this promise chain).
+  var styleLoaded=false;
+  var perWay={c:'cm-comfort',r:'cm-rugged',m:'cm-remote',g:'cm-grade'};
+  // ---- show/hide filters ----
+  // Traffic comfort + Surface filter by class checkboxes; the five continuous
+  // scores share one from/to slider pair. Settings persist across mode
+  // switches (cleared on reload). Full range / all boxes => filter null, so
+  // grade's NA (bridge/tunnel) ways only disappear when a range is narrowed.
+  var FILT={s:[0,1],q:[0,1],f:[0,1],m:[0,1],g:[0,1]};
+  var CC_ON=new Set(['MOST','SOME','FEW','VERY FEW','EXPERIENCED ONLY','RISK','FORBIDDEN','BACKCOUNTRY']);
+  var RR_ON=new Set([0,1,2,3,4]);
+  var FIELD={s:'s',q:'q',f:'f',m:'remote',g:'grade'};
+  function applyFilter(m){
+    if(m==='c'){
+      map.setFilter('cm-comfort', CC_ON.size===8?null
+        :['in',['get','comfort'],['literal',Array.from(CC_ON)]]);
+      return;
+    }
+    if(m==='r'){
+      map.setFilter('cm-rugged', RR_ON.size===5?null
+        :['in',['get','ruggedness'],['literal',Array.from(RR_ON)]]);
+      return;
+    }
+    var lay=(m==='m')?'cm-remote':(m==='g')?'cm-grade':'cm-cells';
+    var v=FILT[m];
+    map.setFilter(lay,(v[0]<=0&&v[1]>=1)?null
+      :['all',['>=',['get',FIELD[m]],v[0]],['<=',['get',FIELD[m]],v[1]]]);
+  }
+  function applyLayers(m){
+    map.setLayoutProperty('cm-cells','visibility', perWay[m]?'none':'visible');
+    for(var k in perWay){ map.setLayoutProperty(perWay[k],'visibility', k===m?'visible':'none'); }
+    if(!perWay[m]) map.setPaintProperty('cm-cells','line-color',ramp(m));
+    applyFilter(m);
+  }
+  map.once('load',function(){ styleLoaded=true; applyLayers(MODE); });
+  var fmin=document.getElementById('cm-fmin'), fmax=document.getElementById('cm-fmax');
+  var fminv=document.getElementById('cm-fminv'), fmaxv=document.getElementById('cm-fmaxv');
+  function sliderChange(ev){
+    if(!FILT[MODE]) return;
+    var a=parseFloat(fmin.value), b=parseFloat(fmax.value);
+    if(a>b){ if(ev.target===fmin){ b=a; fmax.value=a; } else { a=b; fmin.value=b; } }
+    FILT[MODE]=[a,b];
+    fminv.textContent=a.toFixed(2); fmaxv.textContent=b.toFixed(2);
+    if(styleLoaded) applyFilter(MODE);
+  }
+  fmin.addEventListener('input',sliderChange);
+  fmax.addEventListener('input',sliderChange);
+  function wireBoxes(holder,parse,set){
+    document.querySelectorAll('#'+holder+' label').forEach(function(lab){
+      var box=lab.querySelector('input');
+      box.addEventListener('change',function(){
+        var v=parse(lab);
+        if(box.checked) set.add(v); else set.delete(v);
+        lab.classList.toggle('off',!box.checked);
+        if(styleLoaded) applyFilter(MODE);
+      });
+    });
+  }
+  wireBoxes('cm-cleg',function(l){ return l.dataset.cc; },CC_ON);
+  wireBoxes('cm-rleg',function(l){ return +l.dataset.rr; },RR_ON);
+  function setMode(m){
+    MODE=m;
+    if(POP) POP.remove();   // a stale popup from another mode reads as wrong data
+    document.querySelectorAll('.cm-mode').forEach(function(b){
+      b.classList.toggle('on', b.dataset.m===m); });
+    document.getElementById('cm-blurb').textContent=MODES[m].blurb;
+    var leg=document.getElementById('cm-legend'), cleg=document.getElementById('cm-cleg');
+    var rleg=document.getElementById('cm-rleg'), sld=document.getElementById('cm-sliders');
+    var boxes=(m==='c')||(m==='r');
+    leg.style.display=boxes?'none':'block';
+    sld.style.display=boxes?'none':'flex';
+    cleg.style.display=(m==='c')?'block':'none';
+    rleg.style.display=(m==='r')?'block':'none';
+    if(!boxes){
+      document.getElementById('cm-ramp').style.background=MODES[m].ramp;
+      document.getElementById('cm-lo').textContent=MODES[m].lo;
+      document.getElementById('cm-hi').textContent=MODES[m].hi;
+      fmin.value=FILT[m][0]; fmax.value=FILT[m][1];
+      fminv.textContent=FILT[m][0].toFixed(2); fmaxv.textContent=FILT[m][1].toFixed(2);
+    }
+    if(styleLoaded) applyLayers(m);
+  }
+  document.querySelectorAll('.cm-mode').forEach(function(b){
+    b.addEventListener('click',function(){ setMode(b.dataset.m); });
+  });
+  setMode('c');
+  document.querySelectorAll('.cm-jump').forEach(function(b){
+    b.addEventListener('click',function(){
+      var c=b.dataset.c.split(',').map(Number);
+      map.flyTo({center:c,zoom:+b.dataset.z,speed:2.4});   // default 1.2 felt slow
+    });
+  });
+
+  // ---- popups ----
+  // Cells (scenic/peaceful/flow) are ~100 m slices carrying wid = the parent OSM
+  // way. The four per-way layers carry osm_id. Different shapes, separate
+  // formatters. One map-level click handler queries a +/-6 px box around the
+  // tap against the ACTIVE layer only (the BC-258 touch-target pattern): the
+  // score lines are 1-3 px wide, so exact-pixel per-layer handlers are nearly
+  // unclickable on a phone.
+  var POP=new maplibregl.Popup({focusAfterOpen:false});
+  function popup(e,head,parts){
+    POP.setLngLat(e.lngLat).setHTML('<b>'+head+'</b><br>'+parts.join('<br>')).addTo(map);
+  }
+  var FMT={};
+  map.on('click',function(e){
+    var active=perWay[MODE]||'cm-cells';
+    var bb=[[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]];
+    var fs=map.queryRenderedFeatures(bb,{layers:[active]});
+    if(fs.length) FMT[active](e,fs[0]);
+  });
+  FMT['cm-cells']=function(e,f){
+    var p=f.properties, parts=[], head;
+    if(MODE==='q'){
+      head='Quiet '+p.q;
+      parts.push('base '+p.qb+' (1 minus the loudest nearby nuisance)');
+      if(p.qa>0.02) parts.push('busy roads within earshot: exposure '+p.qa);
+      if(p.qr>0.02) parts.push('railway nearby: exposure '+p.qr);
+      if(p.qd>0.02) parts.push('lots of surrounding streets: '+p.qd);
+      if(p.qi>0.02) parts.push('industrial area: '+p.qi);
+      if(p.qo) parts.push('off-street path bonus');
+    } else if(MODE==='f'){
+      head='Flow '+p.f;
+      var iv=[];
+      if(p.fig) iv.push(p.fig+(p.fig>1?' signals':' signal'));
+      if(p.fis) iv.push(p.fis+(p.fis>1?' stop signs':' stop sign'));
+      if(p.fic) iv.push(p.fic+(p.fic>1?' crossings':' crossing'));
+      parts.push(iv.length?'in the next ~1 km: '+iv.join(', '):'nothing to stop for in the next ~1 km');
+      if(p.fo) parts.push('off-street path bonus');
+      if(p.fsf===1) parts.push('paved bonus'); else if(p.fsf===2) parts.push('rough surface penalty');
+      if(p.fsn>1.15) parts.push('winding ('+p.fsn+'\u00d7 longer than straight)');
+    } else {
+      head='Scenic '+p.s;
+      if(p.wa>0.02) parts.push('water '+pc(p.wa)+'% of surroundings'+(p.we>0.02?' (right at the edge '+pc(p.we)+'%)':''));
+      if(p.tr>0.02) parts.push('tree cover '+pc(p.tr)+'%');
+      if(p.ng>0.05) parts.push('natural grass and meadow '+pc(p.ng)+'%');
+      if(p.bu>0.05) parts.push('built-up '+pc(p.bu)+'%');
+      if(p.wf>0.02) parts.push('on-the-water bonus +'+p.wf);
+      if(p.cb>0.02) parts.push('leafy-street bonus +'+p.cb);
+      if(p.pb>0.02) parts.push('farmland bonus +'+p.pb);
+      if(p.cf>0.02) parts.push('cliffs nearby +'+p.cf);
+      if(p.fl>0.02) parts.push('waterfall nearby +'+p.fl);
+      if(p.pa>0.02) parts.push('protected area +'+p.pa);
+      if(p.rd>0) parts.push('busy road alongside \u2212'+(0.20*p.rd).toFixed(2));
+      if(p.vp) parts.push('viewpoint nearby');
+      if(p.br) parts.push('on a bridge');
+      if(!parts.length) parts.push('nothing much scored here: no water, little tree cover, no views we can see in the data');
+    }
+    parts.push('OSM way '+p.wid);
+    popup(e,head,parts);
+  };
+  var COMFORT_WORDS={'MOST':'C1 \u00b7 separated paths, or slow streets with few cars',
+    'SOME':'C2 \u00b7 sharing light traffic, or bike lanes on calm roads',
+    'FEW':'C3 \u00b7 sharing busier traffic, or bike lanes on busy roads',
+    'VERY FEW':'C4 \u00b7 fast or heavy traffic, a painted line at most',
+    'EXPERIENCED ONLY':'C5 \u00b7 highway-speed traffic (60+ km/h), a painted line at most',
+    'RISK':'C6 \u00b7 fast highway traffic (70+ km/h), a painted line at most',
+    'FORBIDDEN':'FORBIDDEN \u00b7 cycling not permitted',
+    'BACKCOUNTRY':'BACKCOUNTRY \u00b7 bare track, beyond traffic data'};
+  FMT['cm-comfort']=function(e,f){
+    var p=f.properties, parts=[];
+    parts.push('road type: '+p.highway);
+    if(p.facility && p.facility!=='') parts.push('bike facility: '+p.facility);
+    // Assumed speed/traffic hidden 2026-07-26 (Heather): the class defaults read
+    // as nonsense on separated paths ("2000 vehicles/day" on the seawall).
+    // Re-enable once they are shown only where a motor-traffic assumption
+    // actually drove the classification.
+    // if(p.speed!=null && p.speed!=='') parts.push('assumed speed '+p.speed+' km/h');
+    // if(p.adt!=null && p.adt!=='') parts.push('assumed traffic '+p.adt+' vehicles/day');
+    parts.push('OSM way '+p.osm_id);
+    popup(e,'Traffic comfort: '+(COMFORT_WORDS[p.comfort]||p.comfort),parts);
+  };
+  var RUG_NAME={0:'R0 Paved \u00b7 any bike',
+    1:'R1 Champagne gravel \u00b7 almost pavement (25\u201332 mm tires)',
+    2:'R2 Standard gravel \u00b7 gravel bike (28\u201335 mm)',
+    3:'R3 Chunky gravel \u00b7 gravel bike (33\u201340 mm)',
+    4:'R4 Extreme gravel \u00b7 borders mountain biking (40 mm+)'};
+  FMT['cm-rugged']=function(e,f){
+    var p=f.properties, parts=['road type: '+p.highway];
+    if(p.confidence==='tagged') parts.push('surface recorded in OpenStreetMap ('+p.signal+')');
+    else if(p.confidence==='rescued') parts.push('inferred from nearby tags ('+p.signal+')');
+    else parts.push('no surface tag; assumed from the road type');
+    parts.push('OSM way '+p.osm_id);
+    popup(e,RUG_NAME[p.ruggedness]||('Ruggedness '+p.ruggedness),parts);
+  };
+  FMT['cm-remote']=function(e,f){
+    var p=f.properties, parts=[];
+    parts.push('nearest store '+p.d1+' km away (straight line)');
+    parts.push('average of the 3 nearest: '+p.mean3+' km');
+    if(p.confidence==='single_source') parts.push('only one resupply point nearby; confirm it is open');
+    parts.push('OSM way '+p.osm_id);
+    popup(e,'Remoteness '+p.remote,parts);
+  };
+  FMT['cm-grade']=function(e,f){
+    var p=f.properties, km=p.len_m/1000;
+    if(p.na){
+      popup(e,'Grade: not measured',['bridge or tunnel: our elevation data has no deck height here','road type: '+p.highway]);
+      return;
+    }
+    var g=+p.grade, gf=+p.grade_fwd, gr=+p.grade_rev;
+    var word=g<0.2?'flat':g<0.4?'easy':g<0.6?'moderate':g<0.8?'hard':'brutal';
+    var grind=function(a){ return km?Math.round(a/km):0; };
+    var fwdHard=gf>=gr;
+    var hAsc=fwdHard?p.ascent_fwd_m:p.ascent_rev_m, hW=fwdHard?p.max_grad_fwd_100:p.max_grad_rev_100;
+    var eAsc=fwdHard?p.ascent_rev_m:p.ascent_fwd_m, eW=fwdHard?p.max_grad_rev_100:p.max_grad_fwd_100;
+    var eg=Math.min(gf,gr), parts=[];
+    if(Math.abs(gf-gr)<0.1){
+      parts.push('climbing '+grind(hAsc)+' m per km \u00b7 steepest pitch '+pc(hW)+'% over 100 m');
+    } else {
+      parts.push('\u2191 harder direction: '+grind(hAsc)+' m per km \u00b7 steepest '+pc(hW)+'% over 100 m');
+      parts.push(eg<0.05?'\u2193 other direction: downhill'
+        :'\u2193 other direction: '+grind(eAsc)+' m per km \u00b7 steepest '+pc(eW)+'%');
+    }
+    parts.push('road type: '+p.highway+(p.bridged?' \u00b7 includes a bridge or tunnel':''));
+    if(p.osm_id) parts.push('OSM way '+p.osm_id);
+    popup(e,'Grade '+g.toFixed(2)+' \u00b7 '+word,parts);
+  };
+  ['cm-cells','cm-comfort','cm-rugged','cm-remote','cm-grade'].forEach(function(id){
+    map.on('mouseenter',id,function(){ map.getCanvas().style.cursor='pointer'; });
+    map.on('mouseleave',id,function(){ map.getCanvas().style.cursor=''; });
+  });
+  window._cm=map;   // debugging handle (matches the debug viewer's window._m)
+});
+})();
+</script>
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

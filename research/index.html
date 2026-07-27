@@ -16,9 +16,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Research and Data — BC Cycle Tourism Society">
 <meta name="twitter:image" content="https://bccycletourism.ca/img/og/default.png">
-<meta name="description" content="Preliminary datasets and reports from BC Cycle Tourism Society: Sea-to-Sky rail corridor reports and a global cycling route database.">
-<meta property="og:description" content="Preliminary datasets and reports from BC Cycle Tourism Society: Sea-to-Sky rail corridor reports and a global cycling route database.">
-<meta name="twitter:description" content="Preliminary datasets and reports from BC Cycle Tourism Society: Sea-to-Sky rail corridor reports and a global cycling route database.">
+<meta name="description" content="Preliminary datasets and reports from BC Cycle Tourism Society: an interactive character map of BC&#x27;s roads and trails, Sea-to-Sky rail corridor reports, and a global cycling route database.">
+<meta property="og:description" content="Preliminary datasets and reports from BC Cycle Tourism Society: an interactive character map of BC&#x27;s roads and trails, Sea-to-Sky rail corridor reports, and a global cycling route database.">
+<meta name="twitter:description" content="Preliminary datasets and reports from BC Cycle Tourism Society: an interactive character map of BC&#x27;s roads and trails, Sea-to-Sky rail corridor reports, and a global cycling route database.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":["https://www.linkedin.com/company/bc-cycle-tourism-society/","https://tiabc.ca/members/bc-cycle-tourism-society/"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bccycletourism.ca/"},{"@type":"ListItem","position":2,"name":"Research and Data","item":"https://bccycletourism.ca/research/"}]}</script>
 <style>
@@ -143,9 +143,9 @@ h2:hover > .h-anchor { opacity: .55; }
 
 <p>Attribution is not legally required under CC0, but often requested as a community norm. A citation facilitates transparency and discovery, so thanks in advance! Every download carries a suggested citation, on the cover sheet of the spreadsheet and at the top of the plain-text column guide.</p>
 
-<p>Many of our datasets include measurements built from OpenStreetMap data. Those datasets stay CC0 &mdash; just add this attribution too: contains information from OpenStreetMap, &copy; OpenStreetMap contributors. One dataset is different: the BC Bike Stops directory is built directly from OpenStreetMap's own records, so it carries OpenStreetMap's own licence, the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database Licence</a>, instead of CC0. See its line below for details.</p>
+<p>Many of our datasets include measurements built from OpenStreetMap data. Those datasets stay CC0 &mdash; just add this attribution too: contains information from OpenStreetMap, &copy; OpenStreetMap contributors. Two datasets are different: the BC Bike Stops directory and the road and path character scores are built directly from OpenStreetMap's own records, so they carry OpenStreetMap's own licence, the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database Licence</a>, instead of CC0.</p>
 
-<p>The two Sea-to-Sky reports are written reports rather than data, so they go out under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> instead: share them and build on them, including commercially, as long as you credit us. <a href="https://creativecommons.org/licenses/by/4.0/"><img src="/img/cc-by.svg" alt="CC BY 4.0" width="88" height="31" style="vertical-align:middle"></a></p>
+<p>The written reports on this page &mdash; the Sea-to-Sky reports and the methodology PDFs &mdash; are prose rather than data, so they go out under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> instead: share them and build on them, including commercially, as long as you credit us. <a href="https://creativecommons.org/licenses/by/4.0/"><img src="/img/cc-by.svg" alt="CC BY 4.0" width="88" height="31" style="vertical-align:middle"></a></p>
 
 <p>The code that produces these files is not packaged for release yet. We hope to release it soon. In the meantime, if you want to know exactly how a number was computed, ask and we will walk you through it.</p>
 
@@ -171,6 +171,22 @@ h2:hover > .h-anchor { opacity: .55; }
 
 <p><strong><a href="/research/files/route_ratings_methodology.pdf" onclick="if (window.fathom) fathom.trackEvent('research_download_methodology')">How we rate routes: methods and limitations</a></strong> (PDF) — the full methodology behind the dataset and the labels on our route pages: data sources, matching, every rule table and threshold, validation against HUB Cycling's Metro Vancouver labels, and an unsoftened list of limitations.</p>
 
+<h3>The character of BC's roads and trails</h3>
+
+<p>We are working on ways to characterize routes and bike touring options around British Columbia. Not just how hard a ride is, but what it feels like. Nearly every road and path in the province carries scores for traffic comfort, grade, surface, and remoteness, computed from OpenStreetMap along with public land cover and elevation data. Three more, flow, quiet, and scenic, are computed on 100 metre slices rather than whole roads.</p>
+
+<p><strong><a href="/research/character-map/" onclick="if (window.fathom) fathom.trackEvent('research_character_map')">Character map</a></strong> — an interactive map rather than a download. Seven ways of reading the same road. Click any road to see why it scored the way it did.</p>
+
+<p><strong><a href="https://bcbb-assets.bccycletourism.workers.dev/data/character_ways.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_character_ways')">Road and path scores</a></strong> (CSV, about 96 MB, or <a href="https://bcbb-assets.bccycletourism.workers.dev/data/character_ways.csv.gz" onclick="if (window.fathom) fathom.trackEvent('research_download_character_ways_gz')">gzipped</a> at about 20 MB) — one row per road or path, 528,742 of them: the four whole-road scores, the name where OpenStreetMap has one, and a point on it so you can find it. Comes with a <a href="https://bcbb-assets.bccycletourism.workers.dev/data/character_ways_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_character_ways_readme')">plain-text column guide</a>. These three files are served from our asset host, so those links leave this page. The file is too big for Excel and is meant for pandas, R, or a database.</p>
+
+<p><strong><a href="/research/files/character_map_methodology.pdf" onclick="if (window.fathom) fathom.trackEvent('research_download_character_methodology')">How we read the terrain: methods and limitations</a></strong> (PDF) — every rule, threshold, and diagram behind the seven scores, and an unsoftened account of what they do not tell you. One naming note: in the report, surface appears under its model name, ruggedness, and quiet as peaceful.</p>
+
+<p>Two things to know before you use the file. The assumed speed and traffic columns are modelling inputs assigned from a road's classification, not measurements taken on it. On a separated path they are meaningless, which is why the map does not show them. And a blank cell means we could not measure that thing, not that it is zero: traffic comfort is blank on about a quarter of the rows, on paths where the classifier declines to guess.</p>
+
+<p>These scores are computed, not ridden. We have calibrated them most carefully in Metro Vancouver, so expect rougher edges elsewhere in the province. Flow, quiet, and scenic are not in the file yet. They live on 100 metre slices, and rolling them up to a whole road needs a choice we are not ready to defend. Ask if you want them.</p>
+
+<p>The scores are derived from OpenStreetMap, so they carry OpenStreetMap's own licence, the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database Licence (ODbL) 1.0</a>, with the attribution &copy; OpenStreetMap contributors. The methodology report, as prose, is <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+
 <!-- HIDDEN 2026-07-25 (Heather): the To and Fro transit datasets (BC-359) and the
      BC Bike Stops datasets (BC-361) are both built, verified and copied into
      research/files/ on every build — they are just not linked from this page yet,
@@ -184,13 +200,13 @@ h2:hover > .h-anchor { opacity: .55; }
 
 <p>Which buses, ferries, water taxis, trains, and flights connect British Columbia's communities, and what each carrier does with a bicycle.</p>
 
-<p><strong>Routes and stops</strong> &mdash; 282 scheduled services and their 904 ordered stops, in two files: <a href="/research/files/bc_transit_routes.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_routes')">routes</a> (Excel, also <a href="/research/files/bc_transit_routes.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_routes_csv')">CSV</a> and <a href="/research/files/bc_transit_routes_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_routes_readme')">column guide</a>), and <a href="/research/files/bc_transit_stops.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_stops')">stops</a> (Excel, also <a href="/research/files/bc_transit_stops.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_stops_csv')">CSV</a> and <a href="/research/files/bc_transit_stops_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_stops_readme')">column guide</a>).</p>
+<p><strong>Routes and stops</strong> &mdash; 326 scheduled services and their 1,007 ordered stops, in two files: <a href="/research/files/bc_transit_routes.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_routes')">routes</a> (Excel, also <a href="/research/files/bc_transit_routes.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_routes_csv')">CSV</a> and <a href="/research/files/bc_transit_routes_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_routes_readme')">column guide</a>), and <a href="/research/files/bc_transit_stops.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_stops')">stops</a> (Excel, also <a href="/research/files/bc_transit_stops.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_stops_csv')">CSV</a> and <a href="/research/files/bc_transit_stops_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_stops_readme')">column guide</a>).</p>
 
 <p><strong><a href="/research/files/bc_transit_carriers.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_carriers')">Carriers and bicycle policies</a></strong> (Excel) &mdash; 67 operators: whether they carry bicycles, under what conditions, where the answer came from, and when a person last checked. Also as <a href="/research/files/bc_transit_carriers.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_carriers_csv')">CSV</a> with a <a href="/research/files/bc_transit_carriers_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_carriers_readme')">plain-text column guide</a>.</p>
 
-<p><strong><a href="/research/files/bc_transit_journeys.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_journeys')">Journeys</a></strong> (Excel) &mdash; every way of getting between two communities, 54,318 of them, in the order we rank them. Also as <a href="/research/files/bc_transit_journeys.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_journeys_csv')">CSV</a> (11 MB) with a <a href="/research/files/bc_transit_journeys_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_journeys_readme')">plain-text column guide</a>.</p>
+<p><strong><a href="/research/files/bc_transit_journeys.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_journeys')">Journeys</a></strong> (Excel) &mdash; every way of getting between two communities, 59,493 of them, in the order we rank them. Also as <a href="/research/files/bc_transit_journeys.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_journeys_csv')">CSV</a> (13 MB) with a <a href="/research/files/bc_transit_journeys_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_journeys_readme')">plain-text column guide</a>.</p>
 
-<p><strong><a href="/research/files/bc_transit_connections.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_connections')">Community connections</a></strong> (Excel) &mdash; 10,504 community pairs, with both a neutral summary of what runs and the journey we would suggest. Also as <a href="/research/files/bc_transit_connections.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_connections_csv')">CSV</a> with a <a href="/research/files/bc_transit_connections_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_connections_readme')">plain-text column guide</a>.</p>
+<p><strong><a href="/research/files/bc_transit_connections.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_connections')">Community connections</a></strong> (Excel) &mdash; 10,710 community pairs, with both a neutral summary of what runs and the journey we would suggest. Also as <a href="/research/files/bc_transit_connections.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_connections_csv')">CSV</a> with a <a href="/research/files/bc_transit_connections_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_transit_connections_readme')">plain-text column guide</a>.</p>
 
 <p>These five files are <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. They are our own compilation from operator sources, with no OpenStreetMap records in them.</p>
 
@@ -198,11 +214,11 @@ h2:hover > .h-anchor { opacity: .55; }
 
 <h3>Places in British Columbia that a cyclist might want</h3>
 
-<p>Our whole BC Bike Stops directory as data: 18,625 cafes, grocery stores, campgrounds, places to stay, bike shops, attractions, and transport connections, with where they are and what we know about how they treat an arriving cyclist. Three files that join on one column.</p>
+<p>Our whole BC Bike Stops directory as data: 18,524 cafes, grocery stores, campgrounds, places to stay, bike shops, attractions, and transport connections, with where they are and what we know about how they treat an arriving cyclist. Three files that join on one column.</p>
 
-<p><strong><a href="/research/files/bc_stops.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_stops')">Places</a></strong> (Excel) &mdash; one row per place: category, community, coordinates, tier, ownership, and its OpenStreetMap identifier. Also as <a href="/research/files/bc_stops.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_csv')">CSV</a> (11 MB) with a <a href="/research/files/bc_stops_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_readme')">plain-text column guide</a>.</p>
+<p><strong><a href="/research/files/bc_stops.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_stops')">Places</a></strong> (Excel) &mdash; one row per place: category, community, coordinates, tier, ownership, and its OpenStreetMap identifier. Also as <a href="/research/files/bc_stops.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_csv')">CSV</a> (10 MB) with a <a href="/research/files/bc_stops_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_readme')">plain-text column guide</a>.</p>
 
-<p><strong><a href="/research/files/bc_stops_amenities.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_amenities')">Amenities</a></strong> (Excel) &mdash; 55,288 rows, one per place and amenity, with the source and the date we recorded it. Long rather than wide, so it pivots. Also as <a href="/research/files/bc_stops_amenities.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_amenities_csv')">CSV</a> with a <a href="/research/files/bc_stops_amenities_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_amenities_readme')">plain-text column guide</a>.</p>
+<p><strong><a href="/research/files/bc_stops_amenities.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_amenities')">Amenities</a></strong> (Excel) &mdash; 54,929 rows, one per place and amenity, with the source and the date we recorded it. Long rather than wide, so it pivots. Also as <a href="/research/files/bc_stops_amenities.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_amenities_csv')">CSV</a> with a <a href="/research/files/bc_stops_amenities_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_amenities_readme')">plain-text column guide</a>.</p>
 
 <p><strong><a href="/research/files/bc_stops_sources.xlsx" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_sources')">Sources</a></strong> (Excel) &mdash; where every field of every place came from: OpenStreetMap, our own enrichment, a language model, or a person. Also as <a href="/research/files/bc_stops_sources.csv" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_sources_csv')">CSV</a> with a <a href="/research/files/bc_stops_sources_README.txt" onclick="if (window.fathom) fathom.trackEvent('research_download_stops_sources_readme')">plain-text column guide</a>.</p>
 
@@ -258,13 +274,14 @@ h2:hover > .h-anchor { opacity: .55; }
       <a href="/support/trail-organizations/">Support the trail organizations</a>
       <a href="/suggest/">Suggest a stop</a>
       <a href="/apply/">Apply for accreditation</a>
+      <a href="/#contact">Contact</a>
       <a href="/#contact">Say hi! 🙂</a>
     </div>
     <div class="g-footer-col">
       <div class="g-footer-h">About us</div>
       <a href="/about">About</a>
-      <a href="/#contact">Contact</a>
       <a href="/with-thanks/">With thanks</a>
+      <a href="/advocacy/">Advocacy</a>
       <a href="/research/">Research and Data</a>
       <a href="/privacy">Privacy</a>
       <a href="/land-acknowledgement">Land acknowledgement</a>

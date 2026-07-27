@@ -6,7 +6,7 @@ places to stay, bike shops, attractions, and the transport that connects them.
 One row per place, with where it is, what kind of place it is, and how it treats
 an arriving cyclist as far as we know.
 
-Published 2026-07-25 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -21,7 +21,7 @@ that or not. Use it, redistribute it, build on it. If you publish a database
 derived from it, that database has to carry the same licence.
 
 Suggested citation: BC Cycle Tourism Society (2026). Places in British Columbia
-that a cyclist might want [data set]. Version 2026-07-25.
+that a cyclist might want [data set]. Version 2026-07-26.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
@@ -94,7 +94,7 @@ washroom being there at the end of a long day.
 There are no telephone numbers and no email addresses in these files,
 deliberately. Website addresses are here, and every listing's page on our own
 site is one, so a person who wants to make contact can. A bulk file of contact
-details for twelve thousand small businesses is a different object with
+details for fifteen thousand small businesses is a different object with
 different uses, and we would rather not have made it.
 
 We do not run, own, or represent any of these places, and almost none of them
@@ -116,8 +116,9 @@ category
     Bike Services, Transport.
 
 subcategory
-    A finer kind of place within the category, 36 of them in all: cafe, bakery,
-    provincial park campground, bike shop, museum, and so on.
+    A finer kind of place within the category, 35 of them in all: cafe, bakery,
+    provincial park campground, bike shop, museum, and so on. Blank on a few
+    rows we could not type more finely.
 
 community
     The town or city the place is in, as we resolved it. Not always the postal
@@ -148,14 +149,16 @@ address
 
 price_band
     Roughly what it costs, in words that suit the category: Cheap eats through
-    Upscale for food, Budget through Premium for a bed, Free for most public
-    places. Blank for categories where a price band would be meaningless, and
-    blank wherever we could not establish one.
+    Fine dining for food, Rock-bottom through Luxury for a bed, Free for most
+    public places. Blank for categories where a price band would be meaningless,
+    and blank wherever we could not establish one.
 
 ownership
     Who owns it, at the resolution a visitor would care about: an independent
     British Columbia business, a British Columbia chain, a Canadian business, a
-    global chain, a nonprofit, or a public body such as a provincial park.
+    global chain, a nonprofit, or a public body. Public and park ownership is
+    split finer in the data: provincial park, provincial recreation site,
+    national park, municipal, and so on. Blank on a few rows.
 
 indigenous_role
     Whether the place is Indigenous owned, Indigenous operated, or presents

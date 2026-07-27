@@ -5,7 +5,7 @@ One row per operator: whether it carries bicycles, under what conditions, where
 that answer came from, and when a human last checked it. Nobody else publishes
 this, which is also why it needs reading with its dates in view.
 
-Published 2026-07-25 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -22,7 +22,7 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). British Columbia carriers
-and their bicycle policies [data set]. Version 2026-07-25.
+and their bicycle policies [data set]. Version 2026-07-26.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
@@ -31,6 +31,12 @@ Carriers: 67 rows, 12 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
+
+There is no feed. The registry behind these files is kept by hand, assembled
+service by service from operator websites, regional transit schedules, tourism
+listings, ferry timetables, and telephone calls. It is a collection, not a
+census: we cannot know what we have missed, so treat every count as a floor,
+never a total.
 
 Of the 67 carriers here, 30 have had their bicycle policy checked against the
 operator's own material, 9 are read from the operator's published description
@@ -50,8 +56,8 @@ Bicycle policies change, and this is the one place in our research where stale
 data has a physical cost. A route measurement that goes out of date is a mild
 embarrassment. A bicycle policy that goes out of date leaves somebody standing
 at a depot with a loaded bicycle and no way onto the bus. Check the
-last_verified column before you rely on a row, and confirm with the operator
-before you travel.
+last_verified column in the carriers file before you rely on a row, and confirm
+with the operator before you travel.
 
 We do not run any of these services. Operators change their routes, their
 seasons and their bicycle rules without telling us. Corrections are welcome and
@@ -77,7 +83,9 @@ bikes_carried
 
 bike_policy
     What the operator does with a bicycle, in plain words. Blank where
-    bikes_carried is unknown.
+    bikes_carried is unknown. Where an operator runs more than one kind of
+    service, this describes one of them; our trip planner shows mode-specific
+    wording for each leg.
 
 restrictions
     The conditions most likely to end a trip at the door: electric bikes
@@ -95,9 +103,10 @@ policy_source
     separately. 'not-on-file' means we hold nothing.
 
 last_verified  [date]
-    When a person last checked. Blank means we hold no date, which for some
-    carriers means nobody has checked and for others means the check was not
-    dated. Read it with policy_source.
+    When a person last checked this carrier against the operator's own material.
+    Per-carrier: most rows carry the July 2026 vetting pass, carriers checked
+    individually since then carry their own later dates. Blank means nobody has
+    checked. Read it with policy_source.
 
 listing_url
     Our page for this operator, where we hold one.

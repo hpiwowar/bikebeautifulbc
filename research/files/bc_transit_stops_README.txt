@@ -5,7 +5,7 @@ Every stop on every service in the routes file, in the order the service calls
 at them, with a coordinate and an honest statement of how precise that
 coordinate is. Join it to the routes file on route_id.
 
-Published 2026-07-25 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -22,21 +22,27 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). British Columbia transit
-stops, in order, with locations [data set]. Version 2026-07-25.
+stops, in order, with locations [data set]. Version 2026-07-26.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Stops: 904 rows, 9 columns.
+Stops: 1007 rows, 9 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
 
-220 of the 904 stops are placed at the middle of their community rather than at
+There is no feed. The registry behind these files is kept by hand, assembled
+service by service from operator websites, regional transit schedules, tourism
+listings, ferry timetables, and telephone calls. It is a collection, not a
+census: we cannot know what we have missed, so treat every count as a floor,
+never a total.
+
+246 of the 1007 stops are placed at the middle of their community rather than at
 the stop itself. The location_precision column says which is which; do not treat
 a centroid as a platform location.
 
-55 stops have no coordinate at all, and every one of them belongs to a service
+54 stops have no coordinate at all, and every one of them belongs to a service
 set aside from the model.
 
 WHAT THIS FILE DOES NOT TELL YOU
@@ -45,8 +51,8 @@ Bicycle policies change, and this is the one place in our research where stale
 data has a physical cost. A route measurement that goes out of date is a mild
 embarrassment. A bicycle policy that goes out of date leaves somebody standing
 at a depot with a loaded bicycle and no way onto the bus. Check the
-last_verified column before you rely on a row, and confirm with the operator
-before you travel.
+last_verified column in the carriers file before you rely on a row, and confirm
+with the operator before you travel.
 
 We do not run any of these services. Operators change their routes, their
 seasons and their bicycle rules without telling us. Corrections are welcome and

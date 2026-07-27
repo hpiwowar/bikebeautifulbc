@@ -13,7 +13,7 @@ air:HA05,air,Harbour Air,Vancouver Harbour – Whistler,Sea-to-Sky,,2,Vancouver 
 air:HA06,air,Harbour Air,Vancouver Harbour – Comox,Vancouver Island,daily,2,Vancouver (Coal Harbour),Comox,TRUE,,FALSE,"yes, with conditions",
 air:HA07,air,Harbour Air,Vancouver Harbour – Tofino,Vancouver Island,,2,Vancouver (Coal Harbour),Tofino,TRUE,,FALSE,"yes, with conditions",
 air:HA08,air,Harbour Air,Vancouver Harbour – Powell River (seasonal),Sunshine Coast,,2,Vancouver (Coal Harbour),Powell River,TRUE,,FALSE,"yes, with conditions",Seasonal service.
-air:HA09,air,Harbour Air,"Vancouver Harbour – Campbell River (new, seasonal from Jul 2026)",Vancouver Island,daily,2,Vancouver (Coal Harbour),Campbell River,TRUE,,FALSE,"yes, with conditions","New route, seasonal from July 2026."
+air:HA09,air,Harbour Air,"Vancouver Harbour – Campbell River (new, seasonal from Jul 2026)",Vancouver Island,seasonal-varies,2,Vancouver (Coal Harbour),Campbell River,TRUE,,FALSE,"yes, with conditions","New route, seasonal from July 2026."
 air:HA10,air,Harbour Air,Vancouver Harbour – Ucluelet (new from Jun 2026),Vancouver Island,,2,Vancouver (Coal Harbour),Ucluelet,TRUE,,FALSE,"yes, with conditions",New route from June 2026.
 air:HA11,air,Harbour Air,Victoria Harbour – Nanaimo Harbour,Vancouver Island,,2,Victoria,Nanaimo,FALSE,reviewed and set aside,FALSE,"yes, with conditions",
 air:HA12,air,Harbour Air,Victoria Harbour – Salt Spring (Ganges),Gulf Islands,,2,Victoria,Salt Spring Island,TRUE,,FALSE,"yes, with conditions",
@@ -94,20 +94,20 @@ air:wj-yxc,air,WestJet,Vancouver (YVR) – Cranbrook (YXC),air,,2,Vancouver,Cran
 air:wj-yyj,air,WestJet,Vancouver (YVR) – Victoria (YYJ),air,,2,Vancouver,Victoria,TRUE,,FALSE,"yes, with conditions",
 bus:1,bus,Ebus,Vancouver – Kelowna,Southern Interior,daily,8,Vancouver,Kelowna,TRUE,,TRUE,"yes, with conditions",
 bus:10,bus,Whistler Shuttle,Vancouver – Whistler,Sea-to-Sky,,4,Vancouver,Whistler,TRUE,,TRUE,"yes, with conditions",Door-to-door shuttle; the downtown Vancouver pickup is suspended for summer 2026.
-bus:11,bus,West Coast Trail Express,West Coast Trail route,Vancouver Island,daily,10,Victoria,Bamfield,TRUE,,FALSE,no,Runs May 1 to September 30.
-bus:12,bus,West Coast Trail Express,Juan de Fuca Trail route,Vancouver Island,daily,7,Victoria,Nanaimo,TRUE,,FALSE,no,Runs May 1 to September 30.
-bus:13,bus,Epic Rides,Vancouver – Whistler,Sea-to-Sky,,2,Vancouver,Whistler,TRUE,,TRUE,"yes, with conditions","The only direct, non-stop run between Vancouver and Whistler. Bikes ride free and can go boxed or unboxed, spring through fall only (no bikes November to April)."
+bus:11,bus,West Coast Trail Express,West Coast Trail route,Vancouver Island,seasonal-varies,10,Victoria,Bamfield,TRUE,,FALSE,no,Runs May 1 to September 30.
+bus:12,bus,West Coast Trail Express,Juan de Fuca Trail route,Vancouver Island,seasonal-varies,7,Victoria,Nanaimo,TRUE,,FALSE,no,Runs May 1 to September 30.
+bus:13,bus,Epic Rides,Vancouver – Whistler,Sea-to-Sky,seasonal-varies,2,Vancouver,Whistler,TRUE,,TRUE,"yes, with conditions","The only direct, non-stop run between Vancouver and Whistler. Bikes ride free and can go boxed or unboxed, spring through fall only (no bikes November to April)."
 bus:14,bus,Sunshine Coast Shuttle,Powell River trailhead charters,Sunshine Coast,,2,Powell River,Remote trailheads,FALSE,"charter only, not a scheduled service",FALSE,unknown,"On-demand trailhead shuttle, not a fixed-stop route; book ahead."
 bus:15,bus,Mountain Man Mike's,Kaslo – Vancouver,West Kootenay,limited,18,Kaslo,Vancouver,TRUE,,TRUE,"yes, with conditions",Runs once a week; hop-on hop-off along the way.
 bus:16,bus,Mountain Man Mike's,Kaslo – Calgary,West Kootenay,limited,8,Kaslo,Sparwood,TRUE,,TRUE,"yes, with conditions","Runs once a week, continuing east into Alberta."
-bus:17,bus,Silver City Stagelines,Trail – Kelowna (Hwy 3/33),West Kootenay,limited,8,Trail,Kelowna,TRUE,,FALSE,no,
+bus:17,bus,Silver City Stagelines,Trail – Kelowna (Hwy 3/33),West Kootenay,daily,8,Trail,Kelowna,TRUE,,FALSE,no,
 bus:2,bus,Ebus,Vancouver – Kamloops,Southern Interior,daily,7,Vancouver,Kamloops,TRUE,,TRUE,"yes, with conditions",
 bus:3,bus,Ebus,Kamloops – Kelowna (via Salmon Arm),Southern Interior,daily,9,Kamloops,Kelowna,TRUE,,TRUE,"yes, with conditions",
-bus:4,bus,Ebus,Kelowna/Salmon Arm – Golden,Southern Interior,,9,Kelowna,Golden,TRUE,,TRUE,"yes, with conditions",Continues east into Alberta beyond Golden.
+bus:4,bus,Ebus,Kelowna/Salmon Arm – Golden,Southern Interior,daily,9,Kelowna,Golden,TRUE,,TRUE,"yes, with conditions",
 bus:5,bus,Ebus,Kamloops – Prince George,Cariboo,limited,11,Kamloops,Prince George,TRUE,,TRUE,"yes, with conditions",Runs Wed/Fri/Sun toward Prince George and Mon/Thu/Sat toward Kamloops; no service on Tuesdays.
 bus:6,bus,Squamish Connector,Squamish – Vancouver,Sea-to-Sky,seasonal-varies,7,Squamish,Vancouver,TRUE,,TRUE,"yes, with conditions",Bikes welcome May to September; check schedule outside that window.
-bus:7,bus,Rider Express,Vancouver – Calgary,Southern Interior,,14,Vancouver,Field,TRUE,,TRUE,"yes, with conditions",Continues east into Alberta beyond Field.
-bus:8,bus,YVR Skylynx,Vancouver – Whistler,Sea-to-Sky,,5,Vancouver,Whistler,TRUE,,TRUE,"yes, with conditions",Summer service April 18 to November 21; Squamish is a reservation-only stop.
+bus:7,bus,Rider Express,Vancouver – Calgary,Southern Interior,daily,14,Vancouver,Field,TRUE,,TRUE,"yes, with conditions",
+bus:8,bus,YVR Skylynx,Vancouver – Whistler,Sea-to-Sky,seasonal-varies,5,Vancouver,Whistler,TRUE,,TRUE,"yes, with conditions",Summer service April 18 to November 21; Squamish is a reservation-only stop.
 bus:9,bus,Sunshine Coast Connector,Langdale – Powell River,Sunshine Coast,daily,11,Langdale,Powell River,TRUE,,TRUE,"yes, with conditions",Includes the Earls Cove–Saltery Bay ferry leg.
 bus:bcfc-vic-van,bus,Wilson's Transportation (BC Connector),BC Ferries Connector — Vancouver / Victoria,Major,daily,4,Vancouver,Victoria,TRUE,,TRUE,"yes, with conditions",⛴️ Downtown to downtown via the Tsawwassen–Swartz Bay ferry crossing.
 bus:bcn-16w,bus,BC Bus North (Tahltan NST Busing Ltd.),Prince George – Prince Rupert (Hwy 16 West),north,limited,16,Prince George,Prince Rupert,TRUE,,TRUE,"yes, with conditions","Twice a week: Monday and Thursday westbound, Tuesday and Friday eastbound."
@@ -140,7 +140,7 @@ ferry:23,ferry,BC Ferries,Campbell River – Quathiaski Cove (Quadra),Discovery,
 ferry:24,ferry,BC Ferries,Heriot Bay (Quadra) – Whaletown (Cortes),Discovery,daily,2,Quadra Island,Cortes Island,TRUE,,TRUE,yes,
 ferry:25,ferry,BC Ferries,Port McNeill – Sointula – Alert Bay,North Island,daily,3,Port McNeill (Vancouver Island),Cormorant Island,TRUE,,TRUE,yes,
 ferry:26,ferry,BC Ferries,Skidegate – Alliford Bay (Haida Gwaii),North,daily,2,Graham Island,Moresby Island,TRUE,,TRUE,yes,
-ferry:28,ferry,BC Ferries,Port Hardy – Bella Coola,Central Coast,limited,5,Port Hardy (Vancouver Island),Bella Coola (Central Coast),TRUE,,TRUE,yes,"Doesn't sail every day, and not every sailing calls at every stop — check the BC Ferries schedule for your date."
+ferry:28,ferry,BC Ferries,Port Hardy – Bella Coola,Central Coast,seasonal-varies,5,Port Hardy (Vancouver Island),Bella Coola (Central Coast),TRUE,,TRUE,yes,"Doesn't sail every day, and not every sailing calls at every stop — check the BC Ferries schedule for your date."
 ferry:28A,ferry,BC Ferries,Central Coast Connector,Central Coast,limited,4,Bella Bella (Central Coast),Bella Coola (Central Coast),TRUE,,TRUE,yes,"About one run a week: Wednesday out from Bella Coola, Thursday or Friday back from Shearwater."
 ferry:3,ferry,BC Ferries,Horseshoe Bay – Langdale,Sunshine Coast,daily,2,West Vancouver (Metro Vancouver),Gibsons (Sunshine Coast),TRUE,,TRUE,yes,
 ferry:30,ferry,BC Ferries,Tsawwassen – Duke Point,Major,daily,2,Tsawwassen (Metro Vancouver),Nanaimo (Vancouver Island),TRUE,,TRUE,yes,
@@ -151,34 +151,44 @@ ferry:7,ferry,BC Ferries,Earls Cove – Saltery Bay,Sunshine Coast,daily,2,Sunsh
 ferry:8,ferry,BC Ferries,Horseshoe Bay – Snug Cove (Bowen),Metro Vancouver,daily,2,West Vancouver (Metro Vancouver),Bowen Island (Metro Vancouver),TRUE,,TRUE,yes,
 ferry:9,ferry,BC Ferries,Tsawwassen – Southern Gulf Islands,Gulf Islands,daily,6,Tsawwassen (Metro Vancouver),Salt Spring Island,TRUE,,TRUE,yes,"Sailing times vary a lot by routing: some trips are about 50 minutes, others run 2 to 3 hours via Swartz Bay. Check the specific sailing before you book."
 ferry:HULLO,ferry,Hullo,Hullo (Nanaimo – Vancouver),Metro Vancouver / Vancouver Island,daily,2,Nanaimo,Vancouver (Coal Harbour),TRUE,,TRUE,"yes, with conditions",
-ferry:NEWCASTLE,ferry,Newcastle Island Ferry Service LP,Saysutshun Newcastle Island Ferry (Maffeo Sutton Dock (Nanaimo) – Saysutshun / Newcastle Island Dock),Vancouver Island,,2,Nanaimo,Nanaimo,TRUE,,TRUE,"yes, with conditions","A ten-minute hop from Maffeo Sutton Park; seasonal May–October, hourly, returns on the half hour."
+ferry:NEWCASTLE,ferry,Newcastle Island Ferry Service LP,Saysutshun Newcastle Island Ferry (Maffeo Sutton Dock (Nanaimo) – Saysutshun / Newcastle Island Dock),Vancouver Island,seasonal-varies,2,Nanaimo,Nanaimo,TRUE,,TRUE,"yes, with conditions","A ten-minute hop from Maffeo Sutton Park; seasonal May–October, hourly, returns on the half hour."
 ferry:seabus,ferry,TransLink (SeaBus),SeaBus,Metro Vancouver,daily,2,Vancouver,North Vancouver,TRUE,,TRUE,"yes, with conditions",Bikes ride inside the cabin; during weekday rush hours there's room for six bikes a sailing.
-inland-ferry:IF01,inland-ferry,BC Inland Ferries,Balfour – Kootenay Bay,West Kootenay,,2,Balfour,Kootenay Bay,TRUE,,TRUE,yes,The longest free ferry ride in the world — about 35 minutes across Kootenay Lake; daily year-round with extra summer sailings.
-inland-ferry:IF02,inland-ferry,BC Inland Ferries,Shelter Bay – Galena Bay,West Kootenay,,2,Shelter Bay,Galena Bay,TRUE,,TRUE,yes,"Free 20-minute crossing of Upper Arrow Lake, sailing near-continuously from about 5am to midnight."
-inland-ferry:IF03,inland-ferry,BC Inland Ferries,Fauquier – Needles,West Kootenay,,2,Fauquier,Needles,TRUE,,TRUE,yes,"Free five-minute cable ferry; every 30 minutes in the daytime, on demand overnight."
-inland-ferry:IF04,inland-ferry,BC Inland Ferries,Arrow Park East – Arrow Park West,West Kootenay,,2,Arrow Park,Arrow Park,TRUE,,TRUE,yes,"Free five-minute cable ferry; daily, with a midday break from 12:15 to 2:15pm."
-inland-ferry:IF05,inland-ferry,BC Inland Ferries,Adams Lake (west) – Adams Lake (east),Thompson-Nicola,,2,Adams Lake,Adams Lake,TRUE,,TRUE,yes,"Free cable ferry, on demand around the clock (emergency-only 3–5am)."
-inland-ferry:IF06,inland-ferry,BC Inland Ferries,Francois Lake (north) – Southbank,Bulkley-Nechako,,2,Francois Lake,Southbank,TRUE,,TRUE,yes,"Free 15-minute crossing on a published timetable, roughly 5:30am to 11pm daily."
-inland-ferry:IF07,inland-ferry,BC Inland Ferries,Harrop – Procter,West Kootenay,,2,Harrop,Procter,TRUE,,TRUE,yes,"Free five-minute cable ferry, on demand 24 hours a day."
-inland-ferry:IF08,inland-ferry,BC Inland Ferries,Glade – Highway 3A,West Kootenay,,2,Glade,Thrums,TRUE,,TRUE,yes,"Free three-minute cable ferry, on demand from 5am to about 2am."
-inland-ferry:IF09,inland-ferry,BC Inland Ferries,Barnston Island – Port Kells,Lower Mainland,,2,Port Kells (Surrey),Barnston Island,TRUE,,TRUE,yes,"Free five-minute hop across the Fraser, on demand from early morning to around midnight."
-inland-ferry:IF10,inland-ferry,BC Inland Ferries,Lytton (east) – Lytton (west),Thompson-Nicola,,2,Lytton,Lytton,TRUE,,TRUE,yes,"Free reaction ferry pushed by the river current; on demand, with no service during high water."
-inland-ferry:IF11,inland-ferry,BC Inland Ferries,Big Bar (east) – Big Bar (west),Cariboo,,2,Big Bar Creek,Jesmond,TRUE,,TRUE,yes,Free reaction ferry; an aerial tramway takes over when the river is low or icy.
-inland-ferry:IF12,inland-ferry,BC Inland Ferries,South Usk – North Usk,North Coast,,2,Usk,Usk,TRUE,,TRUE,yes,Free reaction ferry across the Skeena near Terrace; an aerial tramway takes over when the river is low or icy.
-inland-ferry:IF13,inland-ferry,BC Inland Ferries,Little Fort (east) – Little Fort (west),Thompson-Nicola,,2,Little Fort,Little Fort,TRUE,,TRUE,yes,"Free five-minute reaction ferry, daytime only."
-inland-ferry:IF14,inland-ferry,BC Inland Ferries,McLure (east) – McLure (west),Thompson-Nicola,,2,McLure,McLure,TRUE,,TRUE,yes,Free five-minute reaction ferry; no service during high water or winter freeze-up.
-local-bus:900,local-bus,TransLink (Coast Mountain Bus Co.),900 Bike Bus,Metro Vancouver,,3,Richmond,Tsawwassen (Metro Vancouver),TRUE,,TRUE,"yes, with conditions","Seasonal: June 12 to September 7, Fridays, weekends and holidays; hourly, timed to ferry sailings. Carries 10 bikes."
-local-bus:GM01,local-bus,George Massey Tunnel Bike Shuttle,George Massey Tunnel Cyclist Shuttle,Metro Vancouver,limited,2,Delta,Richmond,TRUE,,TRUE,yes,"Free bike shuttle across the Massey Tunnel, hourly about 6am–6pm; full daily service late April to mid-October, weekdays only in winter."
+inland-ferry:IF01,inland-ferry,BC Inland Ferries,Balfour – Kootenay Bay,West Kootenay,daily,2,Balfour,Kootenay Bay,TRUE,,TRUE,yes,The longest free ferry ride in the world — about 35 minutes across Kootenay Lake; daily year-round with extra summer sailings.
+inland-ferry:IF02,inland-ferry,BC Inland Ferries,Shelter Bay – Galena Bay,West Kootenay,daily,2,Shelter Bay,Galena Bay,TRUE,,TRUE,yes,"Free 20-minute crossing of Upper Arrow Lake, sailing near-continuously from about 5am to midnight."
+inland-ferry:IF03,inland-ferry,BC Inland Ferries,Fauquier – Needles,West Kootenay,daily,2,Fauquier,Needles,TRUE,,TRUE,yes,"Free five-minute cable ferry; every 30 minutes in the daytime, on demand overnight."
+inland-ferry:IF04,inland-ferry,BC Inland Ferries,Arrow Park East – Arrow Park West,West Kootenay,daily,2,Arrow Park,Arrow Park,TRUE,,TRUE,yes,"Free five-minute cable ferry; daily, with a midday break from 12:15 to 2:15pm."
+inland-ferry:IF05,inland-ferry,BC Inland Ferries,Adams Lake (west) – Adams Lake (east),Thompson-Nicola,daily,2,Adams Lake,Adams Lake,TRUE,,TRUE,yes,"Free cable ferry, on demand around the clock (emergency-only 3–5am)."
+inland-ferry:IF06,inland-ferry,BC Inland Ferries,Francois Lake (north) – Southbank,Bulkley-Nechako,daily,2,Francois Lake,Southbank,TRUE,,TRUE,yes,"Free 15-minute crossing on a published timetable, roughly 5:30am to 11pm daily."
+inland-ferry:IF07,inland-ferry,BC Inland Ferries,Harrop – Procter,West Kootenay,daily,2,Harrop,Procter,TRUE,,TRUE,yes,"Free five-minute cable ferry, on demand 24 hours a day."
+inland-ferry:IF08,inland-ferry,BC Inland Ferries,Glade – Highway 3A,West Kootenay,daily,2,Glade,Thrums,TRUE,,TRUE,yes,"Free three-minute cable ferry, on demand from 5am to about 2am."
+inland-ferry:IF09,inland-ferry,BC Inland Ferries,Barnston Island – Port Kells,Lower Mainland,daily,2,Port Kells (Surrey),Barnston Island,TRUE,,TRUE,yes,"Free five-minute hop across the Fraser, on demand from early morning to around midnight."
+inland-ferry:IF10,inland-ferry,BC Inland Ferries,Lytton (east) – Lytton (west),Thompson-Nicola,daily,2,Lytton,Lytton,TRUE,,TRUE,yes,"Free reaction ferry pushed by the river current; on demand, with no service during high water."
+inland-ferry:IF11,inland-ferry,BC Inland Ferries,Big Bar (east) – Big Bar (west),Cariboo,daily,2,Big Bar Creek,Jesmond,TRUE,,TRUE,yes,Free reaction ferry; an aerial tramway takes over when the river is low or icy.
+inland-ferry:IF12,inland-ferry,BC Inland Ferries,South Usk – North Usk,North Coast,daily,2,Usk,Usk,TRUE,,TRUE,yes,Free reaction ferry across the Skeena near Terrace; an aerial tramway takes over when the river is low or icy.
+inland-ferry:IF13,inland-ferry,BC Inland Ferries,Little Fort (east) – Little Fort (west),Thompson-Nicola,daily,2,Little Fort,Little Fort,TRUE,,TRUE,yes,"Free five-minute reaction ferry, daytime only."
+inland-ferry:IF14,inland-ferry,BC Inland Ferries,McLure (east) – McLure (west),Thompson-Nicola,daily,2,McLure,McLure,TRUE,,TRUE,yes,Free five-minute reaction ferry; no service during high water or winter freeze-up.
+local-bus:900,local-bus,TransLink (Coast Mountain Bus Co.),900 Bike Bus,Metro Vancouver,seasonal-varies,3,Richmond,Tsawwassen (Metro Vancouver),TRUE,,TRUE,"yes, with conditions","Seasonal: June 12 to September 7, Fridays, weekends and holidays; hourly, timed to ferry sailings. Carries 10 bikes."
+local-bus:GM01,local-bus,George Massey Tunnel Bike Shuttle,George Massey Tunnel Cyclist Shuttle,Metro Vancouver,daily,2,Delta,Richmond,TRUE,,TRUE,yes,"Free bike shuttle across the Massey Tunnel, hourly about 6am–6pm; full daily service late April to mid-October, weekdays only in winter."
+local-bus:ash-1,local-bus,BC Transit,1 Ashcroft- Clinton,Thompson Okanagan,limited,3,Ashcroft,Clinton,TRUE,,TRUE,yes,Runs Wednesday and Friday only.
+local-bus:clw-1,local-bus,BC Transit,1 Vavenby,Thompson Okanagan,limited,2,Clearwater,Vavenby,TRUE,,TRUE,yes,Weekdays only.
 local-bus:clw-10,local-bus,BC Transit,10 Valley Connector,Thompson-Nicola,limited,2,Kamloops,Clearwater,TRUE,,TRUE,yes,
 local-bus:cv-1,local-bus,BC Transit,1 Comox Mall / Anfield Centre via N.I.C.,Vancouver Island,daily,2,Comox,Courtenay,TRUE,,TRUE,yes,
 local-bus:cv-10,local-bus,BC Transit,10 Fanny Bay / Deep Bay / Downtown Courtenay,Vancouver Island,daily,2,Courtenay,Buckley Bay,TRUE,,TRUE,yes,Only two trips on Sundays.
 local-bus:cv-11,local-bus,BC Transit,11 Airport via Powell R. Ferry / Downtown,Vancouver Island,limited,3,Comox,Courtenay,TRUE,,TRUE,yes,"One loop serves both the Little River ferry terminal and Comox airport; about 5–7 trips a day, and Sunday service is unconfirmed."
+local-bus:cv-12,local-bus,BC Transit,12 Oyster River / Downtown Courtenay,Vancouver Island,limited,2,Oyster River,Courtenay,TRUE,,TRUE,yes,No service on Sunday.
 local-bus:cvt-34,local-bus,BC Transit,34 Ladysmith-Chemainus,Vancouver Island,limited,2,Ladysmith,North Cowichan,TRUE,,TRUE,yes,
 local-bus:cvt-36,local-bus,BC Transit,36 Ladysmith-Duncan Express,Vancouver Island,limited,3,Ladysmith,Duncan,TRUE,,TRUE,yes,
 local-bus:cvt-6,local-bus,BC Transit,6 Crofton-Chemainus,Vancouver Island,daily,2,North Cowichan,Duncan,TRUE,,TRUE,yes,
 local-bus:cvt-66,local-bus,BC Transit,66 CVX Cowichan - Victoria Express,Vancouver Island,daily,7,Duncan,North Cowichan,TRUE,,TRUE,yes,
-local-bus:ea-goose,local-bus,Electric Alpine Biking,Galloping Goose Trail shuttle,Vancouver Island,limited,3,View Royal,Sooke,TRUE,,TRUE,"yes, with conditions",
+local-bus:cvt-7,local-bus,BC Transit,7 Cowichan Lake,Vancouver Island,daily,2,Duncan,Lake Cowichan,TRUE,,TRUE,yes,
+local-bus:cvt-8,local-bus,BC Transit,8 Mill Bay via Telegraph Rd/Duncan via Shawnigan Lk,Vancouver Island,daily,2,Mill Bay,Duncan,TRUE,,TRUE,yes,
+local-bus:cvt-9,local-bus,BC Transit,9 Mill Bay via Shawnigan Lk/Duncan via Telegraph Rd,Vancouver Island,daily,2,Duncan,Mill Bay,TRUE,,TRUE,yes,
+local-bus:cvt-99,local-bus,BC Transit,99 SVX Shawnigan Lake - Victoria Express,Vancouver Island,limited,4,Cobble Hill,Victoria,TRUE,,TRUE,yes,Weekdays only.
+local-bus:ea-goose,local-bus,Electric Alpine Biking,Galloping Goose Trail shuttle,Vancouver Island,on-demand,3,View Royal,Sooke,TRUE,,TRUE,"yes, with conditions",
 local-bus:ek-22,local-bus,BC Transit,22 KC Commuter,Kootenay,limited,2,Cranbrook,Kimberley,TRUE,,TRUE,yes,
+local-bus:ek-31,local-bus,BC Transit,31 South Connector,Kootenay Rockies,limited,2,Invermere,Canal Flats,TRUE,,TRUE,yes,Weekdays only.
+local-bus:ek-32,local-bus,BC Transit,32 North Connector,Kootenay Rockies,limited,2,Invermere,Edgewater,TRUE,,TRUE,yes,Weekdays only.
+local-bus:ek-41,local-bus,BC Transit,41 Fernie / Sparwood / Elkford,Kootenay Rockies,limited,3,Elkford,Fernie,TRUE,,TRUE,yes,Weekdays only.
 local-bus:fv-21,local-bus,BC Transit,21 Fraser Hwy,Metro Vancouver / Fraser Valley,daily,2,Langley,Abbotsford,TRUE,,TRUE,yes,
 local-bus:fv-21a,local-bus,BC Transit,21A Fraser Hwy,Metro Vancouver / Fraser Valley,limited,2,Langley,Abbotsford,TRUE,,TRUE,yes,
 local-bus:fv-31,local-bus,BC Transit,31 Valley Connector,Metro Vancouver / Fraser Valley,daily,2,Mission,Abbotsford,TRUE,,TRUE,yes,
@@ -187,22 +197,36 @@ local-bus:fv-31x,local-bus,BC Transit,31X Valley Connector,Metro Vancouver / Fra
 local-bus:fv-55,local-bus,BC Transit,55 Yarrow - Greendale,Metro Vancouver / Fraser Valley,limited,2,Chilliwack,Abbotsford,TRUE,,TRUE,yes,
 local-bus:fv-66,local-bus,BC Transit,66 Fraser Valley Express,Metro Vancouver / Fraser Valley,daily,4,Chilliwack,Burnaby,TRUE,,TRUE,yes,
 local-bus:fv-71,local-bus,BC Transit,71 Agassiz-Harrison,Metro Vancouver / Fraser Valley,daily,2,Harrison Hot Springs,Chilliwack,TRUE,,TRUE,yes,
+local-bus:fv-72,local-bus,BC Transit,72 Hope,"Vancouver, Coast & Mountains",limited,2,Hope,Kent,TRUE,,TRUE,yes,No service on Sunday.
 local-bus:krt-23,local-bus,BC Transit,23 Lake Country,Southern Interior,daily,2,Kelowna,Kelowna,TRUE,,TRUE,yes,First leg of the airport–downtown chain; transfer to Route 97 at UBCO Exchange.
 local-bus:krt-97,local-bus,BC Transit,97 Okanagan,Southern Interior,daily,2,Kelowna,Kelowna,TRUE,,TRUE,yes,Second leg of the airport–downtown chain: UBCO Exchange to Queensway downtown.
 local-bus:mtw-1,local-bus,BC Transit,1/2 Port McNeill - Port Hardy,Vancouver Island,limited,2,Port Hardy,Port McNeill,TRUE,,TRUE,yes,"Five trips a day on weekdays, two on Saturday, and no service on Sunday."
+local-bus:mtw-5,local-bus,BC Transit,5 Coal Harbour,Vancouver Island,limited,2,Port Hardy,Coal Harbour,TRUE,,TRUE,yes,No service on Sunday.
 local-bus:pg-161,local-bus,BC Transit,161 Prince George / Burns Lake,Cariboo,limited,2,Vanderhoof,Prince George,TRUE,,TRUE,yes,
+local-bus:pg-162,local-bus,BC Transit,162 Smithers / Burns Lake,Northern BC,limited,2,Smithers,Burns Lake,TRUE,,TRUE,yes,"Runs Monday, Wednesday and Friday only."
 local-bus:plr-12,local-bus,BC Transit,12 Stillwater,qathet (Powell River) / Sunshine Coast,limited,2,Stillwater,Powell River,TRUE,,TRUE,yes,
+local-bus:plr-13,local-bus,BC Transit,13 Texada Island,"Vancouver, Coast & Mountains",limited,2,Gillies Bay,Powell River,TRUE,,TRUE,yes,Runs Tuesday and Thursday only.
+local-bus:plr-14,local-bus,BC Transit,14 Lund,qathet (Powell River) / Sunshine Coast,limited,2,Powell River,Lund,TRUE,,TRUE,yes,"Runs Monday, Tuesday and Friday most of the year, six days a week from mid-May to Labour Day; some stretches are on-request. Front bike rack; e-bikes under 25 kg allowed."
 local-bus:pmb-99,local-bus,BC Transit,99 Pemberton Commuter,Sea-to-Sky,daily,3,Whistler,Pemberton,TRUE,,TRUE,yes,
 local-bus:pr-55,local-bus,BC Transit,55 Fairview Bay,North,limited,2,Prince Rupert,Prince Rupert,TRUE,,TRUE,yes,"Monday to Saturday only, about three trips a day; stops near the ferry terminal."
 local-bus:qnl-30,local-bus,BC Transit,30 Wells,Cariboo,limited,2,Quesnel,Barkerville,TRUE,,TRUE,yes,
+local-bus:qnl-31,local-bus,BC Transit,31 Nazko,Cariboo Chilcotin Coast,limited,2,Quesnel,Nazko,TRUE,,TRUE,yes,Wednesdays only.
 local-bus:rdn-1,local-bus,BC Transit,1 Nanaimo Rapid Line,Vancouver Island,daily,2,Nanaimo,Nanaimo,TRUE,,TRUE,yes,"Runs every 20 minutes or so, seven days a week."
 local-bus:rdn-20,local-bus,BC Transit,20/20A Hammond Bay / Dover,Vancouver Island,daily,2,Nanaimo,Nanaimo,TRUE,,TRUE,yes,
 local-bus:rdn-25,local-bus,BC Transit,25 Ferry Shuttle,Vancouver Island,daily,2,Nanaimo,Nanaimo,TRUE,,TRUE,yes,Also serves the Hullo ferry and Helijet terminals at the Nanaimo Port Authority.
 local-bus:rdn-70,local-bus,BC Transit,70 NCX Nanaimo - Cowichan Express,Vancouver Island,daily,4,Nanaimo,Duncan,TRUE,,TRUE,yes,
 local-bus:rdn-9,local-bus,BC Transit,9 Intercity,Vancouver Island,daily,3,Qualicum Beach,Nanaimo,TRUE,,TRUE,yes,
+local-bus:rdn-99,local-bus,BC Transit,99 Deep Bay,Vancouver Island,daily,2,Qualicum Beach,Deep Bay,TRUE,,TRUE,yes,
 local-bus:sc-1,local-bus,BC Transit,1 Sechelt-Gibsons/Langdale Ferry,Sunshine Coast,daily,2,Gibsons,Sechelt,TRUE,,TRUE,yes,
+local-bus:sc-4,local-bus,BC Transit,4 Halfmoon Bay,"Vancouver, Coast & Mountains",daily,2,Sechelt,Halfmoon Bay,TRUE,,TRUE,yes,
 local-bus:sc-90,local-bus,BC Transit,90 Sechelt-Gibsons/Langdale Ferry Express,Sunshine Coast,daily,2,Sechelt,Gibsons,TRUE,,TRUE,yes,
 local-bus:skn-11,local-bus,BC Transit,11 Terrace-Kitimat Connector,North Coast,limited,2,Terrace,Kitimat,TRUE,,TRUE,yes,
+local-bus:skn-14,local-bus,BC Transit,14 Gitaus/Queensway,Northern BC,limited,2,Terrace,Usk,TRUE,,TRUE,yes,No service on Sunday.
+local-bus:skn-163,local-bus,BC Transit,163 Hazeltons/Smithers,Northern BC,limited,2,Smithers,Kispiox,TRUE,,TRUE,yes,"Runs Monday, Wednesday and Friday only."
+local-bus:skn-164,local-bus,BC Transit,164 Hazeltons/Terrace,Northern BC,limited,3,Terrace,Kispiox,TRUE,,TRUE,yes,"Runs Tuesday, Thursday and Saturday only."
+local-bus:skn-31,local-bus,BC Transit,31 Gitsegukla,Northern BC,limited,2,Kitseguecla,Kispiox,TRUE,,TRUE,yes,"Runs Tuesday, Thursday and Saturday only."
+local-bus:skn-32,local-bus,BC Transit,32 West Connector,Northern BC,limited,2,Hazelton,Kitwanga,TRUE,,TRUE,yes,"Runs Monday, Wednesday and Friday only."
+local-bus:smi-23,local-bus,BC Transit,23 Smithers/Witset,Northern BC,limited,2,Moricetown,Smithers,TRUE,,TRUE,yes,No service on Sunday.
 local-bus:sok-30,local-bus,BC Transit,30 Penticton / Summerland,Southern Interior,limited,2,Penticton,Summerland,TRUE,,TRUE,yes,
 local-bus:sok-40,local-bus,BC Transit,40 Osoyoos / Penticton,Southern Interior,limited,3,Osoyoos,Penticton,TRUE,,TRUE,yes,
 local-bus:sok-50,local-bus,BC Transit,50 Penticton / Princeton,Southern Interior,limited,3,Princeton,Penticton,TRUE,,TRUE,yes,
@@ -214,15 +238,35 @@ local-bus:tl-620,local-bus,TransLink,620 Bridgeport Station / Tsawwassen Ferry,M
 local-bus:tl-701,local-bus,TransLink,701 Coquitlam Central / Haney Place (daily core),Metro Vancouver,daily,2,Coquitlam,Maple Ridge,TRUE,,TRUE,"yes, with conditions","Daily including weekends, about every 15–30 minutes."
 local-bus:tl-701-mission,local-bus,TransLink,701 Haney Place / Mission City (weekday-only extension),Metro Vancouver,limited,2,Maple Ridge,Mission,TRUE,,TRUE,"yes, with conditions","Weekday-only extension; it doesn't run on weekends, when the West Coast Express is also dark."
 local-bus:tl-r2,local-bus,TransLink,R2 Marine Dr RapidBus,Metro Vancouver,daily,2,North Vancouver,West Vancouver,TRUE,,TRUE,"yes, with conditions","Frequent service, seven days a week."
+local-bus:vrt-51x,local-bus,BC Transit,51X Westhills Exch / UVic Express,Vancouver Island,limited,3,Langford,Saanich,TRUE,,TRUE,yes,Weekdays only.
 local-bus:vrt-61,local-bus,BC Transit,61 Sooke / Langford / Downtown,Vancouver Island,daily,6,Victoria,Sooke,TRUE,,TRUE,yes,
 local-bus:vrt-64,local-bus,BC Transit,64 Langford Exch / Sooke via E Sooke and Beecher Bay,Vancouver Island,limited,3,Sooke,Colwood,TRUE,,TRUE,yes,
 local-bus:vrt-65,local-bus,BC Transit,65 Sooke / Downtown via Westhills,Vancouver Island,limited,5,Victoria,Sooke,TRUE,,TRUE,yes,
 local-bus:vrt-70,local-bus,BC Transit,70 Swartz Bay / Downtown,Vancouver Island,daily,2,Victoria,Victoria,TRUE,,TRUE,yes,
+local-bus:vrt-71,local-bus,BC Transit,71 Swartz Bay / Downtown,Vancouver Island,limited,2,Victoria,Sidney,TRUE,,TRUE,yes,Weekdays only.
 local-bus:vrt-72,local-bus,BC Transit,72 Swartz Bay / Downtown (via Saanichton),Vancouver Island,daily,2,Victoria,Victoria,TRUE,,TRUE,yes,Via Saanichton; a parallel option to the 70.
+local-bus:vrt-75,local-bus,BC Transit,75 Saanichton / Royal Oak / Downtown,Vancouver Island,daily,2,Victoria,Central Saanich,TRUE,,TRUE,yes,
+local-bus:vrt-76,local-bus,BC Transit,76 Swartz Bay / UVic,Vancouver Island,limited,2,North Saanich,Saanich,TRUE,,TRUE,yes,"Toward Swartz Bay it runs Friday only; toward UVic, Sunday and Monday only."
+local-bus:vrt-83,local-bus,BC Transit,83 Sidney / Brentwood / Royal Oak,Vancouver Island,daily,2,Sidney,Saanich,TRUE,,TRUE,yes,
+local-bus:vs-41,local-bus,BC Transit,41 Salmon Arm-Enderby,Thompson Okanagan,limited,2,Enderby,Salmon Arm,TRUE,,TRUE,yes,Wednesdays only.
+local-bus:vs-42,local-bus,BC Transit,42 Salmon Arm-Eagle Bay,Thompson Okanagan,limited,2,Salmon Arm,Carlin,TRUE,,TRUE,yes,Thursdays only.
+local-bus:vs-43,local-bus,BC Transit,43 Salmon Arm-Sorrento,Thompson Okanagan,limited,2,Salmon Arm,Sorrento,TRUE,,TRUE,yes,Thursdays only.
+local-bus:vs-60,local-bus,BC Transit,60 Enderby/Vernon,Thompson Okanagan,limited,3,Enderby,Vernon,TRUE,,TRUE,yes,No service on Sunday.
+local-bus:vs-61,local-bus,BC Transit,61 Lumby/Vernon,Thompson Okanagan,limited,2,Lumby,Vernon,TRUE,,TRUE,yes,Weekdays only.
 local-bus:vs-90,local-bus,BC Transit,90 UBCO/Vernon,Southern Interior,daily,3,Kelowna,Vernon,TRUE,,TRUE,yes,
 local-bus:wct-1,local-bus,West Coast Transit System (Tofino/Ucluelet),1 Tofino / Ucluelet,Vancouver Island,daily,3,Ucluelet,Tofino,TRUE,,TRUE,yes,
+local-bus:wk-10,local-bus,BC Transit,10 North Shore,Kootenay Rockies,limited,3,Nelson,Balfour,TRUE,,TRUE,yes,No service on Sunday.
+local-bus:wk-10x,local-bus,BC Transit,10X North Shore Express,Kootenay Rockies,limited,3,Nelson,Balfour,TRUE,,TRUE,yes,No service on Sunday.
+local-bus:wk-20,local-bus,BC Transit,20 Slocan Valley,Kootenay Rockies,limited,2,Slocan,Nelson,TRUE,,TRUE,yes,No service on Sunday.
+local-bus:wk-38,local-bus,BC Transit,38 Playmor via Pass Creek,Kootenay Rockies,limited,4,Castlegar,Brilliant,TRUE,,TRUE,yes,Runs Tuesday and Friday only.
 local-bus:wk-45,local-bus,BC Transit,45 Teck,West Kootenay,limited,2,Rossland,Trail,TRUE,,TRUE,yes,
 local-bus:wk-46,local-bus,BC Transit,46 Rossland,West Kootenay,limited,2,Trail,Rossland,TRUE,,TRUE,yes,
+local-bus:wk-52,local-bus,BC Transit,52 Nakusp-Playmor via Silverton,Kootenay Rockies,limited,2,Nakusp,Slocan,TRUE,,TRUE,yes,Wednesdays only.
+local-bus:wk-53,local-bus,BC Transit,53 Nakusp-Edgewood,Kootenay Rockies,limited,4,Nakusp,Edgewood,TRUE,,TRUE,yes,Fridays only.
+local-bus:wk-58,local-bus,BC Transit,58 Kaslo-Argenta,Kootenay Rockies,limited,2,Kaslo,Argenta,TRUE,,TRUE,yes,Thursdays only.
+local-bus:wk-72,local-bus,BC Transit,72 Salmo-Nelson via Ymir,Kootenay Rockies,limited,2,Nelson,Salmo,TRUE,,TRUE,yes,"Runs Tuesday, Thursday and Friday only."
+local-bus:wk-74,local-bus,BC Transit,74 Nakusp-Nelson,Kootenay Rockies,limited,2,Nakusp,Nelson,TRUE,,TRUE,yes,Runs Tuesday and Thursday only.
+local-bus:wk-76,local-bus,BC Transit,76 Kaslo-Nelson,Kootenay Rockies,limited,4,Nelson,Kaslo,TRUE,,TRUE,yes,"Runs Tuesday, Wednesday and Thursday only."
 local-bus:wk-98,local-bus,BC Transit,98 Columbia Connector,West Kootenay,limited,2,Castlegar,Trail,TRUE,,TRUE,yes,
 local-bus:wk-99,local-bus,BC Transit,99 Kootenay Connector,West Kootenay,limited,2,Nelson,Castlegar,TRUE,,TRUE,yes,
 local-train:WCE,local-train,TransLink (West Coast Express),West Coast Express,Metro Vancouver / Fraser Valley,limited,8,Vancouver,Mission,TRUE,,TRUE,"yes, with conditions","Weekdays only, peak direction only: five trains toward Vancouver in the morning, five back in the evening."
@@ -237,7 +281,7 @@ rental:nat-cx-nan,rental-car,National Car & Truck Rental (Vancouver Island),One-
 rental:nat-cx-ph,rental-car,National Car & Truck Rental (Vancouver Island),One-way rental: Comox – Port Hardy,Vancouver Island,,2,Comox,Port Hardy,TRUE,,FALSE,"yes, with conditions",
 rental:nat-nan-vic,rental-car,National Car & Truck Rental (Vancouver Island),One-way rental: Nanaimo – Victoria,Vancouver Island,,2,Nanaimo,Victoria,TRUE,,FALSE,"yes, with conditions",
 rental:nat-ph-nan,rental-car,National Car & Truck Rental (Vancouver Island),One-way rental: Port Hardy – Nanaimo,Vancouver Island,,2,Port Hardy,Nanaimo,TRUE,,FALSE,"yes, with conditions",
-skytrain:1,skytrain,TransLink,SkyTrain (all lines),Metro Vancouver,,54,Vancouver,Richmond,TRUE,,TRUE,"yes, with conditions",
+skytrain:1,skytrain,TransLink,SkyTrain (all lines),Metro Vancouver,daily,54,Vancouver,Richmond,TRUE,,TRUE,"yes, with conditions",
 train:amtrak-cascades,intercity-train,Amtrak Cascades,Vancouver – Seattle (Cascades),cross-border,daily,2,Vancouver Pacific Central,Seattle Downtown WA,TRUE,,TRUE,"yes, with conditions",Two daily round trips from Pacific Central; reserve bike space when you book. Passport required.
 train:via-canadian,intercity-train,VIA Rail,The Canadian (Vancouver – Kamloops North – Jasper),southwest,limited,3,Vancouver Pacific Central,Jasper AB,TRUE,,TRUE,"yes, with conditions",Two departures a week in season; bikes can be checked on and off at Vancouver and Jasper only.
 train:via-skeena,intercity-train,VIA Rail,Skeena (Prince Rupert – Prince George – Jasper),north,limited,10,Prince Rupert,Jasper AB,TRUE,,TRUE,"yes, with conditions",Three departures a week; the trip includes an overnight stop in Prince George (book your own hotel).
@@ -247,24 +291,24 @@ water-taxi:wt003,water-taxi,BLAST (English Bay Launch),Snug Cove – Coal Harbou
 water-taxi:wt004,water-taxi,BLAST (English Bay Launch),Snug Cove – Granville Island,Metro Vancouver / Howe Sound,,2,Bowen Island,Vancouver,FALSE,no longer operating,FALSE,unknown,Summer-weekend service to Granville Island.
 water-taxi:wt005,water-taxi,Cormorant Marine Water Taxi,Horseshoe Bay – Snug Cove,Metro Vancouver / Howe Sound,on-demand,2,West Vancouver,Bowen Island,FALSE,"charter only, not a scheduled service",FALSE,unknown,
 water-taxi:wt006,water-taxi,Cormorant Marine Water Taxi,Horseshoe Bay – Gambier Harbour,Metro Vancouver / Howe Sound,,2,West Vancouver,Gambier Island,FALSE,"charter only, not a scheduled service",FALSE,unknown,
-water-taxi:wt007,water-taxi,Lund Water Taxi,Lund – Savary Island,qathet (Powell River) / Sunshine Coast,,2,Lund,Savary Island,TRUE,,TRUE,unknown,"Year-round walk-on service, near-hourly in July and August; reservations required."
+water-taxi:wt007,water-taxi,Lund Water Taxi,Lund – Savary Island,qathet (Powell River) / Sunshine Coast,daily,2,Lund,Savary Island,TRUE,,TRUE,unknown,"Year-round walk-on service, near-hourly in July and August; reservations required. E-bikes not carried (barge by arrangement)."
 water-taxi:wt008,water-taxi,Savary Island Ferry (Finn Bay Marine / Access Point Marine),Lund – Savary Island,qathet (Powell River) / Sunshine Coast,,2,Lund,Savary Island,FALSE,no longer operating,FALSE,unknown,"Departures about every 30 minutes, June to September, from behind the Lund Hotel; reservations required."
-water-taxi:wt009,water-taxi,Discovery Launch Water Taxi,Campbell River – Cortes Island,Strathcona / Discovery Islands,,2,Campbell River,Cortes Island,TRUE,,TRUE,unknown,"Scheduled Fridays and Sundays in summer (also calls at Savary, Hernando and Lund); otherwise by charter."
-water-taxi:wt010,water-taxi,Qaya Way West Transportation,Campbell River – Savary Island,Strathcona / Discovery Islands,,4,Campbell River,Savary Island,TRUE,,TRUE,unknown,"Southern run daily June 26 to September 7, calling at Manson's Landing and Hernando; reservations required."
-water-taxi:wt011,water-taxi,Ahous Hakuum (MHSS),Tofino – Maaqutusiis (Ahousaht),Alberni-Clayoquot (West Coast Vancouver Island),,2,Tofino,Ahousaht (Flores Island),TRUE,,TRUE,unknown,"Runs Monday to Friday year-round, plus Sundays in spring and summer, from Tofino's 1st Street Dock."
+water-taxi:wt009,water-taxi,Discovery Launch Water Taxi,Campbell River – Cortes Island,Strathcona / Discovery Islands,limited,2,Campbell River,Cortes Island,TRUE,,TRUE,unknown,"Scheduled Fridays and Sundays in summer (also calls at Savary, Hernando and Lund); otherwise by charter."
+water-taxi:wt010,water-taxi,Qaya Way West Transportation,Campbell River – Savary Island,Strathcona / Discovery Islands,seasonal-varies,4,Campbell River,Savary Island,TRUE,,TRUE,unknown,"Southern run daily June 26 to September 7, calling at Manson's Landing and Hernando; reservations required."
+water-taxi:wt011,water-taxi,Ahous Hakuum (MHSS),Tofino – Maaqutusiis (Ahousaht),Alberni-Clayoquot (West Coast Vancouver Island),limited,2,Tofino,Ahousaht (Flores Island),TRUE,,TRUE,unknown,"Runs Monday to Friday year-round, plus Sundays in spring and summer, from Tofino's 1st Street Dock."
 water-taxi:wt012,water-taxi,Tofino Water Taxi,Tofino – Ahousaht (Flores Island),Alberni-Clayoquot (West Coast Vancouver Island),,2,Tofino,Ahousaht (Flores Island),FALSE,"charter only, not a scheduled service",FALSE,unknown,Electric zero-emission vessel; year-round; an Ahousaht access fee applies.
-water-taxi:wt013,water-taxi,Lasqueti Island Ferry (Western Pacific Marine),French Creek – False Bay,qathet / Northern Gulf Islands,,2,French Creek (Qualicum Beach),Lasqueti Island,TRUE,,TRUE,"yes, with conditions","Foot passengers and freight only, no cars; about an hour across, with no Tuesday sailings. Tickets sold on board."
-water-taxi:wt014,water-taxi,West Coast Launch,Cow Bay (Prince Rupert) – Dodge Cove,North Coast,,2,Prince Rupert,Dodge Cove (Digby Island),TRUE,,TRUE,unknown,Ferry-style service several days a week; the schedule varies by season.
-water-taxi:wt015,water-taxi,West Coast Launch,Cow Bay (Prince Rupert) – Digby Island Airport,North Coast,,2,Prince Rupert,Digby Island,TRUE,,TRUE,unknown,"About ten minutes across, timed with the airport shuttle; give advance notice."
-water-taxi:wt016,water-taxi,West Coast Launch,Cow Bay (Prince Rupert) – Metlakatla,North Coast,,2,Prince Rupert,Metlakatla,TRUE,,TRUE,unknown,About 30 minutes across; scheduled and charter service.
+water-taxi:wt013,water-taxi,Lasqueti Island Ferry (Western Pacific Marine),French Creek – False Bay,qathet / Northern Gulf Islands,daily,2,French Creek (Qualicum Beach),Lasqueti Island,TRUE,,TRUE,"yes, with conditions","Foot passengers and freight only, no cars; about an hour across, with no Tuesday sailings. Tickets sold on board."
+water-taxi:wt014,water-taxi,West Coast Launch,Cow Bay (Prince Rupert) – Dodge Cove,North Coast,limited,2,Prince Rupert,Dodge Cove (Digby Island),TRUE,,TRUE,unknown,Ferry-style service several days a week; the schedule varies by season.
+water-taxi:wt015,water-taxi,West Coast Launch,Cow Bay (Prince Rupert) – Digby Island Airport,North Coast,limited,2,Prince Rupert,Digby Island,TRUE,,TRUE,unknown,"About ten minutes across, timed with the airport shuttle; give advance notice."
+water-taxi:wt016,water-taxi,West Coast Launch,Cow Bay (Prince Rupert) – Metlakatla,North Coast,limited,2,Prince Rupert,Metlakatla,TRUE,,TRUE,unknown,About 30 minutes across; scheduled and charter service.
 water-taxi:wt017,water-taxi,West Coast Launch,Cow Bay (Prince Rupert) – Oona River,North Coast,,2,Prince Rupert,Oona River (Porcher Island),FALSE,"charter only, not a scheduled service",FALSE,unknown,About an hour and a quarter to Porcher Island; call to arrange.
-water-taxi:wt018,water-taxi,Metlakatla Ferry Service,Prince Rupert (Cow Bay) – Metlakatla,North Coast,,1,Prince Rupert,Prince Rupert,TRUE,,TRUE,unknown,"Community ferry from Cow Bay, about 15 minutes across, with several departures Monday to Friday."
+water-taxi:wt018,water-taxi,Metlakatla Ferry Service,Prince Rupert (Cow Bay) – Metlakatla,North Coast,limited,1,Prince Rupert,Prince Rupert,TRUE,,TRUE,unknown,"Community ferry from Cow Bay, about 15 minutes across, with several departures Monday to Friday."
 water-taxi:wt019,water-taxi,SeaCoastal Water Taxi (Kitasoo Xai'xais),Bella Bella – Klemtu,Central Coast (Great Bear Rainforest),,2,Bella Bella,Klemtu,TRUE,,TRUE,unknown,Scheduled run between Bella Bella and Klemtu; up to 12 passengers plus freight.
 water-taxi:wt020,water-taxi,Lund Water Taxi,Lund – Sarah Point (Sunshine Coast Trail),qathet (Powell River) / Sunshine Coast,,2,Lund,Sarah Point (Malaspina Peninsula),FALSE,"charter only, not a scheduled service",FALSE,unknown,By reservation; trailhead drop-off for the Sunshine Coast Trail (also Desolation Sound and Cortes).
 water-taxi:wt021,water-taxi,Cape Scott Water Taxi (North Coast Trail Shuttle),Port Hardy – Shushartie Bay,Mount Waddington (North Vancouver Island),,2,Port Hardy,Shushartie Bay (Cape Scott Park),FALSE,"charter only, not a scheduled service",FALSE,unknown,"Pre-booked North Coast Trail drop-off, about an hour; 7am departures when booked; beach landings depend on the tide."
 water-taxi:wt022,water-taxi,Cape Scott Water Taxi (North Coast Trail Shuttle),Port Hardy – Cape Sutil / Fisherman Bay,Mount Waddington (North Vancouver Island),,3,Port Hardy,Fisherman Bay (Cape Scott Park),FALSE,"charter only, not a scheduled service",FALSE,unknown,"Pre-booked alternate North Coast Trail access; high-tide-only landings, 6-person minimum to Fisherman Bay."
 water-taxi:wt023,water-taxi,Cape Scott Water Taxi (North Coast Trail Shuttle),Port Hardy – Mid-Coast inlets,Mount Waddington / Central Coast,on-demand,7,Port Hardy,Calvert Island,FALSE,"on demand only, not a scheduled service",FALSE,unknown,
-water-taxi:wt024,water-taxi,Qaya Way West Transportation,Campbell River – Discovery Islands (Northern run),Strathcona / Discovery Islands,,10,Campbell River,Hemming Bay,TRUE,,TRUE,unknown,"Northern run Mondays and Fridays year-round, plus a seasonal Wednesday sailing; reservations required."
+water-taxi:wt024,water-taxi,Qaya Way West Transportation,Campbell River – Discovery Islands (Northern run),Strathcona / Discovery Islands,limited,10,Campbell River,Hemming Bay,TRUE,,TRUE,unknown,"Northern run Mondays and Fridays year-round, plus a seasonal Wednesday sailing; reservations required."
 water-taxi:wt025,water-taxi,Discovery Launch Water Taxi,Campbell River – Discovery Islands & Mainland Inlets,Strathcona / Discovery Islands,,6,Campbell River,Bute Inlet (mainland),FALSE,"charter only, not a scheduled service",FALSE,unknown,
 water-taxi:wt026,water-taxi,Blind Channel Water Taxi,Blind Channel (West Thurlow) – Outer Discovery Islands,Strathcona / Discovery Islands,,5,Blind Channel (West Thurlow Island),Quadra Island,FALSE,"charter only, not a scheduled service",FALSE,unknown,
 water-taxi:wt027,water-taxi,Discovery West Adventures,Campbell River – Outer Discovery Islands,Strathcona / Discovery Islands,,4,Campbell River,Frederick Arm (mainland),FALSE,"charter only, not a scheduled service",FALSE,unknown,
@@ -274,10 +318,10 @@ water-taxi:wt030,water-taxi,Shorebird Expeditions,Tahsis – Yuquot (Friendly Co
 water-taxi:wt031,water-taxi,Nootka Water Taxi,Gold River – Yuquot (Friendly Cove),Strathcona / West Coast Vancouver Island (Nootka Sound),,3,Gold River,Hesquiat Peninsula,FALSE,"charter only, not a scheduled service",FALSE,unknown,
 water-taxi:wt032,water-taxi,Zeballos Expeditions (Zeballos Water Taxi),Zeballos – Nuchatlitz / Nootka Island,Strathcona / West Coast Vancouver Island (Esperanza-Nootka),,5,Zeballos,Louie Bay (Nootka Island),FALSE,"charter only, not a scheduled service",FALSE,unknown,
 water-taxi:wt033,water-taxi,West Coast Launch,Kitimat – Hartley Bay,North Coast / Kitimat-Stikine,,3,Kitimat,Kemano,FALSE,"charter only, not a scheduled service",FALSE,unknown,About 1.5–2 hours down Douglas Channel; call to arrange.
-water-taxi:wt034,water-taxi,West Coast Launch,Cow Bay (Prince Rupert) – Kitkatla (Gitxaała),North Coast,,2,Prince Rupert,Kitkatla (Gitxaała),TRUE,,TRUE,unknown,"Twice-weekly ferry run in partnership with Gitxaała (Fridays 11am, Sundays noon); about 1.5–2 hours."
+water-taxi:wt034,water-taxi,West Coast Launch,Cow Bay (Prince Rupert) – Kitkatla (Gitxaała),North Coast,limited,2,Prince Rupert,Kitkatla (Gitxaała),TRUE,,TRUE,unknown,"Twice-weekly ferry run in partnership with Gitxaała (Fridays 11am, Sundays noon); about 1.5–2 hours."
 water-taxi:wt035,water-taxi,West Coast Launch,Cow Bay (Prince Rupert) – Lax Kw'alaams (Port Simpson),North Coast,,5,Prince Rupert,"Ketchikan (Alaska, USA)",FALSE,"charter only, not a scheduled service",FALSE,unknown,Call to arrange; also serves Gingolx and the Khutzeymateen.
-water-taxi:wt036,water-taxi,Tsimshian Storm (Kitkatla/Hartley Bay/Metlakatla),Prince Rupert (Metlakatla dock) – Kitkatla,North Coast,,4,Prince Rupert,Kitkatla (Gitxaała),TRUE,,TRUE,unknown,"Departs Prince Rupert twice weekly at 10am, returning from Kitkatla at noon; sailings are weather-dependent."
+water-taxi:wt036,water-taxi,Tsimshian Storm (Kitkatla/Hartley Bay/Metlakatla),Prince Rupert (Metlakatla dock) – Kitkatla,North Coast,limited,4,Prince Rupert,Kitkatla (Gitxaała),TRUE,,TRUE,unknown,"Departs Prince Rupert twice weekly at 10am, returning from Kitkatla at noon; sailings are weather-dependent."
 water-taxi:wt037,water-taxi,SeaCoastal Water Taxi (Kitasoo Xai'xais),Klemtu / Bella Bella – Central Coast communities,Central Coast (Great Bear Rainforest),on-demand,7,Klemtu,Prince Rupert,FALSE,"on demand only, not a scheduled service",FALSE,unknown,
-water-taxi:wt038,water-taxi,MV Uchuck III (Nootka Sound Service Ltd / Get West),Gold River – Tahsis,Strathcona / West Coast Vancouver Island (Nootka Sound),,2,Gold River,Tahsis,TRUE,,TRUE,unknown,A working coastal freighter that takes passengers; Nootka Sound day trips most Tuesdays.
-water-taxi:wt039,water-taxi,MV Uchuck III (Nootka Sound Service Ltd / Get West),Gold River – Yuquot (Friendly Cove),Strathcona / West Coast Vancouver Island (Nootka Sound),,2,Gold River,Yuquot / Friendly Cove (Nootka Island),TRUE,,TRUE,unknown,"Wednesday and Saturday sailings pick up Nootka Trail hikers at Friendly Cove, late June to early September."
-water-taxi:wt040,water-taxi,MV Uchuck III (Nootka Sound Service Ltd / Get West),Gold River – Kyuquot,Strathcona / West Coast Vancouver Island (Nootka–Kyuquot),,4,Gold River,Kyuquot,TRUE,,TRUE,unknown,"Overnight run to Kyuquot via Esperanza Inlet, Thursday to Friday, June to September."
+water-taxi:wt038,water-taxi,MV Uchuck III (Nootka Sound Service Ltd / Get West),Gold River – Tahsis,Strathcona / West Coast Vancouver Island (Nootka Sound),limited,2,Gold River,Tahsis,TRUE,,TRUE,unknown,A working coastal freighter that takes passengers; Nootka Sound day trips most Tuesdays.
+water-taxi:wt039,water-taxi,MV Uchuck III (Nootka Sound Service Ltd / Get West),Gold River – Yuquot (Friendly Cove),Strathcona / West Coast Vancouver Island (Nootka Sound),limited,2,Gold River,Yuquot / Friendly Cove (Nootka Island),TRUE,,TRUE,unknown,"Wednesday and Saturday sailings pick up Nootka Trail hikers at Friendly Cove, late June to early September."
+water-taxi:wt040,water-taxi,MV Uchuck III (Nootka Sound Service Ltd / Get West),Gold River – Kyuquot,Strathcona / West Coast Vancouver Island (Nootka–Kyuquot),limited,4,Gold River,Kyuquot,TRUE,,TRUE,unknown,"Overnight run to Kyuquot via Esperanza Inlet, Thursday to Friday, June to September."

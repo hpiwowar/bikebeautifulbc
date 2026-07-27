@@ -3,11 +3,11 @@ Every way of getting between two British Columbia communities
 
 One row per journey rather than per pair: every itinerary our trip planner finds
 between every pair of communities, in the order it ranks them, with what you
-board and whether a bicycle can come. The connections file reports one journey
-per pair; this is all of them, so our ranking can be inspected rather than taken
-on trust.
+board and whether a bicycle can come. The connections file reports two journeys
+per pair (a neutral pick and our recommendation); this is all of them, so our
+ranking can be inspected rather than taken on trust.
 
-Published 2026-07-25 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -24,20 +24,26 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). Every way of getting
-between two British Columbia communities [data set]. Version 2026-07-25.
+between two British Columbia communities [data set]. Version 2026-07-26.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Journeys: 54318 rows, 13 columns.
+Journeys: 59493 rows, 13 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
 
-54318 journeys across 10504 community pairs, in the order we rank them. Rank 1
+There is no feed. The registry behind these files is kept by hand, assembled
+service by service from operator websites, regional transit schedules, tourism
+listings, ferry timetables, and telephone calls. It is a collection, not a
+census: we cannot know what we have missed, so treat every count as a floor,
+never a total.
+
+59493 journeys across 10710 community pairs, in the order we rank them. Rank 1
 is the journey we would suggest first.
 
-5627 of them cannot be made with a bicycle. They are kept rather than dropped,
+6609 of them cannot be made with a bicycle. They are kept rather than dropped,
 so that a service running the route you want and refusing your bicycle is
 visible rather than silently absent.
 
@@ -50,8 +56,8 @@ Bicycle policies change, and this is the one place in our research where stale
 data has a physical cost. A route measurement that goes out of date is a mild
 embarrassment. A bicycle policy that goes out of date leaves somebody standing
 at a depot with a loaded bicycle and no way onto the bus. Check the
-last_verified column before you rely on a row, and confirm with the operator
-before you travel.
+last_verified column in the carriers file before you rely on a row, and confirm
+with the operator before you travel.
 
 We do not run any of these services. Operators change their routes, their
 seasons and their bicycle rules without telling us. Corrections are welcome and
@@ -96,7 +102,7 @@ operators
 
 journey_km  [km]
     Total distance, including riding between stops. Blank where any boarding has
-    no distance recorded, which is most often a SkyTrain leg.
+    no distance recorded, which is always a SkyTrain leg.
 
 schedule_cautions
     Whether this journey is limited, on-demand, or seasonal. Blank means none of

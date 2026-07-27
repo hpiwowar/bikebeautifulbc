@@ -7,7 +7,7 @@ enrichment, human review, and hand-added records field by field, and because the
 licence on the whole depends on which parts are OpenStreetMap's. Join it to the
 places file on listing_key.
 
-Published 2026-07-25 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -22,7 +22,7 @@ that or not. Use it, redistribute it, build on it. If you publish a database
 derived from it, that database has to carry the same licence.
 
 Suggested citation: BC Cycle Tourism Society (2026). Where each fact about each
-place came from [data set]. Version 2026-07-25.
+place came from [data set]. Version 2026-07-26.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
@@ -58,7 +58,7 @@ washroom being there at the end of a long day.
 There are no telephone numbers and no email addresses in these files,
 deliberately. Website addresses are here, and every listing's page on our own
 site is one, so a person who wants to make contact can. A bulk file of contact
-details for twelve thousand small businesses is a different object with
+details for fifteen thousand small businesses is a different object with
 different uses, and we would rather not have made it.
 
 We do not run, own, or represent any of these places, and almost none of them
@@ -76,11 +76,14 @@ field
 
 source
     What supplied that field's current value. 'osm' is OpenStreetMap.
-    'enrichment' is our own automated pass over the place's website. A model
-    name such as 'sonnet_4.6', 'haiku_4.5' or 'opus_4.6' names the language
-    model that produced it. 'review_edit' and 'manual' mean a person typed it.
-    'camping', 'bcparks_api' and 'ptboard-icb' are specific outside sources.
-    Blank where we did not record one.
+    'enrichment' is our own automated pass over the place's website, performed
+    by a language model. A model name such as 'sonnet_4.6', 'haiku_4.5' or
+    'opus_4.6' names the language model that produced it. 'review_edit' and
+    'manual' mean a person typed it. 'camping' is our campground pipeline, whose
+    descriptions were also drafted by a language model from campground source
+    pages. 'bcparks_api' and 'ptboard-icb' are structured outside sources, and a
+    handful of rows carry other one-off verification sources. Blank where we did
+    not record one.
 
 The research here uses AI assistance (Claude models, Anthropic) for data
 collection, analysis, and writing. Feel free to ask for more details if you are

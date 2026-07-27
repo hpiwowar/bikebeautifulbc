@@ -6,7 +6,7 @@ measurements behind its difficulty tier and descriptive labels. The routes are
 published by route makers across the province; what we add is one consistent
 description of all of them.
 
-Published 2026-07-25 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -27,7 +27,7 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). Published BC cycling routes
-— derived metrics [data set]. Version 2026-07-25.
+— derived metrics [data set]. Version 2026-07-26.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
@@ -47,6 +47,9 @@ same rule the website does, so the two always agree.
 
 Labels are explained for riders at https://bccycletourism.ca/routes/how-we-
 describe/
+
+Traffic comfort classes are labelled C1 to C6, our own ladder adapted from HUB
+Cycling's bikeway classification.
 
 How every number here is computed, and what its limits are:
 https://bccycletourism.ca/research/files/route_ratings_methodology.pdf
@@ -237,29 +240,37 @@ surface_labels
 difficulty_sentence
     The one-line explanation shown on the route page.
 
-comfort_km_most  [km]
-    Classified length in comfort class MOST.
+comfort_km_c1  [km]
+    Classified length in traffic comfort class C1 (separated paths, or slow
+    streets with few cars).
 
-comfort_km_some  [km]
-    Classified length in comfort class SOME.
+comfort_km_c2  [km]
+    Classified length in traffic comfort class C2 (sharing light traffic, or
+    bike lanes on calm roads).
 
-comfort_km_few  [km]
-    Classified length in comfort class FEW.
+comfort_km_c3  [km]
+    Classified length in traffic comfort class C3 (sharing busier traffic, or
+    bike lanes on busy roads).
 
-comfort_km_very_few  [km]
-    Classified length in comfort class VERY FEW.
+comfort_km_c4  [km]
+    Classified length in traffic comfort class C4 (fast or heavy traffic, a
+    painted line at most).
+
+comfort_km_c5  [km]
+    Classified length in traffic comfort class C5 (highway-speed traffic, 60+
+    km/h, a painted line at most).
+
+comfort_km_c6  [km]
+    Classified length in traffic comfort class C6 (fast highway traffic, 70+
+    km/h, a painted line at most).
 
 comfort_km_backcountry  [km]
-    Classified length in comfort class BACKCOUNTRY.
-
-comfort_km_experienced_only  [km]
-    Classified length in comfort class EXPERIENCED ONLY.
-
-comfort_km_risk  [km]
-    Classified length in comfort class RISK.
+    Classified length in traffic comfort class BACKCOUNTRY (bare track, beyond
+    traffic data; off the ladder).
 
 comfort_km_forbidden  [km]
-    Classified length in comfort class FORBIDDEN.
+    Classified length in traffic comfort class FORBIDDEN (cycling not permitted;
+    off the ladder).
 
 The research here uses AI assistance (Claude models, Anthropic) for data
 collection, analysis, and writing. Feel free to ask for more details if you are

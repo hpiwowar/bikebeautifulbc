@@ -1,12 +1,12 @@
 Getting between British Columbia communities with a bicycle
 ===========================================================
 
-One row for every ordered pair of the 103 communities our trip planner covers:
+One row for every ordered pair of the 104 communities our trip planner covers:
 whether a cyclist can get from one to the other on scheduled service, how many
 times they would board, and what runs. The question this was built to answer is
 not where the buses go, it is where a bicycle is allowed to go with you.
 
-Published 2026-07-25 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -23,19 +23,25 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). Getting between British
-Columbia communities with a bicycle [data set]. Version 2026-07-25.
+Columbia communities with a bicycle [data set]. Version 2026-07-26.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Connections: 10504 rows, 22 columns.
+Connections: 10710 rows, 22 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
 
-Every one of the 10504 pairs is reachable somehow. 204 cannot be done with a
-bicycle by any means we can find, and a further 1868 can only be done by flying
-or by renting a car one way. That is 2072 pairs, or 20% of the province's
+There is no feed. The registry behind these files is kept by hand, assembled
+service by service from operator websites, regional transit schedules, tourism
+listings, ferry timetables, and telephone calls. It is a collection, not a
+census: we cannot know what we have missed, so treat every count as a floor,
+never a total.
+
+Every one of the 10710 pairs is reachable somehow. 206 cannot be done with a
+bicycle by any means we can find, and a further 1617 can only be done by flying
+or by renting a car one way. That is 1823 pairs, or 17% of the province's
 community pairs, with no scheduled ground or water service that will carry a
 bicycle.
 
@@ -53,8 +59,8 @@ Bicycle policies change, and this is the one place in our research where stale
 data has a physical cost. A route measurement that goes out of date is a mild
 embarrassment. A bicycle policy that goes out of date leaves somebody standing
 at a depot with a loaded bicycle and no way onto the bus. Check the
-last_verified column before you rely on a row, and confirm with the operator
-before you travel.
+last_verified column in the carriers file before you rely on a row, and confirm
+with the operator before you travel.
 
 We do not run any of these services. Operators change their routes, their
 seasons and their bicycle rules without telling us. Corrections are welcome and
@@ -110,9 +116,9 @@ operators
 journey_km  [km]
     Total distance of that journey, including any riding or self-transport
     between stops. Blank where any part of the journey has no distance recorded,
-    which is most often a SkyTrain leg: we hold no distances for SkyTrain at
-    all. Half the journeys here are blank for this reason, and a blank is better
-    than a total that quietly leaves a leg out.
+    which is always a SkyTrain leg: we hold no distances for SkyTrain at all.
+    Half the journeys here are blank for this reason, and a blank is better than
+    a total that quietly leaves a leg out.
 
 schedule_cautions
     Whether that journey is limited (does not run every day), on-demand (call to

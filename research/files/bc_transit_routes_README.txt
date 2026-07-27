@@ -1,12 +1,12 @@
-British Columbia transit routes and stops, for cyclists
-=======================================================
+British Columbia transit routes, for cyclists
+=============================================
 
 Every scheduled passenger service we have found that a cyclist could use to get
-around British Columbia, with its ordered stops and their locations. Buses,
-ferries, inland ferries, water taxis, trains, SkyTrain, flights, ride-share and
-one-way rental car corridors.
+around British Columbia. Buses, ferries, inland ferries, water taxis, trains,
+SkyTrain, flights, ride-share and one-way rental car corridors. Its ordered
+stops and their locations are the companion stops file.
 
-Published 2026-07-25 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -23,15 +23,21 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). British Columbia transit
-routes and stops, for cyclists [data set]. Version 2026-07-25.
+routes, for cyclists [data set]. Version 2026-07-26.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Routes: 282 rows, 14 columns.
+Routes: 326 rows, 14 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
+
+There is no feed. The registry behind these files is kept by hand, assembled
+service by service from operator websites, regional transit schedules, tourism
+listings, ferry timetables, and telephone calls. It is a collection, not a
+census: we cannot know what we have missed, so treat every count as a floor,
+never a total.
 
 This is topology, not a timetable. We record which services exist, where they
 stop, and in what order. We do not record when they depart. Because there are no
@@ -39,7 +45,7 @@ departure times here, this is not General Transit Feed Specification (GTFS) data
 and cannot be loaded by GTFS tools. Where one of our columns means the same
 thing as a GTFS field, we have borrowed the GTFS name so it reads familiarly.
 
-Of the 282 routes, 223 are part of the network we route journeys across. The
+Of the 326 routes, 267 are part of the network we route journeys across. The
 rest are published too, each with the reason we set it aside, because what was
 excluded is part of the picture.
 
@@ -51,8 +57,8 @@ Bicycle policies change, and this is the one place in our research where stale
 data has a physical cost. A route measurement that goes out of date is a mild
 embarrassment. A bicycle policy that goes out of date leaves somebody standing
 at a depot with a loaded bicycle and no way onto the bus. Check the
-last_verified column before you rely on a row, and confirm with the operator
-before you travel.
+last_verified column in the carriers file before you rely on a row, and confirm
+with the operator before you travel.
 
 We do not run any of these services. Operators change their routes, their
 seasons and their bicycle rules without telling us. Corrections are welcome and
