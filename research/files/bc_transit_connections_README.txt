@@ -1,7 +1,7 @@
 Getting between British Columbia communities with a bicycle
 ===========================================================
 
-One row for every ordered pair of the 104 communities our trip planner covers:
+One row for every ordered pair of the 114 communities our trip planner covers:
 whether a cyclist can get from one to the other on scheduled service, how many
 times they would board, and what runs. The question this was built to answer is
 not where the buses go, it is where a bicycle is allowed to go with you.
@@ -28,7 +28,7 @@ https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Connections: 10710 rows, 22 columns.
+Connections: 12880 rows, 22 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
@@ -39,9 +39,9 @@ listings, ferry timetables, and telephone calls. It is a collection, not a
 census: we cannot know what we have missed, so treat every count as a floor,
 never a total.
 
-Every one of the 10710 pairs is reachable somehow. 206 cannot be done with a
-bicycle by any means we can find, and a further 1617 can only be done by flying
-or by renting a car one way. That is 1823 pairs, or 17% of the province's
+Every one of the 12880 pairs is reachable somehow. 226 cannot be done with a
+bicycle by any means we can find, and a further 1772 can only be done by flying
+or by renting a car one way. That is 1998 pairs, or 16% of the province's
 community pairs, with no scheduled ground or water service that will carry a
 bicycle.
 

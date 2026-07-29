@@ -555,6 +555,8 @@ local-bus:cv-11,2,Comox Airport (YQQ),Comox,yqq,49.7108,-124.8867,airport,stop
 local-bus:cv-11,3,Downtown Exchange (Courtenay),Courtenay,courtenay-exchange,49.6919376,-124.998225,town,stop
 local-bus:cv-12,1,Glenmore Rd at Lambeth Rd,Oyster River,oyster-river,49.86991,-125.12904,dock,stop
 local-bus:cv-12,2,Veterans Memorial Pky at Caledon Cres,Courtenay,courtenay-exchange,49.6919376,-124.998225,town,stop
+local-bus:cv-2,1,Dunsmuir Ave at 4th St,Cumberland,cumberland,49.61922,-125.02699,dock,stop
+local-bus:cv-2,2,Anfield Centre,Courtenay,anfield-centre,49.6683,-124.97996,dock,stop
 local-bus:cvt-34,1,Coronation Mall,Ladysmith,coronation-mall,48.97871,-123.80471,dock,stop
 local-bus:cvt-34,2,Pine & Daniel,North Cowichan,pine-daniel,48.92664,-123.72684,dock,stop
 local-bus:cvt-36,1,Coronation Mall,Ladysmith,coronation-mall,48.97871,-123.80471,dock,stop
@@ -570,7 +572,7 @@ local-bus:cvt-66,5,Hwy 1 & Tillicum,Saanich,hwy-1-tillicum,48.45839,-123.39418,d
 local-bus:cvt-66,6,Legislature Terminal,Victoria,legislature,48.41827,-123.36805,dock,stop
 local-bus:cvt-66,7,Hwy 1 & Boys Rd,North Cowichan,hwy-1-boys-rd,48.77039,-123.6987,dock,stop
 local-bus:cvt-7,1,Village Green Mall,Duncan,duncan,48.77465,-123.7016,town,stop
-local-bus:cvt-7,2,Cowichan Lk. Rd & Skutz Falls,Lake Cowichan,lake-cowichan,48.80727,-123.95919,dock,stop
+local-bus:cvt-7,2,South Shore Rd & King George,Lake Cowichan,lake-cowichan,48.82589,-124.05459,dock,stop
 local-bus:cvt-8,1,Mill Bay Shopping Ctr,Mill Bay,mill-bay,48.6513,-123.5617,town,stop
 local-bus:cvt-8,2,Village Green Mall,Duncan,duncan,48.77465,-123.7016,town,stop
 local-bus:cvt-9,1,Village Green Mall,Duncan,duncan,48.77465,-123.7016,town,stop

@@ -176,6 +176,7 @@ local-bus:cv-1,local-bus,BC Transit,1 Comox Mall / Anfield Centre via N.I.C.,Van
 local-bus:cv-10,local-bus,BC Transit,10 Fanny Bay / Deep Bay / Downtown Courtenay,Vancouver Island,daily,2,Courtenay,Buckley Bay,TRUE,,TRUE,yes,Only two trips on Sundays.
 local-bus:cv-11,local-bus,BC Transit,11 Airport via Powell R. Ferry / Downtown,Vancouver Island,limited,3,Comox,Courtenay,TRUE,,TRUE,yes,"One loop serves both the Little River ferry terminal and Comox airport; about 5–7 trips a day, and Sunday service is unconfirmed."
 local-bus:cv-12,local-bus,BC Transit,12 Oyster River / Downtown Courtenay,Vancouver Island,limited,2,Oyster River,Courtenay,TRUE,,TRUE,yes,No service on Sunday.
+local-bus:cv-2,local-bus,BC Transit,2 Cumberland / Anfield Centre,Vancouver Island,daily,2,Cumberland,Courtenay,TRUE,,TRUE,yes,
 local-bus:cvt-34,local-bus,BC Transit,34 Ladysmith-Chemainus,Vancouver Island,limited,2,Ladysmith,North Cowichan,TRUE,,TRUE,yes,
 local-bus:cvt-36,local-bus,BC Transit,36 Ladysmith-Duncan Express,Vancouver Island,limited,3,Ladysmith,Duncan,TRUE,,TRUE,yes,
 local-bus:cvt-6,local-bus,BC Transit,6 Crofton-Chemainus,Vancouver Island,daily,2,North Cowichan,Duncan,TRUE,,TRUE,yes,
