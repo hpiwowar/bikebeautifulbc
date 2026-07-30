@@ -111,27 +111,39 @@ h2:hover > .h-anchor { opacity: .55; }
 .search-wrap input { width: 100%; padding: 8px 12px 8px 34px; font-size: 16px; border: 1px solid #E5E7EB; border-radius: 8px; background: #fff; color: #1a1a1a; outline: none; box-sizing: border-box; font-family: inherit; }
 .search-wrap input:focus { border-color: #1E7D96; }
 .search-wrap input::placeholder { color: #bbb; }
-.fn-grid-wrap { position: relative; margin-bottom: 0.5rem; }
-.fn-grid { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 4px 2px 4px; }
-.fn-grid::-webkit-scrollbar { display: none; }
-.fn-card { flex: 0 0 280px; scroll-snap-align: start; background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 0.9rem 1rem 1.35rem; display: flex; flex-direction: column; gap: 6px; cursor: pointer; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s; box-sizing: border-box; }
-.fn-grid-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; border: 1px solid #E5E7EB; background: #fff; color: #1E7D96; font-size: 16px; font-weight: 700; cursor: pointer; z-index: 2; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.15s; padding: 0; }
-.fn-grid-nav:hover { background: #1E7D96; color: #fff; border-color: #1E7D96; }
-.fn-grid-nav:disabled { opacity: 0.3; cursor: default; box-shadow: none; }
-.fn-grid-nav:disabled:hover { background: #fff; color: #1E7D96; border-color: #E5E7EB; }
-.fn-grid-nav-prev { left: -14px; }
-.fn-grid-nav-next { right: -14px; }
-.fn-card-coming { background: #FFF6E5; border: 1.5px dashed #d4c6a2; }
-.fn-card-coming .fn-card-title { color: #6b5a2c; }
-.fn-card-coming .fn-card-teaser { color: #5a4e2c; }
-.fn-card-coming-img { width: 100%; height: 160px; background: rgba(212, 198, 162, 0.18); border-radius: 6px; margin-bottom: 2px; display: flex; align-items: center; justify-content: center; font-size: 56px; color: #d4c6a2; font-weight: 200; line-height: 1; user-select: none; }
-.fn-card:hover { border-color: #1E7D96; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-.fn-card.hidden { display: none; }
-.fn-card-img { width: 100%; height: 160px; background: #B8E0EC; border-radius: 6px; margin-bottom: 2px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.fn-card-img img { width: 100%; height: 100%; object-fit: cover; }
-.fn-card-title { font-family: "Archivo", sans-serif; font-size: 17px; font-weight: 500; color: #1E7D96; line-height: 1.4; margin: 0; }
-.fn-card-teaser { font-size: 15px; color: #666; line-height: 1.55; margin: 0; }
-.fn-card-date { font-size: 13px; color: #aaa; margin-top: auto; padding-top: 4px; }
+/* Article sections (BC-252 redesign, 2026-07-30). The section band widens to
+   960px so the card grid can breathe; the rest of the page stays at 720px. */
+.fn-wide { max-width: 960px; margin: 0 auto; padding: 0 40px; }
+.fn-cont { padding-top: 0; }
+.shelf-h { font-family: "Archivo", sans-serif; font-size: 21px; font-weight: 400; color: #1F514C; letter-spacing: -0.02em; margin: 0 0 4px; }
+.shelf-sub { font-size: 14px; color: #888; margin: 0 0 16px; }
+.read-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 40px; }
+.read-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: border-color .2s, box-shadow .2s; }
+.read-card:hover { border-color: #1E7D96; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+.read-card-img { width: 100%; aspect-ratio: 16 / 9; background: #B8E0EC; overflow: hidden; }
+.read-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.read-card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 7px; flex: 1; }
+.read-card-title { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 500; color: #1F514C; line-height: 1.3; }
+.read-card:hover .read-card-title { color: #1E7D96; }
+.read-card-teaser { font-size: 14px; color: #666; line-height: 1.55; }
+.read-card-date { font-size: 12.5px; color: #aaa; margin-top: auto; padding-top: 6px; }
+.howto-shelf { border: 1px solid #E5E7EB; background: #fff; border-radius: 12px; overflow: hidden; margin-bottom: 26px; }
+.howto-row { display: flex; gap: 18px; align-items: center; padding: 14px 18px; text-decoration: none; color: inherit; border-top: 1px solid #F0EFE9; transition: background .15s; }
+.howto-row:first-of-type { border-top: none; }
+.howto-row:hover { background: #F5FAFB; }
+.howto-thumb { flex: 0 0 96px; height: 72px; border-radius: 8px; overflow: hidden; background: #E7F3F0; display: flex; align-items: center; justify-content: center; }
+.howto-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.howto-thumb span { font-family: "Archivo", sans-serif; font-size: 13px; color: #1F514C; opacity: .5; }
+.howto-text { flex: 1; min-width: 0; }
+.howto-title { font-family: "Archivo", sans-serif; font-size: 17px; font-weight: 500; color: #1F514C; line-height: 1.35; margin-bottom: 2px; }
+.howto-row:hover .howto-title { color: #1E7D96; }
+.howto-teaser { font-size: 14px; color: #666; line-height: 1.5; }
+.howto-date { font-size: 12.5px; color: #aaa; white-space: nowrap; align-self: flex-start; padding-top: 3px; }
+.workbench { margin-top: 4px; border: 1.5px dashed #d4c6a2; background: #FFF6E5; border-radius: 12px; padding: 16px 20px; display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; }
+.workbench-label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7434; }
+.workbench p { font-size: 14px; color: #5a4e2c; line-height: 1.55; flex: 1; min-width: 260px; margin: 0; }
+.workbench a { color: #1E7D96; }
+.read-card.hidden, .howto-row.hidden, .workbench.hidden { display: none; }
 .no-results-notes { font-size: 14px; color: #aaa; padding: 0.5rem 0 1rem; display: none; }
 .dispatch-results { margin: 1.25rem 0 2rem; display: none; }
 .dispatch-results-heading { font-size: 13px; font-weight: 500; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 0.75rem; }
@@ -176,8 +188,10 @@ h2:hover > .h-anchor { opacity: .55; }
 @media (max-width: 700px) {
   .fn-main { padding: 24px 14px 16px; }
   .fn-title { font-size: 32px; }
-  .fn-card { flex: 0 0 260px; }
-  .fn-grid-nav { display: none; }
+  .fn-wide { padding: 0 14px; }
+  .read-grid { grid-template-columns: 1fr; }
+  .howto-row { align-items: flex-start; }
+  .howto-date { display: none; }
   .subscribe-strip { flex-direction: column; align-items: stretch; gap: 1rem; }
   .subscribe-form { flex: 0 0 auto; width: 100%; }
   .subscribe-form input { flex: 1; width: auto; min-width: 0; }
@@ -219,42 +233,78 @@ h2:hover > .h-anchor { opacity: .55; }
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
     <input type="text" id="search" placeholder="Search Field Notes and dispatches…" oninput="doSearch(this.value)" aria-label="Search Field Notes and dispatches">
   </div>
-
-  <div class="fn-grid-wrap">
-    <button class="fn-grid-nav fn-grid-nav-prev" id="fn-prev" aria-label="Previous articles" disabled>&larr;</button>
-    <div class="fn-grid" id="fn-grid">
-      <a class="fn-card" href="/field-note/hello" data-search="hello calling everyone who loves exploring bc by bike subscribe tell us what you know listening founding invitation newsletter contributors openstreetmap">
-      <div class="fn-card-img"><img src="/img/field_notes/202605/seymour_conservation_north_vancouver.jpg" alt="Calling everyone who loves exploring BC by bike!" /></div>
-      <p class="fn-card-title">Calling everyone who loves exploring BC by bike!</p>
-      <p class="fn-card-teaser">We're starting by listening. Subscribe, tell us what you know, and help us build BC into one of the best places in the world to explore by bike.</p>
-    </a><a class="fn-card" href="/field-note/we-welcome-cyclists" data-search="bc bike stops we welcome cyclists wwc directory certification accreditation sea to sky trail whistler squamish hostel bike storage skylynx connector bus bagging quebec bienvenue cyclistes ontario by bike">
-      <div class="fn-card-img"><img src="/img/field_notes/202605/whistler_bc_fam_bus_loop.jpg" alt="Every BC bike trip starts with the same questions. Not anymore." /></div>
-      <p class="fn-card-title">Every BC bike trip starts with the same questions. Not anymore.</p>
-      <p class="fn-card-teaser">Quebec and Ontario figured this out. BC hadn't — until now. <strong>BC Bike Stops</strong> is a business directory built for what touring cyclists actually need to know.</p>
-    </a><a class="fn-card" href="/field-note/howto-coach-bus" data-search="howto how to coach bus bike bag rhinowalk amazon ebus rider express yvr skylynx islandlink vancouver kamloops kelowna whistler squamish prince george handlebars front wheel disc rotor bungee pack packing">
-      <div class="fn-card-img"><img src="/img/field_notes/202605/coach_bus/IMG_20260518_072232478.jpg" alt="HOW TO: Take your bike on a coach bus" /></div>
-      <p class="fn-card-title">HOW TO: Take your bike on a coach bus</p>
-      <p class="fn-card-teaser">Coach buses are one of BC's most underrated tools for cycle tourists — economical, low-carbon, and they usually accept bikes. Here's how to pack and ride along.</p>
-    </a><a class="fn-card" href="/field-note/howto-drivetrain" data-search="howto how to drivetrain chain clean lube maintenance bikepacking multi-day trip longer mat leblanc ali becker jockey wheels chainring master link backspin rag ziplock kootenay">
-      <div class="fn-card-img"></div>
-      <p class="fn-card-title">HOW TO: Keep your drivetrain happy on a multi-day ride</p>
-      <p class="fn-card-teaser">Mat from Trip Longer cleans his chain every night on tour, and it takes five minutes. Here's his routine.</p>
-    </a><a class="fn-card" href="/field-note/howto-taxi" data-search="howto how to taxi uber lyft uride rideshare ride-hailing carpool poparide coastal rides bike bag box front wheel prius kamloops kami cabs pickup notes xl airport van hatchback">
-      <div class="fn-card-img"><img src="/img/field_notes/202607/taxi/bag_in_hatch.jpg" alt="HOW TO: Take your bike in a taxi, Uber, or carpool" /></div>
-      <p class="fn-card-title">HOW TO: Take your bike in a taxi, Uber, or carpool</p>
-      <p class="fn-card-teaser">No bike rack required. With a little prep, a bagged bike rides fine in a cab, an Uber, or a friendly stranger's hatchback.</p>
-    </a><div class="fn-card fn-card-coming" data-search="coming soon workbench upcoming kvr bus ferry floatplane wild camping no turn-away policy bikepacking tourist economics">
-  <div class="fn-card-coming-img">+</div>
-  <p class="fn-card-title">On the workbench</p>
-  <p class="fn-card-teaser">Topics we're working on: KVR status, getting your bike around BC by bus and ferry, wild camping, a no-turn-away policy, cycle tourism economics. Subscribe to be notified.</p>
 </div>
-    </div>
-    <button class="fn-grid-nav fn-grid-nav-next" id="fn-next" aria-label="More articles">&rarr;</button>
+
+<div class="fn-wide">
+  <div id="deep-dives-section">
+    <h2 id="deep-dives" class="shelf-h">Deep dives<a class="h-anchor" href="#deep-dives" aria-label="Link to this section">#</a></h2>
+    <p class="shelf-sub">The longer reads: features, announcements, and policy.</p>
+    <div class="read-grid"><a class="read-card" href="/field-note/first-accredited-places" data-search="accreditation wave 145 accredited places bc bike stops red beard cafe kamloops our community bikes vancouver accent inns bike love butchart gardens okanagan heritage museum apply">
+      <div class="read-card-img"><img src="https://bcbb-assets.bccycletourism.workers.dev/photos/810769907a5997bd.jpg" alt="145 places in BC that want you to visit with your bike" /></div>
+      <div class="read-card-body">
+        <span class="read-card-title">145 places in BC that want you to visit with your bike</span>
+        <span class="read-card-teaser">The first 145 accredited places are live on BC Bike Stops. No paid placements, no self-nominations on faith. Each one showed us, in their own words, that cyclists are part of how they do business.</span>
+        <span class="read-card-date">July 2026</span>
+      </div>
+    </a><a class="read-card" href="/field-note/mva-reform-cycle-tourists" data-search="mva motor vehicle act reform road rules law bccc bc cycling coalition hub cycling idaho stop stop as yield passing distance following distance rail crossing railway tracks cattle guards side by side riding speed limiters roundabouts helmet survey advocacy">
+      <div class="read-card-img"><img src="https://bcbb-assets.bccycletourism.workers.dev/photos/d15b5b9b23a39333.jpg" alt="The law that governs every road you ride is being rewritten" style="object-position: 50% 90%;" /></div>
+      <div class="read-card-body">
+        <span class="read-card-title">The law that governs every road you ride is being rewritten</span>
+        <span class="read-card-teaser">BC is consulting on changes to the Motor Vehicle Act. Most of the attention goes to city streets. Here are five proposed changes that matter most when you're touring.</span>
+        <span class="read-card-date">July 2026</span>
+      </div>
+    </a><a class="read-card" href="/field-note/we-welcome-cyclists" data-search="bc bike stops we welcome cyclists wwc directory certification accreditation sea to sky trail whistler squamish hostel bike storage skylynx connector bus bagging quebec bienvenue cyclistes ontario by bike">
+      <div class="read-card-img"><img src="/img/field_notes/202605/whistler_bc_fam_bus_loop.jpg" alt="Every BC bike trip starts with the same questions. Not anymore." /></div>
+      <div class="read-card-body">
+        <span class="read-card-title">Every BC bike trip starts with the same questions. Not anymore.</span>
+        <span class="read-card-teaser">Quebec and Ontario figured this out. BC hadn't — until now. <strong>BC Bike Stops</strong> is a business directory built for what touring cyclists actually need to know.</span>
+        <span class="read-card-date">May 2026</span>
+      </div>
+    </a><a class="read-card" href="/field-note/hello" data-search="hello calling everyone who loves exploring bc by bike subscribe tell us what you know listening founding invitation newsletter contributors openstreetmap">
+      <div class="read-card-img"><img src="/img/field_notes/202605/seymour_conservation_north_vancouver.jpg" alt="Calling everyone who loves exploring BC by bike!" /></div>
+      <div class="read-card-body">
+        <span class="read-card-title">Calling everyone who loves exploring BC by bike!</span>
+        <span class="read-card-teaser">We're starting by listening. Subscribe, tell us what you know, and help us build BC into one of the best places in the world to explore by bike.</span>
+        <span class="read-card-date">May 2026</span>
+      </div>
+    </a></div>
+  </div>
+  <div id="howto-section">
+    <h2 id="how-to" class="shelf-h">HOW TO<a class="h-anchor" href="#how-to" aria-label="Link to this section">#</a></h2>
+    <p class="shelf-sub">Practical guides for getting yourself and your bike around BC.</p>
+    <div class="howto-shelf"><a class="howto-row" href="/field-note/howto-taxi" data-search="howto how to taxi uber lyft uride rideshare ride-hailing coastal rides bike bag box front wheel prius kamloops kami cabs pickup notes xl airport lineup minivan van hatchback">
+      <div class="howto-thumb"><img src="/img/field_notes/202607/taxi/taxi_and_ebus.jpg" alt="" /></div>
+      <div class="howto-text">
+        <div class="howto-title">Take your bike in a taxi or rideshare</div>
+        <div class="howto-teaser">No bike rack required. With a little prep, a bagged bike rides fine in a cab, an Uber, or a Coastal Rides car.</div>
+      </div>
+      <span class="howto-date">July 2026</span>
+    </a><a class="howto-row" href="/field-note/howto-drivetrain" data-search="howto how to drivetrain chain clean lube maintenance bikepacking multi-day trip longer mat leblanc ali becker jockey wheels chainring master link backspin rag ziplock kootenay">
+      <div class="howto-thumb"><img src="/img/field_notes/202607/drivetrain/drivetrain_muddy.jpg" alt="" /></div>
+      <div class="howto-text">
+        <div class="howto-title">Keep your drivetrain happy on a multi-day ride</div>
+        <div class="howto-teaser">Mat from Trip Longer cleans his chain every night on tour, and it takes five minutes. Here's his routine.</div>
+      </div>
+      <span class="howto-date">July 2026</span>
+    </a><a class="howto-row" href="/field-note/howto-coach-bus" data-search="howto how to coach bus bike bag rhinowalk amazon ebus rider express yvr skylynx islandlink vancouver kamloops kelowna whistler squamish prince george handlebars front wheel disc rotor bungee pack packing">
+      <div class="howto-thumb"><img src="/img/field_notes/202605/coach_bus/IMG_20260518_072232478.jpg" alt="" /></div>
+      <div class="howto-text">
+        <div class="howto-title">Take your bike on a coach bus</div>
+        <div class="howto-teaser">Coach buses are one of BC's most underrated tools for cycle tourists — economical, low-carbon, and they usually accept bikes. Here's how to pack and ride along.</div>
+      </div>
+      <span class="howto-date">May 2026</span>
+    </a></div>
+  </div>
+  <div class="workbench" data-search="coming soon workbench upcoming kvr bus ferry floatplane wild camping no turn-away policy bikepacking tourist economics">
+    <span class="workbench-label">On the workbench</span>
+    <p>Topics we're working on: KVR status, getting your bike around BC by bus and ferry, wild camping, a no-turn-away policy, cycle tourism economics. Subscribe to be notified.</p>
   </div>
   <p class="no-results-notes" id="no-results-notes">No Field Notes match that search.</p>
+</div>
 
+<div class="fn-main fn-cont">
   <div style="margin: 2.5rem auto; max-width: 640px;">
-    <div class="strawpoll-embed" id="strawpoll_wAg3QLV8dy8" style="height: 836px; max-width: 640px; width: 100%; margin: 0 auto; display: flex; flex-direction: column;"><iframe title="StrawPoll Embed" id="strawpoll_iframe_wAg3QLV8dy8" src="https://strawpoll.com/embed/wAg3QLV8dy8" style="position: static; visibility: visible; display: block; width: 100%; flex-grow: 1;" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe><script nonce="MjdjMTZlZDY2YTYyYjU3MzJlZTBmYmViODg3OWQ1M2FmZjc3MGZmYg==" async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script></div>
+    <div class="strawpoll-embed" id="strawpoll_GPgVYGKM4na" style="height: 836px; max-width: 640px; width: 100%; margin: 0 auto; display: flex; flex-direction: column;"><iframe title="StrawPoll Embed" id="strawpoll_iframe_GPgVYGKM4na" src="https://strawpoll.com/embed/GPgVYGKM4na" style="position: static; visibility: visible; display: block; width: 100%; flex-grow: 1;" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe><script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script></div>
   </div>
 
   <div class="subscribe-strip">
@@ -306,22 +356,34 @@ h2:hover > .h-anchor { opacity: .55; }
         <p class="dispatch-result-text">Wildfire smoke, road closures, and heat are part of BC summer riding. Our Be Prepared page gathers the checks worth doing before you roll out. <a href="/be-prepared/">Be Prepared &rarr;</a></p>
         <p class="dispatch-result-source">July 2026 Dispatch (in progress)</p>
       </div>
+    </div><div class="dispatch-result-item" data-search="trip report gravel buddies sooke potholes overnighter victoria galloping goose matheson lake long weekend">
+      <span class="dispatch-result-date">July 29</span>
+      <div>
+        <p class="dispatch-result-text">The Gravel Buddies crew rode out of Victoria through fields, wildflowers, and oak meadows to camp at Sooke Potholes, lunch spot overlooking Matheson Lake included, and posted it as a ready-made plan for the long weekend. <a href="https://www.instagram.com/p/DbWcwEdEvUY/">Trip report &rarr;</a></p>
+        <p class="dispatch-result-source">July 2026 Dispatch (in progress)</p>
+      </div>
+    </div><div class="dispatch-result-item" data-search="trip report besthike vernon fernie okanagan rail trail myra canyon kettle valley columbia western 750 km">
+      <span class="dispatch-result-date">July 27</span>
+      <div>
+        <p class="dispatch-result-text">Rick McCharles logged about 750 km across the province's rail-trail spine: the Okanagan Rail Trail, Myra Canyon, the Kettle Valley, and the Columbia &amp; Western. <a href="https://besthike.com/2026/07/27/11-days-cycling-vernon-to-fernie-b-c/">Trip report &rarr;</a></p>
+        <p class="dispatch-result-source">July 2026 Dispatch (in progress)</p>
+      </div>
     </div><div class="dispatch-result-item" data-search="trip report reddit bikepacking 20 days banff vancouver paleface pass kvr myra canyon">
       <span class="dispatch-result-date">July 25</span>
       <div>
         <p class="dispatch-result-text">A self-supported Reddit trip report, Banff to Vancouver, taking in Paleface Pass and the Kettle Valley Rail Trail through Myra Canyon, with a lively question thread. <a href="https://www.reddit.com/r/bikepacking/comments/1v6h387/20_days_across_british_columbia_canada/">Trip report &rarr;</a></p>
         <p class="dispatch-result-source">July 2026 Dispatch (in progress)</p>
       </div>
-    </div><div class="dispatch-result-item" data-search="trip report powell lake packraft bikepack sunshine coast inland lake weekend snapshot">
-      <span class="dispatch-result-date">July 20</span>
+    </div><div class="dispatch-result-item" data-search="trip report trans canada trail leigh mcadam vancouver island victoria galloping goose cowichan lochside shawnigan duncan chemainus ladysmith sidney communities">
+      <span class="dispatch-result-date">July 16</span>
       <div>
-        <p class="dispatch-result-text">7 km of paddling up Powell Lake, a portage to waiting bikes, and a 20 km ride home past Inland Lake. <a href="https://bikepacking.com/news/weekend-snapshot-240/">Weekend Snapshot #240 &rarr;</a></p>
+        <p class="dispatch-result-text">Leigh McAdam's Victoria loop for Trans Canada Trail, out the Galloping Goose and home by the Lochside, is also a stop-by-stop case for how bike travellers spread their spending through small communities. <a href="https://tctrail.ca/stories/bikepacking-vancouver-island/">Read &rarr;</a></p>
         <p class="dispatch-result-source">July 2026 Dispatch (in progress)</p>
       </div>
     </div><div class="dispatch-result-item" data-search="trip report tree to sea loop vancouver island comox gravel 1000 km out of the woods">
       <span class="dispatch-result-date">July 10</span>
       <div>
-        <p class="dispatch-result-text">A long read on the 1,000 km gravel loop from Comox around northern Vancouver Island. <a href="https://bikepacking.com/routes/tree-to-sea-loop-vancouver-island/">Read &rarr;</a></p>
+        <p class="dispatch-result-text">A long read on the 1,000 km gravel loop from Comox around northern Vancouver Island. <a href="https://bikepacking.com/plog/spiraling-on-the-tree-to-sea-loop/">Read &rarr;</a></p>
         <p class="dispatch-result-source">July 2026 Dispatch (in progress)</p>
       </div>
     </div><div class="dispatch-result-item" data-search="trip report best campsite photo essay riverside camping overnight close to home">
@@ -404,21 +466,27 @@ h2:hover > .h-anchor { opacity: .55; }
       <p class="dispatch-archive-heading">BC Trip Reports</p>
       <p class="dispatch-sub">People keep writing about riding BC. A few favourites from the past month.</p>
       <div class="dispatch-items-wrap"><div class="dispatch-item">
+        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 29</span>&nbsp;&nbsp;&nbsp;&nbsp;An overnighter to Sooke Potholes</p>
+        <p class="dispatch-item-text">The Gravel Buddies crew rode out of Victoria through fields, wildflowers, and oak meadows to camp at Sooke Potholes, lunch spot overlooking Matheson Lake included, and posted it as a ready-made plan for the long weekend. <a href="https://www.instagram.com/p/DbWcwEdEvUY/">Trip report &rarr;</a></p>
+      </div><div class="dispatch-item">
+        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 27</span>&nbsp;&nbsp;&nbsp;&nbsp;11 days from Vernon to Fernie</p>
+        <p class="dispatch-item-text">Rick McCharles logged about 750 km across the province's rail-trail spine: the Okanagan Rail Trail, Myra Canyon, the Kettle Valley, and the Columbia &amp; Western. <a href="https://besthike.com/2026/07/27/11-days-cycling-vernon-to-fernie-b-c/">Trip report &rarr;</a></p>
+      </div><div class="dispatch-item">
         <p class="dispatch-item-heading"><span class="dispatch-item-date">July 25</span>&nbsp;&nbsp;&nbsp;&nbsp;20 days across BC</p>
         <p class="dispatch-item-text">A self-supported Reddit trip report, Banff to Vancouver, taking in Paleface Pass and the Kettle Valley Rail Trail through Myra Canyon, with a lively question thread. <a href="https://www.reddit.com/r/bikepacking/comments/1v6h387/20_days_across_british_columbia_canada/">Trip report &rarr;</a></p>
       </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 20</span>&nbsp;&nbsp;&nbsp;&nbsp;Powell Lake, by packraft and bike</p>
-        <p class="dispatch-item-text">7 km of paddling up Powell Lake, a portage to waiting bikes, and a 20 km ride home past Inland Lake. <a href="https://bikepacking.com/news/weekend-snapshot-240/">Weekend Snapshot #240 &rarr;</a></p>
+        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 16</span>&nbsp;&nbsp;&nbsp;&nbsp;Four days of small-town stops around the Cowichan Valley</p>
+        <p class="dispatch-item-text">Leigh McAdam's Victoria loop for Trans Canada Trail, out the Galloping Goose and home by the Lochside, is also a stop-by-stop case for how bike travellers spread their spending through small communities. <a href="https://tctrail.ca/stories/bikepacking-vancouver-island/">Read &rarr;</a></p>
       </div><div class="dispatch-item">
         <p class="dispatch-item-heading"><span class="dispatch-item-date">July 10</span>&nbsp;&nbsp;&nbsp;&nbsp;Spiraling on the Tree to Sea Loop</p>
-        <p class="dispatch-item-text">A long read on the 1,000 km gravel loop from Comox around northern Vancouver Island. <a href="https://bikepacking.com/routes/tree-to-sea-loop-vancouver-island/">Read &rarr;</a></p>
+        <p class="dispatch-item-text">A long read on the 1,000 km gravel loop from Comox around northern Vancouver Island. <a href="https://bikepacking.com/plog/spiraling-on-the-tree-to-sea-loop/">Read &rarr;</a></p>
       </div><div class="dispatch-item">
         <p class="dispatch-item-heading"><span class="dispatch-item-date">July 9</span>&nbsp;&nbsp;&nbsp;&nbsp;The best campsite is 90 minutes away</p>
         <p class="dispatch-item-text">A reflective photo essay on a close-to-home BC overnight, riverside camping and all. <a href="https://bikepacking.com/news/best-campsite-hour-and-a-half-away/">Read &rarr;</a></p>
       </div></div>
     </div>
-    <p class="dispatch-archive-heading">Past issues</p>
-    <div class="issue-archive"><a class="issue-link" href="/field-notes/dispatch/202605/">May/June 2026 issue &rarr;</a></div>
+    <p class="dispatch-archive-heading">All issues</p>
+    <div class="issue-archive"><a class="issue-link" href="/field-notes/dispatch/202607/">July 2026 issue &rarr;</a><a class="issue-link" href="/field-notes/dispatch/202605/">May/June 2026 issue &rarr;</a></div>
   </div>
 
   <div class="subscribe-strip">
@@ -478,32 +546,9 @@ h2:hover > .h-anchor { opacity: .55; }
 </div><!--/chrome-->
 
 <script>
-(function() {
-  var grid = document.getElementById('fn-grid');
-  var prev = document.getElementById('fn-prev');
-  var next = document.getElementById('fn-next');
-  if (!grid || !prev || !next) return;
-  function step() {
-    var card = grid.querySelector('.fn-card');
-    if (!card) return 296;
-    return card.offsetWidth + 16;
-  }
-  function updateButtons() {
-    var atStart = grid.scrollLeft <= 4;
-    var atEnd = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 4;
-    prev.disabled = atStart;
-    next.disabled = atEnd;
-  }
-  prev.addEventListener('click', function() { grid.scrollBy({ left: -step(), behavior: 'smooth' }); });
-  next.addEventListener('click', function() { grid.scrollBy({ left: step(), behavior: 'smooth' }); });
-  grid.addEventListener('scroll', updateButtons);
-  window.addEventListener('resize', updateButtons);
-  setTimeout(updateButtons, 50);
-})();
-
 function doSearch(query) {
   var q = query.toLowerCase().trim();
-  var cards = document.querySelectorAll('.fn-card');
+  var cards = document.querySelectorAll('.read-card, .howto-row, .workbench');
   var dispatchItems = document.querySelectorAll('.dispatch-result-item');
   var dispatchResults = document.getElementById('dispatch-results');
   var normalDispatch = document.getElementById('normal-dispatch');
@@ -519,6 +564,12 @@ function doSearch(query) {
     if (match) notesVisible++;
   });
   noNotes.style.display = (q !== '' && notesVisible === 0) ? 'block' : 'none';
+
+  // A section heading hides when everything under it is filtered out
+  var dd = document.getElementById('deep-dives-section');
+  var ht = document.getElementById('howto-section');
+  dd.style.display = dd.querySelector('.read-card:not(.hidden)') ? '' : 'none';
+  ht.style.display = ht.querySelector('.howto-row:not(.hidden)') ? '' : 'none';
 
   var dispatchVisible = 0;
   dispatchItems.forEach(function(item) {
