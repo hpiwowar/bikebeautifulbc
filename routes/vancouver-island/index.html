@@ -41,7 +41,9 @@ body {
 }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
-.g-header { padding: 14px 40px; }
+/* position+z-index so open dropdown menus paint above page content that
+   creates its own stacking contexts (hero cards, reveal animations) */
+.g-header { padding: 14px 40px; position: relative; z-index: 500; }
 .g-header-inner { max-width: var(--rail, 1200px); margin: 0 auto; display: flex; align-items: center; gap: 64px; }
 .g-header-left { display: flex; align-items: center; text-decoration: none; }
 .g-header-left img { height: 50px; width: auto; max-width: 100%; }
@@ -49,6 +51,55 @@ body {
 .g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
 .g-header-nav a:hover { color: #1E7D96; }
 .g-header-nav a.active { color: #1E7D96; font-weight: 600; }
+.g-nav-search { display: flex; align-items: center; gap: 6px; }
+.g-nav-search svg { width: 15px; height: 15px; display: block; }
+.g-nav-search .g-nav-search-label { display: inline; }
+/* Header dropdown menus (nav rethink 2026-08) */
+.g-navgroup { position: relative; display: flex; align-items: center; }
+.g-navtop {
+  font-family: inherit; font-size: 14px; font-weight: 500; color: #2C4C3B;
+  background: none; border: none; cursor: pointer; padding: 0;
+  display: flex; align-items: center; gap: 5px; transition: color 0.2s;
+}
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: #1E7D96; }
+.g-navgroup.activeslot .g-navtop { color: #1E7D96; font-weight: 600; }
+.g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
+.g-navgroup.open .g-caret { transform: rotate(180deg); }
+.g-navmenu {
+  position: absolute; top: calc(100% + 12px); left: -14px; display: none;
+  background: #FFFDF9; border: 1px solid #ECE7DD; border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
+}
+.g-navgroup.open > .g-navmenu { display: block; }
+/* right-side menus open leftward so they never overflow the viewport */
+.g-navgroup[data-slot="field-notes"] .g-navmenu,
+.g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
+.g-header-nav .g-navmenu a {
+  display: block; padding: 9px 12px; border-radius: 9px;
+  font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
+  white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
+}
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: #1E7D96; }
+.g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
+.g-header-nav .g-navmenu .gnm-d {
+  display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
+  color: rgba(13,46,30,0.62); margin-top: 1px; line-height: 1.35; text-align: left;
+}
+/* over photos, green reads badly: rest is soft white, hover full white, and
+   the active section carries a small underline instead of a colour */
+.g-header.transparent .g-navtop { color: rgba(255,255,255,0.88); text-shadow: 0 1px 6px rgba(0,0,0,0.55); }
+.g-header.transparent .g-navtop:hover { color: #fff; }
+.g-header.transparent .g-navgroup.activeslot .g-navtop {
+  color: #fff; text-decoration: underline;
+  text-underline-offset: 7px; text-decoration-thickness: 2px;
+}
+/* menu panels are solid cream even under a transparent header: beat the
+   white-link transparent rules at their own specificity */
+.g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: #1E7D96; }
+.g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent.solid .g-navtop:hover { color: #1E7D96; }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: #1E7D96; text-decoration: none; }
 .g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
 .g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
 .g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin-bottom: 14px; letter-spacing: -0.03em; }
@@ -65,7 +116,7 @@ body {
 .g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
 .g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
 .g-footer-brand img { height: 32px; width: auto; max-width: 100%; }
-.g-footer-nav { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.g-footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
 .g-footer-col { }
 .g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
 .g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
@@ -85,6 +136,19 @@ body {
   .g-header-nav.open { display: flex; }
   .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
   .g-header-nav a:last-child { border-bottom: none; }
+  .g-nav-search svg { display: none; }
+  .g-nav-search .g-nav-search-label { display: inline; }
+  /* dropdown groups become accordion sections inside the hamburger panel */
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid #EEE; }
+  .g-navtop {
+    width: 100%; justify-content: space-between; padding: 12px 0;
+    font-size: 15px; color: #1F514C; text-shadow: none;
+  }
+  .g-navmenu {
+    position: static; box-shadow: none; border: none; background: none;
+    padding: 0 0 10px 14px; min-width: 0; border-radius: 0;
+  }
+  .g-header-nav .g-navmenu a { border-bottom: none; padding: 8px 0; font-size: 14.5px; }
   .g-footer { padding: 40px 20px 48px; }
   .g-footer-nav { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
 }
@@ -309,10 +373,8 @@ body{background:var(--paper)}
       <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
     </a>
     <div class="g-header-nav" id="g-nav">
-      <a href="/routes/" class="active">Get Inspired</a>
-      <a href="/plan/">Plan Your Trip</a>
-      <a href="/field-notes">Field Notes</a>
-      <a href="/about">About</a>
+      <div class="g-navgroup activeslot" data-slot="inspired"><button type="button" class="g-navtop" aria-expanded="false">Get Inspired <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/routes/all/"><span class="gnm-l">Browse all routes</span><span class="gnm-d">Every published route in one filterable list</span></a><a href="/routes/"><span class="gnm-l">The highlight reel</span><span class="gnm-d">Ride after ride, region by region</span></a><a href="/trails/"><span class="gnm-l">Named trails</span><span class="gnm-d">Follow the KVR, the Goose, and other classics</span></a><a href="/route-publishers/"><span class="gnm-l">Route makers</span><span class="gnm-d">The people and clubs who publish BC's rides</span></a><a href="/wwc/communities/"><span class="gnm-l">Communities</span><span class="gnm-d">Browse stops town by town</span></a><a href="/routes/how-we-describe/"><span class="gnm-l">How we describe routes</span><span class="gnm-d">What our difficulty and surface labels mean</span></a></div></div><div class="g-navgroup" data-slot="plan"><button type="button" class="g-navtop" aria-expanded="false">Plan Your Trip <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/plan/"><span class="gnm-l">How a trip comes together</span><span class="gnm-d">The whole journey, one page</span></a><a href="/wwc/"><span class="gnm-l">BC Bike Stops directory</span><span class="gnm-d">Places to sleep, eat, and refill that welcome cyclists</span></a><a href="/to-fro/"><span class="gnm-l">To &amp; Fro</span><span class="gnm-d">Ferries, buses, and trains that take your bike</span></a><a href="/add-stops/"><span class="gnm-l">Add Stops to Your Route</span><span class="gnm-d">Upload a GPX, get the stops along your line</span></a><a href="/wwc/guide/"><span class="gnm-l">Stop guides</span><span class="gnm-d">What &ldquo;welcomes cyclists&rdquo; means, category by category</span></a><a href="/be-prepared/"><span class="gnm-l">Be Prepared</span><span class="gnm-d">Cell coverage, wildlife, conditions, and more</span></a><a href="/design-your-own-route/"><span class="gnm-l">Design Your Own Route</span><span class="gnm-d">Tools for building a ride from scratch</span></a><a href="/bike-together/"><span class="gnm-l">Bike Together</span><span class="gnm-d">Tours and group rides you can join</span></a></div></div><div class="g-navgroup" data-slot="field-notes"><button type="button" class="g-navtop" aria-expanded="false">Field Notes <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/field-notes"><span class="gnm-l">Read the latest</span><span class="gnm-d">Trip reports, deep dives, and trail news</span></a><a href="/#newsletter"><span class="gnm-l">Subscribe</span><span class="gnm-d">One email a month with what's new</span></a></div></div><div class="g-navgroup" data-slot="about"><button type="button" class="g-navtop" aria-expanded="false">About <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/about"><span class="gnm-l">About us</span><span class="gnm-d">Who we are and what we're building</span></a><a href="/advocacy/"><span class="gnm-l">Advocacy</span><span class="gnm-d">Safe roads, rail corridors, and getting there with a bike</span></a><a href="/research/"><span class="gnm-l">Research and Data</span><span class="gnm-d">The numbers and methods behind this site</span></a><a href="/with-thanks/"><span class="gnm-l">With thanks</span><span class="gnm-d">The people and organizations behind us</span></a><a href="/#contact"><span class="gnm-l">Say hi! 🙂</span><span class="gnm-d">We'd love to hear from you</span></a></div></div>
+      <a href="/search/" class="g-nav-search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg><span class="g-nav-search-label">Search</span></a>
     </div>
     <button class="g-hamburger" id="g-ham" aria-label="Menu">☰</button>
   </div>
@@ -323,11 +385,47 @@ body{background:var(--paper)}
   if(!h||!n)return;
   h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
   document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
+  var groups=[].slice.call(document.querySelectorAll('.g-navgroup'));
+  function closeAll(except){
+    groups.forEach(function(g){
+      if(g!==except){
+        g.classList.remove('open');
+        var b=g.querySelector('.g-navtop');
+        if(b)b.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  groups.forEach(function(g){
+    var btn=g.querySelector('.g-navtop'),timer=null;
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      closeAll(g);
+      var open=g.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    g.addEventListener('mouseenter',function(){
+      if(window.innerWidth<=700)return;
+      clearTimeout(timer);closeAll(g);g.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    });
+    g.addEventListener('mouseleave',function(){
+      if(window.innerWidth<=700)return;
+      timer=setTimeout(function(){
+        g.classList.remove('open');btn.setAttribute('aria-expanded','false');
+      },250);
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest||!e.target.closest('.g-navgroup'))closeAll(null);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')closeAll(null);
+  });
 })();
 </script><!--/chrome-->
 
 <div class="reghero">
-  <img src="https://bcbb-assets.bccycletourism.workers.dev/photos/be217dfb4937bdbc.jpg" style="background-color:#aaa39e" alt="Vancouver Island" loading="lazy" onload="this.parentNode.classList.add('on')" onerror="this.style.display='none'"><span class="cap-credit">Photo: Jordan Dyck</span><span class="cap-place">Tofino, BC</span>
+  <img src="https://bcbb-assets.bccycletourism.workers.dev/photos/b54d78950bbbca79.jpg" style="background-color:#576a68" alt="Vancouver Island" loading="lazy" onload="this.parentNode.classList.add('on')" onerror="this.style.display='none'"><span class="cap-credit">Photo: Reuben Krabbe</span><span class="cap-place">Brentwood Bay, BC</span>
   <span class="mm"><svg viewBox="0 0 324.2 267.3" width="100%" height="100%" aria-hidden="true"><defs><clipPath id="mmclip8"><path d="M319.2,246.3 L205.7,247.0 L204.1,231.6 L199.4,238.6 L192.6,233.0 L196.4,235.8 L199.4,231.5 L194.4,230.1 L196.7,223.0 L195.8,221.6 L190.1,230.6 L184.1,225.9 L189.1,213.9 L179.9,217.9 L182.7,212.0 L182.8,204.4 L178.7,215.9 L164.8,213.8 L172.0,210.0 L174.5,204.4 L172.9,200.8 L169.1,210.0 L150.6,204.6 L149.3,200.8 L151.5,201.9 L152.7,202.0 L157.6,201.4 L159.3,202.9 L160.0,199.6 L145.7,199.3 L153.8,195.9 L145.8,195.6 L148.7,192.6 L149.3,189.4 L159.9,188.7 L160.6,187.3 L144.6,188.1 L153.5,174.1 L159.8,181.3 L153.3,172.6 L152.7,169.6 L155.8,167.0 L156.1,162.7 L138.1,174.5 L142.7,160.9 L137.5,162.8 L130.8,146.8 L144.7,153.7 L132.7,145.2 L135.3,136.3 L126.5,150.6 L116.5,138.1 L124.5,131.7 L111.7,128.9 L118.3,129.8 L113.1,122.3 L119.3,123.4 L115.6,118.3 L124.5,104.5 L120.2,101.1 L120.5,107.2 L116.4,115.0 L116.7,90.3 L94.8,79.8 L74.5,38.8 L48.7,9.3 L23.6,29.0 L5.0,5.0 L244.2,5.2 L245.2,147.5 L306.9,212.3 L319.2,246.3 Z"/></clipPath></defs><path d="M319.2,246.3 L205.7,247.0 L204.1,231.6 L199.4,238.6 L192.6,233.0 L196.4,235.8 L199.4,231.5 L194.4,230.1 L196.7,223.0 L195.8,221.6 L190.1,230.6 L184.1,225.9 L189.1,213.9 L179.9,217.9 L182.7,212.0 L182.8,204.4 L178.7,215.9 L164.8,213.8 L172.0,210.0 L174.5,204.4 L172.9,200.8 L169.1,210.0 L150.6,204.6 L149.3,200.8 L151.5,201.9 L152.7,202.0 L157.6,201.4 L159.3,202.9 L160.0,199.6 L145.7,199.3 L153.8,195.9 L145.8,195.6 L148.7,192.6 L149.3,189.4 L159.9,188.7 L160.6,187.3 L144.6,188.1 L153.5,174.1 L159.8,181.3 L153.3,172.6 L152.7,169.6 L155.8,167.0 L156.1,162.7 L138.1,174.5 L142.7,160.9 L137.5,162.8 L130.8,146.8 L144.7,153.7 L132.7,145.2 L135.3,136.3 L126.5,150.6 L116.5,138.1 L124.5,131.7 L111.7,128.9 L118.3,129.8 L113.1,122.3 L119.3,123.4 L115.6,118.3 L124.5,104.5 L120.2,101.1 L120.5,107.2 L116.4,115.0 L116.7,90.3 L94.8,79.8 L74.5,38.8 L48.7,9.3 L23.6,29.0 L5.0,5.0 L244.2,5.2 L245.2,147.5 L306.9,212.3 L319.2,246.3 Z" fill="none" stroke="rgba(10,26,42,.85)" stroke-width="6" stroke-linejoin="round"/><path d="M154.1,228.2 L152.6,225.8 L154.5,221.8 L150.8,224.4 L150.2,221.0 L144.2,222.3 L146.2,219.6 L143.3,217.4 L144.0,214.8 L148.3,214.2 L150.0,216.7 L148.5,213.7 L150.4,211.8 L144.6,211.2 L148.1,213.1 L142.4,215.1 L137.8,208.0 L144.2,205.8 L157.5,213.4 L175.4,218.1 L178.8,226.9 L182.6,231.3 L181.2,232.2 L183.5,236.7 L194.0,241.9 L198.8,250.6 L199.4,257.3 L201.1,254.0 L202.6,259.0 L198.8,262.3 L179.4,252.9 L178.6,251.3 L182.9,246.6 L183.7,244.1 L183.3,241.7 L182.1,246.9 L176.6,246.2 L174.8,248.8 L169.8,245.0 L173.2,242.3 L171.4,243.7 L171.1,238.9 L168.0,241.0 L169.5,237.4 L168.2,239.9 L167.6,237.1 L161.0,238.0 L161.1,234.1 L167.0,232.0 L162.7,232.3 L162.5,229.6 L160.9,231.5 L160.1,227.3 L157.8,225.7 L154.1,228.2 Z" fill="none" stroke="rgba(10,26,42,.85)" stroke-width="6" stroke-linejoin="round"/><g clip-path="url(#mmclip8)"><rect x="-20" y="-20" width="380" height="146" fill="rgba(255,255,255,.32)"/><rect x="-20" y="126" width="380" height="66" fill="rgba(255,255,255,.32)"/><rect x="-20" y="192" width="232" height="150" fill="rgba(255,255,255,.32)"/><rect x="212" y="192" width="58" height="150" fill="rgba(255,255,255,.32)"/><rect x="270" y="192" width="110" height="150" fill="rgba(255,255,255,.32)"/></g><path d="M319.2,246.3 L205.7,247.0 L204.1,231.6 L199.4,238.6 L192.6,233.0 L196.4,235.8 L199.4,231.5 L194.4,230.1 L196.7,223.0 L195.8,221.6 L190.1,230.6 L184.1,225.9 L189.1,213.9 L179.9,217.9 L182.7,212.0 L182.8,204.4 L178.7,215.9 L164.8,213.8 L172.0,210.0 L174.5,204.4 L172.9,200.8 L169.1,210.0 L150.6,204.6 L149.3,200.8 L151.5,201.9 L152.7,202.0 L157.6,201.4 L159.3,202.9 L160.0,199.6 L145.7,199.3 L153.8,195.9 L145.8,195.6 L148.7,192.6 L149.3,189.4 L159.9,188.7 L160.6,187.3 L144.6,188.1 L153.5,174.1 L159.8,181.3 L153.3,172.6 L152.7,169.6 L155.8,167.0 L156.1,162.7 L138.1,174.5 L142.7,160.9 L137.5,162.8 L130.8,146.8 L144.7,153.7 L132.7,145.2 L135.3,136.3 L126.5,150.6 L116.5,138.1 L124.5,131.7 L111.7,128.9 L118.3,129.8 L113.1,122.3 L119.3,123.4 L115.6,118.3 L124.5,104.5 L120.2,101.1 L120.5,107.2 L116.4,115.0 L116.7,90.3 L94.8,79.8 L74.5,38.8 L48.7,9.3 L23.6,29.0 L5.0,5.0 L244.2,5.2 L245.2,147.5 L306.9,212.3 L319.2,246.3 Z" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><path d="M154.1,228.2 L152.6,225.8 L154.5,221.8 L150.8,224.4 L150.2,221.0 L144.2,222.3 L146.2,219.6 L143.3,217.4 L144.0,214.8 L148.3,214.2 L150.0,216.7 L148.5,213.7 L150.4,211.8 L144.6,211.2 L148.1,213.1 L142.4,215.1 L137.8,208.0 L144.2,205.8 L157.5,213.4 L175.4,218.1 L178.8,226.9 L182.6,231.3 L181.2,232.2 L183.5,236.7 L194.0,241.9 L198.8,250.6 L199.4,257.3 L201.1,254.0 L202.6,259.0 L198.8,262.3 L179.4,252.9 L178.6,251.3 L182.9,246.6 L183.7,244.1 L183.3,241.7 L182.1,246.9 L176.6,246.2 L174.8,248.8 L169.8,245.0 L173.2,242.3 L171.4,243.7 L171.1,238.9 L168.0,241.0 L169.5,237.4 L168.2,239.9 L167.6,237.1 L161.0,238.0 L161.1,234.1 L167.0,232.0 L162.7,232.3 L162.5,229.6 L160.9,231.5 L160.1,227.3 L157.8,225.7 L154.1,228.2 Z" fill="var(--bright)" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/></svg></span>
   <div class="inner"><h1>Vancouver Island</h1><div class="edit">Rail trails out of Victoria, logging roads up-island, and a coastline that never quite lets you go.</div></div>
 </div>
@@ -352,38 +450,43 @@ body{background:var(--paper)}
   </a>
   <div class="g-footer-nav">
     <div class="g-footer-col">
-      <div class="g-footer-h">Dream</div>
-      <a href="/routes/">Get Inspired</a>
-      <a href="/routes/all/">Browse routes</a>
-      <a href="/route-publishers/">Meet the route makers</a>
-      <a href="/trails/">Discover trails</a>
-      <a href="/wwc/communities/">Explore our communities</a>
-      <a href="/field-notes">Read Field Notes</a>
+      <div class="g-footer-h">Get Inspired</div>
+      <a href="/routes/all/">Browse all routes</a>
+      <a href="/routes/">The highlight reel</a>
+      <a href="/trails/">Named trails</a>
+      <a href="/route-publishers/">Route makers</a>
+      <a href="/wwc/communities/">Communities</a>
+      <a href="/routes/how-we-describe/">How we describe routes</a>
     </div>
     <div class="g-footer-col">
-      <div class="g-footer-h">Plan</div>
-      <a href="/plan/">Plan Your Trip</a>
+      <div class="g-footer-h">Plan Your Trip</div>
+      <a href="/plan/">How a trip comes together</a>
+      <a href="/wwc/">BC Bike Stops directory</a>
       <a href="/to-fro/">To &amp; Fro</a>
       <a href="/add-stops/">Add Stops to Your Route</a>
-      <a href="/wwc/guide/">Read BC Bike Stop Guides</a>
-      <a href="/wwc/">Explore BC Bike Stops</a>
+      <a href="/wwc/guide/">Stop guides</a>
       <a href="/be-prepared/">Be Prepared</a>
+      <a href="/design-your-own-route/">Design Your Own Route</a>
+      <a href="/bike-together/">Bike Together</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Field Notes</div>
+      <a href="/field-notes">Read the latest</a>
+      <a href="/#newsletter">Subscribe</a>
     </div>
     <div class="g-footer-col">
       <div class="g-footer-h">Get involved</div>
-      <a href="/#newsletter">Subscribe to Field Notes</a>
-      <a href="/support/trail-organizations/">Support the trail organizations</a>
       <a href="/suggest/">Suggest a stop</a>
       <a href="/apply/">Apply for accreditation</a>
-      <a href="/#contact">Contact</a>
+      <a href="/support/trail-organizations/">Support the trail organizations</a>
       <a href="/#contact">Say hi! 🙂</a>
     </div>
     <div class="g-footer-col">
-      <div class="g-footer-h">About us</div>
-      <a href="/about">About</a>
-      <a href="/with-thanks/">With thanks</a>
+      <div class="g-footer-h">About</div>
+      <a href="/about">About us</a>
       <a href="/advocacy/">Advocacy</a>
       <a href="/research/">Research and Data</a>
+      <a href="/with-thanks/">With thanks</a>
       <a href="/privacy">Privacy</a>
       <a href="/land-acknowledgement">Land acknowledgement</a>
     </div>

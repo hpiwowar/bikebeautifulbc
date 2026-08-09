@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Search — BC Cycle Tourism Society</title>
+<link rel="canonical" href="https://bccycletourism.ca/search/">
+<meta property="og:site_name" content="BC Cycle Tourism Society">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bccycletourism.ca/search/">
+<meta property="og:title" content="Search">
+<meta property="og:image" content="https://bccycletourism.ca/img/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Search">
+<meta name="twitter:image" content="https://bccycletourism.ca/img/og/default.png">
+<meta name="description" content="Search bccycletourism.ca: routes, trails, communities, stops, guides, and Field Notes.">
+<meta property="og:description" content="Search bccycletourism.ca: routes, trails, communities, stops, guides, and Field Notes.">
+<meta name="twitter:description" content="Search bccycletourism.ca: routes, trails, communities, stops, guides, and Field Notes.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":["https://www.linkedin.com/company/bc-cycle-tourism-society/","https://tiabc.ca/members/bc-cycle-tourism-society/"]}</script>
+<style>
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scrollbar-gutter: stable; }
+/* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
+   --rail   chrome (header + footer), frames the page
+   --w-read the content column and prose cap, used by nearly every page
+   --w-wide the exception: sidebar filters, two-column stop pages */
+:root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
+.g-banner strong { font-weight: 700; }
+/* position+z-index so open dropdown menus paint above page content that
+   creates its own stacking contexts (hero cards, reveal animations) */
+.g-header { padding: 14px 40px; position: relative; z-index: 500; }
+.g-header-inner { max-width: var(--rail, 1200px); margin: 0 auto; display: flex; align-items: center; gap: 64px; }
+.g-header-left { display: flex; align-items: center; text-decoration: none; }
+.g-header-left img { height: 50px; width: auto; max-width: 100%; }
+.g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
+.g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
+.g-header-nav a:hover { color: #1E7D96; }
+.g-header-nav a.active { color: #1E7D96; font-weight: 600; }
+.g-nav-search { display: flex; align-items: center; gap: 6px; }
+.g-nav-search svg { width: 15px; height: 15px; display: block; }
+.g-nav-search .g-nav-search-label { display: inline; }
+/* Header dropdown menus (nav rethink 2026-08) */
+.g-navgroup { position: relative; display: flex; align-items: center; }
+.g-navtop {
+  font-family: inherit; font-size: 14px; font-weight: 500; color: #2C4C3B;
+  background: none; border: none; cursor: pointer; padding: 0;
+  display: flex; align-items: center; gap: 5px; transition: color 0.2s;
+}
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: #1E7D96; }
+.g-navgroup.activeslot .g-navtop { color: #1E7D96; font-weight: 600; }
+.g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
+.g-navgroup.open .g-caret { transform: rotate(180deg); }
+.g-navmenu {
+  position: absolute; top: calc(100% + 12px); left: -14px; display: none;
+  background: #FFFDF9; border: 1px solid #ECE7DD; border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
+}
+.g-navgroup.open > .g-navmenu { display: block; }
+/* right-side menus open leftward so they never overflow the viewport */
+.g-navgroup[data-slot="field-notes"] .g-navmenu,
+.g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
+.g-header-nav .g-navmenu a {
+  display: block; padding: 9px 12px; border-radius: 9px;
+  font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
+  white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
+}
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: #1E7D96; }
+.g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
+.g-header-nav .g-navmenu .gnm-d {
+  display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
+  color: rgba(13,46,30,0.62); margin-top: 1px; line-height: 1.35; text-align: left;
+}
+/* over photos, green reads badly: rest is soft white, hover full white, and
+   the active section carries a small underline instead of a colour */
+.g-header.transparent .g-navtop { color: rgba(255,255,255,0.88); text-shadow: 0 1px 6px rgba(0,0,0,0.55); }
+.g-header.transparent .g-navtop:hover { color: #fff; }
+.g-header.transparent .g-navgroup.activeslot .g-navtop {
+  color: #fff; text-decoration: underline;
+  text-underline-offset: 7px; text-decoration-thickness: 2px;
+}
+/* menu panels are solid cream even under a transparent header: beat the
+   white-link transparent rules at their own specificity */
+.g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: #1E7D96; }
+.g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent.solid .g-navtop:hover { color: #1E7D96; }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: #1E7D96; text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: #4b5563; margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: #1E7D96; }
+.g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
+.g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
+.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
+.g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
+.g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
+.g-footer-brand img { height: 32px; width: auto; max-width: 100%; }
+.g-footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.g-footer-col { }
+.g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
+.g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
+.g-footer-col a:hover { color: #0D4070; }
+.section-divider { border: none; border-top: 1px solid #EEE; margin: 28px 0; }
+.bio { margin-bottom: 20px; }
+.bio strong { color: #1F514C; font-size: 15px; }
+.bio > em { color: #636363; font-size: 13px; }
+.bio p { font-size: 14px; margin-top: 6px; }
+@media (max-width: 700px) {
+  .g-banner { padding: 6px 14px; font-size: 11px; }
+  .g-header { padding: 12px 16px; position: relative; z-index: 300; }
+  .g-header-inner { gap: 0; }
+  .g-main { padding: 24px 14px 16px; }
+  .g-hamburger { display: block; }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #FFFDF9; border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav.open { display: flex; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
+  .g-header-nav a:last-child { border-bottom: none; }
+  .g-nav-search svg { display: none; }
+  .g-nav-search .g-nav-search-label { display: inline; }
+  /* dropdown groups become accordion sections inside the hamburger panel */
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid #EEE; }
+  .g-navtop {
+    width: 100%; justify-content: space-between; padding: 12px 0;
+    font-size: 15px; color: #1F514C; text-shadow: none;
+  }
+  .g-navmenu {
+    position: static; box-shadow: none; border: none; background: none;
+    padding: 0 0 10px 14px; min-width: 0; border-radius: 0;
+  }
+  .g-header-nav .g-navmenu a { border-bottom: none; padding: 8px 0; font-size: 14.5px; }
+  .g-footer { padding: 40px 20px 48px; }
+  .g-footer-nav { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+}
+
+/* Section anchors. Every h2 gets a quiet "#" that hands you a link to that
+   section. Grey at rest so it reads as a tool rather than content, teal at the
+   moment you are about to click it. Touch devices have no hover, so it sits
+   faintly visible there instead of being unreachable. */
+.h-anchor { margin-left: .35em; color: #6E6E6E; opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+h2:hover > .h-anchor { opacity: .55; }
+.h-anchor:hover, .h-anchor:focus { color: #1E7D96; opacity: 1; }
+@media (hover: none) {
+  .h-anchor { opacity: .35; }
+}
+</style>
+<script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
+</head>
+<body>
+<!--chrome--><div class="g-header">
+  <div class="g-header-inner">
+    <a href="/" class="g-header-left">
+      <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+    </a>
+    <div class="g-header-nav" id="g-nav">
+      <div class="g-navgroup" data-slot="inspired"><button type="button" class="g-navtop" aria-expanded="false">Get Inspired <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/routes/all/"><span class="gnm-l">Browse all routes</span><span class="gnm-d">Every published route in one filterable list</span></a><a href="/routes/"><span class="gnm-l">The highlight reel</span><span class="gnm-d">Ride after ride, region by region</span></a><a href="/trails/"><span class="gnm-l">Named trails</span><span class="gnm-d">Follow the KVR, the Goose, and other classics</span></a><a href="/route-publishers/"><span class="gnm-l">Route makers</span><span class="gnm-d">The people and clubs who publish BC's rides</span></a><a href="/wwc/communities/"><span class="gnm-l">Communities</span><span class="gnm-d">Browse stops town by town</span></a><a href="/routes/how-we-describe/"><span class="gnm-l">How we describe routes</span><span class="gnm-d">What our difficulty and surface labels mean</span></a></div></div><div class="g-navgroup" data-slot="plan"><button type="button" class="g-navtop" aria-expanded="false">Plan Your Trip <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/plan/"><span class="gnm-l">How a trip comes together</span><span class="gnm-d">The whole journey, one page</span></a><a href="/wwc/"><span class="gnm-l">BC Bike Stops directory</span><span class="gnm-d">Places to sleep, eat, and refill that welcome cyclists</span></a><a href="/to-fro/"><span class="gnm-l">To &amp; Fro</span><span class="gnm-d">Ferries, buses, and trains that take your bike</span></a><a href="/add-stops/"><span class="gnm-l">Add Stops to Your Route</span><span class="gnm-d">Upload a GPX, get the stops along your line</span></a><a href="/wwc/guide/"><span class="gnm-l">Stop guides</span><span class="gnm-d">What &ldquo;welcomes cyclists&rdquo; means, category by category</span></a><a href="/be-prepared/"><span class="gnm-l">Be Prepared</span><span class="gnm-d">Cell coverage, wildlife, conditions, and more</span></a><a href="/design-your-own-route/"><span class="gnm-l">Design Your Own Route</span><span class="gnm-d">Tools for building a ride from scratch</span></a><a href="/bike-together/"><span class="gnm-l">Bike Together</span><span class="gnm-d">Tours and group rides you can join</span></a></div></div><div class="g-navgroup" data-slot="field-notes"><button type="button" class="g-navtop" aria-expanded="false">Field Notes <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/field-notes"><span class="gnm-l">Read the latest</span><span class="gnm-d">Trip reports, deep dives, and trail news</span></a><a href="/#newsletter"><span class="gnm-l">Subscribe</span><span class="gnm-d">One email a month with what's new</span></a></div></div><div class="g-navgroup" data-slot="about"><button type="button" class="g-navtop" aria-expanded="false">About <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/about"><span class="gnm-l">About us</span><span class="gnm-d">Who we are and what we're building</span></a><a href="/advocacy/"><span class="gnm-l">Advocacy</span><span class="gnm-d">Safe roads, rail corridors, and getting there with a bike</span></a><a href="/research/"><span class="gnm-l">Research and Data</span><span class="gnm-d">The numbers and methods behind this site</span></a><a href="/with-thanks/"><span class="gnm-l">With thanks</span><span class="gnm-d">The people and organizations behind us</span></a><a href="/#contact"><span class="gnm-l">Say hi! 🙂</span><span class="gnm-d">We'd love to hear from you</span></a></div></div>
+      <a href="/search/" class="g-nav-search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg><span class="g-nav-search-label">Search</span></a>
+    </div>
+    <button class="g-hamburger" id="g-ham" aria-label="Menu">☰</button>
+  </div>
+</div>
+<script>
+(function(){
+  var h=document.getElementById('g-ham'),n=document.getElementById('g-nav');
+  if(!h||!n)return;
+  h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
+  document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
+  var groups=[].slice.call(document.querySelectorAll('.g-navgroup'));
+  function closeAll(except){
+    groups.forEach(function(g){
+      if(g!==except){
+        g.classList.remove('open');
+        var b=g.querySelector('.g-navtop');
+        if(b)b.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  groups.forEach(function(g){
+    var btn=g.querySelector('.g-navtop'),timer=null;
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      closeAll(g);
+      var open=g.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    g.addEventListener('mouseenter',function(){
+      if(window.innerWidth<=700)return;
+      clearTimeout(timer);closeAll(g);g.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    });
+    g.addEventListener('mouseleave',function(){
+      if(window.innerWidth<=700)return;
+      timer=setTimeout(function(){
+        g.classList.remove('open');btn.setAttribute('aria-expanded','false');
+      },250);
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest||!e.target.closest('.g-navgroup'))closeAll(null);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')closeAll(null);
+  });
+})();
+</script><!--/chrome-->
+<div class="g-main">
+
+<h1>Search</h1>
+<p style="margin-top:-6px;">Routes, trails, towns, stops, guides, Field Notes.</p>
+<input id="sq" type="search" placeholder="Try a town, a trail, a route&hellip;" autocomplete="off" aria-label="Search the site"
+       style="width:100%; padding:12px 16px; font:inherit; font-size:17px; border:1px solid #D6D3CC; border-radius:10px; background:#fff; color:#141414; margin:6px 0 22px;">
+<div id="s-editorial"></div>
+<div id="s-stops"></div>
+<style>
+.sr-group-h { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:#8A9299; margin:20px 0 6px; }
+.sr-item { display:block; padding:9px 12px; margin:0 -12px; border-radius:8px; text-decoration:none; }
+.sr-item:hover { background:#F4F1EA; }
+.sr-title { color:#1E7D96; font-weight:600; font-size:16px; }
+.sr-type { display:inline-block; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:#1F514C; background:#EAF0EE; border-radius:4px; padding:2px 7px; margin-left:8px; vertical-align:2px; }
+.sr-snip { color:#4b5563; font-size:14px; margin-top:1px; }
+.sr-more { margin:10px 0 0; }
+.sr-more a, .sr-note a { color:#1E7D96; font-weight:600; }
+.sr-note { color:#8A9299; font-size:14px; margin:6px 0; }
+</style>
+<script>/**
+ * Minified by jsDelivr using Terser v5.37.0.
+ * Original file: /npm/minisearch@7.1.2/dist/umd/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):(t="undefined"!=typeof globalThis?globalThis:t||self).MiniSearch=e()}(this,(function(){"use strict";const t="KEYS",e="VALUES",s="";class i{constructor(t,e){const s=t._tree,i=Array.from(s.keys());this.set=t,this._type=e,this._path=i.length>0?[{node:s,keys:i}]:[]}next(){const t=this.dive();return this.backtrack(),t}dive(){if(0===this._path.length)return{done:!0,value:void 0};const{node:t,keys:e}=n(this._path);if(n(e)===s)return{done:!1,value:this.result()};const i=t.get(n(e));return this._path.push({node:i,keys:Array.from(i.keys())}),this.dive()}backtrack(){if(0===this._path.length)return;const t=n(this._path).keys;t.pop(),t.length>0||(this._path.pop(),this.backtrack())}key(){return this.set._prefix+this._path.map((({keys:t})=>n(t))).filter((t=>t!==s)).join("")}value(){return n(this._path).node.get(s)}result(){switch(this._type){case e:return this.value();case t:return this.key();default:return[this.key(),this.value()]}}[Symbol.iterator](){return this}}const n=t=>t[t.length-1],o=(t,e,i,n,r,c,h,u)=>{const d=c*h;t:for(const a of t.keys())if(a===s){const e=r[d-1];e<=i&&n.set(u,[t.get(a),e])}else{let s=c;for(let t=0;t<a.length;++t,++s){const n=a[t],o=h*s,c=o-h;let u=r[o];const d=Math.max(0,s-i-1),l=Math.min(h-1,s+i);for(let t=d;t<l;++t){const s=n!==e[t],i=r[c+t]+ +s,h=r[c+t+1]+1,d=r[o+t]+1,a=r[o+t+1]=Math.min(i,h,d);a<u&&(u=a)}if(u>i)continue t}o(t.get(a),e,i,n,r,s,h,u+a)}};class r{constructor(t=new Map,e=""){this._size=void 0,this._tree=t,this._prefix=e}atPrefix(t){if(!t.startsWith(this._prefix))throw new Error("Mismatched prefix");const[e,i]=c(this._tree,t.slice(this._prefix.length));if(void 0===e){const[e,n]=f(i);for(const i of e.keys())if(i!==s&&i.startsWith(n)){const s=new Map;return s.set(i.slice(n.length),e.get(i)),new r(s,t)}}return new r(e,t)}clear(){this._size=void 0,this._tree.clear()}delete(t){return this._size=void 0,d(this._tree,t)}entries(){return new i(this,"ENTRIES")}forEach(t){for(const[e,s]of this)t(e,s,this)}fuzzyGet(t,e){return((t,e,s)=>{const i=new Map;if(void 0===e)return i;const n=e.length+1,r=n+s,c=new Uint8Array(r*n).fill(s+1);for(let t=0;t<n;++t)c[t]=t;for(let t=1;t<r;++t)c[t*n]=t;return o(t,e,s,i,c,1,n,""),i})(this._tree,t,e)}get(t){const e=h(this._tree,t);return void 0!==e?e.get(s):void 0}has(t){const e=h(this._tree,t);return void 0!==e&&e.has(s)}keys(){return new i(this,t)}set(t,e){if("string"!=typeof t)throw new Error("key must be a string");this._size=void 0;return u(this._tree,t).set(s,e),this}get size(){if(this._size)return this._size;this._size=0;const t=this.entries();for(;!t.next().done;)this._size+=1;return this._size}update(t,e){if("string"!=typeof t)throw new Error("key must be a string");this._size=void 0;const i=u(this._tree,t);return i.set(s,e(i.get(s))),this}fetch(t,e){if("string"!=typeof t)throw new Error("key must be a string");this._size=void 0;const i=u(this._tree,t);let n=i.get(s);return void 0===n&&i.set(s,n=e()),n}values(){return new i(this,e)}[Symbol.iterator](){return this.entries()}static from(t){const e=new r;for(const[s,i]of t)e.set(s,i);return e}static fromObject(t){return r.from(Object.entries(t))}}const c=(t,e,i=[])=>{if(0===e.length||null==t)return[t,i];for(const n of t.keys())if(n!==s&&e.startsWith(n))return i.push([t,n]),c(t.get(n),e.slice(n.length),i);return i.push([t,e]),c(void 0,"",i)},h=(t,e)=>{if(0===e.length||null==t)return t;for(const i of t.keys())if(i!==s&&e.startsWith(i))return h(t.get(i),e.slice(i.length))},u=(t,e)=>{const i=e.length;t:for(let n=0;t&&n<i;){for(const o of t.keys())if(o!==s&&e[n]===o[0]){const s=Math.min(i-n,o.length);let r=1;for(;r<s&&e[n+r]===o[r];)++r;const c=t.get(o);if(r===o.length)t=c;else{const s=new Map;s.set(o.slice(r),c),t.set(e.slice(n,n+r),s),t.delete(o),t=s}n+=r;continue t}const o=new Map;return t.set(e.slice(n),o),o}return t},d=(t,e)=>{const[i,n]=c(t,e);if(void 0!==i)if(i.delete(s),0===i.size)a(n);else if(1===i.size){const[t,e]=i.entries().next().value;l(n,t,e)}},a=t=>{if(0===t.length)return;const[e,i]=f(t);if(e.delete(i),0===e.size)a(t.slice(0,-1));else if(1===e.size){const[i,n]=e.entries().next().value;i!==s&&l(t.slice(0,-1),i,n)}},l=(t,e,s)=>{if(0===t.length)return;const[i,n]=f(t);i.set(n+e,s),i.delete(n)},f=t=>t[t.length-1],m="or",_="and",g="and_not";class p{constructor(t){if(null==(null==t?void 0:t.fields))throw new Error('MiniSearch: option "fields" must be provided');const e=null==t.autoVacuum||!0===t.autoVacuum?M:t.autoVacuum;this._options={...z,...t,autoVacuum:e,searchOptions:{...b,...t.searchOptions||{}},autoSuggestOptions:{...I,...t.autoSuggestOptions||{}}},this._index=new r,this._documentCount=0,this._documentIds=new Map,this._idToShortId=new Map,this._fieldIds={},this._fieldLength=new Map,this._avgFieldLength=[],this._nextId=0,this._storedFields=new Map,this._dirtCount=0,this._currentVacuum=null,this._enqueuedVacuum=null,this._enqueuedVacuumConditions=F,this.addFields(this._options.fields)}add(t){const{extractField:e,tokenize:s,processTerm:i,fields:n,idField:o}=this._options,r=e(t,o);if(null==r)throw new Error(`MiniSearch: document does not have ID field "${o}"`);if(this._idToShortId.has(r))throw new Error(`MiniSearch: duplicate ID ${r}`);const c=this.addDocumentId(r);this.saveStoredFields(c,t);for(const o of n){const n=e(t,o);if(null==n)continue;const r=s(n.toString(),o),h=this._fieldIds[o],u=new Set(r).size;this.addFieldLength(c,h,this._documentCount-1,u);for(const t of r){const e=i(t,o);if(Array.isArray(e))for(const t of e)this.addTerm(h,c,t);else e&&this.addTerm(h,c,e)}}}addAll(t){for(const e of t)this.add(e)}addAllAsync(t,e={}){const{chunkSize:s=10}=e,i={chunk:[],promise:Promise.resolve()},{chunk:n,promise:o}=t.reduce((({chunk:t,promise:e},i,n)=>(t.push(i),(n+1)%s==0?{chunk:[],promise:e.then((()=>new Promise((t=>setTimeout(t,0))))).then((()=>this.addAll(t)))}:{chunk:t,promise:e})),i);return o.then((()=>this.addAll(n)))}remove(t){const{tokenize:e,processTerm:s,extractField:i,fields:n,idField:o}=this._options,r=i(t,o);if(null==r)throw new Error(`MiniSearch: document does not have ID field "${o}"`);const c=this._idToShortId.get(r);if(null==c)throw new Error(`MiniSearch: cannot remove document with ID ${r}: it is not in the index`);for(const o of n){const n=i(t,o);if(null==n)continue;const r=e(n.toString(),o),h=this._fieldIds[o],u=new Set(r).size;this.removeFieldLength(c,h,this._documentCount,u);for(const t of r){const e=s(t,o);if(Array.isArray(e))for(const t of e)this.removeTerm(h,c,t);else e&&this.removeTerm(h,c,e)}}this._storedFields.delete(c),this._documentIds.delete(c),this._idToShortId.delete(r),this._fieldLength.delete(c),this._documentCount-=1}removeAll(t){if(t)for(const e of t)this.remove(e);else{if(arguments.length>0)throw new Error("Expected documents to be present. Omit the argument to remove all documents.");this._index=new r,this._documentCount=0,this._documentIds=new Map,this._idToShortId=new Map,this._fieldLength=new Map,this._avgFieldLength=[],this._storedFields=new Map,this._nextId=0}}discard(t){const e=this._idToShortId.get(t);if(null==e)throw new Error(`MiniSearch: cannot discard document with ID ${t}: it is not in the index`);this._idToShortId.delete(t),this._documentIds.delete(e),this._storedFields.delete(e),(this._fieldLength.get(e)||[]).forEach(((t,s)=>{this.removeFieldLength(e,s,this._documentCount,t)})),this._fieldLength.delete(e),this._documentCount-=1,this._dirtCount+=1,this.maybeAutoVacuum()}maybeAutoVacuum(){if(!1===this._options.autoVacuum)return;const{minDirtFactor:t,minDirtCount:e,batchSize:s,batchWait:i}=this._options.autoVacuum;this.conditionalVacuum({batchSize:s,batchWait:i},{minDirtCount:e,minDirtFactor:t})}discardAll(t){const e=this._options.autoVacuum;try{this._options.autoVacuum=!1;for(const e of t)this.discard(e)}finally{this._options.autoVacuum=e}this.maybeAutoVacuum()}replace(t){const{idField:e,extractField:s}=this._options,i=s(t,e);this.discard(i),this.add(t)}vacuum(t={}){return this.conditionalVacuum(t)}conditionalVacuum(t,e){return this._currentVacuum?(this._enqueuedVacuumConditions=this._enqueuedVacuumConditions&&e,null!=this._enqueuedVacuum||(this._enqueuedVacuum=this._currentVacuum.then((()=>{const e=this._enqueuedVacuumConditions;return this._enqueuedVacuumConditions=F,this.performVacuuming(t,e)}))),this._enqueuedVacuum):!1===this.vacuumConditionsMet(e)?Promise.resolve():(this._currentVacuum=this.performVacuuming(t),this._currentVacuum)}async performVacuuming(t,e){const s=this._dirtCount;if(this.vacuumConditionsMet(e)){const e=t.batchSize||S.batchSize,i=t.batchWait||S.batchWait;let n=1;for(const[t,s]of this._index){for(const[t,e]of s)for(const[i]of e)this._documentIds.has(i)||(e.size<=1?s.delete(t):e.delete(i));0===this._index.get(t).size&&this._index.delete(t),n%e==0&&await new Promise((t=>setTimeout(t,i))),n+=1}this._dirtCount-=s}await null,this._currentVacuum=this._enqueuedVacuum,this._enqueuedVacuum=null}vacuumConditionsMet(t){if(null==t)return!0;let{minDirtCount:e,minDirtFactor:s}=t;return e=e||M.minDirtCount,s=s||M.minDirtFactor,this.dirtCount>=e&&this.dirtFactor>=s}get isVacuuming(){return null!=this._currentVacuum}get dirtCount(){return this._dirtCount}get dirtFactor(){return this._dirtCount/(1+this._documentCount+this._dirtCount)}has(t){return this._idToShortId.has(t)}getStoredFields(t){const e=this._idToShortId.get(t);if(null!=e)return this._storedFields.get(e)}search(t,e={}){const{searchOptions:s}=this._options,i={...s,...e},n=this.executeQuery(t,e),o=[];for(const[t,{score:e,terms:s,match:r}]of n){const n=s.length||1,c={id:this._documentIds.get(t),score:e*n,terms:Object.keys(r),queryTerms:s,match:r};Object.assign(c,this._storedFields.get(t)),(null==i.filter||i.filter(c))&&o.push(c)}return t===p.wildcard&&null==i.boostDocument||o.sort(V),o}autoSuggest(t,e={}){e={...this._options.autoSuggestOptions,...e};const s=new Map;for(const{score:i,terms:n}of this.search(t,e)){const t=n.join(" "),e=s.get(t);null!=e?(e.score+=i,e.count+=1):s.set(t,{score:i,terms:n,count:1})}const i=[];for(const[t,{score:e,terms:n,count:o}]of s)i.push({suggestion:t,terms:n,score:e/o});return i.sort(V),i}get documentCount(){return this._documentCount}get termCount(){return this._index.size}static loadJSON(t,e){if(null==e)throw new Error("MiniSearch: loadJSON should be given the same options used when serializing the index");return this.loadJS(JSON.parse(t),e)}static async loadJSONAsync(t,e){if(null==e)throw new Error("MiniSearch: loadJSON should be given the same options used when serializing the index");return this.loadJSAsync(JSON.parse(t),e)}static getDefault(t){if(z.hasOwnProperty(t))return w(z,t);throw new Error(`MiniSearch: unknown option "${t}"`)}static loadJS(t,e){const{index:s,documentIds:i,fieldLength:n,storedFields:o,serializationVersion:r}=t,c=this.instantiateMiniSearch(t,e);c._documentIds=T(i),c._fieldLength=T(n),c._storedFields=T(o);for(const[t,e]of c._documentIds)c._idToShortId.set(e,t);for(const[t,e]of s){const s=new Map;for(const t of Object.keys(e)){let i=e[t];1===r&&(i=i.ds),s.set(parseInt(t,10),T(i))}c._index.set(t,s)}return c}static async loadJSAsync(t,e){const{index:s,documentIds:i,fieldLength:n,storedFields:o,serializationVersion:r}=t,c=this.instantiateMiniSearch(t,e);c._documentIds=await L(i),c._fieldLength=await L(n),c._storedFields=await L(o);for(const[t,e]of c._documentIds)c._idToShortId.set(e,t);let h=0;for(const[t,e]of s){const s=new Map;for(const t of Object.keys(e)){let i=e[t];1===r&&(i=i.ds),s.set(parseInt(t,10),await L(i))}++h%1e3==0&&await E(0),c._index.set(t,s)}return c}static instantiateMiniSearch(t,e){const{documentCount:s,nextId:i,fieldIds:n,averageFieldLength:o,dirtCount:c,serializationVersion:h}=t;if(1!==h&&2!==h)throw new Error("MiniSearch: cannot deserialize an index created with an incompatible version");const u=new p(e);return u._documentCount=s,u._nextId=i,u._idToShortId=new Map,u._fieldIds=n,u._avgFieldLength=o,u._dirtCount=c||0,u._index=new r,u}executeQuery(t,e={}){if(t===p.wildcard)return this.executeWildcardQuery(e);if("string"!=typeof t){const s={...e,...t,queries:void 0},i=t.queries.map((t=>this.executeQuery(t,s)));return this.combineResults(i,s.combineWith)}const{tokenize:s,processTerm:i,searchOptions:n}=this._options,o={tokenize:s,processTerm:i,...n,...e},{tokenize:r,processTerm:c}=o,h=r(t).flatMap((t=>c(t))).filter((t=>!!t)).map(x(o)).map((t=>this.executeQuerySpec(t,o)));return this.combineResults(h,o.combineWith)}executeQuerySpec(t,e){const s={...this._options.searchOptions,...e},i=(s.fields||this._options.fields).reduce(((t,e)=>({...t,[e]:w(s.boost,e)||1})),{}),{boostDocument:n,weights:o,maxFuzzy:r,bm25:c}=s,{fuzzy:h,prefix:u}={...b.weights,...o},d=this._index.get(t.term),a=this.termResults(t.term,t.term,1,t.termBoost,d,i,n,c);let l,f;if(t.prefix&&(l=this._index.atPrefix(t.term)),t.fuzzy){const e=!0===t.fuzzy?.2:t.fuzzy,s=e<1?Math.min(r,Math.round(t.term.length*e)):e;s&&(f=this._index.fuzzyGet(t.term,s))}if(l)for(const[e,s]of l){const o=e.length-t.term.length;if(!o)continue;null==f||f.delete(e);const r=u*e.length/(e.length+.3*o);this.termResults(t.term,e,r,t.termBoost,s,i,n,c,a)}if(f)for(const e of f.keys()){const[s,o]=f.get(e);if(!o)continue;const r=h*e.length/(e.length+o);this.termResults(t.term,e,r,t.termBoost,s,i,n,c,a)}return a}executeWildcardQuery(t){const e=new Map,s={...this._options.searchOptions,...t};for(const[t,i]of this._documentIds){const n=s.boostDocument?s.boostDocument(i,"",this._storedFields.get(t)):1;e.set(t,{score:n,terms:[],match:{}})}return e}combineResults(t,e=m){if(0===t.length)return new Map;const s=e.toLowerCase(),i=y[s];if(!i)throw new Error(`Invalid combination operator: ${e}`);return t.reduce(i)||new Map}toJSON(){const t=[];for(const[e,s]of this._index){const i={};for(const[t,e]of s)i[t]=Object.fromEntries(e);t.push([e,i])}return{documentCount:this._documentCount,nextId:this._nextId,documentIds:Object.fromEntries(this._documentIds),fieldIds:this._fieldIds,fieldLength:Object.fromEntries(this._fieldLength),averageFieldLength:this._avgFieldLength,storedFields:Object.fromEntries(this._storedFields),dirtCount:this._dirtCount,index:t,serializationVersion:2}}termResults(t,e,s,i,n,o,r,c,h=new Map){if(null==n)return h;for(const u of Object.keys(o)){const d=o[u],a=this._fieldIds[u],l=n.get(a);if(null==l)continue;let f=l.size;const m=this._avgFieldLength[a];for(const n of l.keys()){if(!this._documentIds.has(n)){this.removeTerm(a,n,e),f-=1;continue}const o=r?r(this._documentIds.get(n),e,this._storedFields.get(n)):1;if(!o)continue;const _=l.get(n),g=this._fieldLength.get(n)[a],p=s*i*d*o*v(_,f,this._documentCount,g,m,c),y=h.get(n);if(y){y.score+=p,k(y.terms,t);const s=w(y.match,e);s?s.push(u):y.match[e]=[u]}else h.set(n,{score:p,terms:[t],match:{[e]:[u]}})}}return h}addTerm(t,e,s){const i=this._index.fetch(s,O);let n=i.get(t);if(null==n)n=new Map,n.set(e,1),i.set(t,n);else{const t=n.get(e);n.set(e,(t||0)+1)}}removeTerm(t,e,s){if(!this._index.has(s))return void this.warnDocumentChanged(e,t,s);const i=this._index.fetch(s,O),n=i.get(t);null==n||null==n.get(e)?this.warnDocumentChanged(e,t,s):n.get(e)<=1?n.size<=1?i.delete(t):n.delete(e):n.set(e,n.get(e)-1),0===this._index.get(s).size&&this._index.delete(s)}warnDocumentChanged(t,e,s){for(const i of Object.keys(this._fieldIds))if(this._fieldIds[i]===e)return void this._options.logger("warn",`MiniSearch: document with ID ${this._documentIds.get(t)} has changed before removal: term "${s}" was not present in field "${i}". Removing a document after it has changed can corrupt the index!`,"version_conflict")}addDocumentId(t){const e=this._nextId;return this._idToShortId.set(t,e),this._documentIds.set(e,t),this._documentCount+=1,this._nextId+=1,e}addFields(t){for(let e=0;e<t.length;e++)this._fieldIds[t[e]]=e}addFieldLength(t,e,s,i){let n=this._fieldLength.get(t);null==n&&this._fieldLength.set(t,n=[]),n[e]=i;const o=(this._avgFieldLength[e]||0)*s+i;this._avgFieldLength[e]=o/(s+1)}removeFieldLength(t,e,s,i){if(1===s)return void(this._avgFieldLength[e]=0);const n=this._avgFieldLength[e]*s-i;this._avgFieldLength[e]=n/(s-1)}saveStoredFields(t,e){const{storeFields:s,extractField:i}=this._options;if(null==s||0===s.length)return;let n=this._storedFields.get(t);null==n&&this._storedFields.set(t,n={});for(const t of s){const s=i(e,t);void 0!==s&&(n[t]=s)}}}p.wildcard=Symbol("*");const w=(t,e)=>Object.prototype.hasOwnProperty.call(t,e)?t[e]:void 0,y={[m]:(t,e)=>{for(const s of e.keys()){const i=t.get(s);if(null==i)t.set(s,e.get(s));else{const{score:t,terms:n,match:o}=e.get(s);i.score=i.score+t,i.match=Object.assign(i.match,o),C(i.terms,n)}}return t},[_]:(t,e)=>{const s=new Map;for(const i of e.keys()){const n=t.get(i);if(null==n)continue;const{score:o,terms:r,match:c}=e.get(i);C(n.terms,r),s.set(i,{score:n.score+o,terms:n.terms,match:Object.assign(n.match,c)})}return s},[g]:(t,e)=>{for(const s of e.keys())t.delete(s);return t}},v=(t,e,s,i,n,o)=>{const{k:r,b:c,d:h}=o;return Math.log(1+(s-e+.5)/(e+.5))*(h+t*(r+1)/(t+r*(1-c+c*i/n)))},x=t=>(e,s,i)=>({term:e,fuzzy:"function"==typeof t.fuzzy?t.fuzzy(e,s,i):t.fuzzy||!1,prefix:"function"==typeof t.prefix?t.prefix(e,s,i):!0===t.prefix,termBoost:"function"==typeof t.boostTerm?t.boostTerm(e,s,i):1}),z={idField:"id",extractField:(t,e)=>t[e],tokenize:t=>t.split(D),processTerm:t=>t.toLowerCase(),fields:void 0,searchOptions:void 0,storeFields:[],logger:(t,e)=>{"function"==typeof(null===console||void 0===console?void 0:console[t])&&console[t](e)},autoVacuum:!0},b={combineWith:m,prefix:!1,fuzzy:!1,maxFuzzy:6,boost:{},weights:{fuzzy:.45,prefix:.375},bm25:{k:1.2,b:.7,d:.5}},I={combineWith:"and",prefix:(t,e,s)=>e===s.length-1},S={batchSize:1e3,batchWait:10},F={minDirtFactor:.1,minDirtCount:20},M={...S,...F},k=(t,e)=>{t.includes(e)||t.push(e)},C=(t,e)=>{for(const s of e)t.includes(s)||t.push(s)},V=({score:t},{score:e})=>e-t,O=()=>new Map,T=t=>{const e=new Map;for(const s of Object.keys(t))e.set(parseInt(s,10),t[s]);return e},L=async t=>{const e=new Map;let s=0;for(const i of Object.keys(t))e.set(parseInt(i,10),t[i]),++s%1e3==0&&await E(0);return e},E=t=>new Promise((e=>setTimeout(e,t))),D=/[\n\r\p{Z}\p{P}]+/u;return p}));</script>
+<script>
+(function(){
+  var input = document.getElementById('sq');
+  var elEd = document.getElementById('s-editorial');
+  var elSt = document.getElementById('s-stops');
+  var mini = null, stops = null, stopsFailed = false;
+  function esc(s){ return (s||'').replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  input.value = new URLSearchParams(location.search).get('q') || '';
+  input.focus();
+
+  fetch('/search/search_docs.json').then(function(r){ return r.json(); }).then(function(docs){
+    mini = new MiniSearch({ fields: ['title','desc','body'],
+      storeFields: ['title','url','type','desc','body'],
+      searchOptions: { boost: {title: 4, desc: 2}, prefix: true, fuzzy: 0.2 } });
+    mini.addAll(docs);
+    run();
+  }).catch(function(){ elEd.innerHTML = '<p class="sr-note">Search could not load. Try reloading the page.</p>'; });
+
+  fetch('/wwc/wwc_data.json').then(function(r){ return r.json(); }).then(function(d){
+    stops = [];
+    var L = d.listings || {};
+    Object.keys(L).forEach(function(cat){
+      var cols = L[cat] || {};
+      var names = cols.name || [], comms = cols.community || [], keys = cols.key || [], reals = cols.real || [];
+      for (var i = 0; i < names.length; i++) {
+        if (reals[i] === false) continue;
+        stops.push({ n: names[i] || '', c: comms[i] || '', k: keys[i] || '' });
+      }
+    });
+    run();
+  }).catch(function(){ stopsFailed = true; run(); });
+
+  var t = null;
+  input.addEventListener('input', function(){
+    if (t) clearTimeout(t);
+    t = setTimeout(function(){
+      var q = input.value.trim();
+      history.replaceState(null, '', q ? '?q=' + encodeURIComponent(q) : location.pathname);
+      run();
+    }, 120);
+  });
+
+  function snippet(r, q) {
+    if (r.desc) return r.desc;
+    var body = r.body || '', w = q.toLowerCase().split(/\s+/)[0] || '';
+    var i = w ? body.toLowerCase().indexOf(w) : -1;
+    if (i < 0) return body.slice(0, 150);
+    var start = Math.max(0, i - 40);
+    return (start ? '\u2026' : '') + body.slice(start, start + 150) + '\u2026';
+  }
+
+  function run() {
+    var q = input.value.trim();
+    if (q.length < 2) { elEd.innerHTML = ''; elSt.innerHTML = ''; return; }
+    if (mini) {
+      var hits = mini.search(q).slice(0, 15);
+      elEd.innerHTML = '<div class="sr-group-h">Pages</div>' + (hits.length
+        ? hits.map(function(r){
+            return '<a class="sr-item" href="' + esc(r.url) + '"><span class="sr-title">' + esc(r.title) +
+                   '</span><span class="sr-type">' + esc(r.type) + '</span><div class="sr-snip">' + esc(snippet(r, q)) + '</div></a>';
+          }).join('')
+        : '<p class="sr-note">No pages match \u201c' + esc(q) + '\u201d.</p>');
+    } else {
+      elEd.innerHTML = '<p class="sr-note">Loading\u2026</p>';
+    }
+    var dirLink = '/wwc/#view=all&q=' + encodeURIComponent(q);
+    var h = '<div class="sr-group-h">Stops</div>';
+    if (stops) {
+      var words = q.toLowerCase().split(/\s+/).filter(Boolean);
+      var m = [];
+      for (var i = 0; i < stops.length; i++) {
+        var hay = (stops[i].n + ' ' + stops[i].c).toLowerCase();
+        var ok = true;
+        for (var w = 0; w < words.length; w++) { if (hay.indexOf(words[w]) === -1) { ok = false; break; } }
+        if (ok) m.push(stops[i]);
+      }
+      if (m.length) {
+        h += m.slice(0, 12).map(function(s){
+          return '<a class="sr-item" href="/wwc/stop/' + esc(s.k) + '/"><span class="sr-title">' + esc(s.n) +
+                 '</span><div class="sr-snip">' + esc(s.c) + '</div></a>';
+        }).join('');
+        h += '<p class="sr-more"><a href="' + dirLink + '">' + (m.length > 12
+              ? 'See all ' + m.length + ' matching stops in the directory \u2192'
+              : 'Open the directory to filter these \u2192') + '</a></p>';
+      } else {
+        h += '<p class="sr-note">No stops match by name or community. <a href="' + dirLink +
+             '">Try the full directory search \u2192</a> (it also searches amenities and descriptions).</p>';
+      }
+    } else if (!stopsFailed) {
+      h += '<p class="sr-note">Loading the stop directory\u2026</p>';
+    } else {
+      h += '<p class="sr-note"><a href="' + dirLink + '">Search the stop directory \u2192</a></p>';
+    }
+    elSt.innerHTML = h;
+  }
+})();
+</script>
+
+</div>
+<!--chrome--><div class="g-footer">
+  <a class="g-footer-brand" href="/">
+    <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+  </a>
+  <div class="g-footer-nav">
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get Inspired</div>
+      <a href="/routes/all/">Browse all routes</a>
+      <a href="/routes/">The highlight reel</a>
+      <a href="/trails/">Named trails</a>
+      <a href="/route-publishers/">Route makers</a>
+      <a href="/wwc/communities/">Communities</a>
+      <a href="/routes/how-we-describe/">How we describe routes</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Plan Your Trip</div>
+      <a href="/plan/">How a trip comes together</a>
+      <a href="/wwc/">BC Bike Stops directory</a>
+      <a href="/to-fro/">To &amp; Fro</a>
+      <a href="/add-stops/">Add Stops to Your Route</a>
+      <a href="/wwc/guide/">Stop guides</a>
+      <a href="/be-prepared/">Be Prepared</a>
+      <a href="/design-your-own-route/">Design Your Own Route</a>
+      <a href="/bike-together/">Bike Together</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Field Notes</div>
+      <a href="/field-notes">Read the latest</a>
+      <a href="/#newsletter">Subscribe</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get involved</div>
+      <a href="/suggest/">Suggest a stop</a>
+      <a href="/apply/">Apply for accreditation</a>
+      <a href="/support/trail-organizations/">Support the trail organizations</a>
+      <a href="/#contact">Say hi! 🙂</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">About</div>
+      <a href="/about">About us</a>
+      <a href="/advocacy/">Advocacy</a>
+      <a href="/research/">Research and Data</a>
+      <a href="/with-thanks/">With thanks</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/land-acknowledgement">Land acknowledgement</a>
+    </div>
+  </div>
+</div><!--/chrome-->
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
