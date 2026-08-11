@@ -40,6 +40,11 @@ body {
   font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
+/* Base link colour, both states (BC-504) — visited links were browser-purple
+   wherever no rule targeted them. First in the cascade, so any later page rule
+   that styles a link overrides both states. */
+a { color: #1E7D96; }
+a:visited { color: #1E7D96; }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
 /* position+z-index so open dropdown menus paint above page content that
@@ -306,9 +311,13 @@ h2:hover > .h-anchor { opacity: .55; }
     <h2 id="wildlife">Wildlife<a class="h-anchor" href="#wildlife" aria-label="Link to this section">#</a></h2>
     <p class="bp-sub">You're a guest in bear country. It's one of the best things about riding here, and it asks a little of you.</p>
     <p>At camp, never feed animals, and store food, food waste, and anything scented securely and away from your tent. Bears get the headlines, but raccoons and wolverines are just as happy to relieve you of tomorrow's lunch, and they're better at it. On the road, give all animals room, especially anything with young nearby. Bear spray is legal in Canada and available in most outdoor stores and gas stations in bear country. Keep it on your body so it is accessible even when you are off your bike, and learn to use it before you need it.</p>
+    <p>Bikepacking without a bear cache at your site? A traditional bear bag needs to go up high and well out on a branch to work. An Ursack, a reinforced fabric sack, works the opposite way: don't hang it, tie it low around a sturdy tree trunk instead. Check your route's BC Parks page first: some popular backcountry sites, Garibaldi Lake among them, already provide bear caches or hang cables.</p>
+    <p>Ticks are out roughly April through June, and again in drier interior spots come fall. Cover up in tall grass or brush if you can, check yourself after, and if you find one, grab it close to the skin and pull straight out, don't twist. Watch the bite site for a few weeks after. Lyme disease is rare in BC but not unheard of.</p>
     <ul class="bp-links">
       <li><a target="_blank" rel="noopener" href="https://wildsafebc.com/">WildSafeBC</a> &middot; what to do if you meet a bear, cougar, moose, or elk</li>
       <li><a target="_blank" rel="noopener" href="https://parks.canada.ca/docs/v-g/oursnoir-blackbear/page6">Parks Canada: camping in bear country</a> &middot; food storage done right</li>
+      <li><a target="_blank" rel="noopener" href="https://ursack.com/">Ursack</a> &middot; how to use one (tie it, don't hang it)</li>
+      <li><a target="_blank" rel="noopener" href="https://www.healthlinkbc.ca/healthwise/ticks-how-avoid-and-remove-ticks">HealthLink BC: ticks</a> &middot; how to avoid and remove ticks</li>
       <li>And if you can't tell your mountain sheep from your mountain goats, Parks Canada made <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=FJyseYPX2IM">a song about it</a>. We're not sorry. (<a target="_blank" rel="noopener" href="https://parks.canada.ca/pn-np/ab/banff/activ/edu/virtuelles-virtual/musique-music">more</a>)</li>
     </ul>
   </section>

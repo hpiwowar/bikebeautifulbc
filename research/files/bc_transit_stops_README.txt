@@ -5,7 +5,7 @@ Every stop on every service in the routes file, in the order the service calls
 at them, with a coordinate and an honest statement of how precise that
 coordinate is. Join it to the routes file on route_id.
 
-Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-08-11 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -22,7 +22,7 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). British Columbia transit
-stops, in order, with locations [data set]. Version 2026-07-26.
+stops, in order, with locations [data set]. Version 2026-08-11.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE

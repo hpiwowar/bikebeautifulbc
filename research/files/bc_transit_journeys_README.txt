@@ -7,7 +7,7 @@ board and whether a bicycle can come. The connections file reports two journeys
 per pair (a neutral pick and our recommendation); this is all of them, so our
 ranking can be inspected rather than taken on trust.
 
-Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-08-11 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -24,7 +24,7 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). Every way of getting
-between two British Columbia communities [data set]. Version 2026-07-26.
+between two British Columbia communities [data set]. Version 2026-08-11.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE

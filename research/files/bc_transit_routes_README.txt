@@ -6,7 +6,7 @@ around British Columbia. Buses, ferries, inland ferries, water taxis, trains,
 SkyTrain, flights, ride-share and one-way rental car corridors. Its ordered
 stops and their locations are the companion stops file.
 
-Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-08-11 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -23,7 +23,7 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). British Columbia transit
-routes, for cyclists [data set]. Version 2026-07-26.
+routes, for cyclists [data set]. Version 2026-08-11.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE

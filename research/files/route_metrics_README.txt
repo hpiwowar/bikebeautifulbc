@@ -6,7 +6,7 @@ measurements behind its difficulty tier and descriptive labels. The routes are
 published by route makers across the province; what we add is one consistent
 description of all of them.
 
-Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-08-09 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -27,12 +27,12 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). Published BC cycling routes
-— derived metrics [data set]. Version 2026-07-26.
+— derived metrics [data set]. Version 2026-08-09.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-One row per route, 327 rows. The same data ships as .xlsx and .csv.
+One row per route, 320 rows. The same data ships as .xlsx and .csv.
 
 A blank cell means we could not measure that thing, not that it is zero. We
 require at least 5 km of a route to be measured before we publish a figure or a
@@ -41,7 +41,7 @@ places.
 
 Nothing here is inferred from a route's written description.
 
-The route count is 327. Our database holds a handful more that are tagged
+The route count is 320. Our database holds a handful more that are tagged
 mountain-bike routes and left out of the collection we list; this file uses the
 same rule the website does, so the two always agree.
 
@@ -156,7 +156,7 @@ unpaved_pct  [%]
 
 unpaved_pct_source
     'osm' (our own measurement, preferred), else the publisher's own figure from
-    'ridewithgps' or 'bikepacking.com'.
+    'ridewithgps' or 'BIKEPACKING.com'.
 
 rugg_dom  [0-4]
     Dominant ruggedness level by distance. 0 paved, 1 smooth unpaved, 2 loose, 3
@@ -206,7 +206,7 @@ source_difficulty  [score]
     Blank where the publisher gave none or gave an ambiguous combination.
 
 singletrack_pct  [%]
-    Publisher-reported singletrack share. Only bikepacking.com supplies this.
+    Publisher-reported singletrack share. Only BIKEPACKING.com supplies this.
 
 tier
     The published difficulty tier: Easy, Moderate, Ambitious, Challenging, or

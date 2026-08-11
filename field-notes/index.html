@@ -40,6 +40,11 @@ body {
   font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
+/* Base link colour, both states (BC-504) — visited links were browser-purple
+   wherever no rule targeted them. First in the cascade, so any later page rule
+   that styles a link overrides both states. */
+a { color: #1E7D96; }
+a:visited { color: #1E7D96; }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
 /* position+z-index so open dropdown menus paint above page content that
@@ -241,6 +246,8 @@ h2:hover > .h-anchor { opacity: .55; }
 .dispatch-item-heading { font-size: 15px; font-weight: 600; color: #1a1a1a; margin: 2px 0 2px; }
 .dispatch-item-text { font-size: 16px; color: #1a1a1a; line-height: 1.5; }
 .dispatch-item-text a { color: #1E7D96; text-decoration: none; }
+.dispatch-more { margin-top: 0.9rem; font-size: 14px; font-weight: 600; }
+.dispatch-more a { color: #1E7D96; text-decoration: none; }
 .dispatch-archive { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 0.5rem; }
 .dispatch-archive-link { font-size: 13px; color: #666; background: #fff; border: 1px solid #E5E7EB; border-radius: 8px; padding: 4px 12px; text-decoration: none; }
 .dispatch-archive-link:hover { border-color: #1E7D96; color: #1E7D96; }
@@ -551,37 +558,8 @@ h2:hover > .h-anchor { opacity: .55; }
       </div><div class="dispatch-item">
         <p class="dispatch-item-heading"><span class="dispatch-item-date">July</span>&nbsp;&nbsp;&nbsp;&nbsp;Two ways to speak up for backcountry access</p>
         <p class="dispatch-item-text">The Outdoor Recreation Council of BC wants to know which resource roads matter for your riding, and has a new guide for weighing in on the forest landscape plans now underway around the province. <a href="https://www.orcbc.ca/blog/survey">Resource road survey &rarr;</a> and <a href="https://www.orcbc.ca/blog/forest-landscape-planning">Forest planning guide &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 3–17</span>&nbsp;&nbsp;&nbsp;&nbsp;New 14 km on the Shuswap North Okanagan Rail Trail</p>
-        <p class="dispatch-item-text">A new 14 km section between Rosemond Lake Bridge and Grindrod is open, celebrated with a July 17 ribbon cutting at Mara Trailhead alongside development partner Splatsin te Secwépemc. About 32 km of the Sicamous to Armstrong corridor is now rideable, across three separate segments. <a href="https://www.castanet.net/news/Salmon-Arm/623474/New-14-kilometre-section-of-Shuswap-North-Okanagan-Rail-Trail-now-open">Castanet &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">June 18</span>&nbsp;&nbsp;&nbsp;&nbsp;Kettle Valley Rail Trail: the door reopens a crack</p>
-        <p class="dispatch-item-text">The province stepped partway back from decommissioning the damaged Kettle Valley Rail Trail sections near Princeton. Repairs to three priority segments are now on the table, pending federal disaster-assistance funding and a long-term maintenance commitment from the regional district, whose board decides by the end of 2026. The hardest-hit 17 km near Coquihalla Lakes is still being decommissioned this summer, though the railbed stays, and the province says it is open to reroute proposals from Trans Canada Trail. Progress, not a rescue. <a href="https://news.gov.bc.ca/releases/2026ENV0029-000723">Province's announcement &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">All summer</span>&nbsp;&nbsp;&nbsp;&nbsp;Before you head out</p>
-        <p class="dispatch-item-text">Wildfire smoke, road closures, and heat are part of BC summer riding. Our Be Prepared page gathers the checks worth doing before you roll out. <a href="/be-prepared/">Be Prepared &rarr;</a></p>
       </div></div>
-      <p class="dispatch-archive-heading">BC Trip Reports</p>
-      <p class="dispatch-sub">People keep writing about riding BC. A few favourites from the past month.</p>
-      <div class="dispatch-items-wrap"><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 29</span>&nbsp;&nbsp;&nbsp;&nbsp;An overnighter to Sooke Potholes</p>
-        <p class="dispatch-item-text">The Gravel Buddies crew rode out of Victoria through fields, wildflowers, and oak meadows to camp at Sooke Potholes, lunch spot overlooking Matheson Lake included, and posted it as a ready-made plan for the long weekend. <a href="https://www.instagram.com/p/DbWcwEdEvUY/">Trip report on Instagram &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 27</span>&nbsp;&nbsp;&nbsp;&nbsp;11 days from Vernon to Fernie</p>
-        <p class="dispatch-item-text">Rick McCharles logged about 750 km across the province's rail-trail spine: the Okanagan Rail Trail, Myra Canyon, the Kettle Valley, and the Columbia &amp; Western. <a href="https://besthike.com/2026/07/27/11-days-cycling-vernon-to-fernie-b-c/">Trip report on BestHike &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 25</span>&nbsp;&nbsp;&nbsp;&nbsp;20 days across BC</p>
-        <p class="dispatch-item-text">A self-supported Reddit trip report, Banff to Vancouver, taking in Paleface Pass and the Kettle Valley Rail Trail through Myra Canyon, with a lively question thread. <a href="https://www.reddit.com/r/bikepacking/comments/1v6h387/20_days_across_british_columbia_canada/">Trip report on Reddit &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 16</span>&nbsp;&nbsp;&nbsp;&nbsp;Four days of small-town stops around the Cowichan Valley</p>
-        <p class="dispatch-item-text">Leigh McAdam's Victoria loop for Trans Canada Trail, out the Galloping Goose and home by the Lochside, is also a stop-by-stop case for how bike travellers spread their spending through small communities. <a href="https://tctrail.ca/stories/bikepacking-vancouver-island/">Read at Trans Canada Trail &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 10</span>&nbsp;&nbsp;&nbsp;&nbsp;Spiraling on the Tree to Sea Loop</p>
-        <p class="dispatch-item-text">A long read on the 1,000 km gravel loop from Comox around northern Vancouver Island. <a href="https://bikepacking.com/plog/spiraling-on-the-tree-to-sea-loop/">Read on BIKEPACKING.com &rarr;</a></p>
-      </div><div class="dispatch-item">
-        <p class="dispatch-item-heading"><span class="dispatch-item-date">July 9</span>&nbsp;&nbsp;&nbsp;&nbsp;The best campsite is 90 minutes away</p>
-        <p class="dispatch-item-text">A reflective photo essay on a close-to-home BC overnight, riverside camping and all. <a href="https://bikepacking.com/news/best-campsite-hour-and-a-half-away/">Read on BIKEPACKING.com &rarr;</a></p>
-      </div></div>
+      <p class="dispatch-more"><a href="/field-notes/dispatch/202607/">All 6 stories from July + BC trip reports &rarr;</a></p>
     </div>
     <p class="dispatch-archive-heading">All issues</p>
     <div class="issue-archive"><a class="issue-link" href="/field-notes/dispatch/202607/">July 2026 issue &rarr;</a><a class="issue-link" href="/field-notes/dispatch/202605/">May/June 2026 issue &rarr;</a></div>

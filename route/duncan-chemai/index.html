@@ -39,6 +39,11 @@ body {
   font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
+/* Base link colour, both states (BC-504) — visited links were browser-purple
+   wherever no rule targeted them. First in the cascade, so any later page rule
+   that styles a link overrides both states. */
+a { color: #1E7D96; }
+a:visited { color: #1E7D96; }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
 /* position+z-index so open dropdown menus paint above page content that
@@ -364,6 +369,7 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
 .cp-ph .cap-place { position: absolute; right: 12px; bottom: 11px; color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .01em; text-shadow: 0 1px 6px rgba(0,0,0,.6); max-width: 78%; text-align: right; }
 </style><style>
 .rt-byline{font-size:15px;color:#636363;margin:-6px 0 12px}
+.rt-byline .publogo{vertical-align:-5px;margin-left:8px}
 .rt-byline a{color:#1E7D96;font-weight:600;text-decoration:none}
 .rt-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
 .rt-chips .chip{font-size:12.5px;font-weight:600;color:#41586b;background:#eef2ee;border:1px solid #dbe3db;border-radius:99px;padding:4px 12px}
@@ -472,6 +478,11 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
 .rt-head{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:40px;align-items:start;margin:0 0 26px}
 .rt-lede{font-size:16.5px;line-height:1.65;color:#3C4A43;max-width:62ch;margin:0 0 16px}
 .rt-lede b{color:#1F514C}
+.rt-excerpt{margin:0 0 16px;padding:2px 0 2px 18px;border-left:3px solid #1F514C;max-width:62ch}
+.rt-excerpt p{font-size:16.5px;line-height:1.65;color:#3C4A43;font-style:italic;margin:0 0 8px}
+.rt-excerpt cite{display:block;font-style:normal;font-size:13.5px;color:#5B6B72;margin-top:2px}
+.rt-excerpt cite a{color:#1E7D96;font-weight:600;text-decoration:none}
+.rt-excerpt cite a:hover{text-decoration:underline}
 .rt-ctainline{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:4px 0 8px}
 .rt-card{background:#fff;border:1px solid #E7E0D2;border-radius:16px;padding:20px 20px 10px;box-shadow:0 2px 10px rgba(34,51,59,.05)}
 .rt-ring{display:flex;gap:14px;align-items:center;border-bottom:1px solid #E7E0D2;padding-bottom:14px}

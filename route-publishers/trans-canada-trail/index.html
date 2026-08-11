@@ -39,6 +39,11 @@ body {
   font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
+/* Base link colour, both states (BC-504) — visited links were browser-purple
+   wherever no rule targeted them. First in the cascade, so any later page rule
+   that styles a link overrides both states. */
+a { color: #1E7D96; }
+a:visited { color: #1E7D96; }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
 /* position+z-index so open dropdown menus paint above page content that
@@ -329,6 +334,9 @@ body{background:var(--paper)}
 .pcard .links{margin-top:12px;display:flex;gap:22px;flex-wrap:wrap}
 .pcard .links a{font-size:13.5px;font-weight:700;text-decoration:none;color:var(--river)}
 .pcard .links a:hover{text-decoration:underline}
+.publogo{vertical-align:middle}
+.publogo-head{display:block;margin:2px 0 10px}
+.pcard .plogo{float:right;margin:2px 0 8px 14px}
 .pubhead h1{font-family:"Archivo","Inter",sans-serif;font-size:clamp(28px,3.8vw,44px);font-weight:700;color:var(--herodark);letter-spacing:-.01em;line-height:1.1;margin:4px 0 6px}
 .pubhead .chips{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:16px}
 .pubhead .visit{font-size:14px;font-weight:700;color:var(--river);text-decoration:none}
@@ -427,9 +435,10 @@ body{background:var(--paper)}
 <div class="pubwrap">
   <div class="gi-crumbwrap" style="padding:0"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/routes/">Get Inspired</a><span class="g-crumb-sep">/</span><a href="/route-publishers/">Route makers</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Trans Canada Trail</span></nav></div>
   <div class="pubhead">
+    
     <h1>Trans Canada Trail</h1>
     <div class="chips"><span class="pubchip">trail organization</span>
-      <a class="visit" href="https://tctrail.ca/" target="_blank" rel="noopener">Visit Trans Canada Trail ↗</a></div>
+      <a class="visit" href="https://tctrail.ca/" target="_blank" rel="noopener">visit &#8594;</a></div>
   </div>
   <div class="story">
     <p>Trans Canada Trail is a national charitable organization, based in Ottawa, that coordinates and maintains the Trans Canada Trail (also known as The Great Trail) — a roughly 30,000 km multi-use trail network spanning every Canadian province and territory and connecting the Atlantic, Pacific, and Arctic coastlines. The network supports hiking, cycling, paddling, and other activities, and is built and managed through partnerships with regional and local trail organizations rather than owned as a single continuous trail.</p>
@@ -509,6 +518,19 @@ window.addEventListener('load', (event) => {
     });
   });
 });
+</script>
+<script>
+if('IntersectionObserver' in window){
+  var _lzimgs=[].slice.call(document.querySelectorAll('img[loading=lazy]'));
+  if(_lzimgs.length){
+    var _lzio=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){ e.target.loading='eager'; _lzio.unobserve(e.target); }
+      });
+    },{rootMargin:'1200px 0px'});
+    _lzimgs.forEach(function(im){ _lzio.observe(im); });
+  }
+}
 </script>
 </body>
 </html>

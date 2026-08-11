@@ -41,6 +41,11 @@ body {
   font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
+/* Base link colour, both states (BC-504) — visited links were browser-purple
+   wherever no rule targeted them. First in the cascade, so any later page rule
+   that styles a link overrides both states. */
+a { color: #1E7D96; }
+a:visited { color: #1E7D96; }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
 /* position+z-index so open dropdown menus paint above page content that
