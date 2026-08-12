@@ -29,7 +29,12 @@
 @font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scrollbar-gutter: stable; }
+/* BC-516: overflow-x:clip is insurance for the full-bleed hero bands, which are
+   width:100vw. Chrome subtracts the stable gutter from vw so they fit exactly,
+   but a browser that doesn't support scrollbar-gutter counts the scrollbar in vw
+   and the band ends up ~15px too wide, which drags the page sideways. clip stops
+   that without creating a scroll container, so position:sticky keeps working. */
+html { scrollbar-gutter: stable; overflow-x: clip; }
 /* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
    --rail   chrome (header + footer), frames the page
    --w-read the content column and prose cap, used by nearly every page
@@ -267,6 +272,16 @@ h2:hover > .h-anchor { opacity: .55; }
   .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
 }
 
+/* ---- Photo caption row (BC-516). Credit flush left, place flush right, in one
+   flex row instead of two independently positioned spans — two spans at opposite
+   corners of a photo can't see each other, so on a phone they printed on top of
+   each other. Here they push apart, stay on one line whenever they fit, and wrap
+   only when they must. Emitted by build.cap_row(); each photo family sets its own
+   insets and type, and only the row mechanics live here. ---- */
+.capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -305,9 +320,9 @@ body {
 .band .qq { font-family: "Archivo","Inter",sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--herodark); line-height: 1.25; letter-spacing: -.01em; }
 .band .ans { font-size: .95rem; color: #555; }
 .band .go { color: var(--river); font-weight: 700; font-size: .95rem; text-decoration: none; margin-top: .35rem; }
-.cap-credit { position: absolute; left: 12px; bottom: 12px; color: #fff; opacity: .62; font-size: 9.5px; letter-spacing: .02em; text-shadow: 0 1px 5px rgba(0,0,0,.6); max-width: 46%; }
-.cap-place { position: absolute; right: 12px; bottom: 11px; color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .01em; text-shadow: 0 1px 6px rgba(0,0,0,.6); max-width: 78%; text-align: right; }
-.deeper { background: #fff; border-top: 1px solid #F0E6C5; padding: 2.8rem 2rem 2.8rem; }
+.cap-credit { color: #fff; opacity: .62; font-size: 9.5px; letter-spacing: .02em; text-shadow: 0 1px 5px rgba(0,0,0,.6); }
+.cap-place { color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .01em; text-shadow: 0 1px 6px rgba(0,0,0,.6); text-align: right; }
+.deeper{ background: #fff; border-top: 1px solid #F0E6C5; padding: 2.8rem 2rem 2.8rem; }
 .deeper .step { display: block; margin-bottom: .8rem; }
 .deepgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
 .deepcard { display: block; text-decoration: none; border: 1px solid #F0E6C5; border-radius: var(--r-m); padding: 1rem 1.1rem; background: var(--paper); transition: border-color .15s; }
@@ -319,6 +334,11 @@ body {
   .band, .band.flip { grid-template-columns: 1fr; }
   .band .photo { min-height: 160px; }
   .hubhero .txt h1 { font-size: 1.8rem; }
+  /* BC-516: 340px was over half the screen on a small phone, where the route
+     heroes take 42%. And the hero words sit on the page column now, so match the
+     breadcrumb's 20px gutter instead of standing 12px further in. */
+  .hubhero { min-height: 280px; }
+  .hubhero .txt { padding: 1.6rem 20px 2.3rem; }
   .deepgrid { display: block; }
   .deepcard { margin-bottom: .8rem; }
 }
@@ -393,14 +413,14 @@ body {
       <h1>Let's make it real.</h1>
       <p>Three questions stand between you and your next ride. We built a tool for each.</p>
     </div>
-    <span class="cap-credit">Photo: Kari Medig</span><span class="cap-place">Thompson Okanagan, BC</span>
+    <div class="capbar"><span class="cap-credit">Photo: Kari Medig</span><span class="cap-place">Thompson Okanagan, BC</span></div>
   </div>
   <div class="plan-crumb"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Plan Your Trip</span></nav></div>
 
   <p class="jline">New to trip planning? <a href="/#ready-heres-how-a-trip-comes-together">See how a whole trip comes together, step by step &rarr;</a></p>
 
   <div class="band">
-    <div class="photo" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/be217dfb4937bdbc.jpg')"><span class="cap-credit">Photo: Jordan Dyck</span><span class="cap-place">Tofino, BC</span></div>
+    <div class="photo" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/be217dfb4937bdbc.jpg')"><div class="capbar"><span class="cap-credit">Photo: Jordan Dyck</span><span class="cap-place">Tofino, BC</span></div></div>
     <div class="words">
       <span class="eyebrow step">QUESTION 1</span>
       <span class="qq">Where do you want to ride?</span>
@@ -418,11 +438,11 @@ body {
       <span class="ans">Ferries, buses, trains and shuttles that carry bikes, matched to where you're starting and where you'll finish. 10,500 connections, every carrier's bike policy checked.</span>
       <a class="go" href="/to-fro/">Plan your To &amp; Fro →</a>
     </div>
-    <div class="photo" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/a96a404bd44a83a5.jpg')"><span class="cap-credit">Photo: Bluetree Photography</span><span class="cap-place">Vancouver Island, BC</span></div>
+    <div class="photo" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/a96a404bd44a83a5.jpg')"><div class="capbar"><span class="cap-credit">Photo: Bluetree Photography</span><span class="cap-place">Vancouver Island, BC</span></div></div>
   </div>
 
   <div class="band">
-    <div class="photo" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/c59843a0afa5fbf7.jpg')"><span class="cap-credit">Photo: Reuben Krabbe</span><span class="cap-place">Revelstoke, BC</span></div>
+    <div class="photo" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/c59843a0afa5fbf7.jpg')"><div class="capbar"><span class="cap-credit">Photo: Reuben Krabbe</span><span class="cap-place">Revelstoke, BC</span></div></div>
     <div class="words">
       <span class="eyebrow step">QUESTION 3</span>
       <span class="qq">Where will you stop along the way?</span>

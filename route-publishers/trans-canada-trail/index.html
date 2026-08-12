@@ -28,7 +28,12 @@
 @font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scrollbar-gutter: stable; }
+/* BC-516: overflow-x:clip is insurance for the full-bleed hero bands, which are
+   width:100vw. Chrome subtracts the stable gutter from vw so they fit exactly,
+   but a browser that doesn't support scrollbar-gutter counts the scrollbar in vw
+   and the band ends up ~15px too wide, which drags the page sideways. clip stops
+   that without creating a scroll container, so position:sticky keeps working. */
+html { scrollbar-gutter: stable; overflow-x: clip; }
 /* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
    --rail   chrome (header + footer), frames the page
    --w-read the content column and prose cap, used by nearly every page
@@ -266,12 +271,24 @@ h2:hover > .h-anchor { opacity: .55; }
   .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
 }
 
+/* ---- Photo caption row (BC-516). Credit flush left, place flush right, in one
+   flex row instead of two independently positioned spans — two spans at opposite
+   corners of a photo can't see each other, so on a phone they printed on top of
+   each other. Here they push apart, stay on one line whenever they fit, and wrap
+   only when they must. Emitted by build.cap_row(); each photo family sets its own
+   insets and type, and only the row mechanics live here. ---- */
+.capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+
 /* tokens now come from the shared :root in chrome.SHARED_CSS (BC-506) */
 body{background:var(--paper)}
-.cap-credit{position:absolute;left:12px;bottom:12px;color:#fff;opacity:0;font-size:9.5px;letter-spacing:.02em;text-shadow:0 1px 5px rgba(0,0,0,.6);max-width:46%;transition:opacity .8s ease}
-.cap-place{position:absolute;right:12px;bottom:11px;color:#fff;opacity:0;font-size:13px;font-weight:600;letter-spacing:.01em;text-shadow:0 1px 6px rgba(0,0,0,.6);max-width:78%;text-align:right;transition:opacity .8s ease}
-.on>.cap-credit{opacity:.62}
-.on>.cap-place{opacity:1}
+.cap-credit{color:#fff;opacity:0;font-size:9.5px;letter-spacing:.02em;text-shadow:0 1px 5px rgba(0,0,0,.6);transition:opacity .8s ease}
+.cap-place{color:#fff;opacity:0;font-size:13px;font-weight:600;letter-spacing:.01em;text-shadow:0 1px 6px rgba(0,0,0,.6);text-align:right;transition:opacity .8s ease}
+/* BC-516: descendant, not child — the captions now sit inside .capbar, and the
+   .on class still lands on the photo's parent when the image loads. */
+.on .cap-credit{opacity:.62}
+.on .cap-place{opacity:1}
 .pubchip{display:inline-block;font-weight:600;color:var(--pacific);background:var(--sky);text-decoration:none}
 .pubchip:hover{background:#a5d6e5}
 /* BC-508: the panel is the shared .wpanel now (chrome.py); only its page rhythm is local. */
@@ -346,8 +363,13 @@ body{background:var(--paper)}
 .panel .lab span{font-size:12.5px;opacity:.9}
 .panel .lab .golab{display:block;font-size:12.5px;font-weight:700;color:var(--bright);margin-top:3px}
 .mm{position:absolute;top:10px;right:10px;width:56px;height:56px;filter:drop-shadow(0 0 1.5px rgba(0,0,0,.7)) drop-shadow(0 1px 3px rgba(0,0,0,.55));pointer-events:none}
-.panel .cap-credit{top:12px;bottom:auto;z-index:2}
-.panel .cap-place{z-index:2}
+/* BC-516: the panel is the one photo family that doesn't want a caption row —
+   its credit rides at the top because the bottom belongs to the .lab block, and
+   a shared row would drag the place name up beside the .mm locator. display:contents
+   drops the wrapper so the two spans position themselves, as they always did. */
+.panel .capbar{display:contents}
+.panel .cap-credit{position:absolute;left:12px;top:12px;bottom:auto;max-width:46%;z-index:2}
+.panel .cap-place{position:absolute;right:12px;bottom:11px;max-width:78%;z-index:2}
 .panel .mm{z-index:2}
 
 .makersstrip{padding:10px 6vw 46px}
@@ -535,7 +557,7 @@ body{background:var(--paper)}
   </div>
   <h2 id="2-of-their-bc-rides" class="colhead">2 of their BC rides<a class="h-anchor" href="#2-of-their-bc-rides" aria-label="Link to this section">#</a></h2>
   <p class="colsub">Open any ride for its welcoming stops and how to get there. The full writeup, map, and directions live on Trans Canada Trail's website.</p>
-  <div class="reggroup"><h3>Kootenay Rockies · 1</h3><div class="bigrows"><a class="bigrow" href="/route/trans-canada-trail-south-bc-only/"><div class="ph"><img src="https://bcbb-assets.bccycletourism.workers.dev/photos/081f45cee09d8528.jpg" style="background-color:#767571" alt="Trans Canada Trail South (BC Only)" loading="lazy" onload="this.parentNode.classList.add('on')" onerror="this.style.display='none'"><span class="cap-credit">Photo: Kari Medig</span><span class="cap-place">Castlegar, BC</span></div><div class="tx"><b>Trans Canada Trail South (BC Only)</b><div class="meta">1768 km</div><div class="rchips"><span class="chip tier epic" title="Expedition scale. Many demanding factors stacked, or 1,000 km and up, or 10,000 m of climbing.">Epic</span><span class="chip comfort" title="At least 75% of the riding we could measure is on bike paths, quiet streets, or car free backcountry roads.">Low-traffic riding</span><span class="chip fastroad" title="This route includes stretches on fast roads, often a highway link between quieter riding. The label shows how many kilometres; we flag from as little as 2 km on the fastest roads, because a short highway stretch is worth knowing about before you commit.">Fast-road sections · 65 km</span><span class="chip" title="50 to 84% unpaved.">Mostly gravel</span><span class="chip" title="At least 10% of the riding we could measure crosses loose stones, ruts, or sand. Tires of 33 to 40 mm make it a lot more fun.">Chunky gravel</span></div><p>The southern leg of the national Trans Canada Trail, about 1,765 km of cycling sections from Victoria to the Alberta border. It threads Vancouver Island, the Lower Mainland, the Kettle Valley Rail Trail through the Okanagan, and the Kootenays. This is a network of segments with meaningful gaps between them, not one continuous line, so expect road links and detours. A few stretches, including much of the KVR Coquihalla corridor, are closed for now. Some of the Trail is hilly, on roads, on rough gravel, and/or remote: look into the details so you are prepared.</p><span class="go">Stops, map + getting there →</span></div></a></div></div><div class="reggroup"><h3>Northern British Columbia · 1</h3><div class="bigrows"><a class="bigrow" href="/route/trans-canada-trail-north-bc-only/"><div class="ph"><img src="https://bcbb-assets.bccycletourism.workers.dev/photos/6d1b9e92ce1b4b0f.jpg" style="background-color:#444625" alt="Trans Canada Trail North (BC Only)" loading="lazy" onload="this.parentNode.classList.add('on')" onerror="this.style.display='none'"><span class="cap-credit">Photo: 6ix Sigma Productions</span><span class="cap-place">Mackenzie, BC</span></div><div class="tx"><b>Trans Canada Trail North (BC Only)</b><div class="meta">1031 km</div><div class="rchips"><span class="chip tier epic" title="Expedition scale. Many demanding factors stacked, or 1,000 km and up, or 10,000 m of climbing.">Epic</span><span class="chip comfort" title="Less than half of the riding we could measure is low-traffic. Expect regular stretches on busier roads.">Shares roads with traffic</span><span class="chip fastroad" title="Half or more of the route is on fast roads. This is a highway touring route.">Mostly fast roads</span><span class="chip" title="Under 15% of the mapped riding is unpaved.">Mostly paved</span><span class="chip" title="At least 20% of the route runs far from resupply, roughly 25 km or more in a straight line from the nearest places to buy supplies. Carry what you need, and confirm shops are open. We measure distance to supplies, not water.">Remote stretches</span></div><p>The far-north leg of the Trans Canada Trail in BC, about 1,028 km following the Alaska Highway corridor from Dawson Creek toward the Yukon. Highway riding, big country, long distances between towns and very remote: plan your stops and resupply with care.</p><span class="go">Stops, map + getting there →</span></div></a></div></div>
+  <div class="reggroup"><h3>Kootenay Rockies · 1</h3><div class="bigrows"><a class="bigrow" href="/route/trans-canada-trail-south-bc-only/"><div class="ph"><img src="https://bcbb-assets.bccycletourism.workers.dev/photos/081f45cee09d8528.jpg" style="background-color:#767571" alt="Trans Canada Trail South (BC Only)" loading="lazy" onload="this.parentNode.classList.add('on')" onerror="this.style.display='none'"><div class="capbar"><span class="cap-credit">Photo: Kari Medig</span><span class="cap-place">Castlegar, BC</span></div></div><div class="tx"><b>Trans Canada Trail South (BC Only)</b><div class="meta">1768 km</div><div class="rchips"><span class="chip tier epic" title="Expedition scale. Many demanding factors stacked, or 1,000 km and up, or 10,000 m of climbing.">Epic</span><span class="chip comfort" title="At least 75% of the riding we could measure is on bike paths, quiet streets, or car free backcountry roads.">Low-traffic riding</span><span class="chip fastroad" title="This route includes stretches on fast roads, often a highway link between quieter riding. The label shows how many kilometres; we flag from as little as 2 km on the fastest roads, because a short highway stretch is worth knowing about before you commit.">Fast-road sections · 65 km</span><span class="chip" title="50 to 84% unpaved.">Mostly gravel</span><span class="chip" title="At least 10% of the riding we could measure crosses loose stones, ruts, or sand. Tires of 33 to 40 mm make it a lot more fun.">Chunky gravel</span></div><p>The southern leg of the national Trans Canada Trail, about 1,765 km of cycling sections from Victoria to the Alberta border. It threads Vancouver Island, the Lower Mainland, the Kettle Valley Rail Trail through the Okanagan, and the Kootenays. This is a network of segments with meaningful gaps between them, not one continuous line, so expect road links and detours. A few stretches, including much of the KVR Coquihalla corridor, are closed for now. Some of the Trail is hilly, on roads, on rough gravel, and/or remote: look into the details so you are prepared.</p><span class="go">Stops, map + getting there →</span></div></a></div></div><div class="reggroup"><h3>Northern British Columbia · 1</h3><div class="bigrows"><a class="bigrow" href="/route/trans-canada-trail-north-bc-only/"><div class="ph"><img src="https://bcbb-assets.bccycletourism.workers.dev/photos/6d1b9e92ce1b4b0f.jpg" style="background-color:#444625" alt="Trans Canada Trail North (BC Only)" loading="lazy" onload="this.parentNode.classList.add('on')" onerror="this.style.display='none'"><div class="capbar"><span class="cap-credit">Photo: 6ix Sigma Productions</span><span class="cap-place">Mackenzie, BC</span></div></div><div class="tx"><b>Trans Canada Trail North (BC Only)</b><div class="meta">1031 km</div><div class="rchips"><span class="chip tier epic" title="Expedition scale. Many demanding factors stacked, or 1,000 km and up, or 10,000 m of climbing.">Epic</span><span class="chip comfort" title="Less than half of the riding we could measure is low-traffic. Expect regular stretches on busier roads.">Shares roads with traffic</span><span class="chip fastroad" title="Half or more of the route is on fast roads. This is a highway touring route.">Mostly fast roads</span><span class="chip" title="Under 15% of the mapped riding is unpaved.">Mostly paved</span><span class="chip" title="At least 20% of the route runs far from resupply, roughly 25 km or more in a straight line from the nearest places to buy supplies. Carry what you need, and confirm shops are open. We measure distance to supplies, not water.">Remote stretches</span></div><p>The far-north leg of the Trans Canada Trail in BC, about 1,028 km following the Alaska Highway corridor from Dawson Creek toward the Yukon. Highway riding, big country, long distances between towns and very remote: plan your stops and resupply with care.</p><span class="go">Stops, map + getting there →</span></div></a></div></div>
   <div class="backrow"><a href="/route-publishers/">← All route makers</a></div>
 </div>
 <div class="wpanel center pubcta"><div class="wp-title">Do you publish well-documented cycling routes in BC — road, gravel, touring, or family rides?</div><p class="wp-body">We're interested in learning more about where you love to ride. Drop us a note and tell us what you publish.</p><div class="wp-act"><a class="wp-btn" href="mailto:hello@bccycletourism.ca?subject=Route publisher for Get Inspired">hello@bccycletourism.ca</a></div></div>

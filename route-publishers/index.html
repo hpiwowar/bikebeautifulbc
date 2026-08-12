@@ -28,7 +28,12 @@
 @font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scrollbar-gutter: stable; }
+/* BC-516: overflow-x:clip is insurance for the full-bleed hero bands, which are
+   width:100vw. Chrome subtracts the stable gutter from vw so they fit exactly,
+   but a browser that doesn't support scrollbar-gutter counts the scrollbar in vw
+   and the band ends up ~15px too wide, which drags the page sideways. clip stops
+   that without creating a scroll container, so position:sticky keeps working. */
+html { scrollbar-gutter: stable; overflow-x: clip; }
 /* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
    --rail   chrome (header + footer), frames the page
    --w-read the content column and prose cap, used by nearly every page
@@ -266,12 +271,24 @@ h2:hover > .h-anchor { opacity: .55; }
   .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
 }
 
+/* ---- Photo caption row (BC-516). Credit flush left, place flush right, in one
+   flex row instead of two independently positioned spans — two spans at opposite
+   corners of a photo can't see each other, so on a phone they printed on top of
+   each other. Here they push apart, stay on one line whenever they fit, and wrap
+   only when they must. Emitted by build.cap_row(); each photo family sets its own
+   insets and type, and only the row mechanics live here. ---- */
+.capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+
 /* tokens now come from the shared :root in chrome.SHARED_CSS (BC-506) */
 body{background:var(--paper)}
-.cap-credit{position:absolute;left:12px;bottom:12px;color:#fff;opacity:0;font-size:9.5px;letter-spacing:.02em;text-shadow:0 1px 5px rgba(0,0,0,.6);max-width:46%;transition:opacity .8s ease}
-.cap-place{position:absolute;right:12px;bottom:11px;color:#fff;opacity:0;font-size:13px;font-weight:600;letter-spacing:.01em;text-shadow:0 1px 6px rgba(0,0,0,.6);max-width:78%;text-align:right;transition:opacity .8s ease}
-.on>.cap-credit{opacity:.62}
-.on>.cap-place{opacity:1}
+.cap-credit{color:#fff;opacity:0;font-size:9.5px;letter-spacing:.02em;text-shadow:0 1px 5px rgba(0,0,0,.6);transition:opacity .8s ease}
+.cap-place{color:#fff;opacity:0;font-size:13px;font-weight:600;letter-spacing:.01em;text-shadow:0 1px 6px rgba(0,0,0,.6);text-align:right;transition:opacity .8s ease}
+/* BC-516: descendant, not child — the captions now sit inside .capbar, and the
+   .on class still lands on the photo's parent when the image loads. */
+.on .cap-credit{opacity:.62}
+.on .cap-place{opacity:1}
 .pubchip{display:inline-block;font-weight:600;color:var(--pacific);background:var(--sky);text-decoration:none}
 .pubchip:hover{background:#a5d6e5}
 /* BC-508: the panel is the shared .wpanel now (chrome.py); only its page rhythm is local. */
@@ -346,8 +363,13 @@ body{background:var(--paper)}
 .panel .lab span{font-size:12.5px;opacity:.9}
 .panel .lab .golab{display:block;font-size:12.5px;font-weight:700;color:var(--bright);margin-top:3px}
 .mm{position:absolute;top:10px;right:10px;width:56px;height:56px;filter:drop-shadow(0 0 1.5px rgba(0,0,0,.7)) drop-shadow(0 1px 3px rgba(0,0,0,.55));pointer-events:none}
-.panel .cap-credit{top:12px;bottom:auto;z-index:2}
-.panel .cap-place{z-index:2}
+/* BC-516: the panel is the one photo family that doesn't want a caption row —
+   its credit rides at the top because the bottom belongs to the .lab block, and
+   a shared row would drag the place name up beside the .mm locator. display:contents
+   drops the wrapper so the two spans position themselves, as they always did. */
+.panel .capbar{display:contents}
+.panel .cap-credit{position:absolute;left:12px;top:12px;bottom:auto;max-width:46%;z-index:2}
+.panel .cap-place{position:absolute;right:12px;bottom:11px;max-width:78%;z-index:2}
 .panel .mm{z-index:2}
 
 .makersstrip{padding:10px 6vw 46px}
