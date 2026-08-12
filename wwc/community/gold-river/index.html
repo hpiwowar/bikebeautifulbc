@@ -34,16 +34,47 @@ html { scrollbar-gutter: stable; }
    --w-read the content column and prose cap, used by nearly every page
    --w-wide the exception: sidebar filters, two-column stop pages */
 :root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+/* Design tokens (BC-506): palette, warm-stone neutral ramp, radius scale.
+   Every page inherits these; page CSS uses var(...), not raw hex literals.
+   The /stops/ sage family is exempt from tokenization this pass. */
+:root {
+  /* brand */
+  --pacific: #0D4070;   /* navy */
+  --river:   #1E7D96;   /* teal: links + ALL primary buttons */
+  --forest:  #2E8A36;
+  --bright:  #6EC040;   /* accent green — accents only, never buttons */
+  --sky:     #B8E0EC;
+  --pine:    #1F514C;   /* heading green */
+  --herodark:#0D2E1E;
+  /* grounds */
+  --paper: #FFFDF9;     /* page ground */
+  --cream: #FFF6E5;     /* warm panels */
+  /* ink + warm stone neutrals (replaces the cool #E5E7EB/#9CA3AF family) */
+  --ink: #1A1A1A;
+  --stone-600: #57534E; --muted: #57534E;
+  --stone-500: #78716C;
+  --stone-400: #A8A29E;
+  --stone-200: #E7E5E4;
+  --sand: #E0D9CC;      /* warm hairline on cream */
+  /* radius scale: s chips/inputs, m cards, l heroes/panels, pill */
+  --r-s: 8px; --r-m: 12px; --r-l: 20px; --r-pill: 999px;
+}
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 /* Base link colour, both states (BC-504) — visited links were browser-purple
-   wherever no rule targeted them. First in the cascade, so any later page rule
-   that styles a link overrides both states. */
-a { color: #1E7D96; }
-a:visited { color: #1E7D96; }
+   wherever no rule targeted them.
+   :where() zeroes the specificity so ANY other rule wins, which is what the
+   original version meant but didn't achieve: bare `a:visited` scores 0-1-1 and
+   quietly outranked every single-class component rule (0-1-0). That repainted
+   the homepage's outlined "Plan your trip" CTA teal-on-navy once you'd visited
+   /plan/ — invisible until hover, when .hero-btn-outline:hover (0-2-0) finally
+   won. getComputedStyle reports the unvisited colour for privacy, so this is
+   only ever visible to the eye, in a profile that has actually been there. */
+:where(a) { color: var(--river); }
+:where(a:visited) { color: var(--river); }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
 /* position+z-index so open dropdown menus paint above page content that
@@ -54,8 +85,8 @@ a:visited { color: #1E7D96; }
 .g-header-left img { height: 50px; width: auto; max-width: 100%; }
 .g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
 .g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
-.g-header-nav a:hover { color: #1E7D96; }
-.g-header-nav a.active { color: #1E7D96; font-weight: 600; }
+.g-header-nav a:hover { color: var(--river); }
+.g-header-nav a.active { color: var(--river); font-weight: 600; }
 .g-nav-search { display: flex; align-items: center; gap: 6px; }
 .g-nav-search svg { width: 15px; height: 15px; display: block; }
 .g-nav-search .g-nav-search-label { display: inline; }
@@ -66,13 +97,13 @@ a:visited { color: #1E7D96; }
   background: none; border: none; cursor: pointer; padding: 0;
   display: flex; align-items: center; gap: 5px; transition: color 0.2s;
 }
-.g-navtop:hover, .g-navgroup.open .g-navtop { color: #1E7D96; }
-.g-navgroup.activeslot .g-navtop { color: #1E7D96; font-weight: 600; }
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: var(--river); }
+.g-navgroup.activeslot .g-navtop { color: var(--river); font-weight: 600; }
 .g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
 .g-navgroup.open .g-caret { transform: rotate(180deg); }
 .g-navmenu {
   position: absolute; top: calc(100% + 12px); left: -14px; display: none;
-  background: #FFFDF9; border: 1px solid #ECE7DD; border-radius: 14px;
+  background: var(--paper); border: 1px solid #ECE7DD; border-radius: var(--r-m);
   box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
 }
 .g-navgroup.open > .g-navmenu { display: block; }
@@ -80,11 +111,11 @@ a:visited { color: #1E7D96; }
 .g-navgroup[data-slot="field-notes"] .g-navmenu,
 .g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
 .g-header-nav .g-navmenu a {
-  display: block; padding: 9px 12px; border-radius: 9px;
+  display: block; padding: 9px 12px; border-radius: var(--r-s);
   font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
   white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
 }
-.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: #1E7D96; }
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: var(--river); }
 .g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
 .g-header-nav .g-navmenu .gnm-d {
   display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
@@ -101,22 +132,23 @@ a:visited { color: #1E7D96; }
 /* menu panels are solid cream even under a transparent header: beat the
    white-link transparent rules at their own specificity */
 .g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
-.g-header.transparent .g-header-nav .g-navmenu a:hover { color: #1E7D96; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: var(--river); }
 .g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
-.g-header.transparent.solid .g-navtop:hover { color: #1E7D96; }
-.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: #1E7D96; text-decoration: none; }
-.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-header.transparent.solid .g-navtop:hover { color: var(--river); }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: var(--river); text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--pine); padding: 4px 8px; line-height: 1; margin-left: auto; }
 .g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
-.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin-bottom: 14px; letter-spacing: -0.03em; }
-.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
-.g-main p { color: #4b5563; margin-bottom: 14px; max-width: var(--w-read, 720px); }
-.g-main a { color: #1E7D96; }
-.g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: var(--pine); margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h1 { font-weight: 700; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: var(--pine); margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: var(--stone-600); margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: var(--river); }
+.g-main ul { margin-left: 20px; color: var(--stone-600); margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
-.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
-.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb { font-size: 13px; color: var(--stone-400); margin-bottom: 18px; }
+.g-crumb a { color: var(--river); text-decoration: none; }
 .g-crumb a:hover { text-decoration: underline; }
-.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-cur { color: var(--stone-400); }
 .g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
 .g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
@@ -125,11 +157,11 @@ a:visited { color: #1E7D96; }
 .g-footer-col { }
 .g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
 .g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
-.g-footer-col a:hover { color: #0D4070; }
-.section-divider { border: none; border-top: 1px solid #EEE; margin: 28px 0; }
+.g-footer-col a:hover { color: var(--pacific); }
+.section-divider { border: none; border-top: 1px solid var(--stone-200); margin: 28px 0; }
 .bio { margin-bottom: 20px; }
-.bio strong { color: #1F514C; font-size: 15px; }
-.bio > em { color: #636363; font-size: 13px; }
+.bio strong { color: var(--pine); font-size: 15px; }
+.bio > em { color: var(--stone-600); font-size: 13px; }
 .bio p { font-size: 14px; margin-top: 6px; }
 @media (max-width: 700px) {
   .g-banner { padding: 6px 14px; font-size: 11px; }
@@ -137,17 +169,17 @@ a:visited { color: #1E7D96; }
   .g-header-inner { gap: 0; }
   .g-main { padding: 24px 14px 16px; }
   .g-hamburger { display: block; }
-  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #FFFDF9; border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
   .g-header-nav.open { display: flex; }
-  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid var(--stone-200); font-size: 15px; color: var(--pine); }
   .g-header-nav a:last-child { border-bottom: none; }
   .g-nav-search svg { display: none; }
   .g-nav-search .g-nav-search-label { display: inline; }
   /* dropdown groups become accordion sections inside the hamburger panel */
-  .g-navgroup { display: block; position: static; border-bottom: 1px solid #EEE; }
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid var(--stone-200); }
   .g-navtop {
     width: 100%; justify-content: space-between; padding: 12px 0;
-    font-size: 15px; color: #1F514C; text-shadow: none;
+    font-size: 15px; color: var(--pine); text-shadow: none;
   }
   .g-navmenu {
     position: static; box-shadow: none; border: none; background: none;
@@ -162,11 +194,76 @@ a:visited { color: #1E7D96; }
    section. Grey at rest so it reads as a tool rather than content, teal at the
    moment you are about to click it. Touch devices have no hover, so it sits
    faintly visible there instead of being unreachable. */
-.h-anchor { margin-left: .35em; color: #6E6E6E; opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+.h-anchor { margin-left: .35em; color: var(--stone-500); opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
 h2:hover > .h-anchor { opacity: .55; }
-.h-anchor:hover, .h-anchor:focus { color: #1E7D96; opacity: 1; }
+.h-anchor:hover, .h-anchor:focus { color: var(--river); opacity: 1; }
 @media (hover: none) {
   .h-anchor { opacity: .35; }
+}
+
+/* ---- Eyebrow labels (BC-509). One treatment site-wide: 11px, caps, teal.
+   Teal because it was already the most-used eyebrow colour, which leaves the
+   accent green free to keep meaning "accent" (journey-map steps, accredited
+   marks) instead of competing as a label colour. The historical class names
+   are aliased here rather than rewritten at every call site; genuinely
+   contextual overrides still win on specificity (e.g. the pale-blue on-photo
+   eyebrow on the To and Fro hero). No font-family: eyebrows inherit Inter,
+   which is what all but one of them already did. ---- */
+.eyebrow, .gi-eyebrow, .dir-eyebrow, .ls-notable-eyebrow,
+.listing-section-title, .ls-pills-label, .ls-card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--river); margin-bottom: 6px;
+}
+
+/* ---- Chip geometry (BC-509). Two geometries, not ten. Label chips are read;
+   control chips are tapped, so they get a bigger target. Colour and meaning
+   stay per-family — this only unifies size, padding, and radius. ---- */
+.chip, .lachip, .lichip, .lfacet, .pubchip, .guide-chip-am,
+.listing-pill-yes, .listing-pill-no {
+  font-size: 12.5px; padding: 4px 12px; border-radius: var(--r-pill);
+}
+.dir-chip, .guide-chip, .explore-chip {
+  font-size: 13.5px; padding: 6px 13px; border-radius: var(--r-pill);
+}
+
+/* ---- Warm CTA panel (BC-508). One "warm panel + one action" component that
+   replaces four hand-rolled versions: route detail's "Ready to ride it?", the
+   routes-hub publisher card, Design Your Own Route's signup, and the homepage
+   newsletter block. The action slot is deliberately open — it takes a button
+   link OR a whole form — so the call sites keep their own behaviour and share
+   only the chrome. Emitted by warm_panel() below; the title/body/act selectors
+   are class-on-class so they win against .g-main h2 / .g-main p. ---- */
+.wpanel { background: var(--cream); border: 1px solid var(--sand); border-radius: var(--r-l);
+  padding: 26px 30px; margin: 34px auto 8px; max-width: 900px; }
+.wpanel.narrow { max-width: 700px; }
+.wpanel.center { text-align: center; }
+.wpanel .wp-title { font-family: "Archivo", "Inter", sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--pine); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 6px; }
+.wpanel.lg .wp-title { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+.wpanel .wp-body { color: var(--stone-600); font-size: 15px; line-height: 1.55; margin: 0 0 16px; max-width: 62ch; }
+.wpanel.center .wp-body { margin-left: auto; margin-right: auto; }
+.wpanel .wp-body a { color: var(--river); }
+.wpanel .wp-act { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.wpanel.center .wp-act { align-items: center; }
+.wpanel .wp-act form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.wpanel.center .wp-act form { margin: 0 auto; }
+/* one button and one field treatment inside the panel, whatever the action is */
+.wpanel .wp-act .wp-btn, .wpanel .wp-act button { display: inline-block; background: var(--river);
+  color: #fff; border: none; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: var(--r-m); cursor: pointer; text-align: center;
+  transition: background .2s ease; }
+.wpanel .wp-act .wp-btn:hover, .wpanel .wp-act button:hover { background: var(--pacific); }
+.wpanel .wp-act input:not([type="hidden"]), .wpanel .wp-act textarea { width: 100%;
+  padding: 13px 16px; border: 1.5px solid var(--sand); border-radius: var(--r-m);
+  font-size: 16px; font-family: inherit; background: #fff; transition: border-color .2s; }
+.wpanel .wp-act input:focus, .wpanel .wp-act textarea:focus { border-color: var(--river); outline: none; }
+.wpanel .wp-act textarea { min-height: 76px; resize: vertical; }
+/* secondary action under the primary one (route detail's extra links) */
+.wpanel .wp-alt { font-size: 13.5px; color: var(--river); font-weight: 600; text-decoration: none; }
+.wpanel .wp-alt:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .wpanel { padding: 22px 18px; border-radius: var(--r-m); }
+  .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
 }
 </style>
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
@@ -231,133 +328,133 @@ h2:hover > .h-anchor { opacity: .55; }
 <div class="g-main">
 <style>
 .guide-wrap { max-width: var(--w-read, 720px); margin: 0 auto; }
-.guide-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: -0.03em; color: #1F514C; margin-bottom: 8px; }
-.guide-sub { font-size: 16px; color: #4b5563; line-height: 1.55; margin-bottom: 22px; max-width: 720px; }
-.guide-scale { font-size: 15px; font-weight: 600; color: #1E7D96; margin-bottom: 22px; }
+.guide-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.03em; color: var(--pine); margin-bottom: 8px; }
+.guide-sub { font-size: 16px; color: var(--stone-600); line-height: 1.55; margin-bottom: 22px; max-width: 720px; }
+.guide-scale { font-size: 15px; font-weight: 600; color: var(--river); margin-bottom: 22px; }
 .guide-section { margin: 28px 0; }
-.guide-section h2 { font-family: "Archivo", sans-serif; font-size: 20px; font-weight: 700; color: #1F514C; margin-bottom: 12px; }
+.guide-section h2 { font-family: "Archivo", sans-serif; font-size: 20px; font-weight: 700; color: var(--pine); margin-bottom: 12px; }
 .guide-crit { list-style: none; padding: 0; margin: 0; }
-.guide-crit li { font-size: 14px; color: #2D2D2D; padding: 5px 0 5px 22px; position: relative; }
-.guide-crit li:before { content: "✓"; color: #2E8A36; position: absolute; left: 0; font-weight: 700; }
-.guide-subhead { font-family: "Archivo", sans-serif; font-size: 15px; font-weight: 700; color: #1F514C; margin: 20px 0 8px; }
+.guide-crit li { font-size: 14px; color: var(--ink); padding: 5px 0 5px 22px; position: relative; }
+.guide-crit li:before { content: "✓"; color: var(--forest); position: absolute; left: 0; font-weight: 700; }
+.guide-subhead { font-family: "Archivo", sans-serif; font-size: 15px; font-weight: 700; color: var(--pine); margin: 20px 0 8px; }
 .guide-rows { display: flex; flex-direction: column; }
-.guide-row { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; border-top: 0.5px solid #EEE; font-size: 14px; flex-wrap: wrap; }
-.guide-tier { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 10px; white-space: nowrap; }
-.guide-tier-accredited { background: #DCEEF3; color: #1E7D96; }
+.guide-row { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; border-top: 0.5px solid var(--stone-200); font-size: 14px; flex-wrap: wrap; }
+.guide-tier { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: var(--r-m); white-space: nowrap; }
+.guide-tier-accredited { background: #DCEEF3; color: var(--river); }
 .guide-tier-welcoming { background: #E1F5EE; color: #0F6E56; }
-.guide-tier-info { background: #F3F4F6; color: #6B7280; }
+.guide-tier-info { background: #F3F4F6; color: var(--stone-500); }
 .guide-tier-unwelcome { background: #FEF2F2; color: #DC2626; }
-.guide-row a { color: #141414; text-decoration: none; font-weight: 500; }
-.guide-row a:hover { color: #1E7D96; text-decoration: underline; }
-.guide-row .guide-meta { font-size: 12px; color: #9CA3AF; }
+.guide-row a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.guide-row a:hover { color: var(--river); text-decoration: underline; }
+.guide-row .guide-meta { font-size: 12px; color: var(--stone-400); }
 .guide-catgrp { margin: 18px 0; }
-.guide-catgrp h3 { font-size: 15px; font-weight: 700; color: #1F514C; margin-bottom: 4px; }
+.guide-catgrp h3 { font-size: 15px; font-weight: 700; color: var(--pine); margin-bottom: 4px; }
 .guide-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
-.guide-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 13px; border-radius: 16px; border: 0.5px solid #d6d3d1; background: #fafaf9; font-size: 13px; color: #57534e; text-decoration: none; }
-.guide-chip:hover { border-color: #1E7D96; color: #0F6E56; }
-.guide-chip b { color: #1F514C; }
-.guide-morelink { display: inline-block; margin-top: 8px; font-size: 13px; color: #1E7D96; text-decoration: none; font-weight: 600; }
+.guide-chip { display: inline-flex; align-items: center; gap: 6px; border: 0.5px solid #d6d3d1; background: #fafaf9; color: var(--stone-600); text-decoration: none; }
+.guide-chip:hover { border-color: var(--river); color: #0F6E56; }
+.guide-chip b { color: var(--pine); }
+.guide-morelink { display: inline-block; margin-top: 8px; font-size: 13px; color: var(--river); text-decoration: none; font-weight: 600; }
 .guide-beyond ul { list-style: none; padding: 0; margin: 0; }
-.guide-beyond li { font-size: 14px; line-height: 1.7; color: #2D2D2D; padding: 5px 0; }
-.guide-beyond a { color: #1E7D96; font-weight: 600; text-decoration: none; }
+.guide-beyond li { font-size: 14px; line-height: 1.7; color: var(--ink); padding: 5px 0; }
+.guide-beyond a { color: var(--river); font-weight: 600; text-decoration: none; }
 .guide-beyond a:hover { text-decoration: underline; }
-.guide-getting { background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: 10px; padding: 14px 18px; margin: 18px 0; font-size: 14px; color: #2D2D2D; }
-.guide-getting a { color: #1E7D96; font-weight: 600; }
-.guide-around { background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: 10px; padding: 16px 18px; margin: 18px 0; font-size: 14px; line-height: 1.85; color: #2D2D2D; }
-.guide-around-h { font-size: 16px; font-weight: 700; color: #1E7D96; margin-bottom: 6px; }
+.guide-getting { background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: var(--r-m); padding: 14px 18px; margin: 18px 0; font-size: 14px; color: var(--ink); }
+.guide-getting a { color: var(--river); font-weight: 600; }
+.guide-around { background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: var(--r-m); padding: 16px 18px; margin: 18px 0; font-size: 14px; line-height: 1.85; color: var(--ink); }
+.guide-around-h { font-size: 16px; font-weight: 700; color: var(--river); margin-bottom: 6px; }
 .guide-around-lede { margin-bottom: 10px; color: #40474C; }
 .guide-around-picks { margin-bottom: 6px; }
-.guide-around a { color: #1E7D96; font-weight: 600; text-decoration: none; }
+.guide-around a { color: var(--river); font-weight: 600; text-decoration: none; }
 .guide-around a:hover { text-decoration: underline; }
 .guide-annot { color: #7A8288; font-weight: 400; font-size: 12.5px; }
 .guide-around-more { margin: 8px 0; }
-.guide-around-more summary { cursor: pointer; color: #1E7D96; font-weight: 600; font-size: 13.5px; }
-.guide-around-full { margin-top: 10px; font-size: 13px; line-height: 1.95; color: #57534E; }
+.guide-around-more summary { cursor: pointer; color: var(--river); font-weight: 600; font-size: 13.5px; }
+.guide-around-full { margin-top: 10px; font-size: 13px; line-height: 1.95; color: var(--stone-600); }
 .guide-around-tool { margin-top: 10px; }
 .guide-routes { margin: 18px 0; }
-.guide-routes-h { font-size: 16px; font-weight: 700; color: #1F514C; margin-bottom: 6px; }
+.guide-routes-h { font-size: 16px; font-weight: 700; color: var(--pine); margin-bottom: 6px; }
 .guide-routes-lede { font-size: 14px; line-height: 1.7; color: #40474C; margin-bottom: 12px; }
 .guide-routes ol { list-style: none; margin: 0; padding: 0; }
 .guide-routes li { padding: 8px 0; border-top: 1px solid #E6EDEA; font-size: 14px; line-height: 1.6; }
 .guide-routes li:first-child { border-top: none; }
-.guide-routes li a { color: #1E7D96; font-weight: 600; text-decoration: none; }
+.guide-routes li a { color: var(--river); font-weight: 600; text-decoration: none; }
 .guide-routes li a:hover { text-decoration: underline; }
-.guide-routes-pub { color: #57534E; }
-.guide-routes-more { margin-top: 10px; font-size: 13.5px; color: #57534E; }
-.guide-wrap a.guide-cta { display: inline-block; margin: 8px 0 24px; padding: 11px 22px; background: #1E7D96; color: #fff; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; }
+.guide-routes-pub { color: var(--stone-600); }
+.guide-routes-more { margin-top: 10px; font-size: 13.5px; color: var(--stone-600); }
+.guide-wrap a.guide-cta { display: inline-block; margin: 8px 0 24px; padding: 11px 22px; background: var(--river); color: #fff; border-radius: var(--r-s); font-weight: 600; text-decoration: none; font-size: 14px; }
 .guide-dl { margin: 12px 0 24px; }
-.guide-dl-btn { display: inline-block; padding: 9px 18px; border: 1.5px solid #1E7D96; color: #1E7D96; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; }
-.guide-dl-btn:hover { background: #1E7D96; color: #fff; }
+.guide-dl-btn { display: inline-block; padding: 9px 18px; border: 1.5px solid var(--river); color: var(--river); border-radius: var(--r-s); font-weight: 600; text-decoration: none; font-size: 14px; }
+.guide-dl-btn:hover { background: var(--river); color: #fff; }
 .guide-region-blk { margin-bottom: 22px; }
-.guide-region-blk h2 { font-size: 16px; border-bottom: 1px solid #EEE; padding-bottom: 6px; }
+.guide-region-blk h2 { font-size: 16px; border-bottom: 1px solid var(--stone-200); padding-bottom: 6px; }
 .guide-comm-list { columns: 210px auto; column-gap: 28px; }
-.guide-comm-list a { display: block; font-size: 14px; padding: 3px 0; text-decoration: none; break-inside: avoid; color: #1E7D96; }
-.guide-comm-list a.guide-c-small { color: #4b5563; }
+.guide-comm-list a { display: block; font-size: 14px; padding: 3px 0; text-decoration: none; break-inside: avoid; color: var(--river); }
+.guide-comm-list a.guide-c-small { color: var(--stone-600); }
 .guide-comm-list a:hover { text-decoration: underline; }
-.guide-comm-list .guide-n { color: #9CA3AF; font-size: 12px; }
+.guide-comm-list .guide-n { color: var(--stone-400); font-size: 12px; }
 .guide-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 10px; }
 @media (max-width: 760px) { .guide-cards { grid-template-columns: 1fr; } }
-.guide-card { border: 1px solid #ECE9E4; border-radius: 12px; padding: 14px 16px; background: #fff; }
+.guide-card { border: 1px solid #ECE9E4; border-radius: var(--r-m); padding: 14px 16px; background: #fff; }
 .guide-card-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 3px; }
-.guide-card-name { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 16px; color: #141414; text-decoration: none; letter-spacing: -0.01em; }
-.guide-card-name:hover { color: #1E7D96; text-decoration: underline; }
-.guide-card-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 11px; }
+.guide-card-name { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 16px; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+.guide-card-name:hover { color: var(--river); text-decoration: underline; }
+.guide-card-meta { font-size: 13px; color: var(--stone-400); margin-bottom: 11px; }
 .guide-card-chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.guide-chip-am { font-size: 12px; padding: 3px 11px; border-radius: 12px; background: #E8F3EE; color: #0F6E56; white-space: nowrap; }
-.guide-chip-more { font-size: 12px; color: #9CA3AF; padding: 3px 2px; }
-.guide-card-empty { font-size: 13px; color: #9CA3AF; font-style: italic; }
+.guide-chip-am { background: #E8F3EE; color: #0F6E56; white-space: nowrap; }
+.guide-chip-more { font-size: 12px; color: var(--stone-400); padding: 3px 2px; }
+.guide-card-empty { font-size: 13px; color: var(--stone-400); font-style: italic; }
 
 /* ---- Community pages: "Postcards" layout (BC-239) ----------------------
    Wider than the reading column the rest of the guide pages use, because the
    photo spread and the tile grid need the room. */
 .cp-wrap { max-width: 1080px; margin: 0 auto; }
 .cp-title { padding: 6px 0 20px; max-width: 720px; }
-.cp-h1 { font-family: "Archivo", sans-serif; font-size: clamp(32px, 5vw, 50px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: #1F514C; margin: 0; }
-.cp-h1 em { font-style: normal; color: #1E7D96; }
-.cp-stand { font-size: 17px; color: #57534E; line-height: 1.55; margin-top: 12px; max-width: 580px; }
+.cp-h1 { font-family: "Archivo", sans-serif; font-size: clamp(32px, 5vw, 50px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--pine); margin: 0; }
+.cp-h1 em { font-style: normal; color: var(--river); }
+.cp-stand { font-size: 17px; color: var(--stone-600); line-height: 1.55; margin-top: 12px; max-width: 580px; }
 .cp-spread { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; align-items: stretch; }
 .cp-spread.cp-one { grid-template-columns: 1fr; }
 .cp-spread.cp-two { grid-template-columns: 3fr 2fr; }
 @media (max-width: 760px) { .cp-spread, .cp-spread.cp-two { grid-template-columns: 1fr; } }
-.cp-ph { position: relative; border-radius: 14px; overflow: hidden; margin: 0; background: #E7E5E4 center/cover no-repeat; }
+.cp-ph { position: relative; border-radius: var(--r-m); overflow: hidden; margin: 0; background: var(--stone-200) center/cover no-repeat; }
 .cp-ph.cp-big { min-height: 420px; }
 @media (max-width: 760px) { .cp-ph.cp-big { min-height: 260px; } }
 .cp-stack { display: grid; grid-template-rows: 1fr 1fr; gap: 14px; }
 .cp-stack .cp-ph { min-height: 150px; }
-.cp-caps { margin: 10px 0 0; font-size: 13px; color: #78716C; line-height: 1.5; }
+.cp-caps { margin: 10px 0 0; font-size: 13px; color: var(--stone-500); line-height: 1.5; }
 .cp-caps span { display: block; }
-.cp-detour { margin-top: 40px; background: #FBF7EE; border-radius: 16px; padding: 24px 26px 22px; }
-.cp-detour h2 { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 700; color: #1F514C; margin: 0; }
-.cp-detour .cp-lede { color: #57534E; font-size: 15px; margin: 4px 0 16px; }
+.cp-detour { margin-top: 40px; background: #FBF7EE; border-radius: var(--r-l); padding: 24px 26px 22px; }
+.cp-detour h2 { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 700; color: var(--pine); margin: 0; }
+.cp-detour .cp-lede { color: var(--stone-600); font-size: 15px; margin: 4px 0 16px; }
 .cp-picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; align-items: start; }
 @media (max-width: 560px) { .cp-picks { grid-template-columns: 1fr; } }
-.cp-pick { background: #fff; border: 1px solid #EFE6D2; border-radius: 12px; padding: 15px 16px 14px; display: flex; flex-direction: column; gap: 5px; }
-.cp-pick-name { font-family: "Archivo", sans-serif; font-size: 16px; font-weight: 700; color: #141414; text-decoration: none; }
-.cp-pick-name:hover { color: #1E7D96; text-decoration: underline; }
-.cp-pick-what { font-size: 13px; color: #78716C; }
-.cp-pick-why { font-size: 13.5px; line-height: 1.45; color: #2D2D2D; margin: 2px 0 0; }
-.cp-tiles-h { font-family: "Archivo", sans-serif; margin: 44px 0 4px; font-size: 23px; font-weight: 700; color: #1F514C; }
-.cp-tiles-lede { color: #57534E; font-size: 15px; margin-bottom: 16px; }
+.cp-pick { background: #fff; border: 1px solid #EFE6D2; border-radius: var(--r-m); padding: 15px 16px 14px; display: flex; flex-direction: column; gap: 5px; }
+.cp-pick-name { font-family: "Archivo", sans-serif; font-size: 16px; font-weight: 700; color: var(--ink); text-decoration: none; }
+.cp-pick-name:hover { color: var(--river); text-decoration: underline; }
+.cp-pick-what { font-size: 13px; color: var(--stone-500); }
+.cp-pick-why { font-size: 13.5px; line-height: 1.45; color: var(--ink); margin: 2px 0 0; }
+.cp-tiles-h { font-family: "Archivo", sans-serif; margin: 44px 0 4px; font-size: 23px; font-weight: 700; color: var(--pine); }
+.cp-tiles-lede { color: var(--stone-600); font-size: 15px; margin-bottom: 16px; }
 .cp-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 @media (max-width: 860px) { .cp-tiles { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .cp-tiles { grid-template-columns: 1fr; } }
-.cp-tile { border: 1px solid #ECE9E4; border-radius: 14px; padding: 17px 18px; display: block; color: #2D2D2D; position: relative; background: #fff; text-decoration: none; transition: box-shadow .15s; }
+.cp-tile { border: 1px solid #ECE9E4; border-radius: var(--r-m); padding: 17px 18px; display: block; color: var(--ink); position: relative; background: #fff; text-decoration: none; transition: box-shadow .15s; }
 .cp-tile:hover { box-shadow: 0 6px 22px rgba(13, 64, 112, .12); }
-.cp-tile .cp-n { font-family: "Archivo", sans-serif; font-size: 29px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; line-height: 1.1; }
-.cp-tile h3 { font-size: 16px; margin: 2px 0 6px; color: #141414; }
-.cp-tile .cp-eg { font-size: 13.5px; color: #78716C; line-height: 1.45; }
-.cp-tile .cp-go { position: absolute; right: 15px; top: 17px; color: #1E7D96; font-weight: 700; }
-.cp-plan { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; margin-top: 46px; border-top: 3px solid #1F514C; padding-top: 20px; }
+.cp-tile .cp-n { font-family: "Archivo", sans-serif; font-size: 29px; font-weight: 700; color: var(--pine); letter-spacing: -0.02em; line-height: 1.1; }
+.cp-tile h3 { font-size: 16px; margin: 2px 0 6px; color: var(--ink); }
+.cp-tile .cp-eg { font-size: 13.5px; color: var(--stone-500); line-height: 1.45; }
+.cp-tile .cp-go { position: absolute; right: 15px; top: 17px; color: var(--river); font-weight: 700; }
+.cp-plan { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; margin-top: 46px; border-top: 3px solid var(--pine); padding-top: 20px; }
 @media (max-width: 820px) { .cp-plan { grid-template-columns: 1fr; } }
-.cp-plan h2 { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: #1F514C; margin-bottom: 8px; }
+.cp-plan h2 { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: var(--pine); margin-bottom: 8px; }
 .cp-full { margin-top: 46px; }
-.cp-full h2 { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 700; color: #1F514C; }
-.cp-full .cp-lede { color: #57534E; font-size: 15px; margin: 4px 0 14px; }
-details.cp-cat { border: 1px solid #ECE9E4; border-radius: 12px; margin-bottom: 10px; background: #fff; }
-details.cp-cat summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 12px; padding: 13px 18px; font-family: "Archivo", sans-serif; font-size: 16px; font-weight: 700; color: #1F514C; }
+.cp-full h2 { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 700; color: var(--pine); }
+.cp-full .cp-lede { color: var(--stone-600); font-size: 15px; margin: 4px 0 14px; }
+details.cp-cat { border: 1px solid #ECE9E4; border-radius: var(--r-m); margin-bottom: 10px; background: #fff; }
+details.cp-cat summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 12px; padding: 13px 18px; font-family: "Archivo", sans-serif; font-size: 16px; font-weight: 700; color: var(--pine); }
 details.cp-cat summary::-webkit-details-marker { display: none; }
-details.cp-cat summary .cp-count { color: #78716C; font-weight: 400; font-size: 14px; }
-details.cp-cat summary .cp-arrow { margin-left: auto; color: #1E7D96; transition: transform .15s; }
+details.cp-cat summary .cp-count { color: var(--stone-500); font-weight: 400; font-size: 14px; }
+details.cp-cat summary .cp-arrow { margin-left: auto; color: var(--river); transition: transform .15s; }
 details.cp-cat[open] summary .cp-arrow { transform: rotate(90deg); }
 details.cp-cat .cp-rows { padding: 0 18px 14px; columns: 2; column-gap: 40px; }
 @media (max-width: 700px) { details.cp-cat .cp-rows { columns: 1; } }
@@ -367,7 +464,7 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
    quiet bottom-left, place bold bottom-right. */
 .cp-ph .cap-credit { position: absolute; left: 12px; bottom: 12px; color: #fff; opacity: .62; font-size: 9.5px; letter-spacing: .02em; text-shadow: 0 1px 5px rgba(0,0,0,.6); max-width: 46%; }
 .cp-ph .cap-place { position: absolute; right: 12px; bottom: 11px; color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .01em; text-shadow: 0 1px 6px rgba(0,0,0,.6); max-width: 78%; text-align: right; }
-</style><div class="cp-wrap"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/wwc/">BC Bike Stops</a><span class="g-crumb-sep">/</span><a href="/wwc/communities/">Communities</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Gold River</span></nav><div class="cp-title"><h1 class="cp-h1">Gold River, <em>on a bike</em></h1><p class="cp-stand">10 stops that will feed you, give you a bed, and put up your tent. Vancouver Island.</p></div><div class="cp-spread cp-one"><figure class="cp-ph cp-big" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/c2c48b5401e64b36.jpg')"><span class="cap-credit">Photo: Destination Canada</span><span class="cap-place">Vancouver Island, BC</span></figure></div><p class="cp-caps">Waterfront residences nestled in a forested valley beneath snow-capped mountains</p><h2 id="what-youll-find-here" class="cp-tiles-h">What you&rsquo;ll find here<a class="h-anchor" href="#what-youll-find-here" aria-label="Link to this section">#</a></h2><p class="cp-tiles-lede">Every stop in the directory, grouped the way a touring day actually goes.</p><div class="cp-tiles"><a class="cp-tile" href="#cat-attractions"><span class="cp-go">&rarr;</span><div class="cp-n">1</div><h3>Attractions</h3><p class="cp-eg">Gold River Library Branch.</p></a><a class="cp-tile" href="#cat-accommodation"><span class="cp-go">&rarr;</span><div class="cp-n">1</div><h3>Accommodation</h3><p class="cp-eg">Baymont By Wyndham Gold River.</p></a><a class="cp-tile" href="#cat-camping"><span class="cp-go">&rarr;</span><div class="cp-n">4</div><h3>Camping</h3><p class="cp-eg">Butterwort Flats Campsite, Elk Pass Camp, Stewart Lake Recreation Site, and 1 more.</p></a><a class="cp-tile" href="#cat-food-drink"><span class="cp-go">&rarr;</span><div class="cp-n">1</div><h3>Food &amp; Drink</h3><p class="cp-eg">Uptown Cappuccino.</p></a><a class="cp-tile" href="#cat-supplies"><span class="cp-go">&rarr;</span><div class="cp-n">3</div><h3>Supplies</h3><p class="cp-eg">BC Liquor Store, Fields, Gold River Liquor Express.</p></a></div><section class="cp-plan"><div><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}@media (max-width:700px){.wwc-map{height:300px}.wwc-map.large{height:320px}}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div class="guide-section wwc-map-wrap"><h2 id="map">Map<a class="h-anchor" href="#map" aria-label="Link to this section">#</a></h2><div id="commmap" class="wwc-map"></div><div class="wwc-map-ctrls"><label><input type="checkbox" id="commmap-mute" checked> Mute other bike trails</label><div class="wwc-map-legend"><span class="row"><span class="d" style="background:#e8590c"></span>Food &amp; Drink</span><span class="row"><span class="d" style="background:#9775fa"></span>Attractions</span><span class="row"><span class="d" style="background:#2b8a3e"></span>Supplies</span><span class="row"><span class="d" style="background:#1971c2"></span>Camping</span><span class="row"><span class="d" style="background:#c2255c"></span>Accommodation</span></div></div></div><script>
+</style><div class="cp-wrap"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/wwc/">BC Bike Stops</a><span class="g-crumb-sep">/</span><a href="/wwc/communities/">Communities</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Gold River</span></nav><div class="cp-title"><h1 class="cp-h1">Gold River, <em>on a bike</em></h1><p class="cp-stand">10 stops that will feed you, give you a bed, and put up your tent. Vancouver Island.</p></div><div class="cp-spread cp-one"><figure class="cp-ph cp-big" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/c2c48b5401e64b36.jpg')"><span class="cap-credit">Photo: Destination Canada</span><span class="cap-place">Vancouver Island, BC</span></figure></div><p class="cp-caps">Waterfront residences nestled in a forested valley beneath snow-capped mountains</p><h2 id="what-youll-find-here" class="cp-tiles-h">What you&rsquo;ll find here<a class="h-anchor" href="#what-youll-find-here" aria-label="Link to this section">#</a></h2><p class="cp-tiles-lede">Every stop in the directory, grouped the way a touring day actually goes.</p><div class="cp-tiles"><a class="cp-tile" href="#cat-attractions"><span class="cp-go">&rarr;</span><div class="cp-n">1</div><h3>Attractions</h3><p class="cp-eg">Gold River Library Branch.</p></a><a class="cp-tile" href="#cat-accommodation"><span class="cp-go">&rarr;</span><div class="cp-n">1</div><h3>Accommodation</h3><p class="cp-eg">Baymont By Wyndham Gold River.</p></a><a class="cp-tile" href="#cat-camping"><span class="cp-go">&rarr;</span><div class="cp-n">4</div><h3>Camping</h3><p class="cp-eg">Butterwort Flats Campsite, Elk Pass Camp, Stewart Lake Recreation Site, and 1 more.</p></a><a class="cp-tile" href="#cat-food-drink"><span class="cp-go">&rarr;</span><div class="cp-n">1</div><h3>Food &amp; Drink</h3><p class="cp-eg">Uptown Cappuccino.</p></a><a class="cp-tile" href="#cat-supplies"><span class="cp-go">&rarr;</span><div class="cp-n">3</div><h3>Supplies</h3><p class="cp-eg">BC Liquor Store, Fields, Gold River Liquor Express.</p></a></div><section class="cp-plan"><div><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:var(--r-m);overflow:hidden;border:1px solid var(--stone-200)}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}@media (max-width:700px){.wwc-map{height:300px}.wwc-map.large{height:320px}}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:var(--r-s);background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px var(--stone-400)}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:var(--stone-500);font-size:12px}.wwc-map-pop-addr{display:block;color:var(--stone-600);font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:var(--r-m);font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:var(--forest);color:#fff}</style><div class="guide-section wwc-map-wrap"><h2 id="map">Map<a class="h-anchor" href="#map" aria-label="Link to this section">#</a></h2><div id="commmap" class="wwc-map"></div><div class="wwc-map-ctrls"><label><input type="checkbox" id="commmap-mute" checked> Mute other bike trails</label><div class="wwc-map-legend"><span class="row"><span class="d" style="background:#e8590c"></span>Food &amp; Drink</span><span class="row"><span class="d" style="background:#9775fa"></span>Attractions</span><span class="row"><span class="d" style="background:#2b8a3e"></span>Supplies</span><span class="row"><span class="d" style="background:#1971c2"></span>Camping</span><span class="row"><span class="d" style="background:#c2255c"></span>Accommodation</span></div></div></div><script>
 (function(){
   var el=document.getElementById("commmap");
   if(!el) return;

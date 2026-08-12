@@ -35,16 +35,47 @@ html { scrollbar-gutter: stable; }
    --w-read the content column and prose cap, used by nearly every page
    --w-wide the exception: sidebar filters, two-column stop pages */
 :root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+/* Design tokens (BC-506): palette, warm-stone neutral ramp, radius scale.
+   Every page inherits these; page CSS uses var(...), not raw hex literals.
+   The /stops/ sage family is exempt from tokenization this pass. */
+:root {
+  /* brand */
+  --pacific: #0D4070;   /* navy */
+  --river:   #1E7D96;   /* teal: links + ALL primary buttons */
+  --forest:  #2E8A36;
+  --bright:  #6EC040;   /* accent green — accents only, never buttons */
+  --sky:     #B8E0EC;
+  --pine:    #1F514C;   /* heading green */
+  --herodark:#0D2E1E;
+  /* grounds */
+  --paper: #FFFDF9;     /* page ground */
+  --cream: #FFF6E5;     /* warm panels */
+  /* ink + warm stone neutrals (replaces the cool #E5E7EB/#9CA3AF family) */
+  --ink: #1A1A1A;
+  --stone-600: #57534E; --muted: #57534E;
+  --stone-500: #78716C;
+  --stone-400: #A8A29E;
+  --stone-200: #E7E5E4;
+  --sand: #E0D9CC;      /* warm hairline on cream */
+  /* radius scale: s chips/inputs, m cards, l heroes/panels, pill */
+  --r-s: 8px; --r-m: 12px; --r-l: 20px; --r-pill: 999px;
+}
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 /* Base link colour, both states (BC-504) — visited links were browser-purple
-   wherever no rule targeted them. First in the cascade, so any later page rule
-   that styles a link overrides both states. */
-a { color: #1E7D96; }
-a:visited { color: #1E7D96; }
+   wherever no rule targeted them.
+   :where() zeroes the specificity so ANY other rule wins, which is what the
+   original version meant but didn't achieve: bare `a:visited` scores 0-1-1 and
+   quietly outranked every single-class component rule (0-1-0). That repainted
+   the homepage's outlined "Plan your trip" CTA teal-on-navy once you'd visited
+   /plan/ — invisible until hover, when .hero-btn-outline:hover (0-2-0) finally
+   won. getComputedStyle reports the unvisited colour for privacy, so this is
+   only ever visible to the eye, in a profile that has actually been there. */
+:where(a) { color: var(--river); }
+:where(a:visited) { color: var(--river); }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
 /* position+z-index so open dropdown menus paint above page content that
@@ -55,8 +86,8 @@ a:visited { color: #1E7D96; }
 .g-header-left img { height: 50px; width: auto; max-width: 100%; }
 .g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
 .g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
-.g-header-nav a:hover { color: #1E7D96; }
-.g-header-nav a.active { color: #1E7D96; font-weight: 600; }
+.g-header-nav a:hover { color: var(--river); }
+.g-header-nav a.active { color: var(--river); font-weight: 600; }
 .g-nav-search { display: flex; align-items: center; gap: 6px; }
 .g-nav-search svg { width: 15px; height: 15px; display: block; }
 .g-nav-search .g-nav-search-label { display: inline; }
@@ -67,13 +98,13 @@ a:visited { color: #1E7D96; }
   background: none; border: none; cursor: pointer; padding: 0;
   display: flex; align-items: center; gap: 5px; transition: color 0.2s;
 }
-.g-navtop:hover, .g-navgroup.open .g-navtop { color: #1E7D96; }
-.g-navgroup.activeslot .g-navtop { color: #1E7D96; font-weight: 600; }
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: var(--river); }
+.g-navgroup.activeslot .g-navtop { color: var(--river); font-weight: 600; }
 .g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
 .g-navgroup.open .g-caret { transform: rotate(180deg); }
 .g-navmenu {
   position: absolute; top: calc(100% + 12px); left: -14px; display: none;
-  background: #FFFDF9; border: 1px solid #ECE7DD; border-radius: 14px;
+  background: var(--paper); border: 1px solid #ECE7DD; border-radius: var(--r-m);
   box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
 }
 .g-navgroup.open > .g-navmenu { display: block; }
@@ -81,11 +112,11 @@ a:visited { color: #1E7D96; }
 .g-navgroup[data-slot="field-notes"] .g-navmenu,
 .g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
 .g-header-nav .g-navmenu a {
-  display: block; padding: 9px 12px; border-radius: 9px;
+  display: block; padding: 9px 12px; border-radius: var(--r-s);
   font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
   white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
 }
-.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: #1E7D96; }
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: var(--river); }
 .g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
 .g-header-nav .g-navmenu .gnm-d {
   display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
@@ -102,22 +133,23 @@ a:visited { color: #1E7D96; }
 /* menu panels are solid cream even under a transparent header: beat the
    white-link transparent rules at their own specificity */
 .g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
-.g-header.transparent .g-header-nav .g-navmenu a:hover { color: #1E7D96; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: var(--river); }
 .g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
-.g-header.transparent.solid .g-navtop:hover { color: #1E7D96; }
-.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: #1E7D96; text-decoration: none; }
-.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-header.transparent.solid .g-navtop:hover { color: var(--river); }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: var(--river); text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--pine); padding: 4px 8px; line-height: 1; margin-left: auto; }
 .g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
-.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin-bottom: 14px; letter-spacing: -0.03em; }
-.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
-.g-main p { color: #4b5563; margin-bottom: 14px; max-width: var(--w-read, 720px); }
-.g-main a { color: #1E7D96; }
-.g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: var(--pine); margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h1 { font-weight: 700; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: var(--pine); margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: var(--stone-600); margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: var(--river); }
+.g-main ul { margin-left: 20px; color: var(--stone-600); margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
-.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
-.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb { font-size: 13px; color: var(--stone-400); margin-bottom: 18px; }
+.g-crumb a { color: var(--river); text-decoration: none; }
 .g-crumb a:hover { text-decoration: underline; }
-.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-cur { color: var(--stone-400); }
 .g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
 .g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
@@ -126,11 +158,11 @@ a:visited { color: #1E7D96; }
 .g-footer-col { }
 .g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
 .g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
-.g-footer-col a:hover { color: #0D4070; }
-.section-divider { border: none; border-top: 1px solid #EEE; margin: 28px 0; }
+.g-footer-col a:hover { color: var(--pacific); }
+.section-divider { border: none; border-top: 1px solid var(--stone-200); margin: 28px 0; }
 .bio { margin-bottom: 20px; }
-.bio strong { color: #1F514C; font-size: 15px; }
-.bio > em { color: #636363; font-size: 13px; }
+.bio strong { color: var(--pine); font-size: 15px; }
+.bio > em { color: var(--stone-600); font-size: 13px; }
 .bio p { font-size: 14px; margin-top: 6px; }
 @media (max-width: 700px) {
   .g-banner { padding: 6px 14px; font-size: 11px; }
@@ -138,17 +170,17 @@ a:visited { color: #1E7D96; }
   .g-header-inner { gap: 0; }
   .g-main { padding: 24px 14px 16px; }
   .g-hamburger { display: block; }
-  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #FFFDF9; border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
   .g-header-nav.open { display: flex; }
-  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid var(--stone-200); font-size: 15px; color: var(--pine); }
   .g-header-nav a:last-child { border-bottom: none; }
   .g-nav-search svg { display: none; }
   .g-nav-search .g-nav-search-label { display: inline; }
   /* dropdown groups become accordion sections inside the hamburger panel */
-  .g-navgroup { display: block; position: static; border-bottom: 1px solid #EEE; }
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid var(--stone-200); }
   .g-navtop {
     width: 100%; justify-content: space-between; padding: 12px 0;
-    font-size: 15px; color: #1F514C; text-shadow: none;
+    font-size: 15px; color: var(--pine); text-shadow: none;
   }
   .g-navmenu {
     position: static; box-shadow: none; border: none; background: none;
@@ -163,11 +195,76 @@ a:visited { color: #1E7D96; }
    section. Grey at rest so it reads as a tool rather than content, teal at the
    moment you are about to click it. Touch devices have no hover, so it sits
    faintly visible there instead of being unreachable. */
-.h-anchor { margin-left: .35em; color: #6E6E6E; opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+.h-anchor { margin-left: .35em; color: var(--stone-500); opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
 h2:hover > .h-anchor { opacity: .55; }
-.h-anchor:hover, .h-anchor:focus { color: #1E7D96; opacity: 1; }
+.h-anchor:hover, .h-anchor:focus { color: var(--river); opacity: 1; }
 @media (hover: none) {
   .h-anchor { opacity: .35; }
+}
+
+/* ---- Eyebrow labels (BC-509). One treatment site-wide: 11px, caps, teal.
+   Teal because it was already the most-used eyebrow colour, which leaves the
+   accent green free to keep meaning "accent" (journey-map steps, accredited
+   marks) instead of competing as a label colour. The historical class names
+   are aliased here rather than rewritten at every call site; genuinely
+   contextual overrides still win on specificity (e.g. the pale-blue on-photo
+   eyebrow on the To and Fro hero). No font-family: eyebrows inherit Inter,
+   which is what all but one of them already did. ---- */
+.eyebrow, .gi-eyebrow, .dir-eyebrow, .ls-notable-eyebrow,
+.listing-section-title, .ls-pills-label, .ls-card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--river); margin-bottom: 6px;
+}
+
+/* ---- Chip geometry (BC-509). Two geometries, not ten. Label chips are read;
+   control chips are tapped, so they get a bigger target. Colour and meaning
+   stay per-family — this only unifies size, padding, and radius. ---- */
+.chip, .lachip, .lichip, .lfacet, .pubchip, .guide-chip-am,
+.listing-pill-yes, .listing-pill-no {
+  font-size: 12.5px; padding: 4px 12px; border-radius: var(--r-pill);
+}
+.dir-chip, .guide-chip, .explore-chip {
+  font-size: 13.5px; padding: 6px 13px; border-radius: var(--r-pill);
+}
+
+/* ---- Warm CTA panel (BC-508). One "warm panel + one action" component that
+   replaces four hand-rolled versions: route detail's "Ready to ride it?", the
+   routes-hub publisher card, Design Your Own Route's signup, and the homepage
+   newsletter block. The action slot is deliberately open — it takes a button
+   link OR a whole form — so the call sites keep their own behaviour and share
+   only the chrome. Emitted by warm_panel() below; the title/body/act selectors
+   are class-on-class so they win against .g-main h2 / .g-main p. ---- */
+.wpanel { background: var(--cream); border: 1px solid var(--sand); border-radius: var(--r-l);
+  padding: 26px 30px; margin: 34px auto 8px; max-width: 900px; }
+.wpanel.narrow { max-width: 700px; }
+.wpanel.center { text-align: center; }
+.wpanel .wp-title { font-family: "Archivo", "Inter", sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--pine); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 6px; }
+.wpanel.lg .wp-title { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+.wpanel .wp-body { color: var(--stone-600); font-size: 15px; line-height: 1.55; margin: 0 0 16px; max-width: 62ch; }
+.wpanel.center .wp-body { margin-left: auto; margin-right: auto; }
+.wpanel .wp-body a { color: var(--river); }
+.wpanel .wp-act { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.wpanel.center .wp-act { align-items: center; }
+.wpanel .wp-act form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.wpanel.center .wp-act form { margin: 0 auto; }
+/* one button and one field treatment inside the panel, whatever the action is */
+.wpanel .wp-act .wp-btn, .wpanel .wp-act button { display: inline-block; background: var(--river);
+  color: #fff; border: none; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: var(--r-m); cursor: pointer; text-align: center;
+  transition: background .2s ease; }
+.wpanel .wp-act .wp-btn:hover, .wpanel .wp-act button:hover { background: var(--pacific); }
+.wpanel .wp-act input:not([type="hidden"]), .wpanel .wp-act textarea { width: 100%;
+  padding: 13px 16px; border: 1.5px solid var(--sand); border-radius: var(--r-m);
+  font-size: 16px; font-family: inherit; background: #fff; transition: border-color .2s; }
+.wpanel .wp-act input:focus, .wpanel .wp-act textarea:focus { border-color: var(--river); outline: none; }
+.wpanel .wp-act textarea { min-height: 76px; resize: vertical; }
+/* secondary action under the primary one (route detail's extra links) */
+.wpanel .wp-alt { font-size: 13.5px; color: var(--river); font-weight: 600; text-decoration: none; }
+.wpanel .wp-alt:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .wpanel { padding: 22px 18px; border-radius: var(--r-m); }
+  .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
 }
 
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -176,41 +273,48 @@ h2:hover > .h-anchor { opacity: .55; }
 html { scroll-behavior: smooth; }
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 16px; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  font-size: 16px; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
-.plan-page { max-width: var(--w-wide, 1160px); margin: 0 auto; background: #FFFDF9; }
-.plan-crumb { padding: 14px 20px 10px; }
+.plan-page { max-width: var(--w-wide, 1160px); margin: 0 auto; background: var(--paper); }
+/* BC-507 Rule B: the hero is full-bleed, everything below it stays in the page
+   column, and the breadcrumb is the first item in that column — so here it sits
+   below the hero, not above it. */
+.plan-crumb { padding: 18px 20px 6px; }
 .hubhero {
-  position: relative; min-height: 340px;
+  position: relative; width: 100vw; margin-left: calc(50% - 50vw); min-height: 340px;
   background-size: cover; background-position: center 60%; background-repeat: no-repeat;
   display: flex; align-items: flex-end;
 }
 .hubhero .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,46,30,.05) 30%, rgba(13,46,30,.78)); }
-.hubhero .txt { position: relative; padding: 1.9rem 2rem; color: #fff; }
+/* The band is full-bleed but its words stay on the page column, the way
+   .trailhero centres its own inner — otherwise the h1 lands against the
+   viewport edge. */
+.hubhero .txt { position: relative; width: 100%; max-width: var(--w-wide, 1160px); margin: 0 auto; padding: 1.9rem 2rem; color: #fff; }
 .hubhero .txt h1 { font-family: "Archivo","Inter",sans-serif; font-size: 2.4rem; font-weight: 700; letter-spacing: -.01em; line-height: 1.1; margin-bottom: .25rem; color: #fff; }
 .hubhero .txt p { color: #dceadfcc; margin: 0; font-size: 1.05rem; max-width: 640px; }
 .jline { text-align: center; padding: 1.6rem 2rem 1.6rem; font-size: .95rem; color: #555; }
-.jline a { color: #1E7D96; font-weight: 700; text-decoration: none; }
+.jline a { color: var(--river); font-weight: 700; text-decoration: none; }
 .band { display: grid; grid-template-columns: 1.1fr 1fr; min-height: 240px; }
 .band.flip { grid-template-columns: 1fr 1.1fr; }
 .band .photo { background-size: cover; background-position: center; position: relative; }
-.band .words { padding: 2rem; display: flex; flex-direction: column; justify-content: center; gap: .4rem; background: #FFFDF9; }
+.band .words { padding: 2rem; display: flex; flex-direction: column; justify-content: center; gap: .4rem; background: var(--paper); }
 .band.alt .words { background: #fff; }
-.band .step { font-size: .72rem; font-weight: 800; color: #6EC040; letter-spacing: .12em; }
-.band .qq { font-family: "Archivo","Inter",sans-serif; font-size: 1.35rem; font-weight: 700; color: #0D2E1E; line-height: 1.25; letter-spacing: -.01em; }
+/* BC-509: typography comes from the shared .eyebrow; only layout is local. */
+.band .step { display: inline-block; }
+.band .qq { font-family: "Archivo","Inter",sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--herodark); line-height: 1.25; letter-spacing: -.01em; }
 .band .ans { font-size: .95rem; color: #555; }
-.band .go { color: #1E7D96; font-weight: 700; font-size: .95rem; text-decoration: none; margin-top: .35rem; }
+.band .go { color: var(--river); font-weight: 700; font-size: .95rem; text-decoration: none; margin-top: .35rem; }
 .cap-credit { position: absolute; left: 12px; bottom: 12px; color: #fff; opacity: .62; font-size: 9.5px; letter-spacing: .02em; text-shadow: 0 1px 5px rgba(0,0,0,.6); max-width: 46%; }
 .cap-place { position: absolute; right: 12px; bottom: 11px; color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .01em; text-shadow: 0 1px 6px rgba(0,0,0,.6); max-width: 78%; text-align: right; }
 .deeper { background: #fff; border-top: 1px solid #F0E6C5; padding: 2.8rem 2rem 2.8rem; }
-.deeper .step { font-size: .72rem; font-weight: 800; color: #6EC040; letter-spacing: .12em; display: block; margin-bottom: .8rem; }
+.deeper .step { display: block; margin-bottom: .8rem; }
 .deepgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-.deepcard { display: block; text-decoration: none; border: 1px solid #F0E6C5; border-radius: 10px; padding: 1rem 1.1rem; background: #FFFDF9; transition: border-color .15s; }
-.deepcard:hover { border-color: #1E7D96; }
-.deepcard .t { font-family: "Archivo","Inter",sans-serif; font-size: 1.02rem; font-weight: 700; color: #0D2E1E; letter-spacing: -.01em; }
+.deepcard { display: block; text-decoration: none; border: 1px solid #F0E6C5; border-radius: var(--r-m); padding: 1rem 1.1rem; background: var(--paper); transition: border-color .15s; }
+.deepcard:hover { border-color: var(--river); }
+.deepcard .t { font-family: "Archivo","Inter",sans-serif; font-size: 1.02rem; font-weight: 700; color: var(--herodark); letter-spacing: -.01em; }
 .deepcard .d { font-size: .85rem; color: #666; margin: .25rem 0 .45rem; }
-.deepcard .g { color: #1E7D96; font-weight: 700; font-size: .85rem; }
+.deepcard .g { color: var(--river); font-weight: 700; font-size: .85rem; }
 @media (max-width: 700px) {
   .band, .band.flip { grid-template-columns: 1fr; }
   .band .photo { min-height: 160px; }
@@ -283,7 +387,6 @@ body {
 
 <main class="plan-page">
 
-  <div class="plan-crumb"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Plan Your Trip</span></nav></div>
   <div class="hubhero" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/1142fc1015fb44ab.jpg')">
     <div class="shade"></div>
     <div class="txt">
@@ -292,13 +395,14 @@ body {
     </div>
     <span class="cap-credit">Photo: Kari Medig</span><span class="cap-place">Thompson Okanagan, BC</span>
   </div>
+  <div class="plan-crumb"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Plan Your Trip</span></nav></div>
 
   <p class="jline">New to trip planning? <a href="/#ready-heres-how-a-trip-comes-together">See how a whole trip comes together, step by step &rarr;</a></p>
 
   <div class="band">
     <div class="photo" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/be217dfb4937bdbc.jpg')"><span class="cap-credit">Photo: Jordan Dyck</span><span class="cap-place">Tofino, BC</span></div>
     <div class="words">
-      <span class="step">QUESTION 1</span>
+      <span class="eyebrow step">QUESTION 1</span>
       <span class="qq">Where do you want to ride?</span>
       <span class="ans">Pick from 300+ ready-made routes, join a guided tour or group ride, or design something all your own.</span>
       <a class="go" href="/routes/all/">Choose a route →</a>
@@ -309,7 +413,7 @@ body {
 
   <div class="band flip alt">
     <div class="words">
-      <span class="step">QUESTION 2</span>
+      <span class="eyebrow step">QUESTION 2</span>
       <span class="qq">How will you — and your bike — get there and back?</span>
       <span class="ans">Ferries, buses, trains and shuttles that carry bikes, matched to where you're starting and where you'll finish. 10,500 connections, every carrier's bike policy checked.</span>
       <a class="go" href="/to-fro/">Plan your To &amp; Fro →</a>
@@ -320,7 +424,7 @@ body {
   <div class="band">
     <div class="photo" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/c59843a0afa5fbf7.jpg')"><span class="cap-credit">Photo: Reuben Krabbe</span><span class="cap-place">Revelstoke, BC</span></div>
     <div class="words">
-      <span class="step">QUESTION 3</span>
+      <span class="eyebrow step">QUESTION 3</span>
       <span class="qq">Where will you stop along the way?</span>
       <span class="ans">18,500+ cafés, campgrounds, museums and bike shops — with the details touring cyclists actually need, before you arrive.</span>
       <a class="go" href="/wwc/">Find your BC Bike Stops →</a>
@@ -329,7 +433,7 @@ body {
   </div>
 
   <div class="deeper">
-    <span class="step">GO DEEPER</span>
+    <span class="eyebrow step">GO DEEPER</span>
     <div class="deepgrid">
       <a class="deepcard" href="/routes/">
         <span class="t">The highlight reel</span>
@@ -365,10 +469,10 @@ body {
   </div>
 
   <div style="max-width:480px; margin:8px auto 56px; padding:0 20px; text-align:center;">
-    <p style="font-size:15px; color:#5B6B72; margin-bottom:10px;">Looking for something in particular?</p>
+    <p style="font-size:15px; color:var(--stone-600); margin-bottom:10px;">Looking for something in particular?</p>
     <form action="/search/" method="get">
       <input type="search" name="q" placeholder="Search the site&hellip;" aria-label="Search the site"
-             style="width:100%; padding:11px 16px; font:inherit; font-size:15px; border:1px solid #D6D3CC; border-radius:8px; background:#fff; color:#141414;">
+             style="width:100%; padding:11px 16px; font:inherit; font-size:15px; border:1px solid #D6D3CC; border-radius:var(--r-s); background:#fff; color:var(--ink);">
     </form>
   </div>
 

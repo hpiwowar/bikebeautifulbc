@@ -34,16 +34,47 @@ html { scrollbar-gutter: stable; }
    --w-read the content column and prose cap, used by nearly every page
    --w-wide the exception: sidebar filters, two-column stop pages */
 :root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+/* Design tokens (BC-506): palette, warm-stone neutral ramp, radius scale.
+   Every page inherits these; page CSS uses var(...), not raw hex literals.
+   The /stops/ sage family is exempt from tokenization this pass. */
+:root {
+  /* brand */
+  --pacific: #0D4070;   /* navy */
+  --river:   #1E7D96;   /* teal: links + ALL primary buttons */
+  --forest:  #2E8A36;
+  --bright:  #6EC040;   /* accent green — accents only, never buttons */
+  --sky:     #B8E0EC;
+  --pine:    #1F514C;   /* heading green */
+  --herodark:#0D2E1E;
+  /* grounds */
+  --paper: #FFFDF9;     /* page ground */
+  --cream: #FFF6E5;     /* warm panels */
+  /* ink + warm stone neutrals (replaces the cool #E5E7EB/#9CA3AF family) */
+  --ink: #1A1A1A;
+  --stone-600: #57534E; --muted: #57534E;
+  --stone-500: #78716C;
+  --stone-400: #A8A29E;
+  --stone-200: #E7E5E4;
+  --sand: #E0D9CC;      /* warm hairline on cream */
+  /* radius scale: s chips/inputs, m cards, l heroes/panels, pill */
+  --r-s: 8px; --r-m: 12px; --r-l: 20px; --r-pill: 999px;
+}
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 /* Base link colour, both states (BC-504) — visited links were browser-purple
-   wherever no rule targeted them. First in the cascade, so any later page rule
-   that styles a link overrides both states. */
-a { color: #1E7D96; }
-a:visited { color: #1E7D96; }
+   wherever no rule targeted them.
+   :where() zeroes the specificity so ANY other rule wins, which is what the
+   original version meant but didn't achieve: bare `a:visited` scores 0-1-1 and
+   quietly outranked every single-class component rule (0-1-0). That repainted
+   the homepage's outlined "Plan your trip" CTA teal-on-navy once you'd visited
+   /plan/ — invisible until hover, when .hero-btn-outline:hover (0-2-0) finally
+   won. getComputedStyle reports the unvisited colour for privacy, so this is
+   only ever visible to the eye, in a profile that has actually been there. */
+:where(a) { color: var(--river); }
+:where(a:visited) { color: var(--river); }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
 /* position+z-index so open dropdown menus paint above page content that
@@ -54,8 +85,8 @@ a:visited { color: #1E7D96; }
 .g-header-left img { height: 50px; width: auto; max-width: 100%; }
 .g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
 .g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
-.g-header-nav a:hover { color: #1E7D96; }
-.g-header-nav a.active { color: #1E7D96; font-weight: 600; }
+.g-header-nav a:hover { color: var(--river); }
+.g-header-nav a.active { color: var(--river); font-weight: 600; }
 .g-nav-search { display: flex; align-items: center; gap: 6px; }
 .g-nav-search svg { width: 15px; height: 15px; display: block; }
 .g-nav-search .g-nav-search-label { display: inline; }
@@ -66,13 +97,13 @@ a:visited { color: #1E7D96; }
   background: none; border: none; cursor: pointer; padding: 0;
   display: flex; align-items: center; gap: 5px; transition: color 0.2s;
 }
-.g-navtop:hover, .g-navgroup.open .g-navtop { color: #1E7D96; }
-.g-navgroup.activeslot .g-navtop { color: #1E7D96; font-weight: 600; }
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: var(--river); }
+.g-navgroup.activeslot .g-navtop { color: var(--river); font-weight: 600; }
 .g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
 .g-navgroup.open .g-caret { transform: rotate(180deg); }
 .g-navmenu {
   position: absolute; top: calc(100% + 12px); left: -14px; display: none;
-  background: #FFFDF9; border: 1px solid #ECE7DD; border-radius: 14px;
+  background: var(--paper); border: 1px solid #ECE7DD; border-radius: var(--r-m);
   box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
 }
 .g-navgroup.open > .g-navmenu { display: block; }
@@ -80,11 +111,11 @@ a:visited { color: #1E7D96; }
 .g-navgroup[data-slot="field-notes"] .g-navmenu,
 .g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
 .g-header-nav .g-navmenu a {
-  display: block; padding: 9px 12px; border-radius: 9px;
+  display: block; padding: 9px 12px; border-radius: var(--r-s);
   font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
   white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
 }
-.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: #1E7D96; }
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: var(--river); }
 .g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
 .g-header-nav .g-navmenu .gnm-d {
   display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
@@ -101,22 +132,23 @@ a:visited { color: #1E7D96; }
 /* menu panels are solid cream even under a transparent header: beat the
    white-link transparent rules at their own specificity */
 .g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
-.g-header.transparent .g-header-nav .g-navmenu a:hover { color: #1E7D96; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: var(--river); }
 .g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
-.g-header.transparent.solid .g-navtop:hover { color: #1E7D96; }
-.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: #1E7D96; text-decoration: none; }
-.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-header.transparent.solid .g-navtop:hover { color: var(--river); }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: var(--river); text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--pine); padding: 4px 8px; line-height: 1; margin-left: auto; }
 .g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
-.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin-bottom: 14px; letter-spacing: -0.03em; }
-.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
-.g-main p { color: #4b5563; margin-bottom: 14px; max-width: var(--w-read, 720px); }
-.g-main a { color: #1E7D96; }
-.g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: var(--pine); margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h1 { font-weight: 700; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: var(--pine); margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: var(--stone-600); margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: var(--river); }
+.g-main ul { margin-left: 20px; color: var(--stone-600); margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
-.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
-.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb { font-size: 13px; color: var(--stone-400); margin-bottom: 18px; }
+.g-crumb a { color: var(--river); text-decoration: none; }
 .g-crumb a:hover { text-decoration: underline; }
-.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-cur { color: var(--stone-400); }
 .g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
 .g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
@@ -125,11 +157,11 @@ a:visited { color: #1E7D96; }
 .g-footer-col { }
 .g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
 .g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
-.g-footer-col a:hover { color: #0D4070; }
-.section-divider { border: none; border-top: 1px solid #EEE; margin: 28px 0; }
+.g-footer-col a:hover { color: var(--pacific); }
+.section-divider { border: none; border-top: 1px solid var(--stone-200); margin: 28px 0; }
 .bio { margin-bottom: 20px; }
-.bio strong { color: #1F514C; font-size: 15px; }
-.bio > em { color: #636363; font-size: 13px; }
+.bio strong { color: var(--pine); font-size: 15px; }
+.bio > em { color: var(--stone-600); font-size: 13px; }
 .bio p { font-size: 14px; margin-top: 6px; }
 @media (max-width: 700px) {
   .g-banner { padding: 6px 14px; font-size: 11px; }
@@ -137,17 +169,17 @@ a:visited { color: #1E7D96; }
   .g-header-inner { gap: 0; }
   .g-main { padding: 24px 14px 16px; }
   .g-hamburger { display: block; }
-  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #FFFDF9; border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
   .g-header-nav.open { display: flex; }
-  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid var(--stone-200); font-size: 15px; color: var(--pine); }
   .g-header-nav a:last-child { border-bottom: none; }
   .g-nav-search svg { display: none; }
   .g-nav-search .g-nav-search-label { display: inline; }
   /* dropdown groups become accordion sections inside the hamburger panel */
-  .g-navgroup { display: block; position: static; border-bottom: 1px solid #EEE; }
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid var(--stone-200); }
   .g-navtop {
     width: 100%; justify-content: space-between; padding: 12px 0;
-    font-size: 15px; color: #1F514C; text-shadow: none;
+    font-size: 15px; color: var(--pine); text-shadow: none;
   }
   .g-navmenu {
     position: static; box-shadow: none; border: none; background: none;
@@ -162,11 +194,76 @@ a:visited { color: #1E7D96; }
    section. Grey at rest so it reads as a tool rather than content, teal at the
    moment you are about to click it. Touch devices have no hover, so it sits
    faintly visible there instead of being unreachable. */
-.h-anchor { margin-left: .35em; color: #6E6E6E; opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+.h-anchor { margin-left: .35em; color: var(--stone-500); opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
 h2:hover > .h-anchor { opacity: .55; }
-.h-anchor:hover, .h-anchor:focus { color: #1E7D96; opacity: 1; }
+.h-anchor:hover, .h-anchor:focus { color: var(--river); opacity: 1; }
 @media (hover: none) {
   .h-anchor { opacity: .35; }
+}
+
+/* ---- Eyebrow labels (BC-509). One treatment site-wide: 11px, caps, teal.
+   Teal because it was already the most-used eyebrow colour, which leaves the
+   accent green free to keep meaning "accent" (journey-map steps, accredited
+   marks) instead of competing as a label colour. The historical class names
+   are aliased here rather than rewritten at every call site; genuinely
+   contextual overrides still win on specificity (e.g. the pale-blue on-photo
+   eyebrow on the To and Fro hero). No font-family: eyebrows inherit Inter,
+   which is what all but one of them already did. ---- */
+.eyebrow, .gi-eyebrow, .dir-eyebrow, .ls-notable-eyebrow,
+.listing-section-title, .ls-pills-label, .ls-card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--river); margin-bottom: 6px;
+}
+
+/* ---- Chip geometry (BC-509). Two geometries, not ten. Label chips are read;
+   control chips are tapped, so they get a bigger target. Colour and meaning
+   stay per-family — this only unifies size, padding, and radius. ---- */
+.chip, .lachip, .lichip, .lfacet, .pubchip, .guide-chip-am,
+.listing-pill-yes, .listing-pill-no {
+  font-size: 12.5px; padding: 4px 12px; border-radius: var(--r-pill);
+}
+.dir-chip, .guide-chip, .explore-chip {
+  font-size: 13.5px; padding: 6px 13px; border-radius: var(--r-pill);
+}
+
+/* ---- Warm CTA panel (BC-508). One "warm panel + one action" component that
+   replaces four hand-rolled versions: route detail's "Ready to ride it?", the
+   routes-hub publisher card, Design Your Own Route's signup, and the homepage
+   newsletter block. The action slot is deliberately open — it takes a button
+   link OR a whole form — so the call sites keep their own behaviour and share
+   only the chrome. Emitted by warm_panel() below; the title/body/act selectors
+   are class-on-class so they win against .g-main h2 / .g-main p. ---- */
+.wpanel { background: var(--cream); border: 1px solid var(--sand); border-radius: var(--r-l);
+  padding: 26px 30px; margin: 34px auto 8px; max-width: 900px; }
+.wpanel.narrow { max-width: 700px; }
+.wpanel.center { text-align: center; }
+.wpanel .wp-title { font-family: "Archivo", "Inter", sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--pine); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 6px; }
+.wpanel.lg .wp-title { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+.wpanel .wp-body { color: var(--stone-600); font-size: 15px; line-height: 1.55; margin: 0 0 16px; max-width: 62ch; }
+.wpanel.center .wp-body { margin-left: auto; margin-right: auto; }
+.wpanel .wp-body a { color: var(--river); }
+.wpanel .wp-act { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.wpanel.center .wp-act { align-items: center; }
+.wpanel .wp-act form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.wpanel.center .wp-act form { margin: 0 auto; }
+/* one button and one field treatment inside the panel, whatever the action is */
+.wpanel .wp-act .wp-btn, .wpanel .wp-act button { display: inline-block; background: var(--river);
+  color: #fff; border: none; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: var(--r-m); cursor: pointer; text-align: center;
+  transition: background .2s ease; }
+.wpanel .wp-act .wp-btn:hover, .wpanel .wp-act button:hover { background: var(--pacific); }
+.wpanel .wp-act input:not([type="hidden"]), .wpanel .wp-act textarea { width: 100%;
+  padding: 13px 16px; border: 1.5px solid var(--sand); border-radius: var(--r-m);
+  font-size: 16px; font-family: inherit; background: #fff; transition: border-color .2s; }
+.wpanel .wp-act input:focus, .wpanel .wp-act textarea:focus { border-color: var(--river); outline: none; }
+.wpanel .wp-act textarea { min-height: 76px; resize: vertical; }
+/* secondary action under the primary one (route detail's extra links) */
+.wpanel .wp-alt { font-size: 13.5px; color: var(--river); font-weight: 600; text-decoration: none; }
+.wpanel .wp-alt:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .wpanel { padding: 22px 18px; border-radius: var(--r-m); }
+  .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
 }
 
 @font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -178,7 +275,7 @@ h2:hover > .h-anchor { opacity: .55; }
 html { scroll-behavior: smooth; }
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 16px; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  font-size: 16px; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 
@@ -187,7 +284,7 @@ body {
   max-width: 1200px; margin: 0 auto; padding: 0 40px 48px;
 }
 .hero-card {
-  background: #0D4070; border-radius: 28px; overflow: hidden;
+  background: var(--pacific); border-radius: var(--r-l); overflow: hidden;
   display: grid; grid-template-columns: 1fr 1fr; min-height: 580px;
 }
 .hero-text {
@@ -195,7 +292,7 @@ body {
 }
 .hero-text h1 {
   font-family: "Archivo", sans-serif;
-  font-size: 56px; font-weight: 400; color: #FFFDF9; line-height: 1.15; margin-bottom: 24px;
+  font-size: 56px; font-weight: 400; color: var(--paper); line-height: 1.15; margin-bottom: 24px;
   letter-spacing: -0.04em;
 }
 .hero-text p {
@@ -205,17 +302,17 @@ body {
 }
 .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-btn {
-  padding: 16px 32px; border-radius: 24px; font-size: 16px; font-weight: 500;
+  padding: 16px 32px; border-radius: var(--r-l); font-size: 16px; font-weight: 500;
   border: 2px solid transparent;
   text-decoration: none; text-align: center; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.hero-btn-light { background: #FFFDF9; color: #2C4C3B; }
-.hero-btn-light:hover { background: #1E7D96; color: white; transform: translateY(-1px); }
+.hero-btn-light { background: var(--paper); color: #2C4C3B; }
+.hero-btn-light:hover { background: var(--river); color: white; transform: translateY(-1px); }
 .hero-btn-outline { background: transparent; color: white; border-color: white; }
-.hero-btn-outline:hover { background: #1E7D96; color: white; border-color: #1E7D96; transform: translateY(-1px); }
+.hero-btn-outline:hover { background: var(--river); color: white; border-color: var(--river); transform: translateY(-1px); }
 .hero-img {
   background: url('/img/home/main_page_Small-1200px-233885.jpg') center/cover;
-  border-radius: 20px; margin: 20px 20px 20px 0;
+  border-radius: var(--r-l); margin: 20px 20px 20px 0;
 }
 
 .partners { text-align: center; padding: 56px 40px 64px; max-width: 1200px; margin: 0 auto; }
@@ -225,15 +322,15 @@ body {
   font-size: 14px; font-weight: 500; color: rgba(13,64,112,0.65); letter-spacing: -0.01em;
 }
 
-.questions { text-align: center; padding: 80px 40px; background: #FFF6E5; }
+.questions { text-align: center; padding: 80px 40px; background: var(--cream); }
 .questions p {
   font-family: "Archivo", sans-serif;
-  font-size: 40px; font-weight: 400; color: #0D2E1E; line-height: 1.35; margin-bottom: 0;
+  font-size: 40px; font-weight: 400; color: var(--herodark); line-height: 1.35; margin-bottom: 0;
   letter-spacing: -0.03em;
 }
 .questions .answer {
   font-family: "Archivo", sans-serif;
-  font-size: 40px; font-weight: 400; color: #0D2E1E; margin-top: 8px;
+  font-size: 40px; font-weight: 400; color: var(--herodark); margin-top: 8px;
   letter-spacing: -0.03em;
 }
 /* Journey panel — "how a trip comes together" wander line (2026-07-20) */
@@ -241,7 +338,7 @@ body {
 .journey-head { text-align: center; max-width: 640px; margin: 0 auto 34px; }
 .journey-head h2 {
   font-family: "Archivo", sans-serif;
-  font-size: 27px; font-weight: 500; color: #0D2E1E; letter-spacing: -0.02em;
+  font-size: 27px; font-weight: 500; color: var(--herodark); letter-spacing: -0.02em;
 }
 .journey-head p { font-size: 15.5px; color: rgba(13,46,30,0.62); margin-top: 8px; }
 .journey-scene { position: relative; max-width: 1040px; margin: 0 auto; aspect-ratio: 1000 / 560; }
@@ -250,65 +347,65 @@ body {
   position: absolute; transform: translate(-50%, -50%);
   display: block; text-decoration: none; text-align: center;
   width: 196px; padding: 12px 14px 11px;
-  background: #FFFDF9; border: 1.5px solid #C9E0EB; border-radius: 14px;
+  background: var(--paper); border: 1.5px solid #C9E0EB; border-radius: var(--r-m);
   box-shadow: 0 2px 10px rgba(13,64,112,0.07);
   transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 .jstop:hover {
-  transform: translate(-50%, -52%); border-color: #6EC040;
+  transform: translate(-50%, -52%); border-color: var(--bright);
   box-shadow: 0 6px 18px rgba(13,64,112,0.14);
 }
 .jstop .num {
   display: inline-flex; align-items: center; justify-content: center;
   width: 26px; height: 26px; border-radius: 50%;
-  border: 2px solid #1E7D96; color: #1E7D96;
-  font-size: 13px; font-weight: 700; margin-bottom: 6px; background: #FFFDF9;
+  border: 2px solid var(--river); color: var(--river);
+  font-size: 13px; font-weight: 700; margin-bottom: 6px; background: var(--paper);
 }
-.jstop .lbl { display: block; font-size: 15px; font-weight: 700; color: #0D2E1E; letter-spacing: -0.01em; }
+.jstop .lbl { display: block; font-size: 15px; font-weight: 700; color: var(--herodark); letter-spacing: -0.01em; }
 .jstop .sub { display: block; font-size: 12.5px; color: rgba(13,46,30,0.58); margin-top: 2px; }
 /* step 4: one stop, three ways in */
 .jchoice { width: 224px; cursor: default; }
 .jchoice .doors { margin-top: 8px; border-top: 1.5px dashed #C9E0EB; }
 .jchoice .doors a {
   display: block; padding: 7px 6px 6px; text-align: left;
-  font-size: 13.5px; font-weight: 700; color: #1E7D96; text-decoration: none;
+  font-size: 13.5px; font-weight: 700; color: var(--river); text-decoration: none;
   border-bottom: 1.5px dashed #C9E0EB;
   transition: color 0.15s ease;
 }
 .jchoice .doors a::before { content: "\2190"; margin-right: 8px; }
 .jchoice .doors a:last-child { border-bottom: none; padding-bottom: 2px; }
-.jchoice .doors a:hover { color: #6EC040; }
+.jchoice .doors a:hover { color: var(--bright); }
 .jfinish { position: absolute; transform: translate(-50%, -50%); text-align: center; width: 200px; }
 .jfinish .lbl {
   font-family: "Archivo", sans-serif;
-  font-size: 18px; font-weight: 600; color: #0D2E1E; letter-spacing: -0.01em;
+  font-size: 18px; font-weight: 600; color: var(--herodark); letter-spacing: -0.01em;
 }
 .jspur {
   position: absolute; transform: translate(-50%, -50%);
   text-align: center; width: 186px; padding: 9px 12px 8px;
-  border: 1.5px dashed #A8C6D6; border-radius: 12px; background: rgba(255,253,249,0.55);
+  border: 1.5px dashed #A8C6D6; border-radius: var(--r-m); background: rgba(255,253,249,0.55);
 }
 .jspur .lbl { display: block; font-size: 12px; font-weight: 800; color: #4A6B7A; letter-spacing: 0.02em; text-transform: uppercase; }
-.jspur a { display: inline-block; font-size: 12.5px; font-weight: 700; color: #1E7D96; text-decoration: none; margin: 3px 4px 0; }
-.jspur a:hover { color: #6EC040; }
+.jspur a { display: inline-block; font-size: 12.5px; font-weight: 700; color: var(--river); text-decoration: none; margin: 3px 4px 0; }
+.jspur a:hover { color: var(--bright); }
 .letsgo {
   position: absolute; transform: translate(-50%, -50%) rotate(-7deg);
   font-family: "Bradley Hand", "Segoe Script", "Comic Sans MS", cursive;
-  font-size: 21px; color: #1E7D96; opacity: 0.9; white-space: nowrap;
+  font-size: 21px; color: var(--river); opacity: 0.9; white-space: nowrap;
 }
 .anypath {
   position: absolute; transform: translate(-50%, -50%) rotate(-5deg);
   font-family: "Bradley Hand", "Segoe Script", "Comic Sans MS", cursive;
-  font-size: 16px; color: #1E7D96; opacity: 0.85; width: 140px; text-align: center; line-height: 1.25;
+  font-size: 16px; color: var(--river); opacity: 0.85; width: 140px; text-align: center; line-height: 1.25;
 }
 .journey-cta { text-align: center; margin-top: 30px; }
 .journey-cta a {
-  display: inline-block; background: #1E7D96; color: #FFFDF9;
+  display: inline-block; background: var(--river); color: var(--paper);
   font-size: 15px; font-weight: 700; text-decoration: none;
-  padding: 13px 26px; border-radius: 999px;
+  padding: 13px 26px; border-radius: var(--r-pill);
   transition: background 0.18s ease, transform 0.18s ease;
 }
-.journey-cta a:hover { background: #0D4070; transform: translateY(-1px); }
+.journey-cta a:hover { background: var(--pacific); transform: translateY(-1px); }
 .journey-mobile { display: none; }
 .journey-sidetrips-mobile { display: none; }
 @media (max-width: 760px) {
@@ -325,11 +422,11 @@ body {
     position: absolute; left: 0; top: 0;
     display: inline-flex; align-items: center; justify-content: center;
     width: 28px; height: 28px; border-radius: 50%;
-    border: 2px solid #1E7D96; color: #1E7D96; background: #FFFDF9;
+    border: 2px solid var(--river); color: var(--river); background: var(--paper);
     font-size: 13px; font-weight: 700;
   }
   .journey-mobile a { text-decoration: none; }
-  .journey-mobile .lbl { display: block; font-size: 16px; font-weight: 700; color: #0D2E1E; }
+  .journey-mobile .lbl { display: block; font-size: 16px; font-weight: 700; color: var(--herodark); }
   .journey-mobile .sub { display: block; font-size: 13px; color: rgba(13,46,30,0.6); }
   .journey-mobile .fin .lbl { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 600; }
   /* the fork on mobile: three equal options hanging off the spine as a comb */
@@ -339,7 +436,7 @@ body {
   .fork-opts { display: flex; flex-direction: column; gap: 10px; }
   .fopt {
     position: relative; display: block; text-decoration: none;
-    background: #FFFDF9; border: 1.5px solid #C9E0EB; border-radius: 12px;
+    background: var(--paper); border: 1.5px solid #C9E0EB; border-radius: var(--r-m);
     padding: 10px 12px 9px 14px;
     box-shadow: 0 2px 8px rgba(13,64,112,0.06);
   }
@@ -347,46 +444,33 @@ body {
     content: ""; position: absolute; left: -31px; top: 50%; width: 29px;
     border-top: 3px dashed rgba(30,125,150,0.5);
   }
-  .fopt .lbl { display: block; font-size: 15px; font-weight: 700; color: #0D2E1E; }
+  .fopt .lbl { display: block; font-size: 15px; font-weight: 700; color: var(--herodark); }
   .fopt .sub { display: block; font-size: 12.5px; color: rgba(13,46,30,0.58); margin-top: 1px; }
   .journey-sidetrips-mobile { display: block; text-align: center; font-size: 13px; color: rgba(13,46,30,0.6); margin-top: 4px; }
-  .journey-sidetrips-mobile a { color: #1E7D96; font-weight: 700; text-decoration: none; }
+  .journey-sidetrips-mobile a { color: var(--river); font-weight: 700; text-decoration: none; }
 }
 
+/* BC-508: the signup block is the shared .wpanel now (chrome.py). The wrapper
+   keeps the section's vertical rhythm but no longer paints its own white band —
+   the panel is cream on the page ground, like the other three. */
 .newsletter-wrap {
-  background: #FFFFFF; padding: 80px 40px; margin: 16px 0;
+  padding: 64px 40px; margin: 16px 0;
 }
-.newsletter {
-  text-align: center; max-width: 600px; margin: 0 auto;
-}
-.newsletter h2 { font-family: "Archivo", sans-serif; font-size: 36px; font-weight: 400; color: #0D4070; margin-bottom: 10px; letter-spacing: -0.03em; }
-.newsletter-sub { font-size: 17px; color: rgba(13,64,112,0.5); margin-bottom: 28px; letter-spacing: -0.01em; }
-.newsletter-form { display: flex; flex-direction: column; gap: 10px; }
-.newsletter-form input, .newsletter-form textarea {
-  padding: 14px 18px; border: 1.5px solid #DDD; border-radius: 18px; font-size: 16px;
-  font-family: inherit; background: #FFFFFF; transition: border-color 0.2s;
-}
-.newsletter-form input:focus, .newsletter-form textarea:focus { border-color: #1E7D96; outline: none; }
-.newsletter-form textarea { min-height: 80px; resize: vertical; }
-.newsletter-form button {
-  padding: 14px; background: #84BD00; color: white; border: none; border-radius: 18px;
-  font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.newsletter-form button:hover { background: #76a800; transform: translateY(-1px); }
+.wpanel.newsletter { max-width: 640px; }
 
 .network {
   text-align: center; padding: 64px 40px; max-width: 900px; margin: 0 auto;
 }
-.network p { font-family: "Archivo", sans-serif; font-size: 36px; color: #141414; line-height: 1.5; letter-spacing: -0.04em; font-weight: 400; }
-.network strong { color: #1F514C; font-weight: 700; }
+.network p { font-family: "Archivo", sans-serif; font-size: 36px; color: var(--ink); line-height: 1.5; letter-spacing: -0.04em; font-weight: 400; }
+.network strong { color: var(--pine); font-weight: 700; }
 .network .types { font-family: "Archivo", sans-serif; font-size: 36px; color: rgba(13,64,112,0.5); margin-top: 24px; line-height: 1.5; letter-spacing: -0.04em; font-weight: 400; }
 
-.contact-section { background: #1E7D96; color: white; }
+.contact-section { background: var(--river); color: white; }
 .contact-inner {
   max-width: 1200px; margin: 0 auto; padding: 72px 40px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
 }
-.contact-left .label { font-size: 16px; color: #B8E0EC; margin-bottom: 12px; font-weight: 500; letter-spacing: -0.05em; }
+.contact-left .label { font-size: 16px; color: var(--sky); margin-bottom: 12px; font-weight: 500; letter-spacing: -0.05em; }
 .contact-left h2 {
   font-family: "Archivo", sans-serif;
   font-size: 45px; font-weight: 400; color: white; line-height: 1.35; margin-bottom: 28px;
@@ -395,7 +479,7 @@ body {
 .contact-form { display: flex; flex-direction: column; gap: 12px; }
 .contact-form .row { display: flex; gap: 12px; }
 .contact-form input, .contact-form textarea {
-  flex: 1; padding: 14px 18px; border: 1.5px solid rgba(255,255,255,0.2); border-radius: 18px;
+  flex: 1; padding: 14px 18px; border: 1.5px solid rgba(255,255,255,0.2); border-radius: var(--r-l);
   font-size: 16px; font-family: inherit; background: rgba(255,255,255,0.08); color: white;
   transition: border-color 0.2s, background 0.2s;
 }
@@ -404,13 +488,13 @@ body {
 .contact-form textarea { min-height: 100px; resize: vertical; }
 .contact-form button {
   align-self: flex-start; padding: 12px 24px; background: rgba(255,255,255,0.12);
-  color: white; border: 1.5px solid rgba(255,255,255,0.25); border-radius: 20px;
+  color: white; border: 1.5px solid rgba(255,255,255,0.25); border-radius: var(--r-l);
   font-size: 14px; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 8px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .contact-form button:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); transform: translateY(-1px); }
 .contact-img {
-  border-radius: 20px; overflow: hidden; height: 420px;
+  border-radius: var(--r-l); overflow: hidden; height: 420px;
   background: url('/img/home/bike-bench.jpg') center/cover;
 }
 .contact-img-caption {
@@ -445,7 +529,7 @@ body {
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 700px) {
-  .hero-card { grid-template-columns: 1fr; border-radius: 20px; min-height: auto; }
+  .hero-card { grid-template-columns: 1fr; border-radius: var(--r-l); min-height: auto; }
   .hero-img { height: 280px; min-height: 280px; margin: 0; border-radius: 0 0 20px 20px; }
   .hero-img-wrap { margin: 0; }
   .hero-text { padding: 48px 28px 40px; }
@@ -457,7 +541,6 @@ body {
   .questions p, .questions .answer { font-size: 28px; }
   .partners { padding: 40px 20px; }
   .newsletter-wrap { padding: 48px 20px; }
-  .newsletter h2 { font-size: 28px; }
   .network { padding: 40px 20px; }
   .network p, .network .types { font-size: 26px; }
   .hero-section { padding: 0 16px 32px; }
@@ -713,18 +796,7 @@ body {
 </div>
 
 <div class="newsletter-wrap">
-<div id="newsletter" class="newsletter reveal">
-  <h2 id="ride-along-with-us">Ride along with us!<a class="h-anchor" href="#ride-along-with-us" aria-label="Link to this section">#</a></h2>
-  <p class="newsletter-sub"><a href="/field-notes" style="color:#1E7D96;">Field Notes Dispatch</a>: hot news and deep dives on cycling infrastructure, policy, and BC's path to becoming a world-class cycle touring destination. Monthly.</p>
-  <form class="newsletter-form" id="newsletter-form" onsubmit="return submitNewsletter(event)">
-    <input type="hidden" name="access_key" value="08edf2bd-6961-4cb9-90fe-d16d45c82bb1" />
-    <input type="hidden" name="subject" value="Home Page Newsletter signup" />
-    <input type="text" name="name" id="nl-name" placeholder="Name" />
-    <input type="email" name="email" id="nl-email" placeholder="name@example.com" required />
-    <textarea name="interest" id="nl-interest" placeholder="If you'd like to share: what are you riding, building, or curious about?"></textarea>
-    <button type="submit">Sign up</button>
-  </form>
-</div>
+<div class="wpanel center lg narrow newsletter reveal" id="newsletter"><h2 id="ride-along-with-us" class="wp-title">Ride along with us!<a class="h-anchor" href="#ride-along-with-us" aria-label="Link to this section">#</a></h2><p class="wp-body"><a href="/field-notes">Field Notes Dispatch</a>: hot news and deep dives on cycling infrastructure, policy, and BC's path to becoming a world-class cycle touring destination. Monthly.</p><div class="wp-act"><form id="newsletter-form" onsubmit="return submitNewsletter(event)"><input type="hidden" name="access_key" value="08edf2bd-6961-4cb9-90fe-d16d45c82bb1" /><input type="hidden" name="subject" value="Home Page Newsletter signup" /><input type="text" name="name" id="nl-name" placeholder="Name" /><input type="email" name="email" id="nl-email" placeholder="name@example.com" required /><textarea name="interest" id="nl-interest" placeholder="If you&#39;d like to share: what are you riding, building, or curious about?"></textarea><button type="submit">Sign up</button></form></div></div>
 </div>
 
 

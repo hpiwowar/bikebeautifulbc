@@ -39,16 +39,47 @@ html { scrollbar-gutter: stable; }
    --w-read the content column and prose cap, used by nearly every page
    --w-wide the exception: sidebar filters, two-column stop pages */
 :root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+/* Design tokens (BC-506): palette, warm-stone neutral ramp, radius scale.
+   Every page inherits these; page CSS uses var(...), not raw hex literals.
+   The /stops/ sage family is exempt from tokenization this pass. */
+:root {
+  /* brand */
+  --pacific: #0D4070;   /* navy */
+  --river:   #1E7D96;   /* teal: links + ALL primary buttons */
+  --forest:  #2E8A36;
+  --bright:  #6EC040;   /* accent green — accents only, never buttons */
+  --sky:     #B8E0EC;
+  --pine:    #1F514C;   /* heading green */
+  --herodark:#0D2E1E;
+  /* grounds */
+  --paper: #FFFDF9;     /* page ground */
+  --cream: #FFF6E5;     /* warm panels */
+  /* ink + warm stone neutrals (replaces the cool #E5E7EB/#9CA3AF family) */
+  --ink: #1A1A1A;
+  --stone-600: #57534E; --muted: #57534E;
+  --stone-500: #78716C;
+  --stone-400: #A8A29E;
+  --stone-200: #E7E5E4;
+  --sand: #E0D9CC;      /* warm hairline on cream */
+  /* radius scale: s chips/inputs, m cards, l heroes/panels, pill */
+  --r-s: 8px; --r-m: 12px; --r-l: 20px; --r-pill: 999px;
+}
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 /* Base link colour, both states (BC-504) — visited links were browser-purple
-   wherever no rule targeted them. First in the cascade, so any later page rule
-   that styles a link overrides both states. */
-a { color: #1E7D96; }
-a:visited { color: #1E7D96; }
+   wherever no rule targeted them.
+   :where() zeroes the specificity so ANY other rule wins, which is what the
+   original version meant but didn't achieve: bare `a:visited` scores 0-1-1 and
+   quietly outranked every single-class component rule (0-1-0). That repainted
+   the homepage's outlined "Plan your trip" CTA teal-on-navy once you'd visited
+   /plan/ — invisible until hover, when .hero-btn-outline:hover (0-2-0) finally
+   won. getComputedStyle reports the unvisited colour for privacy, so this is
+   only ever visible to the eye, in a profile that has actually been there. */
+:where(a) { color: var(--river); }
+:where(a:visited) { color: var(--river); }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
 /* position+z-index so open dropdown menus paint above page content that
@@ -59,8 +90,8 @@ a:visited { color: #1E7D96; }
 .g-header-left img { height: 50px; width: auto; max-width: 100%; }
 .g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
 .g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
-.g-header-nav a:hover { color: #1E7D96; }
-.g-header-nav a.active { color: #1E7D96; font-weight: 600; }
+.g-header-nav a:hover { color: var(--river); }
+.g-header-nav a.active { color: var(--river); font-weight: 600; }
 .g-nav-search { display: flex; align-items: center; gap: 6px; }
 .g-nav-search svg { width: 15px; height: 15px; display: block; }
 .g-nav-search .g-nav-search-label { display: inline; }
@@ -71,13 +102,13 @@ a:visited { color: #1E7D96; }
   background: none; border: none; cursor: pointer; padding: 0;
   display: flex; align-items: center; gap: 5px; transition: color 0.2s;
 }
-.g-navtop:hover, .g-navgroup.open .g-navtop { color: #1E7D96; }
-.g-navgroup.activeslot .g-navtop { color: #1E7D96; font-weight: 600; }
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: var(--river); }
+.g-navgroup.activeslot .g-navtop { color: var(--river); font-weight: 600; }
 .g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
 .g-navgroup.open .g-caret { transform: rotate(180deg); }
 .g-navmenu {
   position: absolute; top: calc(100% + 12px); left: -14px; display: none;
-  background: #FFFDF9; border: 1px solid #ECE7DD; border-radius: 14px;
+  background: var(--paper); border: 1px solid #ECE7DD; border-radius: var(--r-m);
   box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
 }
 .g-navgroup.open > .g-navmenu { display: block; }
@@ -85,11 +116,11 @@ a:visited { color: #1E7D96; }
 .g-navgroup[data-slot="field-notes"] .g-navmenu,
 .g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
 .g-header-nav .g-navmenu a {
-  display: block; padding: 9px 12px; border-radius: 9px;
+  display: block; padding: 9px 12px; border-radius: var(--r-s);
   font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
   white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
 }
-.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: #1E7D96; }
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: var(--river); }
 .g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
 .g-header-nav .g-navmenu .gnm-d {
   display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
@@ -106,22 +137,23 @@ a:visited { color: #1E7D96; }
 /* menu panels are solid cream even under a transparent header: beat the
    white-link transparent rules at their own specificity */
 .g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
-.g-header.transparent .g-header-nav .g-navmenu a:hover { color: #1E7D96; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: var(--river); }
 .g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
-.g-header.transparent.solid .g-navtop:hover { color: #1E7D96; }
-.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: #1E7D96; text-decoration: none; }
-.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-header.transparent.solid .g-navtop:hover { color: var(--river); }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: var(--river); text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--pine); padding: 4px 8px; line-height: 1; margin-left: auto; }
 .g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
-.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin-bottom: 14px; letter-spacing: -0.03em; }
-.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
-.g-main p { color: #4b5563; margin-bottom: 14px; max-width: var(--w-read, 720px); }
-.g-main a { color: #1E7D96; }
-.g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: var(--pine); margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h1 { font-weight: 700; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: var(--pine); margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: var(--stone-600); margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: var(--river); }
+.g-main ul { margin-left: 20px; color: var(--stone-600); margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
-.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
-.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb { font-size: 13px; color: var(--stone-400); margin-bottom: 18px; }
+.g-crumb a { color: var(--river); text-decoration: none; }
 .g-crumb a:hover { text-decoration: underline; }
-.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-cur { color: var(--stone-400); }
 .g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
 .g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
@@ -130,11 +162,11 @@ a:visited { color: #1E7D96; }
 .g-footer-col { }
 .g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
 .g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
-.g-footer-col a:hover { color: #0D4070; }
-.section-divider { border: none; border-top: 1px solid #EEE; margin: 28px 0; }
+.g-footer-col a:hover { color: var(--pacific); }
+.section-divider { border: none; border-top: 1px solid var(--stone-200); margin: 28px 0; }
 .bio { margin-bottom: 20px; }
-.bio strong { color: #1F514C; font-size: 15px; }
-.bio > em { color: #636363; font-size: 13px; }
+.bio strong { color: var(--pine); font-size: 15px; }
+.bio > em { color: var(--stone-600); font-size: 13px; }
 .bio p { font-size: 14px; margin-top: 6px; }
 @media (max-width: 700px) {
   .g-banner { padding: 6px 14px; font-size: 11px; }
@@ -142,17 +174,17 @@ a:visited { color: #1E7D96; }
   .g-header-inner { gap: 0; }
   .g-main { padding: 24px 14px 16px; }
   .g-hamburger { display: block; }
-  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #FFFDF9; border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
   .g-header-nav.open { display: flex; }
-  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid var(--stone-200); font-size: 15px; color: var(--pine); }
   .g-header-nav a:last-child { border-bottom: none; }
   .g-nav-search svg { display: none; }
   .g-nav-search .g-nav-search-label { display: inline; }
   /* dropdown groups become accordion sections inside the hamburger panel */
-  .g-navgroup { display: block; position: static; border-bottom: 1px solid #EEE; }
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid var(--stone-200); }
   .g-navtop {
     width: 100%; justify-content: space-between; padding: 12px 0;
-    font-size: 15px; color: #1F514C; text-shadow: none;
+    font-size: 15px; color: var(--pine); text-shadow: none;
   }
   .g-navmenu {
     position: static; box-shadow: none; border: none; background: none;
@@ -167,14 +199,79 @@ a:visited { color: #1E7D96; }
    section. Grey at rest so it reads as a tool rather than content, teal at the
    moment you are about to click it. Touch devices have no hover, so it sits
    faintly visible there instead of being unreachable. */
-.h-anchor { margin-left: .35em; color: #6E6E6E; opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+.h-anchor { margin-left: .35em; color: var(--stone-500); opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
 h2:hover > .h-anchor { opacity: .55; }
-.h-anchor:hover, .h-anchor:focus { color: #1E7D96; opacity: 1; }
+.h-anchor:hover, .h-anchor:focus { color: var(--river); opacity: 1; }
 @media (hover: none) {
   .h-anchor { opacity: .35; }
 }
 
-.ret-link { font-size: 14px; color: #1E7D96; text-decoration: none; display: inline-block; margin-bottom: 14px; }
+/* ---- Eyebrow labels (BC-509). One treatment site-wide: 11px, caps, teal.
+   Teal because it was already the most-used eyebrow colour, which leaves the
+   accent green free to keep meaning "accent" (journey-map steps, accredited
+   marks) instead of competing as a label colour. The historical class names
+   are aliased here rather than rewritten at every call site; genuinely
+   contextual overrides still win on specificity (e.g. the pale-blue on-photo
+   eyebrow on the To and Fro hero). No font-family: eyebrows inherit Inter,
+   which is what all but one of them already did. ---- */
+.eyebrow, .gi-eyebrow, .dir-eyebrow, .ls-notable-eyebrow,
+.listing-section-title, .ls-pills-label, .ls-card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--river); margin-bottom: 6px;
+}
+
+/* ---- Chip geometry (BC-509). Two geometries, not ten. Label chips are read;
+   control chips are tapped, so they get a bigger target. Colour and meaning
+   stay per-family — this only unifies size, padding, and radius. ---- */
+.chip, .lachip, .lichip, .lfacet, .pubchip, .guide-chip-am,
+.listing-pill-yes, .listing-pill-no {
+  font-size: 12.5px; padding: 4px 12px; border-radius: var(--r-pill);
+}
+.dir-chip, .guide-chip, .explore-chip {
+  font-size: 13.5px; padding: 6px 13px; border-radius: var(--r-pill);
+}
+
+/* ---- Warm CTA panel (BC-508). One "warm panel + one action" component that
+   replaces four hand-rolled versions: route detail's "Ready to ride it?", the
+   routes-hub publisher card, Design Your Own Route's signup, and the homepage
+   newsletter block. The action slot is deliberately open — it takes a button
+   link OR a whole form — so the call sites keep their own behaviour and share
+   only the chrome. Emitted by warm_panel() below; the title/body/act selectors
+   are class-on-class so they win against .g-main h2 / .g-main p. ---- */
+.wpanel { background: var(--cream); border: 1px solid var(--sand); border-radius: var(--r-l);
+  padding: 26px 30px; margin: 34px auto 8px; max-width: 900px; }
+.wpanel.narrow { max-width: 700px; }
+.wpanel.center { text-align: center; }
+.wpanel .wp-title { font-family: "Archivo", "Inter", sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--pine); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 6px; }
+.wpanel.lg .wp-title { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+.wpanel .wp-body { color: var(--stone-600); font-size: 15px; line-height: 1.55; margin: 0 0 16px; max-width: 62ch; }
+.wpanel.center .wp-body { margin-left: auto; margin-right: auto; }
+.wpanel .wp-body a { color: var(--river); }
+.wpanel .wp-act { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.wpanel.center .wp-act { align-items: center; }
+.wpanel .wp-act form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.wpanel.center .wp-act form { margin: 0 auto; }
+/* one button and one field treatment inside the panel, whatever the action is */
+.wpanel .wp-act .wp-btn, .wpanel .wp-act button { display: inline-block; background: var(--river);
+  color: #fff; border: none; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: var(--r-m); cursor: pointer; text-align: center;
+  transition: background .2s ease; }
+.wpanel .wp-act .wp-btn:hover, .wpanel .wp-act button:hover { background: var(--pacific); }
+.wpanel .wp-act input:not([type="hidden"]), .wpanel .wp-act textarea { width: 100%;
+  padding: 13px 16px; border: 1.5px solid var(--sand); border-radius: var(--r-m);
+  font-size: 16px; font-family: inherit; background: #fff; transition: border-color .2s; }
+.wpanel .wp-act input:focus, .wpanel .wp-act textarea:focus { border-color: var(--river); outline: none; }
+.wpanel .wp-act textarea { min-height: 76px; resize: vertical; }
+/* secondary action under the primary one (route detail's extra links) */
+.wpanel .wp-alt { font-size: 13.5px; color: var(--river); font-weight: 600; text-decoration: none; }
+.wpanel .wp-alt:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .wpanel { padding: 22px 18px; border-radius: var(--r-m); }
+  .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
+}
+
+.ret-link { font-size: 14px; color: var(--river); text-decoration: none; display: inline-block; margin-bottom: 14px; }
 .ret-link:hover { text-decoration: underline; }
 .listing-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 28px 24px 64px; }
 .listing-main.ls-two-col { max-width: var(--w-wide, 1160px); }
@@ -186,143 +283,144 @@ h2:hover > .h-anchor { opacity: .55; }
 .ls-col-right .ls-card:last-child { border-radius: 0 0 12px 12px; border-top: none; }
 .ls-col-right .ls-bpnote { margin: 14px 0 0; }
 @media (max-width: 860px) { .ls-layout { grid-template-columns: 1fr; } .ls-col-right { position: static; } }
-.listing-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: -0.03em; color: #1F514C; margin-bottom: 8px; }
-.listing-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.badge-accredited { display: inline-flex; align-items: center; gap: 4px; background: #1E7D96; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.listing-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.03em; color: var(--pine); margin-bottom: 8px; }
+.listing-meta { font-size: 13px; color: var(--stone-400); margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.badge-accredited { display: inline-flex; align-items: center; gap: 4px; background: var(--river); color: #fff; border-radius: var(--r-pill); padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
 .badge-accredited .seal { color: #F0C948; }
-.badge-welcoming { display: inline-flex; align-items: center; background: #FEF3C7; color: #92400E; border: 1px solid #F5D98B; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
-.badge-info { display: inline-flex; align-items: center; background: #F3F4F6; color: #6B7280; border: 1px solid #E5E7EB; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
-.badge-unwelcome { display: inline-flex; align-items: center; background: #DC2626; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
-.ls-meta-sep { width: 1px; height: 14px; background: #E5E7EB; }
-.ls-meta-type { font-weight: 600; color: #6B7280; }
-.ls-meta-city { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.badge-welcoming { display: inline-flex; align-items: center; background: #FEF3C7; color: #92400E; border: 1px solid #F5D98B; border-radius: var(--r-pill); padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-info { display: inline-flex; align-items: center; background: #F3F4F6; color: var(--stone-500); border: 1px solid var(--stone-200); border-radius: var(--r-pill); padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.badge-unwelcome { display: inline-flex; align-items: center; background: #DC2626; color: #fff; border-radius: var(--r-pill); padding: 3px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.2px; }
+.ls-meta-sep { width: 1px; height: 14px; background: var(--stone-200); }
+.ls-meta-type { font-weight: 600; color: var(--stone-500); }
+.ls-meta-city { color: var(--river); text-decoration: none; font-weight: 600; }
 .ls-meta-city:hover { text-decoration: underline; }
-.ls-meta-price { display: inline-flex; align-items: center; background: #FFF6E5; border: 1px solid #F0E6C5; border-radius: 999px; padding: 3px 11px; font-weight: 700; color: #2D2D2D; letter-spacing: 0.4px; font-size: 12.5px; }
-.listing-desc { font-size: 15px; line-height: 1.65; color: #2D2D2D; margin-bottom: 24px; }
+.ls-meta-price { display: inline-flex; align-items: center; background: var(--cream); border: 1px solid #F0E6C5; border-radius: var(--r-pill); padding: 3px 11px; font-weight: 700; color: var(--ink); letter-spacing: 0.4px; font-size: 12.5px; }
+.listing-desc { font-size: 15px; line-height: 1.65; color: var(--ink); margin-bottom: 24px; }
 .listing-web-top { font-size: 14px; margin: -12px 0 24px; display: flex; gap: 8px; align-items: baseline; }
 .listing-web-top .ico { flex-shrink: 0; }
-.listing-web-top a { color: #1E7D96; text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
+.listing-web-top a { color: var(--river); text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
 .listing-web-top a:hover { text-decoration: underline; }
 .listing-bike-info { margin-top: -16px; }
 .listing-bike-info a { font-weight: 600; }
 .listing-pull { border-left: 4px solid #C9A83E; padding: 6px 0 6px 20px; margin: 26px 0 30px; }
-.listing-pull .q { font-family: "Archivo", sans-serif; font-size: 21px; font-weight: 400; letter-spacing: -0.01em; color: #1F514C; line-height: 1.45; }
-.listing-pull .who { font-size: 13px; color: #9CA3AF; margin-top: 6px; }
-.listing-pull .who a { color: #9CA3AF; text-decoration: none; }
-.listing-pull .who a:hover { color: #1E7D96; text-decoration: underline; }
+.listing-pull .q { font-family: "Archivo", sans-serif; font-size: 21px; font-weight: 400; letter-spacing: -0.01em; color: var(--pine); line-height: 1.45; }
+.listing-pull .who { font-size: 13px; color: var(--stone-400); margin-top: 6px; }
+.listing-pull .who a { color: var(--stone-400); text-decoration: none; }
+.listing-pull .who a:hover { color: var(--river); text-decoration: underline; }
 .listing-section { margin-bottom: 28px; }
-.listing-section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 10px; }
-.listing-detail-row { font-size: 14px; color: #2D2D2D; margin-bottom: 6px; }
-.listing-detail-row a { color: #1E7D96; }
+/* BC-509: eyebrow typography is shared now (chrome.py); only spacing is local. */
+.listing-section-title { margin-bottom: 10px; }
+.listing-detail-row { font-size: 14px; color: var(--ink); margin-bottom: 6px; }
+.listing-detail-row a { color: var(--river); }
 .req-row { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; margin-bottom: 6px; }
 .req-sym { font-weight: 700; width: 16px; flex-shrink: 0; }
-.req-yes .req-sym { color: #2E8A36; }
+.req-yes .req-sym { color: var(--forest); }
 .req-no .req-sym { color: #DC2626; }
-.req-null .req-sym { color: #9CA3AF; }
+.req-null .req-sym { color: var(--stone-400); }
 .listing-pills { display: flex; flex-wrap: wrap; gap: 6px; }
-.listing-pill-yes { background: #ECFDF5; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #065F46; }
-.listing-pill-no { background: #F3F4F6; border-radius: 12px; padding: 4px 10px; font-size: 12px; color: #9CA3AF; }
-.listing-amenity-note { font-size: 12px; color: #6B7280; margin-top: 8px; line-height: 1.6; }
+/* BC-509: size/padding/radius shared (chrome.py label chips); colour stays here. */
+.listing-pill-yes { background: #ECFDF5; color: #065F46; }
+.listing-pill-no { background: #F3F4F6; color: var(--stone-400); }
+.listing-amenity-note { font-size: 12px; color: var(--stone-500); margin-top: 8px; line-height: 1.6; }
 .listing-indig-roles { list-style: none; padding: 0; margin: 0; }
-.listing-indig-roles li { font-size: 14.5px; color: #1F514C; font-weight: 600; padding: 2px 0; }
+.listing-indig-roles li { font-size: 14.5px; color: var(--pine); font-weight: 600; padding: 2px 0; }
 .listing-indig-attr { margin: 10px 0 0; font-size: 13.5px; }
-.listing-indig-attr a { color: #1E7D96; text-decoration: none; }
-.listing-indig-terr { margin: 10px 0 0; font-size: 14px; color: #2D2D2D; line-height: 1.6; }
-.listing-indig-terr a { color: #1E7D96; text-decoration: none; }
-.listing-indig-note { margin: 6px 0 0; font-size: 12.5px; color: #6B7280; line-height: 1.5; }
-.listing-indig-note a { color: #6B7280; }
-.listing-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; }
-.listing-verify a { color: #1E7D96; }
-.listing-section-sub { font-size: 13px; color: #6B7280; margin: -4px 0 12px; line-height: 1.5; }
-.listing-owner-cta { margin-top: 14px; background: #F5FAFB; border: 1px solid #BFDDE7; border-radius: 8px; padding: 12px 16px; font-size: 13.5px; color: #14586B; line-height: 1.6; }
+.listing-indig-attr a { color: var(--river); text-decoration: none; }
+.listing-indig-terr { margin: 10px 0 0; font-size: 14px; color: var(--ink); line-height: 1.6; }
+.listing-indig-terr a { color: var(--river); text-decoration: none; }
+.listing-indig-note { margin: 6px 0 0; font-size: 12.5px; color: var(--stone-500); line-height: 1.5; }
+.listing-indig-note a { color: var(--stone-500); }
+.listing-verify { font-size: 13px; color: #92400E; background: #FFFBEB; border: 1px solid #FCD34D; border-radius: var(--r-s); padding: 10px 14px; margin-bottom: 16px; }
+.listing-verify a { color: var(--river); }
+.listing-section-sub { font-size: 13px; color: var(--stone-500); margin: -4px 0 12px; line-height: 1.5; }
+.listing-owner-cta { margin-top: 14px; background: #F5FAFB; border: 1px solid #BFDDE7; border-radius: var(--r-s); padding: 12px 16px; font-size: 13.5px; color: #14586B; line-height: 1.6; }
 .listing-owner-cta strong { color: #14586B; }
-.listing-owner-cta a { color: #1E7D96; font-weight: 600; }
-.ls-notable-hero { border-top: 3px solid #1F514C; border-bottom: 3px solid #1F514C; padding: 24px 2px 26px; margin: 18px 0 30px; }
-.ls-notable-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1E7D96; margin-bottom: 8px; }
-.ls-notable-eyebrow .star { color: #1F514C; }
-.ls-notable-line { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; color: #1F514C; line-height: 1.4; }
+.listing-owner-cta a { color: var(--river); font-weight: 600; }
+.ls-notable-hero { border-top: 3px solid var(--pine); border-bottom: 3px solid var(--pine); padding: 24px 2px 26px; margin: 18px 0 30px; }
+.ls-notable-eyebrow .star { color: var(--pine); }
+.ls-notable-line { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 400; letter-spacing: -0.02em; color: var(--pine); line-height: 1.4; }
 @media (max-width: 700px) { .ls-notable-line { font-size: 20px; } }
 .ls-ribbon { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
-.ls-rib { display: inline-flex; align-items: center; gap: 7px; background: #EDF6F8; border: 1px solid #BEDDE6; border-radius: 10px; padding: 8px 13px; font-size: 13px; font-weight: 600; color: #1E7D96; }
-.ls-sec-title { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; margin-bottom: 4px; }
+.ls-rib { display: inline-flex; align-items: center; gap: 7px; background: #EDF6F8; border: 1px solid #BEDDE6; border-radius: var(--r-m); padding: 8px 13px; font-size: 13px; font-weight: 600; color: var(--river); }
+.ls-sec-title { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: var(--pine); letter-spacing: -0.02em; margin-bottom: 4px; }
 .ls-vrow { padding: 10px 0; border-bottom: 1px dashed #EDE9DA; font-size: 14px; }
 .ls-vrow:last-of-type { border-bottom: none; }
 .ls-vrow-main { display: flex; gap: 12px; align-items: baseline; }
-.ls-vrow .tick { color: #2E8A36; font-weight: 700; flex-shrink: 0; width: 16px; }
-.ls-vrow .k { font-weight: 700; color: #1F514C; }
-.ls-vrow .d { display: block; color: #57534E; line-height: 1.55; margin: 4px 0 0 28px; font-size: 13.5px; }
-.ls-pills-label { font-size: 12px; color: #9CA3AF; margin-top: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; }
-.ls-bpnote { display: flex; gap: 12px; background: #EAF3EC; border-radius: 10px; padding: 13px 16px; margin-top: 14px; font-size: 14px; color: #1C5240; line-height: 1.55; }
+.ls-vrow .tick { color: var(--forest); font-weight: 700; flex-shrink: 0; width: 16px; }
+.ls-vrow .k { font-weight: 700; color: var(--pine); }
+.ls-vrow .d { display: block; color: var(--stone-600); line-height: 1.55; margin: 4px 0 0 28px; font-size: 13.5px; }
+.ls-pills-label { margin-top: 14px; margin-bottom: 8px; }
+.ls-bpnote { display: flex; gap: 12px; background: #EAF3EC; border-radius: var(--r-m); padding: 13px 16px; margin-top: 14px; font-size: 14px; color: #1C5240; line-height: 1.55; }
 .ls-bpnote .ico { font-size: 18px; line-height: 1.3; flex-shrink: 0; }
 .ls-bpnote details { margin-top: 6px; }
 .ls-bpnote summary { cursor: pointer; color: #1C5240; font-weight: 600; }
 .ls-bpnote ul { list-style: none; margin: 8px 0 0; padding: 0; }
 .ls-bpnote li { font-size: 13px; padding: 2px 0; color: #1C5240; }
 .listing-routes { display: flex; flex-wrap: wrap; gap: 8px; }
-.listing-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
+.listing-route-tag { display: inline-flex; align-items: center; gap: 4px; background: #EFF6FF; border-radius: var(--r-l); padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; }
 .listing-route-tag:hover { background: #DBEAFE; }
 .listing-trail-list { list-style: none; padding: 0; margin: 0; }
 .listing-trail-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
 .listing-trail-name { color: #047857; text-decoration: none; }
 a.listing-trail-name:hover { text-decoration: underline; }
 .listing-trail-item.dest .listing-trail-name { font-weight: 700; }
-.listing-trail-dist { color: #9CA3AF; font-size: 13px; }
+.listing-trail-dist { color: var(--stone-400); font-size: 13px; }
 .listing-near-group { margin-bottom: 14px; }
-.listing-near-grouptitle { font-size: 11px; font-weight: 700; color: #78716C; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.listing-near-grouptitle { font-size: 11px; font-weight: 700; color: var(--stone-500); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
 .listing-near-list { list-style: none; padding: 0; margin: 0; }
 .listing-near-item { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; padding: 3px 0; font-size: 14px; line-height: 1.5; }
-.listing-near-name { color: #1E7D96; text-decoration: none; }
+.listing-near-name { color: var(--river); text-decoration: none; }
 .listing-near-name:hover { text-decoration: underline; }
-.listing-near-subcat { color: #9CA3AF; font-size: 13px; }
-.listing-near-badge { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 20px; }
-.listing-near-dist { color: #9CA3AF; font-size: 13px; }
+.listing-near-subcat { color: var(--stone-400); font-size: 13px; }
+.listing-near-badge { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: var(--r-l); }
+.listing-near-dist { color: var(--stone-400); font-size: 13px; }
 .listing-bp-list { list-style: none; padding: 0; margin: 0; }
 .listing-bp-item { padding: 3px 0; font-size: 14px; line-height: 1.5; }
-.listing-bp-dist { color: #9CA3AF; font-size: 13px; }
+.listing-bp-dist { color: var(--stone-400); font-size: 13px; }
 /* Map + "Find them" band (Mockup C reflow Step 7) */
 .ls-band { display: grid; grid-template-columns: 1fr 300px; gap: 14px; margin: 24px 0 30px; align-items: start; }
 .ls-band.ls-band-solo { grid-template-columns: 1fr; }
-.ls-card { background: #fff; border: 1px solid #E7E2D0; border-radius: 12px; overflow: hidden; }
+.ls-card { background: #fff; border: 1px solid #E7E2D0; border-radius: var(--r-m); overflow: hidden; }
 /* Map keeps the shared .wwc-map fixed height (no flex/resize hacks — same as every
    other embedded map); only strip its own border/radius since the card supplies them. */
 .ls-card-map .wwc-map { max-width: none; border: 0; border-radius: 0; }
 .ls-card-map .wwc-map-ctrls { margin: 0; padding: 10px 14px; }
 .ls-card-pad { padding: 14px 16px; }
-.ls-card-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1E7D96; margin-bottom: 9px; }
-.ls-contact-row { font-size: 13.5px; color: #2D2D2D; margin-bottom: 7px; display: flex; gap: 8px; }
+.ls-card-title { margin-bottom: 9px; }
+.ls-contact-row { font-size: 13.5px; color: var(--ink); margin-bottom: 7px; display: flex; gap: 8px; }
 .ls-contact-row .ico { width: 18px; flex-shrink: 0; text-align: center; }
 .ls-contact-row span { min-width: 0; overflow-wrap: anywhere; }
-.ls-contact-row a { color: #1E7D96; text-decoration: none; min-width: 0; overflow-wrap: anywhere; }
+.ls-contact-row a { color: var(--river); text-decoration: none; min-width: 0; overflow-wrap: anywhere; }
 .ls-contact-row a:hover { text-decoration: underline; }
-.ls-route-tag { display: inline-flex; align-items: center; gap: 6px; background: #EFF6FF; border-radius: 20px; padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; font-weight: 600; margin: 0 4px 4px 0; }
+.ls-route-tag { display: inline-flex; align-items: center; gap: 6px; background: #EFF6FF; border-radius: var(--r-l); padding: 4px 12px; font-size: 13px; color: #1D4ED8; text-decoration: none; font-weight: 600; margin: 0 4px 4px 0; }
 .ls-route-tag:hover { background: #DBEAFE; }
 .ls-trail-line { font-size: 13px; padding: 2px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-.ls-trail-line a { color: #141414; text-decoration: none; font-weight: 400; }
+.ls-trail-line a { color: var(--ink); text-decoration: none; font-weight: 400; }
 .ls-trail-line a:hover { text-decoration: underline; }
-.ls-trail-line .dist { color: #9CA3AF; font-size: 12px; flex-shrink: 0; }
+.ls-trail-line .dist { color: var(--stone-400); font-size: 12px; flex-shrink: 0; }
 /* "Around you, by need" grid (Mockup C reflow Step 6) */
 .ls-needs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
-.ls-need { background: #FCFBF6; border: 1px solid #E7E2D0; border-radius: 12px; padding: 14px 16px; }
-.ls-need-title { font-size: 13px; font-weight: 700; color: #1F514C; margin-bottom: 9px; }
+.ls-need { background: #FCFBF6; border: 1px solid #E7E2D0; border-radius: var(--r-m); padding: 14px 16px; }
+.ls-need-title { font-size: 13px; font-weight: 700; color: var(--pine); margin-bottom: 9px; }
 .ls-need ul { list-style: none; padding: 0; margin: 0; }
 .ls-need li { display: flex; align-items: baseline; gap: 8px; font-size: 13.5px; padding: 3px 0; }
-.ls-need .nm { color: #1E7D96; text-decoration: none; font-weight: 600; }
+.ls-need .nm { color: var(--river); text-decoration: none; font-weight: 600; }
 .ls-need .nm:hover { text-decoration: underline; }
-.ls-need .dist { color: #9CA3AF; font-size: 12px; margin-left: auto; white-space: nowrap; }
-.ls-need .wbadge { font-size: 10px; font-weight: 700; background: #EAF3EC; color: #1C5240; border-radius: 20px; padding: 1px 6px; }
+.ls-need .dist { color: var(--stone-400); font-size: 12px; margin-left: auto; white-space: nowrap; }
+.ls-need .wbadge { font-size: 10px; font-weight: 700; background: #EAF3EC; color: #1C5240; border-radius: var(--r-l); padding: 1px 6px; }
 .ls-need .wbadge.no { background: #FDECEC; color: #B91C1C; }
 @media (max-width: 700px) { .ls-band { grid-template-columns: 1fr; } .ls-needs { grid-template-columns: 1fr; } }
-.listing-sources { font-size: 12px; color: #9CA3AF; font-style: italic; margin-top: 6px; }
-.listing-attribution { font-size: 12px; color: #9CA3AF; margin-top: 32px; border-top: 1px solid #E5E7EB; padding-top: 12px; }
-.listing-attribution a { color: #9CA3AF; }
-.listing-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #E5E7EB; font-size: 13px; }
-.listing-suggest a { color: #1E7D96; }
+.listing-sources { font-size: 12px; color: var(--stone-400); font-style: italic; margin-top: 6px; }
+.listing-attribution { font-size: 12px; color: var(--stone-400); margin-top: 32px; border-top: 1px solid var(--stone-200); padding-top: 12px; }
+.listing-attribution a { color: var(--stone-400); }
+.listing-suggest { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--stone-200); font-size: 13px; }
+.listing-suggest a { color: var(--river); }
 .listing-json { text-align: right; margin-top: 14px; }
 .listing-json a { font-size: 11px; color: #C9CDD3; text-decoration: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .03em; }
-.listing-json a:hover { color: #9CA3AF; text-decoration: underline; }
-.listing-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: 8px; }
-.badge-notable { display: inline-flex; align-items: center; background: #1F514C; color: #fff; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; letter-spacing: 0.2px; }
-.listing-notable { font-size: 14.5px; color: #1F514C; font-style: italic; margin: -8px 0 18px; line-height: 1.5; }
+.listing-json a:hover { color: var(--stone-400); text-decoration: underline; }
+.listing-unwelcome-note { text-align: center; margin-top: 16px; padding: 16px 20px; background: #FEF2F2; border-radius: var(--r-s); }
+.badge-notable { display: inline-flex; align-items: center; background: var(--pine); color: #fff; font-size: 12px; font-weight: 600; border-radius: var(--r-pill); padding: 3px 10px; letter-spacing: 0.2px; }
+.listing-notable { font-size: 14.5px; color: var(--pine); font-style: italic; margin: -8px 0 18px; line-height: 1.5; }
 
 </style>
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
@@ -396,13 +494,13 @@ a.listing-trail-name:hover { text-decoration: underline; }
 
 
 
-<div class="listing-section"><div class="ls-sec-title">What's here for you</div><div class="listing-section-sub">Gathered from publicly available data and OpenStreetMap. Not confirmed by the owner yet.</div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Bike parking</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Water bottle refill</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Washrooms</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Public rack nearby</span></div></div><div class="ls-pills-label">Not confirmed yet</div><div class="listing-pills"><span class="listing-pill-no">Showers (drop-in or fee)</span><span class="listing-pill-no">Café or food on site</span><span class="listing-pill-no">Water without admission</span><span class="listing-pill-no">Luggage / bag storage</span><span class="listing-pill-no">Vending machines</span><span class="listing-pill-no">Bike rack visible from inside</span><span class="listing-pill-no">Covered bike parking</span><span class="listing-pill-no">Bike allowed inside/on patio</span><span class="listing-pill-no">Device charging</span><span class="listing-pill-no">Wi-Fi</span><span class="listing-pill-no">E-bike charging</span><span class="listing-pill-no">Pump</span><span class="listing-pill-no">Discount for arriving by bike</span></div><div class="listing-owner-cta">Spotted an error? <a href="/suggest#edit=Queen&#x27;s Park Arena">Suggest an edit</a>.</div></div>
+<div class="listing-section"><div class="ls-sec-title">What's here for you</div><div class="listing-section-sub">Gathered from publicly available data and OpenStreetMap. Not confirmed by the owner yet.</div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Bike parking</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Water bottle refill</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Washrooms</span></div></div><div class="ls-vrow"><div class="ls-vrow-main"><span class="tick">&#10003;</span><span class="k">Public rack nearby</span></div></div><div class="ls-pills-label">Not confirmed yet</div><div class="listing-pills"><span class="listing-pill-no" title="Shower facilities open to visitors.">Showers (drop-in or fee)</span><span class="listing-pill-no" title="A café, canteen, or food service on the premises.">Café or food on site</span><span class="listing-pill-no" title="Water tap accessible without paying admission.">Water without admission</span><span class="listing-pill-no" title="Will hold bags or panniers while you visit.">Luggage / bag storage</span><span class="listing-pill-no" title="On-site vending.">Vending machines</span><span class="listing-pill-no" title="You can see the rack from inside the building.">Bike rack visible from inside</span><span class="listing-pill-no" title="Sheltered bike parking.">Covered bike parking</span><span class="listing-pill-no" title="Staff allow bikes brought inside or onto a patio area.">Bike allowed inside/on patio</span><span class="listing-pill-no" title="Accessible power outlet.">Device charging</span><span class="listing-pill-no" title="Internet access.">Wi-Fi</span><span class="listing-pill-no" title="Outlet for e-bike batteries.">E-bike charging</span><span class="listing-pill-no" title="Floor pump available.">Pump</span><span class="listing-pill-no" title="Reduced admission or a perk for cyclists.">Discount for arriving by bike</span></div><div class="listing-owner-cta">Spotted an error? <a href="/suggest#edit=Queen&#x27;s Park Arena">Suggest an edit</a>.</div></div>
 <div class="listing-section"><div class="listing-section-title">Good to know</div><div class="listing-detail-row">Kid-friendly</div><div class="listing-detail-row"><strong>Time to allow:</strong> Half a day</div><div class="listing-detail-row"><strong>Planning:</strong> Check ahead before you go</div></div>
 <div class="listing-section listing-indig"><div class="listing-section-title">Indigenous</div><p class="listing-indig-terr">This place is in the traditional territory of the <a href="https://native-land.ca/listings/territories/hulquminum-treaty-group" target="_blank" rel="noopener">Hul’qumi’num Treaty Group</a>, <a href="https://native-land.ca/listings/territories/kwantlen" target="_blank" rel="noopener">Kwantlen</a>, <a href="https://native-land.ca/listings/territories/kwikwetlem" target="_blank" rel="noopener">kʷikʷəƛ̓əm</a>, <a href="https://native-land.ca/listings/territories/qayqayt" target="_blank" rel="noopener">Qayqayt</a>, <a href="https://native-land.ca/listings/territories/stolo-treaty-association" target="_blank" rel="noopener">S’ólh Téméxw (Stó:lō)</a>, <a href="https://native-land.ca/listings/territories/tsawwassen-sc%cc%93%c9%99wa%ce%b8en" target="_blank" rel="noopener">sc̓əwaθenaɁɬ təməxʷ (Tsawwassen)</a>, <a href="https://native-land.ca/listings/territories/semiahmoo" target="_blank" rel="noopener">Semiahmoo</a>, <a href="https://native-land.ca/listings/territories/tsleil-waututh-s%c9%99l%cc%93ilw%c9%99ta%c9%82%c9%ac" target="_blank" rel="noopener">səl̓ilwətaɁɬ təməxʷ (Tsleil-Waututh)</a>, <a href="https://native-land.ca/listings/territories/katzie" target="_blank" rel="noopener">sq̓əc̓iy̓aɁɬ təməxʷ (Katzie)</a>, <a href="https://native-land.ca/listings/territories/stzuminus" target="_blank" rel="noopener">Stz’uminus</a>, <a href="https://native-land.ca/listings/territories/x%ca%b7m%c9%99%ce%b8k%ca%b7%c9%99y%cc%93%c9%99m" target="_blank" rel="noopener">šxʷməθkʷəy̓əmaɁɬ təməxʷ (Musqueam)</a>, and <a href="https://native-land.ca/listings/territories/cayuse-umatilla-and-walla-walla" target="_blank" rel="noopener">Cayuse, Umatilla and Walla Walla</a>.</p><p class="listing-indig-note">Territory data from <a href="https://native-land.ca" target="_blank" rel="noopener">Native Land Digital</a>, for educational purposes only.</p></div>
 <div class="listing-section"><div class="ls-sec-title">Around here</div><div class="listing-section-sub">The closest options for the things touring cyclists actually look for.</div><div class="ls-needs"><div class="ls-need"><div class="ls-need-title">🔧 Fix &amp; supply</div><ul><li><a class="nm" href="/wwc/stop/e27d49943c/">Fruiticana</a><span class="dist">0.9 km</span></li><li><a class="nm" href="/wwc/stop/4f40ac9a10/">Safeway</a><span class="wbadge">Welcoming</span><span class="dist">0.9 km</span></li><li><a class="nm" href="/wwc/stop/175a690873/">Cap&#x27;s Bicycle Shop</a><span class="dist">1.9 km</span></li><li><a class="nm" href="/wwc/stop/64451c8653/">Bikes For All</a><span class="dist">2.3 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🍽 Eat nearby</div><ul><li><a class="nm" href="/wwc/stop/cec3003192/">Treats Concession</a><span class="dist">0.2 km</span></li><li><a class="nm" href="/wwc/stop/959cff3c07/">Victoria Sushi</a><span class="dist">0.6 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🛏 Sleep nearby</div><ul><li><a class="nm" href="/wwc/stop/d56383115d/">The Met Hotel</a><span class="dist">1.2 km</span></li><li><a class="nm" href="/wwc/stop/4364a3c36f/">Arundel Mansion</a><span class="dist">1.5 km</span></li><li><a class="nm" href="/wwc/stop/56d0b88cb5/">Burnaby Cariboo RV Park and Campground Vancouver</a><span class="dist">3.9 km</span></li></ul></div><div class="ls-need"><div class="ls-need-title">🎭 While you're here</div><ul><li><a class="nm" href="/wwc/stop/eeb1d83bd7/">The Gallery at Queen&#x27;s Park</a><span class="wbadge">Welcoming</span><span class="dist">0.3 km</span></li><li><a class="nm" href="/wwc/stop/e902594318/">təməsew̓txʷ Aquatic and Community Centre</a><span class="wbadge">Welcoming</span><span class="dist">0.7 km</span></li></ul></div></div></div>
 <div class="listing-attribution">Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>.<div class="listing-sources">Data: OpenStreetMap · Public data, AI sources with manual review</div></div>
 <div class="listing-suggest"><a href="/suggest#edit=Queen&#x27;s Park Arena">Suggest an edit to this listing</a></div>
-<div class="listing-json"><a href="/wwc/stop/45beb6232b.json" rel="nofollow">JSON</a></div></div><aside class="ls-col-right"><div class="ls-band"><div class="ls-card ls-card-map"><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}@media (max-width:700px){.wwc-map{height:300px}.wwc-map.large{height:320px}}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div id="stopmap" class="wwc-map compact"></div><div class="wwc-map-ctrls"><span class="stopmap-lgd" style="color:#14807A"><span class="stopmap-lgd-sw" style="background:#14807A"></span> Bike network</span><span class="stopmap-lgd"><span class="stopmap-lgd-sw"></span> Nearby bike trails</span></div><script>
+<div class="listing-json"><a href="/wwc/stop/45beb6232b.json" rel="nofollow">JSON</a></div></div><aside class="ls-col-right"><div class="ls-band"><div class="ls-card ls-card-map"><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:var(--r-m);overflow:hidden;border:1px solid var(--stone-200)}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}@media (max-width:700px){.wwc-map{height:300px}.wwc-map.large{height:320px}}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:var(--r-s);background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px var(--stone-400)}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:var(--stone-500);font-size:12px}.wwc-map-pop-addr{display:block;color:var(--stone-600);font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:var(--r-m);font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:var(--forest);color:#fff}</style><div id="stopmap" class="wwc-map compact"></div><div class="wwc-map-ctrls"><span class="stopmap-lgd" style="color:#14807A"><span class="stopmap-lgd-sw" style="background:#14807A"></span> Bike network</span><span class="stopmap-lgd"><span class="stopmap-lgd-sw"></span> Nearby bike trails</span></div><script>
 (function(){
   var el=document.getElementById("stopmap");
   if(!el) return;

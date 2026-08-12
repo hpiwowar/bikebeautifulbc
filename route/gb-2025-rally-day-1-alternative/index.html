@@ -34,16 +34,47 @@ html { scrollbar-gutter: stable; }
    --w-read the content column and prose cap, used by nearly every page
    --w-wide the exception: sidebar filters, two-column stop pages */
 :root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+/* Design tokens (BC-506): palette, warm-stone neutral ramp, radius scale.
+   Every page inherits these; page CSS uses var(...), not raw hex literals.
+   The /stops/ sage family is exempt from tokenization this pass. */
+:root {
+  /* brand */
+  --pacific: #0D4070;   /* navy */
+  --river:   #1E7D96;   /* teal: links + ALL primary buttons */
+  --forest:  #2E8A36;
+  --bright:  #6EC040;   /* accent green — accents only, never buttons */
+  --sky:     #B8E0EC;
+  --pine:    #1F514C;   /* heading green */
+  --herodark:#0D2E1E;
+  /* grounds */
+  --paper: #FFFDF9;     /* page ground */
+  --cream: #FFF6E5;     /* warm panels */
+  /* ink + warm stone neutrals (replaces the cool #E5E7EB/#9CA3AF family) */
+  --ink: #1A1A1A;
+  --stone-600: #57534E; --muted: #57534E;
+  --stone-500: #78716C;
+  --stone-400: #A8A29E;
+  --stone-200: #E7E5E4;
+  --sand: #E0D9CC;      /* warm hairline on cream */
+  /* radius scale: s chips/inputs, m cards, l heroes/panels, pill */
+  --r-s: 8px; --r-m: 12px; --r-l: 20px; --r-pill: 999px;
+}
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 16px; font-weight: 500; line-height: 1.5; color: #141414; background: #FFFDF9; min-height: 100vh;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 /* Base link colour, both states (BC-504) — visited links were browser-purple
-   wherever no rule targeted them. First in the cascade, so any later page rule
-   that styles a link overrides both states. */
-a { color: #1E7D96; }
-a:visited { color: #1E7D96; }
+   wherever no rule targeted them.
+   :where() zeroes the specificity so ANY other rule wins, which is what the
+   original version meant but didn't achieve: bare `a:visited` scores 0-1-1 and
+   quietly outranked every single-class component rule (0-1-0). That repainted
+   the homepage's outlined "Plan your trip" CTA teal-on-navy once you'd visited
+   /plan/ — invisible until hover, when .hero-btn-outline:hover (0-2-0) finally
+   won. getComputedStyle reports the unvisited colour for privacy, so this is
+   only ever visible to the eye, in a profile that has actually been there. */
+:where(a) { color: var(--river); }
+:where(a:visited) { color: var(--river); }
 .g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
 .g-banner strong { font-weight: 700; }
 /* position+z-index so open dropdown menus paint above page content that
@@ -54,8 +85,8 @@ a:visited { color: #1E7D96; }
 .g-header-left img { height: 50px; width: auto; max-width: 100%; }
 .g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
 .g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
-.g-header-nav a:hover { color: #1E7D96; }
-.g-header-nav a.active { color: #1E7D96; font-weight: 600; }
+.g-header-nav a:hover { color: var(--river); }
+.g-header-nav a.active { color: var(--river); font-weight: 600; }
 .g-nav-search { display: flex; align-items: center; gap: 6px; }
 .g-nav-search svg { width: 15px; height: 15px; display: block; }
 .g-nav-search .g-nav-search-label { display: inline; }
@@ -66,13 +97,13 @@ a:visited { color: #1E7D96; }
   background: none; border: none; cursor: pointer; padding: 0;
   display: flex; align-items: center; gap: 5px; transition: color 0.2s;
 }
-.g-navtop:hover, .g-navgroup.open .g-navtop { color: #1E7D96; }
-.g-navgroup.activeslot .g-navtop { color: #1E7D96; font-weight: 600; }
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: var(--river); }
+.g-navgroup.activeslot .g-navtop { color: var(--river); font-weight: 600; }
 .g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
 .g-navgroup.open .g-caret { transform: rotate(180deg); }
 .g-navmenu {
   position: absolute; top: calc(100% + 12px); left: -14px; display: none;
-  background: #FFFDF9; border: 1px solid #ECE7DD; border-radius: 14px;
+  background: var(--paper); border: 1px solid #ECE7DD; border-radius: var(--r-m);
   box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
 }
 .g-navgroup.open > .g-navmenu { display: block; }
@@ -80,11 +111,11 @@ a:visited { color: #1E7D96; }
 .g-navgroup[data-slot="field-notes"] .g-navmenu,
 .g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
 .g-header-nav .g-navmenu a {
-  display: block; padding: 9px 12px; border-radius: 9px;
+  display: block; padding: 9px 12px; border-radius: var(--r-s);
   font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
   white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
 }
-.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: #1E7D96; }
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: var(--river); }
 .g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
 .g-header-nav .g-navmenu .gnm-d {
   display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
@@ -101,22 +132,23 @@ a:visited { color: #1E7D96; }
 /* menu panels are solid cream even under a transparent header: beat the
    white-link transparent rules at their own specificity */
 .g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
-.g-header.transparent .g-header-nav .g-navmenu a:hover { color: #1E7D96; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: var(--river); }
 .g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
-.g-header.transparent.solid .g-navtop:hover { color: #1E7D96; }
-.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: #1E7D96; text-decoration: none; }
-.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #1F514C; padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-header.transparent.solid .g-navtop:hover { color: var(--river); }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: var(--river); text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--pine); padding: 4px 8px; line-height: 1; margin-left: auto; }
 .g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
-.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: #1F514C; margin-bottom: 14px; letter-spacing: -0.03em; }
-.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: #1F514C; margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
-.g-main p { color: #4b5563; margin-bottom: 14px; max-width: var(--w-read, 720px); }
-.g-main a { color: #1E7D96; }
-.g-main ul { margin-left: 20px; color: #4b5563; margin-bottom: 14px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: var(--pine); margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h1 { font-weight: 700; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: var(--pine); margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: var(--stone-600); margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: var(--river); }
+.g-main ul { margin-left: 20px; color: var(--stone-600); margin-bottom: 14px; }
 .g-main li { margin-bottom: 4px; }
-.g-crumb { font-size: 13px; color: #9CA3AF; margin-bottom: 18px; }
-.g-crumb a { color: #1E7D96; text-decoration: none; }
+.g-crumb { font-size: 13px; color: var(--stone-400); margin-bottom: 18px; }
+.g-crumb a { color: var(--river); text-decoration: none; }
 .g-crumb a:hover { text-decoration: underline; }
-.g-crumb-cur { color: #9CA3AF; }
+.g-crumb-cur { color: var(--stone-400); }
 .g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
 .g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
 .g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
@@ -125,11 +157,11 @@ a:visited { color: #1E7D96; }
 .g-footer-col { }
 .g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
 .g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
-.g-footer-col a:hover { color: #0D4070; }
-.section-divider { border: none; border-top: 1px solid #EEE; margin: 28px 0; }
+.g-footer-col a:hover { color: var(--pacific); }
+.section-divider { border: none; border-top: 1px solid var(--stone-200); margin: 28px 0; }
 .bio { margin-bottom: 20px; }
-.bio strong { color: #1F514C; font-size: 15px; }
-.bio > em { color: #636363; font-size: 13px; }
+.bio strong { color: var(--pine); font-size: 15px; }
+.bio > em { color: var(--stone-600); font-size: 13px; }
 .bio p { font-size: 14px; margin-top: 6px; }
 @media (max-width: 700px) {
   .g-banner { padding: 6px 14px; font-size: 11px; }
@@ -137,17 +169,17 @@ a:visited { color: #1E7D96; }
   .g-header-inner { gap: 0; }
   .g-main { padding: 24px 14px 16px; }
   .g-hamburger { display: block; }
-  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #FFFDF9; border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
   .g-header-nav.open { display: flex; }
-  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid #EEE; font-size: 15px; color: #1F514C; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid var(--stone-200); font-size: 15px; color: var(--pine); }
   .g-header-nav a:last-child { border-bottom: none; }
   .g-nav-search svg { display: none; }
   .g-nav-search .g-nav-search-label { display: inline; }
   /* dropdown groups become accordion sections inside the hamburger panel */
-  .g-navgroup { display: block; position: static; border-bottom: 1px solid #EEE; }
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid var(--stone-200); }
   .g-navtop {
     width: 100%; justify-content: space-between; padding: 12px 0;
-    font-size: 15px; color: #1F514C; text-shadow: none;
+    font-size: 15px; color: var(--pine); text-shadow: none;
   }
   .g-navmenu {
     position: static; box-shadow: none; border: none; background: none;
@@ -162,11 +194,76 @@ a:visited { color: #1E7D96; }
    section. Grey at rest so it reads as a tool rather than content, teal at the
    moment you are about to click it. Touch devices have no hover, so it sits
    faintly visible there instead of being unreachable. */
-.h-anchor { margin-left: .35em; color: #6E6E6E; opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+.h-anchor { margin-left: .35em; color: var(--stone-500); opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
 h2:hover > .h-anchor { opacity: .55; }
-.h-anchor:hover, .h-anchor:focus { color: #1E7D96; opacity: 1; }
+.h-anchor:hover, .h-anchor:focus { color: var(--river); opacity: 1; }
 @media (hover: none) {
   .h-anchor { opacity: .35; }
+}
+
+/* ---- Eyebrow labels (BC-509). One treatment site-wide: 11px, caps, teal.
+   Teal because it was already the most-used eyebrow colour, which leaves the
+   accent green free to keep meaning "accent" (journey-map steps, accredited
+   marks) instead of competing as a label colour. The historical class names
+   are aliased here rather than rewritten at every call site; genuinely
+   contextual overrides still win on specificity (e.g. the pale-blue on-photo
+   eyebrow on the To and Fro hero). No font-family: eyebrows inherit Inter,
+   which is what all but one of them already did. ---- */
+.eyebrow, .gi-eyebrow, .dir-eyebrow, .ls-notable-eyebrow,
+.listing-section-title, .ls-pills-label, .ls-card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--river); margin-bottom: 6px;
+}
+
+/* ---- Chip geometry (BC-509). Two geometries, not ten. Label chips are read;
+   control chips are tapped, so they get a bigger target. Colour and meaning
+   stay per-family — this only unifies size, padding, and radius. ---- */
+.chip, .lachip, .lichip, .lfacet, .pubchip, .guide-chip-am,
+.listing-pill-yes, .listing-pill-no {
+  font-size: 12.5px; padding: 4px 12px; border-radius: var(--r-pill);
+}
+.dir-chip, .guide-chip, .explore-chip {
+  font-size: 13.5px; padding: 6px 13px; border-radius: var(--r-pill);
+}
+
+/* ---- Warm CTA panel (BC-508). One "warm panel + one action" component that
+   replaces four hand-rolled versions: route detail's "Ready to ride it?", the
+   routes-hub publisher card, Design Your Own Route's signup, and the homepage
+   newsletter block. The action slot is deliberately open — it takes a button
+   link OR a whole form — so the call sites keep their own behaviour and share
+   only the chrome. Emitted by warm_panel() below; the title/body/act selectors
+   are class-on-class so they win against .g-main h2 / .g-main p. ---- */
+.wpanel { background: var(--cream); border: 1px solid var(--sand); border-radius: var(--r-l);
+  padding: 26px 30px; margin: 34px auto 8px; max-width: 900px; }
+.wpanel.narrow { max-width: 700px; }
+.wpanel.center { text-align: center; }
+.wpanel .wp-title { font-family: "Archivo", "Inter", sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--pine); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 6px; }
+.wpanel.lg .wp-title { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+.wpanel .wp-body { color: var(--stone-600); font-size: 15px; line-height: 1.55; margin: 0 0 16px; max-width: 62ch; }
+.wpanel.center .wp-body { margin-left: auto; margin-right: auto; }
+.wpanel .wp-body a { color: var(--river); }
+.wpanel .wp-act { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.wpanel.center .wp-act { align-items: center; }
+.wpanel .wp-act form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.wpanel.center .wp-act form { margin: 0 auto; }
+/* one button and one field treatment inside the panel, whatever the action is */
+.wpanel .wp-act .wp-btn, .wpanel .wp-act button { display: inline-block; background: var(--river);
+  color: #fff; border: none; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: var(--r-m); cursor: pointer; text-align: center;
+  transition: background .2s ease; }
+.wpanel .wp-act .wp-btn:hover, .wpanel .wp-act button:hover { background: var(--pacific); }
+.wpanel .wp-act input:not([type="hidden"]), .wpanel .wp-act textarea { width: 100%;
+  padding: 13px 16px; border: 1.5px solid var(--sand); border-radius: var(--r-m);
+  font-size: 16px; font-family: inherit; background: #fff; transition: border-color .2s; }
+.wpanel .wp-act input:focus, .wpanel .wp-act textarea:focus { border-color: var(--river); outline: none; }
+.wpanel .wp-act textarea { min-height: 76px; resize: vertical; }
+/* secondary action under the primary one (route detail's extra links) */
+.wpanel .wp-alt { font-size: 13.5px; color: var(--river); font-weight: 600; text-decoration: none; }
+.wpanel .wp-alt:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .wpanel { padding: 22px 18px; border-radius: var(--r-m); }
+  .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
 }
 </style>
 <script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
@@ -231,133 +328,133 @@ h2:hover > .h-anchor { opacity: .55; }
 <div class="g-main">
 <style>
 .guide-wrap { max-width: var(--w-read, 720px); margin: 0 auto; }
-.guide-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; letter-spacing: -0.03em; color: #1F514C; margin-bottom: 8px; }
-.guide-sub { font-size: 16px; color: #4b5563; line-height: 1.55; margin-bottom: 22px; max-width: 720px; }
-.guide-scale { font-size: 15px; font-weight: 600; color: #1E7D96; margin-bottom: 22px; }
+.guide-h1 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.03em; color: var(--pine); margin-bottom: 8px; }
+.guide-sub { font-size: 16px; color: var(--stone-600); line-height: 1.55; margin-bottom: 22px; max-width: 720px; }
+.guide-scale { font-size: 15px; font-weight: 600; color: var(--river); margin-bottom: 22px; }
 .guide-section { margin: 28px 0; }
-.guide-section h2 { font-family: "Archivo", sans-serif; font-size: 20px; font-weight: 700; color: #1F514C; margin-bottom: 12px; }
+.guide-section h2 { font-family: "Archivo", sans-serif; font-size: 20px; font-weight: 700; color: var(--pine); margin-bottom: 12px; }
 .guide-crit { list-style: none; padding: 0; margin: 0; }
-.guide-crit li { font-size: 14px; color: #2D2D2D; padding: 5px 0 5px 22px; position: relative; }
-.guide-crit li:before { content: "✓"; color: #2E8A36; position: absolute; left: 0; font-weight: 700; }
-.guide-subhead { font-family: "Archivo", sans-serif; font-size: 15px; font-weight: 700; color: #1F514C; margin: 20px 0 8px; }
+.guide-crit li { font-size: 14px; color: var(--ink); padding: 5px 0 5px 22px; position: relative; }
+.guide-crit li:before { content: "✓"; color: var(--forest); position: absolute; left: 0; font-weight: 700; }
+.guide-subhead { font-family: "Archivo", sans-serif; font-size: 15px; font-weight: 700; color: var(--pine); margin: 20px 0 8px; }
 .guide-rows { display: flex; flex-direction: column; }
-.guide-row { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; border-top: 0.5px solid #EEE; font-size: 14px; flex-wrap: wrap; }
-.guide-tier { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 10px; white-space: nowrap; }
-.guide-tier-accredited { background: #DCEEF3; color: #1E7D96; }
+.guide-row { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; border-top: 0.5px solid var(--stone-200); font-size: 14px; flex-wrap: wrap; }
+.guide-tier { font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: var(--r-m); white-space: nowrap; }
+.guide-tier-accredited { background: #DCEEF3; color: var(--river); }
 .guide-tier-welcoming { background: #E1F5EE; color: #0F6E56; }
-.guide-tier-info { background: #F3F4F6; color: #6B7280; }
+.guide-tier-info { background: #F3F4F6; color: var(--stone-500); }
 .guide-tier-unwelcome { background: #FEF2F2; color: #DC2626; }
-.guide-row a { color: #141414; text-decoration: none; font-weight: 500; }
-.guide-row a:hover { color: #1E7D96; text-decoration: underline; }
-.guide-row .guide-meta { font-size: 12px; color: #9CA3AF; }
+.guide-row a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.guide-row a:hover { color: var(--river); text-decoration: underline; }
+.guide-row .guide-meta { font-size: 12px; color: var(--stone-400); }
 .guide-catgrp { margin: 18px 0; }
-.guide-catgrp h3 { font-size: 15px; font-weight: 700; color: #1F514C; margin-bottom: 4px; }
+.guide-catgrp h3 { font-size: 15px; font-weight: 700; color: var(--pine); margin-bottom: 4px; }
 .guide-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
-.guide-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 13px; border-radius: 16px; border: 0.5px solid #d6d3d1; background: #fafaf9; font-size: 13px; color: #57534e; text-decoration: none; }
-.guide-chip:hover { border-color: #1E7D96; color: #0F6E56; }
-.guide-chip b { color: #1F514C; }
-.guide-morelink { display: inline-block; margin-top: 8px; font-size: 13px; color: #1E7D96; text-decoration: none; font-weight: 600; }
+.guide-chip { display: inline-flex; align-items: center; gap: 6px; border: 0.5px solid #d6d3d1; background: #fafaf9; color: var(--stone-600); text-decoration: none; }
+.guide-chip:hover { border-color: var(--river); color: #0F6E56; }
+.guide-chip b { color: var(--pine); }
+.guide-morelink { display: inline-block; margin-top: 8px; font-size: 13px; color: var(--river); text-decoration: none; font-weight: 600; }
 .guide-beyond ul { list-style: none; padding: 0; margin: 0; }
-.guide-beyond li { font-size: 14px; line-height: 1.7; color: #2D2D2D; padding: 5px 0; }
-.guide-beyond a { color: #1E7D96; font-weight: 600; text-decoration: none; }
+.guide-beyond li { font-size: 14px; line-height: 1.7; color: var(--ink); padding: 5px 0; }
+.guide-beyond a { color: var(--river); font-weight: 600; text-decoration: none; }
 .guide-beyond a:hover { text-decoration: underline; }
-.guide-getting { background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: 10px; padding: 14px 18px; margin: 18px 0; font-size: 14px; color: #2D2D2D; }
-.guide-getting a { color: #1E7D96; font-weight: 600; }
-.guide-around { background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: 10px; padding: 16px 18px; margin: 18px 0; font-size: 14px; line-height: 1.85; color: #2D2D2D; }
-.guide-around-h { font-size: 16px; font-weight: 700; color: #1E7D96; margin-bottom: 6px; }
+.guide-getting { background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: var(--r-m); padding: 14px 18px; margin: 18px 0; font-size: 14px; color: var(--ink); }
+.guide-getting a { color: var(--river); font-weight: 600; }
+.guide-around { background: #F5F9FB; border: 1px solid #D6EDF3; border-radius: var(--r-m); padding: 16px 18px; margin: 18px 0; font-size: 14px; line-height: 1.85; color: var(--ink); }
+.guide-around-h { font-size: 16px; font-weight: 700; color: var(--river); margin-bottom: 6px; }
 .guide-around-lede { margin-bottom: 10px; color: #40474C; }
 .guide-around-picks { margin-bottom: 6px; }
-.guide-around a { color: #1E7D96; font-weight: 600; text-decoration: none; }
+.guide-around a { color: var(--river); font-weight: 600; text-decoration: none; }
 .guide-around a:hover { text-decoration: underline; }
 .guide-annot { color: #7A8288; font-weight: 400; font-size: 12.5px; }
 .guide-around-more { margin: 8px 0; }
-.guide-around-more summary { cursor: pointer; color: #1E7D96; font-weight: 600; font-size: 13.5px; }
-.guide-around-full { margin-top: 10px; font-size: 13px; line-height: 1.95; color: #57534E; }
+.guide-around-more summary { cursor: pointer; color: var(--river); font-weight: 600; font-size: 13.5px; }
+.guide-around-full { margin-top: 10px; font-size: 13px; line-height: 1.95; color: var(--stone-600); }
 .guide-around-tool { margin-top: 10px; }
 .guide-routes { margin: 18px 0; }
-.guide-routes-h { font-size: 16px; font-weight: 700; color: #1F514C; margin-bottom: 6px; }
+.guide-routes-h { font-size: 16px; font-weight: 700; color: var(--pine); margin-bottom: 6px; }
 .guide-routes-lede { font-size: 14px; line-height: 1.7; color: #40474C; margin-bottom: 12px; }
 .guide-routes ol { list-style: none; margin: 0; padding: 0; }
 .guide-routes li { padding: 8px 0; border-top: 1px solid #E6EDEA; font-size: 14px; line-height: 1.6; }
 .guide-routes li:first-child { border-top: none; }
-.guide-routes li a { color: #1E7D96; font-weight: 600; text-decoration: none; }
+.guide-routes li a { color: var(--river); font-weight: 600; text-decoration: none; }
 .guide-routes li a:hover { text-decoration: underline; }
-.guide-routes-pub { color: #57534E; }
-.guide-routes-more { margin-top: 10px; font-size: 13.5px; color: #57534E; }
-.guide-wrap a.guide-cta { display: inline-block; margin: 8px 0 24px; padding: 11px 22px; background: #1E7D96; color: #fff; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; }
+.guide-routes-pub { color: var(--stone-600); }
+.guide-routes-more { margin-top: 10px; font-size: 13.5px; color: var(--stone-600); }
+.guide-wrap a.guide-cta { display: inline-block; margin: 8px 0 24px; padding: 11px 22px; background: var(--river); color: #fff; border-radius: var(--r-s); font-weight: 600; text-decoration: none; font-size: 14px; }
 .guide-dl { margin: 12px 0 24px; }
-.guide-dl-btn { display: inline-block; padding: 9px 18px; border: 1.5px solid #1E7D96; color: #1E7D96; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; }
-.guide-dl-btn:hover { background: #1E7D96; color: #fff; }
+.guide-dl-btn { display: inline-block; padding: 9px 18px; border: 1.5px solid var(--river); color: var(--river); border-radius: var(--r-s); font-weight: 600; text-decoration: none; font-size: 14px; }
+.guide-dl-btn:hover { background: var(--river); color: #fff; }
 .guide-region-blk { margin-bottom: 22px; }
-.guide-region-blk h2 { font-size: 16px; border-bottom: 1px solid #EEE; padding-bottom: 6px; }
+.guide-region-blk h2 { font-size: 16px; border-bottom: 1px solid var(--stone-200); padding-bottom: 6px; }
 .guide-comm-list { columns: 210px auto; column-gap: 28px; }
-.guide-comm-list a { display: block; font-size: 14px; padding: 3px 0; text-decoration: none; break-inside: avoid; color: #1E7D96; }
-.guide-comm-list a.guide-c-small { color: #4b5563; }
+.guide-comm-list a { display: block; font-size: 14px; padding: 3px 0; text-decoration: none; break-inside: avoid; color: var(--river); }
+.guide-comm-list a.guide-c-small { color: var(--stone-600); }
 .guide-comm-list a:hover { text-decoration: underline; }
-.guide-comm-list .guide-n { color: #9CA3AF; font-size: 12px; }
+.guide-comm-list .guide-n { color: var(--stone-400); font-size: 12px; }
 .guide-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 10px; }
 @media (max-width: 760px) { .guide-cards { grid-template-columns: 1fr; } }
-.guide-card { border: 1px solid #ECE9E4; border-radius: 12px; padding: 14px 16px; background: #fff; }
+.guide-card { border: 1px solid #ECE9E4; border-radius: var(--r-m); padding: 14px 16px; background: #fff; }
 .guide-card-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 3px; }
-.guide-card-name { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 16px; color: #141414; text-decoration: none; letter-spacing: -0.01em; }
-.guide-card-name:hover { color: #1E7D96; text-decoration: underline; }
-.guide-card-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 11px; }
+.guide-card-name { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 16px; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+.guide-card-name:hover { color: var(--river); text-decoration: underline; }
+.guide-card-meta { font-size: 13px; color: var(--stone-400); margin-bottom: 11px; }
 .guide-card-chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.guide-chip-am { font-size: 12px; padding: 3px 11px; border-radius: 12px; background: #E8F3EE; color: #0F6E56; white-space: nowrap; }
-.guide-chip-more { font-size: 12px; color: #9CA3AF; padding: 3px 2px; }
-.guide-card-empty { font-size: 13px; color: #9CA3AF; font-style: italic; }
+.guide-chip-am { background: #E8F3EE; color: #0F6E56; white-space: nowrap; }
+.guide-chip-more { font-size: 12px; color: var(--stone-400); padding: 3px 2px; }
+.guide-card-empty { font-size: 13px; color: var(--stone-400); font-style: italic; }
 
 /* ---- Community pages: "Postcards" layout (BC-239) ----------------------
    Wider than the reading column the rest of the guide pages use, because the
    photo spread and the tile grid need the room. */
 .cp-wrap { max-width: 1080px; margin: 0 auto; }
 .cp-title { padding: 6px 0 20px; max-width: 720px; }
-.cp-h1 { font-family: "Archivo", sans-serif; font-size: clamp(32px, 5vw, 50px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: #1F514C; margin: 0; }
-.cp-h1 em { font-style: normal; color: #1E7D96; }
-.cp-stand { font-size: 17px; color: #57534E; line-height: 1.55; margin-top: 12px; max-width: 580px; }
+.cp-h1 { font-family: "Archivo", sans-serif; font-size: clamp(32px, 5vw, 50px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--pine); margin: 0; }
+.cp-h1 em { font-style: normal; color: var(--river); }
+.cp-stand { font-size: 17px; color: var(--stone-600); line-height: 1.55; margin-top: 12px; max-width: 580px; }
 .cp-spread { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; align-items: stretch; }
 .cp-spread.cp-one { grid-template-columns: 1fr; }
 .cp-spread.cp-two { grid-template-columns: 3fr 2fr; }
 @media (max-width: 760px) { .cp-spread, .cp-spread.cp-two { grid-template-columns: 1fr; } }
-.cp-ph { position: relative; border-radius: 14px; overflow: hidden; margin: 0; background: #E7E5E4 center/cover no-repeat; }
+.cp-ph { position: relative; border-radius: var(--r-m); overflow: hidden; margin: 0; background: var(--stone-200) center/cover no-repeat; }
 .cp-ph.cp-big { min-height: 420px; }
 @media (max-width: 760px) { .cp-ph.cp-big { min-height: 260px; } }
 .cp-stack { display: grid; grid-template-rows: 1fr 1fr; gap: 14px; }
 .cp-stack .cp-ph { min-height: 150px; }
-.cp-caps { margin: 10px 0 0; font-size: 13px; color: #78716C; line-height: 1.5; }
+.cp-caps { margin: 10px 0 0; font-size: 13px; color: var(--stone-500); line-height: 1.5; }
 .cp-caps span { display: block; }
-.cp-detour { margin-top: 40px; background: #FBF7EE; border-radius: 16px; padding: 24px 26px 22px; }
-.cp-detour h2 { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 700; color: #1F514C; margin: 0; }
-.cp-detour .cp-lede { color: #57534E; font-size: 15px; margin: 4px 0 16px; }
+.cp-detour { margin-top: 40px; background: #FBF7EE; border-radius: var(--r-l); padding: 24px 26px 22px; }
+.cp-detour h2 { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 700; color: var(--pine); margin: 0; }
+.cp-detour .cp-lede { color: var(--stone-600); font-size: 15px; margin: 4px 0 16px; }
 .cp-picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; align-items: start; }
 @media (max-width: 560px) { .cp-picks { grid-template-columns: 1fr; } }
-.cp-pick { background: #fff; border: 1px solid #EFE6D2; border-radius: 12px; padding: 15px 16px 14px; display: flex; flex-direction: column; gap: 5px; }
-.cp-pick-name { font-family: "Archivo", sans-serif; font-size: 16px; font-weight: 700; color: #141414; text-decoration: none; }
-.cp-pick-name:hover { color: #1E7D96; text-decoration: underline; }
-.cp-pick-what { font-size: 13px; color: #78716C; }
-.cp-pick-why { font-size: 13.5px; line-height: 1.45; color: #2D2D2D; margin: 2px 0 0; }
-.cp-tiles-h { font-family: "Archivo", sans-serif; margin: 44px 0 4px; font-size: 23px; font-weight: 700; color: #1F514C; }
-.cp-tiles-lede { color: #57534E; font-size: 15px; margin-bottom: 16px; }
+.cp-pick { background: #fff; border: 1px solid #EFE6D2; border-radius: var(--r-m); padding: 15px 16px 14px; display: flex; flex-direction: column; gap: 5px; }
+.cp-pick-name { font-family: "Archivo", sans-serif; font-size: 16px; font-weight: 700; color: var(--ink); text-decoration: none; }
+.cp-pick-name:hover { color: var(--river); text-decoration: underline; }
+.cp-pick-what { font-size: 13px; color: var(--stone-500); }
+.cp-pick-why { font-size: 13.5px; line-height: 1.45; color: var(--ink); margin: 2px 0 0; }
+.cp-tiles-h { font-family: "Archivo", sans-serif; margin: 44px 0 4px; font-size: 23px; font-weight: 700; color: var(--pine); }
+.cp-tiles-lede { color: var(--stone-600); font-size: 15px; margin-bottom: 16px; }
 .cp-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 @media (max-width: 860px) { .cp-tiles { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .cp-tiles { grid-template-columns: 1fr; } }
-.cp-tile { border: 1px solid #ECE9E4; border-radius: 14px; padding: 17px 18px; display: block; color: #2D2D2D; position: relative; background: #fff; text-decoration: none; transition: box-shadow .15s; }
+.cp-tile { border: 1px solid #ECE9E4; border-radius: var(--r-m); padding: 17px 18px; display: block; color: var(--ink); position: relative; background: #fff; text-decoration: none; transition: box-shadow .15s; }
 .cp-tile:hover { box-shadow: 0 6px 22px rgba(13, 64, 112, .12); }
-.cp-tile .cp-n { font-family: "Archivo", sans-serif; font-size: 29px; font-weight: 700; color: #1F514C; letter-spacing: -0.02em; line-height: 1.1; }
-.cp-tile h3 { font-size: 16px; margin: 2px 0 6px; color: #141414; }
-.cp-tile .cp-eg { font-size: 13.5px; color: #78716C; line-height: 1.45; }
-.cp-tile .cp-go { position: absolute; right: 15px; top: 17px; color: #1E7D96; font-weight: 700; }
-.cp-plan { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; margin-top: 46px; border-top: 3px solid #1F514C; padding-top: 20px; }
+.cp-tile .cp-n { font-family: "Archivo", sans-serif; font-size: 29px; font-weight: 700; color: var(--pine); letter-spacing: -0.02em; line-height: 1.1; }
+.cp-tile h3 { font-size: 16px; margin: 2px 0 6px; color: var(--ink); }
+.cp-tile .cp-eg { font-size: 13.5px; color: var(--stone-500); line-height: 1.45; }
+.cp-tile .cp-go { position: absolute; right: 15px; top: 17px; color: var(--river); font-weight: 700; }
+.cp-plan { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; margin-top: 46px; border-top: 3px solid var(--pine); padding-top: 20px; }
 @media (max-width: 820px) { .cp-plan { grid-template-columns: 1fr; } }
-.cp-plan h2 { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: #1F514C; margin-bottom: 8px; }
+.cp-plan h2 { font-family: "Archivo", sans-serif; font-size: 19px; font-weight: 700; color: var(--pine); margin-bottom: 8px; }
 .cp-full { margin-top: 46px; }
-.cp-full h2 { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 700; color: #1F514C; }
-.cp-full .cp-lede { color: #57534E; font-size: 15px; margin: 4px 0 14px; }
-details.cp-cat { border: 1px solid #ECE9E4; border-radius: 12px; margin-bottom: 10px; background: #fff; }
-details.cp-cat summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 12px; padding: 13px 18px; font-family: "Archivo", sans-serif; font-size: 16px; font-weight: 700; color: #1F514C; }
+.cp-full h2 { font-family: "Archivo", sans-serif; font-size: 23px; font-weight: 700; color: var(--pine); }
+.cp-full .cp-lede { color: var(--stone-600); font-size: 15px; margin: 4px 0 14px; }
+details.cp-cat { border: 1px solid #ECE9E4; border-radius: var(--r-m); margin-bottom: 10px; background: #fff; }
+details.cp-cat summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 12px; padding: 13px 18px; font-family: "Archivo", sans-serif; font-size: 16px; font-weight: 700; color: var(--pine); }
 details.cp-cat summary::-webkit-details-marker { display: none; }
-details.cp-cat summary .cp-count { color: #78716C; font-weight: 400; font-size: 14px; }
-details.cp-cat summary .cp-arrow { margin-left: auto; color: #1E7D96; transition: transform .15s; }
+details.cp-cat summary .cp-count { color: var(--stone-500); font-weight: 400; font-size: 14px; }
+details.cp-cat summary .cp-arrow { margin-left: auto; color: var(--river); transition: transform .15s; }
 details.cp-cat[open] summary .cp-arrow { transform: rotate(90deg); }
 details.cp-cat .cp-rows { padding: 0 18px 14px; columns: 2; column-gap: 40px; }
 @media (max-width: 700px) { details.cp-cat .cp-rows { columns: 1; } }
@@ -368,15 +465,15 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
 .cp-ph .cap-credit { position: absolute; left: 12px; bottom: 12px; color: #fff; opacity: .62; font-size: 9.5px; letter-spacing: .02em; text-shadow: 0 1px 5px rgba(0,0,0,.6); max-width: 46%; }
 .cp-ph .cap-place { position: absolute; right: 12px; bottom: 11px; color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .01em; text-shadow: 0 1px 6px rgba(0,0,0,.6); max-width: 78%; text-align: right; }
 </style><style>
-.rt-byline{font-size:15px;color:#636363;margin:-6px 0 12px}
+.rt-byline{font-size:15px;color:var(--stone-600);margin:-6px 0 12px}
 .rt-byline .publogo{vertical-align:-5px;margin-left:8px}
-.rt-byline a{color:#1E7D96;font-weight:600;text-decoration:none}
+.rt-byline a{color:var(--river);font-weight:600;text-decoration:none}
 .rt-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
-.rt-chips .chip{font-size:12.5px;font-weight:600;color:#41586b;background:#eef2ee;border:1px solid #dbe3db;border-radius:99px;padding:4px 12px}
+.rt-chips .chip{font-weight:600;color:#41586b;background:#eef2ee;border:1px solid #dbe3db}
 .rt-chips .chip.tier{padding-left:10px}
 .rt-chips .chip.tier::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:middle;background:currentColor}
 .rt-chips .chip.tier.easy{background:#e7f4e7;color:#256b2b;border-color:#c3e2c3}
-.rt-chips .chip.tier.moderate{background:#e2f0f4;color:#1E7D96;border-color:#c1e0ea}
+.rt-chips .chip.tier.moderate{background:#e2f0f4;color:var(--river);border-color:#c1e0ea}
 .rt-chips .chip.tier.ambitious{background:#fbf0d9;color:#946510;border-color:#efdcae}
 .rt-chips .chip.tier.challenging{background:#fbe6d6;color:#b0551a;border-color:#f0cdae}
 .rt-chips .chip.tier.epic{background:#efe8f8;color:#6b3fa0;border-color:#d9c6ee}
@@ -384,137 +481,145 @@ details.cp-cat .cp-rows .guide-row { break-inside: avoid; }
    inside a link. These four declarations undo the UA button defaults so a button.chip
    is pixel-identical to the span.chip it replaced. */
 .rt-chips button.chip{font-family:inherit;line-height:normal;text-align:left;cursor:pointer;-webkit-appearance:none;appearance:none}
-.rt-chips button.chip:focus-visible{outline:2px solid #1E7D96;outline-offset:2px}
-.rt-chips .rt-ratelink{align-self:center;font-size:12.5px;font-weight:600;color:#1E7D96;text-decoration:none;margin-left:2px}
+.rt-chips button.chip:focus-visible{outline:2px solid var(--river);outline-offset:2px}
+.rt-chips .rt-ratelink{align-self:center;font-size:12.5px;font-weight:600;color:var(--river);text-decoration:none;margin-left:2px}
 .rt-chips .rt-ratelink:hover{text-decoration:underline}
 .rt-chippanels{position:relative}
-.rt-chippanel{display:none;background:#FCFBF6;border:1px solid #E4DFD0;border-radius:11px;padding:13px 15px;margin:0 0 18px;box-shadow:0 4px 14px rgba(13,64,112,.09)}
+.rt-chippanel{display:none;background:#FCFBF6;border:1px solid #E4DFD0;border-radius:var(--r-m);padding:13px 15px;margin:0 0 18px;box-shadow:0 4px 14px rgba(13,64,112,.09)}
 .rt-chippanel.open{display:block}
 .rt-chippanel p{margin:0 0 9px;font-size:14px;line-height:1.55;color:#3C4A43}
-.rt-chippanel p b{color:#1F514C}
-.rt-chippanel .prov{font-size:12.5px;color:#6B7280}
-.rt-chippanel a{color:#1E7D96;font-weight:600;text-decoration:none;font-size:13.5px}
+.rt-chippanel p b{color:var(--pine)}
+.rt-chippanel .prov{font-size:12.5px;color:var(--stone-500)}
+.rt-chippanel a{color:var(--river);font-weight:600;text-decoration:none;font-size:13.5px}
 .rt-chippanel a:hover{text-decoration:underline}
 /* Fine pointer: a small panel anchored under the chip. Coarse pointer keeps the
    default inline block below the whole row, so it can never clip off a phone. */
 @media (pointer:fine){.rt-chippanel.open{position:absolute;top:0;z-index:20;width:min(340px,100%);margin:0}}
 .rt-dist{font-size:14.5px;color:#3C4A43;font-weight:600;margin:0 0 18px}
-.rt-diffwhy{font-size:14px;color:#4b5563;margin:-10px 0 18px}
-.rt-handoff{background:#FFF6E5;border:1px solid #F0E6C5;border-radius:14px;padding:22px 26px;display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:6px 0 26px}
+.rt-diffwhy{font-size:14px;color:var(--stone-600);margin:-10px 0 18px}
+.rt-handoff{background:var(--cream);border:1px solid #F0E6C5;border-radius:var(--r-m);padding:22px 26px;display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:6px 0 26px}
 .rt-handoff .msg{flex:1;min-width:260px}
 .rt-handoff .eyebrow{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#8A6D1B;font-weight:700;margin-bottom:5px}
-.rt-handoff b{font-size:16.5px;line-height:1.4;display:block;color:#1F514C;margin-bottom:4px}
-.rt-handoff p{font-size:13.5px;color:#5B6B72;margin:0}
-.rt-handoff .go, .rt-bottom .go, .rt-ctainline .go{display:inline-block;background:#1E7D96;color:#fff;text-decoration:none;font-weight:700;border-radius:10px;padding:12px 22px;font-size:14.5px;text-align:center}
-.rt-handoff .go:hover, .rt-bottom .go:hover, .rt-ctainline .go:hover{background:#176a80}
-.rt-ctacol{display:flex;flex-direction:column;gap:8px;align-items:center}
-.rt-alt{font-size:13px;color:#1E7D96;text-decoration:none;font-weight:600}
+.rt-handoff b{font-size:16.5px;line-height:1.4;display:block;color:var(--pine);margin-bottom:4px}
+.rt-handoff p{font-size:13.5px;color:var(--stone-600);margin:0}
+/* BC-508: the inline CTA's button matches the shared .wp-btn in the bottom panel
+   (same padding, same size, same --pacific hover; the old raw #176a80 is retired). */
+.rt-handoff .go, .rt-ctainline .go{display:inline-block;background:var(--river);color:#fff;text-decoration:none;font-weight:700;border-radius:var(--r-m);padding:13px 24px;font-size:15px;text-align:center}
+.rt-handoff .go:hover, .rt-ctainline .go:hover{background:var(--pacific)}
+.rt-alt{font-size:13.5px;color:var(--river);text-decoration:none;font-weight:600}
 .rt-alt:hover{text-decoration:underline}
-.rt-gpxnote{font-size:12.5px;color:#5B6B72;max-width:60ch;margin:6px 0 0}
-.rt-bottom{background:#FFF6E5;border-radius:14px;text-align:center;padding:26px 20px;margin:34px 0 8px}
-.rt-bottom p{color:#5B6B72;margin:0 0 12px;font-size:14.5px}
-.rt-honesty{font-size:14px;color:#4b5563;line-height:1.7;margin:22px 0 8px;border-top:3px solid #1F514C;padding-top:18px}
-.rt-honesty a{font-weight:600;color:#1E7D96}
-.rt-terr{font-size:14px;color:#2D2D2D;line-height:1.6;margin:0}
-.rt-terr a{color:#1E7D96;text-decoration:none}
-.rt-terrnote{margin:6px 0 0;font-size:12.5px;color:#6B7280;line-height:1.5}
-.rt-terrnote a{color:#6B7280}
+.rt-gpxnote{font-size:12.5px;color:var(--stone-600);max-width:60ch;margin:6px 0 0}
+/* BC-508: the panel is the shared .wpanel now (chrome.py); the route page just
+   keeps it flush with the guide column instead of the component's centred 900. */
+.wpanel.rt-bottom{max-width:none;margin:34px 0 8px}
+.rt-honesty{font-size:14px;color:var(--stone-600);line-height:1.7;margin:22px 0 8px;border-top:3px solid var(--pine);padding-top:18px}
+.rt-honesty a{font-weight:600;color:var(--river)}
+.rt-terr{font-size:14px;color:var(--ink);line-height:1.6;margin:0}
+.rt-terr a{color:var(--river);text-decoration:none}
+.rt-terrnote{margin:6px 0 0;font-size:12.5px;color:var(--stone-500);line-height:1.5}
+.rt-terrnote a{color:var(--stone-500)}
 .wwc-map{position:relative}
-.rt-approx-badge{position:absolute;top:10px;left:10px;z-index:5;background:#fff;border:1px solid #E3DCC9;border-radius:10px;padding:7px 12px;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,.15);line-height:1.35;display:block}
+.rt-approx-badge{position:absolute;top:10px;left:10px;z-index:5;background:#fff;border:1px solid #E3DCC9;border-radius:var(--r-m);padding:7px 12px;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,.15);line-height:1.35;display:block}
 .rt-approx-badge .d1{display:block;font-weight:700;font-size:12.5px;color:#8A6D1B;text-transform:uppercase;letter-spacing:.06em}
-.rt-approx-badge .d2{display:block;font-size:12.5px;font-weight:600;color:#1E7D96}
+.rt-approx-badge .d2{display:block;font-size:12.5px;font-weight:600;color:var(--river)}
 .rt-approx-badge:hover .d2{text-decoration:underline}
-.rt-mapnote{font-size:13.5px;color:#5B6B72;margin:10px 0 0;line-height:1.55}
-.rt-mapnote a{font-weight:600;color:#1E7D96}
+.rt-mapnote{font-size:13.5px;color:var(--stone-600);margin:10px 0 0;line-height:1.55}
+.rt-mapnote a{font-weight:600;color:var(--river)}
 .rt-tofro{margin:0 0 26px}
-.rt-tofro h2.guide-around-h{font-family:"Archivo",sans-serif;font-size:20px;font-weight:700;color:#1E7D96;margin:0 0 6px}
+.rt-tofro h2.guide-around-h{font-family:"Archivo",sans-serif;font-size:20px;font-weight:700;color:var(--river);margin:0 0 6px}
 .rt-tofro-alts{margin:8px 0 0;font-size:13.5px}
-.rt-tofro-fallback{font-size:13.5px;color:#5B6B72;margin:0 0 26px}
-.rt-tofro-fallback a{color:#1E7D96;font-weight:600;text-decoration:none}
+.rt-tofro-fallback{font-size:13.5px;color:var(--stone-600);margin:0 0 26px}
+.rt-tofro-fallback a{color:var(--river);font-weight:600;text-decoration:none}
 .rt-tofro-fallback a:hover{text-decoration:underline}
 .rt-opnote{font-size:14px;color:#3C4A43;line-height:1.6;margin:-6px 0 18px;max-width:70ch}
-.rt-opnote a{color:#1E7D96;font-weight:600;text-decoration:none}
+.rt-opnote a{color:var(--river);font-weight:600;text-decoration:none}
 .rt-opnote a:hover{text-decoration:underline}
 /* Fast-road stretches (§2c): named list; dot colour echoes the map overlay (RISK
    #c1121f, EXPERIENCED ONLY #d9480f) so the list and map read as one system. Rows with a
    data-road highlight that road's overlay segments on hover (fine) / tap (coarse). */
 .rt-fast{margin:0 0 26px}
-.rt-fast h2{font-family:"Archivo","Inter",sans-serif;font-size:20px;font-weight:700;color:#1F514C;margin:0 0 6px}
-.rt-fast .rt-fast-fine{font-size:13.5px;color:#6B7280;margin:0 0 12px;max-width:70ch}
+.rt-fast h2{font-family:"Archivo","Inter",sans-serif;font-size:20px;font-weight:700;color:var(--pine);margin:0 0 6px}
+.rt-fast .rt-fast-fine{font-size:13.5px;color:var(--stone-500);margin:0 0 12px;max-width:70ch}
 .rt-fast ul{list-style:none;margin:0;padding:0}
-.rt-fast li{font-size:15px;color:#3C4A43;line-height:1.5;padding:4px 6px;margin:0 -6px;border-radius:6px;display:flex;align-items:baseline;gap:9px}
+.rt-fast li{font-size:15px;color:#3C4A43;line-height:1.5;padding:4px 6px;margin:0 -6px;border-radius:var(--r-s);display:flex;align-items:baseline;gap:9px}
 .rt-fast li[data-road]{cursor:pointer}
 .rt-fast li[data-road]:hover,.rt-fast li[data-road].on{background:#FBF0EC}
 .rt-fast li .dot{flex-shrink:0;width:9px;height:9px;border-radius:50%;transform:translateY(1px)}
-.rt-fast li .near{color:#6B7280}
-.rt-fast .rt-fast-more{font-size:13.5px;color:#6B7280;margin:8px 0 0}
-.rt-fastleg{font-size:12.5px;color:#5B6B72;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:14px}
+.rt-fast li .near{color:var(--stone-500)}
+.rt-fast .rt-fast-more{font-size:13.5px;color:var(--stone-500);margin:8px 0 0}
+.rt-fastleg{font-size:12.5px;color:var(--stone-600);margin:8px 0 0;display:flex;flex-wrap:wrap;gap:14px}
 .rt-fastleg .row{display:inline-flex;align-items:center;gap:6px}
 .rt-fastleg .dot{width:9px;height:9px;border-radius:50%}
 /* ---- 2026-08 redesign (A + B's bars + C's stop voice; design_notes/route_redesign_2026-08/) ---- */
 /* Route pages run on the wide token (BC-227: "widen only where content won't
    fit" — the two-column head + stat card is exactly that case, same as the
    two-col stop pages). guide-wrap caps at the mockup's 1060 inside it. */
-.g-main{max-width:var(--w-wide,1160px)}
+/* BC-507 Rule B: a page with a photo hero runs the hero full-bleed and keeps
+   everything below it in the page column. The hero escapes .g-main with the
+   same math .trailhero uses; .g-main drops its top padding so the band sits
+   flush under the header, and the breadcrumb (first item in the column, just
+   below the hero) takes the spacing back. */
+.g-main{max-width:var(--w-wide,1160px);padding-top:0}
+.g-crumb{margin:24px 0 22px}
 .guide-wrap{max-width:1060px}
-.rt-hero{position:relative;height:clamp(260px,42vh,440px);background-size:cover;background-position:center;background-color:#0D2E1E}
-.rt-hero.nophoto{background:linear-gradient(135deg,#256b60,#0D2E1E)}
+.rt-hero{position:relative;width:100vw;margin-left:calc(50% - 50vw);height:clamp(260px,42vh,440px);background-size:cover;background-position:center;background-color:var(--herodark)}
+.rt-hero.nophoto{background:linear-gradient(135deg,#256b60,var(--herodark))}
 .rt-hero-shade{position:absolute;inset:0;background:linear-gradient(rgba(13,46,30,.08),transparent 40%,rgba(13,46,30,.42))}
 .rt-hero .cap-credit,.rt-hero .cap-place{position:absolute;bottom:10px;z-index:2;font-size:12px;color:#EDF3EE;text-shadow:0 1px 6px rgba(13,46,30,.8)}
-.rt-hero .cap-credit{left:16px}
-.rt-hero .cap-place{right:16px}
-.rt-cardloc{width:68px;flex:none;background:#F6F2E9;border:1px solid #E7E0D2;border-radius:10px;padding:5px}
+.rt-hero .cap-credit{left:16px;max-width:46%}
+.rt-hero .cap-place{right:16px;max-width:78%;text-align:right}
+.rt-cardloc{width:68px;flex:none;background:#F6F2E9;border:1px solid #E7E0D2;border-radius:var(--r-m);padding:5px}
 .rt-cardloc svg{display:block}
 .rt-cardwhere{display:flex;gap:14px;align-items:center;border-bottom:1px solid #E7E0D2;padding-bottom:13px;margin-bottom:13px}
-.rt-cardwhere .wk{display:block;font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#5B6B72;margin-bottom:2px}
-.rt-cardwhere .wv{font-size:15px;font-weight:700;color:#1F514C}
-.rt-cardwhere .wv a{color:#1F514C;text-decoration:none}
-.rt-cardwhere .wv a:hover{color:#1E7D96;text-decoration:underline}
+.rt-cardwhere .wk{display:block;font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--stone-600);margin-bottom:2px}
+.rt-cardwhere .wv{font-size:15px;font-weight:700;color:var(--pine)}
+.rt-cardwhere .wv a{color:var(--pine);text-decoration:none}
+.rt-cardwhere .wv a:hover{color:var(--river);text-decoration:underline}
 .rt-elev{margin:8px 0 2px}
-.rt-elev svg{display:block;width:100%;height:56px;border-radius:6px;background:#FCFBF6;border:1px solid #EFEAD9}
+.rt-elev svg{display:block;width:100%;height:56px;border-radius:var(--r-s);background:#FCFBF6;border:1px solid #EFEAD9}
 .rt-elev .rt-barcap{margin-top:3px}
 .rt-barcap a{color:inherit;text-decoration:none}
-.rt-barcap a:hover{color:#1E7D96;text-decoration:underline}
+.rt-barcap a:hover{color:var(--river);text-decoration:underline}
 .rt-head{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:40px;align-items:start;margin:0 0 26px}
 .rt-lede{font-size:16.5px;line-height:1.65;color:#3C4A43;max-width:62ch;margin:0 0 16px}
-.rt-lede b{color:#1F514C}
-.rt-excerpt{margin:0 0 16px;padding:2px 0 2px 18px;border-left:3px solid #1F514C;max-width:62ch}
+.rt-lede b{color:var(--pine)}
+.rt-excerpt{margin:0 0 16px;padding:2px 0 2px 18px;border-left:3px solid var(--pine);max-width:62ch}
 .rt-excerpt p{font-size:16.5px;line-height:1.65;color:#3C4A43;font-style:italic;margin:0 0 8px}
-.rt-excerpt cite{display:block;font-style:normal;font-size:13.5px;color:#5B6B72;margin-top:2px}
-.rt-excerpt cite a{color:#1E7D96;font-weight:600;text-decoration:none}
+.rt-excerpt cite{display:block;font-style:normal;font-size:13.5px;color:var(--stone-600);margin-top:2px}
+.rt-excerpt cite a{color:var(--river);font-weight:600;text-decoration:none}
 .rt-excerpt cite a:hover{text-decoration:underline}
 .rt-ctainline{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:4px 0 8px}
-.rt-card{background:#fff;border:1px solid #E7E0D2;border-radius:16px;padding:20px 20px 10px;box-shadow:0 2px 10px rgba(34,51,59,.05)}
+.rt-card{background:#fff;border:1px solid #E7E0D2;border-radius:var(--r-l);padding:20px 20px 10px;box-shadow:0 2px 10px rgba(34,51,59,.05)}
 .rt-ring{display:flex;gap:14px;align-items:center;border-bottom:1px solid #E7E0D2;padding-bottom:14px}
 .rt-ring svg{flex:none}
 .rt-ring .tiername{font-weight:800;font-size:16px}
-.rt-ring .tiername.easy{color:#256b2b}.rt-ring .tiername.moderate{color:#1E7D96}
+.rt-ring .tiername.easy{color:#256b2b}.rt-ring .tiername.moderate{color:var(--river)}
 .rt-ring .tiername.ambitious{color:#946510}.rt-ring .tiername.challenging{color:#b0551a}
 .rt-ring .tiername.epic{color:#6b3fa0}
-.rt-ring .tierwhy{font-size:12.5px;color:#5B6B72;line-height:1.45;margin-top:2px}
+.rt-ring .tierwhy{font-size:12.5px;color:var(--stone-600);line-height:1.45;margin-top:2px}
 .rt-facts{list-style:none;margin:6px 0 2px;padding:0}
 .rt-facts li{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:14px;border-bottom:1px dotted #E7E0D2}
 .rt-facts li:last-child{border-bottom:0}
-.rt-facts .k{color:#5B6B72}
-.rt-facts .v{font-weight:700;color:#1F514C;text-align:right;font-variant-numeric:tabular-nums}
+.rt-facts .k{color:var(--stone-600)}
+.rt-facts .v{font-weight:700;color:var(--pine);text-align:right;font-variant-numeric:tabular-nums}
 .rt-facts .v.quiet{font-weight:600;font-size:13px;color:#3C4A43}
 .rt-bars{margin:18px 0 2px}
 .rt-barrow{margin:0 0 14px}
 .rt-barrow:last-child{margin-bottom:6px}
-.rt-bar{height:9px;border-radius:6px;background:#EAE4D6;overflow:hidden;display:flex;margin:0 0 3px}
+.rt-bar{height:9px;border-radius:var(--r-s);background:#EAE4D6;overflow:hidden;display:flex;margin:0 0 3px}
 .rt-bar i{display:block;height:100%}
-.rt-barcap{display:flex;justify-content:space-between;font-size:11.5px;color:#5B6B72}
+.rt-barcap{display:flex;justify-content:space-between;font-size:11.5px;color:var(--stone-600)}
 .rt-card .links{border-top:1px solid #E7E0D2;margin-top:12px;padding:8px 0 10px;font-size:13.5px}
-.rt-card .links a{display:block;padding:4px 0;text-decoration:none;font-weight:600;color:#1E7D96}
+.rt-card .links a{display:block;padding:4px 0;text-decoration:none;font-weight:600;color:var(--river)}
 .rt-card .links a:hover{text-decoration:underline}
-details.rt-fold{border:1px solid #E7E0D2;border-radius:14px;background:#fff;margin:0 0 12px;overflow:hidden}
-details.rt-fold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:13px;padding:15px 18px;font-weight:700;font-size:17px;color:#1F514C}
+details.rt-fold{border:1px solid #E7E0D2;border-radius:var(--r-m);background:#fff;margin:0 0 12px;overflow:hidden}
+details.rt-fold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:13px;padding:15px 18px;font-weight:700;font-size:17px;color:var(--pine)}
 details.rt-fold>summary::-webkit-details-marker{display:none}
-details.rt-fold>summary .ic{flex:none;width:32px;height:32px;border-radius:50%;background:#FFF6E5;display:grid;place-items:center;font-size:15px}
-details.rt-fold>summary .hint{margin-left:auto;font-weight:400;font-size:13px;color:#5B6B72;text-align:right}
-details.rt-fold>summary::after{content:"\203A";font-size:22px;color:#1E7D96;transform:rotate(90deg);transition:transform .15s;margin-left:4px}
+details.rt-fold>summary .ic{flex:none;width:32px;height:32px;border-radius:50%;background:var(--cream);display:grid;place-items:center;font-size:15px}
+details.rt-fold>summary .hint{margin-left:auto;font-weight:400;font-size:13px;color:var(--stone-600);text-align:right}
+details.rt-fold>summary::after{content:"\203A";font-size:22px;color:var(--river);transform:rotate(90deg);transition:transform .15s;margin-left:4px}
 details.rt-fold[open]>summary::after{transform:rotate(-90deg)}
-details.rt-fold>summary:focus-visible{outline:2px solid #1E7D96;outline-offset:-2px}
+details.rt-fold>summary:focus-visible{outline:2px solid var(--river);outline-offset:-2px}
 .rt-fold-body{padding:2px 20px 18px}
 .rt-fold-body .guide-section{margin-top:0}
 /* Inside a fold the summary is the section heading: hide only the duplicate
@@ -525,31 +630,31 @@ details.rt-fold>summary:focus-visible{outline:2px solid #1E7D96;outline-offset:-
 .rt-doorways{list-style:none;margin:2px 0 10px;padding:0;max-width:640px}
 .rt-doorways li{padding:7px 0;border-bottom:1px dotted #E7E0D2;font-size:15px}
 .rt-doorways li:last-child{border-bottom:0}
-.rt-doorways a{font-weight:650;color:#1E7D96;text-decoration:none}
+.rt-doorways a{font-weight:650;color:var(--river);text-decoration:none}
 .rt-doorways a:hover{text-decoration:underline}
-.rt-doorways .how{color:#5B6B72;font-size:13px;margin-left:8px}
+.rt-doorways .how{color:var(--stone-600);font-size:13px;margin-left:8px}
 /* Inside a fold the To&Fro block loses its own card chrome — box-in-box read
    as clutter (Heather 2026-08-08). */
 .rt-fold-body .guide-around{background:none;border:0;padding:0;margin:0}
-.rt-worth{background:#FFF6E5;border:1px solid #F0E6C5;border-radius:12px;padding:14px 18px 6px;margin:4px 0 16px}
+.rt-worth{background:var(--cream);border:1px solid #F0E6C5;border-radius:var(--r-m);padding:14px 18px 6px;margin:4px 0 16px}
 .rt-worth p{font-size:14.5px;line-height:1.55;color:#3C4A43;margin:0 0 10px}
-.rt-worth p b{color:#1F514C}
-.rt-worth p b a{color:#1F514C;text-decoration:none}
-.rt-worth p b a:hover{color:#1E7D96;text-decoration:underline}
-.rt-worth .wc{color:#6B7280;font-size:12.5px;white-space:nowrap}
-.rt-chainline{font-size:13px;color:#6B7280;margin:6px 0 0}
+.rt-worth p b{color:var(--pine)}
+.rt-worth p b a{color:var(--pine);text-decoration:none}
+.rt-worth p b a:hover{color:var(--river);text-decoration:underline}
+.rt-worth .wc{color:var(--stone-500);font-size:12.5px;white-space:nowrap}
+.rt-chainline{font-size:13px;color:var(--stone-500);margin:6px 0 0}
 /* Inside the wide fold the shared 600px map cap looks like a postage stamp —
    let the route map fill the fold (other pages keep the shared cap). */
 .rt-fold-body .wwc-map{max-width:none}
 .wwc-mapkey{margin:8px 0 0}
-.wwc-mapkey>summary{list-style:none;cursor:pointer;font-size:13px;font-weight:600;color:#1E7D96;padding:2px 0}
+.wwc-mapkey>summary{list-style:none;cursor:pointer;font-size:13px;font-weight:600;color:var(--river);padding:2px 0}
 .wwc-mapkey>summary::-webkit-details-marker{display:none}
 .wwc-mapkey>summary:hover{text-decoration:underline}
 @media(max-width:880px){
   .rt-head{grid-template-columns:1fr;gap:20px}
   .rt-fold-body{padding:2px 14px 16px}
 }
-</style><div class="rt-hero" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/d290547a66079b8c.jpg')"><div class="rt-hero-shade"></div><span class="cap-credit">Photo: Landon Copplestone</span><span class="cap-place">Duncan, BC</span></div><div class="guide-wrap"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/routes/">Get Inspired</a><span class="g-crumb-sep">/</span><a href="/routes/vancouver-island/">Vancouver Island</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Rally Day 1 alternative (West Vancouver)</span></nav><div class="rt-head"><div class="rt-headmain"><h1 class="guide-h1">Rally Day 1 alternative (West Vancouver)</h1><p class="rt-byline">A ride described at <a href="/route-publishers/gravel-buddies/">Gravel Buddies</a></p><div class="rt-chips" id="rt-chiprow"><button type="button" class="chip tier ambitious" data-panel="rtcp0" aria-controls="rtcp0" aria-expanded="false">Ambitious</button><a class="rt-ratelink" href="/routes/how-we-describe/">How we describe routes →</a></div><div class="rt-chippanels" id="rt-chippanels"><div class="rt-chippanel" id="rtcp0" role="note" aria-label="Ambitious"><p class="l"><b>Ambitious</b> A real undertaking. Demanding on a couple of fronts, like rough surfaces plus steady climbing, or a long stretch on busier roads.</p><p class="f"><b>Difficulty</b> Our overall read of how demanding a route is. We score surface roughness, climbing, singletrack, and how far it runs from services. The route publisher&#x27;s own rating, a lot of busy road riding, or sheer scale can push the tier up, never down.</p><p class="prov">Derived from OpenStreetMap. Good data, not perfect. Spot something wrong? <a href="mailto:hello@bccycletourism.ca?subject=Route%20label%20correction">Tell us</a>.</p><a href="/routes/how-we-describe/">How we describe routes →</a></div></div><p class="rt-lede">The alternative first day of the Gravel Buddies 2025 Rally: 150 km on the same West Vancouver-to-island journey with a bit less gravel and about 950 m of climbing. Same destination, slightly kinder legs.</p><div class="rt-ctainline"><a class="go" href="https://ridewithgps.com/routes/52200188" target="_blank" rel="noopener">Get the route on Gravel Buddies →</a></div></div><aside class="rt-card"><div class="rt-cardwhere"><div class="rt-cardloc" title="Where in BC this ride is"><svg viewBox="0 0 324.2 267.3" aria-hidden="true"><path d="M319.2,246.3 L205.7,247.0 L204.1,231.6 L199.4,238.6 L192.6,233.0 L196.4,235.8 L199.4,231.5 L194.4,230.1 L196.7,223.0 L195.8,221.6 L190.1,230.6 L184.1,225.9 L189.1,213.9 L179.9,217.9 L182.7,212.0 L182.8,204.4 L178.7,215.9 L164.8,213.8 L172.0,210.0 L174.5,204.4 L172.9,200.8 L169.1,210.0 L150.6,204.6 L149.3,200.8 L151.5,201.9 L152.7,202.0 L157.6,201.4 L159.3,202.9 L160.0,199.6 L145.7,199.3 L153.8,195.9 L145.8,195.6 L148.7,192.6 L149.3,189.4 L159.9,188.7 L160.6,187.3 L144.6,188.1 L153.5,174.1 L159.8,181.3 L153.3,172.6 L152.7,169.6 L155.8,167.0 L156.1,162.7 L138.1,174.5 L142.7,160.9 L137.5,162.8 L130.8,146.8 L144.7,153.7 L132.7,145.2 L135.3,136.3 L126.5,150.6 L116.5,138.1 L124.5,131.7 L111.7,128.9 L118.3,129.8 L113.1,122.3 L119.3,123.4 L115.6,118.3 L124.5,104.5 L120.2,101.1 L120.5,107.2 L116.4,115.0 L116.7,90.3 L94.8,79.8 L74.5,38.8 L48.7,9.3 L23.6,29.0 L5.0,5.0 L244.2,5.2 L245.2,147.5 L306.9,212.3 L319.2,246.3 Z" fill="#F2EEE4" stroke="#8A948F" stroke-width="4" stroke-linejoin="round"/><path d="M154.1,228.2 L152.6,225.8 L154.5,221.8 L150.8,224.4 L150.2,221.0 L144.2,222.3 L146.2,219.6 L143.3,217.4 L144.0,214.8 L148.3,214.2 L150.0,216.7 L148.5,213.7 L150.4,211.8 L144.6,211.2 L148.1,213.1 L142.4,215.1 L137.8,208.0 L144.2,205.8 L157.5,213.4 L175.4,218.1 L178.8,226.9 L182.6,231.3 L181.2,232.2 L183.5,236.7 L194.0,241.9 L198.8,250.6 L199.4,257.3 L201.1,254.0 L202.6,259.0 L198.8,262.3 L179.4,252.9 L178.6,251.3 L182.9,246.6 L183.7,244.1 L183.3,241.7 L182.1,246.9 L176.6,246.2 L174.8,248.8 L169.8,245.0 L173.2,242.3 L171.4,243.7 L171.1,238.9 L168.0,241.0 L169.5,237.4 L168.2,239.9 L167.6,237.1 L161.0,238.0 L161.1,234.1 L167.0,232.0 L162.7,232.3 L162.5,229.6 L160.9,231.5 L160.1,227.3 L157.8,225.7 L154.1,228.2 Z" fill="#F2EEE4" stroke="#8A948F" stroke-width="4" stroke-linejoin="round"/><circle cx="199.1" cy="244.7" r="19" fill="#6EC040" stroke="#fff" stroke-width="7"/></svg></div><div><span class="wk">Where in BC</span><span class="wv"><a href="/routes/vancouver-island/">Vancouver Island</a></span></div></div><div class="rt-ring"><div><div class="tiername ambitious">Ambitious</div><div class="tierwhy">The route publisher&#x27;s own rating as a minimum, plus some climbing. <a href="/routes/how-we-describe/">How we rate →</a></div></div></div><ul class="rt-facts"><li><span class="k">Distance</span><span class="v">150 km</span></li><li><span class="k">Climbing</span><span class="v">↗ 965 m</span></li></ul><div class="rt-elev"><svg viewBox="0 0 300 56" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,56 0.0,50.7 1.9,46.8 3.8,49.9 5.7,48.6 7.5,47.4 9.4,33.1 11.3,25.8 13.2,26.2 15.1,20.8 17.0,14.5 18.9,16.2 20.8,29.2 22.6,39.2 24.5,41.5 26.4,40.5 28.3,45.7 30.2,49.1 32.1,52.0 34.0,52.0 35.8,52.0 37.7,52.0 39.6,52.0 41.5,52.0 43.4,52.0 45.3,52.0 47.2,52.0 49.1,52.0 50.9,52.0 52.8,52.0 54.7,52.0 56.6,52.0 58.5,52.0 60.4,52.0 62.3,52.0 64.2,52.0 66.0,52.0 67.9,52.0 69.8,52.0 71.7,52.0 73.6,52.0 75.5,52.0 77.4,52.0 79.2,52.0 81.1,52.0 83.0,52.0 84.9,52.0 86.8,52.0 88.7,52.0 90.6,52.0 92.5,52.0 94.3,52.0 96.2,52.0 98.1,52.0 100.0,52.0 101.9,52.0 103.8,52.0 105.7,52.0 107.5,52.0 109.4,52.0 111.3,52.0 113.2,52.0 115.1,52.0 117.0,52.0 118.9,52.0 120.8,52.0 122.6,52.0 124.5,52.0 126.4,52.0 128.3,52.0 130.2,52.0 132.1,52.0 134.0,52.0 135.8,52.0 137.7,52.0 139.6,52.0 141.5,52.0 143.4,52.0 145.3,49.7 147.2,49.3 149.1,50.5 150.9,49.3 152.8,50.7 154.7,45.3 156.6,46.3 158.5,46.1 160.4,48.9 162.3,49.1 164.2,47.6 166.0,46.3 167.9,45.5 169.8,48.0 171.7,46.6 173.6,47.4 175.5,42.6 177.4,42.4 179.2,42.1 181.1,41.5 183.0,44.9 184.9,46.8 186.8,44.9 188.7,41.9 190.6,42.4 192.5,46.3 194.3,50.7 196.2,47.2 198.1,47.4 200.0,49.3 201.9,47.0 203.8,45.3 205.7,42.1 207.5,42.1 209.4,46.6 211.3,46.8 213.2,44.2 215.1,43.2 217.0,42.4 218.9,42.8 220.8,40.9 222.6,43.6 224.5,41.7 226.4,45.5 228.3,46.3 230.2,47.4 232.1,47.6 234.0,47.4 235.8,44.5 237.7,45.9 239.6,45.5 241.5,47.6 243.4,43.0 245.3,39.0 247.2,39.0 249.1,39.0 250.9,39.0 252.8,39.0 254.7,39.0 256.6,39.0 258.5,39.0 260.4,39.0 262.3,39.0 264.2,39.0 266.0,38.8 267.9,39.0 269.8,39.0 271.7,38.2 273.6,35.0 275.5,33.1 277.4,29.4 279.2,26.2 281.1,26.0 283.0,24.8 284.9,20.1 286.8,17.0 288.7,13.4 290.6,13.4 292.5,6.7 294.3,4.0 296.2,6.7 298.1,22.4 300.0,26.2 300,56" fill="#E6ECDF"/><polyline points="0.0,50.7 1.9,46.8 3.8,49.9 5.7,48.6 7.5,47.4 9.4,33.1 11.3,25.8 13.2,26.2 15.1,20.8 17.0,14.5 18.9,16.2 20.8,29.2 22.6,39.2 24.5,41.5 26.4,40.5 28.3,45.7 30.2,49.1 32.1,52.0 34.0,52.0 35.8,52.0 37.7,52.0 39.6,52.0 41.5,52.0 43.4,52.0 45.3,52.0 47.2,52.0 49.1,52.0 50.9,52.0 52.8,52.0 54.7,52.0 56.6,52.0 58.5,52.0 60.4,52.0 62.3,52.0 64.2,52.0 66.0,52.0 67.9,52.0 69.8,52.0 71.7,52.0 73.6,52.0 75.5,52.0 77.4,52.0 79.2,52.0 81.1,52.0 83.0,52.0 84.9,52.0 86.8,52.0 88.7,52.0 90.6,52.0 92.5,52.0 94.3,52.0 96.2,52.0 98.1,52.0 100.0,52.0 101.9,52.0 103.8,52.0 105.7,52.0 107.5,52.0 109.4,52.0 111.3,52.0 113.2,52.0 115.1,52.0 117.0,52.0 118.9,52.0 120.8,52.0 122.6,52.0 124.5,52.0 126.4,52.0 128.3,52.0 130.2,52.0 132.1,52.0 134.0,52.0 135.8,52.0 137.7,52.0 139.6,52.0 141.5,52.0 143.4,52.0 145.3,49.7 147.2,49.3 149.1,50.5 150.9,49.3 152.8,50.7 154.7,45.3 156.6,46.3 158.5,46.1 160.4,48.9 162.3,49.1 164.2,47.6 166.0,46.3 167.9,45.5 169.8,48.0 171.7,46.6 173.6,47.4 175.5,42.6 177.4,42.4 179.2,42.1 181.1,41.5 183.0,44.9 184.9,46.8 186.8,44.9 188.7,41.9 190.6,42.4 192.5,46.3 194.3,50.7 196.2,47.2 198.1,47.4 200.0,49.3 201.9,47.0 203.8,45.3 205.7,42.1 207.5,42.1 209.4,46.6 211.3,46.8 213.2,44.2 215.1,43.2 217.0,42.4 218.9,42.8 220.8,40.9 222.6,43.6 224.5,41.7 226.4,45.5 228.3,46.3 230.2,47.4 232.1,47.6 234.0,47.4 235.8,44.5 237.7,45.9 239.6,45.5 241.5,47.6 243.4,43.0 245.3,39.0 247.2,39.0 249.1,39.0 250.9,39.0 252.8,39.0 254.7,39.0 256.6,39.0 258.5,39.0 260.4,39.0 262.3,39.0 264.2,39.0 266.0,38.8 267.9,39.0 269.8,39.0 271.7,38.2 273.6,35.0 275.5,33.1 277.4,29.4 279.2,26.2 281.1,26.0 283.0,24.8 284.9,20.1 286.8,17.0 288.7,13.4 290.6,13.4 292.5,6.7 294.3,4.0 296.2,6.7 298.1,22.4 300.0,26.2" fill="none" stroke="#1F514C" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg><div class="rt-barcap"><span><a href="/routes/how-we-describe/#climbing-feel">some climbing — 6 m up per km</a></span><span>high point 229 m</span></div></div><div class="rt-bars"><div class="rt-barrow"><div class="rt-bar"><i style="width:31%;background:#8A7B52"></i><i style="width:0%;background:#5A4E33"></i><i style="flex:1;background:#C9D2D8"></i></div><div class="rt-barcap"><span><a href="/routes/how-we-describe/#surface">gravel &amp; dirt — 31%</a></span><span>paved — 69%</span></div></div><div class="rt-barrow"><div class="rt-bar"><i style="width:51%;background:#2E8A36"></i><i style="width:33%;background:#D9A62E"></i><i style="width:16%;background:#C1121F"></i><i style="flex:1;background:#C9D2D8"></i></div><div class="rt-barcap"><span><a href="/routes/how-we-describe/#comfort">quiet — 51%</a></span><span>busier — 33%</span><span><a href="/routes/how-we-describe/#fast-roads">fast — 16% (14 km)</a></span></div></div><div class="rt-barrow"><div class="rt-bar"><i style="width:0%;background:#55708A"></i><i style="flex:1;background:#C9D2D8"></i></div><div class="rt-barcap"><span><a href="/routes/how-we-describe/#remoteness">far from services — 0%</a></span></div></div></div><div class="links"><a href="#getting-here">Ferries &amp; buses that carry bikes here →</a><a href="/add-stops/">Got the GPX? Add BC Bike Stops to it →</a></div></aside></div><details class="rt-fold" id="stops"><summary><span class="ic">☕</span>Stops worth stopping for<span class="hint">278 along this route</span></summary><div class="rt-fold-body"><div class="rt-worth"><p><b><a href="/wwc/stop/4ceb5f6d20/">Troller Ale House</a>:</b> first pub in Canada to serve micro-brewed beer since Prohibition — pouring Bay Ale from Horseshoe Bay Brewing in 1982. <span class="wc">· West Vancouver</span></p><p><b><a href="/wwc/stop/0d135eb3e1/">Ancora</a>:</b> appeared on Canada&#x27;s 100 Best Restaurants list and earned repeated Wine Spectator Awards of Excellence. <span class="wc">· West Vancouver</span></p><p><b><a href="/wwc/stop/77d7aedd23/">Westholme Tea Farm</a>:</b> one of Canada&#x27;s very few commercial tea-growing operations. <span class="wc">· North Cowichan</span></p></div><div class="guide-section"><h2 id="communities-along-this-route">Communities along this route<a class="h-anchor" href="#communities-along-this-route" aria-label="Link to this section">#</a></h2><div class="guide-chips"><a class="guide-chip" href="/wwc/community/nanaimo/">Nanaimo <b>119</b></a><a class="guide-chip" href="/wwc/community/west-vancouver/">West Vancouver <b>86</b></a><a class="guide-chip" href="/wwc/community/ladysmith/">Ladysmith <b>37</b></a><a class="guide-chip" href="/wwc/community/north-cowichan/">North Cowichan <b>21</b></a><a class="guide-chip" href="/wwc/community/duncan/">Duncan <b>4</b></a><a class="guide-chip" href="/wwc/community/cedar/">Cedar <b>3</b></a><a class="guide-chip" href="/wwc/#view=all&community=chemainus">Chemainus <b>3</b></a><a class="guide-chip" href="/wwc/#view=all&community=paldi">Paldi <b>2</b></a><a class="guide-chip" href="/wwc/#view=all&community=south-wellington">South Wellington <b>2</b></a><a class="guide-chip" href="/wwc/#view=all&community=saltair">Saltair <b>1</b></a></div></div><div class="guide-catgrp"><h3>Nanaimo (119)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/e8324765f2/">Hullo Ferries</a><span class="guide-tier guide-tier-accredited">Accredited</span><span class="guide-meta">· Ferry</span></div><div class="guide-row"><a href="/wwc/stop/d5f417c1c2/">Saysutshun Newcastle Island Ferry</a><span class="guide-tier guide-tier-accredited">Accredited</span><span class="guide-meta">· Ferry</span></div><div class="guide-row"><a href="/wwc/stop/18a08c2ca2/">The Coast Bastion Inn</a><span class="guide-tier guide-tier-accredited">Accredited</span><span class="guide-meta">· Hotel / Motel · $$$$ · Upscale</span></div><div class="guide-row"><a href="/wwc/stop/6038ac6262/">Bistro Taiyo</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/7bd41807a3/">Nanaimo Art Gallery</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/c8691fa8ac/">Nanaimo Ceramic Arts Studio &amp; Gallery</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/5b510d92e4/">The View Oceanside Grill</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Restaurant · $$$ · Upscale</span></div><div class="guide-row"><a href="/wwc/stop/b1b373310a/">Asteras</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$$ · Upscale</span></div><div class="guide-row"><a href="/wwc/stop/92cbb858f5/">Bar Luna</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/761df8a1e4/">Best Western Dorchester Hotel</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Hotel / Motel · $$$ · Mid-range</span></div></div><p class="rt-chainline">Plus the fast-food chains — Pizza Mia, Mambo Gourmet Pizza, Chachi&#x27;s +14 more</p><a class="guide-morelink" href="/wwc/community/nanaimo/">+92 more in Nanaimo →</a></div><div class="guide-catgrp"><h3>West Vancouver (86)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/4ceb5f6d20/">Troller Ale House</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Brewery / Pub · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/0d135eb3e1/">Ancora</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$$ · Upscale</span></div><div class="guide-row"><a href="/wwc/stop/cb5c103cb9/">Beach House Restaurant</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Restaurant · $$$ · Upscale</span></div><div class="guide-row"><a href="/wwc/stop/7458e04226/">Delany&#x27;s Coffee House</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Café / Coffee · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/eed808bd1c/">Ferry Building Gallery</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/8e6e7f0567/">Mereon</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/2380828c6d/">Persia Foods Produce Markets</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Grocery Store</span></div><div class="guide-row"><a href="/wwc/stop/71825389fb/">Thai Pudpong</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/218895216d/">West Vancouver Art Museum</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/b61a03e06b/">West Vancouver Memorial Library</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Library · Free</span></div></div><p class="rt-chainline">Plus the fast-food chains — Freshslice Pizza, Panago, Starbucks +4 more</p><a class="guide-morelink" href="/wwc/community/west-vancouver/">+69 more in West Vancouver →</a></div><div class="guide-catgrp"><h3>Ladysmith (37)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/9099be019b/">Country Grocer</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Grocery Store</span></div><div class="guide-row"><a href="/wwc/stop/1416651a20/">Ladysmith Gallery</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/07616256b0/">Ladysmith Maritime Society Museum</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/f193afa932/">Old Town Bakery</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Bakery / Donuts · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/d50d2a9601/">Bayview Brewing Company</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Brewery / Pub · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/b94b0a3fbd/">Dragon City</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/0faf6806d0/">Fox and Hounds</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Brewery / Pub · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/8d63788c61/">Ironworks Café &amp; Crêperie</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Café / Coffee · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/4a7bd2c5e8/">Kaede Sushi</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/ade2062951/">Ladysmith Library Branch</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Library · Free</span></div></div><p class="rt-chainline">Plus the fast-food chains — KFC, Ladysmith A&amp;W, McDonald&#x27;s +5 more</p><a class="guide-morelink" href="/wwc/community/ladysmith/">+19 more in Ladysmith →</a></div><div class="guide-catgrp"><h3>North Cowichan (21)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/77d7aedd23/">Westholme Tea Farm</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/deb0aa00bc/">Chemainus Valley Museum</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/6eb023c1ce/">Chemainus Visitor Centre</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Visitor Centre · Free</span></div><div class="guide-row"><a href="/wwc/stop/aba5a9a9ca/">Teafarm</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Activity / Experience</span></div><div class="guide-row"><a href="/wwc/stop/7b66247a60/">Bonnie Martin Restaurant</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/0676664cce/">Citrus Cycles</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Repair Shop</span></div><div class="guide-row"><a href="/wwc/stop/098503df02/">Country Grocer</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Grocery Store</span></div><div class="guide-row"><a href="/wwc/stop/dec6fac2f0/">Country Grocer</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Grocery Store</span></div><div class="guide-row"><a href="/wwc/stop/a63ea5a05a/">Little Town Pizza</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/612b991011/">Owl&#x27;s Nest</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Café / Coffee · $ · Cheap eats</span></div></div><p class="rt-chainline">Plus the fast-food chains — Subway, Tim Hortons</p><a class="guide-morelink" href="/wwc/community/north-cowichan/">+9 more in North Cowichan →</a></div><div class="guide-catgrp"><h3>Duncan (4)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/e9d40c7b03/">Deol Family Estate Winery</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Winery / Cidery · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/de5211f652/">Sundays Coffee and Provisions</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Café / Coffee · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/87a23a4a88/">Mid Island Liquor</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Liquor Store</span></div></div><p class="rt-chainline">Plus the fast-food chains — Roundabout Pizza</p></div><div class="guide-catgrp"><h3>Cedar (3)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/23cc78fb5a/">Mahle House Restaurant</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$$$ · Fine dining</span></div><div class="guide-row"><a href="/wwc/stop/38a8a86eff/">Aarkul</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/25269eec16/">Country Grocer</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Grocery Store</span></div></div></div><div class="guide-catgrp"><h3>Chemainus (3)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/850b607002/">Best Western Plus Chemainus Inn</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Hotel / Motel · $$$ · Mid-range</span></div><div class="guide-row"><a href="/wwc/stop/b18dc325fe/">Chemainus Library Branch</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Library · Free</span></div><div class="guide-row"><a href="/wwc/stop/d7e5dcde59/">Eagle Rock Bed and Breakfast</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· B&amp;B / Inn · $ · Rock-bottom</span></div></div></div><div class="guide-catgrp"><h3>Paldi (2)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/7d52c9c16b/">Stoltz Pool Campground</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Public Campground</span></div><div class="guide-row"><a href="/wwc/stop/8f9e1fd6dd/">Stoltz Pool Group Campground</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Public Campground</span></div></div></div><div class="guide-catgrp"><h3>South Wellington (2)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/e33d4d9a49/">The Cranberry Arms Hotel &amp; Pub</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Brewery / Pub · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/fefeb1b3a1/">Cranberry Arms Pub &amp; Hotel</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Hotel / Motel · $$ · Budget</span></div></div></div><div class="guide-catgrp"><h3>Saltair (1)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/3a7ea5969c/">Campers Corner</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Private Campground</span></div></div></div><a class="guide-cta" href="/wwc/#view=all&route=gb-2025-rally-day-1-alternative">Slice and dice these stops in the directory →</a><div class="rt-honesty">These stops come from our directory of welcoming places across BC. Spot something wrong, missing, or closed? <a href="/suggest">Tell us</a> and we'll fix it.</div></div></details><details class="rt-fold" id="getting-here"><summary><span class="ic">⛴</span>Getting here, bike and all<span class="hint">Nanaimo</span></summary><div class="rt-fold-body"><div class="guide-around rt-tofro"><h2 id="getting-to-this-ride-bike-and-all" class="guide-around-h">Getting to this ride, bike and all<a class="h-anchor" href="#getting-to-this-ride-bike-and-all" aria-label="Link to this section">#</a></h2><p class="guide-around-lede"><a href="/wwc/community/nanaimo/">Nanaimo</a> is the handiest transit doorway for this ride. Ferries, buses, and the SkyTrain will carry you and your bike there:</p><ul class="rt-doorways"><li><a href="/to-fro/gabriola-island/nanaimo/">Gabriola Island</a><span class="how">best: ferry</span></li><li><a href="/to-fro/vancouver/nanaimo/">Vancouver</a><span class="how">best: ferry</span></li><li><a href="/to-fro/victoria/nanaimo/">Victoria</a><span class="how">best: bus</span></li><li><a href="/to-fro/kelowna/nanaimo/">Kelowna</a><span class="how">best: bus + SkyTrain + ferry</span></li></ul><p class="rt-tofro-alts">Also on the bike-transit map: <a href="/wwc/community/west-vancouver/">West Vancouver</a> &middot; <a href="/wwc/community/ladysmith/">Ladysmith</a> &middot; <a href="/wwc/community/north-cowichan/">North Cowichan</a> &middot; <a href="/wwc/community/duncan/">Duncan</a></p><p class="guide-around-tool"><a href="/to-fro/">Or pick any two places on To &amp; Fro &rarr;</a></p></div></div></details><details class="rt-fold" id="where-it-goes"><summary><span class="ic">🗺</span>Where this ride goes<span class="hint">rough sketch + stops</span></summary><div class="rt-fold-body"><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:10px;overflow:hidden;border:1px solid #e7e5e4}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}@media (max-width:700px){.wwc-map{height:300px}.wwc-map.large{height:320px}}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:2px;background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px #aaa}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:#78716c;font-size:12px}.wwc-map-pop-addr{display:block;color:#57534e;font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:#2E8A36;color:#fff}</style><div class="guide-section wwc-map-wrap"><div id="routemap" class="wwc-map"><a class="rt-approx-badge" href="https://ridewithgps.com/routes/52200188" target="_blank" rel="noopener"><span class="d1">Approximate line</span><span class="d2">Get the real route ↗</span></a></div><details class="wwc-mapkey"><summary>Map key &amp; layers</summary><div class="wwc-map-ctrls"><label><input type="checkbox" id="routemap-stops" checked> Show stops</label><label><input type="checkbox" id="routemap-mute" checked> Mute other bike trails</label><div class="wwc-map-legend"><span class="row"><span class="d" style="background:#e8590c"></span>Food &amp; Drink</span><span class="row"><span class="d" style="background:#9775fa"></span>Attractions</span><span class="row"><span class="d" style="background:#2b8a3e"></span>Supplies</span><span class="row"><span class="d" style="background:#1971c2"></span>Camping</span><span class="row"><span class="d" style="background:#c2255c"></span>Accommodation</span><span class="row"><span class="d" style="background:#212529"></span>Bike Services</span><span class="row"><span class="d" style="background:#f59f00"></span>Transport</span></div></div><p class="rt-fastleg"><span class="row"><span class="dot" style="background:#d9480f"></span>Riding near fast traffic</span><span class="row"><span class="dot" style="background:#c1121f"></span>Fastest stretches</span></p></details><p class="rt-mapnote">Dashed line = our rough sketch of where the ride goes. The rideable route lives at <a href="https://ridewithgps.com/routes/52200188" target="_blank" rel="noopener">get the route from Gravel Buddies</a>.</p></div><script>
+</style><div class="rt-hero" style="background-image:url('https://bcbb-assets.bccycletourism.workers.dev/photos/d290547a66079b8c.jpg')"><div class="rt-hero-shade"></div><span class="cap-credit">Photo: Landon Copplestone</span><span class="cap-place">Duncan, BC</span></div><div class="guide-wrap"><nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/routes/">Get Inspired</a><span class="g-crumb-sep">/</span><a href="/routes/vancouver-island/">Vancouver Island</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Rally Day 1 alternative (West Vancouver)</span></nav><div class="rt-head"><div class="rt-headmain"><h1 class="guide-h1">Rally Day 1 alternative (West Vancouver)</h1><p class="rt-byline">A ride described at <a href="/route-publishers/gravel-buddies/">Gravel Buddies</a></p><div class="rt-chips" id="rt-chiprow"><button type="button" class="chip tier ambitious" data-panel="rtcp0" aria-controls="rtcp0" aria-expanded="false">Ambitious</button><a class="rt-ratelink" href="/routes/how-we-describe/">How we describe routes →</a></div><div class="rt-chippanels" id="rt-chippanels"><div class="rt-chippanel" id="rtcp0" role="note" aria-label="Ambitious"><p class="l"><b>Ambitious</b> A real undertaking. Demanding on a couple of fronts, like rough surfaces plus steady climbing, or a long stretch on busier roads.</p><p class="f"><b>Difficulty</b> Our overall read of how demanding a route is. We score surface roughness, climbing, singletrack, and how far it runs from services. The route publisher&#x27;s own rating, a lot of busy road riding, or sheer scale can push the tier up, never down.</p><p class="prov">Derived from OpenStreetMap. Good data, not perfect. Spot something wrong? <a href="mailto:hello@bccycletourism.ca?subject=Route%20label%20correction">Tell us</a>.</p><a href="/routes/how-we-describe/">How we describe routes →</a></div></div><p class="rt-lede">The alternative first day of the Gravel Buddies 2025 Rally: 150 km on the same West Vancouver-to-island journey with a bit less gravel and about 950 m of climbing. Same destination, slightly kinder legs.</p><div class="rt-ctainline"><a class="go" href="https://ridewithgps.com/routes/52200188" target="_blank" rel="noopener">Get the route on Gravel Buddies →</a></div></div><aside class="rt-card"><div class="rt-cardwhere"><div class="rt-cardloc" title="Where in BC this ride is"><svg viewBox="0 0 324.2 267.3" aria-hidden="true"><path d="M319.2,246.3 L205.7,247.0 L204.1,231.6 L199.4,238.6 L192.6,233.0 L196.4,235.8 L199.4,231.5 L194.4,230.1 L196.7,223.0 L195.8,221.6 L190.1,230.6 L184.1,225.9 L189.1,213.9 L179.9,217.9 L182.7,212.0 L182.8,204.4 L178.7,215.9 L164.8,213.8 L172.0,210.0 L174.5,204.4 L172.9,200.8 L169.1,210.0 L150.6,204.6 L149.3,200.8 L151.5,201.9 L152.7,202.0 L157.6,201.4 L159.3,202.9 L160.0,199.6 L145.7,199.3 L153.8,195.9 L145.8,195.6 L148.7,192.6 L149.3,189.4 L159.9,188.7 L160.6,187.3 L144.6,188.1 L153.5,174.1 L159.8,181.3 L153.3,172.6 L152.7,169.6 L155.8,167.0 L156.1,162.7 L138.1,174.5 L142.7,160.9 L137.5,162.8 L130.8,146.8 L144.7,153.7 L132.7,145.2 L135.3,136.3 L126.5,150.6 L116.5,138.1 L124.5,131.7 L111.7,128.9 L118.3,129.8 L113.1,122.3 L119.3,123.4 L115.6,118.3 L124.5,104.5 L120.2,101.1 L120.5,107.2 L116.4,115.0 L116.7,90.3 L94.8,79.8 L74.5,38.8 L48.7,9.3 L23.6,29.0 L5.0,5.0 L244.2,5.2 L245.2,147.5 L306.9,212.3 L319.2,246.3 Z" fill="#F2EEE4" stroke="#8A948F" stroke-width="4" stroke-linejoin="round"/><path d="M154.1,228.2 L152.6,225.8 L154.5,221.8 L150.8,224.4 L150.2,221.0 L144.2,222.3 L146.2,219.6 L143.3,217.4 L144.0,214.8 L148.3,214.2 L150.0,216.7 L148.5,213.7 L150.4,211.8 L144.6,211.2 L148.1,213.1 L142.4,215.1 L137.8,208.0 L144.2,205.8 L157.5,213.4 L175.4,218.1 L178.8,226.9 L182.6,231.3 L181.2,232.2 L183.5,236.7 L194.0,241.9 L198.8,250.6 L199.4,257.3 L201.1,254.0 L202.6,259.0 L198.8,262.3 L179.4,252.9 L178.6,251.3 L182.9,246.6 L183.7,244.1 L183.3,241.7 L182.1,246.9 L176.6,246.2 L174.8,248.8 L169.8,245.0 L173.2,242.3 L171.4,243.7 L171.1,238.9 L168.0,241.0 L169.5,237.4 L168.2,239.9 L167.6,237.1 L161.0,238.0 L161.1,234.1 L167.0,232.0 L162.7,232.3 L162.5,229.6 L160.9,231.5 L160.1,227.3 L157.8,225.7 L154.1,228.2 Z" fill="#F2EEE4" stroke="#8A948F" stroke-width="4" stroke-linejoin="round"/><circle cx="199.1" cy="244.7" r="19" fill="#6EC040" stroke="#fff" stroke-width="7"/></svg></div><div><span class="wk">Where in BC</span><span class="wv"><a href="/routes/vancouver-island/">Vancouver Island</a></span></div></div><div class="rt-ring"><div><div class="tiername ambitious">Ambitious</div><div class="tierwhy">The route publisher&#x27;s own rating as a minimum, plus some climbing. <a href="/routes/how-we-describe/">How we rate →</a></div></div></div><ul class="rt-facts"><li><span class="k">Distance</span><span class="v">150 km</span></li><li><span class="k">Climbing</span><span class="v">↗ 965 m</span></li></ul><div class="rt-elev"><svg viewBox="0 0 300 56" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,56 0.0,50.7 1.9,46.8 3.8,49.9 5.7,48.6 7.5,47.4 9.4,33.1 11.3,25.8 13.2,26.2 15.1,20.8 17.0,14.5 18.9,16.2 20.8,29.2 22.6,39.2 24.5,41.5 26.4,40.5 28.3,45.7 30.2,49.1 32.1,52.0 34.0,52.0 35.8,52.0 37.7,52.0 39.6,52.0 41.5,52.0 43.4,52.0 45.3,52.0 47.2,52.0 49.1,52.0 50.9,52.0 52.8,52.0 54.7,52.0 56.6,52.0 58.5,52.0 60.4,52.0 62.3,52.0 64.2,52.0 66.0,52.0 67.9,52.0 69.8,52.0 71.7,52.0 73.6,52.0 75.5,52.0 77.4,52.0 79.2,52.0 81.1,52.0 83.0,52.0 84.9,52.0 86.8,52.0 88.7,52.0 90.6,52.0 92.5,52.0 94.3,52.0 96.2,52.0 98.1,52.0 100.0,52.0 101.9,52.0 103.8,52.0 105.7,52.0 107.5,52.0 109.4,52.0 111.3,52.0 113.2,52.0 115.1,52.0 117.0,52.0 118.9,52.0 120.8,52.0 122.6,52.0 124.5,52.0 126.4,52.0 128.3,52.0 130.2,52.0 132.1,52.0 134.0,52.0 135.8,52.0 137.7,52.0 139.6,52.0 141.5,52.0 143.4,52.0 145.3,49.7 147.2,49.3 149.1,50.5 150.9,49.3 152.8,50.7 154.7,45.3 156.6,46.3 158.5,46.1 160.4,48.9 162.3,49.1 164.2,47.6 166.0,46.3 167.9,45.5 169.8,48.0 171.7,46.6 173.6,47.4 175.5,42.6 177.4,42.4 179.2,42.1 181.1,41.5 183.0,44.9 184.9,46.8 186.8,44.9 188.7,41.9 190.6,42.4 192.5,46.3 194.3,50.7 196.2,47.2 198.1,47.4 200.0,49.3 201.9,47.0 203.8,45.3 205.7,42.1 207.5,42.1 209.4,46.6 211.3,46.8 213.2,44.2 215.1,43.2 217.0,42.4 218.9,42.8 220.8,40.9 222.6,43.6 224.5,41.7 226.4,45.5 228.3,46.3 230.2,47.4 232.1,47.6 234.0,47.4 235.8,44.5 237.7,45.9 239.6,45.5 241.5,47.6 243.4,43.0 245.3,39.0 247.2,39.0 249.1,39.0 250.9,39.0 252.8,39.0 254.7,39.0 256.6,39.0 258.5,39.0 260.4,39.0 262.3,39.0 264.2,39.0 266.0,38.8 267.9,39.0 269.8,39.0 271.7,38.2 273.6,35.0 275.5,33.1 277.4,29.4 279.2,26.2 281.1,26.0 283.0,24.8 284.9,20.1 286.8,17.0 288.7,13.4 290.6,13.4 292.5,6.7 294.3,4.0 296.2,6.7 298.1,22.4 300.0,26.2 300,56" fill="#E6ECDF"/><polyline points="0.0,50.7 1.9,46.8 3.8,49.9 5.7,48.6 7.5,47.4 9.4,33.1 11.3,25.8 13.2,26.2 15.1,20.8 17.0,14.5 18.9,16.2 20.8,29.2 22.6,39.2 24.5,41.5 26.4,40.5 28.3,45.7 30.2,49.1 32.1,52.0 34.0,52.0 35.8,52.0 37.7,52.0 39.6,52.0 41.5,52.0 43.4,52.0 45.3,52.0 47.2,52.0 49.1,52.0 50.9,52.0 52.8,52.0 54.7,52.0 56.6,52.0 58.5,52.0 60.4,52.0 62.3,52.0 64.2,52.0 66.0,52.0 67.9,52.0 69.8,52.0 71.7,52.0 73.6,52.0 75.5,52.0 77.4,52.0 79.2,52.0 81.1,52.0 83.0,52.0 84.9,52.0 86.8,52.0 88.7,52.0 90.6,52.0 92.5,52.0 94.3,52.0 96.2,52.0 98.1,52.0 100.0,52.0 101.9,52.0 103.8,52.0 105.7,52.0 107.5,52.0 109.4,52.0 111.3,52.0 113.2,52.0 115.1,52.0 117.0,52.0 118.9,52.0 120.8,52.0 122.6,52.0 124.5,52.0 126.4,52.0 128.3,52.0 130.2,52.0 132.1,52.0 134.0,52.0 135.8,52.0 137.7,52.0 139.6,52.0 141.5,52.0 143.4,52.0 145.3,49.7 147.2,49.3 149.1,50.5 150.9,49.3 152.8,50.7 154.7,45.3 156.6,46.3 158.5,46.1 160.4,48.9 162.3,49.1 164.2,47.6 166.0,46.3 167.9,45.5 169.8,48.0 171.7,46.6 173.6,47.4 175.5,42.6 177.4,42.4 179.2,42.1 181.1,41.5 183.0,44.9 184.9,46.8 186.8,44.9 188.7,41.9 190.6,42.4 192.5,46.3 194.3,50.7 196.2,47.2 198.1,47.4 200.0,49.3 201.9,47.0 203.8,45.3 205.7,42.1 207.5,42.1 209.4,46.6 211.3,46.8 213.2,44.2 215.1,43.2 217.0,42.4 218.9,42.8 220.8,40.9 222.6,43.6 224.5,41.7 226.4,45.5 228.3,46.3 230.2,47.4 232.1,47.6 234.0,47.4 235.8,44.5 237.7,45.9 239.6,45.5 241.5,47.6 243.4,43.0 245.3,39.0 247.2,39.0 249.1,39.0 250.9,39.0 252.8,39.0 254.7,39.0 256.6,39.0 258.5,39.0 260.4,39.0 262.3,39.0 264.2,39.0 266.0,38.8 267.9,39.0 269.8,39.0 271.7,38.2 273.6,35.0 275.5,33.1 277.4,29.4 279.2,26.2 281.1,26.0 283.0,24.8 284.9,20.1 286.8,17.0 288.7,13.4 290.6,13.4 292.5,6.7 294.3,4.0 296.2,6.7 298.1,22.4 300.0,26.2" fill="none" stroke="#1F514C" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg><div class="rt-barcap"><span><a href="/routes/how-we-describe/#climbing-feel">some climbing — 6 m up per km</a></span><span>high point 229 m</span></div></div><div class="rt-bars"><div class="rt-barrow"><div class="rt-bar"><i style="width:31%;background:#8A7B52"></i><i style="width:0%;background:#5A4E33"></i><i style="flex:1;background:#C9D2D8"></i></div><div class="rt-barcap"><span><a href="/routes/how-we-describe/#surface">gravel &amp; dirt — 31%</a></span><span>paved — 69%</span></div></div><div class="rt-barrow"><div class="rt-bar"><i style="width:51%;background:var(--forest)"></i><i style="width:33%;background:#D9A62E"></i><i style="width:16%;background:#C1121F"></i><i style="flex:1;background:#C9D2D8"></i></div><div class="rt-barcap"><span><a href="/routes/how-we-describe/#comfort">quiet — 51%</a></span><span>busier — 33%</span><span><a href="/routes/how-we-describe/#fast-roads">fast — 16% (14 km)</a></span></div></div><div class="rt-barrow"><div class="rt-bar"><i style="width:0%;background:#55708A"></i><i style="flex:1;background:#C9D2D8"></i></div><div class="rt-barcap"><span><a href="/routes/how-we-describe/#remoteness">far from services — 0%</a></span></div></div></div><div class="links"><a href="#getting-here">Ferries &amp; buses that carry bikes here →</a><a href="/add-stops/">Got the GPX? Add BC Bike Stops to it →</a></div></aside></div><details class="rt-fold" id="stops"><summary><span class="ic">☕</span>Stops worth stopping for<span class="hint">278 along this route</span></summary><div class="rt-fold-body"><div class="rt-worth"><p><b><a href="/wwc/stop/4ceb5f6d20/">Troller Ale House</a>:</b> first pub in Canada to serve micro-brewed beer since Prohibition — pouring Bay Ale from Horseshoe Bay Brewing in 1982. <span class="wc">· West Vancouver</span></p><p><b><a href="/wwc/stop/0d135eb3e1/">Ancora</a>:</b> appeared on Canada&#x27;s 100 Best Restaurants list and earned repeated Wine Spectator Awards of Excellence. <span class="wc">· West Vancouver</span></p><p><b><a href="/wwc/stop/77d7aedd23/">Westholme Tea Farm</a>:</b> one of Canada&#x27;s very few commercial tea-growing operations. <span class="wc">· North Cowichan</span></p></div><div class="guide-section"><h2 id="communities-along-this-route">Communities along this route<a class="h-anchor" href="#communities-along-this-route" aria-label="Link to this section">#</a></h2><div class="guide-chips"><a class="guide-chip" href="/wwc/community/nanaimo/">Nanaimo <b>119</b></a><a class="guide-chip" href="/wwc/community/west-vancouver/">West Vancouver <b>86</b></a><a class="guide-chip" href="/wwc/community/ladysmith/">Ladysmith <b>37</b></a><a class="guide-chip" href="/wwc/community/north-cowichan/">North Cowichan <b>21</b></a><a class="guide-chip" href="/wwc/community/duncan/">Duncan <b>4</b></a><a class="guide-chip" href="/wwc/community/cedar/">Cedar <b>3</b></a><a class="guide-chip" href="/wwc/#view=all&community=chemainus">Chemainus <b>3</b></a><a class="guide-chip" href="/wwc/#view=all&community=paldi">Paldi <b>2</b></a><a class="guide-chip" href="/wwc/#view=all&community=south-wellington">South Wellington <b>2</b></a><a class="guide-chip" href="/wwc/#view=all&community=saltair">Saltair <b>1</b></a></div></div><div class="guide-catgrp"><h3>Nanaimo (119)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/e8324765f2/">Hullo Ferries</a><span class="guide-tier guide-tier-accredited">Accredited</span><span class="guide-meta">· Ferry</span></div><div class="guide-row"><a href="/wwc/stop/d5f417c1c2/">Saysutshun Newcastle Island Ferry</a><span class="guide-tier guide-tier-accredited">Accredited</span><span class="guide-meta">· Ferry</span></div><div class="guide-row"><a href="/wwc/stop/18a08c2ca2/">The Coast Bastion Inn</a><span class="guide-tier guide-tier-accredited">Accredited</span><span class="guide-meta">· Hotel / Motel · $$$$ · Upscale</span></div><div class="guide-row"><a href="/wwc/stop/6038ac6262/">Bistro Taiyo</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/7bd41807a3/">Nanaimo Art Gallery</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/c8691fa8ac/">Nanaimo Ceramic Arts Studio &amp; Gallery</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/5b510d92e4/">The View Oceanside Grill</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Restaurant · $$$ · Upscale</span></div><div class="guide-row"><a href="/wwc/stop/b1b373310a/">Asteras</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$$ · Upscale</span></div><div class="guide-row"><a href="/wwc/stop/92cbb858f5/">Bar Luna</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/761df8a1e4/">Best Western Dorchester Hotel</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Hotel / Motel · $$$ · Mid-range</span></div></div><p class="rt-chainline">Plus the fast-food chains — Pizza Mia, Mambo Gourmet Pizza, Chachi&#x27;s +14 more</p><a class="guide-morelink" href="/wwc/community/nanaimo/">+92 more in Nanaimo →</a></div><div class="guide-catgrp"><h3>West Vancouver (86)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/4ceb5f6d20/">Troller Ale House</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Brewery / Pub · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/0d135eb3e1/">Ancora</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$$ · Upscale</span></div><div class="guide-row"><a href="/wwc/stop/cb5c103cb9/">Beach House Restaurant</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Restaurant · $$$ · Upscale</span></div><div class="guide-row"><a href="/wwc/stop/7458e04226/">Delany&#x27;s Coffee House</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Café / Coffee · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/eed808bd1c/">Ferry Building Gallery</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/8e6e7f0567/">Mereon</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/2380828c6d/">Persia Foods Produce Markets</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Grocery Store</span></div><div class="guide-row"><a href="/wwc/stop/71825389fb/">Thai Pudpong</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/218895216d/">West Vancouver Art Museum</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/b61a03e06b/">West Vancouver Memorial Library</a><span class="guide-tier guide-tier-welcoming">Welcoming</span><span class="guide-meta">· Library · Free</span></div></div><p class="rt-chainline">Plus the fast-food chains — Freshslice Pizza, Panago, Starbucks +4 more</p><a class="guide-morelink" href="/wwc/community/west-vancouver/">+69 more in West Vancouver →</a></div><div class="guide-catgrp"><h3>Ladysmith (37)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/9099be019b/">Country Grocer</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Grocery Store</span></div><div class="guide-row"><a href="/wwc/stop/1416651a20/">Ladysmith Gallery</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/07616256b0/">Ladysmith Maritime Society Museum</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/f193afa932/">Old Town Bakery</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Bakery / Donuts · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/d50d2a9601/">Bayview Brewing Company</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Brewery / Pub · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/b94b0a3fbd/">Dragon City</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/0faf6806d0/">Fox and Hounds</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Brewery / Pub · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/8d63788c61/">Ironworks Café &amp; Crêperie</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Café / Coffee · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/4a7bd2c5e8/">Kaede Sushi</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/ade2062951/">Ladysmith Library Branch</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Library · Free</span></div></div><p class="rt-chainline">Plus the fast-food chains — KFC, Ladysmith A&amp;W, McDonald&#x27;s +5 more</p><a class="guide-morelink" href="/wwc/community/ladysmith/">+19 more in Ladysmith →</a></div><div class="guide-catgrp"><h3>North Cowichan (21)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/77d7aedd23/">Westholme Tea Farm</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/deb0aa00bc/">Chemainus Valley Museum</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Museum / Gallery · Free</span></div><div class="guide-row"><a href="/wwc/stop/6eb023c1ce/">Chemainus Visitor Centre</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Visitor Centre · Free</span></div><div class="guide-row"><a href="/wwc/stop/aba5a9a9ca/">Teafarm</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Activity / Experience</span></div><div class="guide-row"><a href="/wwc/stop/7b66247a60/">Bonnie Martin Restaurant</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/0676664cce/">Citrus Cycles</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Repair Shop</span></div><div class="guide-row"><a href="/wwc/stop/098503df02/">Country Grocer</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Grocery Store</span></div><div class="guide-row"><a href="/wwc/stop/dec6fac2f0/">Country Grocer</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Grocery Store</span></div><div class="guide-row"><a href="/wwc/stop/a63ea5a05a/">Little Town Pizza</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/612b991011/">Owl&#x27;s Nest</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Café / Coffee · $ · Cheap eats</span></div></div><p class="rt-chainline">Plus the fast-food chains — Subway, Tim Hortons</p><a class="guide-morelink" href="/wwc/community/north-cowichan/">+9 more in North Cowichan →</a></div><div class="guide-catgrp"><h3>Duncan (4)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/e9d40c7b03/">Deol Family Estate Winery</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Winery / Cidery · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/de5211f652/">Sundays Coffee and Provisions</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Café / Coffee · $ · Cheap eats</span></div><div class="guide-row"><a href="/wwc/stop/87a23a4a88/">Mid Island Liquor</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Liquor Store</span></div></div><p class="rt-chainline">Plus the fast-food chains — Roundabout Pizza</p></div><div class="guide-catgrp"><h3>Cedar (3)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/23cc78fb5a/">Mahle House Restaurant</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$$$ · Fine dining</span></div><div class="guide-row"><a href="/wwc/stop/38a8a86eff/">Aarkul</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Restaurant · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/25269eec16/">Country Grocer</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Grocery Store</span></div></div></div><div class="guide-catgrp"><h3>Chemainus (3)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/850b607002/">Best Western Plus Chemainus Inn</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Hotel / Motel · $$$ · Mid-range</span></div><div class="guide-row"><a href="/wwc/stop/b18dc325fe/">Chemainus Library Branch</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Library · Free</span></div><div class="guide-row"><a href="/wwc/stop/d7e5dcde59/">Eagle Rock Bed and Breakfast</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· B&amp;B / Inn · $ · Rock-bottom</span></div></div></div><div class="guide-catgrp"><h3>Paldi (2)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/7d52c9c16b/">Stoltz Pool Campground</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Public Campground</span></div><div class="guide-row"><a href="/wwc/stop/8f9e1fd6dd/">Stoltz Pool Group Campground</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Public Campground</span></div></div></div><div class="guide-catgrp"><h3>South Wellington (2)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/e33d4d9a49/">The Cranberry Arms Hotel &amp; Pub</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Brewery / Pub · $$ · Casual</span></div><div class="guide-row"><a href="/wwc/stop/fefeb1b3a1/">Cranberry Arms Pub &amp; Hotel</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Hotel / Motel · $$ · Budget</span></div></div></div><div class="guide-catgrp"><h3>Saltair (1)</h3><div class="guide-rows"><div class="guide-row"><a href="/wwc/stop/3a7ea5969c/">Campers Corner</a><span class="guide-tier guide-tier-info">Info</span><span class="guide-meta">· Private Campground</span></div></div></div><a class="guide-cta" href="/wwc/#view=all&route=gb-2025-rally-day-1-alternative">Slice and dice these stops in the directory →</a><div class="rt-honesty">These stops come from our directory of welcoming places across BC. Spot something wrong, missing, or closed? <a href="/suggest">Tell us</a> and we'll fix it.</div></div></details><details class="rt-fold" id="getting-here"><summary><span class="ic">⛴</span>Getting here, bike and all<span class="hint">Nanaimo</span></summary><div class="rt-fold-body"><div class="guide-around rt-tofro"><h2 id="getting-to-this-ride-bike-and-all" class="guide-around-h">Getting to this ride, bike and all<a class="h-anchor" href="#getting-to-this-ride-bike-and-all" aria-label="Link to this section">#</a></h2><p class="guide-around-lede"><a href="/wwc/community/nanaimo/">Nanaimo</a> is the handiest transit doorway for this ride. Ferries, buses, and the SkyTrain will carry you and your bike there:</p><ul class="rt-doorways"><li><a href="/to-fro/gabriola-island/nanaimo/">Gabriola Island</a><span class="how">best: ferry</span></li><li><a href="/to-fro/vancouver/nanaimo/">Vancouver</a><span class="how">best: ferry</span></li><li><a href="/to-fro/victoria/nanaimo/">Victoria</a><span class="how">best: bus</span></li><li><a href="/to-fro/kelowna/nanaimo/">Kelowna</a><span class="how">best: bus + SkyTrain + ferry</span></li></ul><p class="rt-tofro-alts">Also on the bike-transit map: <a href="/wwc/community/west-vancouver/">West Vancouver</a> &middot; <a href="/wwc/community/ladysmith/">Ladysmith</a> &middot; <a href="/wwc/community/north-cowichan/">North Cowichan</a> &middot; <a href="/wwc/community/duncan/">Duncan</a></p><p class="guide-around-tool"><a href="/to-fro/">Or pick any two places on To &amp; Fro &rarr;</a></p></div></div></details><details class="rt-fold" id="where-it-goes"><summary><span class="ic">🗺</span>Where this ride goes<span class="hint">rough sketch + stops</span></summary><div class="rt-fold-body"><link rel="stylesheet" href="/map/lib/maplibre-gl.css"><style>.wwc-map-wrap{margin-top:8px}.wwc-map{width:100%;max-width:600px;height:460px;border-radius:var(--r-m);overflow:hidden;border:1px solid var(--stone-200)}.wwc-map.compact{height:230px}.wwc-map.large{max-width:none;height:600px}@media (max-width:700px){.wwc-map{height:300px}.wwc-map.large{height:320px}}.wwc-map-ctrls{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:10px 0 0;font-size:14px}.wwc-map-ctrls label{display:flex;gap:6px;align-items:center;cursor:pointer}.stopmap-lgd{display:flex;gap:6px;align-items:center;color:#5f259f;font-weight:600}.stopmap-lgd-sw{width:16px;height:3px;border-radius:var(--r-s);background:#5f259f;box-shadow:0 0 0 1.5px #fff}.wwc-map-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#44403c}.wwc-map-legend span.row{display:flex;align-items:center;gap:5px}.wwc-map-legend .d{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;box-shadow:0 0 0 1px var(--stone-400)}.maplibregl-popup-content{font-size:13px;padding:8px 10px}.wwc-map-pop-cat{color:var(--stone-500);font-size:12px}.wwc-map-pop-addr{display:block;color:var(--stone-600);font-size:12px;margin-top:3px}.wwc-map-tag{display:inline-block;margin-top:5px;padding:1px 7px;border-radius:var(--r-m);font-size:11px;font-weight:600}.wwc-map-tag.welcoming{background:#FEF3C7;color:#92400E}.wwc-map-tag.accredited{background:var(--forest);color:#fff}</style><div class="guide-section wwc-map-wrap"><div id="routemap" class="wwc-map"><a class="rt-approx-badge" href="https://ridewithgps.com/routes/52200188" target="_blank" rel="noopener"><span class="d1">Approximate line</span><span class="d2">Get the real route ↗</span></a></div><details class="wwc-mapkey"><summary>Map key &amp; layers</summary><div class="wwc-map-ctrls"><label><input type="checkbox" id="routemap-stops" checked> Show stops</label><label><input type="checkbox" id="routemap-mute" checked> Mute other bike trails</label><div class="wwc-map-legend"><span class="row"><span class="d" style="background:#e8590c"></span>Food &amp; Drink</span><span class="row"><span class="d" style="background:#9775fa"></span>Attractions</span><span class="row"><span class="d" style="background:#2b8a3e"></span>Supplies</span><span class="row"><span class="d" style="background:#1971c2"></span>Camping</span><span class="row"><span class="d" style="background:#c2255c"></span>Accommodation</span><span class="row"><span class="d" style="background:#212529"></span>Bike Services</span><span class="row"><span class="d" style="background:#f59f00"></span>Transport</span></div></div><p class="rt-fastleg"><span class="row"><span class="dot" style="background:#d9480f"></span>Riding near fast traffic</span><span class="row"><span class="dot" style="background:#c1121f"></span>Fastest stretches</span></p></details><p class="rt-mapnote">Dashed line = our rough sketch of where the ride goes. The rideable route lives at <a href="https://ridewithgps.com/routes/52200188" target="_blank" rel="noopener">get the route from Gravel Buddies</a>.</p></div><script>
 (function(){
   var el=document.getElementById("routemap");
   if(!el) return;
@@ -637,7 +742,7 @@ details.rt-fold>summary:focus-visible{outline:2px solid #1E7D96;outline-offset:-
     io.observe(el);
   } else { init(); }
 })();
-</script><div class="guide-section rt-fast"><h2 id="fast-road-stretches">Fast-road stretches<a class="h-anchor" href="#fast-road-stretches" aria-label="Link to this section">#</a></h2><p class="rt-fast-fine">We believe these are the fast, unprotected roads on this route. We can tell you which roads and roughly how far, but not the order you will ride them. If you see an error, <a href="mailto:hello@bccycletourism.ca?subject=Route%20rating%20correction">tell us</a> and we&#x27;ll fix it.</p><ul><li data-road="Cedar Road"><span class="dot" style="background:#d9480f"></span><span>about 3 km of Cedar Road <span class="near">· near Boat Harbour</span></span></li><li data-road="Adshead Road"><span class="dot" style="background:#d9480f"></span><span>about 3 km of Adshead Road <span class="near">· near Cassidy</span></span></li><li data-road="Trans-Canada Highway"><span class="dot" style="background:#c1121f"></span><span>about 2 km of Trans-Canada Highway <span class="near">· near Cassidy</span></span></li><li data-road="Chemainus Road"><span class="dot" style="background:#d9480f"></span><span>about 2 km of Chemainus Road <span class="near">· near Osborn Bay</span></span></li><li data-road="Haslam Road"><span class="dot" style="background:#d9480f"></span><span>about 2 km of Haslam Road <span class="near">· near Cassidy</span></span></li><li data-road="Cowichan Valley Highway"><span class="dot" style="background:#d9480f"></span><span>about 1 km of Cowichan Valley Highway <span class="near">· near Somenos</span></span></li></ul></div></div></details><details class="rt-fold" id="territories"><summary><span class="ic">🪶</span>Traditional territories</summary><div class="rt-fold-body"><p class="rt-terr">This route travels through the traditional territories of the <a href="https://native-land.ca/listings/territories/w%cc%b1sanec" target="_blank" rel="noopener">Á,LEṈENEȻ ȽTE (W̱SÁNEĆ)</a>, <a href="https://native-land.ca/listings/territories/cayuse-umatilla-and-walla-walla" target="_blank" rel="noopener">Cayuse, Umatilla and Walla Walla</a>, <a href="https://native-land.ca/listings/territories/halalt" target="_blank" rel="noopener">Halalt</a>, <a href="https://native-land.ca/listings/territories/hulquminum-treaty-group" target="_blank" rel="noopener">Hul’qumi’num Treaty Group</a>, <a href="https://native-land.ca/listings/territories/quwutsun" target="_blank" rel="noopener">Quw’utsun</a>, <a href="https://native-land.ca/listings/territories/stolo-treaty-association" target="_blank" rel="noopener">S’ólh Téméxw (Stó:lō)</a>, <a href="https://native-land.ca/listings/territories/semiahmoo" target="_blank" rel="noopener">Semiahmoo</a>, <a href="https://native-land.ca/listings/territories/tsleil-waututh-s%c9%99l%cc%93ilw%c9%99ta%c9%82%c9%ac" target="_blank" rel="noopener">səl̓ilwətaɁɬ təməxʷ (Tsleil-Waututh)</a>, <a href="https://native-land.ca/listings/territories/skwxwu7mesh-uxwumixw" target="_blank" rel="noopener">Skwxwú7mesh-ulh Temíx̱w (Squamish)</a>, <a href="https://native-land.ca/listings/territories/snuneymuxw" target="_blank" rel="noopener">Snuneymuxw</a>, <a href="https://native-land.ca/listings/territories/stzuminus" target="_blank" rel="noopener">Stz’uminus</a>, <a href="https://native-land.ca/listings/territories/x%ca%b7m%c9%99%ce%b8k%ca%b7%c9%99y%cc%93%c9%99m" target="_blank" rel="noopener">šxʷməθkʷəy̓əmaɁɬ təməxʷ (Musqueam)</a>, and <a href="https://native-land.ca/listings/territories/tsuubaa-asatx" target="_blank" rel="noopener">Ts’uubaa-asatx</a>.</p><p class="rt-terrnote">Territory data from <a href="https://native-land.ca" target="_blank" rel="noopener">Native Land Digital</a>, for educational purposes only.</p></div></details><div class="rt-bottom"><p>Ready to ride it?</p><div class="rt-ctacol"><a class="go" href="https://ridewithgps.com/routes/52200188" target="_blank" rel="noopener">Get the route on Gravel Buddies →</a><a class="rt-alt" href="/add-stops/">Got the GPX? Add BC Bike Stops to it &rarr;</a></div></div></div><script>
+</script><div class="guide-section rt-fast"><h2 id="fast-road-stretches">Fast-road stretches<a class="h-anchor" href="#fast-road-stretches" aria-label="Link to this section">#</a></h2><p class="rt-fast-fine">We believe these are the fast, unprotected roads on this route. We can tell you which roads and roughly how far, but not the order you will ride them. If you see an error, <a href="mailto:hello@bccycletourism.ca?subject=Route%20rating%20correction">tell us</a> and we&#x27;ll fix it.</p><ul><li data-road="Cedar Road"><span class="dot" style="background:#d9480f"></span><span>about 3 km of Cedar Road <span class="near">· near Boat Harbour</span></span></li><li data-road="Adshead Road"><span class="dot" style="background:#d9480f"></span><span>about 3 km of Adshead Road <span class="near">· near Cassidy</span></span></li><li data-road="Trans-Canada Highway"><span class="dot" style="background:#c1121f"></span><span>about 2 km of Trans-Canada Highway <span class="near">· near Cassidy</span></span></li><li data-road="Chemainus Road"><span class="dot" style="background:#d9480f"></span><span>about 2 km of Chemainus Road <span class="near">· near Osborn Bay</span></span></li><li data-road="Haslam Road"><span class="dot" style="background:#d9480f"></span><span>about 2 km of Haslam Road <span class="near">· near Cassidy</span></span></li><li data-road="Cowichan Valley Highway"><span class="dot" style="background:#d9480f"></span><span>about 1 km of Cowichan Valley Highway <span class="near">· near Somenos</span></span></li></ul></div></div></details><details class="rt-fold" id="territories"><summary><span class="ic">🪶</span>Traditional territories</summary><div class="rt-fold-body"><p class="rt-terr">This route travels through the traditional territories of the <a href="https://native-land.ca/listings/territories/w%cc%b1sanec" target="_blank" rel="noopener">Á,LEṈENEȻ ȽTE (W̱SÁNEĆ)</a>, <a href="https://native-land.ca/listings/territories/cayuse-umatilla-and-walla-walla" target="_blank" rel="noopener">Cayuse, Umatilla and Walla Walla</a>, <a href="https://native-land.ca/listings/territories/halalt" target="_blank" rel="noopener">Halalt</a>, <a href="https://native-land.ca/listings/territories/hulquminum-treaty-group" target="_blank" rel="noopener">Hul’qumi’num Treaty Group</a>, <a href="https://native-land.ca/listings/territories/quwutsun" target="_blank" rel="noopener">Quw’utsun</a>, <a href="https://native-land.ca/listings/territories/stolo-treaty-association" target="_blank" rel="noopener">S’ólh Téméxw (Stó:lō)</a>, <a href="https://native-land.ca/listings/territories/semiahmoo" target="_blank" rel="noopener">Semiahmoo</a>, <a href="https://native-land.ca/listings/territories/tsleil-waututh-s%c9%99l%cc%93ilw%c9%99ta%c9%82%c9%ac" target="_blank" rel="noopener">səl̓ilwətaɁɬ təməxʷ (Tsleil-Waututh)</a>, <a href="https://native-land.ca/listings/territories/skwxwu7mesh-uxwumixw" target="_blank" rel="noopener">Skwxwú7mesh-ulh Temíx̱w (Squamish)</a>, <a href="https://native-land.ca/listings/territories/snuneymuxw" target="_blank" rel="noopener">Snuneymuxw</a>, <a href="https://native-land.ca/listings/territories/stzuminus" target="_blank" rel="noopener">Stz’uminus</a>, <a href="https://native-land.ca/listings/territories/x%ca%b7m%c9%99%ce%b8k%ca%b7%c9%99y%cc%93%c9%99m" target="_blank" rel="noopener">šxʷməθkʷəy̓əmaɁɬ təməxʷ (Musqueam)</a>, and <a href="https://native-land.ca/listings/territories/tsuubaa-asatx" target="_blank" rel="noopener">Ts’uubaa-asatx</a>.</p><p class="rt-terrnote">Territory data from <a href="https://native-land.ca" target="_blank" rel="noopener">Native Land Digital</a>, for educational purposes only.</p></div></details><div class="wpanel center rt-bottom"><div class="wp-title">Ready to ride it?</div><div class="wp-act"><a class="wp-btn" href="https://ridewithgps.com/routes/52200188" target="_blank" rel="noopener">Get the route on Gravel Buddies →</a><a class="wp-alt" href="/add-stops/">Got the GPX? Add BC Bike Stops to it &rarr;</a></div></div></div><script>
 (function(){
   var row = document.getElementById('rt-chiprow');
   var host = document.getElementById('rt-chippanels');
