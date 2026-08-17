@@ -6,7 +6,7 @@ places to stay, bike shops, attractions, and the transport that connects them.
 One row per place, with where it is, what kind of place it is, and how it treats
 an arriving cyclist as far as we know.
 
-Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-08-15 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -21,12 +21,12 @@ that or not. Use it, redistribute it, build on it. If you publish a database
 derived from it, that database has to carry the same licence.
 
 Suggested citation: BC Cycle Tourism Society (2026). Places in British Columbia
-that a cyclist might want [data set]. Version 2026-07-26.
+that a cyclist might want [data set]. Version 2026-08-15.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-18524 rows, 19 columns.
+18524 rows, 22 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no. Blanks are common here, because most of these
@@ -160,6 +160,19 @@ ownership
     split finer in the data: provincial park, provincial recreation site,
     national park, municipal, and so on. Blank on a few rows.
 
+notability  [0-4]
+    How significant the place is in its own right, on a scale of 0 to 4: 0 is an
+    ordinary example of its kind, 4 is somewhere people travel to see. Assigned
+    by a language model reading the place's website and its OpenStreetMap record
+    against a fixed rubric, and not reviewed place by place. It is not a rating
+    of quality, and a 0 is not a criticism: most places are ordinary, which is
+    the normal case. Blank where we have not assessed it.
+
+rider_delight  [0-4]
+    How much a touring cyclist in particular would enjoy stopping, 0 to 4. Only
+    Attractions carry this. For other kinds of place the question would not mean
+    much, so a blank here means not applicable rather than not known.
+
 indigenous_role
     Whether the place is Indigenous owned, Indigenous operated, or presents
     Indigenous culture and heritage. Semicolon separated where more than one
@@ -189,6 +202,11 @@ google_place_id_match_km  [km]
     the same business, and you should decide for yourself whether to trust the
     id. Apply whatever threshold you like: we have deliberately not applied one
     for you.
+
+wow_evidence
+    The words behind the two scores above, quoted or paraphrased from whatever
+    we read. Published so the scores can be argued with: if you disagree with a
+    number, this is what produced it.
 
 description
     A short description of the place, written for riders. Drafted by a language

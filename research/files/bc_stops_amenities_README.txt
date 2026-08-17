@@ -6,7 +6,7 @@ more than sixty amenities and no place has more than a handful, so a wide table
 would be mostly empty. In this shape it pivots. Join it to the places file on
 listing_key.
 
-Published 2026-07-26 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-08-15 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -21,7 +21,7 @@ that or not. Use it, redistribute it, build on it. If you publish a database
 derived from it, that database has to carry the same licence.
 
 Suggested citation: BC Cycle Tourism Society (2026). What each place in British
-Columbia offers a cyclist [data set]. Version 2026-07-26.
+Columbia offers a cyclist [data set]. Version 2026-08-15.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
