@@ -28393,11 +28393,15 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 851393aaa8,Pump available,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 851511281d,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 851511281d,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
-851f1cc268,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
-851f1cc268,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
-851f1cc268,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
+851f1cc268,Bike parking or bike visibility,required for the tier,TRUE,OSM: 2 racks within 100m (2026-07-08),accreditation_jul2026,2026-07-08
+851f1cc268,Washrooms,required for the tier,TRUE,,contributor,2026-08-17
+851f1cc268,Water bottle refill,required for the tier,TRUE,,contributor,2026-08-17
+851f1cc268,Device charging,extra,TRUE,,contributor,2026-08-17
 851f1cc268,Public rack nearby,extra,TRUE,,osm,2026-07-08
 851f1cc268,Takeout,extra,TRUE,,sonnet_4.6,2026-07-18
+851f1cc268,Vegetarian / vegan / GF,extra,TRUE,,contributor,2026-08-17
+851f1cc268,Water without purchase,extra,TRUE,,contributor,2026-08-17
+851f1cc268,Wi-Fi,extra,TRUE,,contributor,2026-08-17
 8527d0f212,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
 8527d0f212,Public rack nearby,extra,TRUE,,osm,2026-07-08
 852841142b,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08

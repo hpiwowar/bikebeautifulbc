@@ -32,7 +32,7 @@ A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no. Blanks are common here, because most of these
 places have never been asked.
 
-Of the 18524 places here, 145 are accredited, 5964 meet the welcoming bar for
+Of the 18524 places here, 146 are accredited, 5963 meet the welcoming bar for
 their category, 12410 are listed for information with no welcome claim either
 way, and 5 are carriers we have checked and found will not take a bicycle.
 
