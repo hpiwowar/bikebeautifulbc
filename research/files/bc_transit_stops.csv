@@ -14,7 +14,7 @@ air:CMA06,2,YYE,Fort Nelson,yye,,,,
 air:HA01,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
 air:HA01,2,Victoria Harbour,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
 air:HA02,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
-air:HA02,2,Nanaimo Harbour,Nanaimo,nanaimo-harbour,49.1661,-123.9307,dock,stop
+air:HA02,2,Nanaimo Harbour,Nanaimo,nanaimo-harbour,49.16628,-123.930224,dock,stop
 air:HA03,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
 air:HA03,2,Ganges,Salt Spring Island,ganges,48.8531,-123.4976,dock,stop
 air:HA04,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
@@ -32,11 +32,11 @@ air:HA09,2,Campbell River Harbour,Campbell River,campbell-river-harbour,50.0458,
 air:HA10,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
 air:HA10,2,Ucluelet Harbour,Ucluelet,ucluelet-harbour,48.9487,-125.5599,dock,stop
 air:HA11,1,Victoria Harbour,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
-air:HA11,2,Nanaimo Harbour,Nanaimo,nanaimo-harbour,49.1661,-123.9307,dock,stop
+air:HA11,2,Nanaimo Harbour,Nanaimo,nanaimo-harbour,49.16628,-123.930224,dock,stop
 air:HA12,1,Victoria Harbour,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
 air:HA12,2,Ganges,Salt Spring Island,ganges,48.8531,-123.4976,dock,stop
 air:HA13,1,Porpoise Bay,Sechelt,porpoise-bay,49.4828,-123.7575,dock,stop
-air:HA13,2,Nanaimo Harbour,Nanaimo,nanaimo-harbour,49.1661,-123.9307,dock,stop
+air:HA13,2,Nanaimo Harbour,Nanaimo,nanaimo-harbour,49.16628,-123.930224,dock,stop
 air:HA14,1,Porpoise Bay,Sechelt,porpoise-bay,49.4828,-123.7575,dock,stop
 air:HA14,2,Powell Lake,Powell River,powell-lake,49.8852,-124.5446,dock,stop
 air:HA15,1,YVR South Terminal,Vancouver,yvr-south,49.1773,-123.1681,dock,stop
@@ -46,7 +46,7 @@ air:HA16,2,YAZ,Tofino,yaz,49.0797,-125.7726,airport,stop
 air:HJ01,1,Vancouver Harbour Heliport,Vancouver,vancouver-harbour,,,,
 air:HJ01,2,Victoria Harbour Heliport,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
 air:HJ02,1,Vancouver Harbour Heliport,Vancouver,vancouver-harbour,,,,
-air:HJ02,2,Nanaimo Harbour Heliport,Nanaimo,nanaimo-harbour,49.1661,-123.9307,dock,stop
+air:HJ02,2,Nanaimo Harbour Heliport,Nanaimo,nanaimo-harbour,49.16628,-123.930224,dock,stop
 air:PCA01,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
 air:PCA01,2,YYJ,Victoria,yyj,48.6469,-123.4258,airport,stop
 air:PCA02,1,YVR,Vancouver,yvr,49.1945,-123.18386,airport,stop
@@ -447,8 +447,8 @@ ferry:17,1,Westview,Powell River (Sunshine Coast),westview,49.8371,-124.5289,doc
 ferry:17,2,Little River,Comox (Vancouver Island),little-river,49.7402,-124.925,dock,stop
 ferry:18,1,Westview,Powell River (Sunshine Coast),westview,49.8371,-124.5289,dock,stop
 ferry:18,2,Blubber Bay,Texada Island,blubber-bay,49.7948,-124.6204,dock,stop
-ferry:19,1,Nanaimo Harbour,Nanaimo (Vancouver Island),nanaimo-harbour,49.1661,-123.9307,dock,stop
-ferry:19,2,Descanso Bay,Gabriola Island,descanso-bay,49.1778,-123.8584,dock,stop
+ferry:19,1,Nanaimo Harbour,Nanaimo (Vancouver Island),nanaimo-harbour,49.16628,-123.930224,dock,stop
+ferry:19,2,Descanso Bay,Gabriola Island,descanso-bay,49.178159,-123.8584,dock,stop
 ferry:2,1,Horseshoe Bay,West Vancouver (Metro Vancouver),horseshoe-bay,49.37105,-123.280676,town,community centroid
 ferry:2,2,Departure Bay,Nanaimo (Vancouver Island),departure-bay,49.1917,-123.9538,dock,stop
 ferry:20,1,Chemainus,Chemainus (Vancouver Island),chemainus,48.916458,-123.717969,town,community centroid
