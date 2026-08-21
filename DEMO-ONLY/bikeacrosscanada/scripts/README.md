@@ -43,6 +43,6 @@ It prints a per-file summary (feature counts and sizes) when done.
 
 ## Credits and license
 
-Map page and conversion script built by Heather Piwowar of [BC Cycle Tourism](https://bccycletourism.ca). Questions welcome: heather@bccycletourism.ca.
+Map page and conversion script built by Heather Piwowar of the [BC Cycle Tourism Society](https://bccycletourism.ca). Questions welcome: heather@bccycletourism.ca.
 
-The code (`index.html`, `scripts/convert.py`) is offered under the MIT License — use, modify, and redistribute freely. The route and POI data belongs to the Bike Across Canada project and is not covered by this license.
+The code (`index.html`, `scripts/convert.py`) is offered fully open source under the MIT License — use, modify, and redistribute freely. The route and POI data belongs to the Bike Across Canada project and is not covered by this license.
