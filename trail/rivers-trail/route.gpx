@@ -195,10 +195,10 @@
 </wpt>
 <wpt lat="50.701158" lon="-120.392515">
 <name>Pogue Mahone Irish Pub and Liquor Store</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="50.676662" lon="-120.286627">
 <name>Four Seasons Motel</name>
@@ -904,6 +904,13 @@
 <name>The Office Pub &amp; Grill</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="50.675699" lon="-120.332181">
+<name>The Vic</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

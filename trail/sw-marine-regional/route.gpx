@@ -167,10 +167,10 @@
 </wpt>
 <wpt lat="49.235098" lon="-123.185118">
 <name>New District Wine Beer Spirits</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.235220" lon="-123.185133">
 <name>Papa John's</name>

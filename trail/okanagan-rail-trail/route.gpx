@@ -47,9 +47,16 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.896241" lon="-119.487394">
-<name>Kettle River Brewing Company</name>
+<name>Kettle River Tasting Room</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.896089" lon="-119.487395">
+<name>Kettle River Brewing Company</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -190,6 +197,13 @@
 <name>Rustic Reel Brewing Company</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.901961" lon="-119.405105">
+<name>Freddy's Brewpub</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -356,10 +370,10 @@
 </wpt>
 <wpt lat="49.952602" lon="-119.387843">
 <name>Public Liquor</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.882388" lon="-119.447081">
 <name>Asian Pear Buffet</name>
@@ -645,6 +659,13 @@
 <name>Freshslice Pizza</name>
 <cmt>food</cmt>
 <desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.892974" lon="-119.493800">
+<name>BNA Brewing</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

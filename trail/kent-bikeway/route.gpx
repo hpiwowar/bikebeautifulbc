@@ -34,10 +34,10 @@
 </wpt>
 <wpt lat="49.205676" lon="-123.030528">
 <name>Everything Wine</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Grocery Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.206058" lon="-123.031571">
 <name>Boketto Dessert Cafe</name>

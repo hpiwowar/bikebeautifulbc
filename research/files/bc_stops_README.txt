@@ -26,14 +26,14 @@ https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-18524 rows, 22 columns.
+18618 rows, 22 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no. Blanks are common here, because most of these
 places have never been asked.
 
-Of the 18524 places here, 146 are accredited, 5963 meet the welcoming bar for
-their category, 12410 are listed for information with no welcome claim either
+Of the 18618 places here, 146 are accredited, 5981 meet the welcoming bar for
+their category, 12486 are listed for information with no welcome claim either
 way, and 5 are carriers we have checked and found will not take a bicycle.
 
 The tier column is our own four-level assessment, not the operator's claim.
@@ -49,16 +49,16 @@ place treats an arriving cyclist, and nothing about whether the food is good,
 the beds are clean, or the staff are kind. Nobody pays to be in here and nobody
 pays to move up.
 
-The places sit in 922 communities. Coverage is uneven: Vancouver alone has 3133,
+The places sit in 922 communities. Coverage is uneven: Vancouver alone has 3150,
 and many small communities have only whatever OpenStreetMap already held. A
 community with few rows is usually a community we have not worked through yet,
 not a community with nothing in it.
 
-18112 of the 18524 rows carry an OpenStreetMap identifier. That is what makes
+18193 of the 18618 rows carry an OpenStreetMap identifier. That is what makes
 this file a derivative database, and it is why the licence above is share-alike
 rather than the public-domain dedication on our other datasets.
 
-225 rows carry an Indigenous role. The indigenous_role column is included,
+227 rows carry an Indigenous role. The indigenous_role column is included,
 vetted, and still worth reading carefully. The tags were assigned by matching
 listings against Indigenous Tourism BC and Indigenous Tourism Association of
 Canada membership and against curated lists, then reviewed against a written
@@ -67,7 +67,7 @@ and removed four outright. It describes ownership, operation, or cultural
 subject matter as we could evidence it from public sources. It is not a Nation's
 own statement about itself, and where we have it wrong we would like to be told.
 
-6205 rows carry a Google Place ID. Where we hold one, google_place_id is
+6269 rows carry a Google Place ID. Where we hold one, google_place_id is
 Google's identifier for the same place, offered so this file can be joined to
 other work. The match was made automatically by name and distance and has not
 been checked by a person, so some of them are wrong: google_place_id_match_km

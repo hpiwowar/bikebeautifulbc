@@ -1243,6 +1243,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.162987" lon="-122.666516">
+<name>Dead Frog Brewery</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.058399" lon="-122.494925">
 <name>Save-On-Foods</name>
 <cmt>convenience_store</cmt>

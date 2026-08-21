@@ -333,12 +333,19 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.105163" lon="-122.652315">
-<name>Farm Country Tasting Room</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
+<wpt lat="49.105066" lon="-122.652142">
+<name>Brogan's Kalma Family Deli</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
+</wpt>
+<wpt lat="49.105163" lon="-122.652315">
+<name>Farm Country Brewing</name>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
+<sym>Dot</sym>
+<type>store</type>
 </wpt>
 <wpt lat="49.104082" lon="-122.650557">
 <name>Tacoholic</name>
@@ -365,6 +372,13 @@
 <name>Firecrust Neapolitan Pizzeria</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.105198" lon="-122.652404">
+<name>Farm Country Tasting Room</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -776,10 +790,10 @@
 </wpt>
 <wpt lat="49.111699" lon="-122.671945">
 <name>Everything Wine</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.114596" lon="-122.667331">
 <name>Starbucks</name>

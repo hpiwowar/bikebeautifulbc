@@ -922,7 +922,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.255969" lon="-122.922153">
-<name>Dageraad Tasting Room</name>
+<name>Dageraad Brewing</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -974,6 +974,13 @@
 <name>Bubble Waffle Cafe</name>
 <cmt>food</cmt>
 <desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.256156" lon="-122.922141">
+<name>Dageraad Tasting Room</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -1772,6 +1779,13 @@
 <name>Chipotle</name>
 <cmt>food</cmt>
 <desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.251238" lon="-122.732836">
+<name>Tinhouse Brewing</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

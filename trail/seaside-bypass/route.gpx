@@ -564,6 +564,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.270617" lon="-123.135753">
+<name>Granville Island Brewing Taproom</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.264573" lon="-123.114471">
 <name>Red Burrito</name>
 <cmt>food</cmt>
@@ -1398,7 +1405,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.267279" lon="-123.103336">
-<name>R &amp; B Ale &amp; Pizza House</name>
+<name>R &amp; B Brewing</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -1408,6 +1415,13 @@
 <name>Freshslice Pizza</name>
 <cmt>food</cmt>
 <desc>Fast Food / Chain</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.267240" lon="-123.103521">
+<name>R &amp; B Ale &amp; Pizza House</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -1609,10 +1623,10 @@
 </wpt>
 <wpt lat="49.272154" lon="-123.135434">
 <name>Liberty Wines</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Grocery Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.263227" lon="-123.130017">
 <name>Tamarind Tales</name>

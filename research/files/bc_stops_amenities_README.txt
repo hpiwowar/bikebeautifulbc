@@ -26,16 +26,16 @@ https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-54933 rows, 7 columns.
+55186 rows, 7 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no. Blanks are common here, because most of these
 places have never been asked.
 
-54933 rows across 18524 places, which is about three amenities each. Most places
+55186 rows across 18618 places, which is about three amenities each. Most places
 have a handful; a few have twenty.
 
-327 of the rows are FALSE, meaning we established that the place does not have
+332 of the rows are FALSE, meaning we established that the place does not have
 that amenity. A place with no row for an amenity is not a FALSE: it means nobody
 has established it either way, and the two must not be merged.
 

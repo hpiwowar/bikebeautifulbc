@@ -837,6 +837,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.270617" lon="-123.135753">
+<name>Granville Island Brewing Taproom</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.273664" lon="-123.103907">
 <name>Science World</name>
 <cmt>monument</cmt>
@@ -1074,6 +1081,13 @@
 <desc>Convenience Store</desc>
 <sym>Dot</sym>
 <type>store</type>
+</wpt>
+<wpt lat="49.292300" lon="-123.146409">
+<name>Stanley Park Brewing</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
 </wpt>
 <wpt lat="49.287145" lon="-123.114463">
 <name>Kinton Ramen</name>
@@ -1608,7 +1622,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.288557" lon="-123.140120">
-<name>Bombay Kitchen On Denman</name>
+<name>Bombay Kitchen + Bar</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
 <sym>Dot</sym>
@@ -1660,6 +1674,13 @@
 <name>D'oro Gelato e Caffè</name>
 <cmt>food</cmt>
 <desc>Ice Cream</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.288583" lon="-123.140079">
+<name>Bombay Kitchen On Denman</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -2547,10 +2568,10 @@
 </wpt>
 <wpt lat="49.272154" lon="-123.135434">
 <name>Liberty Wines</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Grocery Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.272661" lon="-123.135316">
 <name>Pizza Pzazz</name>
@@ -4164,10 +4185,10 @@
 </wpt>
 <wpt lat="49.289283" lon="-123.132900">
 <name>Divino Wine Shop</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Grocery Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.281596" lon="-123.133376">
 <name>Circle K</name>
@@ -4898,7 +4919,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.268448" lon="-123.183494">
-<name>Aphrodite's Organic Cafe</name>
+<name>Aphrodite's</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
 <sym>Dot</sym>
@@ -5620,10 +5641,10 @@
 </wpt>
 <wpt lat="49.279619" lon="-123.130273">
 <name>Marquis Wine Cellars</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.263551" lon="-123.125484">
 <name>Chef's Choice Chinese Cuisine</name>
@@ -6158,7 +6179,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.267279" lon="-123.103336">
-<name>R &amp; B Ale &amp; Pizza House</name>
+<name>R &amp; B Brewing</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -6212,6 +6233,13 @@
 <desc>Liquor Store</desc>
 <sym>Dot</sym>
 <type>store</type>
+</wpt>
+<wpt lat="49.267240" lon="-123.103521">
+<name>R &amp; B Ale &amp; Pizza House</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
 </wpt>
 <wpt lat="49.284345" lon="-123.112610">
 <name>Delta Hotels Vancouver Downtown Suites</name>
@@ -6572,10 +6600,10 @@
 </wpt>
 <wpt lat="49.268347" lon="-123.156548">
 <name>JAK's Beer Wine Spirits</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Grocery Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.263424" lon="-123.117312">
 <name>Cactus Club Cafe</name>

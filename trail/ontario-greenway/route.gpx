@@ -144,6 +144,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.267240" lon="-123.103521">
+<name>R &amp; B Ale &amp; Pizza House</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.265760" lon="-123.106061">
 <name>Mount Pleasant Vintage and Provisions</name>
 <cmt>food</cmt>
@@ -166,7 +173,7 @@
 <type>info</type>
 </wpt>
 <wpt lat="49.267279" lon="-123.103336">
-<name>R &amp; B Ale &amp; Pizza House</name>
+<name>R &amp; B Brewing</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -972,10 +979,10 @@
 </wpt>
 <wpt lat="49.257946" lon="-123.101373">
 <name>The Brewery Creek Liquor Store</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.269508" lon="-123.108423">
 <name>Pizza Hut</name>
@@ -1408,6 +1415,13 @@
 <name>Forecast</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.265839" lon="-123.100632">
+<name>Brassneck Brewery</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

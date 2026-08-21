@@ -27,10 +27,10 @@
 </wpt>
 <wpt lat="49.104926" lon="-121.964151">
 <name>Garrison Wine &amp; Liquor Merchants</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.106773" lon="-121.965882">
 <name>Cheam Leisure Centre</name>

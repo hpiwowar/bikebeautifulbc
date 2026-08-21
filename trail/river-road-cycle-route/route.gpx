@@ -25,6 +25,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.136208" lon="-123.027106">
+<name>Four Winds Tasting Room</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.144509" lon="-123.003586">
 <name>Subway</name>
 <cmt>food</cmt>
@@ -33,7 +40,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.136169" lon="-123.027245">
-<name>Four Winds Tasting Room</name>
+<name>Four Winds</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>

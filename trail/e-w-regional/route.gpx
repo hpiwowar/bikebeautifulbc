@@ -172,6 +172,13 @@
 <sym>Dot</sym>
 <type>gear</type>
 </wpt>
+<wpt lat="49.269181" lon="-123.248499">
+<name>West Coast Suites at UBC</name>
+<cmt>lodging</cmt>
+<desc>Accommodation</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
 <wpt lat="49.265218" lon="-123.250782">
 <name>Starbucks</name>
 <cmt>food</cmt>
@@ -180,7 +187,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.269478" lon="-123.248852">
-<name>West Coast Suites at UBC</name>
+<name>West Coast Suites</name>
 <cmt>lodging</cmt>
 <desc>Hotel / Motel</desc>
 <sym>Dot</sym>
@@ -197,6 +204,13 @@
 <name>Gage Apartments at UBC</name>
 <cmt>lodging</cmt>
 <desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.269460" lon="-123.250030">
+<name>Gage Suites at UBC</name>
+<cmt>lodging</cmt>
+<desc>Accommodation</desc>
 <sym>Dot</sym>
 <type>shelter</type>
 </wpt>
@@ -978,6 +992,13 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.264010" lon="-123.186129">
+<name>The Kitchen Dada</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.264010" lon="-123.186129">
 <name>The Kitchen Dada Sushi Bar &amp; Grill</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
@@ -1035,10 +1056,10 @@
 </wpt>
 <wpt lat="49.264103" lon="-123.211523">
 <name>Liberty Wine Merchants</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.263830" lon="-123.197227">
 <name>Point Grey Guest House</name>
@@ -1447,7 +1468,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.268448" lon="-123.183494">
-<name>Aphrodite's Organic Cafe</name>
+<name>Aphrodite's</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
 <sym>Dot</sym>
@@ -1637,10 +1658,10 @@
 </wpt>
 <wpt lat="49.268347" lon="-123.156548">
 <name>JAK's Beer Wine Spirits</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Grocery Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.268532" lon="-123.168552">
 <name>Fresh St. Market</name>

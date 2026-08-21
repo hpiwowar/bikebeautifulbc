@@ -172,6 +172,13 @@
 <sym>Dot</sym>
 <type>shelter</type>
 </wpt>
+<wpt lat="49.030850" lon="-119.448554">
+<name>Sage Liquor Store</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.035644" lon="-119.479879">
 <name>Osoyoos Fruit Basket</name>
 <cmt>convenience_store</cmt>
@@ -181,10 +188,10 @@
 </wpt>
 <wpt lat="49.030563" lon="-119.449076">
 <name>Sage Pub &amp; Liquor Store</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.032938" lon="-119.470361">
 <name>Avalon Inn</name>
@@ -965,10 +972,10 @@
 </wpt>
 <wpt lat="49.494510" lon="-119.607568">
 <name>VQA Wine Store</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Grocery Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.537291" lon="-119.562890">
 <name>Hillside Winery Bistro</name>

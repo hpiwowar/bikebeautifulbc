@@ -46,6 +46,13 @@
 <sym>Dot</sym>
 <type>shelter</type>
 </wpt>
+<wpt lat="49.308336" lon="-123.072745">
+<name>Beere Brewing Tasting Room</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.309668" lon="-123.080315">
 <name>Pier 7</name>
 <cmt>bar</cmt>
@@ -68,7 +75,7 @@
 <type>gear</type>
 </wpt>
 <wpt lat="49.308430" lon="-123.072729">
-<name>Beere Brewing Tasting Room</name>
+<name>Beere Brewing</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -237,10 +244,10 @@
 </wpt>
 <wpt lat="49.310394" lon="-123.082022">
 <name>Artisan Wine Shop</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Grocery Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.310325" lon="-123.082060">
 <name>El Dorado Pies &amp; Treats</name>
@@ -351,6 +358,13 @@
 <name>Strathcona North</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.310073" lon="-123.033929">
+<name>Bridge Brewing Company</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -530,9 +544,16 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.309561" lon="-123.073010">
-<name>North Point Tasting Room</name>
+<name>North Point Brewing</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.309592" lon="-123.073050">
+<name>North Point Tasting Room</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -697,6 +718,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.311287" lon="-123.077945">
+<name>Streetcar Brewing</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.311905" lon="-123.078315">
 <name>Jam Cafe</name>
 <cmt>food</cmt>
@@ -806,6 +834,13 @@
 <name>Black Kettle Tasting Lounge</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.317074" lon="-123.092766">
+<name>Black Kettle Brewing</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

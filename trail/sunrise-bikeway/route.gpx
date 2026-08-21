@@ -559,10 +559,10 @@
 </wpt>
 <wpt lat="49.262714" lon="-123.056379">
 <name>Viti Wine and Lager</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.271175" lon="-123.056314">
 <name>To Live For</name>

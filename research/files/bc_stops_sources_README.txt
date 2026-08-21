@@ -27,13 +27,13 @@ https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-66205 rows, 3 columns.
+66576 rows, 3 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no. Blanks are common here, because most of these
 places have never been asked.
 
-66205 rows: one for every field of every place where we hold a value at all. A
+66576 rows: one for every field of every place where we hold a value at all. A
 field with no row is a field we hold nothing for.
 
 This is the file that makes the licence legible. Rows sourced 'osm' are

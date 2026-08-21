@@ -958,10 +958,10 @@
 </wpt>
 <wpt lat="49.047575" lon="-122.785720">
 <name>Everything Wine</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.042895" lon="-122.791050">
 <name>Subway</name>
@@ -4708,8 +4708,15 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.029439" lon="-122.801830">
+<wpt lat="49.029443" lon="-122.801966">
 <name>White Rock Beach Beer Brewery</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.029439" lon="-122.801830">
+<name>White Rock Beach Beer</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>

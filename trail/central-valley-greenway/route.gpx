@@ -1768,6 +1768,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.265839" lon="-123.100632">
+<name>Brassneck Brewery</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.266528" lon="-123.069488">
 <name>Hariyali Express</name>
 <cmt>food</cmt>
@@ -1874,7 +1881,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.267279" lon="-123.103336">
-<name>R &amp; B Ale &amp; Pizza House</name>
+<name>R &amp; B Brewing</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -1907,6 +1914,13 @@
 <desc>Liquor Store</desc>
 <sym>Dot</sym>
 <type>store</type>
+</wpt>
+<wpt lat="49.267240" lon="-123.103521">
+<name>R &amp; B Ale &amp; Pizza House</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
 </wpt>
 <wpt lat="49.273958" lon="-123.098051">
 <name>A&amp;W</name>
@@ -2197,10 +2211,10 @@
 </wpt>
 <wpt lat="49.262714" lon="-123.056379">
 <name>Viti Wine and Lager</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.267571" lon="-123.108605">
 <name>Nana's Green Tea</name>

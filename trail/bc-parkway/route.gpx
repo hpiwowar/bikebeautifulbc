@@ -1943,8 +1943,15 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.202134" lon="-122.927308">
+<wpt lat="49.202035" lon="-122.927471">
 <name>Steel &amp; Oak Tasting Room</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.202134" lon="-122.927308">
+<name>Steel &amp; Oak Brewing</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -3730,10 +3737,10 @@
 </wpt>
 <wpt lat="49.262714" lon="-123.056379">
 <name>Viti Wine and Lager</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.262768" lon="-123.056372">
 <name>Yook Korean Grilled BBQ and Bistro</name>
