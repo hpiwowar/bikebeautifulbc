@@ -40,3 +40,9 @@ It prints a per-file summary (feature counts and sizes) when done.
 - **Basemap is standard OpenStreetMap tiles.** The CoMaps rendering style isn't available as a hosted tile service. Swapping in a different tile provider is a one-line change in `index.html`.
 - **KML layer 10** ("Directions from Bruce Peninsula", a single stray line) looked like leftover data and was skipped.
 - **KML layer 7** (the ~409 segment-length marker points) isn't included as a map layer. The distance information is partly covered by the Km distance markers POI category.
+
+## Credits and license
+
+Map page and conversion script built by Heather Piwowar of [BC Cycle Tourism](https://bccycletourism.ca). Questions welcome: heather@bccycletourism.ca.
+
+The code (`index.html`, `scripts/convert.py`) is offered under the MIT License — use, modify, and redistribute freely. The route and POI data belongs to the Bike Across Canada project and is not covered by this license.
