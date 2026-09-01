@@ -67,7 +67,7 @@ and removed four outright. It describes ownership, operation, or cultural
 subject matter as we could evidence it from public sources. It is not a Nation's
 own statement about itself, and where we have it wrong we would like to be told.
 
-6269 rows carry a Google Place ID. Where we hold one, google_place_id is
+7794 rows carry a Google Place ID. Where we hold one, google_place_id is
 Google's identifier for the same place, offered so this file can be joined to
 other work. The match was made automatically by name and distance and has not
 been checked by a person, so some of them are wrong: google_place_id_match_km

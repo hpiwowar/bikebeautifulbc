@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Plan Your To and Fro: which buses, trains, and ferries take your bike</title>
+<link rel="canonical" href="https://bccycletourism.ca/field-note/plan-your-to-and-fro/">
+<meta property="og:site_name" content="BC Cycle Tourism Society">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bccycletourism.ca/field-note/plan-your-to-and-fro/">
+<meta property="og:title" content="Plan Your To and Fro: which buses, trains, and ferries take your bike">
+<meta property="og:image" content="https://bccycletourism.ca/img/field_notes/202608/tofro/tofro_haida_sparwood.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plan Your To and Fro: which buses, trains, and ferries take your bike">
+<meta name="twitter:image" content="https://bccycletourism.ca/img/field_notes/202608/tofro/tofro_haida_sparwood.jpg">
+<meta name="description" content="Pick two BC places and see every way we know to move you and your bike between them. 115 places, floatplanes included.">
+<meta property="og:description" content="Pick two BC places and see every way we know to move you and your bike between them. 115 places, floatplanes included.">
+<meta name="twitter:description" content="Pick two BC places and see every way we know to move you and your bike between them. 115 places, floatplanes included.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":["https://www.linkedin.com/company/bc-cycle-tourism-society/","https://tiabc.ca/members/bc-cycle-tourism-society/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Plan Your To and Fro: which buses, trains, and ferries take your bike","url":"https://bccycletourism.ca/field-note/plan-your-to-and-fro/","headline":"Plan Your To and Fro: which buses, trains, and ferries take your bike","datePublished":"2026-08-30T00:00:00-07:00","author":{"@type":"Person","name":"Heather Piwowar","url":"https://bccycletourism.ca/about/"},"publisher":{"@type":"Organization","name":"BC Cycle Tourism Society","logo":{"@type":"ImageObject","url":"https://bccycletourism.ca/img/logo-google.png"}},"description":"Pick two BC places and see every way we know to move you and your bike between them. 115 places, floatplanes included.","image":"https://bccycletourism.ca/img/field_notes/202608/tofro/tofro_haida_sparwood.jpg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bccycletourism.ca/"},{"@type":"ListItem","position":2,"name":"Field Notes","item":"https://bccycletourism.ca/field-notes/"},{"@type":"ListItem","position":3,"name":"Plan Your To and Fro: which buses, trains, and ferries take your bike","item":"https://bccycletourism.ca/field-note/plan-your-to-and-fro/"}]}</script>
+<style>
+
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* BC-516: overflow-x:clip is insurance for the full-bleed hero bands, which are
+   width:100vw. Chrome subtracts the stable gutter from vw so they fit exactly,
+   but a browser that doesn't support scrollbar-gutter counts the scrollbar in vw
+   and the band ends up ~15px too wide, which drags the page sideways. clip stops
+   that without creating a scroll container, so position:sticky keeps working. */
+html { scrollbar-gutter: stable; overflow-x: clip; }
+/* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
+   --rail   chrome (header + footer), frames the page
+   --w-read the content column and prose cap, used by nearly every page
+   --w-wide the exception: sidebar filters, two-column stop pages */
+:root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+/* Design tokens (BC-506): palette, warm-stone neutral ramp, radius scale.
+   Every page inherits these; page CSS uses var(...), not raw hex literals.
+   The /stops/ sage family is exempt from tokenization this pass. */
+:root {
+  /* brand */
+  --pacific: #0D4070;   /* navy */
+  --river:   #1E7D96;   /* teal: links + ALL primary buttons */
+  --forest:  #2E8A36;
+  --bright:  #6EC040;   /* accent green — accents only, never buttons */
+  --sky:     #B8E0EC;
+  --pine:    #1F514C;   /* heading green */
+  --herodark:#0D2E1E;
+  /* grounds */
+  --paper: #FFFDF9;     /* page ground */
+  --cream: #FFF6E5;     /* warm panels */
+  /* ink + warm stone neutrals (replaces the cool #E5E7EB/#9CA3AF family) */
+  --ink: #1A1A1A;
+  --stone-600: #57534E; --muted: #57534E;
+  --stone-500: #78716C;
+  --stone-400: #A8A29E;
+  --stone-200: #E7E5E4;
+  --sand: #E0D9CC;      /* warm hairline on cream */
+  /* radius scale: s chips/inputs, m cards, l heroes/panels, pill */
+  --r-s: 8px; --r-m: 12px; --r-l: 20px; --r-pill: 999px;
+}
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+/* Base link colour, both states (BC-504) — visited links were browser-purple
+   wherever no rule targeted them.
+   :where() zeroes the specificity so ANY other rule wins, which is what the
+   original version meant but didn't achieve: bare `a:visited` scores 0-1-1 and
+   quietly outranked every single-class component rule (0-1-0). That repainted
+   the homepage's outlined "Plan your trip" CTA teal-on-navy once you'd visited
+   /plan/ — invisible until hover, when .hero-btn-outline:hover (0-2-0) finally
+   won. getComputedStyle reports the unvisited colour for privacy, so this is
+   only ever visible to the eye, in a profile that has actually been there. */
+:where(a) { color: var(--river); }
+:where(a:visited) { color: var(--river); }
+.g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
+.g-banner strong { font-weight: 700; }
+/* position+z-index so open dropdown menus paint above page content that
+   creates its own stacking contexts (hero cards, reveal animations) */
+.g-header { padding: 14px 40px; position: relative; z-index: 500; }
+.g-header-inner { max-width: var(--rail, 1200px); margin: 0 auto; display: flex; align-items: center; gap: 64px; }
+.g-header-left { display: flex; align-items: center; text-decoration: none; }
+.g-header-left img { height: 50px; width: auto; max-width: 100%; }
+.g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
+.g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
+.g-header-nav a:hover { color: var(--river); }
+.g-header-nav a.active { color: var(--river); font-weight: 600; }
+.g-nav-search { display: flex; align-items: center; gap: 6px; }
+.g-nav-search svg { width: 15px; height: 15px; display: block; }
+.g-nav-search .g-nav-search-label { display: inline; }
+/* Header dropdown menus (nav rethink 2026-08) */
+.g-navgroup { position: relative; display: flex; align-items: center; }
+.g-navtop {
+  font-family: inherit; font-size: 14px; font-weight: 500; color: #2C4C3B;
+  background: none; border: none; cursor: pointer; padding: 0;
+  display: flex; align-items: center; gap: 5px; transition: color 0.2s;
+}
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: var(--river); }
+.g-navgroup.activeslot .g-navtop { color: var(--river); font-weight: 600; }
+.g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
+.g-navgroup.open .g-caret { transform: rotate(180deg); }
+.g-navmenu {
+  position: absolute; top: calc(100% + 12px); left: -14px; display: none;
+  background: var(--paper); border: 1px solid #ECE7DD; border-radius: var(--r-m);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
+}
+.g-navgroup.open > .g-navmenu { display: block; }
+/* right-side menus open leftward so they never overflow the viewport */
+.g-navgroup[data-slot="field-notes"] .g-navmenu,
+.g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
+.g-header-nav .g-navmenu a {
+  display: block; padding: 9px 12px; border-radius: var(--r-s);
+  font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
+  white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
+}
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: var(--river); }
+.g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
+.g-header-nav .g-navmenu .gnm-d {
+  display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
+  color: rgba(13,46,30,0.62); margin-top: 1px; line-height: 1.35; text-align: left;
+}
+/* over photos, green reads badly: rest is soft white, hover full white, and
+   the active section carries a small underline instead of a colour */
+.g-header.transparent .g-navtop { color: rgba(255,255,255,0.88); text-shadow: 0 1px 6px rgba(0,0,0,0.55); }
+.g-header.transparent .g-navtop:hover { color: #fff; }
+.g-header.transparent .g-navgroup.activeslot .g-navtop {
+  color: #fff; text-decoration: underline;
+  text-underline-offset: 7px; text-decoration-thickness: 2px;
+}
+/* menu panels are solid cream even under a transparent header: beat the
+   white-link transparent rules at their own specificity */
+.g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: var(--river); }
+.g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent.solid .g-navtop:hover { color: var(--river); }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: var(--river); text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--pine); padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: var(--pine); margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h1 { font-weight: 700; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: var(--pine); margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: var(--stone-600); margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: var(--river); }
+.g-main ul { margin-left: 20px; color: var(--stone-600); margin-bottom: 14px; }
+.g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: var(--stone-400); margin-bottom: 18px; }
+.g-crumb a { color: var(--river); text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: var(--stone-400); }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
+.g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
+.g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
+.g-footer-brand img { height: 32px; width: auto; max-width: 100%; }
+.g-footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.g-footer-col { }
+.g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
+.g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
+.g-footer-col a:hover { color: var(--pacific); }
+.section-divider { border: none; border-top: 1px solid var(--stone-200); margin: 28px 0; }
+.bio { margin-bottom: 20px; }
+.bio strong { color: var(--pine); font-size: 15px; }
+.bio > em { color: var(--stone-600); font-size: 13px; }
+.bio p { font-size: 14px; margin-top: 6px; }
+@media (max-width: 700px) {
+  .g-banner { padding: 6px 14px; font-size: 11px; }
+  .g-header { padding: 12px 16px; position: relative; z-index: 300; }
+  .g-header-inner { gap: 0; }
+  .g-main { padding: 24px 14px 16px; }
+  .g-hamburger { display: block; }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav.open { display: flex; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid var(--stone-200); font-size: 15px; color: var(--pine); }
+  .g-header-nav a:last-child { border-bottom: none; }
+  .g-nav-search svg { display: none; }
+  .g-nav-search .g-nav-search-label { display: inline; }
+  /* dropdown groups become accordion sections inside the hamburger panel */
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid var(--stone-200); }
+  .g-navtop {
+    width: 100%; justify-content: space-between; padding: 12px 0;
+    font-size: 15px; color: var(--pine); text-shadow: none;
+  }
+  .g-navmenu {
+    position: static; box-shadow: none; border: none; background: none;
+    padding: 0 0 10px 14px; min-width: 0; border-radius: 0;
+  }
+  .g-header-nav .g-navmenu a { border-bottom: none; padding: 8px 0; font-size: 14.5px; }
+  .g-footer { padding: 40px 20px 48px; }
+  .g-footer-nav { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+}
+
+/* Section anchors. Every h2 gets a quiet "#" that hands you a link to that
+   section. Grey at rest so it reads as a tool rather than content, teal at the
+   moment you are about to click it. Touch devices have no hover, so it sits
+   faintly visible there instead of being unreachable. */
+.h-anchor { margin-left: .35em; color: var(--stone-500); opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+h2:hover > .h-anchor { opacity: .55; }
+.h-anchor:hover, .h-anchor:focus { color: var(--river); opacity: 1; }
+@media (hover: none) {
+  .h-anchor { opacity: .35; }
+}
+
+/* ---- Eyebrow labels (BC-509). One treatment site-wide: 11px, caps, teal.
+   Teal because it was already the most-used eyebrow colour, which leaves the
+   accent green free to keep meaning "accent" (journey-map steps, accredited
+   marks) instead of competing as a label colour. The historical class names
+   are aliased here rather than rewritten at every call site; genuinely
+   contextual overrides still win on specificity (e.g. the pale-blue on-photo
+   eyebrow on the To and Fro hero). No font-family: eyebrows inherit Inter,
+   which is what all but one of them already did. ---- */
+.eyebrow, .gi-eyebrow, .dir-eyebrow, .ls-notable-eyebrow,
+.listing-section-title, .ls-pills-label, .ls-card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--river); margin-bottom: 6px;
+}
+
+/* ---- Chip geometry (BC-509). Two geometries, not ten. Label chips are read;
+   control chips are tapped, so they get a bigger target. Colour and meaning
+   stay per-family — this only unifies size, padding, and radius. ---- */
+.chip, .lachip, .lichip, .lfacet, .pubchip, .guide-chip-am,
+.listing-pill-yes, .listing-pill-no {
+  font-size: 12.5px; padding: 4px 12px; border-radius: var(--r-pill);
+}
+.dir-chip, .guide-chip, .explore-chip {
+  font-size: 13.5px; padding: 6px 13px; border-radius: var(--r-pill);
+}
+
+/* ---- Warm CTA panel (BC-508). One "warm panel + one action" component that
+   replaces four hand-rolled versions: route detail's "Ready to ride it?", the
+   routes-hub publisher card, Design Your Own Route's signup, and the homepage
+   newsletter block. The action slot is deliberately open — it takes a button
+   link OR a whole form — so the call sites keep their own behaviour and share
+   only the chrome. Emitted by warm_panel() below; the title/body/act selectors
+   are class-on-class so they win against .g-main h2 / .g-main p. ---- */
+.wpanel { background: var(--cream); border: 1px solid var(--sand); border-radius: var(--r-l);
+  padding: 26px 30px; margin: 34px auto 8px; max-width: 900px; }
+.wpanel.narrow { max-width: 700px; }
+.wpanel.center { text-align: center; }
+.wpanel .wp-title { font-family: "Archivo", "Inter", sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--pine); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 6px; }
+.wpanel.lg .wp-title { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+.wpanel .wp-body { color: var(--stone-600); font-size: 15px; line-height: 1.55; margin: 0 0 16px; max-width: 62ch; }
+.wpanel.center .wp-body { margin-left: auto; margin-right: auto; }
+.wpanel .wp-body a { color: var(--river); }
+.wpanel .wp-act { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.wpanel.center .wp-act { align-items: center; }
+.wpanel .wp-act form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.wpanel.center .wp-act form { margin: 0 auto; }
+/* one button and one field treatment inside the panel, whatever the action is */
+.wpanel .wp-act .wp-btn, .wpanel .wp-act button { display: inline-block; background: var(--river);
+  color: #fff; border: none; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: var(--r-m); cursor: pointer; text-align: center;
+  transition: background .2s ease; }
+.wpanel .wp-act .wp-btn:hover, .wpanel .wp-act button:hover { background: var(--pacific); }
+.wpanel .wp-act input:not([type="hidden"]), .wpanel .wp-act textarea { width: 100%;
+  padding: 13px 16px; border: 1.5px solid var(--sand); border-radius: var(--r-m);
+  font-size: 16px; font-family: inherit; background: #fff; transition: border-color .2s; }
+.wpanel .wp-act input:focus, .wpanel .wp-act textarea:focus { border-color: var(--river); outline: none; }
+.wpanel .wp-act textarea { min-height: 76px; resize: vertical; }
+/* secondary action under the primary one (route detail's extra links) */
+.wpanel .wp-alt { font-size: 13.5px; color: var(--river); font-weight: 600; text-decoration: none; }
+.wpanel .wp-alt:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .wpanel { padding: 22px 18px; border-radius: var(--r-m); }
+  .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
+}
+
+/* ---- Photo caption row (BC-516). Credit flush left, place flush right, in one
+   flex row instead of two independently positioned spans — two spans at opposite
+   corners of a photo can't see each other, so on a phone they printed on top of
+   each other. Here they push apart, stay on one line whenever they fit, and wrap
+   only when they must. Emitted by build.cap_row(); each photo family sets its own
+   insets and type, and only the row mechanics live here. ---- */
+.capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+
+.article-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 28px 64px; }
+.back-link { font-size: 14px; color: var(--river); text-decoration: none; display: inline-block; margin-bottom: 24px; }
+.back-link:hover { text-decoration: underline; }
+.article-title { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 700; color: var(--pine); margin-bottom: 8px; letter-spacing: -0.03em; }
+.article-date { font-size: 14px; color: var(--stone-400); margin-bottom: 32px; }
+.article-body { font-size: 16px; color: var(--stone-600); line-height: 1.7; }
+.article-body p { margin-bottom: 16px; max-width: none; }
+.article-body ol, .article-body ul { margin-bottom: 16px; }
+.article-body a { color: var(--river); }
+.article-body h2 { font-family: "Archivo", sans-serif; font-size: 22px; font-weight: 500; color: var(--pine); margin: 32px 0 12px; letter-spacing: -0.02em; }
+.article-figure { margin: 28px 0; }
+.article-figure img { width: 100%; height: auto; display: block; border-radius: var(--r-s); }
+.article-figure figcaption { font-size: 12px; color: var(--stone-400); font-style: italic; margin-top: 6px; text-align: right; }
+.article-figure-small { float: right; width: 200px; margin: 6px 0 16px 24px; }
+.say-this { background: var(--cream); border-left: 3px solid #d4c6a2; border-radius: 0 8px 8px 0; padding: 12px 18px; margin: 0 0 16px; font-size: 15.5px; color: #5a4e2c; }
+.say-this strong { color: #6b5a2c; }
+.directory-box { background: #F5FAFB; border: 1px solid #cfe4ea; border-radius: var(--r-m); padding: 16px 20px; margin: 24px 0; font-size: 15px; }
+@media (max-width: 700px) {
+  .article-main { padding: 20px 14px 40px; }
+  .article-title { font-size: 24px; }
+  .article-figure-small { float: none; width: 100%; margin: 24px 0; }
+}
+</style>
+<script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
+</head>
+<body>
+<!--chrome--><div class="g-header">
+  <div class="g-header-inner">
+    <a href="/" class="g-header-left">
+      <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+    </a>
+    <div class="g-header-nav" id="g-nav">
+      <div class="g-navgroup" data-slot="inspired"><button type="button" class="g-navtop" aria-expanded="false">Get Inspired <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/routes/all/"><span class="gnm-l">Browse all routes</span><span class="gnm-d">Every published route in one filterable list</span></a><a href="/routes/"><span class="gnm-l">The highlight reel</span><span class="gnm-d">Ride after ride, region by region</span></a><a href="/trails/"><span class="gnm-l">Named trails</span><span class="gnm-d">Follow the KVR, the Goose, and other classics</span></a><a href="/route-publishers/"><span class="gnm-l">Route makers</span><span class="gnm-d">The people and clubs who publish BC's rides</span></a><a href="/wwc/communities/"><span class="gnm-l">Communities</span><span class="gnm-d">Browse stops town by town</span></a><a href="/routes/how-we-describe/"><span class="gnm-l">How we describe routes</span><span class="gnm-d">What our difficulty and surface labels mean</span></a></div></div><div class="g-navgroup" data-slot="plan"><button type="button" class="g-navtop" aria-expanded="false">Plan Your Trip <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/plan/"><span class="gnm-l">How a trip comes together</span><span class="gnm-d">The whole journey, one page</span></a><a href="/wwc/"><span class="gnm-l">BC Bike Stops directory</span><span class="gnm-d">Places to sleep, eat, and refill that welcome cyclists</span></a><a href="/to-fro/"><span class="gnm-l">To &amp; Fro</span><span class="gnm-d">Ferries, buses, and trains that take your bike</span></a><a href="/add-stops/"><span class="gnm-l">Add Stops to Your Route</span><span class="gnm-d">Upload a GPX, get the stops along your line</span></a><a href="/wwc/guide/"><span class="gnm-l">Stop guides</span><span class="gnm-d">What &ldquo;welcomes cyclists&rdquo; means, category by category</span></a><a href="/be-prepared/"><span class="gnm-l">Be Prepared</span><span class="gnm-d">Cell coverage, wildlife, conditions, and more</span></a><a href="/design-your-own-route/"><span class="gnm-l">Design Your Own Route</span><span class="gnm-d">Tools for building a ride from scratch</span></a><a href="/bike-together/"><span class="gnm-l">Bike Together</span><span class="gnm-d">Tours and group rides you can join</span></a></div></div><div class="g-navgroup activeslot" data-slot="field-notes"><button type="button" class="g-navtop" aria-expanded="false">Field Notes <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/field-notes"><span class="gnm-l">Read the latest</span><span class="gnm-d">Trip reports, deep dives, and trail news</span></a><a href="/#newsletter"><span class="gnm-l">Subscribe</span><span class="gnm-d">One email a month with what's new</span></a></div></div><div class="g-navgroup" data-slot="about"><button type="button" class="g-navtop" aria-expanded="false">About <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/about"><span class="gnm-l">About us</span><span class="gnm-d">Who we are and what we're building</span></a><a href="/advocacy/"><span class="gnm-l">Advocacy</span><span class="gnm-d">Safe roads, rail corridors, and getting there with a bike</span></a><a href="/research/"><span class="gnm-l">Research and Data</span><span class="gnm-d">The numbers and methods behind this site</span></a><a href="/with-thanks/"><span class="gnm-l">With thanks</span><span class="gnm-d">The people and organizations behind us</span></a><a href="/#contact"><span class="gnm-l">Say hi! 🙂</span><span class="gnm-d">We'd love to hear from you</span></a></div></div>
+      <a href="/search/" class="g-nav-search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg><span class="g-nav-search-label">Search</span></a>
+    </div>
+    <button class="g-hamburger" id="g-ham" aria-label="Menu">☰</button>
+  </div>
+</div>
+<script>
+(function(){
+  var h=document.getElementById('g-ham'),n=document.getElementById('g-nav');
+  if(!h||!n)return;
+  h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
+  document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
+  var groups=[].slice.call(document.querySelectorAll('.g-navgroup'));
+  function closeAll(except){
+    groups.forEach(function(g){
+      if(g!==except){
+        g.classList.remove('open');
+        var b=g.querySelector('.g-navtop');
+        if(b)b.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  groups.forEach(function(g){
+    var btn=g.querySelector('.g-navtop'),timer=null;
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      closeAll(g);
+      var open=g.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    g.addEventListener('mouseenter',function(){
+      if(window.innerWidth<=700)return;
+      clearTimeout(timer);closeAll(g);g.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    });
+    g.addEventListener('mouseleave',function(){
+      if(window.innerWidth<=700)return;
+      timer=setTimeout(function(){
+        g.classList.remove('open');btn.setAttribute('aria-expanded','false');
+      },250);
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest||!e.target.closest('.g-navgroup'))closeAll(null);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')closeAll(null);
+  });
+})();
+</script><!--/chrome-->
+<div class="article-main">
+  <nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/field-notes/">Field Notes</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Plan Your To and Fro: which buses, trains, and ferries take your bike</span></nav>
+  <h1 class="article-title">Plan Your To and Fro: which buses, trains, and ferries take your bike</h1>
+  <p class="article-date">August 30, 2026</p>
+  <div class="article-body">
+    
+<p>How do you bike somewhere that is too far away to get to by bike? Drive? But then you have to find a place to park your car for a while, and it doesn't solve getting home from a point-to-point ride, and is awkward for those of us without a car. What about transit? Is there transit?</p>
+
+<p>Buses, trains, ferries, and floatplanes can be a lovely way to see the province. It hasn't been easy to figure out how practical it is to travel that way between two communities, let alone with your bike in tow. But now it is :)</p>
+
+<h2 id="doesnt-google-maps-already-do-this">Doesn't Google Maps already do this?<a class="h-anchor" href="#doesnt-google-maps-already-do-this" aria-label="Link to this section">#</a></h2>
+
+<p>Surprisingly, no. Ask Google Maps for transit from Castlegar to Kamloops and it says, "Sorry, we could not calculate transit directions," then offers to route you there by car. The buses exist; most of BC's intercity carriers just never make it into the big trip planners. Our <a href="/to-fro/castlegar/kamloops/">page for that pair</a> shows what actually runs: a weekly Kootenay coach that does the long haul, and the one direct bus chain that breaks because its Kelowna leg (<a href="/wwc/stop/e9065ae25e/">Silver City Stagelines</a>), alas, won't take your bike.</p>
+
+<p>Sites like <a href="https://www.rome2rio.com/">Rome2Rio</a> come closer, and they were part of our inspiration. But none of them will tell you whether the bus takes bikes, whether yours needs to be boxed, what it costs, or whether an e-bike is welcome. That gap is why we built <a href="/to-fro/">Plan Your To and Fro</a>.</p>
+
+<h2 id="how-it-works">How it works<a class="h-anchor" href="#how-it-works" aria-label="Link to this section">#</a></h2>
+
+<p>Go to <a href="/to-fro/">Plan Your To and Fro</a>, then pick two BC places from the dropdowns. You get a page listing every way we know to move yourself and your bike between them, step by step: buses, trains, ferries, water taxis, floatplanes, carpools, even a one-way rental car where that's genuinely the only link. There are 115 places to choose from. Seattle and Calgary are in the dropdowns too, as honorary BC cities: if you live there, we'd love to make it easy to come ride here.</p>
+
+<p>What we don't have, at least for now, is schedules or prices on the page. We know the map, not the timetable, so each option links to the operator for times and fares so you can look those up before your trip. We do try to list whether you need to box or bag your bike, if e-bikes are ok, if reservations are required. And if you know more than we've got listed, let us know so we can add it to the tool.</p>
+
+<h2 id="when-youd-reach-for-it">When you'd reach for it<a class="h-anchor" href="#when-youd-reach-for-it" aria-label="Link to this section">#</a></h2>
+
+<ul>
+<li><strong>Riding point to point.</strong> You've ridden Castlegar to Kamloops; now you and the bike need to <a href="/to-fro/kamloops/castlegar/">get home</a>.</li>
+<li><strong>Riding a loop somewhere else.</strong> The riding is in the Kootenays but your front door isn't. Get there, ride the loop, come home.</li>
+<li><strong>Changing plans late.</strong> A smoked-out forecast, or plain whim. The pages show which buses and ferries can move the whole trip to a clearer corner of the province; our <a href="/field-note/howto-wildfire-smoke/">wildfire smoke how-to</a> covers that move in detail.</li>
+</ul>
+
+<h2 id="things-we-learned-building-it">Things we learned building it<a class="h-anchor" href="#things-we-learned-building-it" aria-label="Link to this section">#</a></h2>
+
+<ul>
+<li><strong>BC Transit holds the province together.</strong> It shows up in the answers for more than 8 of every 10 pairings: front rack, no fee, all over BC. Obviously BC Transit isn't perfect, but it is a workhorse: thanks, bus driver.</li>
+<li><strong>The intercity spines are alive and take bikes.</strong> Ebus and Rider Express cover the interior corridors, Mountain Man Mike's links Vancouver to the Kootenays all the way to Fernie, BC Bus North covers the highways out of Prince George, and VIA Rail checks bikes through the mountains.</li>
+<li><strong>You can take your bike on a floatplane.</strong> Harbour Air will carry it with the front wheel off for $20 plus the weight fee of the bike, on all of their routes. Just don't book a Twin Otter on the Vancouver to Victoria route.</li>
+<li><strong>Alas, some key carriers don't take bikes.</strong> Island Link, we are looking at you, and a few others, making some connections much more challenging. We will advocate for better bike connections in these corridors, but in the meantime the tool shows these options while showing plainly that you cannot take your bike on these carriers.</li>
+<li><strong>Carpools and one-way car rentals fill gaps.</strong> Do you know about <a href="https://www.poparide.com/">Poparide</a>, the carpool platform? Poparide drivers who take bikes mark it with a bicycle icon, super easy! Where no bus or boat crosses a gap, we list one-way rental car options too.</li>
+<li><strong>It's not just BC Ferries on the water.</strong> Hullo crosses the Strait, inland ferries are free and fun, the SeaBus views are fantastic, and water taxis let you get far from town. (Our <a href="/wwc/#view=category&amp;category=transport&amp;subcat=ferry">ferry directory</a> lists many more boats, including the international runs to Port Angeles and Seattle.)</li>
+<li><strong>Every carrier has its own packaging rules.</strong> Ebus wants bikes bagged in cloth, not plastic. Rider Express charges $50, non-refundable. VIA Rail checks bikes as baggage, but only at staffed stations. The pages spell out each carrier's quirks so you find out at home, not at the curb.</li>
+<li><strong>E-bikes are a patchwork.</strong> Roll onto BC Ferries freely, but Hullo says no, most airlines say no, and BC Transit takes them only under 25 kilograms with the battery carried on board. If you ride electric, read the bike facts on your option before you commit.</li>
+<li><strong>The network goes further than we expected.</strong> The longest pair with a real answer runs from Haida Gwaii to Sparwood, the Elk Valley coal town in BC's far southeastern corner that keeps the world's biggest truck parked by the highway: 1,244 kilometres as the crow flies, chaining a BC Ferries sailing, a VIA Rail train, two Ebus legs, and Mountain Man Mike's to finish.</li>
+</ul>
+
+<figure class="article-figure">
+  <a href="/to-fro/haida-gwaii/sparwood/"><img src="/img/field_notes/202608/tofro/tofro_haida_sparwood.jpg" alt="Plan Your To and Fro page for Haida Gwaii to Sparwood, listing the transit options step by step" loading="lazy"></a>
+  <figcaption>The page for Haida Gwaii to Sparwood: 1,244 kilometres, one itinerary</figcaption>
+</figure>
+
+<figure class="article-figure">
+  <div style="max-width:560px;margin:0 auto;" data-email-img="/img/field_notes/202608/tofro/tofro_map.png"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" font-family="system-ui,sans-serif"><rect width="560" height="520" fill="#F7F5EE"/><path d="M178.7,321.7 L173.5,317.9 L172.2,309.2 L164.8,301.9 L166.5,296.3 L163.7,291.7 L152.6,281.7 L145.9,281.1 L146.9,266.9 L141.8,267.2 L131.2,253.3 L121.3,248.4 L121.9,242.4 L125.7,238.8 L118.9,233.9 L116.6,219.5 L110.4,209.6 L110.9,207.0 L123.4,205.3 L122.1,201.9 L128.5,196.5 L136.2,183.8 L133.0,173.3 L132.5,166.8 L135.6,161.9 L133.5,154.3 L126.9,153.7 L126.0,150.1 L103.1,137.2 L97.9,137.6 L97.1,130.4 L91.9,128.0 L93.5,122.0 L86.9,120.4 L89.4,116.2 L64.4,75.0 L66.1,73.5 L56.6,63.0 L48.0,58.4 L38.9,44.8 L33.5,43.7 L30.6,38.6 L32.1,33.8 L27.9,29.2 L22.8,25.6 L5.0,32.5 L7.2,35.2 L2.3,37.2 L2.5,43.6 L0.1,47.7 L-19.3,56.8 L-21.0,45.0 L-42.0,26.6 L-43.6,21.8 L-50.9,18.5 L341.5,18.5 L341.5,235.7 L347.4,242.2 L343.1,242.2 L343.6,245.6 L348.1,250.7 L354.1,251.1 L356.7,257.5 L361.6,259.4 L362.5,255.3 L366.4,258.0 L370.0,267.9 L374.8,269.0 L378.1,285.5 L381.8,284.6 L382.9,281.2 L388.4,285.1 L386.5,290.9 L391.8,294.3 L396.8,292.2 L397.0,296.1 L403.0,302.6 L404.9,308.9 L410.3,305.6 L411.6,310.6 L418.0,317.8 L418.3,322.8 L431.5,334.4 L432.9,337.4 L431.2,339.4 L438.0,343.4 L440.2,350.3 L444.1,348.4 L449.2,356.2 L451.4,366.5 L452.0,378.1 L450.0,383.7 L453.3,384.3 L453.0,390.1 L463.9,402.9 L273.1,403.7 L279.6,409.7 L276.5,412.5 L274.8,407.4 L270.1,401.0 L267.2,392.4 L263.3,387.5 L247.2,379.5 L245.8,372.7 L235.7,358.9 L234.5,352.1 L232.5,348.7 L201.5,340.7 L180.0,328.5 L178.7,321.7 Z" fill="#ECE7D8" stroke="#A8A395" stroke-width="1.4"/><path d="M69.2,231.8 L72.8,244.8 L78.7,249.3 L78.2,255.1 L80.8,256.3 L82.3,262.9 L86.4,264.3 L85.5,266.6 L88.4,271.5 L100.2,283.3 L112.4,300.8 L116.7,301.9 L118.0,294.8 L116.5,290.3 L111.6,284.2 L97.2,245.6 L102.3,229.3 L102.8,220.7 L94.0,226.2 L77.3,222.6 L72.0,218.4 L69.2,231.8 Z" fill="#ECE7D8" stroke="#A8A395" stroke-width="1.4"/><path d="M167.9,341.4 L169.7,341.5 L169.1,345.1 L171.3,345.2 L170.1,346.7 L175.9,353.2 L174.9,351.1 L177.0,349.7 L179.0,350.6 L176.6,350.3 L177.0,352.4 L185.9,349.4 L176.6,345.9 L188.8,347.6 L184.9,350.4 L188.5,356.8 L185.4,351.6 L178.1,352.5 L177.3,357.4 L182.6,358.4 L179.6,358.7 L182.5,360.3 L178.5,364.8 L181.0,366.0 L184.4,361.5 L185.0,365.0 L188.5,362.1 L186.8,364.5 L188.8,363.9 L187.4,365.5 L190.3,368.1 L191.9,366.8 L191.1,361.9 L193.0,365.5 L195.5,363.6 L194.2,366.0 L195.4,366.7 L193.4,368.0 L195.8,368.0 L192.2,370.0 L194.3,373.7 L197.5,374.0 L196.5,370.8 L198.6,373.7 L198.6,369.2 L200.2,370.3 L199.3,373.4 L201.0,373.0 L200.3,369.3 L202.9,373.4 L204.6,371.5 L205.9,379.5 L208.3,378.2 L207.7,375.7 L210.1,377.4 L207.7,379.6 L208.9,380.9 L215.6,379.8 L217.1,382.5 L208.2,381.2 L206.3,383.6 L206.1,389.3 L208.2,390.6 L209.7,387.2 L212.6,391.6 L211.9,385.8 L213.6,389.7 L217.4,387.8 L216.3,390.0 L217.9,392.6 L220.0,389.1 L219.1,393.3 L217.3,393.8 L218.5,395.9 L221.4,394.6 L222.6,391.0 L221.9,395.2 L223.7,394.8 L222.3,398.9 L226.2,396.6 L223.5,401.2 L219.7,398.9 L227.4,406.6 L226.5,404.6 L228.7,406.6 L231.4,402.4 L234.5,402.4 L231.9,403.4 L234.0,405.5 L235.6,401.9 L234.5,400.4 L235.8,402.1 L234.8,404.1 L240.4,404.3 L242.5,395.2 L241.5,403.7 L234.2,411.1 L236.0,410.9 L236.5,413.6 L246.8,419.1 L250.7,418.7 L249.7,420.2 L260.8,425.6 L266.7,425.2 L265.0,426.0 L266.3,427.8 L268.6,427.6 L270.4,422.8 L272.6,424.7 L274.3,423.0 L270.7,414.3 L268.4,421.8 L268.8,414.5 L266.5,412.7 L268.2,410.8 L262.1,403.1 L263.9,404.5 L264.4,402.4 L260.2,395.8 L242.9,387.6 L239.0,380.2 L241.4,379.0 L230.6,364.5 L229.6,357.2 L200.1,350.3 L178.8,338.1 L167.9,341.4 Z" fill="#ECE7D8" stroke="#A8A395" stroke-width="1.4"/><line x1="94.9" y1="254.9" x2="446.8" y2="378.2" stroke="#8A8A7E" stroke-width="1.6" stroke-dasharray="2 6" stroke-linecap="round"/><text x="211.0" y="285.6" font-size="12.5" fill="#6B6B60" font-style="italic" text-anchor="middle" transform="rotate(19.3 211.0 295.6)">1,244 km as the crow flies 🐦‍⬛</text><path d="M94.9,254.9 Q101.70637171774634,226.86099495274732 129.1,217.8" fill="none" stroke="#2B6CB0" stroke-width="3.4" stroke-linecap="round"/><path d="M129.1,217.8 Q208.57671441795154,206.71918931993804 284.9,231.5" fill="none" stroke="#6B46C1" stroke-width="3.4" stroke-linecap="round"/><path d="M284.9,231.5 Q295.14207393657847,294.814452706137 334.7,345.3" fill="none" stroke="#C05621" stroke-width="3.4" stroke-linecap="round"/><path d="M334.7,345.3 Q397.5078262046634,322.73449607376784 463.6,332.0" fill="none" stroke="#C05621" stroke-width="3.4" stroke-linecap="round"/><path d="M463.6,332.0 Q438.2837183772082,348.94862486443935 446.8,378.2" fill="none" stroke="#B83280" stroke-width="3.4" stroke-linecap="round"/><circle cx="94.9" cy="254.9" r="6" fill="#1A202C" stroke="#FFF" stroke-width="1.6"/><text x="94.9" y="276.9" font-size="13.5" font-weight="bold" fill="#1A202C" text-anchor="middle">Haida Gwaii</text><circle cx="129.1" cy="217.8" r="4" fill="#4A5568" stroke="#FFF" stroke-width="1.6"/><text x="138.1" y="209.8" font-size="12" font-weight="normal" fill="#1A202C" text-anchor="start">Prince Rupert</text><circle cx="284.9" cy="231.5" r="4" fill="#4A5568" stroke="#FFF" stroke-width="1.6"/><text x="293.9" y="223.5" font-size="12" font-weight="normal" fill="#1A202C" text-anchor="start">Prince George</text><circle cx="334.7" cy="345.3" r="4" fill="#4A5568" stroke="#FFF" stroke-width="1.6"/><text x="343.7" y="349.3" font-size="12" font-weight="normal" fill="#1A202C" text-anchor="start">Kamloops</text><circle cx="463.6" cy="332.0" r="4" fill="#4A5568" stroke="#FFF" stroke-width="1.6"/><text x="472.6" y="324.0" font-size="12" font-weight="normal" fill="#1A202C" text-anchor="start">Calgary</text><circle cx="446.8" cy="378.2" r="6" fill="#1A202C" stroke="#FFF" stroke-width="1.6"/><text x="437.8" y="394.2" font-size="13.5" font-weight="bold" fill="#1A202C" text-anchor="end">Sparwood</text><text x="472.6" y="340.0" font-size="11.5" fill="#6B6B60" font-style="italic">yes, via Calgary</text><rect x="14" y="426" width="200" height="86" rx="8" fill="#FFFFFF" opacity="0.88"/><line x1="24" y1="442" x2="52" y2="442" stroke="#2B6CB0" stroke-width="3.4" stroke-linecap="round"/><text x="60" y="446" font-size="12" fill="#1A202C">BC Ferries ⛴️</text><line x1="24" y1="460" x2="52" y2="460" stroke="#6B46C1" stroke-width="3.4" stroke-linecap="round"/><text x="60" y="464" font-size="12" fill="#1A202C">VIA Rail 🚂</text><line x1="24" y1="478" x2="52" y2="478" stroke="#C05621" stroke-width="3.4" stroke-linecap="round"/><text x="60" y="482" font-size="12" fill="#1A202C">Ebus 🚌</text><line x1="24" y1="496" x2="52" y2="496" stroke="#B83280" stroke-width="3.4" stroke-linecap="round"/><text x="60" y="500" font-size="12" fill="#1A202C">Mountain Man Mike's 🚐</text></svg></div>
+  <figcaption>Haida Gwaii to Sparwood: one sailing, one train, three buses</figcaption>
+</figure>
+
+<h2 id="missing-info">Missing info?<a class="h-anchor" href="#missing-info" aria-label="Link to this section">#</a></h2>
+
+<p>Behind every option is a listing in our <a href="/wwc/">directory</a> with the operator's bike policy and where we found it. Things change: routes get cut, policies get rewritten, ferries go on refit. Every page has a tell-us link, and we mean it. If you find something wrong or out of date, that report fixes the page for the next rider too.</p>
+
+<h2 id="reading-this-from-the-usa-come-ride-in-bc">Reading this from the USA? Come ride in BC!<a class="h-anchor" href="#reading-this-from-the-usa-come-ride-in-bc" aria-label="Link to this section">#</a></h2>
+
+<p>For the sake of making it easy for you to figure out how to get here, we've included Seattle WA as an honorary BC town in <a href="/to-fro/">To and Fro</a>. Check out all the great ways to get here: you can take a ferry up to Victoria, a train to Vancouver, or heck even a floatplane.</p>
+
+<p>Come north, bring your bike, and stay awhile!</p>
+
+<h2 id="try-it">Try it<a class="h-anchor" href="#try-it" aria-label="Link to this section">#</a></h2>
+
+<p>Start with the trip you've been putting off because getting there seemed like the hard part: <a href="/to-fro/">Plan Your To and Fro</a>. We'd love to hear what you think.</p>
+
+<p style="font-size: 13px; color: #999; margin-top: 32px;"><em>Accurate as of August 2026. Place counts are from the August 2026 build of the To and Fro pages.</em></p>
+
+  </div>
+</div>
+<!--chrome--><div class="g-footer">
+  <a class="g-footer-brand" href="/">
+    <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+  </a>
+  <div class="g-footer-nav">
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get Inspired</div>
+      <a href="/routes/all/">Browse all routes</a>
+      <a href="/routes/">The highlight reel</a>
+      <a href="/trails/">Named trails</a>
+      <a href="/route-publishers/">Route makers</a>
+      <a href="/wwc/communities/">Communities</a>
+      <a href="/routes/how-we-describe/">How we describe routes</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Plan Your Trip</div>
+      <a href="/plan/">How a trip comes together</a>
+      <a href="/wwc/">BC Bike Stops directory</a>
+      <a href="/to-fro/">To &amp; Fro</a>
+      <a href="/add-stops/">Add Stops to Your Route</a>
+      <a href="/wwc/guide/">Stop guides</a>
+      <a href="/be-prepared/">Be Prepared</a>
+      <a href="/design-your-own-route/">Design Your Own Route</a>
+      <a href="/bike-together/">Bike Together</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Field Notes</div>
+      <a href="/field-notes">Read the latest</a>
+      <a href="/#newsletter">Subscribe</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get involved</div>
+      <a href="/suggest/">Suggest a stop</a>
+      <a href="/apply/">Apply for accreditation</a>
+      <a href="/support/trail-organizations/">Support the trail organizations</a>
+      <a href="/#contact">Say hi! 🙂</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">About</div>
+      <a href="/about">About us</a>
+      <a href="/advocacy/">Advocacy</a>
+      <a href="/research/">Research and Data</a>
+      <a href="/with-thanks/">With thanks</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/land-acknowledgement">Land acknowledgement</a>
+    </div>
+  </div>
+</div><!--/chrome-->
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

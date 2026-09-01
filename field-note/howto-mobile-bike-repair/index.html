@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>HOW TO: Get a bike mechanic to come to you</title>
+<link rel="canonical" href="https://bccycletourism.ca/field-note/howto-mobile-bike-repair/">
+<meta property="og:site_name" content="BC Cycle Tourism Society">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bccycletourism.ca/field-note/howto-mobile-bike-repair/">
+<meta property="og:title" content="HOW TO: Get a bike mechanic to come to you">
+<meta property="og:image" content="https://bccycletourism.ca/img/field_notes/202608/velofix/mitchell_van.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HOW TO: Get a bike mechanic to come to you">
+<meta name="twitter:image" content="https://bccycletourism.ca/img/field_notes/202608/velofix/mitchell_van.jpg">
+<meta name="description" content="Awkward to get your bike to a bike shop? In BC, sometimes the bike shop can come to you. Mobile repair vans don&#x27;t do roadside assistance, but they can still save a touring trip.">
+<meta property="og:description" content="Awkward to get your bike to a bike shop? In BC, sometimes the bike shop can come to you. Mobile repair vans don&#x27;t do roadside assistance, but they can still save a touring trip.">
+<meta name="twitter:description" content="Awkward to get your bike to a bike shop? In BC, sometimes the bike shop can come to you. Mobile repair vans don&#x27;t do roadside assistance, but they can still save a touring trip.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":["https://www.linkedin.com/company/bc-cycle-tourism-society/","https://tiabc.ca/members/bc-cycle-tourism-society/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"HOW TO: Get a bike mechanic to come to you","url":"https://bccycletourism.ca/field-note/howto-mobile-bike-repair/","headline":"HOW TO: Get a bike mechanic to come to you","datePublished":"2026-08-30T00:00:00-07:00","author":{"@type":"Person","name":"Heather Piwowar","url":"https://bccycletourism.ca/about/"},"publisher":{"@type":"Organization","name":"BC Cycle Tourism Society","logo":{"@type":"ImageObject","url":"https://bccycletourism.ca/img/logo-google.png"}},"description":"Awkward to get your bike to a bike shop? In BC, sometimes the bike shop can come to you. Mobile repair vans don't do roadside assistance, but they can still save a touring trip.","image":"https://bccycletourism.ca/img/field_notes/202608/velofix/mitchell_van.jpg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bccycletourism.ca/"},{"@type":"ListItem","position":2,"name":"Field Notes","item":"https://bccycletourism.ca/field-notes/"},{"@type":"ListItem","position":3,"name":"HOW TO: Get a bike mechanic to come to you","item":"https://bccycletourism.ca/field-note/howto-mobile-bike-repair/"}]}</script>
+<style>
+
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* BC-516: overflow-x:clip is insurance for the full-bleed hero bands, which are
+   width:100vw. Chrome subtracts the stable gutter from vw so they fit exactly,
+   but a browser that doesn't support scrollbar-gutter counts the scrollbar in vw
+   and the band ends up ~15px too wide, which drags the page sideways. clip stops
+   that without creating a scroll container, so position:sticky keeps working. */
+html { scrollbar-gutter: stable; overflow-x: clip; }
+/* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
+   --rail   chrome (header + footer), frames the page
+   --w-read the content column and prose cap, used by nearly every page
+   --w-wide the exception: sidebar filters, two-column stop pages */
+:root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+/* Design tokens (BC-506): palette, warm-stone neutral ramp, radius scale.
+   Every page inherits these; page CSS uses var(...), not raw hex literals.
+   The /stops/ sage family is exempt from tokenization this pass. */
+:root {
+  /* brand */
+  --pacific: #0D4070;   /* navy */
+  --river:   #1E7D96;   /* teal: links + ALL primary buttons */
+  --forest:  #2E8A36;
+  --bright:  #6EC040;   /* accent green — accents only, never buttons */
+  --sky:     #B8E0EC;
+  --pine:    #1F514C;   /* heading green */
+  --herodark:#0D2E1E;
+  /* grounds */
+  --paper: #FFFDF9;     /* page ground */
+  --cream: #FFF6E5;     /* warm panels */
+  /* ink + warm stone neutrals (replaces the cool #E5E7EB/#9CA3AF family) */
+  --ink: #1A1A1A;
+  --stone-600: #57534E; --muted: #57534E;
+  --stone-500: #78716C;
+  --stone-400: #A8A29E;
+  --stone-200: #E7E5E4;
+  --sand: #E0D9CC;      /* warm hairline on cream */
+  /* radius scale: s chips/inputs, m cards, l heroes/panels, pill */
+  --r-s: 8px; --r-m: 12px; --r-l: 20px; --r-pill: 999px;
+}
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+/* Base link colour, both states (BC-504) — visited links were browser-purple
+   wherever no rule targeted them.
+   :where() zeroes the specificity so ANY other rule wins, which is what the
+   original version meant but didn't achieve: bare `a:visited` scores 0-1-1 and
+   quietly outranked every single-class component rule (0-1-0). That repainted
+   the homepage's outlined "Plan your trip" CTA teal-on-navy once you'd visited
+   /plan/ — invisible until hover, when .hero-btn-outline:hover (0-2-0) finally
+   won. getComputedStyle reports the unvisited colour for privacy, so this is
+   only ever visible to the eye, in a profile that has actually been there. */
+:where(a) { color: var(--river); }
+:where(a:visited) { color: var(--river); }
+.g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
+.g-banner strong { font-weight: 700; }
+/* position+z-index so open dropdown menus paint above page content that
+   creates its own stacking contexts (hero cards, reveal animations) */
+.g-header { padding: 14px 40px; position: relative; z-index: 500; }
+.g-header-inner { max-width: var(--rail, 1200px); margin: 0 auto; display: flex; align-items: center; gap: 64px; }
+.g-header-left { display: flex; align-items: center; text-decoration: none; }
+.g-header-left img { height: 50px; width: auto; max-width: 100%; }
+.g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
+.g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
+.g-header-nav a:hover { color: var(--river); }
+.g-header-nav a.active { color: var(--river); font-weight: 600; }
+.g-nav-search { display: flex; align-items: center; gap: 6px; }
+.g-nav-search svg { width: 15px; height: 15px; display: block; }
+.g-nav-search .g-nav-search-label { display: inline; }
+/* Header dropdown menus (nav rethink 2026-08) */
+.g-navgroup { position: relative; display: flex; align-items: center; }
+.g-navtop {
+  font-family: inherit; font-size: 14px; font-weight: 500; color: #2C4C3B;
+  background: none; border: none; cursor: pointer; padding: 0;
+  display: flex; align-items: center; gap: 5px; transition: color 0.2s;
+}
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: var(--river); }
+.g-navgroup.activeslot .g-navtop { color: var(--river); font-weight: 600; }
+.g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
+.g-navgroup.open .g-caret { transform: rotate(180deg); }
+.g-navmenu {
+  position: absolute; top: calc(100% + 12px); left: -14px; display: none;
+  background: var(--paper); border: 1px solid #ECE7DD; border-radius: var(--r-m);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
+}
+.g-navgroup.open > .g-navmenu { display: block; }
+/* right-side menus open leftward so they never overflow the viewport */
+.g-navgroup[data-slot="field-notes"] .g-navmenu,
+.g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
+.g-header-nav .g-navmenu a {
+  display: block; padding: 9px 12px; border-radius: var(--r-s);
+  font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
+  white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
+}
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: var(--river); }
+.g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
+.g-header-nav .g-navmenu .gnm-d {
+  display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
+  color: rgba(13,46,30,0.62); margin-top: 1px; line-height: 1.35; text-align: left;
+}
+/* over photos, green reads badly: rest is soft white, hover full white, and
+   the active section carries a small underline instead of a colour */
+.g-header.transparent .g-navtop { color: rgba(255,255,255,0.88); text-shadow: 0 1px 6px rgba(0,0,0,0.55); }
+.g-header.transparent .g-navtop:hover { color: #fff; }
+.g-header.transparent .g-navgroup.activeslot .g-navtop {
+  color: #fff; text-decoration: underline;
+  text-underline-offset: 7px; text-decoration-thickness: 2px;
+}
+/* menu panels are solid cream even under a transparent header: beat the
+   white-link transparent rules at their own specificity */
+.g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: var(--river); }
+.g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent.solid .g-navtop:hover { color: var(--river); }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: var(--river); text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--pine); padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: var(--pine); margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h1 { font-weight: 700; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: var(--pine); margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: var(--stone-600); margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: var(--river); }
+.g-main ul { margin-left: 20px; color: var(--stone-600); margin-bottom: 14px; }
+.g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: var(--stone-400); margin-bottom: 18px; }
+.g-crumb a { color: var(--river); text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: var(--stone-400); }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
+.g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
+.g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
+.g-footer-brand img { height: 32px; width: auto; max-width: 100%; }
+.g-footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.g-footer-col { }
+.g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
+.g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
+.g-footer-col a:hover { color: var(--pacific); }
+.section-divider { border: none; border-top: 1px solid var(--stone-200); margin: 28px 0; }
+.bio { margin-bottom: 20px; }
+.bio strong { color: var(--pine); font-size: 15px; }
+.bio > em { color: var(--stone-600); font-size: 13px; }
+.bio p { font-size: 14px; margin-top: 6px; }
+@media (max-width: 700px) {
+  .g-banner { padding: 6px 14px; font-size: 11px; }
+  .g-header { padding: 12px 16px; position: relative; z-index: 300; }
+  .g-header-inner { gap: 0; }
+  .g-main { padding: 24px 14px 16px; }
+  .g-hamburger { display: block; }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav.open { display: flex; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid var(--stone-200); font-size: 15px; color: var(--pine); }
+  .g-header-nav a:last-child { border-bottom: none; }
+  .g-nav-search svg { display: none; }
+  .g-nav-search .g-nav-search-label { display: inline; }
+  /* dropdown groups become accordion sections inside the hamburger panel */
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid var(--stone-200); }
+  .g-navtop {
+    width: 100%; justify-content: space-between; padding: 12px 0;
+    font-size: 15px; color: var(--pine); text-shadow: none;
+  }
+  .g-navmenu {
+    position: static; box-shadow: none; border: none; background: none;
+    padding: 0 0 10px 14px; min-width: 0; border-radius: 0;
+  }
+  .g-header-nav .g-navmenu a { border-bottom: none; padding: 8px 0; font-size: 14.5px; }
+  .g-footer { padding: 40px 20px 48px; }
+  .g-footer-nav { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+}
+
+/* Section anchors. Every h2 gets a quiet "#" that hands you a link to that
+   section. Grey at rest so it reads as a tool rather than content, teal at the
+   moment you are about to click it. Touch devices have no hover, so it sits
+   faintly visible there instead of being unreachable. */
+.h-anchor { margin-left: .35em; color: var(--stone-500); opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+h2:hover > .h-anchor { opacity: .55; }
+.h-anchor:hover, .h-anchor:focus { color: var(--river); opacity: 1; }
+@media (hover: none) {
+  .h-anchor { opacity: .35; }
+}
+
+/* ---- Eyebrow labels (BC-509). One treatment site-wide: 11px, caps, teal.
+   Teal because it was already the most-used eyebrow colour, which leaves the
+   accent green free to keep meaning "accent" (journey-map steps, accredited
+   marks) instead of competing as a label colour. The historical class names
+   are aliased here rather than rewritten at every call site; genuinely
+   contextual overrides still win on specificity (e.g. the pale-blue on-photo
+   eyebrow on the To and Fro hero). No font-family: eyebrows inherit Inter,
+   which is what all but one of them already did. ---- */
+.eyebrow, .gi-eyebrow, .dir-eyebrow, .ls-notable-eyebrow,
+.listing-section-title, .ls-pills-label, .ls-card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--river); margin-bottom: 6px;
+}
+
+/* ---- Chip geometry (BC-509). Two geometries, not ten. Label chips are read;
+   control chips are tapped, so they get a bigger target. Colour and meaning
+   stay per-family — this only unifies size, padding, and radius. ---- */
+.chip, .lachip, .lichip, .lfacet, .pubchip, .guide-chip-am,
+.listing-pill-yes, .listing-pill-no {
+  font-size: 12.5px; padding: 4px 12px; border-radius: var(--r-pill);
+}
+.dir-chip, .guide-chip, .explore-chip {
+  font-size: 13.5px; padding: 6px 13px; border-radius: var(--r-pill);
+}
+
+/* ---- Warm CTA panel (BC-508). One "warm panel + one action" component that
+   replaces four hand-rolled versions: route detail's "Ready to ride it?", the
+   routes-hub publisher card, Design Your Own Route's signup, and the homepage
+   newsletter block. The action slot is deliberately open — it takes a button
+   link OR a whole form — so the call sites keep their own behaviour and share
+   only the chrome. Emitted by warm_panel() below; the title/body/act selectors
+   are class-on-class so they win against .g-main h2 / .g-main p. ---- */
+.wpanel { background: var(--cream); border: 1px solid var(--sand); border-radius: var(--r-l);
+  padding: 26px 30px; margin: 34px auto 8px; max-width: 900px; }
+.wpanel.narrow { max-width: 700px; }
+.wpanel.center { text-align: center; }
+.wpanel .wp-title { font-family: "Archivo", "Inter", sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--pine); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 6px; }
+.wpanel.lg .wp-title { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+.wpanel .wp-body { color: var(--stone-600); font-size: 15px; line-height: 1.55; margin: 0 0 16px; max-width: 62ch; }
+.wpanel.center .wp-body { margin-left: auto; margin-right: auto; }
+.wpanel .wp-body a { color: var(--river); }
+.wpanel .wp-act { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.wpanel.center .wp-act { align-items: center; }
+.wpanel .wp-act form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.wpanel.center .wp-act form { margin: 0 auto; }
+/* one button and one field treatment inside the panel, whatever the action is */
+.wpanel .wp-act .wp-btn, .wpanel .wp-act button { display: inline-block; background: var(--river);
+  color: #fff; border: none; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: var(--r-m); cursor: pointer; text-align: center;
+  transition: background .2s ease; }
+.wpanel .wp-act .wp-btn:hover, .wpanel .wp-act button:hover { background: var(--pacific); }
+.wpanel .wp-act input:not([type="hidden"]), .wpanel .wp-act textarea { width: 100%;
+  padding: 13px 16px; border: 1.5px solid var(--sand); border-radius: var(--r-m);
+  font-size: 16px; font-family: inherit; background: #fff; transition: border-color .2s; }
+.wpanel .wp-act input:focus, .wpanel .wp-act textarea:focus { border-color: var(--river); outline: none; }
+.wpanel .wp-act textarea { min-height: 76px; resize: vertical; }
+/* secondary action under the primary one (route detail's extra links) */
+.wpanel .wp-alt { font-size: 13.5px; color: var(--river); font-weight: 600; text-decoration: none; }
+.wpanel .wp-alt:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .wpanel { padding: 22px 18px; border-radius: var(--r-m); }
+  .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
+}
+
+/* ---- Photo caption row (BC-516). Credit flush left, place flush right, in one
+   flex row instead of two independently positioned spans — two spans at opposite
+   corners of a photo can't see each other, so on a phone they printed on top of
+   each other. Here they push apart, stay on one line whenever they fit, and wrap
+   only when they must. Emitted by build.cap_row(); each photo family sets its own
+   insets and type, and only the row mechanics live here. ---- */
+.capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+
+.article-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 28px 64px; }
+.back-link { font-size: 14px; color: var(--river); text-decoration: none; display: inline-block; margin-bottom: 24px; }
+.back-link:hover { text-decoration: underline; }
+.article-title { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 700; color: var(--pine); margin-bottom: 8px; letter-spacing: -0.03em; }
+.article-date { font-size: 14px; color: var(--stone-400); margin-bottom: 32px; }
+.article-body { font-size: 16px; color: var(--stone-600); line-height: 1.7; }
+.article-body p { margin-bottom: 16px; max-width: none; }
+.article-body ol, .article-body ul { margin-bottom: 16px; }
+.article-body a { color: var(--river); }
+.article-body h2 { font-family: "Archivo", sans-serif; font-size: 22px; font-weight: 500; color: var(--pine); margin: 32px 0 12px; letter-spacing: -0.02em; }
+.article-figure { margin: 28px 0; }
+.article-figure img { width: 100%; height: auto; display: block; border-radius: var(--r-s); }
+.article-figure figcaption { font-size: 12px; color: var(--stone-400); font-style: italic; margin-top: 6px; text-align: right; }
+.article-figure-small { float: right; width: 200px; margin: 6px 0 16px 24px; }
+.say-this { background: var(--cream); border-left: 3px solid #d4c6a2; border-radius: 0 8px 8px 0; padding: 12px 18px; margin: 0 0 16px; font-size: 15.5px; color: #5a4e2c; }
+.say-this strong { color: #6b5a2c; }
+.directory-box { background: #F5FAFB; border: 1px solid #cfe4ea; border-radius: var(--r-m); padding: 16px 20px; margin: 24px 0; font-size: 15px; }
+@media (max-width: 700px) {
+  .article-main { padding: 20px 14px 40px; }
+  .article-title { font-size: 24px; }
+  .article-figure-small { float: none; width: 100%; margin: 24px 0; }
+}
+</style>
+<script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
+</head>
+<body>
+<!--chrome--><div class="g-header">
+  <div class="g-header-inner">
+    <a href="/" class="g-header-left">
+      <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+    </a>
+    <div class="g-header-nav" id="g-nav">
+      <div class="g-navgroup" data-slot="inspired"><button type="button" class="g-navtop" aria-expanded="false">Get Inspired <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/routes/all/"><span class="gnm-l">Browse all routes</span><span class="gnm-d">Every published route in one filterable list</span></a><a href="/routes/"><span class="gnm-l">The highlight reel</span><span class="gnm-d">Ride after ride, region by region</span></a><a href="/trails/"><span class="gnm-l">Named trails</span><span class="gnm-d">Follow the KVR, the Goose, and other classics</span></a><a href="/route-publishers/"><span class="gnm-l">Route makers</span><span class="gnm-d">The people and clubs who publish BC's rides</span></a><a href="/wwc/communities/"><span class="gnm-l">Communities</span><span class="gnm-d">Browse stops town by town</span></a><a href="/routes/how-we-describe/"><span class="gnm-l">How we describe routes</span><span class="gnm-d">What our difficulty and surface labels mean</span></a></div></div><div class="g-navgroup" data-slot="plan"><button type="button" class="g-navtop" aria-expanded="false">Plan Your Trip <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/plan/"><span class="gnm-l">How a trip comes together</span><span class="gnm-d">The whole journey, one page</span></a><a href="/wwc/"><span class="gnm-l">BC Bike Stops directory</span><span class="gnm-d">Places to sleep, eat, and refill that welcome cyclists</span></a><a href="/to-fro/"><span class="gnm-l">To &amp; Fro</span><span class="gnm-d">Ferries, buses, and trains that take your bike</span></a><a href="/add-stops/"><span class="gnm-l">Add Stops to Your Route</span><span class="gnm-d">Upload a GPX, get the stops along your line</span></a><a href="/wwc/guide/"><span class="gnm-l">Stop guides</span><span class="gnm-d">What &ldquo;welcomes cyclists&rdquo; means, category by category</span></a><a href="/be-prepared/"><span class="gnm-l">Be Prepared</span><span class="gnm-d">Cell coverage, wildlife, conditions, and more</span></a><a href="/design-your-own-route/"><span class="gnm-l">Design Your Own Route</span><span class="gnm-d">Tools for building a ride from scratch</span></a><a href="/bike-together/"><span class="gnm-l">Bike Together</span><span class="gnm-d">Tours and group rides you can join</span></a></div></div><div class="g-navgroup activeslot" data-slot="field-notes"><button type="button" class="g-navtop" aria-expanded="false">Field Notes <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/field-notes"><span class="gnm-l">Read the latest</span><span class="gnm-d">Trip reports, deep dives, and trail news</span></a><a href="/#newsletter"><span class="gnm-l">Subscribe</span><span class="gnm-d">One email a month with what's new</span></a></div></div><div class="g-navgroup" data-slot="about"><button type="button" class="g-navtop" aria-expanded="false">About <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/about"><span class="gnm-l">About us</span><span class="gnm-d">Who we are and what we're building</span></a><a href="/advocacy/"><span class="gnm-l">Advocacy</span><span class="gnm-d">Safe roads, rail corridors, and getting there with a bike</span></a><a href="/research/"><span class="gnm-l">Research and Data</span><span class="gnm-d">The numbers and methods behind this site</span></a><a href="/with-thanks/"><span class="gnm-l">With thanks</span><span class="gnm-d">The people and organizations behind us</span></a><a href="/#contact"><span class="gnm-l">Say hi! 🙂</span><span class="gnm-d">We'd love to hear from you</span></a></div></div>
+      <a href="/search/" class="g-nav-search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg><span class="g-nav-search-label">Search</span></a>
+    </div>
+    <button class="g-hamburger" id="g-ham" aria-label="Menu">☰</button>
+  </div>
+</div>
+<script>
+(function(){
+  var h=document.getElementById('g-ham'),n=document.getElementById('g-nav');
+  if(!h||!n)return;
+  h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
+  document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
+  var groups=[].slice.call(document.querySelectorAll('.g-navgroup'));
+  function closeAll(except){
+    groups.forEach(function(g){
+      if(g!==except){
+        g.classList.remove('open');
+        var b=g.querySelector('.g-navtop');
+        if(b)b.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  groups.forEach(function(g){
+    var btn=g.querySelector('.g-navtop'),timer=null;
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      closeAll(g);
+      var open=g.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    g.addEventListener('mouseenter',function(){
+      if(window.innerWidth<=700)return;
+      clearTimeout(timer);closeAll(g);g.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    });
+    g.addEventListener('mouseleave',function(){
+      if(window.innerWidth<=700)return;
+      timer=setTimeout(function(){
+        g.classList.remove('open');btn.setAttribute('aria-expanded','false');
+      },250);
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest||!e.target.closest('.g-navgroup'))closeAll(null);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')closeAll(null);
+  });
+})();
+</script><!--/chrome-->
+<div class="article-main">
+  <nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/field-notes/">Field Notes</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">HOW TO: Get a bike mechanic to come to you</span></nav>
+  <h1 class="article-title">HOW TO: Get a bike mechanic to come to you</h1>
+  <p class="article-date">August 30, 2026</p>
+  <div class="article-body">
+    
+<p>Awkward to get your bike to a bike shop? In BC, sometimes the bike shop can come to you. Mobile repair vans don't do roadside assistance, alas, but they can still save a touring trip. Here's how it works.</p>
+
+<p>You might have biked past one of the big red Velofix vans, like I did, and wondered whether they'd be any use mid-tour. I stopped to ask. Mitchell from velofix Vancouver gave me the low down, then posed for photos in his rolling workshop.</p>
+
+<figure class="article-figure">
+  <img src="/img/field_notes/202608/velofix/mitchell_van.jpg" alt="Mitchell standing in the back of the velofix van, surrounded by tools and parts drawers">
+  <figcaption>Mitchell in the velofix Vancouver van: repair stand, wall of tools, parts drawers</figcaption>
+</figure>
+
+<h2 id="how-it-works">How it works<a class="h-anchor" href="#how-it-works" aria-label="Link to this section">#</a></h2>
+
+<p><strong>1. Find who serves your area.</strong> Skim the list below. Most of BC's mobile mechanics cover one metro region each.</p>
+
+<p><strong>2. Book online.</strong> Every outfit here takes bookings through its website: pick a service, say what's wrong, choose a time. It's an appointment, not a rescue line. Depending on the season they may have an opening tomorrow or be booked up for weeks, so give them a call to check.</p>
+
+<p><strong>3. Give the van somewhere to park.</strong> Home and office are the usual spots, but a hotel or campground works too. If your bike limps into town mid-trip, phone and ask: if the schedule has room, they may come to you on short notice.</p>
+
+<p><strong>4. Hand over the bike.</strong> The van is a complete workshop. Stay and chat while the work happens, or walk away and come back to a fixed bike.</p>
+
+<p>A few more things Mitchell told me about the Velofix vans: they stock a fair amount of touring bike parts, they work on e-bikes, and prices are similar to a bike shop's, with a bit more white-glove service for the difference. That matches what riders say online.</p>
+
+<figure class="article-figure">
+  <img src="/img/field_notes/202608/velofix/van_side.jpg" alt="Velofix Sprinter van parked at a curb, wrapped in a giant chainring graphic" loading="lazy">
+  <figcaption>The tell: a Mercedes Sprinter wearing a giant chainring</figcaption>
+</figure>
+
+<h2 id="why-this-is-worth-knowing-as-a-touring-cyclist">Why this is worth knowing as a touring cyclist<a class="h-anchor" href="#why-this-is-worth-knowing-as-a-touring-cyclist" aria-label="Link to this section">#</a></h2>
+
+<p>Mid-trip, it means you don't have to figure out how to limp a broken bike across a strange town. Before a trip, it means the tune-up happens in your own driveway.</p>
+
+<h2 id="who-comes-to-you-in-bc">Who comes to you in BC<a class="h-anchor" href="#who-comes-to-you-in-bc" aria-label="Link to this section">#</a></h2>
+
+<ul>
+<li><strong>Vancouver and the Lower Mainland</strong>
+  <ul>
+  <li><a href="https://www.nootkabike.ca/">Nootka Bicycle Co.</a> &mdash; strong on e-bikes; texts you before arriving</li>
+  <li><a href="https://www.thebikestand.ca/">The Bike Stand</a></li>
+  <li><a href="https://vancycle.wordpress.com/">VanCycle</a> &mdash; a full shop in a truck, parts and accessories included</li>
+  <li><a href="https://www.nomadicmechanic.ca/">Nomadic Mechanic</a> &mdash; based on the North Shore</li>
+  <li>Velofix &mdash; two territories: <a href="https://www.velofix.com/locations/vancouver-and-richmond/">Vancouver and Richmond</a> and <a href="https://www.velofix.com/locations/fraser-valley-and-the-tri-cities">Fraser Valley and Tri-Cities</a></li>
+  </ul>
+</li>
+<li><strong>Sea to Sky</strong>
+  <ul>
+  <li><a href="https://www.nomadicmechanic.ca/">Nomadic Mechanic</a> &mdash; covers the corridor</li>
+  <li><a href="https://truemobilebikemechanics.ca/">True Mobile Bike Mechanics</a> &mdash; Squamish to Pemberton, mountain-bike specialty</li>
+  <li><a href="https://www.velofix.com/locations/sea-to-sky/">Velofix Sea to Sky</a> &mdash; West Vancouver to Whistler</li>
+  </ul>
+</li>
+<li><strong>Okanagan</strong>
+  <ul>
+  <li><a href="https://www.onarollbikerepair.com/">On A Roll</a> &mdash; Kelowna</li>
+  <li><a href="https://mcgeecycle.com/">McGeeCycle</a> &mdash; Kelowna</li>
+  <li><a href="https://www.velofix.com/locations/okanagan/">Velofix Okanagan</a></li>
+  </ul>
+</li>
+<li><strong>Greater Victoria</strong>
+  <ul>
+  <li><a href="https://www.velofix.com/locations/victoria-and-capital-region/">Velofix Victoria and Capital Region</a></li>
+  </ul>
+</li>
+</ul>
+
+<p>We didn't find mobile mechanics in every region: nothing surfaced for Vancouver Island outside Greater Victoria, the Kootenays, Kamloops, or the north. If you're headed somewhere not listed here, search "mobile bike repair" plus the town name, and <a href="mailto:heather@bccycletourism.ca">tell us what you find</a> so we can add it.</p>
+
+<figure class="article-figure">
+  <img src="/img/field_notes/202608/velofix/van_rear.jpg" alt="Velofix van with rear doors open showing the workshop inside" loading="lazy">
+  <figcaption>Book online, and this parks outside your door</figcaption>
+</figure>
+
+<p style="font-size: 13px; color: #999; margin-top: 32px;"><em>Accurate as of August 2026. Thanks to Mitchell for the tour and the photos.</em></p>
+
+  </div>
+</div>
+<!--chrome--><div class="g-footer">
+  <a class="g-footer-brand" href="/">
+    <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+  </a>
+  <div class="g-footer-nav">
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get Inspired</div>
+      <a href="/routes/all/">Browse all routes</a>
+      <a href="/routes/">The highlight reel</a>
+      <a href="/trails/">Named trails</a>
+      <a href="/route-publishers/">Route makers</a>
+      <a href="/wwc/communities/">Communities</a>
+      <a href="/routes/how-we-describe/">How we describe routes</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Plan Your Trip</div>
+      <a href="/plan/">How a trip comes together</a>
+      <a href="/wwc/">BC Bike Stops directory</a>
+      <a href="/to-fro/">To &amp; Fro</a>
+      <a href="/add-stops/">Add Stops to Your Route</a>
+      <a href="/wwc/guide/">Stop guides</a>
+      <a href="/be-prepared/">Be Prepared</a>
+      <a href="/design-your-own-route/">Design Your Own Route</a>
+      <a href="/bike-together/">Bike Together</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Field Notes</div>
+      <a href="/field-notes">Read the latest</a>
+      <a href="/#newsletter">Subscribe</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get involved</div>
+      <a href="/suggest/">Suggest a stop</a>
+      <a href="/apply/">Apply for accreditation</a>
+      <a href="/support/trail-organizations/">Support the trail organizations</a>
+      <a href="/#contact">Say hi! 🙂</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">About</div>
+      <a href="/about">About us</a>
+      <a href="/advocacy/">Advocacy</a>
+      <a href="/research/">Research and Data</a>
+      <a href="/with-thanks/">With thanks</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/land-acknowledgement">Land acknowledgement</a>
+    </div>
+  </div>
+</div><!--/chrome-->
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -43,6 +43,10 @@ air:HA15,1,YVR South Terminal,Vancouver,yvr-south,49.1773,-123.1681,dock,stop
 air:HA15,2,YYJ,Victoria,yyj,48.6469,-123.4258,airport,stop
 air:HA16,1,YVR South Terminal,Vancouver,yvr-south,49.1773,-123.1681,dock,stop
 air:HA16,2,YAZ,Tofino,yaz,49.0797,-125.7726,airport,stop
+air:HA17,1,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
+air:HA17,2,Seattle Lake Union WA,Seattle,seattle-lake-union-wa,47.6277,-122.34,dock,stop
+air:HA18,1,Victoria Harbour,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
+air:HA18,2,Seattle Lake Union WA,Seattle,seattle-lake-union-wa,47.6277,-122.34,dock,stop
 air:HJ01,1,Vancouver Harbour Heliport,Vancouver,vancouver-harbour,,,,
 air:HJ01,2,Victoria Harbour Heliport,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
 air:HJ02,1,Vancouver Harbour Heliport,Vancouver,vancouver-harbour,,,,
@@ -400,7 +404,7 @@ bus:mmm-calgary,14,Calgary AB,Calgary AB,calgary-ab,51.0447,-114.0719,town,stop
 bus:quick-seattle,1,Vancouver Waterfront Station,Vancouver Waterfront Station,waterfront,49.28591,-123.11151,town,stop
 bus:quick-seattle,2,Vancouver Canada Place,Vancouver Canada Place,waterfront,49.28591,-123.11151,town,stop
 bus:quick-seattle,3,Richmond River Rock,Richmond River Rock,richmond-river-rock,49.1948,-123.136,town,stop
-bus:quick-seattle,4,Surrey,Surrey,surrey,49.191634,-122.850061,town,community centroid
+bus:quick-seattle,4,South Surrey Border (176 St & 8 Ave),Surrey (South Surrey),south-surrey-border,49.01621,-122.73456,dock,stop
 bus:quick-seattle,5,Bellingham Airport WA,Bellingham Airport WA,bellingham-airport-wa,48.7927,-122.5375,town,stop
 bus:quick-seattle,6,Tulalip WA,Tulalip WA,tulalip-wa,48.0607,-122.2846,town,stop
 bus:quick-seattle,7,Seattle Downtown WA,Seattle Downtown WA,seattle-downtown-wa,47.6062,-122.3321,town,stop
@@ -500,6 +504,8 @@ ferry:9,3,Village Bay,Mayne Island,village-bay,48.8444,-123.3238,dock,stop
 ferry:9,4,Sturdies Bay,Galiano Island,sturdies-bay,48.8788,-123.3178,dock,stop
 ferry:9,5,Lyall Harbour,Saturna Island,lyall-harbour,48.798,-123.2012,dock,stop
 ferry:9,6,Long Harbour,Salt Spring Island,long-harbour,48.8516,-123.4458,dock,stop
+ferry:CLIPPER,1,Victoria Belleville Terminal,Victoria,victoria-harbour,48.4238,-123.3711,dock,stop
+ferry:CLIPPER,2,Seattle Downtown WA,Seattle Downtown WA,seattle-downtown-wa,47.6062,-122.3321,town,stop
 ferry:HULLO,1,Hullo Nanaimo Terminal (Port Way),Nanaimo,nanaimo-hullo,49.1726,-123.938,dock,stop
 ferry:HULLO,2,CXH,Vancouver (Coal Harbour),cxh,49.2889,-123.1217,airport,stop
 ferry:NEWCASTLE,1,Maffeo Sutton Park Dock,Nanaimo,nanaimo-hullo,49.1726,-123.938,dock,stop
@@ -693,6 +699,10 @@ local-bus:tl-229,2,Lynn Valley Bay 1,North Vancouver,lynn-valley,49.33661,-123.0
 local-bus:tl-257,1,Horseshoe Bay Ferry Terminal,West Vancouver,horseshoe-bay,49.37105,-123.280676,town,community centroid
 local-bus:tl-257,2,Park Royal,West Vancouver,west-vancouver,49.327,-123.13857,dock,stop
 local-bus:tl-257,3,Downtown Vancouver (Dunsmuir at Cambie),Vancouver,vancouver,49.261111,-123.113889,town,community centroid
+local-bus:tl-321,1,White Rock Centre,White Rock,white-rock-centre,49.0321,-122.80106,dock,stop
+local-bus:tl-321,2,Surrey Central Station,Surrey,surrey-central,49.18922,-122.84817,dock,stop
+local-bus:tl-351,1,White Rock Centre,White Rock,white-rock-centre,49.0321,-122.80106,dock,stop
+local-bus:tl-351,2,Bridgeport Station,Richmond,bridgeport,49.19514,-123.13369,dock,stop
 local-bus:tl-620,1,Tsawwassen Ferry Terminal,Delta,tsawwassen,49.008056,-123.128333,town,community centroid
 local-bus:tl-620,2,Ladner Exchange,Delta,ladner-exchange,49.0903,-123.0814,dock,stop
 local-bus:tl-620,3,Bridgeport Station,Richmond,bridgeport,49.19514,-123.13369,dock,stop

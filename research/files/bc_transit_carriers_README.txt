@@ -27,7 +27,7 @@ https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Carriers: 67 rows, 12 columns.
+Carriers: 68 rows, 12 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
@@ -38,7 +38,7 @@ listings, ferry timetables, and telephone calls. It is a collection, not a
 census: we cannot know what we have missed, so treat every count as a floor,
 never a total.
 
-Of the 67 carriers here, 32 have had their bicycle policy checked against the
+Of the 68 carriers here, 33 have had their bicycle policy checked against the
 operator's own material, 7 are read from the operator's published description
 and not separately checked, and 28 have no bicycle policy on file at all. That
 last group is a finding, not an oversight: for much of British Columbia, nobody

@@ -28,7 +28,7 @@ https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Routes: 327 rows, 14 columns.
+Routes: 332 rows, 14 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
@@ -45,7 +45,7 @@ departure times here, this is not General Transit Feed Specification (GTFS) data
 and cannot be loaded by GTFS tools. Where one of our columns means the same
 thing as a GTFS field, we have borrowed the GTFS name so it reads familiarly.
 
-Of the 327 routes, 268 are part of the network we route journeys across. The
+Of the 332 routes, 273 are part of the network we route journeys across. The
 rest are published too, each with the reason we set it aside, because what was
 excluded is part of the picture.
 
