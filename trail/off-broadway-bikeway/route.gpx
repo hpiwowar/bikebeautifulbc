@@ -487,13 +487,6 @@
 <sym>Dot</sym>
 <type>gear</type>
 </wpt>
-<wpt lat="49.262768" lon="-123.069390">
-<name>Megabite Pizza</name>
-<cmt>food</cmt>
-<desc>Fast Food / Chain</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.264354" lon="-123.176250">
 <name>Sahel</name>
 <cmt>food</cmt>
@@ -2692,13 +2685,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.268030" lon="-123.154567">
-<name>Don at Kitsilano</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.268034" lon="-123.154818">
 <name>49th Parallel &amp; Lucky's Doughnuts Cafe</name>
 <cmt>food</cmt>
@@ -3877,13 +3863,6 @@
 </wpt>
 <wpt lat="49.262604" lon="-123.057016">
 <name>Golden Spring</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.263143" lon="-123.104743">
-<name>Wok&amp;Wings</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
 <sym>Dot</sym>

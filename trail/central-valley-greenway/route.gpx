@@ -396,13 +396,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.201628" lon="-122.911640">
-<name>Tiger Sugar</name>
-<cmt>coffee</cmt>
-<desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.201398" lon="-122.911495">
 <name>Anvil Centre</name>
 <cmt>monument</cmt>
@@ -652,13 +645,6 @@
 <name>Cake It Easy</name>
 <cmt>food</cmt>
 <desc>Bakery / Donuts</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.202400" lon="-122.912683">
-<name>Hyack Sushi</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -1133,13 +1119,6 @@
 </wpt>
 <wpt lat="49.262831" lon="-123.069471">
 <name>Quesada</name>
-<cmt>food</cmt>
-<desc>Fast Food / Chain</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.262768" lon="-123.069390">
-<name>Megabite Pizza</name>
 <cmt>food</cmt>
 <desc>Fast Food / Chain</desc>
 <sym>Dot</sym>

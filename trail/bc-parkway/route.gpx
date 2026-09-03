@@ -382,13 +382,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.221774" lon="-122.988490">
-<name>Sweet Puffin</name>
-<cmt>coffee</cmt>
-<desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.226682" lon="-123.001773">
 <name>Presotea</name>
 <cmt>coffee</cmt>
@@ -512,6 +505,13 @@
 <name>Yunshang Rice Noodle</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.228904" lon="-123.005223">
+<name>Shiny Tea</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -1446,13 +1446,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.229197" lon="-123.001075">
-<name>Yin Ji Chang Fen</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.231161" lon="-123.004669">
 <name>Save-On-Foods</name>
 <cmt>convenience_store</cmt>
@@ -2111,13 +2104,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.201628" lon="-122.911640">
-<name>Tiger Sugar</name>
-<cmt>coffee</cmt>
-<desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.201398" lon="-122.911495">
 <name>Anvil Centre</name>
 <cmt>monument</cmt>
@@ -2262,13 +2248,6 @@
 <name>Cocoaro</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.202400" lon="-122.912683">
-<name>Hyack Sushi</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

@@ -1348,13 +1348,6 @@
 <sym>Dot</sym>
 <type>info</type>
 </wpt>
-<wpt lat="49.275791" lon="-123.121587">
-<name>Urban Thai Bistro</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.265420" lon="-123.135727">
 <name>Marché Mon Pitou</name>
 <cmt>coffee</cmt>
@@ -2481,6 +2474,13 @@
 <desc>Liquor Store</desc>
 <sym>Dot</sym>
 <type>store</type>
+</wpt>
+<wpt lat="49.280207" lon="-123.106848">
+<name>Shiny Tea</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
 </wpt>
 <wpt lat="49.263603" lon="-123.122019">
 <name>Kisokoma Japanese Restaurant</name>

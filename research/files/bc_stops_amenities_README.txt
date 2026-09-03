@@ -6,7 +6,7 @@ more than sixty amenities and no place has more than a handful, so a wide table
 would be mostly empty. In this shape it pivots. Join it to the places file on
 listing_key.
 
-Published 2026-08-15 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-09-02 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -21,21 +21,21 @@ that or not. Use it, redistribute it, build on it. If you publish a database
 derived from it, that database has to carry the same licence.
 
 Suggested citation: BC Cycle Tourism Society (2026). What each place in British
-Columbia offers a cyclist [data set]. Version 2026-08-15.
+Columbia offers a cyclist [data set]. Version 2026-09-02.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-55186 rows, 7 columns.
+55050 rows, 7 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no. Blanks are common here, because most of these
 places have never been asked.
 
-55186 rows across 18618 places, which is about three amenities each. Most places
+55050 rows across 18591 places, which is about three amenities each. Most places
 have a handful; a few have twenty.
 
-332 of the rows are FALSE, meaning we established that the place does not have
+333 of the rows are FALSE, meaning we established that the place does not have
 that amenity. A place with no row for an amenity is not a FALSE: it means nobody
 has established it either way, and the two must not be merged.
 

@@ -5,7 +5,7 @@ One row per operator: whether it carries bicycles, under what conditions, where
 that answer came from, and when a human last checked it. Nobody else publishes
 this, which is also why it needs reading with its dates in view.
 
-Published 2026-08-11 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-09-02 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -22,7 +22,7 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). British Columbia carriers
-and their bicycle policies [data set]. Version 2026-08-11.
+and their bicycle policies [data set]. Version 2026-09-02.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE

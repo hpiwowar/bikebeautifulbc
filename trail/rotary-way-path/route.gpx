@@ -263,6 +263,13 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
+<wpt lat="49.518686" lon="-115.761420">
+<name>Lazy Bear Lodge</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
 <wpt lat="49.525472" lon="-115.750017">
 <name>Bulk Barn</name>
 <cmt>convenience_store</cmt>

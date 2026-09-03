@@ -200,13 +200,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.278449" lon="-123.075465">
-<name>Coho Coffee</name>
-<cmt>coffee</cmt>
-<desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.278444" lon="-123.059510">
 <name>Templeton Park Pool</name>
 <cmt>rest_stop</cmt>
@@ -1051,6 +1044,13 @@
 <name>Forecast Coffee</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.280207" lon="-123.106848">
+<name>Shiny Tea</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

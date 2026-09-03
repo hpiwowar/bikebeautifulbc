@@ -39,6 +39,13 @@
 <sym>Dot</sym>
 <type>transport</type>
 </wpt>
+<wpt lat="49.495697" lon="-117.293063">
+<name>Torchlight Brewing</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.492503" lon="-117.294884">
 <name>Library</name>
 <cmt>food</cmt>
@@ -73,6 +80,13 @@
 <desc>Hotel / Motel</desc>
 <sym>Dot</sym>
 <type>shelter</type>
+</wpt>
+<wpt lat="49.494259" lon="-117.295338">
+<name>Torchlight Brewing Co.</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
 </wpt>
 <wpt lat="49.500283" lon="-117.283514">
 <name>BC Liquor Store</name>

@@ -95,13 +95,6 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
-<wpt lat="49.015006" lon="-123.040308">
-<name>Emdee's Fish and Chips</name>
-<cmt>food</cmt>
-<desc>Fast Food / Chain</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.169114" lon="-122.914849">
 <name>Annieville Market</name>
 <cmt>convenience_store</cmt>
@@ -255,13 +248,6 @@
 <desc>Fast Food / Chain</desc>
 <sym>Dot</sym>
 <type>food</type>
-</wpt>
-<wpt lat="49.141105" lon="-122.922177">
-<name>Delta Nature Reserve</name>
-<cmt>park</cmt>
-<desc>Park / Nature</desc>
-<sym>Dot</sym>
-<type>rest_area</type>
 </wpt>
 <wpt lat="49.034971" lon="-123.067833">
 <name>Gallery 1710</name>

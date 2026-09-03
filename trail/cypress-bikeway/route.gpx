@@ -1152,13 +1152,6 @@
 <sym>Dot</sym>
 <type>shelter</type>
 </wpt>
-<wpt lat="49.270477" lon="-123.141429">
-<name>That's It Cafe</name>
-<cmt>coffee</cmt>
-<desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.263687" lon="-123.154589">
 <name>Evelyn's Coffee and Grill</name>
 <cmt>coffee</cmt>
@@ -1182,13 +1175,6 @@
 </wpt>
 <wpt lat="49.263694" lon="-123.154694">
 <name>Yagoto Sushi Dining</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.268030" lon="-123.154567">
-<name>Don at Kitsilano</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
 <sym>Dot</sym>

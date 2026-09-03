@@ -6,7 +6,7 @@ whether a cyclist can get from one to the other on scheduled service, how many
 times they would board, and what runs. The question this was built to answer is
 not where the buses go, it is where a bicycle is allowed to go with you.
 
-Published 2026-08-11 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-09-02 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -23,7 +23,7 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). Getting between British
-Columbia communities with a bicycle [data set]. Version 2026-08-11.
+Columbia communities with a bicycle [data set]. Version 2026-09-02.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE

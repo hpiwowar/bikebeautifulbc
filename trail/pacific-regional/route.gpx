@@ -865,13 +865,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.275791" lon="-123.121587">
-<name>Urban Thai Bistro</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.279349" lon="-123.100307">
 <name>Juke</name>
 <cmt>food</cmt>
@@ -1268,6 +1261,13 @@
 <name>The Boss Bakery &amp; Restaurant</name>
 <cmt>food</cmt>
 <desc>Bakery / Donuts</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.280207" lon="-123.106848">
+<name>Shiny Tea</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -2962,13 +2962,6 @@
 <name>A la Mode</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.278582" lon="-123.115810">
-<name>Super Chef Grill</name>
-<cmt>food</cmt>
-<desc>Fast Food / Chain</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

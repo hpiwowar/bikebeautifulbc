@@ -7,7 +7,7 @@ enrichment, human review, and hand-added records field by field, and because the
 licence on the whole depends on which parts are OpenStreetMap's. Join it to the
 places file on listing_key.
 
-Published 2026-08-15 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-09-02 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -22,18 +22,18 @@ that or not. Use it, redistribute it, build on it. If you publish a database
 derived from it, that database has to carry the same licence.
 
 Suggested citation: BC Cycle Tourism Society (2026). Where each fact about each
-place came from [data set]. Version 2026-08-15.
+place came from [data set]. Version 2026-09-02.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-66576 rows, 3 columns.
+66580 rows, 3 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no. Blanks are common here, because most of these
 places have never been asked.
 
-66576 rows: one for every field of every place where we hold a value at all. A
+66580 rows: one for every field of every place where we hold a value at all. A
 field with no row is a field we hold nothing for.
 
 This is the file that makes the licence legible. Rows sourced 'osm' are

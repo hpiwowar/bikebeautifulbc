@@ -935,13 +935,6 @@
 <sym>Dot</sym>
 <type>info</type>
 </wpt>
-<wpt lat="49.270477" lon="-123.141429">
-<name>That's It Cafe</name>
-<cmt>coffee</cmt>
-<desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.274141" lon="-123.120068">
 <name>Freshbowl</name>
 <cmt>food</cmt>
@@ -3168,13 +3161,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.285571" lon="-123.115990">
-<name>Open Outcry</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.268532" lon="-123.168552">
 <name>Fresh St. Market</name>
 <cmt>convenience_store</cmt>
@@ -3392,13 +3378,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.290159" lon="-123.135966">
-<name>West End Ice Rink</name>
-<cmt>rest_stop</cmt>
-<desc>Community Centre</desc>
-<sym>Dot</sym>
-<type>rest_area</type>
-</wpt>
 <wpt lat="49.275038" lon="-123.123373">
 <name>Yaletown Gelato</name>
 <cmt>food</cmt>
@@ -3604,13 +3583,6 @@
 </wpt>
 <wpt lat="49.276253" lon="-123.115549">
 <name>Pho Khanh Express</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.275791" lon="-123.121587">
-<name>Urban Thai Bistro</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
 <sym>Dot</sym>
@@ -6233,6 +6205,13 @@
 <desc>Liquor Store</desc>
 <sym>Dot</sym>
 <type>store</type>
+</wpt>
+<wpt lat="49.280207" lon="-123.106848">
+<name>Shiny Tea</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
 </wpt>
 <wpt lat="49.267240" lon="-123.103521">
 <name>R &amp; B Ale &amp; Pizza House</name>

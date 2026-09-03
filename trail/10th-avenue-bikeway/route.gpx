@@ -935,13 +935,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.263143" lon="-123.104743">
-<name>Wok&amp;Wings</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.263068" lon="-123.101840">
 <name>Old Durbar Nepalese &amp; Indian Restaurant</name>
 <cmt>food</cmt>
@@ -1653,13 +1646,6 @@
 <name>The Pleasant</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.262768" lon="-123.069390">
-<name>Megabite Pizza</name>
-<cmt>food</cmt>
-<desc>Fast Food / Chain</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

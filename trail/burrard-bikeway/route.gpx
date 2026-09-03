@@ -662,13 +662,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.279737" lon="-123.126662">
-<name>Tokyo Joe's</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.264421" lon="-123.145942">
 <name>Burrard Liquor Store</name>
 <cmt>convenience_store</cmt>
@@ -1567,13 +1560,6 @@
 </wpt>
 <wpt lat="49.284639" lon="-123.124156">
 <name>Il Nido Italian Restaurant</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.285571" lon="-123.115990">
-<name>Open Outcry</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
 <sym>Dot</sym>
@@ -2524,13 +2510,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.270477" lon="-123.141429">
-<name>That's It Cafe</name>
-<cmt>coffee</cmt>
-<desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.272663" lon="-123.136526">
 <name>Tap &amp; Barrel Bridges</name>
 <cmt>food</cmt>
@@ -2743,13 +2722,6 @@
 </wpt>
 <wpt lat="49.279198" lon="-123.123389">
 <name>Fresh Donair</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.279109" lon="-123.123521">
-<name>Crave India</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
 <sym>Dot</sym>

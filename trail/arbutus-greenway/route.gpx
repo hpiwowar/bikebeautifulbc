@@ -1089,13 +1089,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.268030" lon="-123.154567">
-<name>Don at Kitsilano</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.263834" lon="-123.140784">
 <name>Tim Hortons</name>
 <cmt>food</cmt>
@@ -1438,13 +1431,6 @@
 <desc>Convenience Store</desc>
 <sym>Dot</sym>
 <type>store</type>
-</wpt>
-<wpt lat="49.270477" lon="-123.141429">
-<name>That's It Cafe</name>
-<cmt>coffee</cmt>
-<desc>Café / Coffee</desc>
-<sym>Dot</sym>
-<type>food</type>
 </wpt>
 <wpt lat="49.211920" lon="-123.140665">
 <name>Bing &amp; Noodle World</name>

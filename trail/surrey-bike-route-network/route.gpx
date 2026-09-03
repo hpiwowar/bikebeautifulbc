@@ -487,6 +487,13 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
+<wpt lat="49.147771" lon="-122.861981">
+<name>Russell Brewing</name>
+<cmt>bar</cmt>
+<desc>Brewery / Pub</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.191259" lon="-122.807001">
 <name>KC Fresh Market</name>
 <cmt>convenience_store</cmt>
