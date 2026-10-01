@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Society guest on Bike Sense Podcast</title>
+<link rel="canonical" href="https://bccycletourism.ca/field-note/bike-sense-podcast/">
+<meta property="og:site_name" content="BC Cycle Tourism Society">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bccycletourism.ca/field-note/bike-sense-podcast/">
+<meta property="og:title" content="Society guest on Bike Sense Podcast">
+<meta property="og:image" content="https://bccycletourism.ca/img/field_notes/202609/podcast/heather_touring.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Society guest on Bike Sense Podcast">
+<meta name="twitter:image" content="https://bccycletourism.ca/img/field_notes/202609/podcast/heather_touring.jpg">
+<meta name="description" content="I (Founding Director Heather Piwowar) talked with Peter Ladner on the BC Cycling Coalition&#x27;s podcast about what BC is missing, why PDF maps don&#x27;t cut it anymore, and how much cycle tourists really eat. The full transcript, plus more episodes for people who love touring in BC.">
+<meta property="og:description" content="I (Founding Director Heather Piwowar) talked with Peter Ladner on the BC Cycling Coalition&#x27;s podcast about what BC is missing, why PDF maps don&#x27;t cut it anymore, and how much cycle tourists really eat. The full transcript, plus more episodes for people who love touring in BC.">
+<meta name="twitter:description" content="I (Founding Director Heather Piwowar) talked with Peter Ladner on the BC Cycling Coalition&#x27;s podcast about what BC is missing, why PDF maps don&#x27;t cut it anymore, and how much cycle tourists really eat. The full transcript, plus more episodes for people who love touring in BC.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":["https://www.linkedin.com/company/bc-cycle-tourism-society/","https://tiabc.ca/members/bc-cycle-tourism-society/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Society guest on Bike Sense Podcast","url":"https://bccycletourism.ca/field-note/bike-sense-podcast/","headline":"Society guest on Bike Sense Podcast","datePublished":"2026-09-30T00:00:00-07:00","author":{"@type":"Person","name":"Heather Piwowar","url":"https://bccycletourism.ca/about/"},"publisher":{"@type":"Organization","name":"BC Cycle Tourism Society","logo":{"@type":"ImageObject","url":"https://bccycletourism.ca/img/logo-google.png"}},"description":"I (Founding Director Heather Piwowar) talked with Peter Ladner on the BC Cycling Coalition's podcast about what BC is missing, why PDF maps don't cut it anymore, and how much cycle tourists really eat. The full transcript, plus more episodes for people who love touring in BC.","image":"https://bccycletourism.ca/img/field_notes/202609/podcast/heather_touring.jpg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bccycletourism.ca/"},{"@type":"ListItem","position":2,"name":"Field Notes","item":"https://bccycletourism.ca/field-notes/"},{"@type":"ListItem","position":3,"name":"Society guest on Bike Sense Podcast","item":"https://bccycletourism.ca/field-note/bike-sense-podcast/"}]}</script>
+<style>
+
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* BC-516: overflow-x:clip is insurance for the full-bleed hero bands, which are
+   width:100vw. Chrome subtracts the stable gutter from vw so they fit exactly,
+   but a browser that doesn't support scrollbar-gutter counts the scrollbar in vw
+   and the band ends up ~15px too wide, which drags the page sideways. clip stops
+   that without creating a scroll container, so position:sticky keeps working. */
+html { scrollbar-gutter: stable; overflow-x: clip; }
+/* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
+   --rail   chrome (header + footer), frames the page
+   --w-read the content column and prose cap, used by nearly every page
+   --w-wide the exception: sidebar filters, two-column stop pages */
+:root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+/* Design tokens (BC-506): palette, warm-stone neutral ramp, radius scale.
+   Every page inherits these; page CSS uses var(...), not raw hex literals.
+   The /stops/ sage family is exempt from tokenization this pass. */
+:root {
+  /* brand */
+  --pacific: #0D4070;   /* navy */
+  --river:   #1E7D96;   /* teal: links + ALL primary buttons */
+  --forest:  #2E8A36;
+  --bright:  #6EC040;   /* accent green — accents only, never buttons */
+  --sky:     #B8E0EC;
+  --pine:    #1F514C;   /* heading green */
+  --herodark:#0D2E1E;
+  /* grounds */
+  --paper: #FFFDF9;     /* page ground */
+  --cream: #FFF6E5;     /* warm panels */
+  /* ink + warm stone neutrals (replaces the cool #E5E7EB/#9CA3AF family) */
+  --ink: #1A1A1A;
+  --stone-600: #57534E; --muted: #57534E;
+  --stone-500: #78716C;
+  --stone-400: #A8A29E;
+  --stone-200: #E7E5E4;
+  --sand: #E0D9CC;      /* warm hairline on cream */
+  /* radius scale: s chips/inputs, m cards, l heroes/panels, pill */
+  --r-s: 8px; --r-m: 12px; --r-l: 20px; --r-pill: 999px;
+}
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+/* Base link colour, both states (BC-504) — visited links were browser-purple
+   wherever no rule targeted them.
+   :where() zeroes the specificity so ANY other rule wins, which is what the
+   original version meant but didn't achieve: bare `a:visited` scores 0-1-1 and
+   quietly outranked every single-class component rule (0-1-0). That repainted
+   the homepage's outlined "Plan your trip" CTA teal-on-navy once you'd visited
+   /plan/ — invisible until hover, when .hero-btn-outline:hover (0-2-0) finally
+   won. getComputedStyle reports the unvisited colour for privacy, so this is
+   only ever visible to the eye, in a profile that has actually been there. */
+:where(a) { color: var(--river); }
+:where(a:visited) { color: var(--river); }
+.g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
+.g-banner strong { font-weight: 700; }
+/* position+z-index so open dropdown menus paint above page content that
+   creates its own stacking contexts (hero cards, reveal animations) */
+.g-header { padding: 14px 40px; position: relative; z-index: 500; }
+.g-header-inner { max-width: var(--rail, 1200px); margin: 0 auto; display: flex; align-items: center; gap: 64px; }
+.g-header-left { display: flex; align-items: center; text-decoration: none; }
+.g-header-left img { height: 50px; width: auto; max-width: 100%; }
+.g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
+.g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
+.g-header-nav a:hover { color: var(--river); }
+.g-header-nav a.active { color: var(--river); font-weight: 600; }
+.g-nav-search { display: flex; align-items: center; gap: 6px; }
+.g-nav-search svg { width: 15px; height: 15px; display: block; }
+.g-nav-search .g-nav-search-label { display: inline; }
+/* Header dropdown menus (nav rethink 2026-08) */
+.g-navgroup { position: relative; display: flex; align-items: center; }
+.g-navtop {
+  font-family: inherit; font-size: 14px; font-weight: 500; color: #2C4C3B;
+  background: none; border: none; cursor: pointer; padding: 0;
+  display: flex; align-items: center; gap: 5px; transition: color 0.2s;
+}
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: var(--river); }
+.g-navgroup.activeslot .g-navtop { color: var(--river); font-weight: 600; }
+.g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
+.g-navgroup.open .g-caret { transform: rotate(180deg); }
+.g-navmenu {
+  position: absolute; top: calc(100% + 12px); left: -14px; display: none;
+  background: var(--paper); border: 1px solid #ECE7DD; border-radius: var(--r-m);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
+}
+.g-navgroup.open > .g-navmenu { display: block; }
+/* right-side menus open leftward so they never overflow the viewport */
+.g-navgroup[data-slot="field-notes"] .g-navmenu,
+.g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
+.g-header-nav .g-navmenu a {
+  display: block; padding: 9px 12px; border-radius: var(--r-s);
+  font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
+  white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
+}
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: var(--river); }
+.g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
+.g-header-nav .g-navmenu .gnm-d {
+  display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
+  color: rgba(13,46,30,0.62); margin-top: 1px; line-height: 1.35; text-align: left;
+}
+/* over photos, green reads badly: rest is soft white, hover full white, and
+   the active section carries a small underline instead of a colour */
+.g-header.transparent .g-navtop { color: rgba(255,255,255,0.88); text-shadow: 0 1px 6px rgba(0,0,0,0.55); }
+.g-header.transparent .g-navtop:hover { color: #fff; }
+.g-header.transparent .g-navgroup.activeslot .g-navtop {
+  color: #fff; text-decoration: underline;
+  text-underline-offset: 7px; text-decoration-thickness: 2px;
+}
+/* menu panels are solid cream even under a transparent header: beat the
+   white-link transparent rules at their own specificity */
+.g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: var(--river); }
+.g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent.solid .g-navtop:hover { color: var(--river); }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: var(--river); text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--pine); padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: var(--pine); margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h1 { font-weight: 700; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: var(--pine); margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: var(--stone-600); margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: var(--river); }
+.g-main ul { margin-left: 20px; color: var(--stone-600); margin-bottom: 14px; }
+.g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: var(--stone-400); margin-bottom: 18px; }
+.g-crumb a { color: var(--river); text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: var(--stone-400); }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
+.g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
+.g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
+.g-footer-brand img { height: 32px; width: auto; max-width: 100%; }
+.g-footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.g-footer-col { }
+.g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
+.g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
+.g-footer-col a:hover { color: var(--pacific); }
+.section-divider { border: none; border-top: 1px solid var(--stone-200); margin: 28px 0; }
+.bio { margin-bottom: 20px; }
+.bio strong { color: var(--pine); font-size: 15px; }
+.bio > em { color: var(--stone-600); font-size: 13px; }
+.bio p { font-size: 14px; margin-top: 6px; }
+@media (max-width: 700px) {
+  .g-banner { padding: 6px 14px; font-size: 11px; }
+  .g-header { padding: 12px 16px; position: relative; z-index: 300; }
+  .g-header-inner { gap: 0; }
+  .g-main { padding: 24px 14px 16px; }
+  .g-hamburger { display: block; }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav.open { display: flex; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid var(--stone-200); font-size: 15px; color: var(--pine); }
+  .g-header-nav a:last-child { border-bottom: none; }
+  .g-nav-search svg { display: none; }
+  .g-nav-search .g-nav-search-label { display: inline; }
+  /* dropdown groups become accordion sections inside the hamburger panel */
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid var(--stone-200); }
+  .g-navtop {
+    width: 100%; justify-content: space-between; padding: 12px 0;
+    font-size: 15px; color: var(--pine); text-shadow: none;
+  }
+  .g-navmenu {
+    position: static; box-shadow: none; border: none; background: none;
+    padding: 0 0 10px 14px; min-width: 0; border-radius: 0;
+  }
+  .g-header-nav .g-navmenu a { border-bottom: none; padding: 8px 0; font-size: 14.5px; }
+  .g-footer { padding: 40px 20px 48px; }
+  .g-footer-nav { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+}
+
+/* Section anchors. Every h2 gets a quiet "#" that hands you a link to that
+   section. Grey at rest so it reads as a tool rather than content, teal at the
+   moment you are about to click it. Touch devices have no hover, so it sits
+   faintly visible there instead of being unreachable. */
+.h-anchor { margin-left: .35em; color: var(--stone-500); opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+h2:hover > .h-anchor { opacity: .55; }
+.h-anchor:hover, .h-anchor:focus { color: var(--river); opacity: 1; }
+@media (hover: none) {
+  .h-anchor { opacity: .35; }
+}
+
+/* ---- Eyebrow labels (BC-509). One treatment site-wide: 11px, caps, teal.
+   Teal because it was already the most-used eyebrow colour, which leaves the
+   accent green free to keep meaning "accent" (journey-map steps, accredited
+   marks) instead of competing as a label colour. The historical class names
+   are aliased here rather than rewritten at every call site; genuinely
+   contextual overrides still win on specificity (e.g. the pale-blue on-photo
+   eyebrow on the To and Fro hero). No font-family: eyebrows inherit Inter,
+   which is what all but one of them already did. ---- */
+.eyebrow, .gi-eyebrow, .dir-eyebrow, .ls-notable-eyebrow,
+.listing-section-title, .ls-pills-label, .ls-card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--river); margin-bottom: 6px;
+}
+
+/* ---- Chip geometry (BC-509). Two geometries, not ten. Label chips are read;
+   control chips are tapped, so they get a bigger target. Colour and meaning
+   stay per-family — this only unifies size, padding, and radius. ---- */
+.chip, .lachip, .lichip, .lfacet, .pubchip, .guide-chip-am,
+.listing-pill-yes, .listing-pill-no {
+  font-size: 12.5px; padding: 4px 12px; border-radius: var(--r-pill);
+}
+.dir-chip, .guide-chip, .explore-chip {
+  font-size: 13.5px; padding: 6px 13px; border-radius: var(--r-pill);
+}
+
+/* ---- Warm CTA panel (BC-508). One "warm panel + one action" component that
+   replaces four hand-rolled versions: route detail's "Ready to ride it?", the
+   routes-hub publisher card, Design Your Own Route's signup, and the homepage
+   newsletter block. The action slot is deliberately open — it takes a button
+   link OR a whole form — so the call sites keep their own behaviour and share
+   only the chrome. Emitted by warm_panel() below; the title/body/act selectors
+   are class-on-class so they win against .g-main h2 / .g-main p. ---- */
+.wpanel { background: var(--cream); border: 1px solid var(--sand); border-radius: var(--r-l);
+  padding: 26px 30px; margin: 34px auto 8px; max-width: 900px; }
+.wpanel.narrow { max-width: 700px; }
+.wpanel.center { text-align: center; }
+.wpanel .wp-title { font-family: "Archivo", "Inter", sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--pine); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 6px; }
+.wpanel.lg .wp-title { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+.wpanel .wp-body { color: var(--stone-600); font-size: 15px; line-height: 1.55; margin: 0 0 16px; max-width: 62ch; }
+.wpanel.center .wp-body { margin-left: auto; margin-right: auto; }
+.wpanel .wp-body a { color: var(--river); }
+.wpanel .wp-act { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.wpanel.center .wp-act { align-items: center; }
+.wpanel .wp-act form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.wpanel.center .wp-act form { margin: 0 auto; }
+/* one button and one field treatment inside the panel, whatever the action is */
+.wpanel .wp-act .wp-btn, .wpanel .wp-act button { display: inline-block; background: var(--river);
+  color: #fff; border: none; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: var(--r-m); cursor: pointer; text-align: center;
+  transition: background .2s ease; }
+.wpanel .wp-act .wp-btn:hover, .wpanel .wp-act button:hover { background: var(--pacific); }
+.wpanel .wp-act input:not([type="hidden"]), .wpanel .wp-act textarea { width: 100%;
+  padding: 13px 16px; border: 1.5px solid var(--sand); border-radius: var(--r-m);
+  font-size: 16px; font-family: inherit; background: #fff; transition: border-color .2s; }
+.wpanel .wp-act input:focus, .wpanel .wp-act textarea:focus { border-color: var(--river); outline: none; }
+.wpanel .wp-act textarea { min-height: 76px; resize: vertical; }
+/* secondary action under the primary one (route detail's extra links) */
+.wpanel .wp-alt { font-size: 13.5px; color: var(--river); font-weight: 600; text-decoration: none; }
+.wpanel .wp-alt:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .wpanel { padding: 22px 18px; border-radius: var(--r-m); }
+  .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
+}
+
+/* ---- Photo caption row (BC-516). Credit flush left, place flush right, in one
+   flex row instead of two independently positioned spans — two spans at opposite
+   corners of a photo can't see each other, so on a phone they printed on top of
+   each other. Here they push apart, stay on one line whenever they fit, and wrap
+   only when they must. Emitted by build.cap_row(); each photo family sets its own
+   insets and type, and only the row mechanics live here. ---- */
+.capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+
+.article-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 28px 64px; }
+.back-link { font-size: 14px; color: var(--river); text-decoration: none; display: inline-block; margin-bottom: 24px; }
+.back-link:hover { text-decoration: underline; }
+.article-title { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 700; color: var(--pine); margin-bottom: 8px; letter-spacing: -0.03em; }
+.article-date { font-size: 14px; color: var(--stone-400); margin-bottom: 32px; }
+.article-body { font-size: 16px; color: var(--stone-600); line-height: 1.7; }
+.article-body p { margin-bottom: 16px; max-width: none; }
+.article-body ol, .article-body ul { margin-bottom: 16px; }
+.article-body a { color: var(--river); }
+.article-body h2 { font-family: "Archivo", sans-serif; font-size: 22px; font-weight: 500; color: var(--pine); margin: 32px 0 12px; letter-spacing: -0.02em; clear: both; }
+.article-body h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 600; color: var(--pine); margin: 26px 0 8px; clear: both; }
+.article-figure { margin: 28px 0; }
+.article-figure img { width: 100%; height: auto; display: block; border-radius: var(--r-s); }
+.article-figure figcaption { font-size: 12px; color: var(--stone-400); font-style: italic; margin-top: 6px; text-align: right; }
+.article-figure-small { float: right; width: 200px; margin: 6px 0 16px 24px; }
+.article-figure-mid { float: right; width: 300px; margin: 6px 0 16px 24px; }
+.say-this { background: var(--cream); border-left: 3px solid #d4c6a2; border-radius: 0 8px 8px 0; padding: 12px 18px; margin: 0 0 16px; font-size: 15.5px; color: #5a4e2c; }
+.say-this strong { color: #6b5a2c; }
+.directory-box { background: #F5FAFB; border: 1px solid #cfe4ea; border-radius: var(--r-m); padding: 16px 20px; margin: 24px 0; font-size: 15px; }
+@media (max-width: 700px) {
+  .article-main { padding: 20px 14px 40px; }
+  .article-title { font-size: 24px; }
+  .article-figure-small, .article-figure-mid { float: none; width: 100% !important; margin: 24px 0; }
+}
+</style>
+<script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
+</head>
+<body>
+<!--chrome--><div class="g-header">
+  <div class="g-header-inner">
+    <a href="/" class="g-header-left">
+      <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+    </a>
+    <div class="g-header-nav" id="g-nav">
+      <div class="g-navgroup" data-slot="inspired"><button type="button" class="g-navtop" aria-expanded="false">Get Inspired <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/routes/all/"><span class="gnm-l">Browse all routes</span><span class="gnm-d">Every published route in one filterable list</span></a><a href="/routes/"><span class="gnm-l">The highlight reel</span><span class="gnm-d">Ride after ride, region by region</span></a><a href="/trails/"><span class="gnm-l">Named trails</span><span class="gnm-d">Follow the KVR, the Goose, and other classics</span></a><a href="/route-publishers/"><span class="gnm-l">Route makers</span><span class="gnm-d">The people and clubs who publish BC's rides</span></a><a href="/wwc/communities/"><span class="gnm-l">Communities</span><span class="gnm-d">Browse stops town by town</span></a><a href="/routes/how-we-describe/"><span class="gnm-l">How we describe routes</span><span class="gnm-d">What our difficulty and surface labels mean</span></a></div></div><div class="g-navgroup" data-slot="plan"><button type="button" class="g-navtop" aria-expanded="false">Plan Your Trip <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/plan/"><span class="gnm-l">How a trip comes together</span><span class="gnm-d">The whole journey, one page</span></a><a href="/wwc/"><span class="gnm-l">BC Bike Stops directory</span><span class="gnm-d">Places to sleep, eat, and refill that welcome cyclists</span></a><a href="/to-fro/"><span class="gnm-l">To &amp; Fro</span><span class="gnm-d">Ferries, buses, and trains that take your bike</span></a><a href="/add-stops/"><span class="gnm-l">Add Stops to Your Route</span><span class="gnm-d">Upload a GPX, get the stops along your line</span></a><a href="/wwc/guide/"><span class="gnm-l">Stop guides</span><span class="gnm-d">What &ldquo;welcomes cyclists&rdquo; means, category by category</span></a><a href="/be-prepared/"><span class="gnm-l">Be Prepared</span><span class="gnm-d">Cell coverage, wildlife, conditions, and more</span></a><a href="/design-your-own-route/"><span class="gnm-l">Design Your Own Route</span><span class="gnm-d">Tools for building a ride from scratch</span></a><a href="/bike-together/"><span class="gnm-l">Bike Together</span><span class="gnm-d">Tours and group rides you can join</span></a></div></div><div class="g-navgroup activeslot" data-slot="field-notes"><button type="button" class="g-navtop" aria-expanded="false">Field Notes <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/field-notes"><span class="gnm-l">Read the latest</span><span class="gnm-d">Trip reports, deep dives, and trail news</span></a><a href="/#newsletter"><span class="gnm-l">Subscribe</span><span class="gnm-d">One email a month with what's new</span></a></div></div><div class="g-navgroup" data-slot="about"><button type="button" class="g-navtop" aria-expanded="false">About <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/about"><span class="gnm-l">About us</span><span class="gnm-d">Who we are and what we're building</span></a><a href="/advocacy/"><span class="gnm-l">Advocacy</span><span class="gnm-d">Safe roads, rail corridors, and getting there with a bike</span></a><a href="/research/"><span class="gnm-l">Research and Data</span><span class="gnm-d">The numbers and methods behind this site</span></a><a href="/with-thanks/"><span class="gnm-l">With thanks</span><span class="gnm-d">The people and organizations behind us</span></a><a href="/#contact"><span class="gnm-l">Say hi! 🙂</span><span class="gnm-d">We'd love to hear from you</span></a></div></div>
+      <a href="/search/" class="g-nav-search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg><span class="g-nav-search-label">Search</span></a>
+    </div>
+    <button class="g-hamburger" id="g-ham" aria-label="Menu">☰</button>
+  </div>
+</div>
+<script>
+(function(){
+  var h=document.getElementById('g-ham'),n=document.getElementById('g-nav');
+  if(!h||!n)return;
+  h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
+  document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
+  var groups=[].slice.call(document.querySelectorAll('.g-navgroup'));
+  function closeAll(except){
+    groups.forEach(function(g){
+      if(g!==except){
+        g.classList.remove('open');
+        var b=g.querySelector('.g-navtop');
+        if(b)b.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  groups.forEach(function(g){
+    var btn=g.querySelector('.g-navtop'),timer=null;
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      closeAll(g);
+      var open=g.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    g.addEventListener('mouseenter',function(){
+      if(window.innerWidth<=700)return;
+      clearTimeout(timer);closeAll(g);g.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    });
+    g.addEventListener('mouseleave',function(){
+      if(window.innerWidth<=700)return;
+      timer=setTimeout(function(){
+        g.classList.remove('open');btn.setAttribute('aria-expanded','false');
+      },250);
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest||!e.target.closest('.g-navgroup'))closeAll(null);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')closeAll(null);
+  });
+})();
+</script><!--/chrome-->
+<div class="article-main">
+  <nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/field-notes/">Field Notes</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Society guest on Bike Sense Podcast</span></nav>
+  <h1 class="article-title">Society guest on Bike Sense Podcast</h1>
+  <p class="article-date">September 30, 2026</p>
+  <div class="article-body">
+    
+<figure class="article-figure article-figure-mid" style="width: 260px;">
+  <img src="/img/field_notes/202609/podcast/heather_touring.jpg" alt="Heather Piwowar grinning beside her loaded touring bike">
+</figure>
+
+<p>This summer I had a wonderful chat with Peter Ladner on Bike Sense, the BC Cycling Coalition's podcast. We talked about why BC doesn't have a Vélo Québec yet, why PDF maps don't cut it anymore, what cycle tourists actually spend (they eat a lot), and what the society is working on next.</p>
+
+<p>Thank you to Peter and the BC Cycling Coalition for having me. Links to the audio and the full transcript are below, as well as links to past Bike Sense podcast episodes with more great BC cycle tourism related content.</p>
+
+<h2 id="listen">Listen<a class="h-anchor" href="#listen" aria-label="Link to this section">#</a></h2>
+
+<ul>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-19734769">On the BC Cycling Coalition's site</a></li>
+<li><a href="https://podcasts.apple.com/ca/podcast/can-bc-become-the-next-new-zealand-for-cycle-tourism/id1681356471?i=1000787269174">Apple Podcasts</a> · <a href="https://open.spotify.com/episode/0LnbBEJSxk4JEsK4eJPCbk">Spotify</a> · <a href="https://music.amazon.com/podcasts/acb193b9-9a07-4335-b29f-bffce757bdc5/episodes/c5bdcb80-bde5-4d53-8efd-d3e6264e8843/bike-sense-can-bc-become-the-next-new-zealand-for-cycle-tourism">Amazon Music</a></li>
+</ul>
+
+<h2 id="more-bike-sense-episodes-for-cycle-tourists">More Bike Sense episodes for cycle tourists<a class="h-anchor" href="#more-bike-sense-episodes-for-cycle-tourists" aria-label="Link to this section">#</a></h2>
+
+<h3>Cycle tourism</h3>
+
+<ul>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-17806358">BC's Future as a Global Cycle Tourism Destination</a> (Oct 2025). Colleen MacDonald, author of the <em>Let's Go Biking</em> guidebooks, on the New Zealand comparison and the economic case.</li>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-19017527">Putting Nelson on the Map: Bikepacking for All in the West Kootenays</a> (Apr 2026). Moe Nadeau on the West Kootenay Bikepacking Route Network, five routes built for everyday riders.</li>
+</ul>
+
+<h3>Trails built with First Nations leadership</h3>
+
+<ul>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-19271129">How a First Nation Saved a Rail Trail, and Changed the Region</a> (Jun 2026). Phil McIntyre-Paul on the Splatsin to Sicamous rail trail, and how Splatsin leadership brought the region together to buy and build it.</li>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-18189181">Heron Way, Healing Way</a> (Dec 2025). Elder Ruth Adams of Tsawwassen First Nation on the Great Blue Heron Way, an Indigenous-led route along the Fraser River and the Salish Sea.</li>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-16503292">Indigenous Communities Moving Ahead with Active Transportation</a> (Jan 2025). Chawathil First Nation Councillor Aaron Pete on the Coast to Canyon Trail near Hope.</li>
+</ul>
+
+<h3>More trails and routes</h3>
+
+<ul>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-12964646">Riding the Okanagan Rail Trail</a> (Jul 2023). Matt Vader of the District of Lake Country on the 50 km trail from Kalamalka Lake to downtown Kelowna.</li>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-13006903">MLA Josie Osborne on Biking the Pacific Rim</a> (Jun 2023). The multi-use trail from Tofino to Ucluelet.</li>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-17420935">Rails vs Trails: Vancouver Island's 289 km Rail Corridor</a> (Jul 2025). Alastair Craighead of Friends of Rails to Trails Vancouver Island on the old E&amp;N line.</li>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-15953661">Trailblazers Unite! Connecting the Sunshine Coast from Langdale to Lund</a> (Oct 2024). Tannis Braithwaite on the Connect the Coast trail.</li>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-17597523">The Trail Builder's Playbook</a> (Aug 2025). Allan Kindrat on the Cycle 16 path between Smithers and Telkwa.</li>
+<li><a href="https://bikesense.buzzsprout.com/2168203/episodes/15393616">Salt Spring's Crucial Bike Route Gap</a> (Jul 2024). Steve New on the 180 km Salish Sea Trail loop.</li>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-18909724">The Worst Place To Bike (Pender Island) Finally Gets a Bike Path</a> (Mar 2026).</li>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-17231332">Trials and Tribulations on the Trans Canada Trail</a> (May 2025). Léon Lebrun of Trails BC.</li>
+<li><a href="https://bccycling.ca/podcast#buzzsprout-player-19098816">The Road Nobody Repaves: Rural BC Highways and the Active Transportation Gap</a> (May 2026). Andy Davidoff of the Regional District of Central Kootenay on chip seal on rural highways.</li>
+</ul>
+
+<h2 id="transcript">Transcript<a class="h-anchor" href="#transcript" aria-label="Link to this section">#</a></h2>
+
+<p><strong>Peter Ladner:</strong> Welcome to Bike Sense, the BC Cycling Coalition's podcast, where we talk about all things related to active transportation advocacy in BC. I'm your host, Peter Ladner, Chair of the Board of the BC Cycling Coalition. I hope you enjoy the show. My guest today is Heather Piwowar, the volunteer founding director of the BC Cycle Tourism Society, which was incorporated this spring. Its purpose is to unlock BC's huge cycle tourism potential, and we'll get into that. Before we do, I want to explain what a remarkable person she is: she's got an electrical engineering and computer science degree from MIT, a PhD in biomedical informatics, whatever that is, and she co-founded and grew her own multi-million-dollar nonprofit based on open data research. She's a doer, she's smart, she's passionate, and she's fun, and I'm convinced she's going to make this work. Welcome, Heather.</p>
+
+<p><strong>Heather Piwowar:</strong> Peter, thank you. What an amazing introduction. I'm thrilled to be here.</p>
+
+<p><strong>Peter Ladner:</strong> It's great to have you here — I've been waiting for this opportunity, because I've known about this initiative and we've been waiting until you'd got some things done that we could talk about. But before we get to that, tell me — what was your latest bike ride?</p>
+
+<p><strong>Heather Piwowar:</strong> I went up to Whistler to visit some friends, and I had no idea the Valley Trail Network was so extensive — it's amazing. We biked around for days, and then, since I live in Vancouver, I brought my bike home on a coach bus, because I'm experimenting with how I can get around BC with my bike using different transportation methods. So that part was fun too.</p>
+
+<h3>Why BC Can Win Cycle Tourism</h3>
+
+<p><strong>Peter Ladner:</strong> I've looked at your website and seen the part where you talk very explicitly about how you put your bike on various buses and ferries and so on. Tell me the big picture — what are you trying to do here?</p>
+
+<p><strong>Heather Piwowar:</strong> We're really trying to make cycle tourism in BC explode. In New Zealand, they make a billion dollars a year on their cycle tourism economy, and New Zealand obviously has a lot in common with BC, so I really think we could do that here too. Our goal is to be a world-class cycle tourism destination, just like New Zealand and Quebec. We've got lots of the routes already — the Whistler network I was just talking about, obviously the Kettle Valley Railway, the Galloping Goose, all sorts of bikepacking routes. I consider bikepacking to be part of cycle tourism, and on <a href="http://bikepacking.com/">bikepacking.com</a> there are 27 routes or so in BC. You had Moe Nadeau on one of your podcast episodes — she was talking about the Kootenay network. So we've got a lot of the trail network. What we don't have is a coordination piece to market and advocate the way other places like New Zealand and Quebec do. BC hasn't had that, and that's what this society is trying to achieve.</p>
+
+<p><strong>Peter Ladner:</strong> You mentioned Quebec — what do they have, and what are they doing that we're not?</p>
+
+<p><strong>Heather Piwowar:</strong> Vélo Québec has existed for decades — it's a well-funded, centralized, all-things-cycling organization in Quebec. A long time ago they developed La Route Verte, their connected network system in Quebec. It didn't start off connected — it started in pieces — but they had a long-term strategy and invested in it: the trail network itself, but also the inventory of amenities along the way, like the hotels, campgrounds, grocery stores, and points of interest. They've invested over time, and we think that's what's been missing in BC. Now is exactly the time for BC to jump in and focus on this area.</p>
+
+<p><strong>Peter Ladner:</strong> It sounds like it's not just a matter of having trails out there — you've got to have directions to them. You're going to be the starting point for all that. How would it work — say I'm coming from Spain and I think, "I'm a big cyclist, I want to go cycling in BC" — they go to your website, then what do they do?</p>
+
+<p><strong>Heather Piwowar:</strong> Right now, there's no central place that says "BC is a great place to go do cycle tourism." There is, if you want to do mountain biking or skiing in BC, but not cycle tourism — so actually establishing that website is one of the main things that will help someone from Spain say, "Oh, BC, right, I should go there." Right now they'd have had to find the Kettle Valley Railway, for example, on their own, or the Galloping Goose, and then figure out what guided tours exist around there, or whether they'd rather do it solo and can rent a bike and figure it out themselves. We're hoping this website will pull together the routes and the amenities, get their imagination going, and then show them practically how to make it happen. It's <a href="http://BCCycleTourism.ca/">BCCycleTourism.ca</a> — I'll say that one more time, <a href="http://BCCycleTourism.ca/">BCCycleTourism.ca</a>. I know it's not very catchy, so we're actually working on a more catchy name, but that's where it is right now.</p>
+
+<h3>What BCCycleTourism.ca Offers Now</h3>
+
+<p><strong>Peter Ladner:</strong> So you've built this website — what's the state of it now?</p>
+
+<p><strong>Heather Piwowar:</strong> Cycle tourism is cool because it's really got two different audiences. One is the economic-driver audience, people coming from afar; the other is a recreational aspect for locals. Frankly, if you take a coach bus to some other part of the province, you count as a visitor too. Anyway, right now we're really focusing on locals coming to the website and exploring what cycle tourism there is in our province. It includes a list of routes and ways to get around the province by bike, and a list of campgrounds and hotels that welcome your bike inside your room. There's lots there already — go check it out and see what's there. It's early days, so feedback on the website is super useful.</p>
+
+<p><strong>Peter Ladner:</strong> So at this point you've got the website, it's coming together, you're looking for feedback. Then what has to happen — you've got to promote it somehow. Who's going to help you promote it?</p>
+
+<p><strong>Heather Piwowar:</strong> So far the society is mostly just me as a volunteer, because we don't have any funding yet. The next step is actually to start getting some funding, to build a sustainable future for the society.</p>
+
+<h3>Funding the Work Through Tourism</h3>
+
+<p><strong>Peter Ladner:</strong> Where are you going to get that funding, and how much do you need?</p>
+
+<p><strong>Heather Piwowar:</strong> Other countries and provinces that do this tend to have a staff of about two, three, or four people doing what's called "sector development" and sector marketing — where the sector is cycle tourism instead of golf or mountain biking or whatever. We're looking for enough funding to sustain that size of organization over the next few decades. When these other places got going, they tended to get money from a centralized government — the provincial government, or in New Zealand's case the federal government — as a jobs program, which is great. We were hoping BC might see it the same way, as an investment and jobs program, because I think the potential is there, but that's not how it's structured in BC. So we looked into how tourism is actually financed in BC, and it's through a hotel tax — about two or three percent, charged on top of a hotel bill in most communities, and that money stays in the community to fund tourism development and marketing there. We're hoping to offer services to tourism communities around BC to help them grow their cycle tourism, and in return they'd pay us, and we could use that to invest in cycle tourism around the province.</p>
+
+<p><strong>Peter Ladner:</strong> I've been to some places in BC and found lots of information about cycling on their tourism websites. Are some communities already doing this well on their own?</p>
+
+<p><strong>Heather Piwowar:</strong> Great point. Mountain Biking BC has done an amazing job promoting mountain biking in BC — partly because we've got great terrain, so it sells itself, but mountain biking as a sector organization has really helped push tourism around it. When we're talking about cycle tourism, we mean recreational biking — gravel biking, multi-day trips — and there are far fewer websites that talk about that. We found fewer than half the tourism websites cover it at all, and only about 25% cover it in any depth. Only three out of the 100 tourism communities in BC have digital maps or digital routes — most will show you a static PDF map. Of course, we don't navigate our cars that way anymore, and people don't navigate on their bikes that way either — the websites haven't caught up. So although you might have seen some content, it isn't nearly as pervasive, high-quality, or welcoming as we hope to build it to be.</p>
+
+<p><strong>Peter Ladner:</strong> I'll ask about the content in a second — does the mountain biking association get money from the hotel tax in different regions of the province?</p>
+
+<p><strong>Heather Piwowar:</strong> Good question — I'm not sure if they do. They do get some money from Destination BC, our province-wide tourism association, which has funding mechanisms for sector organizations that we hope to apply for too, in time.</p>
+
+<h3>Moving Past PDFs With GPX</h3>
+
+<p><strong>Peter Ladner:</strong> You've said some communities are stuck on PDFs — basically glorified paper on a screen. But yours is going to be more interactive — how's yours going to work?</p>
+
+<p><strong>Heather Piwowar:</strong> I bet a lot of your listeners use their phone to navigate on their bike, or a Garmin device, or something that gives turn-by-turn directions — either read off the handlebars or spoken aloud. That's the most common approach to cycle tourism navigation. Adventure Cycling Association — celebrating their 50th anniversary this year, the cycle tourism granddaddy of North America — is transitioning away from paper maps and PDF maps to GPX files, which display on your phone or Garmin device for navigation. It's basically like Google Maps navigation on your phone, but customizable and not tied to Google.</p>
+
+<p><strong>Peter Ladner:</strong> This sounds like a whole new level of service and information for cycle tourists.</p>
+
+<p><strong>Heather Piwowar:</strong> Yep, it is — but it's also just the standard people expect now. It's what European visitors expect, frankly what we should expect, and what a lot of people are already building for themselves using Ride with GPS and Komoot. But that adds a barrier. One of the things I really hope this society does is tear down barriers — make it easy for people who haven't gone on their first cycle tourism adventure to think, "I can do that, close to home or far away, without being tech-savvy." We're hoping to help with that, including through navigation. If you're a bikepacker on <a href="http://bikepacking.com/">bikepacking.com</a>, it's easy; increasingly a few other route-makers are making it easy too, but our tourism offices aren't — and that's not their area of expertise. One thing a sector organization brings is that expertise. So we hope to say, "Here's actually how cycle tourists do it — let us help you describe your riverfront path in a GPX file, one that passes all your farm stands selling blueberries, one that connects to your ferries. Let us help you showcase your region the way cyclists expect."</p>
+
+<h3>Aggregating Routes and Grading Difficulty</h3>
+
+<p><strong>Peter Ladner:</strong> Heather, you're clearly not doing all this research yourself — I know we'll get into AI, but you have partners, or existing research you're referencing, that you're aggregating and presumably upgrading or standardizing. Who are some of the people, or what are some of the sources, you're drawing on that are particularly useful?</p>
+
+<p><strong>Heather Piwowar:</strong> Thanks, Peter — I appreciate the chance to do these shout-outs. The website starts with routes that already exist and have been published by people who've worked hard to figure out where in BC is a great place to bike. We're showcasing 300 different routes right now, easy to hard, pulled from about 10 different route publishers. That includes <a href="http://bikepacking.com/">bikepacking.com</a>; it includes <em>Let's Go Biking</em> by Colleen MacDonald, who you've had on a previous podcast episode — she's passionate about cycle tourism and is actually on the board of the society. She contributes easier routes, often single-day rides in different communities around BC. There are some routes from a maker called BT 700 — the BT stands for Butter Tart, because he started off making routes in Ontario connecting good butter tart bakeries. Clearly that's the kind of thing we want to promote here — we could have a donut version. He's got all sorts of great routes in BC too, so we're showcasing those. There's also Adventure Cycling — all of these are publicly available, but you'd have to know where to look, and they're not standardized for difficulty. One thing we're hoping to do — one thing these "glue organizations" in New Zealand and Quebec have — is standards: here's what we'd consider a challenging gravel route, here are our five levels of gravel routes so you can pick the one appropriate for you, or here's what riding in traffic looks like in BC, with five levels so you can pick your comfort level for traffic exposure. We've standardized all of those routes from those 300 sources using a system based on open data to label them and help people navigate. It's early days, but we think this is the way forward.</p>
+
+<p><strong>Peter Ladner:</strong> Is that one of the starting points for people planning a trip? On your site, it immediately flags challenging, moderate, or easy — for me that would be a first point of decision.</p>
+
+<p><strong>Heather Piwowar:</strong> Yeah, we start with a rough, granular level — is it kind of easy or pretty hard. But there's different kinds of hard. For some people, riding with traffic is very hard; for some, being in bear country or very remote terrain is hard; for others it's chunky gravel. So we think it's important to tease that one level out into descriptors, because cycle travel in BC is so diverse. We want people to be able to find things that are comfortable for them, and also figure out one level of challenge they haven't tried yet that they might be interested in exploring, and pick a good next route with that in mind.</p>
+
+<h3>Amenities Planning and Welcoming Stops</h3>
+
+<p><strong>Peter Ladner:</strong> Do you have a way for people with their own specialized routes, or comments and feedback, to have input into your website?</p>
+
+<p><strong>Heather Piwowar:</strong> Yes — wherever I could squeeze it in, there's an opportunity to drop me an email. My email address is <a href="mailto:heather@bccycletourism.ca">heather@bccycletourism.ca</a>. I'd love any and all feedback about what you like or don't like about the website, your thoughts about the routes, and so on. One feature I want to call out, because I think it's cool: if you have your own route, there's a place to upload it, and we'll find the amenities near your route and overlay them, so you can download that and navigate with it on your phone or Garmin. It'll help you plan — say, going between campgrounds or bike-friendly hotels, figuring out how many days you need to carry groceries for, or whether you'll pass by First Nations–owned businesses or tourism areas. That feature's called "<a href="https://bccycletourism.ca/add-stops/">Add Your Stops</a>" on our website — I encourage you to check it out. There are a few other gems like that. Really interested in people's feedback.</p>
+
+<p><strong>Peter Ladner:</strong> How can you possibly evaluate every hotel, restaurant, or butter tart shop for quality on a standardized measure?</p>
+
+<p><strong>Heather Piwowar:</strong> It's possible now in a way it wasn't a few years ago, for a few reasons. One is that open data has never been this good. OpenStreetMap is a source of data on places, and BC itself has a lot of open data too. We start with that, and then we crawl the public web for attributes — do businesses' websites explicitly say they welcome cyclists? One thing I learned doing this: there's a chain in BC with five locations called Accent Inns, and they have a page explicitly saying, "We welcome bicycles, we love bicycles — here's how to bring your bike into your room, and we've got a repair kit and a bike wash." Really cool, right? There's also a rideshare along the coast called Coastal Rides that has a page saying, "We love bicycles, bring your bike on our ride." We've dug up all these things and pulled them into one place on the website — we call those "welcoming stops," or "accredited stops" if they explicitly brag about how much they welcome cyclists, or if they've reached out to say, "We really do welcome cycle tourists, tell people about us," then we'll flag their site too. So please do reach out to me if you're one of those businesses and we haven't found you yet.</p>
+
+<h3>Aligning With BC Tourism Strategy</h3>
+
+<p><strong>Peter Ladner:</strong> I want to go back to scope, because I was impressed that your starting point is to make this work for locals. I've long believed great tourism amenities are ones that excite local people — Granville Island in Vancouver is an example, because tourists like to go there because locals like to go there; it's a real place, not just something pasted on for tourists. But beyond locals, you're also trying to reach out and create jobs by bringing people in from outside. There's a new BC outdoor recreation strategy and a new tourism strategy — how do you fit in with those?</p>
+
+<p><strong>Heather Piwowar:</strong> It's another reason why now is a great time — those strategies have just come out in the last year. The outdoor recreation strategy is exciting because it makes outdoor recreation an organized, goal-driven thing for BC in a way it's never been before. One of its elements is "iconic trails." When they've talked about iconic trails in the presentations I've seen, they've usually mentioned hiking trails and mountain biking trails, not cycle tourism trails. I know they mean to include it, but it's not forefront in their mind — so I think there's an exciting opportunity to make cycle tourism trails something people think of quickly alongside BC and outdoor recreation. On the tourism front, the goal of the new provincial tourism strategy is to double tourism spending over the next 10 years — ambitious. And they don't just want more tourism concentrated in the central tourism spots; they want it dispersed across the province, into more rural areas and shoulder seasons. Well, that's exactly what cycle tourists do — they avoid the hot summer, they like spring and fall, they go further afield, they tend to stay longer than other tourists and actually spend more money, and they're respectful of the environment. It's a great persona, as they say in tourism-speak, for BC to go after. And because they've got that goal, they need new avenues with a lot of opportunity — cycle tourism is really one of those right now for BC. It's pretty exciting.</p>
+
+<p><strong>Peter Ladner:</strong> Tell me more about what cycle tourists actually spend — I can picture someone on a bike with sandwiches in their pannier, maybe camping. Are they really spending that much money, or is this really an economic generator we should pay attention to?</p>
+
+<p><strong>Heather Piwowar:</strong> I think you're underestimating how much they eat.</p>
+
+<p><strong>Peter Ladner:</strong> Okay, the energy bars — forgot about those.</p>
+
+<p><strong>Heather Piwowar:</strong> Yeah, and the pancakes, the fueling during the ride — and don't forget, when they come to BC they might have a microbrewery kickoff dinner and a celebration dinner at the end. That's true whatever kind of cycle tourist you are. People often assume a bikepacker just stays in cheap campgrounds and barely eats anything, but first, they eat a lot, and second, they're buying things to fix their bike, staying in hotels before and after, often spending in small towns. Research in other regions tends to find cycle tourists spend about twice as much as other tourists — they'll often stay four nights somewhere instead of two. The problem is there hasn't been much research on how much people spend on cycle tourism specifically in BC, partly because an organization focused on this hasn't existed yet — that's a gap we're hoping to fill, because that kind of economic analysis is what helps drive investment. It's not our shortest-term endeavour, but I've got a research background and a real passion for it. I think it's one of the biggest levers we can pull in the medium and long term — being able to answer that question with BC-specific detail. Some analysis has been done in the Okanagan and elsewhere, but BC needs a lot more of it.</p>
+
+<p><strong>Peter Ladner:</strong> Do you see the BC Cycle Tourism Society as the agency that would do that kind of research?</p>
+
+<p><strong>Heather Piwowar:</strong> Yeah, definitely.</p>
+
+<p><strong>Peter Ladner:</strong> Yourself, or would you bring in university students or others to do it?</p>
+
+<p><strong>Heather Piwowar:</strong> To start, myself — partly because we don't have money yet; we're still building up a bank account that would let us hire additional people. Over time it'll probably draw on a number of experts. I think in the early stages, an organization like this tends to reflect its founding volunteer — so it's probably not a surprise that some of the first things the BC Cycle Tourism Society has done are a website and some data-heavy research and information work, because frankly that's my background, that's my comfort zone, that's where I can make a big difference quickly. I hope this society exists for decades, with a number of founding directors and executive directors over time who bring their own strengths, and the BC Cycle Tourism Society will grow to reflect all of that. But right now we're starting from a pretty nerdy place.</p>
+
+<h3>Partnerships, Policy Input, and Next Steps</h3>
+
+<p><strong>Peter Ladner:</strong> Well, I want to give credit to your fellow nerds — you have two members on your board, Colleen MacDonald, who's also a BC Cycling Coalition board member, and Colin Stein, our Executive Director at the BC Cycling Coalition. And listeners, Heather will be present, promoting, and taking questions at the Active Transportation Summit in Victoria, October 28th to 30th — if you want to meet Heather and give her feedback or help her with next steps, that's a great chance. What are your next steps now that you've got the website roughed in? You've got to start making partnerships and getting your voice heard by the provincial agencies making policy. How do you propose doing that?</p>
+
+<p><strong>Heather Piwowar:</strong> That's right, and we've already started. This [spring], even before the society was fully incorporated, I was making the rounds — I was at the Outdoor Recreation Council's conference in Kamloops and made some great connections there, and at the Canadian Trails Summit in Winnipeg as well. Now that we've got some traction and a vision to point people to, it's about reaching out to tourism agencies, other sector organizations, and First Nations — which we're already in the midst of doing as we head into fall and winter, a good building phase, since there are fewer bike rides happening. It's a good time to make those partnerships. Please do reach out to me at the AT Summit — stop me in the hall and say hi — or before that, email me if you have a partnership idea you'd like to propose. I'd love to hear it.</p>
+
+<p><strong>Peter Ladner:</strong> I just can't get over how heroic this is — wonderful and amazing, especially from someone of your caliber. Speaking of provincial policy, the provincial government is currently soliciting input on changes to the Motor Vehicle Act. I gather you had some thoughts on how that could be improved for promoting cycle tourism.</p>
+
+<p><strong>Heather Piwowar:</strong> I do, Peter — and it's a great chance to shout out the BC Cycling Coalition, since they're the ones gathering input on the Motor Vehicle Act changes. They and HUB Cycling have put together some priority changes for cyclists. I took that and thought — these are mostly framed around cycling as a commuting or single-day recreational activity. What would we emphasize if we were thinking about it in terms of cycle tourism specifically? For example, a three-second following distance becomes particularly important on long road trips along our highways.</p>
+
+<p><strong>Peter Ladner:</strong> That means if you're riding a bike in traffic, a vehicle has to stay three seconds behind you.</p>
+
+<p><strong>Heather Piwowar:</strong> That's right.</p>
+
+<p><strong>Peter Ladner:</strong> But if you're on the shoulder, that's not relevant?</p>
+
+<p><strong>Heather Piwowar:</strong> I think that's right.</p>
+
+<p><strong>Peter Ladner:</strong> Okay.</p>
+
+<p><strong>Heather Piwowar:</strong> But a lot of our rural routes don't have shoulders.</p>
+
+<p><strong>Peter Ladner:</strong> Gulf Islands, we're looking at you.</p>
+
+<p><strong>Heather Piwowar:</strong> Yeah. So there are about 25 different issues, actually. Rather than run through them all here, we have a monthly newsletter called <em>Field Notes</em> on our website — you can subscribe. In the July issue, we did a deep dive into all of these issues; I'd encourage you to check it out. Search the site for "<a href="https://bccycletourism.ca/field-note/mva-reform-cycle-tourists/">Motor Vehicle Act reform</a>."</p>
+
+<p><strong>Peter Ladner:</strong> Heather, someone of your precision and caliber no doubt has some measures of success — some immediate goals. What are they, other than BC eventually having a massive billion-dollar cycle tourism industry?</p>
+
+<p><strong>Heather Piwowar:</strong> Right now I'm lurking on a lot of cycling groups on Reddit, Facebook, and Instagram, and there are questions that get posted over and over — "How do I get my bike up to Whistler?" "I'm going to Victoria and have two days, where should I ride?" "I'm going to Kelowna, where should I rent a bike?" It feels like we keep asking and answering the same questions. In the short term, I hope people start posting this website as the answer to those questions, because that means they've discovered it and found it useful. Eventually I hope the website becomes well known enough that people don't even need to ask, because they just find the answers to start with. The real goal is better cycle tourism in BC — if the information becomes better known, accurate, and good, that's success.</p>
+
+<p><strong>Peter Ladner:</strong> It sounds very exciting, and I'm impressed by your first steps. I'd encourage listeners to contact you, look at the website, come to the conference and meet you, and share their suggestions. I'd also love to hear reaction from the destination tourism organizations and the provincial government — have you had feedback from the people who I presume are your potential funders?</p>
+
+<p><strong>Heather Piwowar:</strong> I'm in the midst of reaching out to those organizations right now, so I hope to have a good update for you in the next few months.</p>
+
+<p><strong>Peter Ladner:</strong> I'd love to check back in with you. Every time at the BC Cycling Coalition we mention cycle tourism, people's eyes light up — "What if we could have a bike ride from Penticton to Prince George on the old rail tracks, the KVR — why don't they fix it, why are they tearing it down?" The rail trails up in the central interior are all over the place, and people are excited about this. I think there's a big opportunity for someone like you and your society to pull it all together and be a gateway to this information, and bring it to a whole new level.</p>
+
+<p><strong>Heather Piwowar:</strong> Thanks, Peter. I do think it's a coordination opportunity, because there are so many people already doing great work — but there's an opportunity to coordinate it, and to make sure we're in the room when people are talking about what to do with these new corridors, how to look at the economic potential of a corridor, or how many spots there should be on a bike bus on a busy August weekend.</p>
+
+<p><strong>Peter Ladner:</strong> A lot of questions, a lot of data. Thanks so much, Heather, for pulling that together — we're going to watch this closely, and I think it's a very exciting initiative, long overdue. Good for you for stepping in.</p>
+
+<p><strong>Heather Piwowar:</strong> Thanks, Peter. And again, dear listeners, please reach out to me — <a href="mailto:heather@bccycletourism.ca">heather@bccycletourism.ca</a>.</p>
+
+<h3>Wrap-Up and How to Support</h3>
+
+<p><strong>Peter Ladner:</strong> You've been listening to Bike Sense, an original podcast from the BC Cycling Coalition. If you like the podcast, we'd be grateful if you could leave us a rating on whatever platform you use. You can also subscribe so you don't miss future episodes. If you have comments or suggestions for future episodes, email me at <a href="mailto:peter.ladner@bccycling.ca">peter.ladner@bccycling.ca</a>. You can help us amplify the BC Cycling Coalition's voice by becoming a free member at <a href="http://bccycling.ca/">bccycling.ca</a>.</p>
+
+  </div>
+</div>
+<!--chrome--><div class="g-footer">
+  <a class="g-footer-brand" href="/">
+    <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+  </a>
+  <div class="g-footer-nav">
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get Inspired</div>
+      <a href="/routes/all/">Browse all routes</a>
+      <a href="/routes/">The highlight reel</a>
+      <a href="/trails/">Named trails</a>
+      <a href="/route-publishers/">Route makers</a>
+      <a href="/wwc/communities/">Communities</a>
+      <a href="/routes/how-we-describe/">How we describe routes</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Plan Your Trip</div>
+      <a href="/plan/">How a trip comes together</a>
+      <a href="/wwc/">BC Bike Stops directory</a>
+      <a href="/to-fro/">To &amp; Fro</a>
+      <a href="/add-stops/">Add Stops to Your Route</a>
+      <a href="/wwc/guide/">Stop guides</a>
+      <a href="/be-prepared/">Be Prepared</a>
+      <a href="/design-your-own-route/">Design Your Own Route</a>
+      <a href="/bike-together/">Bike Together</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Field Notes</div>
+      <a href="/field-notes">Read the latest</a>
+      <a href="/#newsletter">Subscribe</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get involved</div>
+      <a href="/suggest/">Suggest a stop</a>
+      <a href="/apply/">Apply for accreditation</a>
+      <a href="/support/trail-organizations/">Support the trail organizations</a>
+      <a href="/#contact">Say hi! 🙂</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">About</div>
+      <a href="/about">About us</a>
+      <a href="/advocacy/">Advocacy</a>
+      <a href="/research/">Research and Data</a>
+      <a href="/with-thanks/">With thanks</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/land-acknowledgement">Land acknowledgement</a>
+    </div>
+  </div>
+</div><!--/chrome-->
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
