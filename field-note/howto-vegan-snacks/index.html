@@ -282,6 +282,10 @@ h2:hover > .h-anchor { opacity: .55; }
 .capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
   display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
 .capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+/* Strawpoll embeds: the iframe can't size itself, so the box height is fixed.
+   A five-option poll ends ~440px tall on desktop (measured 2026-09-30); 620px
+   leaves room for a longer question. Phones wrap more, so they keep 836px. */
+@media (max-width: 600px) { .strawpoll-embed { --poll-h: 836px; } }
 
 .article-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 28px 64px; }
 .back-link { font-size: 14px; color: var(--river); text-decoration: none; display: inline-block; margin-bottom: 24px; }
@@ -377,32 +381,6 @@ h2:hover > .h-anchor { opacity: .55; }
 
 <p>Wondering how much to eat? See <a href="/field-note/howto-eat-enough/">how to eat enough on a bike tour</a>.</p>
 
-<h2 id="sweet-snacks">Sweet snacks<a class="h-anchor" href="#sweet-snacks" aria-label="Link to this section">#</a></h2>
-
-<p><strong>Fruit:</strong> fresh (apples, oranges, bananas, grapes) and dried (raisins, apricots, dates).</p>
-
-<p><strong>Dark chocolate:</strong> not milk chocolate. The darker it is, the less likely it'll melt on a hot day.</p>
-
-<p><strong>Candy:</strong> Sour Patch Kids, Jolly Ranchers, Fruit Roll-Ups, Skittles, Twizzlers, Swedish Fish (check the label for beeswax), Cracker Jacks.</p>
-
-<p><strong>Cookies:</strong> Oreos, Nutter Butters (not the fudge-covered ones), Lotus Biscoff.</p>
-
-<p><strong>Bars:</strong> Larabars, MadeGood granola bars (also nut-free), most Clif bars.</p>
-
-<h2 id="salty-snacks">Salty snacks<a class="h-anchor" href="#salty-snacks" aria-label="Link to this section">#</a></h2>
-
-<p><strong>Veggies:</strong> cherry tomatoes, carrot sticks, snap peas.</p>
-
-<p><strong>Nuts and seeds:</strong> mixed nuts, pumpkin seeds, roasted chickpeas, and trail mix from Vancouver Island's Own in Victoria (their West Coast Trail mix, for one).</p>
-
-<p><strong>Spreads and wraps:</strong> peanut butter or another nut butter on a tortilla (squish-proof and cheap), hummus, single-serve nut butter packets. Most tortillas are vegan, but some are made with lard, so check the label.</p>
-
-<p><strong>Crackers:</strong> Triscuits, Wheat Thins (Original, and Sundried Tomato &amp; Basil).</p>
-
-<p><strong>Chips:</strong> Lay's Classic, Ruffles Original, Fritos, Doritos Sweet Chili Heat, and Hardbite chips from Maple Ridge (every flavour but Honey Dijon).</p>
-
-<p><strong>Packaged:</strong> roasted seaweed, pretzels and pita chips (check the ingredients), Harvest Snaps.</p>
-
 <h2 id="from-the-bakery">From the bakery<a class="h-anchor" href="#from-the-bakery" aria-label="Link to this section">#</a></h2>
 
 <p>Crusty bread like baguette and sourdough is usually just flour, water, yeast and salt. Plain bagels often are too (skip egg bagels and ones made with honey). Pastries, cinnamon buns, donuts and pie crusts usually have butter, lard, eggs or milk, but lots of bakeries now label their vegan treats, so ask.</p>
@@ -416,6 +394,34 @@ h2:hover > .h-anchor { opacity: .55; }
 
 <p>In summer and fall, BC's farm stands and farmers' markets are some of the best snack stops there are. Look for cherries from about late June, peaches from late July, and apples into late October. Most farmers' markets run one day a week, so check the day before you plan around one.</p>
 
+<h2 id="from-the-grocery-store">From the grocery store<a class="h-anchor" href="#from-the-grocery-store" aria-label="Link to this section">#</a></h2>
+
+<h3>Sweet snacks</h3>
+
+<p><strong>Fruit:</strong> fresh (apples, oranges, bananas, grapes) and dried (raisins, apricots, dates).</p>
+
+<p><strong>Dark chocolate:</strong> not milk chocolate. The darker it is, the less likely it'll melt on a hot day.</p>
+
+<p><strong>Candy:</strong> Sour Patch Kids, Jolly Ranchers, Fruit Roll-Ups, Skittles, Twizzlers, Swedish Fish (check the label for beeswax), Cracker Jacks.</p>
+
+<p><strong>Cookies:</strong> Oreos, Nutter Butters (not the fudge-covered ones), Lotus Biscoff.</p>
+
+<p><strong>Bars:</strong> Larabars, MadeGood granola bars (also nut-free), most Clif bars.</p>
+
+<h3>Salty snacks</h3>
+
+<p><strong>Veggies:</strong> cherry tomatoes, carrot sticks, snap peas.</p>
+
+<p><strong>Nuts and seeds:</strong> mixed nuts, pumpkin seeds, roasted chickpeas, and trail mix from Vancouver Island's Own in Victoria (their West Coast Trail mix, for one).</p>
+
+<p><strong>Spreads and wraps:</strong> peanut butter or another nut butter on a tortilla (squish-proof and cheap), hummus, single-serve nut butter packets. Most tortillas are vegan, but some are made with lard, so check the label.</p>
+
+<p><strong>Crackers:</strong> Triscuits, Wheat Thins (Original, and Sundried Tomato &amp; Basil).</p>
+
+<p><strong>Chips:</strong> Lay's Classic, Ruffles Original, Fritos, Doritos Sweet Chili Heat, and Hardbite chips from Maple Ridge (every flavour but Honey Dijon).</p>
+
+<p><strong>Packaged:</strong> roasted seaweed, pretzels and pita chips (check the ingredients), Harvest Snaps.</p>
+
 <h2 id="from-the-gas-station">From the gas station<a class="h-anchor" href="#from-the-gas-station" aria-label="Link to this section">#</a></h2>
 
 <p>On a lot of BC routes, the only store for a long stretch is a gas station. You can often still find bananas, plain chips, nuts, Oreos and Skittles there.</p>
@@ -426,7 +432,7 @@ h2:hover > .h-anchor { opacity: .55; }
 
 <p>If your riding companions have gluten or nut allergies, check the labels for those too.</p>
 
-<p>Most vegan food is also kosher and halal, though gelatin only counts if it's marked, and some vanilla extract contains alcohol. When in doubt, check with your eater.</p>
+<p>Most vegan food is also kosher and halal. When in doubt, check with your eater.</p>
 
 <p style="font-size: 13px; color: #999; margin-top: 32px;"><em>Accurate as of September 2026.</em></p>
 

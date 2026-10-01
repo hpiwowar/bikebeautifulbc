@@ -280,6 +280,10 @@ h2:hover > .h-anchor { opacity: .55; }
 .capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
   display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
 .capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+/* Strawpoll embeds: the iframe can't size itself, so the box height is fixed.
+   A five-option poll ends ~440px tall on desktop (measured 2026-09-30); 620px
+   leaves room for a longer question. Phones wrap more, so they keep 836px. */
+@media (max-width: 600px) { .strawpoll-embed { --poll-h: 836px; } }
 
 /* tokens now come from the shared :root in chrome.SHARED_CSS (BC-506) */
 body{background:var(--paper)}

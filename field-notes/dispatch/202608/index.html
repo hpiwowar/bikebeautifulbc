@@ -282,6 +282,10 @@ h2:hover > .h-anchor { opacity: .55; }
 .capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
   display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
 .capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+/* Strawpoll embeds: the iframe can't size itself, so the box height is fixed.
+   A five-option poll ends ~440px tall on desktop (measured 2026-09-30); 620px
+   leaves room for a longer question. Phones wrap more, so they keep 836px. */
+@media (max-width: 600px) { .strawpoll-embed { --poll-h: 836px; } }
 
 
 body { background: var(--paper); }
@@ -577,7 +581,7 @@ body { background: var(--paper); }
 <p>In July we asked whether BC's three summer long weekends are prime touring time. The people have spoken, all five of them: "good luck finding a campsite or room" takes it, with "just another day in biking paradise" close behind. Two optimists do plan their touring around the long weekends. Labour Day here we come!</p>
 <p>Weigh in on our question for this month:</p>
 </div>
-      <div class="strawpoll-embed" id="strawpoll_e7ZJakWQ5g3" style="height: 836px; max-width: 640px; width: 100%; margin: 0 auto; display: flex; flex-direction: column;"><iframe title="StrawPoll Embed" id="strawpoll_iframe_e7ZJakWQ5g3" src="https://strawpoll.com/embed/e7ZJakWQ5g3" style="position: static; visibility: visible; display: block; width: 100%; flex-grow: 1;" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe><script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script></div>
+      <div class="strawpoll-embed" id="strawpoll_e7ZJakWQ5g3" style="height: var(--poll-h, 620px); max-width: 640px; width: 100%; margin: 0 auto; display: flex; flex-direction: column;"><iframe title="StrawPoll Embed" id="strawpoll_iframe_e7ZJakWQ5g3" src="https://strawpoll.com/embed/e7ZJakWQ5g3" style="position: static; visibility: visible; display: block; width: 100%; flex-grow: 1;" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe><script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script></div>
     </div>
 
     <!-- News -->

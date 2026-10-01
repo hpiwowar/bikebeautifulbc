@@ -16,11 +16,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Riding through Indigenous BC">
 <meta name="twitter:image" content="https://bcbb-assets.bccycletourism.workers.dev/photos/bc42956c168f56b7.jpg">
-<meta name="description" content="Where to stay, eat and learn along BC&#x27;s bike routes.">
-<meta property="og:description" content="Where to stay, eat and learn along BC&#x27;s bike routes.">
-<meta name="twitter:description" content="Where to stay, eat and learn along BC&#x27;s bike routes.">
+<meta name="description" content="A night in a lodge isn&#x27;t reconciliation. But it&#x27;s a start to know whose territory you&#x27;re riding through, and to spend some of your trip with the people who live there. Indigenous-owned places to stay, eat and learn along BC&#x27;s bike routes.">
+<meta property="og:description" content="A night in a lodge isn&#x27;t reconciliation. But it&#x27;s a start to know whose territory you&#x27;re riding through, and to spend some of your trip with the people who live there. Indigenous-owned places to stay, eat and learn along BC&#x27;s bike routes.">
+<meta name="twitter:description" content="A night in a lodge isn&#x27;t reconciliation. But it&#x27;s a start to know whose territory you&#x27;re riding through, and to spend some of your trip with the people who live there. Indigenous-owned places to stay, eat and learn along BC&#x27;s bike routes.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":["https://www.linkedin.com/company/bc-cycle-tourism-society/","https://tiabc.ca/members/bc-cycle-tourism-society/"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Riding through Indigenous BC","url":"https://bccycletourism.ca/field-note/riding-through-indigenous-bc/","headline":"Riding through Indigenous BC","datePublished":"2026-09-30T00:00:00-07:00","author":{"@type":"Person","name":"Heather Piwowar","url":"https://bccycletourism.ca/about/"},"publisher":{"@type":"Organization","name":"BC Cycle Tourism Society","logo":{"@type":"ImageObject","url":"https://bccycletourism.ca/img/logo-google.png"}},"description":"Where to stay, eat and learn along BC's bike routes.","image":"https://bcbb-assets.bccycletourism.workers.dev/photos/bc42956c168f56b7.jpg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Riding through Indigenous BC","url":"https://bccycletourism.ca/field-note/riding-through-indigenous-bc/","headline":"Riding through Indigenous BC","datePublished":"2026-09-30T00:00:00-07:00","author":{"@type":"Person","name":"Heather Piwowar","url":"https://bccycletourism.ca/about/"},"publisher":{"@type":"Organization","name":"BC Cycle Tourism Society","logo":{"@type":"ImageObject","url":"https://bccycletourism.ca/img/logo-google.png"}},"description":"A night in a lodge isn't reconciliation. But it's a start to know whose territory you're riding through, and to spend some of your trip with the people who live there. Indigenous-owned places to stay, eat and learn along BC's bike routes.","image":"https://bcbb-assets.bccycletourism.workers.dev/photos/bc42956c168f56b7.jpg"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bccycletourism.ca/"},{"@type":"ListItem","position":2,"name":"Field Notes","item":"https://bccycletourism.ca/field-notes/"},{"@type":"ListItem","position":3,"name":"Riding through Indigenous BC","item":"https://bccycletourism.ca/field-note/riding-through-indigenous-bc/"}]}</script>
 <style>
 
@@ -282,6 +282,10 @@ h2:hover > .h-anchor { opacity: .55; }
 .capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
   display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
 .capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+/* Strawpoll embeds: the iframe can't size itself, so the box height is fixed.
+   A five-option poll ends ~440px tall on desktop (measured 2026-09-30); 620px
+   leaves room for a longer question. Phones wrap more, so they keep 836px. */
+@media (max-width: 600px) { .strawpoll-embed { --poll-h: 836px; } }
 
 .article-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 28px 64px; }
 .back-link { font-size: 14px; color: var(--river); text-decoration: none; display: inline-block; margin-bottom: 24px; }

@@ -282,6 +282,10 @@ h2:hover > .h-anchor { opacity: .55; }
 .capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
   display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
 .capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+/* Strawpoll embeds: the iframe can't size itself, so the box height is fixed.
+   A five-option poll ends ~440px tall on desktop (measured 2026-09-30); 620px
+   leaves room for a longer question. Phones wrap more, so they keep 836px. */
+@media (max-width: 600px) { .strawpoll-embed { --poll-h: 836px; } }
 
 .article-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 28px 64px; }
 .back-link { font-size: 14px; color: var(--river); text-decoration: none; display: inline-block; margin-bottom: 24px; }
@@ -381,7 +385,7 @@ h2:hover > .h-anchor { opacity: .55; }
 
 <p>It's a lot.</p>
 
-<h2 id="eat-every-hour">Eat every hour<a class="h-anchor" href="#eat-every-hour" aria-label="Link to this section">#</a></h2>
+<h2 id="eat-every-hour-or-two">Eat every hour or two<a class="h-anchor" href="#eat-every-hour-or-two" aria-label="Link to this section">#</a></h2>
 
 <p>Don't wait until you're hungry. By then you're already behind. Eat something every hour you're riding, even if it's small.</p>
 

@@ -281,6 +281,10 @@ h2:hover > .h-anchor { opacity: .55; }
 .capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
   display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
 .capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+/* Strawpoll embeds: the iframe can't size itself, so the box height is fixed.
+   A five-option poll ends ~440px tall on desktop (measured 2026-09-30); 620px
+   leaves room for a longer question. Phones wrap more, so they keep 836px. */
+@media (max-width: 600px) { .strawpoll-embed { --poll-h: 836px; } }
 
 
 .fn-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
@@ -467,7 +471,7 @@ h2:hover > .h-anchor { opacity: .55; }
       <div class="read-card-img"><img src="https://bcbb-assets.bccycletourism.workers.dev/photos/bc42956c168f56b7.jpg" alt="Riding through Indigenous BC" /></div>
       <div class="read-card-body">
         <span class="read-card-title">Riding through Indigenous BC</span>
-        <span class="read-card-teaser">Where to stay, eat and learn along BC's bike routes.</span>
+        <span class="read-card-teaser">A night in a lodge isn't reconciliation. But it's a start to know whose territory you're riding through, and to spend some of your trip with the people who live there. Indigenous-owned places to stay, eat and learn along BC's bike routes.</span>
         <span class="read-card-date">September 2026</span>
       </div>
     </a><a class="read-card" href="/field-note/plan-your-to-and-fro" data-search="to and fro transit bus ferry train bike policy amtrak cascades bicycle friendly trains bikes on bus ebus rider express mountain man mike bc transit bc bus north via rail floatplane harbour air hullo bc ferries seabus water taxi e-bike boxed bagged fee poparide carpool one-way rental car seattle calgary haida gwaii sparwood point to point loop wildfire">
@@ -568,16 +572,12 @@ h2:hover > .h-anchor { opacity: .55; }
       <span class="howto-date">May 2026</span>
     </a></div>
   </div>
-  <div class="workbench" data-search="coming soon workbench upcoming kvr bus ferry floatplane wild camping no turn-away policy bikepacking tourist economics">
-    <span class="workbench-label">On the workbench</span>
-    <p>Topics we're working on: KVR status, getting your bike around BC by bus and ferry, wild camping, a no-turn-away policy, cycle tourism economics. Subscribe to be notified.</p>
-  </div>
   <p class="no-results-notes" id="no-results-notes">No Field Notes match that search.</p>
 </div>
 
 <div class="fn-main fn-cont">
   <div style="margin: 2.5rem auto; max-width: 640px;">
-    <div class="strawpoll-embed" id="strawpoll_jVyG2kNWPZ7" style="height: 836px; max-width: 640px; width: 100%; margin: 0 auto; display: flex; flex-direction: column;"><iframe title="StrawPoll Embed" id="strawpoll_iframe_jVyG2kNWPZ7" src="https://strawpoll.com/embed/jVyG2kNWPZ7" style="position: static; visibility: visible; display: block; width: 100%; flex-grow: 1;" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe><script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script></div>
+    <div class="strawpoll-embed" id="strawpoll_jVyG2kNWPZ7" style="height: var(--poll-h, 620px); max-width: 640px; width: 100%; margin: 0 auto; display: flex; flex-direction: column;"><iframe title="StrawPoll Embed" id="strawpoll_iframe_jVyG2kNWPZ7" src="https://strawpoll.com/embed/jVyG2kNWPZ7" style="position: static; visibility: visible; display: block; width: 100%; flex-grow: 1;" frameborder="0" allowfullscreen allowtransparency>Loading...</iframe><script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script></div>
   </div>
 
   <div class="subscribe-strip">
@@ -597,25 +597,25 @@ h2:hover > .h-anchor { opacity: .55; }
       <span class="dispatch-result-date">Mid-September</span>
       <div>
         <p class="dispatch-result-text">Heading for the Tsawwassen ferry? The free bike shuttle through the George Massey Tunnel has moved, it now picks up southbound riders at the Highway 99 on-ramp at Steveston Highway, not Rice Mill Road. Each trailer takes up to eight bikes, and e-bikes under 25 kg are fine. <a href="https://www2.gov.bc.ca/gov/content?id=C9DE22D7B5E7420EBA5CCFCE9F0A3028">Schedule &rarr;</a></p>
-        <p class="dispatch-result-source">September 2026 Dispatch (in progress)</p>
+        <p class="dispatch-result-source">September 2026 Dispatch</p>
       </div>
     </div><div class="dispatch-result-item" data-search="elections local provincial ubcm union of bc municipalities resolutions rural highways chip seal shoulders active transportation grants rdos okanagan similkameen premier eby kettle valley rail trail kvr princeton">
       <span class="dispatch-result-date">Oct 17 and Oct 24</span>
       <div>
         <p class="dispatch-result-text">BC votes twice this fall: local elections October 17 and the provincial election October 24. Going in, local governments at the Union of BC Municipalities convention voted on two asks for the province that matter for cycling. First, treat rural highways as active transportation routes and maintain them with cyclists in mind; chip seal on roads with no usable shoulder was their example. Second, restart its paused grants for bike paths and other active transportation. The Okanagan-Similkameen regional district also asked Premier Eby to keep sections of the Kettle Valley Rail Trail near Princeton. <a href="https://www.ubcm.ca/sites/default/files/2026-08/2026%20UBCM%20Resolutions%20Book.pdf">The resolutions &rarr;</a> <a href="https://www.rdos.bc.ca/newsandevents/rdos-news/hot-topics/article/5917">Regional district &rarr;</a></p>
-        <p class="dispatch-result-source">September 2026 Dispatch (in progress)</p>
+        <p class="dispatch-result-source">September 2026 Dispatch</p>
       </div>
     </div><div class="dispatch-result-item" data-search="trip report nick dormaar via rail train prince george mcbride robson valley overnighter bikepacking weekend snapshot">
       <span class="dispatch-result-date">Aug 31</span>
       <div>
         <p class="dispatch-result-text">Nick Dormaar took the train from Prince George to McBride for a solo overnighter in the Robson Valley: a washed-out forestry road, a night near the alpine, and back to the station just ahead of the rain. <a href="https://bikepacking.com/news/weekend-snapshot-246/">Weekend Snapshot &rarr;</a></p>
-        <p class="dispatch-result-source">September 2026 Dispatch (in progress)</p>
+        <p class="dispatch-result-source">September 2026 Dispatch</p>
       </div>
     </div><div class="dispatch-result-item" data-search="trip report powell river 10 lakes overnighter sampler saltery bay texada ridge runner boomtown bike shop zines sunshine coast bikepacking">
       <span class="dispatch-result-date">September</span>
       <div>
         <p class="dispatch-result-text">Emily Heron's sixth 10 Lakes Overnighter ("bring tents with floors in mice territory"), and Miles Arbour's crew on the Powell River Sampler, taking transit south to Saltery Bay. Heading to Texada? Boomtown Bike Shop has illustrated zines for the Texada Ridge Runner. <a href="https://bikepacking.com/news/weekend-snapshot-247/">Snapshot #247 &rarr;</a> <a href="https://bikepacking.com/news/weekend-snapshot-249/">Snapshot #249 &rarr;</a> <a href="https://bikepacking.com/news/friday-debrief-238/">Zines &rarr;</a></p>
-        <p class="dispatch-result-source">September 2026 Dispatch (in progress)</p>
+        <p class="dispatch-result-source">September 2026 Dispatch</p>
       </div>
     </div><div class="dispatch-result-item" data-search="okanagan rail trail kelowna airport way old vernon road beaver lake road coldstream okanagan indian band vernon east hill 3 million active transportation">
       <span class="dispatch-result-date">Aug 5</span>
@@ -787,8 +787,8 @@ h2:hover > .h-anchor { opacity: .55; }
   <p class="section-heading" id="dispatch-section-heading">The Field Notes Dispatch</p>
   <div id="normal-dispatch">
     <div class="dispatch-section">
-      <p class="dispatch-title">Building the September 2026 Dispatch <span class="live-badge">In progress</span></p>
-      <p class="dispatch-sub">Added as news comes in. Finalized and emailed about once a month.</p>
+      <p class="dispatch-title">September 2026 Dispatch <a href="/field-notes/dispatch/202609/" style="font-size:13px;font-weight:600;color:var(--river);text-decoration:none;margin-left:8px;">Read the full issue &rarr;</a></p>
+      <p class="dispatch-sub">News from the field collected during September 2026.</p>
       <div class="dispatch-items-wrap"><div class="dispatch-item">
         <p class="dispatch-item-heading"><span class="dispatch-item-date">Mid-September</span>&nbsp;&nbsp;&nbsp;&nbsp;New Richmond stop for the Massey Tunnel bike shuttle</p>
         <p class="dispatch-item-text">Heading for the Tsawwassen ferry? The free bike shuttle through the George Massey Tunnel has moved, it now picks up southbound riders at the Highway 99 on-ramp at Steveston Highway, not Rice Mill Road. Each trailer takes up to eight bikes, and e-bikes under 25 kg are fine. <a href="https://www2.gov.bc.ca/gov/content?id=C9DE22D7B5E7420EBA5CCFCE9F0A3028">Schedule &rarr;</a></p>
