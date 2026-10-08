@@ -427,6 +427,14 @@ bus:rider-calgary,15,Lake Louise AB,Lake Louise AB,lake-louise-ab,51.4254,-116.1
 bus:rider-calgary,16,Banff AB,Banff AB,banff-ab,51.1784,-115.5708,town,stop
 bus:rider-calgary,17,Canmore AB,Canmore AB,canmore-ab,51.0899,-115.3592,town,stop
 bus:rider-calgary,18,Calgary AB,Calgary AB,calgary-ab,51.0447,-114.0719,town,stop
+bus:t49-calgary,1,Fernie,Fernie,fernie,49.504167,-115.062778,town,community centroid
+bus:t49-calgary,2,Calgary AB,Calgary,calgary-ab,51.0447,-114.0719,town,stop
+bus:t49-yxc-elkford,1,Elkford,Elkford,elkford,50.0214,-114.9178,town,stop
+bus:t49-yxc-elkford,2,YXC,Cranbrook,yxc,49.6108,-115.7822,airport,stop
+bus:t49-yxc-fernie,1,Fernie,Fernie,fernie,49.504167,-115.062778,town,community centroid
+bus:t49-yxc-fernie,2,YXC,Cranbrook,yxc,49.6108,-115.7822,airport,stop
+bus:t49-yxc-sparwood,1,Sparwood,Sparwood,sparwood,49.733218,-114.884368,town,community centroid
+bus:t49-yxc-sparwood,2,YXC,Cranbrook,yxc,49.6108,-115.7822,airport,stop
 carpool:pop-hwy4,1,Nanaimo,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
 carpool:pop-hwy4,2,Port Alberni,Port Alberni,port-alberni,49.2339,-124.8055,town,stop
 carpool:pop-hwy4,3,Ucluelet,Ucluelet,ucluelet,48.942778,-125.546111,town,community centroid
@@ -596,7 +604,7 @@ local-bus:ek-31,1,Invermere Sobeys,Invermere,invermere,50.50994,-116.03146,dock,
 local-bus:ek-31,2,Shaughnessy St at Burns Ave,Canal Flats,canal-flats,50.15497,-115.8204,dock,stop
 local-bus:ek-32,1,Invermere Sobeys,Invermere,invermere,50.50994,-116.03146,dock,stop
 local-bus:ek-32,2,Edgewater,Edgewater,edgewater,50.69791,-116.13459,town,stop
-local-bus:ek-41,1,Elkford Health Centre,Elkford,elkford,50.0214,-114.9178,dock,stop
+local-bus:ek-41,1,Elkford Health Centre,Elkford,elkford,50.0214,-114.9178,town,stop
 local-bus:ek-41,2,Lodge Pole Village,Sparwood,lodge-pole-village,49.76749,-114.89313,dock,stop
 local-bus:ek-41,3,9th Ave at 19th St,Fernie,fernie,49.504167,-115.062778,town,community centroid
 local-bus:fv-21,1,276 St at Fraser Hwy,Langley,276-st-at-fraser-hwy,49.05696,-122.45979,dock,stop

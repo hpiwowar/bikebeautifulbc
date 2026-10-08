@@ -6984,6 +6984,8 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 20f5d180cf,Secure overnight bike storage,required for the tier,TRUE,,osm,2026-07-08
 20f5d180cf,Laundry,extra,TRUE,Website explicitly lists 'Guest laundry facilities' as a standard amenity,sonnet_4.6,2026-07-18
 20f5d180cf,Wi-Fi,extra,TRUE,,sonnet_4.6,2026-07-18
+2103a3f05e,Takeout,extra,TRUE,,sonnet_4.6,2026-10-06
+2103a3f05e,Vegetarian / vegan / GF,extra,TRUE,Nutrition calculator lists Veggie Ground as a protein option and Gluten Free tortilla as a tortilla option,sonnet_4.6,2026-10-06
 2103d7b929,Flush toilets,extra,TRUE,,camping:washroom_type,2026-07-18
 2103d7b929,Potable water,extra,TRUE,,bcparks_api,2026-07-18
 2103d7b929,Reservations accepted,extra,TRUE,,bcparks_api,2026-07-18
@@ -22821,6 +22823,8 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 6afc6094c4,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 6b075bac05,Early or packed breakfast,extra,TRUE,"Bed & Breakfast Package offered: 'Enjoy a delicious breakfast served at the historic Lakeside Dining restaurant overlooking the lake, with fresh local ingredients made by our in-house culinary team.' Also included in the Memorial Cup package as 'daily breakfast for two.'",sonnet_4.6,2026-07-18
 6b075bac05,Nearby evening food,extra,TRUE,"On-site Lakeside Dining restaurant described as award-winning, with breakfast service confirmed via the Bed & Breakfast package",sonnet_4.6,2026-07-18
+6b07e0f9d5,Takeout,extra,TRUE,,sonnet_4.6,2026-10-06
+6b07e0f9d5,Vegetarian / vegan / GF,extra,TRUE,"Extensive vegetarian options confirmed on menu: Navaratna Korma, Cheesy Kofta, Cauli Aloo, Aubergine Bharta, Paneer Tikka Masala, Paneer Butter Masala, Ultimate Veggie Burger, Ultimate Veggies wrap, and more",sonnet_4.6,2026-10-06
 6b1100e4d4,Water bottle refill,required for the tier,TRUE,,inferred:grocery_chain,2026-07-18
 6b1100e4d4,Washrooms,extra,TRUE,,inferred:grocery_chain,2026-07-18
 6b11f50094,Takeout,extra,TRUE,,sonnet_4.6,2026-07-18
@@ -22886,6 +22890,9 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 6b5ef77a74,Covered bike parking,extra,TRUE,,osm,2026-07-08
 6b5ef77a74,Hot food,extra,TRUE,Website lists 'Chinese Barbeque & Hot Food' and 'Vietnamese Deli & Banh Mi' as dedicated product categories; banh mi is made fresh to order,sonnet_4.6,2026-07-18
 6b5ef77a74,Public rack nearby,extra,TRUE,,osm,2026-07-08
+6b5f4c164a,Nearby evening food,extra,TRUE,A&W across the parking lot from the motel,sonnet_4.6,2026-10-06
+6b5f4c164a,Nearby grocery,extra,TRUE,Petro-Can/7-11 across the street,sonnet_4.6,2026-10-06
+6b5f4c164a,Wi-Fi,extra,TRUE,,sonnet_4.6,2026-10-06
 6b5fbfe5ad,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 6b5fbfe5ad,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 6b63103da4,Basic groceries,extra,TRUE,"Website lists fresh seasonal fruit (cherries, strawberries, apricots, peaches, apples, pears), handpicked herbs and vegetables every morning, and jams",sonnet_4.6,2026-07-18
@@ -27207,6 +27214,9 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 7f0b4ba05f,Vegetarian / vegan / GF,extra,TRUE,"Website has dedicated Vegetarian and Gluten Free menu pages; vegetarian/vegan dishes explicitly listed (vegan appetizers, coconut curries, stir-fries); gluten-free preparation available on request",sonnet_4.6,2026-07-18
 7f0fb9a9f5,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 7f0fb9a9f5,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
+7f19847d08,Accommodates bicycles,required for the tier,TRUE,,manual,2026-10-06
+7f19847d08,Bagged bikes OK,extra,TRUE,,manual,2026-10-06
+7f19847d08,Bike fee applies,extra,TRUE,$50 + GST per bike bag on the Calgary shuttle; Cranbrook might be extra,manual,2026-10-06
 7f20273f14,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
 7f20273f14,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 7f20273f14,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
@@ -27348,6 +27358,7 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 7fb17e9501,Public rack nearby,extra,TRUE,,osm,2026-07-08
 7fb1c738ea,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 7fb1c738ea,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
+7fb59e6337,Takeout,extra,TRUE,,sonnet_4.6,2026-10-06
 7fb6e4d7d0,Bike parking,required for the tier,TRUE,,osm,2026-07-08
 7fb6e4d7d0,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 7fb6e4d7d0,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
@@ -33007,9 +33018,6 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 997574b052,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 997574b052,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 997574b052,Public rack nearby,extra,TRUE,,osm,2026-07-08
-9978d873a7,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
-9978d873a7,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
-9978d873a7,Vegetarian / vegan / GF,extra,TRUE,"Menu explicitly states 'All Wraps can be made gluten free with your choice of a Rice Bowl or Quinoa Bowl.' Dedicated vegetarian items include Falafel Wrap, Garden of Fernie salad, and Thai Peanut salad with marinated tofu",sonnet_4.6,2026-07-18
 997fc9c6d1,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
 997fc9c6d1,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 997fc9c6d1,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
@@ -37973,6 +37981,9 @@ b06e4282f9,Interior transport,extra,TRUE,,manual,2026-05-17
 b06e4282f9,Trailers OK,extra,TRUE,,manual,2026-05-17
 b06e4282f9,Unboxed bikes OK,extra,TRUE,,manual,2026-05-17
 b06e4282f9,Walk-on bikes,extra,TRUE,,manual,2026-05-17
+b0731c829b,Packed lunches,extra,FALSE,Ice cream and dessert shop only; no lunch or savoury food items mentioned,sonnet_4.6,2026-10-06
+b0731c829b,Takeout,extra,TRUE,,sonnet_4.6,2026-10-06
+b0731c829b,Vegetarian / vegan / GF,extra,TRUE,"Dairy-free options listed (Mango + Sorbet, Raspberry Sorbet); gluten-free options confirmed (GF graham crackers in S'mores, GF crumble in Banana Cream Pie); website review notes 'so many gluten free options'",sonnet_4.6,2026-10-06
 b07be38d14,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
 b07be38d14,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 b07be38d14,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18

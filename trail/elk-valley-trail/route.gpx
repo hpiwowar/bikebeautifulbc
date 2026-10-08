@@ -179,13 +179,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.503489" lon="-115.061409">
-<name>Lunchbox</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.503354" lon="-115.061627">
 <name>Nevados</name>
 <cmt>food</cmt>
@@ -215,7 +208,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.504322" lon="-115.060528">
-<name>The Loaf</name>
+<name>Loaf Italian Restaurant</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
 <sym>Dot</sym>

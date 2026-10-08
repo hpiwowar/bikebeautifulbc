@@ -5,7 +5,7 @@
 <link href="https://bccycletourism.ca/trail/fernie-town-loop/"><text>BC Bike Stops</text></link>
 </metadata>
 <wpt lat="49.516771" lon="-115.057733">
-<name>Ann's Your Independent Grocer</name>
+<name>Eldho's Your Independent Grocer</name>
 <cmt>convenience_store</cmt>
 <desc>Grocery Store</desc>
 <sym>Dot</sym>
@@ -55,6 +55,13 @@
 </wpt>
 <wpt lat="49.502863" lon="-115.060875">
 <name>Royal Hotel</name>
+<cmt>lodging</cmt>
+<desc>Hotel / Motel</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
+<wpt lat="49.505226" lon="-115.068636">
+<name>EasyStay Inn &amp; Suites</name>
 <cmt>lodging</cmt>
 <desc>Hotel / Motel</desc>
 <sym>Dot</sym>
@@ -165,13 +172,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.503489" lon="-115.061409">
-<name>Lunchbox</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.503354" lon="-115.061627">
 <name>Nevados</name>
 <cmt>food</cmt>
@@ -201,7 +201,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.504322" lon="-115.060528">
-<name>The Loaf</name>
+<name>Loaf Italian Restaurant</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
 <sym>Dot</sym>
