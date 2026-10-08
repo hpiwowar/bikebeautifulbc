@@ -237,10 +237,10 @@
 </wpt>
 <wpt lat="49.282548" lon="-123.124372">
 <name>Sutton Place Wine Merchant</name>
-<cmt>winery</cmt>
-<desc>Winery / Cidery</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.284768" lon="-123.121069">
 <name>McDonald's</name>
@@ -902,10 +902,10 @@
 </wpt>
 <wpt lat="49.279619" lon="-123.130273">
 <name>Marquis Wine Cellars</name>
-<cmt>winery</cmt>
-<desc>Winery / Cidery</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.270829" lon="-123.147043">
 <name>New Fuji</name>
@@ -3793,10 +3793,10 @@
 </wpt>
 <wpt lat="49.272154" lon="-123.135434">
 <name>Liberty Wines</name>
-<cmt>food</cmt>
-<desc>Grocery Store</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.281022" lon="-123.118995">
 <name>Meat &amp; Bread</name>
@@ -4297,10 +4297,10 @@
 </wpt>
 <wpt lat="49.279362" lon="-123.120665">
 <name>Viti Wine and Lager</name>
-<cmt>winery</cmt>
-<desc>Winery / Cidery</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.282040" lon="-123.116621">
 <name>Pistachio Sweetery Cafe</name>

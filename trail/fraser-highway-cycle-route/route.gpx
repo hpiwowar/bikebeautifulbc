@@ -580,10 +580,10 @@
 </wpt>
 <wpt lat="49.167759" lon="-122.800845">
 <name>JAK's Beer Wine and Spirits</name>
-<cmt>winery</cmt>
-<desc>Winery / Cidery</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.167241" lon="-122.799507">
 <name>King's Choice Indian Cuisine</name>

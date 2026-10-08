@@ -1182,10 +1182,10 @@
 </wpt>
 <wpt lat="49.272154" lon="-123.135434">
 <name>Liberty Wines</name>
-<cmt>food</cmt>
-<desc>Grocery Store</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.275924" lon="-123.120310">
 <name>Dovetail</name>
@@ -1628,6 +1628,13 @@
 <sym>Dot</sym>
 <type>info</type>
 </wpt>
+<wpt lat="49.270555" lon="-123.135671">
+<name>Granville Island Brewing Taproom</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.263683" lon="-123.131860">
 <name>Royal Seoul House</name>
 <cmt>food</cmt>
@@ -1688,13 +1695,6 @@
 <name>The Keg</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.270617" lon="-123.135753">
-<name>Granville Island Brewing Taproom</name>
-<cmt>food</cmt>
-<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

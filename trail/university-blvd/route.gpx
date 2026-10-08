@@ -263,15 +263,8 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.269181" lon="-123.248499">
-<name>West Coast Suites at UBC</name>
-<cmt>lodging</cmt>
-<desc>Accommodation</desc>
-<sym>Dot</sym>
-<type>shelter</type>
-</wpt>
 <wpt lat="49.269478" lon="-123.248852">
-<name>West Coast Suites</name>
+<name>West Coast Suites at UBC</name>
 <cmt>lodging</cmt>
 <desc>Hotel / Motel</desc>
 <sym>Dot</sym>
@@ -283,13 +276,6 @@
 <desc>Convenience Store</desc>
 <sym>Dot</sym>
 <type>store</type>
-</wpt>
-<wpt lat="49.269460" lon="-123.250030">
-<name>Gage Suites at UBC</name>
-<cmt>lodging</cmt>
-<desc>Accommodation</desc>
-<sym>Dot</sym>
-<type>shelter</type>
 </wpt>
 <wpt lat="49.269597" lon="-123.249681">
 <name>Gage Apartments at UBC</name>
@@ -482,10 +468,10 @@
 </wpt>
 <wpt lat="49.264103" lon="-123.211523">
 <name>Liberty Wine Merchants</name>
-<cmt>winery</cmt>
-<desc>Winery / Cidery</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.263688" lon="-123.211354">
 <name>Everyday Sushi</name>

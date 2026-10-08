@@ -18,13 +18,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.921389" lon="-119.392630">
-<name>Wild Ambition Brewing</name>
-<cmt>food</cmt>
-<desc>Food &amp; Drink</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.921385" lon="-119.392899">
 <name>Wild Ambition Tasting Room</name>
 <cmt>bar</cmt>
@@ -61,16 +54,9 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.896241" lon="-119.487394">
-<name>Kettle River Tasting Room</name>
+<name>Kettle River Brewing Company</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.896089" lon="-119.487395">
-<name>Kettle River Brewing Company</name>
-<cmt>food</cmt>
-<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -211,13 +197,6 @@
 <name>Rustic Reel Brewing Company</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.901961" lon="-119.405105">
-<name>Freddy's Brewpub</name>
-<cmt>food</cmt>
-<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -384,10 +363,10 @@
 </wpt>
 <wpt lat="49.952602" lon="-119.387843">
 <name>Public Liquor</name>
-<cmt>bar</cmt>
-<desc>Brewery / Pub</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.882388" lon="-119.447081">
 <name>Asian Pear Buffet</name>
@@ -676,13 +655,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.892974" lon="-119.493800">
-<name>BNA Brewing</name>
-<cmt>food</cmt>
-<desc>Food &amp; Drink</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.889646" lon="-119.419504">
 <name>Okanagan Seasons Resort</name>
 <cmt>lodging</cmt>
@@ -694,6 +666,13 @@
 <name>Cactus Club Cafe</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.892916" lon="-119.493903">
+<name>BNA Brewing</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>

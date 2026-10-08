@@ -69,10 +69,10 @@
 </wpt>
 <wpt lat="49.264103" lon="-123.211523">
 <name>Liberty Wine Merchants</name>
-<cmt>winery</cmt>
-<desc>Winery / Cidery</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.263959" lon="-123.209590">
 <name>Crazy Zhang Fusion Tea &amp; BBQ Rice</name>

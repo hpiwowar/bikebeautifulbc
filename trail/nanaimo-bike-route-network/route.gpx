@@ -53,13 +53,6 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.170114" lon="-123.939612">
-<name>White Sails Brewery</name>
-<cmt>food</cmt>
-<desc>Food &amp; Drink</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
 <wpt lat="49.163568" lon="-123.935633">
 <name>The Queen's</name>
 <cmt>bar</cmt>
@@ -89,16 +82,9 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.159063" lon="-123.949851">
-<name>Gateway to India</name>
-<cmt>food</cmt>
-<desc>Restaurant</desc>
-<sym>Dot</sym>
-<type>food</type>
-</wpt>
-<wpt lat="49.159064" lon="-123.949851">
 <name>Gateway to India Restaurant</name>
 <cmt>food</cmt>
-<desc>Food &amp; Drink</desc>
+<desc>Restaurant</desc>
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
@@ -223,10 +209,10 @@
 </wpt>
 <wpt lat="49.207722" lon="-124.005553">
 <name>Brewers Corner - The Nanaimo Wine Shoppe</name>
-<cmt>winery</cmt>
-<desc>Winery / Cidery</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.169719" lon="-123.942412">
 <name>Tim Hortons</name>
@@ -283,13 +269,6 @@
 <desc>Specialty / Health Food</desc>
 <sym>Dot</sym>
 <type>store</type>
-</wpt>
-<wpt lat="49.141896" lon="-123.931402">
-<name>Wolf Brewing Company</name>
-<cmt>food</cmt>
-<desc>Food &amp; Drink</desc>
-<sym>Dot</sym>
-<type>food</type>
 </wpt>
 <wpt lat="49.134231" lon="-123.921447">
 <name>Bold Knight Restaurant</name>
@@ -390,7 +369,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.141948" lon="-123.931339">
-<name>Wolf Tasting Room</name>
+<name>Wolf Brewing Company</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
