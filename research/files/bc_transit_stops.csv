@@ -429,12 +429,10 @@ bus:rider-calgary,17,Canmore AB,Canmore AB,canmore-ab,51.0899,-115.3592,town,sto
 bus:rider-calgary,18,Calgary AB,Calgary AB,calgary-ab,51.0447,-114.0719,town,stop
 bus:t49-calgary,1,Fernie,Fernie,fernie,49.504167,-115.062778,town,community centroid
 bus:t49-calgary,2,Calgary AB,Calgary,calgary-ab,51.0447,-114.0719,town,stop
-bus:t49-yxc-elkford,1,Elkford,Elkford,elkford,50.0214,-114.9178,town,stop
-bus:t49-yxc-elkford,2,YXC,Cranbrook,yxc,49.6108,-115.7822,airport,stop
-bus:t49-yxc-fernie,1,Fernie,Fernie,fernie,49.504167,-115.062778,town,community centroid
-bus:t49-yxc-fernie,2,YXC,Cranbrook,yxc,49.6108,-115.7822,airport,stop
-bus:t49-yxc-sparwood,1,Sparwood,Sparwood,sparwood,49.733218,-114.884368,town,community centroid
-bus:t49-yxc-sparwood,2,YXC,Cranbrook,yxc,49.6108,-115.7822,airport,stop
+bus:t49-yxc,1,Elkford,Elkford,elkford,50.0214,-114.9178,town,stop
+bus:t49-yxc,2,Sparwood,Sparwood,sparwood,49.733218,-114.884368,town,community centroid
+bus:t49-yxc,3,Fernie,Fernie,fernie,49.504167,-115.062778,town,community centroid
+bus:t49-yxc,4,YXC,Cranbrook,yxc,49.6108,-115.7822,airport,stop
 carpool:pop-hwy4,1,Nanaimo,Nanaimo,nanaimo,49.163889,-123.938056,town,stop
 carpool:pop-hwy4,2,Port Alberni,Port Alberni,port-alberni,49.2339,-124.8055,town,stop
 carpool:pop-hwy4,3,Ucluelet,Ucluelet,ucluelet,48.942778,-125.546111,town,community centroid
