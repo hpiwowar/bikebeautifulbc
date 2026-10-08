@@ -7,7 +7,7 @@ board and whether a bicycle can come. The connections file reports two journeys
 per pair (a neutral pick and our recommendation); this is all of them, so our
 ranking can be inspected rather than taken on trust.
 
-Published 2026-09-02 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-10-08 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -24,12 +24,12 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). Every way of getting
-between two British Columbia communities [data set]. Version 2026-09-02.
+between two British Columbia communities [data set]. Version 2026-10-08.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Journeys: 77058 rows, 13 columns.
+Journeys: 77056 rows, 13 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
@@ -40,7 +40,7 @@ listings, ferry timetables, and telephone calls. It is a collection, not a
 census: we cannot know what we have missed, so treat every count as a floor,
 never a total.
 
-77058 journeys across 13106 community pairs, in the order we rank them. Rank 1
+77056 journeys across 13106 community pairs, in the order we rank them. Rank 1
 is the journey we would suggest first.
 
 8269 of them cannot be made with a bicycle. They are kept rather than dropped,

@@ -6,7 +6,7 @@ places to stay, bike shops, attractions, and the transport that connects them.
 One row per place, with where it is, what kind of place it is, and how it treats
 an arriving cyclist as far as we know.
 
-Published 2026-09-30 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-10-08 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -21,7 +21,7 @@ that or not. Use it, redistribute it, build on it. If you publish a database
 derived from it, that database has to carry the same licence.
 
 Suggested citation: BC Cycle Tourism Society (2026). Places in British Columbia
-that a cyclist might want [data set]. Version 2026-09-30.
+that a cyclist might want [data set]. Version 2026-10-08.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
