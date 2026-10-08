@@ -40,8 +40,8 @@ census: we cannot know what we have missed, so treat every count as a floor,
 never a total.
 
 Every one of the 13106 pairs is reachable somehow. 228 cannot be done with a
-bicycle by any means we can find, and a further 1791 can only be done by flying
-or by renting a car one way. That is 2019 pairs, or 15% of the province's
+bicycle by any means we can find, and a further 1788 can only be done by flying
+or by renting a car one way. That is 2016 pairs, or 15% of the province's
 community pairs, with no scheduled ground or water service that will carry a
 bicycle.
 

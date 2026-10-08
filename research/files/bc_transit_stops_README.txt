@@ -27,7 +27,7 @@ https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Stops: 1025 rows, 9 columns.
+Stops: 1040 rows, 9 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
@@ -38,7 +38,7 @@ listings, ferry timetables, and telephone calls. It is a collection, not a
 census: we cannot know what we have missed, so treat every count as a floor,
 never a total.
 
-248 of the 1025 stops are placed at the middle of their community rather than at
+256 of the 1040 stops are placed at the middle of their community rather than at
 the stop itself. The location_precision column says which is which; do not treat
 a centroid as a platform location.
 

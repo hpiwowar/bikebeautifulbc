@@ -189,7 +189,7 @@ local-bus:cvt-66,local-bus,BC Transit,66 CVX Cowichan - Victoria Express,Vancouv
 local-bus:cvt-7,local-bus,BC Transit,7 Cowichan Lake,Vancouver Island,daily,2,Duncan,Lake Cowichan,TRUE,,TRUE,"yes, with conditions",
 local-bus:cvt-8,local-bus,BC Transit,8 Mill Bay via Telegraph Rd/Duncan via Shawnigan Lk,Vancouver Island,daily,2,Mill Bay,Duncan,TRUE,,TRUE,"yes, with conditions",
 local-bus:cvt-9,local-bus,BC Transit,9 Mill Bay via Shawnigan Lk/Duncan via Telegraph Rd,Vancouver Island,daily,2,Duncan,Mill Bay,TRUE,,TRUE,"yes, with conditions",
-local-bus:cvt-99,local-bus,BC Transit,99 SVX Shawnigan Lake - Victoria Express,Vancouver Island,limited,4,Cobble Hill,Victoria,TRUE,,TRUE,"yes, with conditions",Weekdays only.
+local-bus:cvt-99,local-bus,BC Transit,99 SVX Shawnigan Lake - Victoria Express,Vancouver Island,limited,6,Cobble Hill,Victoria,TRUE,,TRUE,"yes, with conditions",Weekdays only.
 local-bus:ea-goose,local-bus,Electric Alpine Biking,Galloping Goose Trail shuttle,Vancouver Island,on-demand,3,View Royal,Sooke,TRUE,,TRUE,"yes, with conditions",
 local-bus:ek-22,local-bus,BC Transit,22 KC Commuter,Kootenay,limited,2,Cranbrook,Kimberley,TRUE,,TRUE,"yes, with conditions",
 local-bus:ek-31,local-bus,BC Transit,31 South Connector,Kootenay Rockies,limited,2,Invermere,Canal Flats,TRUE,,TRUE,"yes, with conditions",Weekdays only.
@@ -208,10 +208,10 @@ local-bus:krt-23,local-bus,BC Transit,23 Lake Country,Southern Interior,daily,2,
 local-bus:krt-97,local-bus,BC Transit,97 Okanagan,Southern Interior,daily,2,Kelowna,Kelowna,TRUE,,TRUE,"yes, with conditions",Second leg of the airport–downtown chain: UBCO Exchange to Queensway downtown.
 local-bus:mtw-1,local-bus,BC Transit,1/2 Port McNeill - Port Hardy,Vancouver Island,limited,2,Port Hardy,Port McNeill,TRUE,,TRUE,"yes, with conditions","Five trips a day on weekdays, two on Saturday, and no service on Sunday."
 local-bus:mtw-5,local-bus,BC Transit,5 Coal Harbour,Vancouver Island,limited,2,Port Hardy,Coal Harbour,TRUE,,TRUE,"yes, with conditions",No service on Sunday.
-local-bus:pg-161,local-bus,BC Transit,161 Prince George / Burns Lake,Cariboo,limited,2,Vanderhoof,Prince George,TRUE,,TRUE,"yes, with conditions",
-local-bus:pg-162,local-bus,BC Transit,162 Smithers / Burns Lake,Northern BC,limited,2,Smithers,Burns Lake,TRUE,,TRUE,"yes, with conditions","Runs Monday, Wednesday and Friday only."
+local-bus:pg-161,local-bus,BC Transit,161 Prince George / Burns Lake,Cariboo,limited,3,Burns Lake,Prince George,TRUE,,TRUE,"yes, with conditions",
+local-bus:pg-162,local-bus,BC Transit,162 Smithers / Burns Lake,Northern BC,limited,3,Smithers,Burns Lake,TRUE,,TRUE,"yes, with conditions","Runs Monday, Wednesday and Friday only."
 local-bus:plr-12,local-bus,BC Transit,12 Stillwater,qathet (Powell River) / Sunshine Coast,limited,2,Stillwater,Powell River,TRUE,,TRUE,"yes, with conditions",
-local-bus:plr-13,local-bus,BC Transit,13 Texada Island,"Vancouver, Coast & Mountains",limited,2,Gillies Bay,Powell River,TRUE,,TRUE,"yes, with conditions",Runs Tuesday and Thursday only.
+local-bus:plr-13,local-bus,BC Transit,13 Texada Island,"Vancouver, Coast & Mountains",limited,3,Gillies Bay,Powell River,TRUE,,TRUE,"yes, with conditions",Runs Tuesday and Thursday only.
 local-bus:plr-14,local-bus,BC Transit,14 Lund,qathet (Powell River) / Sunshine Coast,limited,2,Powell River,Lund,TRUE,,TRUE,"yes, with conditions","Runs Monday, Tuesday and Friday most of the year, six days a week from mid-May to Labour Day; some stretches are on-request. Front bike rack; e-bikes under 25 kg allowed."
 local-bus:pmb-99,local-bus,BC Transit,99 Pemberton Commuter,Sea-to-Sky,daily,3,Whistler,Pemberton,TRUE,,TRUE,"yes, with conditions",
 local-bus:pr-55,local-bus,BC Transit,55 Fairview Bay,North,limited,2,Prince Rupert,Prince Rupert,TRUE,,TRUE,"yes, with conditions","Monday to Saturday only, about three trips a day; stops near the ferry terminal."
@@ -228,10 +228,10 @@ local-bus:sc-4,local-bus,BC Transit,4 Halfmoon Bay,"Vancouver, Coast & Mountains
 local-bus:sc-90,local-bus,BC Transit,90 Sechelt-Gibsons/Langdale Ferry Express,Sunshine Coast,daily,2,Sechelt,Gibsons,TRUE,,TRUE,"yes, with conditions",
 local-bus:skn-11,local-bus,BC Transit,11 Terrace-Kitimat Connector,North Coast,limited,2,Terrace,Kitimat,TRUE,,TRUE,"yes, with conditions",
 local-bus:skn-14,local-bus,BC Transit,14 Gitaus/Queensway,Northern BC,limited,2,Terrace,Usk,TRUE,,TRUE,"yes, with conditions",No service on Sunday.
-local-bus:skn-163,local-bus,BC Transit,163 Hazeltons/Smithers,Northern BC,limited,2,Smithers,Kispiox,TRUE,,TRUE,"yes, with conditions","Runs Monday, Wednesday and Friday only."
-local-bus:skn-164,local-bus,BC Transit,164 Hazeltons/Terrace,Northern BC,limited,3,Terrace,Kispiox,TRUE,,TRUE,"yes, with conditions","Runs Tuesday, Thursday and Saturday only."
-local-bus:skn-31,local-bus,BC Transit,31 Gitsegukla,Northern BC,limited,2,Kitseguecla,Kispiox,TRUE,,TRUE,"yes, with conditions","Runs Tuesday, Thursday and Saturday only."
-local-bus:skn-32,local-bus,BC Transit,32 West Connector,Northern BC,limited,2,Hazelton,Kitwanga,TRUE,,TRUE,"yes, with conditions","Runs Monday, Wednesday and Friday only."
+local-bus:skn-163,local-bus,BC Transit,163 Hazeltons/Smithers,Northern BC,limited,3,Smithers,Kispiox,TRUE,,TRUE,"yes, with conditions","Runs Monday, Wednesday and Friday only."
+local-bus:skn-164,local-bus,BC Transit,164 Hazeltons/Terrace,Northern BC,limited,4,Terrace,Kispiox,TRUE,,TRUE,"yes, with conditions","Runs Tuesday, Thursday and Saturday only."
+local-bus:skn-31,local-bus,BC Transit,31 Gitsegukla,Northern BC,limited,3,Kitseguecla,Kispiox,TRUE,,TRUE,"yes, with conditions","Runs Tuesday, Thursday and Saturday only."
+local-bus:skn-32,local-bus,BC Transit,32 West Connector,Northern BC,limited,3,Hazelton,Kitwanga,TRUE,,TRUE,"yes, with conditions","Runs Monday, Wednesday and Friday only."
 local-bus:smi-23,local-bus,BC Transit,23 Smithers/Witset,Northern BC,limited,2,Moricetown,Smithers,TRUE,,TRUE,"yes, with conditions",No service on Sunday.
 local-bus:sok-30,local-bus,BC Transit,30 Penticton / Summerland,Southern Interior,limited,2,Penticton,Summerland,TRUE,,TRUE,"yes, with conditions",
 local-bus:sok-40,local-bus,BC Transit,40 Osoyoos / Penticton,Southern Interior,limited,3,Osoyoos,Penticton,TRUE,,TRUE,"yes, with conditions",
@@ -251,11 +251,11 @@ local-bus:vrt-61,local-bus,BC Transit,61 Sooke / Langford / Downtown,Vancouver I
 local-bus:vrt-64,local-bus,BC Transit,64 Langford Exch / Sooke via E Sooke and Beecher Bay,Vancouver Island,limited,3,Sooke,Colwood,TRUE,,TRUE,"yes, with conditions",
 local-bus:vrt-65,local-bus,BC Transit,65 Sooke / Downtown via Westhills,Vancouver Island,limited,5,Victoria,Sooke,TRUE,,TRUE,"yes, with conditions",
 local-bus:vrt-70,local-bus,BC Transit,70 Swartz Bay / Downtown,Vancouver Island,daily,2,Victoria,Victoria,TRUE,,TRUE,"yes, with conditions",
-local-bus:vrt-71,local-bus,BC Transit,71 Swartz Bay / Downtown,Vancouver Island,limited,2,Victoria,Sidney,TRUE,,TRUE,"yes, with conditions",Weekdays only.
+local-bus:vrt-71,local-bus,BC Transit,71 Swartz Bay / Downtown,Vancouver Island,limited,4,Victoria,Sidney,TRUE,,TRUE,"yes, with conditions",Weekdays only.
 local-bus:vrt-72,local-bus,BC Transit,72 Swartz Bay / Downtown (via Saanichton),Vancouver Island,daily,2,Victoria,Victoria,TRUE,,TRUE,"yes, with conditions",Via Saanichton; a parallel option to the 70.
-local-bus:vrt-75,local-bus,BC Transit,75 Saanichton / Royal Oak / Downtown,Vancouver Island,daily,2,Victoria,Central Saanich,TRUE,,TRUE,"yes, with conditions",
+local-bus:vrt-75,local-bus,BC Transit,75 Saanichton / Royal Oak / Downtown,Vancouver Island,daily,5,Victoria,Brentwood Bay (Vancouver Island),TRUE,,TRUE,"yes, with conditions",
 local-bus:vrt-76,local-bus,BC Transit,76 Swartz Bay / UVic,Vancouver Island,limited,2,North Saanich,Saanich,TRUE,,TRUE,"yes, with conditions","Toward Swartz Bay it runs Friday only; toward UVic, Sunday and Monday only."
-local-bus:vrt-83,local-bus,BC Transit,83 Sidney / Brentwood / Royal Oak,Vancouver Island,daily,2,Sidney,Saanich,TRUE,,TRUE,"yes, with conditions",
+local-bus:vrt-83,local-bus,BC Transit,83 Sidney / Brentwood / Royal Oak,Vancouver Island,daily,3,Sidney,Saanich,TRUE,,TRUE,"yes, with conditions",
 local-bus:vs-41,local-bus,BC Transit,41 Salmon Arm-Enderby,Thompson Okanagan,limited,2,Enderby,Salmon Arm,TRUE,,TRUE,"yes, with conditions",Wednesdays only.
 local-bus:vs-42,local-bus,BC Transit,42 Salmon Arm-Eagle Bay,Thompson Okanagan,limited,2,Salmon Arm,Carlin,TRUE,,TRUE,"yes, with conditions",Thursdays only.
 local-bus:vs-43,local-bus,BC Transit,43 Salmon Arm-Sorrento,Thompson Okanagan,limited,2,Salmon Arm,Sorrento,TRUE,,TRUE,"yes, with conditions",Thursdays only.

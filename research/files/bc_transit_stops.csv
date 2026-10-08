@@ -591,8 +591,10 @@ local-bus:cvt-9,1,Village Green Mall,Duncan,duncan,48.77465,-123.7016,town,stop
 local-bus:cvt-9,2,Shawnigan/Mill Bay & Cameron-Taggart,Mill Bay,mill-bay,48.6513,-123.5617,town,stop
 local-bus:cvt-99,1,Cobble Hill Rd & Fisher,Cobble Hill,cobble-hill,48.68733,-123.60425,dock,stop
 local-bus:cvt-99,2,Shawnigan/Mill Bay & Wilkinson,Mill Bay,mill-bay,48.6513,-123.5617,town,stop
-local-bus:cvt-99,3,Hwy 1 ramp & Helmcken,View Royal,hwy-1-ramp-helmcken,48.46448,-123.43042,dock,stop
-local-bus:cvt-99,4,Douglas & Finlayson - Mayfair,Victoria,douglas-st-at-finlayson-st,48.44449,-123.37065,dock,stop
+local-bus:cvt-99,3,Hwy 1 ramp & Leigh,Langford,hwy-1-ramp-leigh,48.45426,-123.51847,dock,stop
+local-bus:cvt-99,4,Hwy 1 ramp & Helmcken,View Royal,hwy-1-ramp-helmcken,48.46448,-123.43042,dock,stop
+local-bus:cvt-99,5,Douglas & Cloverdale,Saanich,douglas-st-at-kelvin-rd,48.44964,-123.37376,dock,stop
+local-bus:cvt-99,6,Douglas & Finlayson - Mayfair,Victoria,douglas-st-at-finlayson-st,48.44449,-123.37065,dock,stop
 local-bus:ea-goose,1,Atkins Road Park & Ride,View Royal,atkins-road-park-ride,48.45063,-123.46961,dock,stop
 local-bus:ea-goose,2,Rocky Point Road Parking Lot,Metchosin,rocky-point-road-parking-lot,48.37389,-123.5447,dock,stop
 local-bus:ea-goose,3,Sooke Potholes Parking Lot 3,Sooke,sooke-potholes-parking-lot-3,48.44329,-123.72158,dock,stop
@@ -633,14 +635,17 @@ local-bus:mtw-1,1,Port Hardy,Port Hardy,port-hardy,50.724444,-127.498056,town,st
 local-bus:mtw-1,2,Port McNeill Ferry Terminal,Port McNeill,port-mcneill,50.589444,-127.083611,town,community centroid
 local-bus:mtw-5,1,Thunderbird Mall,Port Hardy,port-hardy,50.724444,-127.498056,town,stop
 local-bus:mtw-5,2,Quatsino Health Ctr,Coal Harbour,coal-harbour,50.61421,-127.57074,dock,stop
-local-bus:pg-161,1,Burrard Vanderhoof Co-op,Vanderhoof,vanderhoof,54.01495,-124.0089,town,stop
-local-bus:pg-161,2,Downtown Exch Bay B,Prince George,prince-george,53.9137,-122.74808,town,stop
+local-bus:pg-161,1,Government at Gilgan,Burns Lake,burns-lake,54.230278,-125.764444,town,community centroid
+local-bus:pg-161,2,Burrard Vanderhoof Co-op,Vanderhoof,vanderhoof,54.01495,-124.0089,town,stop
+local-bus:pg-161,3,Downtown Exch Bay B,Prince George,prince-george,53.9137,-122.74808,town,stop
 local-bus:pg-162,1,4th Ave at King St,Smithers,smithers,54.779167,-127.176111,town,community centroid
-local-bus:pg-162,2,Government at Gilgan,Burns Lake,burns-lake,54.230278,-125.764444,town,community centroid
+local-bus:pg-162,2,Houston Mall,Houston,houston,54.398333,-126.648333,town,community centroid
+local-bus:pg-162,3,Government at Gilgan,Burns Lake,burns-lake,54.230278,-125.764444,town,community centroid
 local-bus:plr-12,1,Scotch Fir Point & Roberts,Stillwater,scotch-fir-point-roberts,49.76348,-124.29683,dock,stop
 local-bus:plr-12,2,Town Centre Mall Bay A,Powell River,town-centre-mall-bay-a,49.84384,-124.51728,dock,stop
 local-bus:plr-13,1,Shelter Point & Gillies Bay,Gillies Bay,gillies-bay,49.65439,-124.46681,dock,stop
-local-bus:plr-13,2,Marine & Duncan,Powell River,westview,49.8371,-124.5289,dock,stop
+local-bus:plr-13,2,Blubber Bay Ferry Terminal,Texada Island,blubber-bay,49.7948,-124.6204,dock,stop
+local-bus:plr-13,3,Marine & Duncan,Powell River,westview,49.8371,-124.5289,dock,stop
 local-bus:plr-14,1,Town Centre Mall Bay A,Powell River,town-centre-mall-bay-a,49.84384,-124.51728,dock,stop
 local-bus:plr-14,2,Lund Harbour,Lund,lund-harbour,49.9805,-124.7624,dock,stop
 local-bus:pmb-99,1,Whistler Village (Gondola Transit Exchange),Whistler,whistler,50.1158,-122.9563,town,stop
@@ -678,14 +683,18 @@ local-bus:skn-11,2,Kitimat City Centre,Kitimat,kitimat-city-centre,54.05333,-128
 local-bus:skn-14,1,Lakelse at Skeena Mall,Terrace,terrace,54.51701,-128.59612,town,stop
 local-bus:skn-14,2,Gitsaex St Mid Block,Usk,usk,54.60905,-128.4104,dock,stop
 local-bus:skn-163,1,4th Avenue at Roi Theatre,Smithers,smithers,54.779167,-127.176111,town,community centroid
-local-bus:skn-163,2,Gunanoot Ave at Kispiox,Kispiox,kispiox,55.35218,-127.69262,dock,stop
+local-bus:skn-163,2,New Hazelton Post Office,New Hazelton,new-hazelton,55.243333,-127.586944,town,community centroid
+local-bus:skn-163,3,Gunanoot Ave at Kispiox,Kispiox,kispiox,55.35218,-127.69262,dock,stop
 local-bus:skn-164,1,Lakelse at Skeena Mall,Terrace,terrace,54.51701,-128.59612,town,stop
 local-bus:skn-164,2,Gitsaex St Mid Block,Usk,usk,54.60905,-128.4104,dock,stop
-local-bus:skn-164,3,Gunanoot Ave at Kispiox,Kispiox,kispiox,55.35218,-127.69262,dock,stop
+local-bus:skn-164,3,New Hazelton Post Office,New Hazelton,new-hazelton,55.243333,-127.586944,town,community centroid
+local-bus:skn-164,4,Gunanoot Ave at Kispiox,Kispiox,kispiox,55.35218,-127.69262,dock,stop
 local-bus:skn-31,1,Hilltop Ave at Park Dr,Kitseguecla,kitseguecla,55.08721,-127.82908,dock,stop
-local-bus:skn-31,2,Gunanoot Ave at Kispiox,Kispiox,kispiox,55.35218,-127.69262,dock,stop
+local-bus:skn-31,2,New Hazelton Post Office,New Hazelton,new-hazelton,55.243333,-127.586944,town,community centroid
+local-bus:skn-31,3,Gunanoot Ave at Kispiox,Kispiox,kispiox,55.35218,-127.69262,dock,stop
 local-bus:skn-32,1,River Rd at Hazelton Old Town,Hazelton,hazelton,55.25569,-127.67666,dock,stop
-local-bus:skn-32,2,Hwy 16 PetroCan at Hwy 37,Kitwanga,kitwanga-junction,55.1044,-128.0561,town,stop
+local-bus:skn-32,2,New Hazelton Post Office,New Hazelton,new-hazelton,55.243333,-127.586944,town,community centroid
+local-bus:skn-32,3,Hwy 16 PetroCan at Hwy 37,Kitwanga,kitwanga-junction,55.1044,-128.0561,town,stop
 local-bus:smi-23,1,Beaver Rd at Witset Gas Station,Moricetown,witset,55.0086,-127.3386,town,stop
 local-bus:smi-23,2,Hwy 16 at Toronto St,Smithers,smithers,54.779167,-127.176111,town,community centroid
 local-bus:sok-30,1,Duncan & Main (Plaza),Penticton,duncan-main,49.48392,-119.585,dock,stop
@@ -738,15 +747,21 @@ local-bus:vrt-65,5,Otter Point Rd at Ayre Rd,Sooke,otter-point-rd-at-ayre-rd,48.
 local-bus:vrt-70,1,Swartz Bay Ferry Terminal,Victoria,swartz-bay,48.6886,-123.4114,dock,stop
 local-bus:vrt-70,2,Legislature Exchange (Downtown Victoria),Victoria,victoria,48.42771,-123.36446,town,stop
 local-bus:vrt-71,1,Legislature Exch Bay C,Victoria,legislature,48.41827,-123.36805,dock,stop
-local-bus:vrt-71,2,Canora Rd at Summergate Blvd,Sidney,sidney,48.65017,-123.4006,dock,stop
+local-bus:vrt-71,2,Douglas St at Cloverdale Ave,Saanich,douglas-st-at-kelvin-rd,48.44964,-123.37376,dock,stop
+local-bus:vrt-71,3,Royal Oak Exch,Saanich,royal-oak-exch-bay-h,48.4987,-123.38597,dock,stop
+local-bus:vrt-71,4,Canora Rd at Summergate Blvd,Sidney,sidney,48.65017,-123.4006,dock,stop
 local-bus:vrt-72,1,Swartz Bay Ferry Terminal,Victoria,swartz-bay,48.6886,-123.4114,dock,stop
 local-bus:vrt-72,2,Legislature Exchange (Downtown Victoria),Victoria,victoria,48.42771,-123.36446,town,stop
 local-bus:vrt-75,1,Legislature Exch (Belleville St) Bay G,Victoria,legislature,48.41827,-123.36805,dock,stop
-local-bus:vrt-75,2,Tanner Rd at Bella Vista Dr,Central Saanich,central-saanich,48.55436,-123.39503,dock,stop
+local-bus:vrt-75,2,Douglas St at Cloverdale Ave,Saanich,douglas-st-at-kelvin-rd,48.44964,-123.37376,dock,stop
+local-bus:vrt-75,3,Royal Oak Exch,Saanich,royal-oak-exch-bay-h,48.4987,-123.38597,dock,stop
+local-bus:vrt-75,4,Tanner Rd at Bella Vista Dr,Central Saanich,central-saanich,48.55436,-123.39503,dock,stop
+local-bus:vrt-75,5,Brentwood Bay,Brentwood Bay (Vancouver Island),brentwood-bay,48.572537,-123.451469,town,community centroid
 local-bus:vrt-76,1,Swartz Bay Ferry Terminal Bay D,North Saanich,swartz-bay,48.6886,-123.4114,dock,stop
 local-bus:vrt-76,2,Royal Oak Exch Bay H,Saanich,royal-oak-exch-bay-h,48.4987,-123.38597,dock,stop
 local-bus:vrt-83,1,James White Blvd at Fifth St,Sidney,sidney,48.65017,-123.4006,dock,stop
-local-bus:vrt-83,2,W Saanich Rd at Durrance Rd,Saanich,w-saanich-rd-at-durrance-rd,48.55061,-123.4399,dock,stop
+local-bus:vrt-83,2,Wallace Dr at Marchant Rd,Brentwood Bay,brentwood-bay,48.572537,-123.451469,town,community centroid
+local-bus:vrt-83,3,W Saanich Rd at Durrance Rd,Saanich,w-saanich-rd-at-durrance-rd,48.55061,-123.4399,dock,stop
 local-bus:vs-41,1,Enderby: Mill & George,Enderby,enderby,50.550556,-119.139444,town,community centroid
 local-bus:vs-41,2,Hudson Ave NE & 6 St NE,Salmon Arm,salmon-arm,50.699846,-119.267891,town,community centroid
 local-bus:vs-42,1,Lakeshore & Alexander,Salmon Arm,salmon-arm,50.699846,-119.267891,town,community centroid

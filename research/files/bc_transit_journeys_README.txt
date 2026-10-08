@@ -29,7 +29,7 @@ https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Journeys: 77056 rows, 13 columns.
+Journeys: 78659 rows, 13 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
@@ -40,10 +40,10 @@ listings, ferry timetables, and telephone calls. It is a collection, not a
 census: we cannot know what we have missed, so treat every count as a floor,
 never a total.
 
-77056 journeys across 13106 community pairs, in the order we rank them. Rank 1
+78659 journeys across 13106 community pairs, in the order we rank them. Rank 1
 is the journey we would suggest first.
 
-8269 of them cannot be made with a bicycle. They are kept rather than dropped,
+8281 of them cannot be made with a bicycle. They are kept rather than dropped,
 so that a service running the route you want and refusing your bicycle is
 visible rather than silently absent.
 
