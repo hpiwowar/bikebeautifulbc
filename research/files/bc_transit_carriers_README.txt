@@ -5,7 +5,7 @@ One row per operator: whether it carries bicycles, under what conditions, where
 that answer came from, and when a human last checked it. Nobody else publishes
 this, which is also why it needs reading with its dates in view.
 
-Published 2026-10-08 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-10-18 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -22,12 +22,12 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). British Columbia carriers
-and their bicycle policies [data set]. Version 2026-10-08.
+and their bicycle policies [data set]. Version 2026-10-18.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Carriers: 69 rows, 12 columns.
+Carriers: 72 rows, 12 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
@@ -38,7 +38,7 @@ listings, ferry timetables, and telephone calls. It is a collection, not a
 census: we cannot know what we have missed, so treat every count as a floor,
 never a total.
 
-Of the 69 carriers here, 33 have had their bicycle policy checked against the
+Of the 72 carriers here, 36 have had their bicycle policy checked against the
 operator's own material, 8 are read from the operator's published description
 and not separately checked, and 28 have no bicycle policy on file at all. That
 last group is a finding, not an oversight: for much of British Columbia, nobody

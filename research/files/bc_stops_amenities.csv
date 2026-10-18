@@ -1130,6 +1130,10 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 04df3e0596,Takeout,extra,TRUE,,sonnet_4.6,2026-07-18
 04e1ea67c5,Nearby evening food,extra,TRUE,"Website describes Fernie as a 'foodies paradise' with diverse restaurants; hotel offers a hot breakfast discount at 'select local restaurants', confirming nearby dining establishments",sonnet_4.6,2026-07-18
 04e1ea67c5,Wi-Fi,extra,TRUE,,sonnet_4.6,2026-07-18
+04e9a71014,Accommodates bicycles,required for the tier,TRUE,,manual,2026-10-17
+04e9a71014,Advance booking required,extra,TRUE,,manual,2026-10-17
+04e9a71014,Exterior rack,extra,TRUE,,manual,2026-10-17
+04e9a71014,Unboxed bikes OK,extra,TRUE,,manual,2026-10-17
 04ecbbfa2f,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
 04ecbbfa2f,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 04ecbbfa2f,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
@@ -5800,6 +5804,8 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 1b70f5d9c1,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 1b70f5d9c1,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 1b70f5d9c1,Public rack nearby,extra,TRUE,,osm,2026-07-08
+1b7111508a,Accommodates bicycles,required for the tier,TRUE,,manual,2026-10-16
+1b7111508a,Bike fee applies,extra,TRUE,$2.50 each way,manual,2026-10-16
 1b72c875a3,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
 1b72c875a3,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 1b72c875a3,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
@@ -29463,6 +29469,9 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 8a1f8920a9,Public rack nearby,extra,TRUE,,osm,2026-07-08
 8a1f8920a9,Takeout,extra,TRUE,,sonnet_4.6,2026-07-18
 8a1f8920a9,Vegetarian / vegan / GF,extra,TRUE,"Website states 'delicious gluten-free options available'; menu includes a Vegan 'Cheese'cake and multiple dishes with tofu as a protein add-on, indicating vegetarian/vegan accommodation",sonnet_4.6,2026-07-18
+8a212905b2,Accommodates bicycles,required for the tier,TRUE,,manual,2026-10-17
+8a212905b2,Exterior rack,extra,TRUE,,manual,2026-10-17
+8a212905b2,Unboxed bikes OK,extra,TRUE,,manual,2026-10-17
 8a29033095,Bike parking or bike visibility,required for the tier,TRUE,,osm,2026-07-08
 8a29033095,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 8a29033095,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
@@ -40464,6 +40473,12 @@ bc8c93aaa1,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 bc8c93aaa1,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 bc8c93aaa1,Covered bike parking,extra,TRUE,,osm,2026-07-08
 bc8c93aaa1,Public rack nearby,extra,TRUE,,osm,2026-07-08
+bc8da050ed,Accommodates bicycles,required for the tier,TRUE,,manual,2026-10-16
+bc8da050ed,Bike fee applies,extra,TRUE,fare not published; call 1-800-642-0066,manual,2026-10-16
+bc8da050ed,Boxed bikes OK,extra,FALSE,,manual,2026-10-16
+bc8da050ed,E-bikes OK,extra,TRUE,pushed on and off the ramp,manual,2026-10-16
+bc8da050ed,Unboxed bikes OK,extra,TRUE,must be rideable; boxed or disassembled bikes not accepted,manual,2026-10-16
+bc8da050ed,Walk-on bikes,extra,TRUE,,manual,2026-10-16
 bc965e70c2,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 bc965e70c2,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 bc965e70c2,Takeout,extra,TRUE,,sonnet_4.6,2026-07-18
@@ -44581,6 +44596,11 @@ d088c72dcd,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 d088c72dcd,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 d089fb3ea7,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 d089fb3ea7,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
+d08b1306bd,Accommodates bicycles,required for the tier,TRUE,,manual,2026-10-16
+d08b1306bd,Advance booking required,extra,TRUE,add the bike to your booking; space available,manual,2026-10-16
+d08b1306bd,Bike fee applies,extra,TRUE,$50 plus tax,manual,2026-10-16
+d08b1306bd,Boxed bikes OK,extra,TRUE,hard case preferred; bike box with signed release,manual,2026-10-16
+d08b1306bd,E-bikes OK,extra,FALSE,only with a removable battery of 160 Wh or less carried in the cabin,manual,2026-10-16
 d08db142ca,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 d08db142ca,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 d09906df67,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
@@ -52474,6 +52494,9 @@ f45dff104e,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,
 f45dff104e,Public rack nearby,extra,TRUE,,osm,2026-07-08
 f45e030f69,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 f45e030f69,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
+f463e4aa1a,Accommodates bicycles,required for the tier,TRUE,,manual,2026-10-17
+f463e4aa1a,Exterior rack,extra,TRUE,,manual,2026-10-17
+f463e4aa1a,Unboxed bikes OK,extra,TRUE,,manual,2026-10-17
 f468aeb6b6,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 f468aeb6b6,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 f468aeb6b6,Wi-Fi,extra,TRUE,,sonnet_4.6,2026-07-18

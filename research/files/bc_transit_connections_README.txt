@@ -1,12 +1,12 @@
 Getting between British Columbia communities with a bicycle
 ===========================================================
 
-One row for every ordered pair of the 115 communities our trip planner covers:
+One row for every ordered pair of the 137 communities our trip planner covers:
 whether a cyclist can get from one to the other on scheduled service, how many
 times they would board, and what runs. The question this was built to answer is
 not where the buses go, it is where a bicycle is allowed to go with you.
 
-Published 2026-10-08 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-10-18 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -23,12 +23,12 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). Getting between British
-Columbia communities with a bicycle [data set]. Version 2026-10-08.
+Columbia communities with a bicycle [data set]. Version 2026-10-18.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Connections: 13106 rows, 22 columns.
+Connections: 18628 rows, 22 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
@@ -39,9 +39,9 @@ listings, ferry timetables, and telephone calls. It is a collection, not a
 census: we cannot know what we have missed, so treat every count as a floor,
 never a total.
 
-Every one of the 13106 pairs is reachable somehow. 228 cannot be done with a
-bicycle by any means we can find, and a further 1788 can only be done by flying
-or by renting a car one way. That is 2016 pairs, or 15% of the province's
+Every one of the 18628 pairs is reachable somehow. 276 cannot be done with a
+bicycle by any means we can find, and a further 1963 can only be done by flying
+or by renting a car one way. That is 2239 pairs, or 12% of the province's
 community pairs, with no scheduled ground or water service that will carry a
 bicycle.
 

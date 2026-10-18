@@ -1350,6 +1350,9 @@ listing_key,field,source
 04e1ea67c5,description,sonnet_4.6
 04e1ea67c5,website,enrichment
 04e1ea67c5,address,enrichment
+04e9a71014,name,manual
+04e9a71014,description,manual
+04e9a71014,website,manual
 04ecbbfa2f,name,enrichment
 04ecbbfa2f,description,sonnet_4.6
 04ecbbfa2f,website,enrichment
@@ -7087,6 +7090,9 @@ listing_key,field,source
 1b70f5d9c1,name,osm
 1b70f5d9c1,website,osm
 1b70f5d9c1,address,osm
+1b7111508a,name,manual
+1b7111508a,description,manual
+1b7111508a,website,manual
 1b72c875a3,name,enrichment
 1b72c875a3,description,sonnet_4.6
 1b72c875a3,website,enrichment
@@ -35623,6 +35629,9 @@ listing_key,field,source
 8a1f8920a9,description,sonnet_4.6
 8a1f8920a9,website,enrichment
 8a1f8920a9,address,enrichment
+8a212905b2,name,manual
+8a212905b2,description,manual
+8a212905b2,website,manual
 8a29033095,name,enrichment
 8a29033095,description,sonnet_4.6
 8a29033095,website,enrichment
@@ -48811,6 +48820,9 @@ bc8c93aaa1,name,enrichment
 bc8c93aaa1,description,sonnet_4.6
 bc8c93aaa1,website,enrichment
 bc8c93aaa1,address,enrichment
+bc8da050ed,name,manual
+bc8da050ed,description,manual
+bc8da050ed,website,manual
 bc965e70c2,name,enrichment
 bc965e70c2,description,sonnet_4.6
 bc965e70c2,website,enrichment
@@ -53850,6 +53862,9 @@ d089fb3ea7,name,enrichment
 d089fb3ea7,description,sonnet_4.6
 d089fb3ea7,website,enrichment
 d089fb3ea7,address,enrichment
+d08b1306bd,name,manual
+d08b1306bd,description,manual
+d08b1306bd,website,manual
 d08db142ca,name,enrichment
 d08db142ca,description,sonnet_4.6
 d08db142ca,website,enrichment
@@ -63401,6 +63416,9 @@ f45e030f69,name,enrichment
 f45e030f69,description,sonnet_4.6
 f45e030f69,website,enrichment
 f45e030f69,address,enrichment
+f463e4aa1a,name,manual
+f463e4aa1a,description,manual
+f463e4aa1a,website,manual
 f468aeb6b6,name,enrichment
 f468aeb6b6,description,sonnet_4.6
 f468aeb6b6,website,enrichment

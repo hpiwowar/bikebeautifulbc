@@ -1,4 +1,6 @@
 route_id,mode,operator,route_name,region,frequency,n_stops,origin,destination,in_connection_model,not_in_model_because,counts_for_connectivity,bikes_carried,rider_note
+air:4n-ylw,air,Air North,Kelowna (YLW) – Whitehorse (YXY) via Vancouver,air,daily,2,Kelowna,Whitehorse,TRUE,,FALSE,"yes, with conditions","Daily, with a stop in Vancouver on the same plane."
+air:4n-yvr,air,Air North,Vancouver (YVR) – Whitehorse (YXY),air,daily,2,Vancouver,Whitehorse,TRUE,,FALSE,"yes, with conditions","Nonstop, two or three flights a day, year-round."
 air:CMA01,air,Central Mountain Air,Vancouver – Williams Lake,Cariboo,,2,Vancouver,Williams Lake,FALSE,we could not confirm the operator carries bikes,FALSE,unknown,
 air:CMA02,air,Central Mountain Air,Vancouver – Quesnel,Cariboo,,2,Vancouver,Quesnel,FALSE,we could not confirm the operator carries bikes,FALSE,unknown,
 air:CMA03,air,Central Mountain Air,Quesnel – Williams Lake,Cariboo,,2,Quesnel,Williams Lake,FALSE,we could not confirm the operator carries bikes,FALSE,unknown,
@@ -82,6 +84,7 @@ air:ac-yxc,air,Air Canada,Vancouver (YVR) – Cranbrook (YXC),air,,2,Vancouver,C
 air:ac-yxj,air,Air Canada,Vancouver (YVR) – Fort St. John (YXJ),air,,2,Vancouver,Fort St. John,TRUE,,FALSE,"yes, with conditions",
 air:ac-yxs,air,Air Canada,Vancouver (YVR) – Prince George (YXS),air,,2,Vancouver,Prince George,TRUE,,FALSE,"yes, with conditions",
 air:ac-yxt,air,Air Canada,Vancouver (YVR) – Terrace (YXT),air,,2,Vancouver,Terrace,TRUE,,FALSE,"yes, with conditions",
+air:ac-yxy,air,Air Canada,Vancouver (YVR) – Whitehorse (YXY),air,,2,Vancouver,Whitehorse,TRUE,,FALSE,"yes, with conditions",
 air:ac-yyd,air,Air Canada,Vancouver (YVR) – Smithers (YYD),air,,2,Vancouver,Smithers,TRUE,,FALSE,"yes, with conditions",
 air:ac-yyj,air,Air Canada,Vancouver (YVR) – Victoria (YYJ),air,,2,Vancouver,Victoria,TRUE,,FALSE,"yes, with conditions",
 air:ac-yzp,air,Air Canada,Vancouver (YVR) – Sandspit (YZP),air,,2,Vancouver,Sandspit,TRUE,,FALSE,"yes, with conditions",
@@ -108,12 +111,13 @@ bus:3,bus,Ebus,Kamloops – Kelowna (via Salmon Arm),Southern Interior,daily,9,K
 bus:4,bus,Ebus,Kelowna/Salmon Arm – Golden,Southern Interior,daily,9,Kelowna,Golden,TRUE,,TRUE,"yes, with conditions",
 bus:5,bus,Ebus,Kamloops – Prince George,Cariboo,limited,11,Kamloops,Prince George,TRUE,,TRUE,"yes, with conditions",Runs Wed/Fri/Sun toward Prince George and Mon/Thu/Sat toward Kamloops; no service on Tuesdays.
 bus:6,bus,Squamish Connector,Squamish – Vancouver,Sea-to-Sky,seasonal-varies,7,Squamish,Vancouver,TRUE,,TRUE,"yes, with conditions",Bikes welcome May to September; check schedule outside that window.
-bus:7,bus,Rider Express,Vancouver – Calgary,Southern Interior,daily,14,Vancouver,Field,TRUE,,TRUE,"yes, with conditions",
 bus:8,bus,YVR Skylynx,Vancouver – Whistler,Sea-to-Sky,seasonal-varies,5,Vancouver,Whistler,TRUE,,TRUE,"yes, with conditions",Summer service April 18 to November 21; Squamish is a reservation-only stop.
 bus:9,bus,Sunshine Coast Connector,Langdale – Powell River,Sunshine Coast,daily,11,Langdale,Powell River,TRUE,,TRUE,"yes, with conditions",Includes the Earls Cove–Saltery Bay ferry leg.
-bus:bcfc-vic-van,bus,Wilson's Transportation (BC Connector),BC Ferries Connector — Vancouver / Victoria,Major,daily,4,Vancouver,Victoria,TRUE,,TRUE,"yes, with conditions",⛴️ Downtown to downtown via the Tsawwassen–Swartz Bay ferry crossing.
+bus:bcfc-vic-van,bus,Wilson's Transportation (BC Connector),BC Ferries Connector — Vancouver / Victoria,Major,daily,5,Vancouver,Victoria,TRUE,,TRUE,"yes, with conditions",⛴️ Downtown to downtown via the Tsawwassen–Swartz Bay ferry crossing.
+bus:bcn-16e,bus,BC Bus North (Tahltan NST Busing Ltd.),Prince George – Valemount (Hwy 16 East),north,limited,4,Prince George,Valemount,TRUE,,TRUE,"yes, with conditions","Twice a week: Monday and Friday, both directions."
 bus:bcn-16w,bus,BC Bus North (Tahltan NST Busing Ltd.),Prince George – Prince Rupert (Hwy 16 West),north,limited,16,Prince George,Prince Rupert,TRUE,,TRUE,"yes, with conditions","Twice a week: Monday and Thursday westbound, Tuesday and Friday eastbound."
-bus:cvx-66,bus,BC Transit,66 CVX Cowichan-Victoria Express,Vancouver Island,daily,3,Duncan,Victoria,TRUE,,TRUE,"yes, with conditions",
+bus:bcn-97ak,bus,BC Bus North (Tahltan NST Busing Ltd.),Fort Nelson – Fort St. John (Alaska Highway),north,limited,6,Fort Nelson,Fort St. John,TRUE,,TRUE,"yes, with conditions","Twice a week: Monday and Friday, both directions."
+bus:bcn-97n,bus,BC Bus North (Tahltan NST Busing Ltd.),Prince George – Fort St. John (Hwy 97 North),north,limited,11,Prince George,Fort St. John,TRUE,,TRUE,"yes, with conditions","Twice a week: Monday and Thursday north, Tuesday and Friday back to Prince George."
 bus:ebus-calgary,bus,Ebus,Vancouver – Calgary (Hwy 1),rockies,daily,17,Vancouver Pacific Central,Calgary AB,TRUE,,TRUE,"yes, with conditions","Runs the same Highway 1 corridor as Rider Express, so compare schedules and fares."
 bus:flixbus-seattle,bus,FlixBus (operated by MTRWestern),Vancouver – Seattle via Bellingham & Everett,cross-border,daily,5,Vancouver Waterfront Station,Seattle WA,TRUE,,TRUE,"yes, with conditions",Seven trips a day via Bellingham and Everett.
 bus:fvx-66,bus,BC Transit,66 Fraser Valley Express (FVX),Metro Vancouver / Fraser Valley,daily,4,Chilliwack,Burnaby,TRUE,,TRUE,"yes, with conditions",Meets SkyTrain at Lougheed Town Centre and TransLink buses at Carvolth Exchange.
@@ -125,6 +129,7 @@ bus:quick-seattle,bus,Quick Shuttle (Quick Coach Lines / TRAXX),Vancouver – Se
 bus:rider-calgary,bus,Rider Express,Vancouver – Calgary (Hwy 1),rockies,daily,18,Vancouver,Calgary AB,TRUE,,TRUE,"yes, with conditions",
 bus:t49-calgary,bus,Tunnel49,Fernie – Calgary Airport,Kootenay Rockies,seasonal-varies,2,Fernie,Calgary,TRUE,,TRUE,"yes, with conditions","A winter ski shuttle: Wednesdays and Saturdays, mid-December to late March. Other times need a six-passenger custom booking. Bike bags $50 plus GST."
 bus:t49-yxc,bus,Tunnel49,Elk Valley – Cranbrook Airport,Kootenay Rockies,on-demand,4,Elkford,Cranbrook,TRUE,,TRUE,"yes, with conditions","On-demand airport shuttle, year-round, 8 AM to 10 PM, two-person minimum. Bikes go if packed; mention it when you book, and there might be an extra fee."
+bus:tsalalh-seton,bus,Tsal'alh Seton Train,Lillooet – Shalalth – Seton Portage,Thompson Okanagan,daily,3,Lillooet,Seton Portage,TRUE,,TRUE,"yes, with conditions","Daily shuttle bus: leaves Lillooet at 9:00 am and 3:40 pm, heads back from Seton Portage at 10:30 am and 4:55 pm. Check the Facebook page or call before you go, since slides can close the road."
 carpool:pop-hwy4,carpool,Poparide,Hwy 4 rideshare (Nanaimo - Port Alberni - Ucluelet - Tofino),Vancouver Island,on-demand,4,Nanaimo,Tofino,TRUE,,TRUE,"yes, with conditions",Only book rides that say they permit bicycles (bike icon on the listing).
 carpool:pop-island1,carpool,Poparide,Hwy 1 rideshare (Victoria - Duncan - Nanaimo),Vancouver Island,on-demand,3,Victoria,Nanaimo,TRUE,,TRUE,"yes, with conditions",Only book rides that say they permit bicycles (bike icon on the listing).
 carpool:pop-island19,carpool,Poparide,Island Hwy rideshare (Nanaimo - Courtenay),Vancouver Island,on-demand,2,Nanaimo,Courtenay,TRUE,,TRUE,"yes, with conditions",Only book rides that say they permit bicycles (bike icon on the listing).
@@ -157,6 +162,7 @@ ferry:9,ferry,BC Ferries,Tsawwassen – Southern Gulf Islands,Gulf Islands,daily
 ferry:CLIPPER,ferry,Victoria Clipper,Victoria Clipper (Victoria - Seattle),cross-border,daily,2,Victoria,Seattle Downtown WA,TRUE,,TRUE,"yes, with conditions","Daily year-round, with extra sailings in summer. Bike space is very limited; reserve by phone when you book. Passport required."
 ferry:HULLO,ferry,Hullo,Hullo (Nanaimo – Vancouver),Metro Vancouver / Vancouver Island,daily,2,Nanaimo,Vancouver (Coal Harbour),TRUE,,TRUE,"yes, with conditions",
 ferry:NEWCASTLE,ferry,Newcastle Island Ferry Service LP,Saysutshun Newcastle Island Ferry (Maffeo Sutton Dock (Nanaimo) – Saysutshun / Newcastle Island Dock),Vancouver Island,seasonal-varies,2,Nanaimo,Nanaimo,TRUE,,TRUE,"yes, with conditions","A ten-minute hop from Maffeo Sutton Park; seasonal May–October, hourly, returns on the half hour."
+ferry:amhs-mainline,ferry,Alaska Marine Highway,Bellingham – Haines – Skagway,cross-border,limited,3,Bellingham WA,Skagway,TRUE,,TRUE,"yes, with conditions","Weekly in winter, about four days between Bellingham and Skagway. Bikes roll on ready to ride, not boxed; call to book the bike fare. Passport required."
 ferry:seabus,ferry,TransLink (SeaBus),SeaBus,Metro Vancouver,daily,2,Vancouver,North Vancouver,TRUE,,TRUE,"yes, with conditions",Bikes ride inside the cabin; during weekday rush hours there's room for six bikes a sailing.
 inland-ferry:IF01,inland-ferry,BC Inland Ferries,Balfour – Kootenay Bay,West Kootenay,daily,2,Balfour,Kootenay Bay,TRUE,,TRUE,yes,The longest free ferry ride in the world — about 35 minutes across Kootenay Lake; daily year-round with extra summer sailings.
 inland-ferry:IF02,inland-ferry,BC Inland Ferries,Shelter Bay – Galena Bay,West Kootenay,daily,2,Shelter Bay,Galena Bay,TRUE,,TRUE,yes,"Free 20-minute crossing of Upper Arrow Lake, sailing near-continuously from about 5am to midnight."
@@ -182,15 +188,15 @@ local-bus:cv-10,local-bus,BC Transit,10 Fanny Bay / Deep Bay / Downtown Courtena
 local-bus:cv-11,local-bus,BC Transit,11 Airport via Powell R. Ferry / Downtown,Vancouver Island,limited,3,Comox,Courtenay,TRUE,,TRUE,"yes, with conditions","One loop serves both the Little River ferry terminal and Comox airport; about 5–7 trips a day, and Sunday service is unconfirmed."
 local-bus:cv-12,local-bus,BC Transit,12 Oyster River / Downtown Courtenay,Vancouver Island,limited,2,Oyster River,Courtenay,TRUE,,TRUE,"yes, with conditions",No service on Sunday.
 local-bus:cv-2,local-bus,BC Transit,2 Cumberland / Anfield Centre,Vancouver Island,daily,2,Cumberland,Courtenay,TRUE,,TRUE,"yes, with conditions",
-local-bus:cvt-34,local-bus,BC Transit,34 Ladysmith-Chemainus,Vancouver Island,limited,2,Ladysmith,North Cowichan,TRUE,,TRUE,"yes, with conditions",
+local-bus:cvt-34,local-bus,BC Transit,34 Ladysmith-Chemainus,Vancouver Island,limited,2,Ladysmith,Chemainus,TRUE,,TRUE,"yes, with conditions",
 local-bus:cvt-36,local-bus,BC Transit,36 Ladysmith-Duncan Express,Vancouver Island,limited,3,Ladysmith,Duncan,TRUE,,TRUE,"yes, with conditions",
-local-bus:cvt-6,local-bus,BC Transit,6 Crofton-Chemainus,Vancouver Island,daily,2,North Cowichan,Duncan,TRUE,,TRUE,"yes, with conditions",
-local-bus:cvt-66,local-bus,BC Transit,66 CVX Cowichan - Victoria Express,Vancouver Island,daily,7,Duncan,North Cowichan,TRUE,,TRUE,"yes, with conditions",
+local-bus:cvt-6,local-bus,BC Transit,6 Crofton-Chemainus,Vancouver Island,daily,4,Duncan,Chemainus,TRUE,,TRUE,"yes, with conditions",
+local-bus:cvt-66,local-bus,BC Transit,66 CVX Cowichan - Victoria Express,Vancouver Island,daily,7,Duncan,Duncan,TRUE,,TRUE,"yes, with conditions",
 local-bus:cvt-7,local-bus,BC Transit,7 Cowichan Lake,Vancouver Island,daily,2,Duncan,Lake Cowichan,TRUE,,TRUE,"yes, with conditions",
 local-bus:cvt-8,local-bus,BC Transit,8 Mill Bay via Telegraph Rd/Duncan via Shawnigan Lk,Vancouver Island,daily,2,Mill Bay,Duncan,TRUE,,TRUE,"yes, with conditions",
 local-bus:cvt-9,local-bus,BC Transit,9 Mill Bay via Shawnigan Lk/Duncan via Telegraph Rd,Vancouver Island,daily,2,Duncan,Mill Bay,TRUE,,TRUE,"yes, with conditions",
 local-bus:cvt-99,local-bus,BC Transit,99 SVX Shawnigan Lake - Victoria Express,Vancouver Island,limited,6,Cobble Hill,Victoria,TRUE,,TRUE,"yes, with conditions",Weekdays only.
-local-bus:ea-goose,local-bus,Electric Alpine Biking,Galloping Goose Trail shuttle,Vancouver Island,on-demand,3,View Royal,Sooke,TRUE,,TRUE,"yes, with conditions",
+local-bus:ea-goose,local-bus,Electric Alpine Biking,Galloping Goose Trail shuttle,Vancouver Island,limited,3,View Royal,Sooke,TRUE,,TRUE,"yes, with conditions",Galloping Goose trail shuttle. Runs Friday to Sunday only. You must book at least 12 hours ahead. $19 one way with your own bike.
 local-bus:ek-22,local-bus,BC Transit,22 KC Commuter,Kootenay,limited,2,Cranbrook,Kimberley,TRUE,,TRUE,"yes, with conditions",
 local-bus:ek-31,local-bus,BC Transit,31 South Connector,Kootenay Rockies,limited,2,Invermere,Canal Flats,TRUE,,TRUE,"yes, with conditions",Weekdays only.
 local-bus:ek-32,local-bus,BC Transit,32 North Connector,Kootenay Rockies,limited,2,Invermere,Edgewater,TRUE,,TRUE,"yes, with conditions",Weekdays only.
@@ -204,6 +210,14 @@ local-bus:fv-55,local-bus,BC Transit,55 Yarrow - Greendale,Metro Vancouver / Fra
 local-bus:fv-66,local-bus,BC Transit,66 Fraser Valley Express,Metro Vancouver / Fraser Valley,daily,4,Chilliwack,Burnaby,TRUE,,TRUE,"yes, with conditions",
 local-bus:fv-71,local-bus,BC Transit,71 Agassiz-Harrison,Metro Vancouver / Fraser Valley,daily,2,Harrison Hot Springs,Chilliwack,TRUE,,TRUE,"yes, with conditions",
 local-bus:fv-72,local-bus,BC Transit,72 Hope,"Vancouver, Coast & Mountains",limited,2,Hope,Kent,TRUE,,TRUE,"yes, with conditions",No service on Sunday.
+local-bus:hc-100mile-williams-lake,local-bus,BC Transit,100 Mile House – Williams Lake (Health Connections),Cariboo,limited,2,100 Mile House,Williams Lake,TRUE,,TRUE,"yes, with conditions","Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Monday, Wednesday and Friday only."
+local-bus:hc-creston-cranbrook,local-bus,BC Transit,Creston – Cranbrook (Health Connections),Kootenay Rockies,limited,2,Creston,Cranbrook,TRUE,,TRUE,"yes, with conditions",Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Tuesday and Thursday only.
+local-bus:hc-elkford-cranbrook,local-bus,BC Transit,Elkford – Cranbrook (Health Connections),Kootenay Rockies,limited,4,Elkford,Cranbrook,TRUE,,TRUE,"yes, with conditions",Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Wednesday and Friday only.
+local-bus:hc-golden-cranbrook,local-bus,BC Transit,36 Golden – Cranbrook Connector (Health Connections),Kootenay Rockies,limited,3,Golden,Cranbrook,TRUE,,TRUE,"yes, with conditions",Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Tuesday and Thursday only.
+local-bus:hc-kamloops-logan-lake-merritt,local-bus,BC Transit,Kamloops – Logan Lake – Merritt (Health Connections),Thompson Okanagan,limited,3,Kamloops,Merritt,TRUE,,TRUE,"yes, with conditions",Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Tuesday only.
+local-bus:hc-lillooet-kamloops,local-bus,BC Transit,Lillooet – Kamloops (Health Connections),Thompson Okanagan,limited,4,Lillooet,Kamloops,TRUE,,TRUE,"yes, with conditions",Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Tuesday only.
+local-bus:hc-lytton-kamloops,local-bus,BC Transit,Lillooet – Lytton – Kamloops (Health Connections),Thompson Okanagan,limited,7,Lillooet,Kamloops,TRUE,,TRUE,"yes, with conditions",Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Thursday only.
+local-bus:hc-rock-creek-grand-forks,local-bus,BC Transit,70 Rock Creek – Grand Forks (Health Connections),West Kootenay,limited,4,Grand Forks,Rock Creek,TRUE,,TRUE,"yes, with conditions",Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Tuesday only.
 local-bus:krt-23,local-bus,BC Transit,23 Lake Country,Southern Interior,daily,2,Kelowna,Kelowna,TRUE,,TRUE,"yes, with conditions",First leg of the airport–downtown chain; transfer to Route 97 at UBCO Exchange.
 local-bus:krt-97,local-bus,BC Transit,97 Okanagan,Southern Interior,daily,2,Kelowna,Kelowna,TRUE,,TRUE,"yes, with conditions",Second leg of the airport–downtown chain: UBCO Exchange to Queensway downtown.
 local-bus:mtw-1,local-bus,BC Transit,1/2 Port McNeill - Port Hardy,Vancouver Island,limited,2,Port Hardy,Port McNeill,TRUE,,TRUE,"yes, with conditions","Five trips a day on weekdays, two on Saturday, and no service on Sunday."
@@ -234,8 +248,8 @@ local-bus:skn-31,local-bus,BC Transit,31 Gitsegukla,Northern BC,limited,3,Kitseg
 local-bus:skn-32,local-bus,BC Transit,32 West Connector,Northern BC,limited,3,Hazelton,Kitwanga,TRUE,,TRUE,"yes, with conditions","Runs Monday, Wednesday and Friday only."
 local-bus:smi-23,local-bus,BC Transit,23 Smithers/Witset,Northern BC,limited,2,Moricetown,Smithers,TRUE,,TRUE,"yes, with conditions",No service on Sunday.
 local-bus:sok-30,local-bus,BC Transit,30 Penticton / Summerland,Southern Interior,limited,2,Penticton,Summerland,TRUE,,TRUE,"yes, with conditions",
-local-bus:sok-40,local-bus,BC Transit,40 Osoyoos / Penticton,Southern Interior,limited,3,Osoyoos,Penticton,TRUE,,TRUE,"yes, with conditions",
-local-bus:sok-50,local-bus,BC Transit,50 Penticton / Princeton,Southern Interior,limited,3,Princeton,Penticton,TRUE,,TRUE,"yes, with conditions",
+local-bus:sok-40,local-bus,BC Transit,40 Osoyoos / Penticton,Southern Interior,limited,3,Osoyoos,Penticton,TRUE,,TRUE,"yes, with conditions",Health Connections bus: medical patients get priority. You must call ahead to book a seat. Weekdays only.
+local-bus:sok-50,local-bus,BC Transit,50 Penticton / Princeton,Southern Interior,limited,3,Princeton,Penticton,TRUE,,TRUE,"yes, with conditions","Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Monday, Wednesday and Friday only."
 local-bus:sok-70,local-bus,BC Transit,70 Kelowna / Penticton,Southern Interior,limited,4,Penticton,Kelowna,TRUE,,TRUE,"yes, with conditions",
 local-bus:tl-229,local-bus,TransLink,229 Lonsdale Quay / Lynn Valley,Metro Vancouver,daily,2,North Vancouver,North Vancouver,TRUE,,TRUE,"yes, with conditions","Runs about every 30 minutes, seven days a week."
 local-bus:tl-257,local-bus,TransLink,257 Horseshoe Bay Express,Metro Vancouver,daily,3,West Vancouver,Vancouver,TRUE,,TRUE,"yes, with conditions",
@@ -259,7 +273,7 @@ local-bus:vrt-83,local-bus,BC Transit,83 Sidney / Brentwood / Royal Oak,Vancouve
 local-bus:vs-41,local-bus,BC Transit,41 Salmon Arm-Enderby,Thompson Okanagan,limited,2,Enderby,Salmon Arm,TRUE,,TRUE,"yes, with conditions",Wednesdays only.
 local-bus:vs-42,local-bus,BC Transit,42 Salmon Arm-Eagle Bay,Thompson Okanagan,limited,2,Salmon Arm,Carlin,TRUE,,TRUE,"yes, with conditions",Thursdays only.
 local-bus:vs-43,local-bus,BC Transit,43 Salmon Arm-Sorrento,Thompson Okanagan,limited,2,Salmon Arm,Sorrento,TRUE,,TRUE,"yes, with conditions",Thursdays only.
-local-bus:vs-60,local-bus,BC Transit,60 Enderby/Vernon,Thompson Okanagan,limited,3,Enderby,Vernon,TRUE,,TRUE,"yes, with conditions",No service on Sunday.
+local-bus:vs-60,local-bus,BC Transit,60 Enderby/Vernon,Thompson Okanagan,limited,3,Enderby,Vernon,TRUE,,TRUE,"yes, with conditions",Health Connections bus: medical patients get priority. No booking needed. No service on Sunday.
 local-bus:vs-61,local-bus,BC Transit,61 Lumby/Vernon,Thompson Okanagan,limited,2,Lumby,Vernon,TRUE,,TRUE,"yes, with conditions",Weekdays only.
 local-bus:vs-90,local-bus,BC Transit,90 UBCO/Vernon,Southern Interior,daily,3,Kelowna,Vernon,TRUE,,TRUE,"yes, with conditions",
 local-bus:wct-1,local-bus,West Coast Transit System (Tofino/Ucluelet),1 Tofino / Ucluelet,Vancouver Island,daily,3,Ucluelet,Tofino,TRUE,,TRUE,yes,
@@ -269,12 +283,12 @@ local-bus:wk-20,local-bus,BC Transit,20 Slocan Valley,Kootenay Rockies,limited,2
 local-bus:wk-38,local-bus,BC Transit,38 Playmor via Pass Creek,Kootenay Rockies,limited,4,Castlegar,Brilliant,TRUE,,TRUE,"yes, with conditions",Runs Tuesday and Friday only.
 local-bus:wk-45,local-bus,BC Transit,45 Teck,West Kootenay,limited,2,Rossland,Trail,TRUE,,TRUE,"yes, with conditions",
 local-bus:wk-46,local-bus,BC Transit,46 Rossland,West Kootenay,limited,2,Trail,Rossland,TRUE,,TRUE,"yes, with conditions",
-local-bus:wk-52,local-bus,BC Transit,52 Nakusp-Playmor via Silverton,Kootenay Rockies,limited,2,Nakusp,Slocan,TRUE,,TRUE,"yes, with conditions",Wednesdays only.
+local-bus:wk-52,local-bus,BC Transit,52 Nakusp-Playmor via Silverton,Kootenay Rockies,limited,3,Nakusp,Slocan,TRUE,,TRUE,"yes, with conditions",Wednesdays only.
 local-bus:wk-53,local-bus,BC Transit,53 Nakusp-Edgewood,Kootenay Rockies,limited,4,Nakusp,Edgewood,TRUE,,TRUE,"yes, with conditions",Fridays only.
 local-bus:wk-58,local-bus,BC Transit,58 Kaslo-Argenta,Kootenay Rockies,limited,2,Kaslo,Argenta,TRUE,,TRUE,"yes, with conditions",Thursdays only.
-local-bus:wk-72,local-bus,BC Transit,72 Salmo-Nelson via Ymir,Kootenay Rockies,limited,2,Nelson,Salmo,TRUE,,TRUE,"yes, with conditions","Runs Tuesday, Thursday and Friday only."
-local-bus:wk-74,local-bus,BC Transit,74 Nakusp-Nelson,Kootenay Rockies,limited,2,Nakusp,Nelson,TRUE,,TRUE,"yes, with conditions",Runs Tuesday and Thursday only.
-local-bus:wk-76,local-bus,BC Transit,76 Kaslo-Nelson,Kootenay Rockies,limited,4,Nelson,Kaslo,TRUE,,TRUE,"yes, with conditions","Runs Tuesday, Wednesday and Thursday only."
+local-bus:wk-72,local-bus,BC Transit,72 Salmo-Nelson via Ymir,Kootenay Rockies,limited,2,Nelson,Salmo,TRUE,,TRUE,"yes, with conditions","Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Tuesday, Thursday and Friday only."
+local-bus:wk-74,local-bus,BC Transit,74 Nakusp-Nelson,Kootenay Rockies,limited,4,Nakusp,Nelson,TRUE,,TRUE,"yes, with conditions",Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Tuesday and Thursday only.
+local-bus:wk-76,local-bus,BC Transit,76 Kaslo-Nelson,Kootenay Rockies,limited,4,Nelson,Kaslo,TRUE,,TRUE,"yes, with conditions","Health Connections bus: medical patients get priority. You must call ahead to book a seat. Runs Tuesday, Wednesday and Thursday only."
 local-bus:wk-98,local-bus,BC Transit,98 Columbia Connector,West Kootenay,limited,2,Castlegar,Trail,TRUE,,TRUE,"yes, with conditions",
 local-bus:wk-99,local-bus,BC Transit,99 Kootenay Connector,West Kootenay,limited,2,Nelson,Castlegar,TRUE,,TRUE,"yes, with conditions",
 local-train:WCE,local-train,TransLink (West Coast Express),West Coast Express,Metro Vancouver / Fraser Valley,limited,8,Vancouver,Mission,TRUE,,TRUE,"yes, with conditions","Weekdays only, peak direction only: five trains toward Vancouver in the morning, five back in the evening."

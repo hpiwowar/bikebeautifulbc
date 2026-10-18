@@ -6,7 +6,7 @@ around British Columbia. Buses, ferries, inland ferries, water taxis, trains,
 SkyTrain, flights, ride-share and one-way rental car corridors. Its ordered
 stops and their locations are the companion stops file.
 
-Published 2026-10-08 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-10-18 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -23,12 +23,12 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). British Columbia transit
-routes, for cyclists [data set]. Version 2026-10-08.
+routes, for cyclists [data set]. Version 2026-10-18.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Routes: 334 rows, 14 columns.
+Routes: 348 rows, 14 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
@@ -45,7 +45,7 @@ departure times here, this is not General Transit Feed Specification (GTFS) data
 and cannot be loaded by GTFS tools. Where one of our columns means the same
 thing as a GTFS field, we have borrowed the GTFS name so it reads familiarly.
 
-Of the 334 routes, 275 are part of the network we route journeys across. The
+Of the 348 routes, 289 are part of the network we route journeys across. The
 rest are published too, each with the reason we set it aside, because what was
 excluded is part of the picture.
 

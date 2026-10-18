@@ -5,7 +5,7 @@ Every stop on every service in the routes file, in the order the service calls
 at them, with a coordinate and an honest statement of how precise that
 coordinate is. Join it to the routes file on route_id.
 
-Published 2026-10-08 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-10-18 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -22,12 +22,12 @@ community norm. A citation facilitates transparency and discovery, so thanks in
 advance!
 
 Suggested citation: BC Cycle Tourism Society (2026). British Columbia transit
-stops, in order, with locations [data set]. Version 2026-10-08.
+stops, in order, with locations [data set]. Version 2026-10-18.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-Stops: 1040 rows, 9 columns.
+Stops: 1091 rows, 9 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no.
@@ -38,7 +38,7 @@ listings, ferry timetables, and telephone calls. It is a collection, not a
 census: we cannot know what we have missed, so treat every count as a floor,
 never a total.
 
-256 of the 1040 stops are placed at the middle of their community rather than at
+256 of the 1091 stops are placed at the middle of their community rather than at
 the stop itself. The location_precision column says which is which; do not treat
 a centroid as a platform location.
 

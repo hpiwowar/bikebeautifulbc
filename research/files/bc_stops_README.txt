@@ -6,7 +6,7 @@ places to stay, bike shops, attractions, and the transport that connects them.
 One row per place, with where it is, what kind of place it is, and how it treats
 an arriving cyclist as far as we know.
 
-Published 2026-10-08 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-10-17 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -21,18 +21,18 @@ that or not. Use it, redistribute it, build on it. If you publish a database
 derived from it, that database has to carry the same licence.
 
 Suggested citation: BC Cycle Tourism Society (2026). Places in British Columbia
-that a cyclist might want [data set]. Version 2026-10-08.
+that a cyclist might want [data set]. Version 2026-10-17.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
 
-18508 rows, 22 columns.
+18514 rows, 22 columns.
 
 A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no. Blanks are common here, because most of these
 places have never been asked.
 
-Of the 18508 places here, 145 are accredited, 5938 meet the welcoming bar for
+Of the 18514 places here, 145 are accredited, 5944 meet the welcoming bar for
 their category, 12420 are listed for information with no welcome claim either
 way, and 5 are carriers we have checked and found will not take a bicycle.
 
@@ -54,7 +54,7 @@ and many small communities have only whatever OpenStreetMap already held. A
 community with few rows is usually a community we have not worked through yet,
 not a community with nothing in it.
 
-18086 of the 18508 rows carry an OpenStreetMap identifier. That is what makes
+18086 of the 18514 rows carry an OpenStreetMap identifier. That is what makes
 this file a derivative database, and it is why the licence above is share-alike
 rather than the public-domain dedication on our other datasets.
 
