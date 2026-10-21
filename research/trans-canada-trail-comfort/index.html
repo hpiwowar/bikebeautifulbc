@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Trans Canada Trail in BC, by ride comfort — BC Cycle Tourism Society</title>
+<link rel="canonical" href="https://bccycletourism.ca/research/trans-canada-trail-comfort/">
+<meta property="og:site_name" content="BC Cycle Tourism Society">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bccycletourism.ca/research/trans-canada-trail-comfort/">
+<meta property="og:title" content="Trans Canada Trail in BC, by ride comfort — BC Cycle Tourism Society">
+<meta property="og:image" content="https://bccycletourism.ca/img/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trans Canada Trail in BC, by ride comfort — BC Cycle Tourism Society">
+<meta name="twitter:image" content="https://bccycletourism.ca/img/og/default.png">
+<meta name="description" content="The cycling sections of the Trans Canada Trail in British Columbia, every piece coloured by our ride comfort class or by grade.">
+<meta property="og:description" content="The cycling sections of the Trans Canada Trail in British Columbia, every piece coloured by our ride comfort class or by grade.">
+<meta name="twitter:description" content="The cycling sections of the Trans Canada Trail in British Columbia, every piece coloured by our ride comfort class or by grade.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":["https://www.linkedin.com/company/bc-cycle-tourism-society/","https://tiabc.ca/members/bc-cycle-tourism-society/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bccycletourism.ca/"},{"@type":"ListItem","position":2,"name":"Research and Data","item":"https://bccycletourism.ca/research/"},{"@type":"ListItem","position":3,"name":"Trans Canada Trail in BC","item":"https://bccycletourism.ca/research/trans-canada-trail-comfort/"}]}</script>
+<style>
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* BC-516: overflow-x:clip is insurance for the full-bleed hero bands, which are
+   width:100vw. Chrome subtracts the stable gutter from vw so they fit exactly,
+   but a browser that doesn't support scrollbar-gutter counts the scrollbar in vw
+   and the band ends up ~15px too wide, which drags the page sideways. clip stops
+   that without creating a scroll container, so position:sticky keeps working. */
+html { scrollbar-gutter: stable; overflow-x: clip; }
+/* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
+   --rail   chrome (header + footer), frames the page
+   --w-read the content column and prose cap, used by nearly every page
+   --w-wide the exception: sidebar filters, two-column stop pages */
+:root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+/* Design tokens (BC-506): palette, warm-stone neutral ramp, radius scale.
+   Every page inherits these; page CSS uses var(...), not raw hex literals.
+   The /stops/ sage family is exempt from tokenization this pass. */
+:root {
+  /* brand */
+  --pacific: #0D4070;   /* navy */
+  --river:   #1E7D96;   /* teal: links + ALL primary buttons */
+  --forest:  #2E8A36;
+  --bright:  #6EC040;   /* accent green — accents only, never buttons */
+  --sky:     #B8E0EC;
+  --pine:    #1F514C;   /* heading green */
+  --herodark:#0D2E1E;
+  /* grounds */
+  --paper: #FFFDF9;     /* page ground */
+  --cream: #FFF6E5;     /* warm panels */
+  /* ink + warm stone neutrals (replaces the cool #E5E7EB/#9CA3AF family) */
+  --ink: #1A1A1A;
+  --stone-600: #57534E; --muted: #57534E;
+  --stone-500: #78716C;
+  --stone-400: #A8A29E;
+  --stone-200: #E7E5E4;
+  --sand: #E0D9CC;      /* warm hairline on cream */
+  /* radius scale: s chips/inputs, m cards, l heroes/panels, pill */
+  --r-s: 8px; --r-m: 12px; --r-l: 20px; --r-pill: 999px;
+}
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+/* Base link colour, both states (BC-504) — visited links were browser-purple
+   wherever no rule targeted them.
+   :where() zeroes the specificity so ANY other rule wins, which is what the
+   original version meant but didn't achieve: bare `a:visited` scores 0-1-1 and
+   quietly outranked every single-class component rule (0-1-0). That repainted
+   the homepage's outlined "Plan your trip" CTA teal-on-navy once you'd visited
+   /plan/ — invisible until hover, when .hero-btn-outline:hover (0-2-0) finally
+   won. getComputedStyle reports the unvisited colour for privacy, so this is
+   only ever visible to the eye, in a profile that has actually been there. */
+:where(a) { color: var(--river); }
+:where(a:visited) { color: var(--river); }
+.g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
+.g-banner strong { font-weight: 700; }
+/* position+z-index so open dropdown menus paint above page content that
+   creates its own stacking contexts (hero cards, reveal animations) */
+.g-header { padding: 14px 40px; position: relative; z-index: 500; }
+.g-header-inner { max-width: var(--rail, 1200px); margin: 0 auto; display: flex; align-items: center; gap: 64px; }
+.g-header-left { display: flex; align-items: center; text-decoration: none; }
+.g-header-left img { height: 50px; width: auto; max-width: 100%; }
+.g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
+.g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
+.g-header-nav a:hover { color: var(--river); }
+.g-header-nav a.active { color: var(--river); font-weight: 600; }
+.g-nav-search { display: flex; align-items: center; gap: 6px; }
+.g-nav-search svg { width: 15px; height: 15px; display: block; }
+.g-nav-search .g-nav-search-label { display: inline; }
+/* Header dropdown menus (nav rethink 2026-08) */
+.g-navgroup { position: relative; display: flex; align-items: center; }
+.g-navtop {
+  font-family: inherit; font-size: 14px; font-weight: 500; color: #2C4C3B;
+  background: none; border: none; cursor: pointer; padding: 0;
+  display: flex; align-items: center; gap: 5px; transition: color 0.2s;
+}
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: var(--river); }
+.g-navgroup.activeslot .g-navtop { color: var(--river); font-weight: 600; }
+.g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
+.g-navgroup.open .g-caret { transform: rotate(180deg); }
+.g-navmenu {
+  position: absolute; top: calc(100% + 12px); left: -14px; display: none;
+  background: var(--paper); border: 1px solid #ECE7DD; border-radius: var(--r-m);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
+}
+.g-navgroup.open > .g-navmenu { display: block; }
+/* right-side menus open leftward so they never overflow the viewport */
+.g-navgroup[data-slot="field-notes"] .g-navmenu,
+.g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
+.g-header-nav .g-navmenu a {
+  display: block; padding: 9px 12px; border-radius: var(--r-s);
+  font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
+  white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
+}
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: var(--river); }
+.g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
+.g-header-nav .g-navmenu .gnm-d {
+  display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
+  color: rgba(13,46,30,0.62); margin-top: 1px; line-height: 1.35; text-align: left;
+}
+/* over photos, green reads badly: rest is soft white, hover full white, and
+   the active section carries a small underline instead of a colour */
+.g-header.transparent .g-navtop { color: rgba(255,255,255,0.88); text-shadow: 0 1px 6px rgba(0,0,0,0.55); }
+.g-header.transparent .g-navtop:hover { color: #fff; }
+.g-header.transparent .g-navgroup.activeslot .g-navtop {
+  color: #fff; text-decoration: underline;
+  text-underline-offset: 7px; text-decoration-thickness: 2px;
+}
+/* menu panels are solid cream even under a transparent header: beat the
+   white-link transparent rules at their own specificity */
+.g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: var(--river); }
+.g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent.solid .g-navtop:hover { color: var(--river); }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: var(--river); text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--pine); padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: var(--pine); margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h1 { font-weight: 700; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: var(--pine); margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: var(--stone-600); margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: var(--river); }
+.g-main ul { margin-left: 20px; color: var(--stone-600); margin-bottom: 14px; }
+.g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: var(--stone-400); margin-bottom: 18px; }
+.g-crumb a { color: var(--river); text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: var(--stone-400); }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
+.g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
+.g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
+.g-footer-brand img { height: 32px; width: auto; max-width: 100%; }
+.g-footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.g-footer-col { }
+.g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
+.g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
+.g-footer-col a:hover { color: var(--pacific); }
+.section-divider { border: none; border-top: 1px solid var(--stone-200); margin: 28px 0; }
+.bio { margin-bottom: 20px; }
+.bio strong { color: var(--pine); font-size: 15px; }
+.bio > em { color: var(--stone-600); font-size: 13px; }
+.bio p { font-size: 14px; margin-top: 6px; }
+@media (max-width: 700px) {
+  .g-banner { padding: 6px 14px; font-size: 11px; }
+  .g-header { padding: 12px 16px; position: relative; z-index: 300; }
+  .g-header-inner { gap: 0; }
+  .g-main { padding: 24px 14px 16px; }
+  .g-hamburger { display: block; }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav.open { display: flex; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid var(--stone-200); font-size: 15px; color: var(--pine); }
+  .g-header-nav a:last-child { border-bottom: none; }
+  .g-nav-search svg { display: none; }
+  .g-nav-search .g-nav-search-label { display: inline; }
+  /* dropdown groups become accordion sections inside the hamburger panel */
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid var(--stone-200); }
+  .g-navtop {
+    width: 100%; justify-content: space-between; padding: 12px 0;
+    font-size: 15px; color: var(--pine); text-shadow: none;
+  }
+  .g-navmenu {
+    position: static; box-shadow: none; border: none; background: none;
+    padding: 0 0 10px 14px; min-width: 0; border-radius: 0;
+  }
+  .g-header-nav .g-navmenu a { border-bottom: none; padding: 8px 0; font-size: 14.5px; }
+  .g-footer { padding: 40px 20px 48px; }
+  .g-footer-nav { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+}
+
+/* Section anchors. Every h2 gets a quiet "#" that hands you a link to that
+   section. Grey at rest so it reads as a tool rather than content, teal at the
+   moment you are about to click it. Touch devices have no hover, so it sits
+   faintly visible there instead of being unreachable. */
+.h-anchor { margin-left: .35em; color: var(--stone-500); opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+h2:hover > .h-anchor { opacity: .55; }
+.h-anchor:hover, .h-anchor:focus { color: var(--river); opacity: 1; }
+@media (hover: none) {
+  .h-anchor { opacity: .35; }
+}
+
+/* ---- Eyebrow labels (BC-509). One treatment site-wide: 11px, caps, teal.
+   Teal because it was already the most-used eyebrow colour, which leaves the
+   accent green free to keep meaning "accent" (journey-map steps, accredited
+   marks) instead of competing as a label colour. The historical class names
+   are aliased here rather than rewritten at every call site; genuinely
+   contextual overrides still win on specificity (e.g. the pale-blue on-photo
+   eyebrow on the To and Fro hero). No font-family: eyebrows inherit Inter,
+   which is what all but one of them already did. ---- */
+.eyebrow, .gi-eyebrow, .dir-eyebrow, .ls-notable-eyebrow,
+.listing-section-title, .ls-pills-label, .ls-card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--river); margin-bottom: 6px;
+}
+
+/* ---- Chip geometry (BC-509). Two geometries, not ten. Label chips are read;
+   control chips are tapped, so they get a bigger target. Colour and meaning
+   stay per-family — this only unifies size, padding, and radius. ---- */
+.chip, .lachip, .lichip, .lfacet, .pubchip, .guide-chip-am,
+.listing-pill-yes, .listing-pill-no {
+  font-size: 12.5px; padding: 4px 12px; border-radius: var(--r-pill);
+}
+.dir-chip, .guide-chip, .explore-chip {
+  font-size: 13.5px; padding: 6px 13px; border-radius: var(--r-pill);
+}
+
+/* ---- Warm CTA panel (BC-508). One "warm panel + one action" component that
+   replaces four hand-rolled versions: route detail's "Ready to ride it?", the
+   routes-hub publisher card, Design Your Own Route's signup, and the homepage
+   newsletter block. The action slot is deliberately open — it takes a button
+   link OR a whole form — so the call sites keep their own behaviour and share
+   only the chrome. Emitted by warm_panel() below; the title/body/act selectors
+   are class-on-class so they win against .g-main h2 / .g-main p. ---- */
+.wpanel { background: var(--cream); border: 1px solid var(--sand); border-radius: var(--r-l);
+  padding: 26px 30px; margin: 34px auto 8px; max-width: 900px; }
+.wpanel.narrow { max-width: 700px; }
+.wpanel.center { text-align: center; }
+.wpanel .wp-title { font-family: "Archivo", "Inter", sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--pine); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 6px; }
+.wpanel.lg .wp-title { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+.wpanel .wp-body { color: var(--stone-600); font-size: 15px; line-height: 1.55; margin: 0 0 16px; max-width: 62ch; }
+.wpanel.center .wp-body { margin-left: auto; margin-right: auto; }
+.wpanel .wp-body a { color: var(--river); }
+.wpanel .wp-act { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.wpanel.center .wp-act { align-items: center; }
+.wpanel .wp-act form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.wpanel.center .wp-act form { margin: 0 auto; }
+/* one button and one field treatment inside the panel, whatever the action is */
+.wpanel .wp-act .wp-btn, .wpanel .wp-act button { display: inline-block; background: var(--river);
+  color: #fff; border: none; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: var(--r-m); cursor: pointer; text-align: center;
+  transition: background .2s ease; }
+.wpanel .wp-act .wp-btn:hover, .wpanel .wp-act button:hover { background: var(--pacific); }
+.wpanel .wp-act input:not([type="hidden"]), .wpanel .wp-act textarea { width: 100%;
+  padding: 13px 16px; border: 1.5px solid var(--sand); border-radius: var(--r-m);
+  font-size: 16px; font-family: inherit; background: #fff; transition: border-color .2s; }
+.wpanel .wp-act input:focus, .wpanel .wp-act textarea:focus { border-color: var(--river); outline: none; }
+.wpanel .wp-act textarea { min-height: 76px; resize: vertical; }
+/* secondary action under the primary one (route detail's extra links) */
+.wpanel .wp-alt { font-size: 13.5px; color: var(--river); font-weight: 600; text-decoration: none; }
+.wpanel .wp-alt:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .wpanel { padding: 22px 18px; border-radius: var(--r-m); }
+  .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
+}
+
+/* ---- Photo caption row (BC-516). Credit flush left, place flush right, in one
+   flex row instead of two independently positioned spans — two spans at opposite
+   corners of a photo can't see each other, so on a phone they printed on top of
+   each other. Here they push apart, stay on one line whenever they fit, and wrap
+   only when they must. Emitted by build.cap_row(); each photo family sets its own
+   insets and type, and only the row mechanics live here. ---- */
+.capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+/* Strawpoll embeds: the iframe can't size itself, so the box height is fixed.
+   A five-option poll ends ~440px tall on desktop (measured 2026-09-30); 620px
+   leaves room for a longer question. Phones wrap more, so they keep 836px. */
+@media (max-width: 600px) { .strawpoll-embed { --poll-h: 836px; } }
+</style>
+<link rel="stylesheet" href="/map/lib/maplibre-gl.css">
+<style>
+.cc-wrap{max-width:var(--w-wide, 1160px);margin:0 auto;padding:0 16px 24px}
+.cc-h1{font-family:"Archivo",sans-serif;font-size:32px;font-weight:700;letter-spacing:-0.03em;color:var(--pine);margin:18px 0 6px}
+.cc-sub{color:var(--stone-600);font-size:15px;margin:0 0 14px;max-width:70ch}
+.cc-banner{border:2px solid #b45309;background:#fffbeb;color:#78350f;border-radius:var(--r-m);padding:10px 14px;font-size:14px;font-weight:700;letter-spacing:.02em;margin:0 0 14px}
+.cc-modes{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.cc-mode{font-size:14px;padding:6px 14px;border:1px solid var(--stone-200);border-radius:var(--r-l);cursor:pointer;user-select:none;background:#fff;color:var(--ink)}
+.cc-mode:hover{background:#f5f5f4}
+.cc-mode.on{background:var(--pine);border-color:var(--pine);color:#fff;font-weight:600}
+.cc-blurb{color:var(--stone-600);font-size:14px;margin:0 0 4px;max-width:78ch}
+.cc-stats{font-size:13px;color:var(--stone-500);margin:0 0 10px;font-variant-numeric:tabular-nums}
+.cc-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;align-items:start}
+@media (max-width:900px){.cc-grid{grid-template-columns:minmax(0,1fr)}}
+.cc-mapbox{position:relative;min-width:0}
+#ccmap{width:100%;height:calc(100dvh - 300px);min-height:520px;border-radius:var(--r-m);overflow:hidden;border:1px solid var(--stone-200)}
+@media (max-width:700px){#ccmap{height:60vh;min-height:400px}}
+.cc-loading{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:3;background:#fff;
+  border:1px solid var(--stone-200);border-radius:var(--r-s);padding:8px 14px;font-size:13px;color:#44403c;
+  box-shadow:0 1px 6px rgba(0,0,0,.12);pointer-events:none}
+.cc-jumps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;font-size:13px}
+.cc-jumps span{color:var(--stone-500)}
+.cc-jump{font-size:13px;padding:4px 11px;border:1px solid var(--stone-200);border-radius:var(--r-l);cursor:pointer;background:#fff}
+.cc-jump:hover{background:#f5f5f4}
+.cc-panel{border:1px solid var(--stone-200);border-radius:var(--r-m);padding:12px 14px;background:#fff;font-size:14px;min-width:0;max-height:calc(100dvh - 300px);min-height:520px;overflow:auto}
+@media (max-width:900px){.cc-panel{max-height:none;min-height:0}}
+.cc-panel h2{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--stone-500);margin:0 0 8px;font-weight:600}
+.cc-panel h2.next{margin-top:14px}
+.cc-leg div{display:flex;align-items:center;gap:6px;line-height:1.5;font-size:13px}
+.cc-sw{display:inline-block;width:22px;height:8px;border-radius:3px;flex:none}
+.cc-key{font-size:12px;color:var(--stone-600);margin:6px 0 0}
+.cc-chk{display:block;margin:4px 0;color:var(--stone-600);font-size:13px;cursor:pointer}
+.cc-chk input{margin-right:5px}
+.cc-q{font:inherit;width:100%;box-sizing:border-box;padding:5px 8px;border:1px solid var(--stone-200);border-radius:var(--r-s);margin:0 0 6px}
+.cc-places{max-height:150px;overflow:auto;border:1px solid var(--stone-200);border-radius:var(--r-s);padding:4px;font-size:13px}
+.cc-pl{padding:3px 6px;cursor:pointer;border-radius:4px}.cc-pl:hover,.cc-pl.on{background:#f0efe9}
+.cc-trip{padding:6px 8px;border-radius:6px;cursor:pointer;border:1px solid transparent;margin:2px 0;font-size:13px}
+.cc-trip:hover,.cc-trip.on{background:#f5f5f4;border-color:var(--stone-200)}
+.cc-trip b{font-weight:600}
+.cc-bar{display:flex;height:8px;border-radius:3px;overflow:hidden;margin-top:4px;background:#eee}
+.cc-meta{color:var(--stone-500);font-size:12px}
+.cc-note{font-size:13px;color:var(--stone-600);margin:0 0 6px}
+.cc-prose{max-width:var(--w-read, 720px);margin:26px 0 0}
+.cc-prose h2{font-family:"Archivo",sans-serif;font-size:24px;font-weight:400;color:var(--pine);margin:26px 0 10px}
+.cc-prose p{margin:0 0 12px}
+.cc-prose ul{margin:0 0 12px 22px}
+.cc-prose li{margin:0 0 7px}
+.maplibregl-popup-content{font-size:13px;padding:8px 10px;line-height:1.45;min-width:230px;max-width:320px}
+.cc-pop .cc-bar{height:10px}
+.cc-row{display:flex;justify-content:space-between;gap:10px}
+
+.bc-seg{display:flex;max-width:420px;margin:0 0 10px;border:2px solid var(--pine);border-radius:var(--r-m);overflow:hidden}
+.bc-seg button{flex:1;font:inherit;font-size:15px;font-weight:600;padding:9px 0;border:0;background:#fff;color:var(--pine);cursor:pointer}
+.bc-seg button+button{border-left:2px solid var(--pine)}
+.bc-seg button.on{background:var(--pine);color:#fff}
+.bc-ramp{height:10px;border-radius:3px;background:linear-gradient(90deg,#2c9e6f,#9ccb3b,#f0a202,#e8590c,#8c1c13);margin:4px 0 2px}
+.bc-rt{display:flex;align-items:center;gap:6px;margin:3px 0}
+.bc-rt input{margin:0}
+.bc-rt .name{cursor:pointer;font-weight:600}
+.bc-rt .name:hover{text-decoration:underline}
+.bc-tab{width:100%;border-collapse:collapse;font-size:14px;margin:0 0 12px;font-variant-numeric:tabular-nums}
+.bc-tab th,.bc-tab td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--stone-200)}
+.bc-tab td.n,.bc-tab th.n{text-align:right}
+</style>
+<script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
+</head>
+<body>
+<!--chrome--><div class="g-header">
+  <div class="g-header-inner">
+    <a href="/" class="g-header-left">
+      <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+    </a>
+    <div class="g-header-nav" id="g-nav">
+      <div class="g-navgroup" data-slot="inspired"><button type="button" class="g-navtop" aria-expanded="false">Get Inspired <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/routes/all/"><span class="gnm-l">Browse all routes</span><span class="gnm-d">Every published route in one filterable list</span></a><a href="/routes/"><span class="gnm-l">The highlight reel</span><span class="gnm-d">Ride after ride, region by region</span></a><a href="/trails/"><span class="gnm-l">Named trails</span><span class="gnm-d">Follow the KVR, the Goose, and other classics</span></a><a href="/route-publishers/"><span class="gnm-l">Route makers</span><span class="gnm-d">The people and clubs who publish BC's rides</span></a><a href="/wwc/communities/"><span class="gnm-l">Communities</span><span class="gnm-d">Browse stops town by town</span></a><a href="/routes/how-we-describe/"><span class="gnm-l">How we describe routes</span><span class="gnm-d">What our difficulty and surface labels mean</span></a></div></div><div class="g-navgroup" data-slot="plan"><button type="button" class="g-navtop" aria-expanded="false">Plan Your Trip <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/plan/"><span class="gnm-l">How a trip comes together</span><span class="gnm-d">The whole journey, one page</span></a><a href="/wwc/"><span class="gnm-l">BC Bike Stops directory</span><span class="gnm-d">Places to sleep, eat, and refill that welcome cyclists</span></a><a href="/to-fro/"><span class="gnm-l">To &amp; Fro</span><span class="gnm-d">Ferries, buses, and trains that take your bike</span></a><a href="/add-stops/"><span class="gnm-l">Add Stops to Your Route</span><span class="gnm-d">Upload a GPX, get the stops along your line</span></a><a href="/wwc/guide/"><span class="gnm-l">Stop guides</span><span class="gnm-d">What &ldquo;welcomes cyclists&rdquo; means, category by category</span></a><a href="/be-prepared/"><span class="gnm-l">Be Prepared</span><span class="gnm-d">Cell coverage, wildlife, conditions, and more</span></a><a href="/design-your-own-route/"><span class="gnm-l">Design Your Own Route</span><span class="gnm-d">Tools for building a ride from scratch</span></a><a href="/bike-together/"><span class="gnm-l">Bike Together</span><span class="gnm-d">Tours and group rides you can join</span></a></div></div><div class="g-navgroup" data-slot="field-notes"><button type="button" class="g-navtop" aria-expanded="false">Newsletter <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/field-notes"><span class="gnm-l">Read the latest</span><span class="gnm-d">Trip reports, deep dives, and trail news</span></a><a href="/#newsletter"><span class="gnm-l">Subscribe</span><span class="gnm-d">One email a month with what's new</span></a></div></div><div class="g-navgroup" data-slot="about"><button type="button" class="g-navtop" aria-expanded="false">About <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/about"><span class="gnm-l">About us</span><span class="gnm-d">Who we are and what we're building</span></a><a href="/advocacy/"><span class="gnm-l">Advocacy</span><span class="gnm-d">Safe roads, rail corridors, and getting there with a bike</span></a><a href="/research/"><span class="gnm-l">Research and Data</span><span class="gnm-d">The numbers and methods behind this site</span></a><a href="/with-thanks/"><span class="gnm-l">With thanks</span><span class="gnm-d">The people and organizations behind us</span></a><a href="/#contact"><span class="gnm-l">Say hi! 🙂</span><span class="gnm-d">We'd love to hear from you</span></a></div></div>
+      <a href="/search/" class="g-nav-search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg><span class="g-nav-search-label">Search</span></a>
+    </div>
+    <button class="g-hamburger" id="g-ham" aria-label="Menu">☰</button>
+  </div>
+</div>
+<script>
+(function(){
+  var h=document.getElementById('g-ham'),n=document.getElementById('g-nav');
+  if(!h||!n)return;
+  h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
+  document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
+  var groups=[].slice.call(document.querySelectorAll('.g-navgroup'));
+  function closeAll(except){
+    groups.forEach(function(g){
+      if(g!==except){
+        g.classList.remove('open');
+        var b=g.querySelector('.g-navtop');
+        if(b)b.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  groups.forEach(function(g){
+    var btn=g.querySelector('.g-navtop'),timer=null;
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      closeAll(g);
+      var open=g.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    g.addEventListener('mouseenter',function(){
+      if(window.innerWidth<=700)return;
+      clearTimeout(timer);closeAll(g);g.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    });
+    g.addEventListener('mouseleave',function(){
+      if(window.innerWidth<=700)return;
+      timer=setTimeout(function(){
+        g.classList.remove('open');btn.setAttribute('aria-expanded','false');
+      },250);
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest||!e.target.closest('.g-navgroup'))closeAll(null);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')closeAll(null);
+  });
+})();
+</script><!--/chrome-->
+<main>
+<div class="cc-wrap">
+<nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/research/">Research and Data</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Trans Canada Trail in BC</span></nav>
+<h1 class="cc-h1">The Trans Canada Trail in BC, by ride comfort</h1>
+<p class="cc-sub">Every cycling section of the trail in British Columbia, coloured by our ride comfort class or by grade. Hover a line for the trail it belongs to.</p>
+<div class="cc-banner">THIS IS EXPERIMENTAL WORK. FEEDBACK WELCOME. DO NOT RELY ON IT FOR NAVIGATION OR DECISION MAKING.</div>
+<div class="bc-seg"><button data-m="c" class="on">Colour by ride comfort</button><button data-m="g">Colour by grade</button></div>
+<div class="cc-jumps"><span>Go to:</span><button class="cc-jump" data-r="Victoria">Victoria</button><button class="cc-jump" data-r="Vancouver">Vancouver</button><button class="cc-jump" data-r="Island">Island</button><button class="cc-jump" data-r="Sea to Sky">Sea to Sky</button><button class="cc-jump" data-r="Fraser Valley">Fraser Valley</button><button class="cc-jump" data-r="Coquihalla">Coquihalla</button><button class="cc-jump" data-r="Okanagan">Okanagan</button><button class="cc-jump" data-r="Kootenays">Kootenays</button><button class="cc-jump" data-r="Rockies">Rockies</button><button class="cc-jump" data-r="Northeast">Northeast</button><button class="cc-jump" data-r="All BC">All BC</button></div>
+<div class="cc-grid">
+<div class="cc-mapbox">
+<div id="ccmap"></div>
+<div class="cc-loading" id="cc-loading">Loading the map…</div>
+</div>
+<div class="cc-panel">
+<div id="bc-leg-c"><h2 id="ride-comfort-traffic-and-surface-combined">Ride comfort (traffic and surface combined)<a class="h-anchor" href="#ride-comfort-traffic-and-surface-combined" aria-label="Link to this section">#</a></h2>
+<div class="cc-leg"><div><span class="cc-sw" style="background:#1a9641"></span>CR1</div><div><span class="cc-sw" style="background:#a6d96a"></span>CR2</div><div><span class="cc-sw" style="background:#fdae61"></span>CR3</div><div><span class="cc-sw" style="background:#f16913"></span>CR4</div><div><span class="cc-sw" style="background:#a63603"></span>CR5</div><div><span class="cc-sw" style="background:#67000d"></span>CR6</div><div><span class="cc-sw" style="background:#e7298a"></span>backcountry (bare track)</div><div><span class="cc-sw" style="background:#9aa0a6"></span>not rated</div><div><span class="cc-sw" style="background:#777"></span>not matched to a way</div><div><span class="cc-sw" style="background:#4a6fa5"></span>ferry, dashed (not counted)</div><div><span class="cc-sw" style="background:#b8b4ae"></span>temporarily closed, dashed (not counted)</div><div><span class="cc-sw" style="background:repeating-linear-gradient(90deg,#f16913 0 7px,transparent 7px 10px)"></span>dashed colour: our road link where the trail goes onto the water (not counted)</div></div></div>
+<div id="bc-leg-g" style="display:none"><h2 id="grade-climbing-worse-direction">Grade (climbing, worse direction)<a class="h-anchor" href="#grade-climbing-worse-direction" aria-label="Link to this section">#</a></h2>
+<div class="bc-ramp"></div><div class="cc-row cc-meta"><span>flat</span><span>easy</span><span>moderate</span><span>hard</span><span>brutal</span></div>
+<p class="cc-key">The steady grind plus the steepest short pitch, from the character map. Grey is a bridge, tunnel, ferry, closed section, or unmeasured way.</p></div>
+<label class="cc-chk"><input type="checkbox" id="cc-net">Whole comfort network underneath</label>
+<h2 id="routes" class="next">Routes<a class="h-anchor" href="#routes" aria-label="Link to this section">#</a></h2>
+<p class="cc-note">Tick to show. Click a name to zoom to it and list its trails.</p>
+<div class="cc-trip bc-rt" data-route="S"><input type="checkbox" checked><div style="flex:1"><span class="name">South: Victoria to the Kootenays</span><div class="cc-meta">71 trails · 1,764 km rated, 69 km ferry, 183 km closed · CR1+CR2 55%, CR4 to CR6 5%</div><div class="cc-bar"><span style="width:41.2%;background:#1a9641" title="CR1 41.2%"></span><span style="width:13.9%;background:#a6d96a" title="CR2 13.9%"></span><span style="width:20.4%;background:#fdae61" title="CR3 20.4%"></span><span style="width:1.4%;background:#f16913" title="CR4 1.4%"></span><span style="width:1.7%;background:#a63603" title="CR5 1.7%"></span><span style="width:1.9%;background:#67000d" title="CR6 1.9%"></span><span style="width:16.0%;background:#e7298a" title="backcountry 16.0%"></span><span style="width:3.4%;background:#9aa0a6" title="not rated 3.4%"></span></div></div></div><div class="cc-trip bc-rt" data-route="N"><input type="checkbox" checked><div style="flex:1"><span class="name">North: Alaska Highway and Dawson Creek</span><div class="cc-meta">3 trails · 1,000 km rated · CR1+CR2 5%, CR4 to CR6 92%</div><div class="cc-bar"><span style="width:0.3%;background:#1a9641" title="CR1 0.3%"></span><span style="width:4.3%;background:#a6d96a" title="CR2 4.3%"></span><span style="width:2.7%;background:#fdae61" title="CR3 2.7%"></span><span style="width:0.2%;background:#f16913" title="CR4 0.2%"></span><span style="width:0.1%;background:#a63603" title="CR5 0.1%"></span><span style="width:92.1%;background:#67000d" title="CR6 92.1%"></span><span style="width:0.2%;background:#9aa0a6" title="not rated 0.2%"></span></div></div></div>
+<h2 class="next" id="tc-trails-h" style="display:none">Trails</h2>
+<div id="tc-trails"></div>
+</div>
+</div>
+
+<div class="cc-prose">
+<h2 id="what-youre-looking-at">What you're looking at<a class="h-anchor" href="#what-youre-looking-at" aria-label="Link to this section">#</a></h2>
+<p>Every cycling section of the <a target="_blank" rel="noopener" href="https://tctrail.ca/explore-the-map/">Trans Canada Trail</a> in British Columbia, as the trail's own map draws it, matched to OpenStreetMap and coloured by our ride comfort class, the same traffic-and-surface ladder as the <a href="/research/comfort-between-communities/">comfort between communities</a> map. Switch to grade to see the climbing instead, on the <a href="/research/character-map/">character map</a>'s scale from flat to brutal.</p>
+<p>In BC the trail is two separate pieces. The south runs from Victoria to the Alberta border through the Lower Mainland, the Okanagan, and the Kootenays. The north follows the Alaska Highway from Dawson Creek to the Yukon. Nothing joins them inside the province.</p>
+<h2 id="what-the-shares-say">What the shares say<a class="h-anchor" href="#what-the-shares-say" aria-label="Link to this section">#</a></h2>
+<table class="bc-tab"><thead><tr><th>Trail in BC</th><th class="n">km rated</th><th class="n">CR1 + CR2</th><th class="n">CR4 to CR6</th></tr></thead><tbody><tr><td>South: Victoria to the Kootenays</td><td class="n">1,764</td><td class="n">55%</td><td class="n">5%</td></tr><tr><td>North: Alaska Highway and Dawson Creek</td><td class="n">1,000</td><td class="n">5%</td><td class="n">92%</td></tr></tbody></table>
+<p>The south is mostly rail trail and greenway, and it shows. The north is the Alaska Highway shoulder, and almost all of it is CR6, an undivided highway. Click a route to list its trails, longest first.</p>
+<h2 id="the-limits">The limits<a class="h-anchor" href="#the-limits" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Nobody has ridden these sections to check the classes. They are computed from OpenStreetMap, and the <a href="/research/character-map/">character map</a> page explains their limits.</li>
+<li>We used the trail's cycling sections as published on tctrail.ca on 18 July 2026. Sections it marked Temporarily Closed are drawn grey and dashed and are not counted. That includes the Kettle Valley Rail Trail between Princeton and the Coldwater River, which the Province decided in February 2026 to decommission permanently.</li>
+<li>Between Nelson and Balfour the official trail is a paddling route on the West Arm of Kootenay Lake. We drew the North Shore road ride to the Balfour ferry as a dashed line so the trail connects. It is ours, not the trail's, and it is not counted.</li>
+<li>Ferries are drawn blue and dashed and are not counted.</li>
+<li>Matching a track to the map occasionally snaps a stretch onto a parallel road. The popup names the OpenStreetMap way so a miss can be spotted. Where a section is mapped as a footpath we matched it on foot, and it shows as not rated.</li>
+<li>In the grade view, bridges and tunnels are grey because our elevation data has no deck height there.</li>
+</ul>
+<p>If a stretch you know well looks wrong, we would genuinely like to hear about it: <a href="mailto:heather@bccycletourism.ca">heather@bccycletourism.ca</a>.</p>
+<h2 id="methods-and-licence">Methods and licence<a class="h-anchor" href="#methods-and-licence" aria-label="Link to this section">#</a></h2>
+<p>The traffic comfort classes and the grade scale are the character map's, and its methodology report, <a href="/research/files/character_map_methodology.pdf" onclick="if (window.fathom) fathom.trackEvent('research_download_character_methodology')">How we read the terrain</a> (PDF), explains them. Ride comfort lifts a piece to CR3 where OpenStreetMap says the surface is chunky and CR4 where it is rugged, the same rule as the comfort between communities map. On this page backcountry is drawn magenta rather than the character map's purple, because purple and CR6 are hard to tell apart on a thin line.</p>
+<p>Trail sections are from the <a target="_blank" rel="noopener" href="https://tctrail.ca/explore-the-map/">Trans Canada Trail</a>'s public map. This page is our analysis of them. This map contains information from OpenStreetMap, © <a target="_blank" rel="noopener" href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a target="_blank" rel="noopener" href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database Licence</a>. Basemap cartography © <a target="_blank" rel="noopener" href="https://www.openmaptiles.org/">OpenMapTiles</a>.</p>
+</div>
+
+</div>
+</main>
+<!--chrome--><div class="g-footer">
+  <a class="g-footer-brand" href="/">
+    <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+  </a>
+  <div class="g-footer-nav">
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get Inspired</div>
+      <a href="/routes/all/">Browse all routes</a>
+      <a href="/routes/">The highlight reel</a>
+      <a href="/trails/">Named trails</a>
+      <a href="/route-publishers/">Route makers</a>
+      <a href="/wwc/communities/">Communities</a>
+      <a href="/routes/how-we-describe/">How we describe routes</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Plan Your Trip</div>
+      <a href="/plan/">How a trip comes together</a>
+      <a href="/wwc/">BC Bike Stops directory</a>
+      <a href="/to-fro/">To &amp; Fro</a>
+      <a href="/add-stops/">Add Stops to Your Route</a>
+      <a href="/wwc/guide/">Stop guides</a>
+      <a href="/be-prepared/">Be Prepared</a>
+      <a href="/design-your-own-route/">Design Your Own Route</a>
+      <a href="/bike-together/">Bike Together</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Newsletter</div>
+      <a href="/field-notes">Read the latest</a>
+      <a href="/#newsletter">Subscribe</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get involved</div>
+      <a href="/suggest/">Suggest a stop</a>
+      <a href="/apply/">Apply for accreditation</a>
+      <a href="/support/trail-organizations/">Support the trail organizations</a>
+      <a href="/#contact">Say hi! 🙂</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">About</div>
+      <a href="/about">About us</a>
+      <a href="/advocacy/">Advocacy</a>
+      <a href="/research/">Research and Data</a>
+      <a href="/with-thanks/">With thanks</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/land-acknowledgement">Land acknowledgement</a>
+    </div>
+  </div>
+</div><!--/chrome-->
+<script src="/map/lib/maplibre-gl.js"></script>
+<script src="/map/lib/pmtiles.js"></script>
+<script>
+(function(){
+var D={"generated":"2026-10-20 18:23","exported":"2026-10-20","tiles":"https://bcbb-assets.bccycletourism.workers.dev/tiles/comfort_tct/comfort_tct.pmtiles","routes":["S","N"],"totals":{"S":{"label":"South: Victoria to the Kootenays","rated_km":1764,"ferry_km":69,"closed_km":183,"trails":71,"pct":{"MOST":41.2,"SOME":13.9,"FEW":20.4,"VERY FEW":1.4,"EXPERIENCED ONLY":1.7,"RISK":1.9,"BACKCOUNTRY":16.0,"UNCLASSIFIED":3.4},"c12":55,"c46":5},"N":{"label":"North: Alaska Highway and Dawson Creek","rated_km":1000,"ferry_km":0,"closed_km":0,"trails":3,"pct":{"MOST":0.3,"SOME":4.3,"FEW":2.7,"VERY FEW":0.2,"EXPERIENCED ONLY":0.1,"RISK":92.1,"UNCLASSIFIED":0.2},"c12":5,"c46":92}},"trips":{"N|AB border to Dawson Creek":{"name":"AB border to Dawson Creek","route":"N","km":62.9,"ferry_km":0.0,"closed_km":0.0,"rated_km":62.9,"pct":{"SOME":13.2,"FEW":26.7,"RISK":60.2},"score":4.673,"bbox":[-120.147009,55.744731,-120.001424,56.188255]},"S|Abbotsford Discovery Trail":{"name":"Abbotsford Discovery Trail","route":"S","km":62.9,"ferry_km":0.0,"closed_km":0.0,"rated_km":62.9,"pct":{"MOST":42.3,"SOME":9.3,"FEW":37.9,"EXPERIENCED ONLY":1.5,"BACKCOUNTRY":7.0,"UNCLASSIFIED":2.0},"score":2.074,"bbox":[-122.46113,49.051722,-122.077247,49.147071]},"N|Alaska Highway - British Columbia":{"name":"Alaska Highway - British Columbia","route":"N","km":923.3,"ferry_km":0.0,"closed_km":0.0,"rated_km":923.3,"pct":{"SOME":3.5,"FEW":1.1,"VERY FEW":0.2,"EXPERIENCED ONLY":0.1,"RISK":95.0,"UNCLASSIFIED":0.0},"score":5.821,"bbox":[-128.560579,55.781097,-120.276724,60.009566]},"S|Capilano River Regional Park":{"name":"Capilano River Regional Park","route":"S","km":2.7,"ferry_km":0.0,"closed_km":0.0,"rated_km":2.7,"pct":{"MOST":22.1,"SOME":12.9,"UNCLASSIFIED":64.9},"score":1.369,"bbox":[-123.117984,49.351768,-123.107743,49.360511]},"S|Castlegar to Nelson":{"name":"Castlegar to Nelson","route":"S","km":51.0,"ferry_km":0.0,"closed_km":8.2,"rated_km":51.0,"pct":{"MOST":1.3,"SOME":18.5,"FEW":20.7,"EXPERIENCED ONLY":1.3,"RISK":0.5,"BACKCOUNTRY":9.1,"UNCLASSIFIED":48.7},"score":2.668,"bbox":[-117.670673,49.316011,-117.25867,49.492795]},"S|Chief Isadore Trail":{"name":"Chief Isadore Trail","route":"S","km":43.3,"ferry_km":0.0,"closed_km":0.0,"rated_km":43.3,"pct":{"MOST":88.5,"SOME":1.0,"FEW":3.7,"BACKCOUNTRY":6.6,"UNCLASSIFIED":0.1},"score":1.218,"bbox":[-115.737033,49.417801,-115.421866,49.561864]},"S|Chilliwack River Valley Trail":{"name":"Chilliwack River Valley Trail","route":"S","km":5.9,"ferry_km":0.0,"closed_km":0.0,"rated_km":5.9,"pct":{"MOST":76.0,"BACKCOUNTRY":24.0},"score":1.48,"bbox":[-121.838958,49.067796,-121.789325,49.077339]},"S|Chilliwack-Hope Alternate Cycling route Connector":{"name":"Chilliwack-Hope Alternate Cycling route Connector","route":"S","km":18.6,"ferry_km":0.0,"closed_km":49.5,"rated_km":18.6,"pct":{"MOST":24.6,"SOME":42.2,"FEW":27.6,"VERY FEW":2.1,"UNCLASSIFIED":3.5},"score":2.076,"bbox":[-121.967733,49.097878,-121.442904,49.39273]},"S|City of Burnaby":{"name":"City of Burnaby","route":"S","km":12.9,"ferry_km":0.0,"closed_km":0.0,"rated_km":12.9,"pct":{"MOST":44.8,"SOME":3.8,"FEW":41.7,"VERY FEW":4.3,"EXPERIENCED ONLY":0.1,"RISK":3.5,"UNCLASSIFIED":1.8},"score":2.203,"bbox":[-123.024054,49.278742,-122.892333,49.292705]},"S|City of Cranbrook":{"name":"City of Cranbrook","route":"S","km":11.1,"ferry_km":0.0,"closed_km":0.0,"rated_km":11.1,"pct":{"MOST":84.3,"SOME":10.0,"FEW":3.6,"VERY FEW":2.1,"EXPERIENCED ONLY":0.1},"score":1.237,"bbox":[-115.761939,49.499928,-115.732755,49.548051]},"N|City of Dawson Creek":{"name":"City of Dawson Creek","route":"N","km":13.5,"ferry_km":0.0,"closed_km":0.0,"rated_km":13.5,"pct":{"MOST":25.4,"SOME":12.9,"FEW":5.4,"VERY FEW":0.8,"RISK":42.8,"UNCLASSIFIED":12.7},"score":3.748,"bbox":[-120.276724,55.737647,-120.146775,55.781097]},"S|City of Fernie":{"name":"City of Fernie","route":"S","km":4.2,"ferry_km":0.0,"closed_km":0.0,"rated_km":4.2,"pct":{"MOST":50.2,"SOME":25.0,"FEW":22.2,"UNCLASSIFIED":2.6},"score":1.713,"bbox":[-115.072201,49.501593,-115.050977,49.516985]},"S|City of Grand Forks":{"name":"City of Grand Forks","route":"S","km":5.6,"ferry_km":0.0,"closed_km":1.2,"rated_km":5.6,"pct":{"MOST":23.6,"SOME":33.3,"FEW":25.4,"BACKCOUNTRY":17.6},"score":2.194,"bbox":[-118.472429,49.023507,-118.423268,49.036562]},"S|City of Kimberley":{"name":"City of Kimberley","route":"S","km":23.7,"ferry_km":0.0,"closed_km":0.0,"rated_km":23.7,"pct":{"MOST":27.3,"SOME":14.7,"FEW":4.0,"VERY FEW":1.5,"BACKCOUNTRY":47.6,"UNCLASSIFIED":4.9},"score":2.287,"bbox":[-116.068712,49.635154,-115.946142,49.686299]},"S|City of Langford":{"name":"City of Langford","route":"S","km":4.7,"ferry_km":0.0,"closed_km":0.0,"rated_km":4.7,"pct":{"MOST":65.9,"SOME":1.7,"FEW":30.9,"VERY FEW":0.3,"UNCLASSIFIED":1.1},"score":1.651,"bbox":[-123.554143,48.438184,-123.504604,48.447992]},"S|City of Maple Ridge and Pitt Meadows Connector":{"name":"City of Maple Ridge and Pitt Meadows Connector","route":"S","km":3.6,"ferry_km":0.0,"closed_km":0.0,"rated_km":3.6,"pct":{"MOST":60.0,"SOME":7.6,"FEW":16.9,"VERY FEW":7.7,"EXPERIENCED ONLY":0.8,"UNCLASSIFIED":7.0},"score":1.726,"bbox":[-122.685751,49.19475,-122.665335,49.208411]},"S|City of Nanaimo":{"name":"City of Nanaimo","route":"S","km":12.6,"ferry_km":0.0,"closed_km":0.0,"rated_km":12.6,"pct":{"MOST":67.6,"SOME":8.6,"FEW":1.1,"VERY FEW":7.8,"BACKCOUNTRY":0.3,"UNCLASSIFIED":14.6},"score":1.408,"bbox":[-123.968994,49.133322,-123.940999,49.193645]},"S|City of Nelson":{"name":"City of Nelson","route":"S","km":4.8,"ferry_km":0.0,"closed_km":0.0,"rated_km":4.8,"pct":{"MOST":28.9,"SOME":43.2,"FEW":7.4,"VERY FEW":13.5,"UNCLASSIFIED":7.0},"score":2.058,"bbox":[-117.295301,49.488488,-117.279003,49.508673]},"S|City of North Vancouver":{"name":"City of North Vancouver","route":"S","km":3.1,"ferry_km":0.0,"closed_km":0.0,"rated_km":3.1,"pct":{"MOST":58.8,"SOME":5.1,"FEW":8.8,"VERY FEW":2.3,"EXPERIENCED ONLY":0.9,"BACKCOUNTRY":4.4,"UNCLASSIFIED":19.6},"score":1.524,"bbox":[-123.094632,49.309338,-123.083154,49.330732]},"S|City of Penticton":{"name":"City of Penticton","route":"S","km":11.6,"ferry_km":0.0,"closed_km":0.0,"rated_km":11.6,"pct":{"MOST":88.1,"SOME":5.8,"FEW":3.9,"UNCLASSIFIED":2.2},"score":1.139,"bbox":[-119.616588,49.495336,-119.561684,49.555705]},"S|City of Trail":{"name":"City of Trail","route":"S","km":3.5,"ferry_km":0.0,"closed_km":0.0,"rated_km":3.5,"pct":{"MOST":18.0,"SOME":28.6,"FEW":30.4,"VERY FEW":1.4,"EXPERIENCED ONLY":4.4,"RISK":8.4,"UNCLASSIFIED":8.7},"score":2.679,"bbox":[-117.714303,49.093495,-117.70079,49.112846]},"S|City of Vancouver":{"name":"City of Vancouver","route":"S","km":30.7,"ferry_km":0.0,"closed_km":0.0,"rated_km":30.7,"pct":{"MOST":80.4,"SOME":5.4,"FEW":2.7,"VERY FEW":0.2,"UNCLASSIFIED":11.3},"score":1.129,"bbox":[-123.158739,49.267127,-123.024054,49.314051]},"S|City of Victoria":{"name":"City of Victoria","route":"S","km":4.9,"ferry_km":0.0,"closed_km":0.0,"rated_km":4.9,"pct":{"MOST":75.0,"SOME":0.3,"FEW":24.7},"score":1.497,"bbox":[-123.385943,48.404608,-123.349626,48.42858]},"S|Columbia and Western Rail (CWR) - Cascade to Fife":{"name":"Columbia and Western Rail (CWR) - Cascade to Fife","route":"S","km":9.1,"ferry_km":0.0,"closed_km":0.0,"rated_km":9.1,"pct":{"MOST":2.8,"BACKCOUNTRY":97.2},"score":2.944,"bbox":[-118.223064,49.012711,-118.190492,49.063218]},"S|Columbia and Western Rail (CWR) - City of Grand Forks to Cascade":{"name":"Columbia and Western Rail (CWR) - City of Grand Forks to Cascade","route":"S","km":16.3,"ferry_km":0.0,"closed_km":0.0,"rated_km":16.3,"pct":{"MOST":4.1,"SOME":0.1,"BACKCOUNTRY":95.8},"score":2.917,"bbox":[-118.423268,49.003849,-118.223064,49.028258]},"S|Columbia and Western Rail (CWR) - Eholt to City of Grand Forks":{"name":"Columbia and Western Rail (CWR) - Eholt to City of Grand Forks","route":"S","km":21.5,"ferry_km":0.0,"closed_km":0.0,"rated_km":21.5,"pct":{"MOST":1.3,"SOME":2.4,"BACKCOUNTRY":96.3},"score":2.951,"bbox":[-118.543434,49.036456,-118.464896,49.158728]},"S|Columbia and Western Rail (CWR) - Fife to Castlegar":{"name":"Columbia and Western Rail (CWR) - Fife to Castlegar","route":"S","km":83.3,"ferry_km":0.0,"closed_km":0.0,"rated_km":83.3,"pct":{"MOST":1.1,"SOME":1.3,"FEW":65.6,"BACKCOUNTRY":30.7,"UNCLASSIFIED":1.2},"score":2.964,"bbox":[-118.216069,49.063218,-117.665327,49.393153]},"S|Columbia and Western Rail (CWR) - Midway to Eholt":{"name":"Columbia and Western Rail (CWR) - Midway to Eholt","route":"S","km":28.9,"ferry_km":0.0,"closed_km":0.0,"rated_km":28.9,"pct":{"MOST":96.6,"SOME":1.6,"BACKCOUNTRY":1.8},"score":1.053,"bbox":[-118.785899,49.00527,-118.543434,49.156621]},"S|Columbia River Trail":{"name":"Columbia River Trail","route":"S","km":33.0,"ferry_km":0.0,"closed_km":0.0,"rated_km":33.0,"pct":{"MOST":0.9,"SOME":19.8,"FEW":5.6,"VERY FEW":5.1,"BACKCOUNTRY":61.8,"UNCLASSIFIED":6.9},"score":2.824,"bbox":[-117.734236,49.112846,-117.628215,49.316011]},"S|Coquihalla Summit Recreation Area":{"name":"Coquihalla Summit Recreation Area","route":"S","km":11.8,"ferry_km":0.0,"closed_km":0.0,"rated_km":11.8,"pct":{"MOST":98.6,"BACKCOUNTRY":1.4},"score":1.027,"bbox":[-121.107868,49.557196,-121.011288,49.630577]},"S|Cowichan Valley Trail":{"name":"Cowichan Valley Trail","route":"S","km":127.8,"ferry_km":0.0,"closed_km":0.0,"rated_km":127.8,"pct":{"MOST":81.4,"SOME":6.6,"FEW":7.8,"VERY FEW":0.5,"EXPERIENCED ONLY":2.9,"RISK":0.0,"BACKCOUNTRY":0.3,"UNCLASSIFIED":0.4},"score":1.363,"bbox":[-124.056796,48.53605,-123.57734,49.029079]},"S|Cranbrook Community Forest":{"name":"Cranbrook Community Forest","route":"S","km":8.0,"ferry_km":0.0,"closed_km":0.0,"rated_km":8.0,"pct":{"MOST":17.3,"SOME":21.6,"BACKCOUNTRY":61.1},"score":2.437,"bbox":[-115.737033,49.500044,-115.717723,49.54423]},"S|Crawford Bay Trail":{"name":"Crawford Bay Trail","route":"S","km":0.4,"ferry_km":0.0,"closed_km":0.0,"rated_km":0.4,"pct":{"SOME":80.9,"EXPERIENCED ONLY":19.1},"score":2.573,"bbox":[-116.806556,49.645886,-116.796597,49.662695]},"S|Derby Reach Regional Park":{"name":"Derby Reach Regional Park","route":"S","km":5.5,"ferry_km":0.0,"closed_km":0.0,"rated_km":5.5,"pct":{"MOST":87.9,"UNCLASSIFIED":12.1},"score":1.0,"bbox":[-122.644336,49.191702,-122.591704,49.208412]},"S|District of North Vancouver":{"name":"District of North Vancouver","route":"S","km":3.3,"ferry_km":0.0,"closed_km":0.0,"rated_km":3.3,"pct":{"MOST":22.0,"SOME":26.6,"FEW":42.5,"VERY FEW":8.9},"score":2.382,"bbox":[-123.114224,49.330732,-123.091592,49.351768]},"S|District of West Vancouver":{"name":"District of West Vancouver","route":"S","km":22.4,"ferry_km":0.0,"closed_km":0.0,"rated_km":22.4,"pct":{"MOST":12.2,"SOME":34.1,"FEW":42.1,"VERY FEW":5.8,"RISK":1.6,"BACKCOUNTRY":1.0,"UNCLASSIFIED":3.2},"score":2.507,"bbox":[-123.278399,49.334455,-123.117984,49.376322]},"S|Elk Valley Trail":{"name":"Elk Valley Trail","route":"S","km":197.2,"ferry_km":0.0,"closed_km":0.0,"rated_km":197.2,"pct":{"MOST":33.2,"SOME":47.0,"FEW":5.6,"VERY FEW":0.1,"EXPERIENCED ONLY":0.7,"RISK":1.9,"BACKCOUNTRY":11.2,"UNCLASSIFIED":0.3},"score":1.934,"bbox":[-115.107115,49.293487,-114.869637,50.585234]},"S|Galloping Goose Regional Trail":{"name":"Galloping Goose Regional Trail","route":"S","km":16.2,"ferry_km":0.0,"closed_km":0.0,"rated_km":16.2,"pct":{"MOST":96.0,"SOME":0.7,"FEW":1.9,"UNCLASSIFIED":1.4},"score":1.045,"bbox":[-123.504604,48.428275,-123.370847,48.465439]},"S|Gray Creek Pass Connector":{"name":"Gray Creek Pass Connector","route":"S","km":79.3,"ferry_km":0.0,"closed_km":0.0,"rated_km":79.3,"pct":{"SOME":0.0,"FEW":95.3,"EXPERIENCED ONLY":3.3,"BACKCOUNTRY":1.4},"score":3.066,"bbox":[-116.797031,49.573905,-116.067682,49.672094]},"S|Great Northern Rail Trail - British Columbia":{"name":"Great Northern Rail Trail - British Columbia","route":"S","km":43.2,"ferry_km":0.0,"closed_km":0.0,"rated_km":43.2,"pct":{"MOST":96.9,"RISK":0.4,"BACKCOUNTRY":2.3,"UNCLASSIFIED":0.4},"score":1.064,"bbox":[-117.283093,49.197087,-117.203937,49.488488]},"S|Hope Trails":{"name":"Hope Trails","route":"S","km":9.1,"ferry_km":0.0,"closed_km":5.6,"rated_km":9.1,"pct":{"MOST":10.1,"SOME":19.3,"FEW":35.5,"VERY FEW":24.1,"BACKCOUNTRY":10.7,"UNCLASSIFIED":0.3},"score":2.846,"bbox":[-121.473063,49.353682,-121.357861,49.384675]},"S|Kettle Valley Rail (KVR) - Boston Bar to Coquihalla Summit":{"name":"Kettle Valley Rail (KVR) - Boston Bar to Coquihalla Summit","route":"S","km":12.7,"ferry_km":0.0,"closed_km":2.0,"rated_km":12.7,"pct":{"MOST":100.0},"score":1.0,"bbox":[-121.215287,49.489714,-121.107868,49.557196]},"S|Kettle Valley Rail (KVR) - Chute Lake to Myra Bellevue Provincial Park":{"name":"Kettle Valley Rail (KVR) - Chute Lake to Myra Bellevue Provincial Park","route":"S","km":16.2,"ferry_km":0.0,"closed_km":0.0,"rated_km":16.2,"pct":{"MOST":66.2,"SOME":0.1,"FEW":1.8,"VERY FEW":31.9},"score":1.994,"bbox":[-119.535773,49.688466,-119.41703,49.760935]},"S|Kettle Valley Rail (KVR) - Coquihalla Summit to Coldwater River":{"name":"Kettle Valley Rail (KVR) - Coquihalla Summit to Coldwater River","route":"S","km":0.2,"ferry_km":0.0,"closed_km":11.9,"rated_km":0.2,"pct":{"MOST":96.3,"BACKCOUNTRY":3.7},"score":1.074,"bbox":[-121.016174,49.630577,-121.000459,49.727146]},"S|Kettle Valley Rail (KVR) - McCulloch Recreation Site to Midway":{"name":"Kettle Valley Rail (KVR) - McCulloch Recreation Site to Midway","route":"S","km":119.6,"ferry_km":0.0,"closed_km":2.8,"rated_km":119.6,"pct":{"MOST":32.8,"SOME":14.9,"FEW":33.8,"BACKCOUNTRY":18.4},"score":2.194,"bbox":[-119.179746,49.011741,-118.785899,49.767643]},"S|Kettle Valley Rail (KVR) - Myra Bellevue Provincial Park to McCulloch Rec":{"name":"Kettle Valley Rail (KVR) - Myra Bellevue Provincial Park to McCulloch Rec","route":"S","km":15.0,"ferry_km":0.0,"closed_km":0.0,"rated_km":15.0,"pct":{"MOST":3.4,"FEW":16.5,"BACKCOUNTRY":80.2},"score":2.933,"bbox":[-119.311877,49.767643,-119.152927,49.810509]},"S|Kettle Valley Rail (KVR) - Penticton to Chute Lake":{"name":"Kettle Valley Rail (KVR) - Penticton to Chute Lake","route":"S","km":34.0,"ferry_km":0.0,"closed_km":0.0,"rated_km":34.0,"pct":{"MOST":28.2,"SOME":0.0,"FEW":71.5,"UNCLASSIFIED":0.3},"score":2.433,"bbox":[-119.605973,49.555705,-119.535773,49.688466]},"S|Kettle Valley Rail (KVR) - Princeton to Summerland":{"name":"Kettle Valley Rail (KVR) - Princeton to Summerland","route":"S","km":94.4,"ferry_km":0.0,"closed_km":0.0,"rated_km":94.4,"pct":{"MOST":0.2,"SOME":0.5,"FEW":25.3,"BACKCOUNTRY":74.0},"score":2.991,"bbox":[-120.497939,49.469928,-119.691602,49.722747]},"S|Kettle Valley Rail (KVR) - Summerland to Penticton":{"name":"Kettle Valley Rail (KVR) - Summerland to Penticton","route":"S","km":17.2,"ferry_km":0.0,"closed_km":0.0,"rated_km":17.2,"pct":{"SOME":7.1,"FEW":35.8,"VERY FEW":6.4,"RISK":50.8},"score":4.517,"bbox":[-119.691602,49.495588,-119.615767,49.585786]},"S|Kootenay Bay Ferry to Kimberley Connector":{"name":"Kootenay Bay Ferry to Kimberley Connector","route":"S","km":7.9,"ferry_km":0.0,"closed_km":0.0,"rated_km":7.9,"pct":{"EXPERIENCED ONLY":97.7,"RISK":2.3},"score":5.023,"bbox":[-116.872766,49.662128,-116.806556,49.686519]},"S|Myra Bellevue Provincial Park":{"name":"Myra Bellevue Provincial Park","route":"S","km":20.6,"ferry_km":0.0,"closed_km":0.0,"rated_km":20.6,"pct":{"MOST":57.6,"FEW":40.4,"UNCLASSIFIED":2.0},"score":1.825,"bbox":[-119.417277,49.741191,-119.303498,49.803863]},"S|Nanaimo River Interim Bypass Connector":{"name":"Nanaimo River Interim Bypass Connector","route":"S","km":21.5,"ferry_km":0.0,"closed_km":0.0,"rated_km":21.5,"pct":{"MOST":2.7,"SOME":21.5,"FEW":1.6,"VERY FEW":8.0,"EXPERIENCED ONLY":48.8,"RISK":16.3,"BACKCOUNTRY":1.2},"score":4.277,"bbox":[-123.970434,49.053675,-123.876895,49.078233]},"S|North Star Rails to Trails":{"name":"North Star Rails to Trails","route":"S","km":25.1,"ferry_km":0.0,"closed_km":0.0,"rated_km":25.1,"pct":{"MOST":98.5,"EXPERIENCED ONLY":0.1,"UNCLASSIFIED":1.4},"score":1.004,"bbox":[-115.976952,49.548051,-115.756268,49.675466]},"S|Pitt River Regional Greenway":{"name":"Pitt River Regional Greenway","route":"S","km":9.3,"ferry_km":0.0,"closed_km":0.0,"rated_km":9.3,"pct":{"MOST":94.1,"SOME":5.2,"BACKCOUNTRY":0.7,"UNCLASSIFIED":0.0},"score":1.065,"bbox":[-122.761433,49.202286,-122.685751,49.24691]},"S|Regional District of Nanaimo - North":{"name":"Regional District of Nanaimo - North","route":"S","km":9.7,"ferry_km":0.0,"closed_km":0.0,"rated_km":9.7,"pct":{"MOST":63.4,"SOME":10.7,"FEW":3.4,"BACKCOUNTRY":22.6},"score":1.626,"bbox":[-123.973257,49.074857,-123.951135,49.133322]},"S|Regional District of Nanaimo - South":{"name":"Regional District of Nanaimo - South","route":"S","km":10.8,"ferry_km":0.0,"closed_km":0.0,"rated_km":10.8,"pct":{"MOST":65.0,"SOME":9.8,"FEW":3.9,"BACKCOUNTRY":21.1,"UNCLASSIFIED":0.2},"score":1.599,"bbox":[-123.965792,49.029079,-123.88557,49.059319]},"S|Ridge Meadows Trail":{"name":"Ridge Meadows Trail","route":"S","km":21.4,"ferry_km":0.0,"closed_km":0.0,"rated_km":21.4,"pct":{"MOST":57.0,"SOME":7.3,"FEW":18.9,"VERY FEW":0.1,"EXPERIENCED ONLY":0.0,"BACKCOUNTRY":0.4,"UNCLASSIFIED":16.3},"score":1.554,"bbox":[-122.725611,49.191351,-122.55695,49.267649]},"S|Sea to Sky Trail":{"name":"Sea to Sky Trail","route":"S","km":104.4,"ferry_km":0.0,"closed_km":0.0,"rated_km":104.4,"pct":{"MOST":31.5,"SOME":14.2,"FEW":9.4,"VERY FEW":5.2,"RISK":14.5,"BACKCOUNTRY":20.1,"UNCLASSIFIED":5.1},"score":2.699,"bbox":[-123.18128,49.683526,-122.798964,50.31503]},"S|Slocan Valley Connector":{"name":"Slocan Valley Connector","route":"S","km":4.4,"ferry_km":0.0,"closed_km":0.0,"rated_km":4.4,"pct":{"FEW":51.3,"EXPERIENCED ONLY":10.0,"RISK":2.6,"BACKCOUNTRY":36.0},"score":3.279,"bbox":[-117.524831,49.454987,-117.472351,49.461073]},"S|Slocan Valley Rail Trail":{"name":"Slocan Valley Rail Trail","route":"S","km":50.0,"ferry_km":0.0,"closed_km":0.0,"rated_km":50.0,"pct":{"MOST":99.6,"FEW":0.0,"RISK":0.2,"UNCLASSIFIED":0.2},"score":1.009,"bbox":[-117.653143,49.442374,-117.46635,49.769107]},"S|Sooke Hills Wilderness Regional Trail":{"name":"Sooke Hills Wilderness Regional Trail","route":"S","km":14.1,"ferry_km":0.0,"closed_km":0.0,"rated_km":14.1,"pct":{"MOST":36.4,"SOME":55.3,"UNCLASSIFIED":8.3},"score":1.603,"bbox":[-123.582526,48.447992,-123.554143,48.53605]},"S|The Looking Glass":{"name":"The Looking Glass","route":"S","km":1.1,"ferry_km":0.0,"closed_km":0.0,"rated_km":1.1,"pct":{"SOME":8.0,"BACKCOUNTRY":2.0,"UNCLASSIFIED":90.1},"score":2.198,"bbox":[-123.137713,49.758821,-123.13288,49.766018]},"S|Town of Princeton":{"name":"Town of Princeton","route":"S","km":5.0,"ferry_km":0.0,"closed_km":0.0,"rated_km":5.0,"pct":{"MOST":54.8,"FEW":19.7,"EXPERIENCED ONLY":2.2,"RISK":3.5,"BACKCOUNTRY":13.6,"UNCLASSIFIED":6.1},"score":1.989,"bbox":[-120.528021,49.448566,-120.486171,49.469928]},"S|Township of Langley":{"name":"Township of Langley","route":"S","km":18.2,"ferry_km":0.0,"closed_km":0.0,"rated_km":18.2,"pct":{"MOST":37.9,"SOME":21.5,"FEW":19.4,"VERY FEW":9.0,"EXPERIENCED ONLY":5.6,"BACKCOUNTRY":5.8,"UNCLASSIFIED":0.8},"score":2.223,"bbox":[-122.666142,49.147071,-122.46113,49.205132]},"S|Tri-Cities":{"name":"Tri-Cities","route":"S","km":30.5,"ferry_km":0.0,"closed_km":0.0,"rated_km":30.5,"pct":{"MOST":82.3,"SOME":5.5,"FEW":4.8,"VERY FEW":0.6,"EXPERIENCED ONLY":0.4,"BACKCOUNTRY":2.1,"UNCLASSIFIED":4.3},"score":1.235,"bbox":[-122.892333,49.245867,-122.710576,49.293149]},"S|Tynehead Regional Park":{"name":"Tynehead Regional Park","route":"S","km":1.6,"ferry_km":0.0,"closed_km":0.0,"rated_km":1.6,"pct":{"MOST":99.9,"UNCLASSIFIED":0.1},"score":1.0,"bbox":[-122.756409,49.17678,-122.735043,49.17816]},"S|Vedder North Dyke Trail":{"name":"Vedder North Dyke Trail","route":"S","km":10.1,"ferry_km":0.0,"closed_km":0.0,"rated_km":10.1,"pct":{"MOST":82.4,"SOME":0.3,"UNCLASSIFIED":17.3},"score":1.003,"bbox":[-122.077247,49.088848,-121.963248,49.103551]},"S|Wardner to Elko Connector":{"name":"Wardner to Elko Connector","route":"S","km":51.8,"ferry_km":0.0,"closed_km":0.0,"rated_km":51.8,"pct":{"MOST":26.8,"SOME":53.8,"FEW":14.4,"EXPERIENCED ONLY":1.2,"BACKCOUNTRY":1.9,"UNCLASSIFIED":1.9},"score":1.93,"bbox":[-115.444322,49.233009,-115.106611,49.417801]},"S|Coldwater River Provincial Park":{"name":"Coldwater River Provincial Park","route":"S","km":0.0,"ferry_km":0.0,"closed_km":1.9,"rated_km":0,"pct":{},"score":null,"bbox":[-121.011644,49.727146,-121.007938,49.743488]},"S|Coquihalla River Park":{"name":"Coquihalla River Park","route":"S","km":0.0,"ferry_km":0.0,"closed_km":3.6,"rated_km":0,"pct":{},"score":null,"bbox":[-121.273703,49.447032,-121.260348,49.473607]},"S|Kettle Valley Rail (KVR) - Brodie to Princeton":{"name":"Kettle Valley Rail (KVR) - Brodie to Princeton","route":"S","km":0.0,"ferry_km":0.0,"closed_km":66.5,"rated_km":0,"pct":{},"score":null,"bbox":[-120.942587,49.441873,-120.528021,49.830703]},"S|Kettle Valley Rail (KVR) - Coldwater River Provincial Park to Brodie":{"name":"Kettle Valley Rail (KVR) - Coldwater River Provincial Park to Brodie","route":"S","km":0.0,"ferry_km":0.0,"closed_km":11.1,"rated_km":0,"pct":{},"score":null,"bbox":[-121.014511,49.739809,-120.942541,49.81545]},"S|Kettle Valley Rail (KVR) - Coquihalla River Park to Boston Bar":{"name":"Kettle Valley Rail (KVR) - Coquihalla River Park to Boston Bar","route":"S","km":0.0,"ferry_km":0.0,"closed_km":6.5,"rated_km":0,"pct":{},"score":null,"bbox":[-121.260921,49.473607,-121.213948,49.493998]},"S|Kettle Valley Rail (KVR) - Hope to Coquihalla River Park":{"name":"Kettle Valley Rail (KVR) - Hope to Coquihalla River Park","route":"S","km":0.0,"ferry_km":0.0,"closed_km":12.5,"rated_km":0,"pct":{},"score":null,"bbox":[-121.357861,49.379536,-121.27033,49.4479]},"S|West Vancouver to Nanaimo Ferry":{"name":"West Vancouver to Nanaimo Ferry","route":"S","km":57.1,"ferry_km":57.1,"closed_km":0.0,"rated_km":0,"pct":{},"score":null,"bbox":[-123.954726446537,49.1936452904583,-123.27107310451,49.3831097030865]},"S|Vancouver Translink Seabus":{"name":"Vancouver Translink Seabus","route":"S","km":3.1,"ferry_km":3.1,"closed_km":0.0,"rated_km":0,"pct":{},"score":null,"bbox":[-123.109012753879,49.2870119883633,-123.084094335452,49.3093375168334]},"S|Balfour to Kootenay Bay Ferry":{"name":"Balfour to Kootenay Bay Ferry","route":"S","km":9.0,"ferry_km":9.0,"closed_km":0.0,"rated_km":0,"pct":{},"score":null,"bbox":[-116.96064554849,49.6223136706371,-116.872765953746,49.6752037906635]},"S|Nelson to Balfour (road link, not official TCT)":{"name":"Nelson to Balfour (road link, not official TCT)","route":"S","km":31.6,"ferry_km":0.0,"closed_km":0.0,"rated_km":31.6,"pct":{"MOST":0.5,"SOME":13.0,"VERY FEW":3.1,"EXPERIENCED ONLY":30.7,"RISK":51.9,"UNCLASSIFIED":0.8},"score":5.078,"bbox":[-117.284638,49.509069,-116.958116,49.626249],"link":true,"note":"The official trail paddles the West Arm (West Arm Provincial Park Paddle Route); this is the North Shore road ride to the Balfour ferry."}},"source":"tctrail.ca, retrieved 2026-07-18; ferries retrieved 2026-10-20"};
+var CHAR_TILES='https://bcbb-assets.bccycletourism.workers.dev/tiles/character/';
+var COL={'MOST':'#1a9641','SOME':'#a6d96a','FEW':'#fdae61','VERY FEW':'#f16913',
+  'EXPERIENCED ONLY':'#a63603','RISK':'#67000d','FORBIDDEN':'#1c1917','BACKCOUNTRY':'#e7298a',
+  'UNCLASSIFIED':'#9aa0a6','FERRY':'#4a6fa5','UNMATCHED':'#777','CLOSED':'#b8b4ae'};
+var LABEL={'MOST':'CR1','SOME':'CR2','FEW':'CR3','VERY FEW':'CR4','EXPERIENCED ONLY':'CR5','RISK':'CR6',
+  'BACKCOUNTRY':'backcountry (bare track)','FORBIDDEN':'forbidden','UNCLASSIFIED':'not rated',
+  'FERRY':'ferry (not counted)','UNMATCHED':'not matched to a way','CLOSED':'temporarily closed (not counted)'};
+var ORDER=['MOST','SOME','FEW','VERY FEW','EXPERIENCED ONLY','RISK','BACKCOUNTRY','FORBIDDEN','UNCLASSIFIED','UNMATCHED','FERRY','CLOSED'];
+// Same ramp and words as the character map's Grade dial.
+var GRADE_COLOR=['case',['<',['get','g'],0],'#9aa0a6',['interpolate',['linear'],['get','g'],0,'#2c9e6f',0.3,'#9ccb3b',0.5,'#f0a202',0.7,'#e8590c',1.0,'#8c1c13']];
+function gword(g){ return g<0?'not measured':g<0.2?'flat':g<0.4?'easy':g<0.6?'moderate':g<0.8?'hard':'brutal'; }
+var REGIONS={'Victoria':{center:[-123.55,48.52],zoom:10},'Vancouver':{center:[-123.05,49.23],zoom:10.5},
+  'Island':{center:[-124.0,48.9],zoom:8.4},'Sea to Sky':{center:[-123.0,50.0],zoom:8.3},
+  'Fraser Valley':{center:[-121.9,49.2],zoom:9},'Coquihalla':{center:[-121.1,49.55],zoom:9},
+  'Okanagan':{center:[-119.5,49.7],zoom:8.2},'Kootenays':{center:[-116.9,49.4],zoom:7.8},
+  'Rockies':{center:[-115.3,49.5],zoom:8.3},'Northeast':{center:[-122.8,57.6],zoom:6},'All BC':{center:[-122.5,53.5],zoom:4.9}};
+var TRIPS=D.trips, TOT=D.totals, MODE='c', cur=null, shown={S:true,N:true};
+var esc=function(s){ return String(s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+function c12(p){ return Math.round((p['MOST']||0)+(p['SOME']||0)); }
+function c46(p){ return Math.round((p['VERY FEW']||0)+(p['EXPERIENCED ONLY']||0)+(p['RISK']||0)); }
+function bar(pct){ return '<div class="cc-bar">'+ORDER.filter(function(c){ return pct[c]; }).map(function(c){
+  return '<span style="width:'+pct[c]+'%;background:'+COL[c]+'" title="'+LABEL[c]+' '+pct[c]+'%"></span>'; }).join('')+'</div>'; }
+function rows(pct){ return ORDER.filter(function(c){ return pct[c]; }).map(function(c){
+  return '<div class="cc-row"><span><span class="cc-sw" style="background:'+COL[c]+'"></span> '+LABEL[c]+'</span><span>'+pct[c]+'%</span></div>'; }).join(''); }
+function tripHtml(p){ var T=TRIPS[p.trip]; if(!T) return '';
+  var here=MODE==='g'?'grade '+(p.g>=0?(+p.g).toFixed(2)+', ':'')+gword(+p.g)+' \u00b7 '+LABEL[p.c]:LABEL[p.c]+(p.g>=0?' \u00b7 grade '+gword(+p.g):'');
+  return '<b>'+esc(T.name)+'</b><div class="cc-meta">'+esc(TOT[T.route].label)+' \u00b7 '+T.km+' km'+(T.ferry_km?', incl. '+T.ferry_km+' km ferry (not counted below)':'')+(T.closed_km?' \u00b7 '+T.closed_km+' km temporarily closed (not counted)':'')+'</div>'
+    +(T.note?'<div class="cc-meta">'+esc(T.note)+'</div>':'')
+    +'<div style="margin-top:4px">This stretch: '+here+'</div>'+bar(T.pct)+rows(T.pct)+(p.way?'<div class="cc-meta" style="margin-top:4px">OSM way '+p.way+'</div>':''); }
+fetch('/map/style/style.json').then(function(r){ return r.json(); }).then(function(style){
+  delete style.sources['bc-cycling'];
+  style.layers=style.layers.filter(function(l){ return l.source!=='bc-cycling'; });
+  style.sources.comfort={type:'vector',url:'pmtiles://'+CHAR_TILES+'comfort.pmtiles'};
+  style.sources.tct={type:'vector',url:'pmtiles://'+D.tiles};
+  style.sources['cc-world']={type:'geojson',data:{type:'Feature',properties:{},
+    geometry:{type:'Polygon',coordinates:[[[-180,-85],[180,-85],[180,85],[-180,85],[-180,-85]]]}}};
+  var match=['match',['get','c']]; Object.keys(COL).forEach(function(c){ match.push(c,COL[c]); }); match.push('#999');
+  var cmatch=['match',['get','comfort']]; ORDER.slice(0,8).forEach(function(c){ cmatch.push(c,COL[c]); }); cmatch.push('#c8c8ce');
+  var dash=['case',['==',['get','c'],'FERRY'],['literal',[1,1.5]],['==',['get','c'],'CLOSED'],['literal',[2,1.5]],
+    ['==',['get','link'],1],['literal',[2.5,1.2]],['literal',[1,0]]];
+  var under=[
+    {id:'cc-veil',type:'fill',source:'cc-world',paint:{'fill-color':'#FFFDF9','fill-opacity':0.55}},
+    {id:'net',type:'line',source:'comfort','source-layer':'comfort',layout:{visibility:'none','line-cap':'round'},
+      paint:{'line-color':cmatch,'line-width':['interpolate',['linear'],['zoom'],9,0.6,12,1.5,14,2.5],'line-opacity':0.45}},
+    {id:'routes-halo',type:'line',source:'tct','source-layer':'tct',layout:{'line-cap':'round','line-join':'round'},
+      paint:{'line-color':'#fff','line-width':['interpolate',['linear'],['zoom'],6,2.5,9,4,13,8]}},
+    {id:'routes',type:'line',source:'tct','source-layer':'tct',layout:{'line-cap':'round','line-join':'round'},
+      paint:{'line-color':match,'line-width':['interpolate',['linear'],['zoom'],6,1.5,9,2.5,13,5.5],'line-dasharray':dash}},
+    {id:'routes-hi',type:'line',source:'tct','source-layer':'tct',filter:['==',['get','trip'],''],layout:{'line-cap':'round','line-join':'round'},
+      paint:{'line-color':match,'line-width':['interpolate',['linear'],['zoom'],6,4,9,6,13,11],'line-dasharray':dash}}
+  ];
+  var symIdx=style.layers.findIndex(function(l){ return l.type==='symbol'; });
+  if(symIdx<0) symIdx=style.layers.length;
+  style.layers.splice.apply(style.layers,[symIdx,0].concat(under));
+  maplibregl.addProtocol('pmtiles',new pmtiles.Protocol().tile);
+  var map=new maplibregl.Map({container:'ccmap',style:style,center:REGIONS['All BC'].center,zoom:REGIONS['All BC'].zoom,
+    cooperativeGestures:true,attributionControl:false});
+  map.addControl(new maplibregl.NavigationControl(),'top-right');
+  var attrib=new maplibregl.AttributionControl({compact:true,
+    customAttribution:'Trail sections \u00a9 <a target="_blank" rel="noopener" href="https://tctrail.ca/explore-the-map/">Trans Canada Trail</a> \u00b7 \u00a9 <a target="_blank" rel="noopener" href="https://www.openmaptiles.org/">OpenMapTiles</a> \u00a9 <a target="_blank" rel="noopener" href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  map.addControl(attrib);
+  if(attrib._container){ attrib._container.classList.remove('maplibregl-compact-show'); }
+  map.once('idle',function(){ var el=document.getElementById('cc-loading'); if(el) el.remove(); });
+  var hover=new maplibregl.Popup({closeButton:false,closeOnClick:false,className:'cc-pop'});
+  var stick=new maplibregl.Popup({closeButton:true,focusAfterOpen:false,className:'cc-pop'});
+  function onRoutes(){ return D.routes.filter(function(r){ return shown[r]; }); }
+  function setHi(id){ map.setFilter('routes-hi',['all',['==',['get','trip'],id||''],['in',['get','route'],['literal',onRoutes()]]]); }
+  function applyFilter(){ var f=['in',['get','route'],['literal',onRoutes()]]; map.setFilter('routes',f); map.setFilter('routes-halo',f); setHi(cur); }
+  function hitRoute(pt){ var bb=[[pt.x-5,pt.y-5],[pt.x+5,pt.y+5]]; var fs=map.queryRenderedFeatures(bb,{layers:['routes']}); return fs.length?fs[0]:null; }
+  map.on('mousemove',function(e){ var f=hitRoute(e.point);
+    if(f){ map.getCanvas().style.cursor='pointer'; setHi(f.properties.trip); hover.setLngLat(e.lngLat).setHTML(tripHtml(f.properties)).addTo(map); return; }
+    hover.remove(); setHi(cur); map.getCanvas().style.cursor=''; });
+  map.on('click',function(e){ var f=hitRoute(e.point);
+    if(f){ cur=f.properties.trip; setHi(cur); hover.remove(); stick.setLngLat(e.lngLat).setHTML(tripHtml(f.properties)).addTo(map); } });
+  document.querySelectorAll('.bc-seg button').forEach(function(b){ b.addEventListener('click',function(){ MODE=b.dataset.m;
+    document.querySelectorAll('.bc-seg button').forEach(function(x){ x.classList.toggle('on',x===b); });
+    ['routes','routes-hi'].forEach(function(l){ map.setPaintProperty(l,'line-color',MODE==='g'?GRADE_COLOR:match); });
+    document.getElementById('bc-leg-c').style.display=MODE==='g'?'none':'';
+    document.getElementById('bc-leg-g').style.display=MODE==='g'?'':'none'; }); });
+  document.getElementById('cc-net').onchange=function(){ map.setLayoutProperty('net','visibility',this.checked?'visible':'none'); };
+  document.querySelectorAll('.cc-jump').forEach(function(b){ b.addEventListener('click',function(){ map.flyTo(REGIONS[b.dataset.r]); }); });
+  var tl=document.getElementById('tc-trails');
+  function listTrails(r){ tl.innerHTML='';
+    Object.keys(TRIPS).filter(function(id){ return TRIPS[id].route===r; })
+      .sort(function(a,b){ return (TRIPS[b].km+(TRIPS[b].closed_km||0))-(TRIPS[a].km+(TRIPS[a].closed_km||0)); })
+      .forEach(function(id){ var T=TRIPS[id]; var d=document.createElement('div'); d.className='cc-trip';
+        d.innerHTML='<b>'+esc(T.name)+'</b><div class="cc-meta">'+Math.round(T.km)+' km'+(T.ferry_km&&T.ferry_km===T.km?' ferry':'')+(T.closed_km?', '+Math.round(T.closed_km)+' km closed':'')
+          +(T.rated_km?' \u00b7 CR1+CR2 '+c12(T.pct)+'%, CR4 to CR6 '+c46(T.pct)+'%':'')+'</div>'+(T.rated_km?bar(T.pct):'');
+        d.onclick=function(){ cur=id; setHi(id); tl.querySelectorAll('.cc-trip').forEach(function(x){ x.classList.toggle('on',x===d); });
+          map.fitBounds(T.bbox,{padding:60,maxZoom:12}); };
+        tl.appendChild(d); }); }
+  document.querySelectorAll('.bc-rt').forEach(function(d){ var r=d.dataset.route;
+    d.querySelector('input').onchange=function(){ shown[r]=this.checked; applyFilter(); };
+    d.querySelector('.name').onclick=function(){ var bb=null;
+      Object.keys(TRIPS).forEach(function(id){ var T=TRIPS[id]; if(T.route!==r) return;
+        bb=bb?[Math.min(bb[0],T.bbox[0]),Math.min(bb[1],T.bbox[1]),Math.max(bb[2],T.bbox[2]),Math.max(bb[3],T.bbox[3])]:T.bbox.slice(); });
+      if(bb) map.fitBounds(bb,{padding:60,maxZoom:10});
+      if(!shown[r]){ shown[r]=true; d.querySelector('input').checked=true; applyFilter(); }
+      document.getElementById('tc-trails-h').style.display=''; listTrails(r); }; });
+  map.on('load',applyFilter);
+  window._tct=map;
+});
+})();
+</script>
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
