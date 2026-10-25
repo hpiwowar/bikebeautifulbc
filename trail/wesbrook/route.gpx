@@ -46,6 +46,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.269181" lon="-123.248499">
+<name>West Coast Suites at UBC</name>
+<cmt>lodging</cmt>
+<desc>Accommodation</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
 <wpt lat="49.254732" lon="-123.236635">
 <name>Starbucks</name>
 <cmt>food</cmt>
@@ -68,7 +75,7 @@
 <type>rest_area</type>
 </wpt>
 <wpt lat="49.269478" lon="-123.248852">
-<name>West Coast Suites at UBC</name>
+<name>West Coast Suites</name>
 <cmt>lodging</cmt>
 <desc>Hotel / Motel</desc>
 <sym>Dot</sym>
@@ -136,6 +143,13 @@
 <desc>Café / Coffee</desc>
 <sym>Dot</sym>
 <type>food</type>
+</wpt>
+<wpt lat="49.269460" lon="-123.250030">
+<name>Gage Suites at UBC</name>
+<cmt>lodging</cmt>
+<desc>Accommodation</desc>
+<sym>Dot</sym>
+<type>shelter</type>
 </wpt>
 <wpt lat="49.269434" lon="-123.250098">
 <name>Gage Mini Mart</name>

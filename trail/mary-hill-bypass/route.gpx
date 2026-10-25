@@ -165,6 +165,13 @@
 <sym>Dot</sym>
 <type>store</type>
 </wpt>
+<wpt lat="49.251238" lon="-122.732836">
+<name>Tinhouse Brewing</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.251190" lon="-122.732744">
 <name>Tinhouse Tasting Lounge</name>
 <cmt>bar</cmt>

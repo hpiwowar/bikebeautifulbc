@@ -20,10 +20,10 @@
 </wpt>
 <wpt lat="49.877797" lon="-119.454959">
 <name>Michael's Beer and Wine Studio</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Convenience Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.877855" lon="-119.440105">
 <name>Sizzling Wok</name>

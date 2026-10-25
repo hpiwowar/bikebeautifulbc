@@ -284,6 +284,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.265839" lon="-123.100632">
+<name>Brassneck Brewery</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.263720" lon="-123.112032">
 <name>Pokerrito</name>
 <cmt>food</cmt>
@@ -788,6 +795,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.267240" lon="-123.103521">
+<name>R &amp; B Ale &amp; Pizza House</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.267237" lon="-123.103318">
 <name>R &amp; B</name>
 <cmt>convenience_store</cmt>
@@ -817,7 +831,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.267279" lon="-123.103336">
-<name>R &amp; B Ale &amp; Pizza House</name>
+<name>R &amp; B Brewing</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>
@@ -1244,6 +1258,13 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.264010" lon="-123.186129">
+<name>The Kitchen Dada</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.264010" lon="-123.186129">
 <name>The Kitchen Dada Sushi Bar &amp; Grill</name>
 <cmt>food</cmt>
 <desc>Restaurant</desc>
@@ -1441,10 +1462,10 @@
 </wpt>
 <wpt lat="49.264103" lon="-123.211523">
 <name>Liberty Wine Merchants</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.263639" lon="-123.126978">
 <name>Privé</name>
@@ -3247,10 +3268,10 @@
 </wpt>
 <wpt lat="49.268347" lon="-123.156548">
 <name>JAK's Beer Wine Spirits</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Grocery Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.262698" lon="-123.099887">
 <name>Poké Bar</name>
@@ -3722,7 +3743,7 @@
 <type>food</type>
 </wpt>
 <wpt lat="49.268448" lon="-123.183494">
-<name>Aphrodite's Organic Cafe</name>
+<name>Aphrodite's</name>
 <cmt>coffee</cmt>
 <desc>Café / Coffee</desc>
 <sym>Dot</sym>
@@ -4122,10 +4143,10 @@
 </wpt>
 <wpt lat="49.262714" lon="-123.056379">
 <name>Viti Wine and Lager</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.261578" lon="-123.138071">
 <name>Bar Asra</name>

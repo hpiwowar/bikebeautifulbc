@@ -361,8 +361,15 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
-<wpt lat="49.029439" lon="-122.801830">
+<wpt lat="49.029443" lon="-122.801966">
 <name>White Rock Beach Beer Brewery</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
+<wpt lat="49.029439" lon="-122.801830">
+<name>White Rock Beach Beer</name>
 <cmt>bar</cmt>
 <desc>Brewery / Pub</desc>
 <sym>Dot</sym>

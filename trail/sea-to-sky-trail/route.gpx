@@ -942,6 +942,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="50.094583" lon="-122.989359">
+<name>Legends Hotel</name>
+<cmt>lodging</cmt>
+<desc>Accommodation</desc>
+<sym>Dot</sym>
+<type>shelter</type>
+</wpt>
 <wpt lat="50.118555" lon="-122.957923">
 <name>Tandoori Grill</name>
 <cmt>food</cmt>
@@ -992,7 +999,7 @@
 <type>info</type>
 </wpt>
 <wpt lat="50.094294" lon="-122.989424">
-<name>Legends Hotel</name>
+<name>The Legends</name>
 <cmt>lodging</cmt>
 <desc>Hotel / Motel</desc>
 <sym>Dot</sym>

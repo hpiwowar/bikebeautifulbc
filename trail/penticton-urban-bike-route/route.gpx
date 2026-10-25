@@ -531,10 +531,10 @@
 </wpt>
 <wpt lat="49.494510" lon="-119.607568">
 <name>VQA Wine Store</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>food</cmt>
+<desc>Grocery Store</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.480275" lon="-119.583961">
 <name>Subway</name>

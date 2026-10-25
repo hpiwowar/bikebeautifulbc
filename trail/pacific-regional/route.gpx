@@ -1698,6 +1698,13 @@
 <sym>Dot</sym>
 <type>food</type>
 </wpt>
+<wpt lat="49.280810" lon="-123.107015">
+<name>Caveman Cafe</name>
+<cmt>food</cmt>
+<desc>Food &amp; Drink</desc>
+<sym>Dot</sym>
+<type>food</type>
+</wpt>
 <wpt lat="49.278707" lon="-123.128947">
 <name>Yolks</name>
 <cmt>food</cmt>
@@ -1812,10 +1819,10 @@
 </wpt>
 <wpt lat="49.279619" lon="-123.130273">
 <name>Marquis Wine Cellars</name>
-<cmt>convenience_store</cmt>
-<desc>Liquor Store</desc>
+<cmt>winery</cmt>
+<desc>Winery / Cidery</desc>
 <sym>Dot</sym>
-<type>store</type>
+<type>food</type>
 </wpt>
 <wpt lat="49.279699" lon="-123.130399">
 <name>Numbers Cabaret</name>
