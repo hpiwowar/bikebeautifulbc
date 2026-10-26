@@ -9513,7 +9513,7 @@ listing_key,amenity,amenity_kind,value,detail,source,date
 2d207ea09b,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 2d25130a6c,Washrooms,required for the tier,TRUE,,inferred:subcategory,2026-07-18
 2d25130a6c,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-07-18
-2d2bf5a2ce,Washrooms,required for the tier,TRUE,"Owner confirmed washrooms by email, 2026-10-10.",manual,2026-10-24
+2d2bf5a2ce,Washrooms,required for the tier,TRUE,,manual,2026-10-24
 2d2bf5a2ce,Water bottle refill,required for the tier,TRUE,,inferred:subcategory,2026-10-24
 2d2bf5a2ce,Takeout,extra,TRUE,,sonnet_4.6,2026-10-24
 2d2bf5a2ce,Vegetarian / vegan / GF,extra,TRUE,"Website explicitly lists falafel as vegan, vegetarian moussaka with lentils/zucchini/eggplant, spanakopita, grilled halloumi, and Greek salad as vegetarian options. Falafel bites are noted as 'gluten-free friendly' on both lunch and dinner menus",sonnet_4.6,2026-10-24
