@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Comox Valley: the Cycling Coalition's bike map and our comfort ratings — BC Cycle Tourism Society</title>
+<link rel="canonical" href="https://bccycletourism.ca/research/comox-valley-bike-map-comparison/">
+<meta property="og:site_name" content="BC Cycle Tourism Society">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bccycletourism.ca/research/comox-valley-bike-map-comparison/">
+<meta property="og:title" content="Comox Valley: the Cycling Coalition&#x27;s bike map and our comfort ratings — BC Cycle Tourism Society">
+<meta property="og:image" content="https://bccycletourism.ca/img/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Comox Valley: the Cycling Coalition&#x27;s bike map and our comfort ratings — BC Cycle Tourism Society">
+<meta name="twitter:image" content="https://bccycletourism.ca/img/og/default.png">
+<meta name="description" content="Our traffic comfort ratings for the Comox Valley, compared road by road with a local bike map.">
+<meta property="og:description" content="Our traffic comfort ratings for the Comox Valley, compared road by road with a local bike map.">
+<meta name="twitter:description" content="Our traffic comfort ratings for the Comox Valley, compared road by road with a local bike map.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BC Cycle Tourism Society","url":"https://bccycletourism.ca","logo":"https://bccycletourism.ca/img/logo-google.png","sameAs":["https://www.linkedin.com/company/bc-cycle-tourism-society/","https://tiabc.ca/members/bc-cycle-tourism-society/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bccycletourism.ca/"},{"@type":"ListItem","position":2,"name":"Research and Data","item":"https://bccycletourism.ca/research/"},{"@type":"ListItem","position":3,"name":"Comox Valley comparison","item":"https://bccycletourism.ca/research/comox-valley-bike-map-comparison/"}]}</script>
+<style>
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* BC-516: overflow-x:clip is insurance for the full-bleed hero bands, which are
+   width:100vw. Chrome subtracts the stable gutter from vw so they fit exactly,
+   but a browser that doesn't support scrollbar-gutter counts the scrollbar in vw
+   and the band ends up ~15px too wide, which drags the page sideways. clip stops
+   that without creating a scroll container, so position:sticky keeps working. */
+html { scrollbar-gutter: stable; overflow-x: clip; }
+/* Width tokens (BC-227). Narrow by default; widen only where content won't fit.
+   --rail   chrome (header + footer), frames the page
+   --w-read the content column and prose cap, used by nearly every page
+   --w-wide the exception: sidebar filters, two-column stop pages */
+:root { --rail: 1200px; --w-read: 720px; --w-wide: 1160px; }
+/* Design tokens (BC-506): palette, warm-stone neutral ramp, radius scale.
+   Every page inherits these; page CSS uses var(...), not raw hex literals.
+   The /stops/ sage family is exempt from tokenization this pass. */
+:root {
+  /* brand */
+  --pacific: #0D4070;   /* navy */
+  --river:   #1E7D96;   /* teal: links + ALL primary buttons */
+  --forest:  #2E8A36;
+  --bright:  #6EC040;   /* accent green — accents only, never buttons */
+  --sky:     #B8E0EC;
+  --pine:    #1F514C;   /* heading green */
+  --herodark:#0D2E1E;
+  /* grounds */
+  --paper: #FFFDF9;     /* page ground */
+  --cream: #FFF6E5;     /* warm panels */
+  /* ink + warm stone neutrals (replaces the cool #E5E7EB/#9CA3AF family) */
+  --ink: #1A1A1A;
+  --stone-600: #57534E; --muted: #57534E;
+  --stone-500: #78716C;
+  --stone-400: #A8A29E;
+  --stone-200: #E7E5E4;
+  --sand: #E0D9CC;      /* warm hairline on cream */
+  /* radius scale: s chips/inputs, m cards, l heroes/panels, pill */
+  --r-s: 8px; --r-m: 12px; --r-l: 20px; --r-pill: 999px;
+}
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); background: var(--paper); min-height: 100vh;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+/* Base link colour, both states (BC-504) — visited links were browser-purple
+   wherever no rule targeted them.
+   :where() zeroes the specificity so ANY other rule wins, which is what the
+   original version meant but didn't achieve: bare `a:visited` scores 0-1-1 and
+   quietly outranked every single-class component rule (0-1-0). That repainted
+   the homepage's outlined "Plan your trip" CTA teal-on-navy once you'd visited
+   /plan/ — invisible until hover, when .hero-btn-outline:hover (0-2-0) finally
+   won. getComputedStyle reports the unvisited colour for privacy, so this is
+   only ever visible to the eye, in a profile that has actually been there. */
+:where(a) { color: var(--river); }
+:where(a:visited) { color: var(--river); }
+.g-banner { background: #FEF3C7; border-bottom: 1px solid #F59E0B; padding: 12px 28px; font-size: 14px; color: #92400E; text-align: center; }
+.g-banner strong { font-weight: 700; }
+/* position+z-index so open dropdown menus paint above page content that
+   creates its own stacking contexts (hero cards, reveal animations) */
+.g-header { padding: 14px 40px; position: relative; z-index: 500; }
+.g-header-inner { max-width: var(--rail, 1200px); margin: 0 auto; display: flex; align-items: center; gap: 64px; }
+.g-header-left { display: flex; align-items: center; text-decoration: none; }
+.g-header-left img { height: 50px; width: auto; max-width: 100%; }
+.g-header-nav { display: flex; gap: 26px; align-items: center; margin-left: auto; }
+.g-header-nav a { font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none; transition: color 0.2s; }
+.g-header-nav a:hover { color: var(--river); }
+.g-header-nav a.active { color: var(--river); font-weight: 600; }
+.g-nav-search { display: flex; align-items: center; gap: 6px; }
+.g-nav-search svg { width: 15px; height: 15px; display: block; }
+.g-nav-search .g-nav-search-label { display: inline; }
+/* Header dropdown menus (nav rethink 2026-08) */
+.g-navgroup { position: relative; display: flex; align-items: center; }
+.g-navtop {
+  font-family: inherit; font-size: 14px; font-weight: 500; color: #2C4C3B;
+  background: none; border: none; cursor: pointer; padding: 0;
+  display: flex; align-items: center; gap: 5px; transition: color 0.2s;
+}
+.g-navtop:hover, .g-navgroup.open .g-navtop { color: var(--river); }
+.g-navgroup.activeslot .g-navtop { color: var(--river); font-weight: 600; }
+.g-caret { width: 10px; height: 10px; margin-top: 1px; transition: transform 0.2s; }
+.g-navgroup.open .g-caret { transform: rotate(180deg); }
+.g-navmenu {
+  position: absolute; top: calc(100% + 12px); left: -14px; display: none;
+  background: var(--paper); border: 1px solid #ECE7DD; border-radius: var(--r-m);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14); padding: 8px; min-width: 320px; z-index: 400;
+}
+.g-navgroup.open > .g-navmenu { display: block; }
+/* right-side menus open leftward so they never overflow the viewport */
+.g-navgroup[data-slot="field-notes"] .g-navmenu,
+.g-navgroup[data-slot="about"] .g-navmenu { left: auto; right: -14px; }
+.g-header-nav .g-navmenu a {
+  display: block; padding: 9px 12px; border-radius: var(--r-s);
+  font-size: 14px; font-weight: 500; color: #2C4C3B; text-decoration: none;
+  white-space: normal; text-shadow: none; text-align: left; line-height: 1.4;
+}
+.g-header-nav .g-navmenu a:hover { background: #EEF5F1; color: var(--river); }
+.g-header-nav .g-navmenu .gnm-l { display: block; font-weight: 600; width: auto; flex: none; text-align: left; }
+.g-header-nav .g-navmenu .gnm-d {
+  display: block; font-size: 12.5px; font-weight: 400; width: auto; flex: none;
+  color: rgba(13,46,30,0.62); margin-top: 1px; line-height: 1.35; text-align: left;
+}
+/* over photos, green reads badly: rest is soft white, hover full white, and
+   the active section carries a small underline instead of a colour */
+.g-header.transparent .g-navtop { color: rgba(255,255,255,0.88); text-shadow: 0 1px 6px rgba(0,0,0,0.55); }
+.g-header.transparent .g-navtop:hover { color: #fff; }
+.g-header.transparent .g-navgroup.activeslot .g-navtop {
+  color: #fff; text-decoration: underline;
+  text-underline-offset: 7px; text-decoration-thickness: 2px;
+}
+/* menu panels are solid cream even under a transparent header: beat the
+   white-link transparent rules at their own specificity */
+.g-header.transparent .g-header-nav .g-navmenu a { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent .g-header-nav .g-navmenu a:hover { color: var(--river); }
+.g-header.transparent.solid .g-navtop { color: #2C4C3B; text-shadow: none; }
+.g-header.transparent.solid .g-navtop:hover { color: var(--river); }
+.g-header.transparent.solid .g-navgroup.activeslot .g-navtop { color: var(--river); text-decoration: none; }
+.g-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--pine); padding: 4px 8px; line-height: 1; margin-left: auto; }
+.g-main { max-width: var(--w-read, 720px); margin: 0 auto; padding: 36px 40px 20px; }
+.g-main h1, .g-main h2 { font-family: "Archivo", sans-serif; font-size: 32px; font-weight: 400; color: var(--pine); margin-bottom: 14px; letter-spacing: -0.03em; }
+.g-main h1 { font-weight: 700; }
+.g-main h3 { font-family: "Archivo", sans-serif; font-size: 18px; font-weight: 700; color: var(--pine); margin-top: 28px; margin-bottom: 8px; letter-spacing: -0.02em; }
+.g-main p { color: var(--stone-600); margin-bottom: 14px; max-width: var(--w-read, 720px); }
+.g-main a { color: var(--river); }
+.g-main ul { margin-left: 20px; color: var(--stone-600); margin-bottom: 14px; }
+.g-main li { margin-bottom: 4px; }
+.g-crumb { font-size: 13px; color: var(--stone-400); margin-bottom: 18px; }
+.g-crumb a { color: var(--river); text-decoration: none; }
+.g-crumb a:hover { text-decoration: underline; }
+.g-crumb-cur { color: var(--stone-400); }
+.g-crumb-sep { color: #C9CDD2; margin: 0 7px; }
+.g-footer { max-width: var(--rail, 1200px); margin: 0 auto; padding: 48px 40px 56px; }
+.g-footer-brand { display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 22px; }
+.g-footer-brand img { height: 32px; width: auto; max-width: 100%; }
+.g-footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.g-footer-col { }
+.g-footer-h { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(13,64,112,0.7); margin-bottom: 9px; }
+.g-footer-col a { display: block; font-size: 14px; color: rgba(13,64,112,0.45); text-decoration: none; padding: 2.5px 0; transition: color 0.2s; }
+.g-footer-col a:hover { color: var(--pacific); }
+.section-divider { border: none; border-top: 1px solid var(--stone-200); margin: 28px 0; }
+.bio { margin-bottom: 20px; }
+.bio strong { color: var(--pine); font-size: 15px; }
+.bio > em { color: var(--stone-600); font-size: 13px; }
+.bio p { font-size: 14px; margin-top: 6px; }
+@media (max-width: 700px) {
+  .g-banner { padding: 6px 14px; font-size: 11px; }
+  .g-header { padding: 12px 16px; position: relative; z-index: 300; }
+  .g-header-inner { gap: 0; }
+  .g-main { padding: 24px 14px 16px; }
+  .g-hamburger { display: block; }
+  .g-header-nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--stone-200); border-bottom: 1px solid var(--stone-200); padding: 8px 20px 16px; gap: 0; z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .g-header-nav.open { display: flex; }
+  .g-header-nav a { padding: 12px 0; border-bottom: 1px solid var(--stone-200); font-size: 15px; color: var(--pine); }
+  .g-header-nav a:last-child { border-bottom: none; }
+  .g-nav-search svg { display: none; }
+  .g-nav-search .g-nav-search-label { display: inline; }
+  /* dropdown groups become accordion sections inside the hamburger panel */
+  .g-navgroup { display: block; position: static; border-bottom: 1px solid var(--stone-200); }
+  .g-navtop {
+    width: 100%; justify-content: space-between; padding: 12px 0;
+    font-size: 15px; color: var(--pine); text-shadow: none;
+  }
+  .g-navmenu {
+    position: static; box-shadow: none; border: none; background: none;
+    padding: 0 0 10px 14px; min-width: 0; border-radius: 0;
+  }
+  .g-header-nav .g-navmenu a { border-bottom: none; padding: 8px 0; font-size: 14.5px; }
+  .g-footer { padding: 40px 20px 48px; }
+  .g-footer-nav { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+}
+
+/* Section anchors. Every h2 gets a quiet "#" that hands you a link to that
+   section. Grey at rest so it reads as a tool rather than content, teal at the
+   moment you are about to click it. Touch devices have no hover, so it sits
+   faintly visible there instead of being unreachable. */
+.h-anchor { margin-left: .35em; color: var(--stone-500); opacity: 0; font-weight: 400; text-decoration: none; transition: opacity .15s ease, color .15s ease; }
+h2:hover > .h-anchor { opacity: .55; }
+.h-anchor:hover, .h-anchor:focus { color: var(--river); opacity: 1; }
+@media (hover: none) {
+  .h-anchor { opacity: .35; }
+}
+
+/* ---- Eyebrow labels (BC-509). One treatment site-wide: 11px, caps, teal.
+   Teal because it was already the most-used eyebrow colour, which leaves the
+   accent green free to keep meaning "accent" (journey-map steps, accredited
+   marks) instead of competing as a label colour. The historical class names
+   are aliased here rather than rewritten at every call site; genuinely
+   contextual overrides still win on specificity (e.g. the pale-blue on-photo
+   eyebrow on the To and Fro hero). No font-family: eyebrows inherit Inter,
+   which is what all but one of them already did. ---- */
+.eyebrow, .gi-eyebrow, .dir-eyebrow, .ls-notable-eyebrow,
+.listing-section-title, .ls-pills-label, .ls-card-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--river); margin-bottom: 6px;
+}
+
+/* ---- Chip geometry (BC-509). Two geometries, not ten. Label chips are read;
+   control chips are tapped, so they get a bigger target. Colour and meaning
+   stay per-family — this only unifies size, padding, and radius. ---- */
+.chip, .lachip, .lichip, .lfacet, .pubchip, .guide-chip-am,
+.listing-pill-yes, .listing-pill-no {
+  font-size: 12.5px; padding: 4px 12px; border-radius: var(--r-pill);
+}
+.dir-chip, .guide-chip, .explore-chip {
+  font-size: 13.5px; padding: 6px 13px; border-radius: var(--r-pill);
+}
+
+/* ---- Warm CTA panel (BC-508). One "warm panel + one action" component that
+   replaces four hand-rolled versions: route detail's "Ready to ride it?", the
+   routes-hub publisher card, Design Your Own Route's signup, and the homepage
+   newsletter block. The action slot is deliberately open — it takes a button
+   link OR a whole form — so the call sites keep their own behaviour and share
+   only the chrome. Emitted by warm_panel() below; the title/body/act selectors
+   are class-on-class so they win against .g-main h2 / .g-main p. ---- */
+.wpanel { background: var(--cream); border: 1px solid var(--sand); border-radius: var(--r-l);
+  padding: 26px 30px; margin: 34px auto 8px; max-width: 900px; }
+.wpanel.narrow { max-width: 700px; }
+.wpanel.center { text-align: center; }
+.wpanel .wp-title { font-family: "Archivo", "Inter", sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--pine); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 6px; }
+.wpanel.lg .wp-title { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+.wpanel .wp-body { color: var(--stone-600); font-size: 15px; line-height: 1.55; margin: 0 0 16px; max-width: 62ch; }
+.wpanel.center .wp-body { margin-left: auto; margin-right: auto; }
+.wpanel .wp-body a { color: var(--river); }
+.wpanel .wp-act { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.wpanel.center .wp-act { align-items: center; }
+.wpanel .wp-act form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
+.wpanel.center .wp-act form { margin: 0 auto; }
+/* one button and one field treatment inside the panel, whatever the action is */
+.wpanel .wp-act .wp-btn, .wpanel .wp-act button { display: inline-block; background: var(--river);
+  color: #fff; border: none; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 13px 24px; border-radius: var(--r-m); cursor: pointer; text-align: center;
+  transition: background .2s ease; }
+.wpanel .wp-act .wp-btn:hover, .wpanel .wp-act button:hover { background: var(--pacific); }
+.wpanel .wp-act input:not([type="hidden"]), .wpanel .wp-act textarea { width: 100%;
+  padding: 13px 16px; border: 1.5px solid var(--sand); border-radius: var(--r-m);
+  font-size: 16px; font-family: inherit; background: #fff; transition: border-color .2s; }
+.wpanel .wp-act input:focus, .wpanel .wp-act textarea:focus { border-color: var(--river); outline: none; }
+.wpanel .wp-act textarea { min-height: 76px; resize: vertical; }
+/* secondary action under the primary one (route detail's extra links) */
+.wpanel .wp-alt { font-size: 13.5px; color: var(--river); font-weight: 600; text-decoration: none; }
+.wpanel .wp-alt:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .wpanel { padding: 22px 18px; border-radius: var(--r-m); }
+  .wpanel .wp-act, .wpanel .wp-act .wp-btn { width: 100%; }
+}
+
+/* ---- Photo caption row (BC-516). Credit flush left, place flush right, in one
+   flex row instead of two independently positioned spans — two spans at opposite
+   corners of a photo can't see each other, so on a phone they printed on top of
+   each other. Here they push apart, stay on one line whenever they fit, and wrap
+   only when they must. Emitted by build.cap_row(); each photo family sets its own
+   insets and type, and only the row mechanics live here. ---- */
+.capbar { position: absolute; left: 12px; right: 12px; bottom: 11px; z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.capbar .cap-credit, .capbar .cap-place { position: static; min-width: 0; max-width: none; }
+/* Strawpoll embeds: the iframe can't size itself, so the box height is fixed.
+   A five-option poll ends ~440px tall on desktop (measured 2026-09-30); 620px
+   leaves room for a longer question. Phones wrap more, so they keep 836px. */
+@media (max-width: 600px) { .strawpoll-embed { --poll-h: 836px; } }
+</style>
+<link rel="stylesheet" href="/map/lib/maplibre-gl.css">
+<style>
+.cc-wrap{max-width:var(--w-wide, 1160px);margin:0 auto;padding:0 16px 24px}
+.cc-h1{font-family:"Archivo",sans-serif;font-size:32px;font-weight:700;letter-spacing:-0.03em;color:var(--pine);margin:18px 0 6px}
+.cc-sub{color:var(--stone-600);font-size:15px;margin:0 0 14px;max-width:70ch}
+.cc-banner{border:2px solid #b45309;background:#fffbeb;color:#78350f;border-radius:var(--r-m);padding:10px 14px;font-size:14px;font-weight:700;letter-spacing:.02em;margin:0 0 14px}
+.cc-modes{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.cc-mode{font-size:14px;padding:6px 14px;border:1px solid var(--stone-200);border-radius:var(--r-l);cursor:pointer;user-select:none;background:#fff;color:var(--ink)}
+.cc-mode:hover{background:#f5f5f4}
+.cc-mode.on{background:var(--pine);border-color:var(--pine);color:#fff;font-weight:600}
+.cc-blurb{color:var(--stone-600);font-size:14px;margin:0 0 4px;max-width:78ch}
+.cc-stats{font-size:13px;color:var(--stone-500);margin:0 0 10px;font-variant-numeric:tabular-nums}
+.cc-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;align-items:start}
+@media (max-width:900px){.cc-grid{grid-template-columns:minmax(0,1fr)}}
+.cc-mapbox{position:relative;min-width:0}
+#ccmap{width:100%;height:calc(100dvh - 300px);min-height:520px;border-radius:var(--r-m);overflow:hidden;border:1px solid var(--stone-200)}
+@media (max-width:700px){#ccmap{height:60vh;min-height:400px}}
+.cc-loading{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:3;background:#fff;
+  border:1px solid var(--stone-200);border-radius:var(--r-s);padding:8px 14px;font-size:13px;color:#44403c;
+  box-shadow:0 1px 6px rgba(0,0,0,.12);pointer-events:none}
+.cc-jumps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;font-size:13px}
+.cc-jumps span{color:var(--stone-500)}
+.cc-jump{font-size:13px;padding:4px 11px;border:1px solid var(--stone-200);border-radius:var(--r-l);cursor:pointer;background:#fff}
+.cc-jump:hover{background:#f5f5f4}
+.cc-panel{border:1px solid var(--stone-200);border-radius:var(--r-m);padding:12px 14px;background:#fff;font-size:14px;min-width:0;max-height:calc(100dvh - 300px);min-height:520px;overflow:auto}
+@media (max-width:900px){.cc-panel{max-height:none;min-height:0}}
+.cc-panel h2{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--stone-500);margin:0 0 8px;font-weight:600}
+.cc-panel h2.next{margin-top:14px}
+.cc-leg div{display:flex;align-items:center;gap:6px;line-height:1.5;font-size:13px}
+.cc-sw{display:inline-block;width:22px;height:8px;border-radius:3px;flex:none}
+.cc-key{font-size:12px;color:var(--stone-600);margin:6px 0 0}
+.cc-chk{display:block;margin:4px 0;color:var(--stone-600);font-size:13px;cursor:pointer}
+.cc-chk input{margin-right:5px}
+.cc-q{font:inherit;width:100%;box-sizing:border-box;padding:5px 8px;border:1px solid var(--stone-200);border-radius:var(--r-s);margin:0 0 6px}
+.cc-places{max-height:150px;overflow:auto;border:1px solid var(--stone-200);border-radius:var(--r-s);padding:4px;font-size:13px}
+.cc-pl{padding:3px 6px;cursor:pointer;border-radius:4px}.cc-pl:hover,.cc-pl.on{background:#f0efe9}
+.cc-trip{padding:6px 8px;border-radius:6px;cursor:pointer;border:1px solid transparent;margin:2px 0;font-size:13px}
+.cc-trip:hover,.cc-trip.on{background:#f5f5f4;border-color:var(--stone-200)}
+.cc-trip b{font-weight:600}
+.cc-bar{display:flex;height:8px;border-radius:3px;overflow:hidden;margin-top:4px;background:#eee}
+.cc-meta{color:var(--stone-500);font-size:12px}
+.cc-note{font-size:13px;color:var(--stone-600);margin:0 0 6px}
+.cc-prose{max-width:var(--w-read, 720px);margin:26px 0 0}
+.cc-prose h2{font-family:"Archivo",sans-serif;font-size:24px;font-weight:400;color:var(--pine);margin:26px 0 10px}
+.cc-prose p{margin:0 0 12px}
+.cc-prose ul{margin:0 0 12px 22px}
+.cc-prose li{margin:0 0 7px}
+.maplibregl-popup-content{font-size:13px;padding:8px 10px;line-height:1.45;min-width:230px;max-width:320px}
+.cc-pop .cc-bar{height:10px}
+.cc-row{display:flex;justify-content:space-between;gap:10px}
+
+.rc-tab{width:100%;border-collapse:collapse;font-size:13px;margin:0 0 12px;font-variant-numeric:tabular-nums}
+.rc-tab th,.rc-tab td{text-align:left;padding:4px 6px;border-bottom:1px solid var(--stone-200);vertical-align:top}
+.rc-tab td.n,.rc-tab th.n{text-align:right;white-space:nowrap}
+.rc-wide{overflow-x:auto}
+.rc-pin{padding:5px 6px;border-radius:6px;cursor:pointer;font-size:13px}
+.rc-pin:hover{background:#f5f5f4}
+.rc-pin b{display:inline-block;min-width:1.6em;color:#5f3dc4}
+.rc-tags{font-family:ui-monospace,monospace;font-size:11px;color:var(--stone-600);margin-top:4px;word-break:break-word}
+</style>
+<script src="https://cdn.usefathom.com/script.js" data-site="NYPOTBOP" defer></script>
+</head>
+<body>
+<!--chrome--><div class="g-header">
+  <div class="g-header-inner">
+    <a href="/" class="g-header-left">
+      <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+    </a>
+    <div class="g-header-nav" id="g-nav">
+      <div class="g-navgroup" data-slot="inspired"><button type="button" class="g-navtop" aria-expanded="false">Get Inspired <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/routes/all/"><span class="gnm-l">Browse all routes</span><span class="gnm-d">Every published route in one filterable list</span></a><a href="/routes/"><span class="gnm-l">The highlight reel</span><span class="gnm-d">Ride after ride, region by region</span></a><a href="/trails/"><span class="gnm-l">Named trails</span><span class="gnm-d">Follow the KVR, the Goose, and other classics</span></a><a href="/route-publishers/"><span class="gnm-l">Route makers</span><span class="gnm-d">The people and clubs who publish BC's rides</span></a><a href="/wwc/communities/"><span class="gnm-l">Communities</span><span class="gnm-d">Browse stops town by town</span></a><a href="/routes/how-we-describe/"><span class="gnm-l">How we describe routes</span><span class="gnm-d">What our difficulty and surface labels mean</span></a></div></div><div class="g-navgroup" data-slot="plan"><button type="button" class="g-navtop" aria-expanded="false">Plan Your Trip <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/plan/"><span class="gnm-l">How a trip comes together</span><span class="gnm-d">The whole journey, one page</span></a><a href="/wwc/"><span class="gnm-l">BC Bike Stops directory</span><span class="gnm-d">Places to sleep, eat, and refill that welcome cyclists</span></a><a href="/to-fro/"><span class="gnm-l">To &amp; Fro</span><span class="gnm-d">Ferries, buses, and trains that take your bike</span></a><a href="/add-stops/"><span class="gnm-l">Add Stops to Your Route</span><span class="gnm-d">Upload a GPX, get the stops along your line</span></a><a href="/wwc/guide/"><span class="gnm-l">Stop guides</span><span class="gnm-d">What &ldquo;welcomes cyclists&rdquo; means, category by category</span></a><a href="/be-prepared/"><span class="gnm-l">Be Prepared</span><span class="gnm-d">Cell coverage, wildlife, conditions, and more</span></a><a href="/design-your-own-route/"><span class="gnm-l">Design Your Own Route</span><span class="gnm-d">Tools for building a ride from scratch</span></a><a href="/bike-together/"><span class="gnm-l">Bike Together</span><span class="gnm-d">Tours and group rides you can join</span></a></div></div><div class="g-navgroup" data-slot="field-notes"><button type="button" class="g-navtop" aria-expanded="false">Newsletter <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/field-notes"><span class="gnm-l">Read the latest</span><span class="gnm-d">Trip reports, deep dives, and trail news</span></a><a href="/#newsletter"><span class="gnm-l">Subscribe</span><span class="gnm-d">One email a month with what's new</span></a></div></div><div class="g-navgroup" data-slot="about"><button type="button" class="g-navtop" aria-expanded="false">About <svg class="g-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 1 L5 5 L9 1"/></svg></button><div class="g-navmenu"><a href="/about"><span class="gnm-l">About us</span><span class="gnm-d">Who we are and what we're building</span></a><a href="/advocacy/"><span class="gnm-l">Advocacy</span><span class="gnm-d">Safe roads, rail corridors, and getting there with a bike</span></a><a href="/research/"><span class="gnm-l">Research and Data</span><span class="gnm-d">The numbers and methods behind this site</span></a><a href="/with-thanks/"><span class="gnm-l">With thanks</span><span class="gnm-d">The people and organizations behind us</span></a><a href="/#contact"><span class="gnm-l">Say hi! 🙂</span><span class="gnm-d">We'd love to hear from you</span></a></div></div>
+      <a href="/search/" class="g-nav-search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg><span class="g-nav-search-label">Search</span></a>
+    </div>
+    <button class="g-hamburger" id="g-ham" aria-label="Menu">☰</button>
+  </div>
+</div>
+<script>
+(function(){
+  var h=document.getElementById('g-ham'),n=document.getElementById('g-nav');
+  if(!h||!n)return;
+  h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰';});
+  document.addEventListener('click',function(e){if(!h.contains(e.target)&&!n.contains(e.target)){n.classList.remove('open');h.textContent='☰';}});
+  var groups=[].slice.call(document.querySelectorAll('.g-navgroup'));
+  function closeAll(except){
+    groups.forEach(function(g){
+      if(g!==except){
+        g.classList.remove('open');
+        var b=g.querySelector('.g-navtop');
+        if(b)b.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  groups.forEach(function(g){
+    var btn=g.querySelector('.g-navtop'),timer=null;
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      closeAll(g);
+      var open=g.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    g.addEventListener('mouseenter',function(){
+      if(window.innerWidth<=700)return;
+      clearTimeout(timer);closeAll(g);g.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    });
+    g.addEventListener('mouseleave',function(){
+      if(window.innerWidth<=700)return;
+      timer=setTimeout(function(){
+        g.classList.remove('open');btn.setAttribute('aria-expanded','false');
+      },250);
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest||!e.target.closest('.g-navgroup'))closeAll(null);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')closeAll(null);
+  });
+})();
+</script><!--/chrome-->
+<main>
+<div class="cc-wrap">
+<nav class="g-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="g-crumb-sep">/</span><a href="/research/">Research and Data</a><span class="g-crumb-sep">/</span><span class="g-crumb-cur" aria-current="page">Comox Valley comparison</span></nav>
+<h1 class="cc-h1">Comox Valley: the Cycling Coalition's bike map and our comfort ratings</h1>
+<p class="cc-sub">Our traffic comfort ratings, C1 to C6, for every road and trail, beside the local bike map. Click any line for the details and the OpenStreetMap tags behind it.</p>
+<div class="cc-banner">THIS IS EXPERIMENTAL WORK. FEEDBACK WELCOME. DO NOT RELY ON IT FOR NAVIGATION OR DECISION MAKING.</div>
+<div class="cc-modes"><button class="cc-mode" data-m="theirs">Their map (CVCCo)</button><button class="cc-mode on" data-m="ours3">Ours, in their colours</button><button class="cc-mode" data-m="oursC">Ours, C1 to C6</button><button class="cc-mode" data-m="diff">Where we differ</button></div>
+<div class="cc-jumps"><span>Go to:</span><button class="cc-jump" data-r="Courtenay">Courtenay</button><button class="cc-jump" data-r="Comox">Comox</button><button class="cc-jump" data-r="Cumberland">Cumberland</button><button class="cc-jump" data-r="Royston and Union Bay">Royston and Union Bay</button><button class="cc-jump" data-r="Merville and Black Creek">Merville and Black Creek</button><button class="cc-jump" data-r="Denman and Hornby">Denman and Hornby</button><button class="cc-jump" data-r="Whole valley">Whole valley</button></div>
+<div class="cc-grid">
+<div class="cc-mapbox">
+<div id="ccmap"></div>
+<div class="cc-loading" id="cc-loading">Loading the map…</div>
+</div>
+<div class="cc-panel"><h2 id="legend">Legend<a class="h-anchor" href="#legend" aria-label="Link to this section">#</a></h2>
+<div class="rc-leg cc-leg" data-m="ours3"><div><span class="cc-sw" style="background:#5c8a1e"></span>green: C1 and C2</div><div><span class="cc-sw" style="background:#f59f00"></span>orange: C3, C4, and C5</div><div><span class="cc-sw" style="background:#e8590c"></span>red: C6</div><div><span class="cc-sw" style="background:#e7298a"></span>backcountry (off the scale)</div><div><span class="cc-sw" style="background:#1c1917"></span>bikes not allowed</div><p class="cc-key">Our traffic comfort, C1 to C6, grouped into three colours.</p></div>
+<div class="rc-leg cc-leg" data-m="oursC" style="display:none"><div><span class="cc-sw" style="background:#1a9641"></span><span><b>C1</b> separated paths, or slow streets with few cars</span></div><div><span class="cc-sw" style="background:#a6d96a"></span><span><b>C2</b> sharing light traffic, or bike lanes on calm roads</span></div><div><span class="cc-sw" style="background:#fdae61"></span><span><b>C3</b> sharing busier traffic, or bike lanes on busy roads</span></div><div><span class="cc-sw" style="background:#f16913"></span><span><b>C4</b> fast or heavy traffic, a painted line at most</span></div><div><span class="cc-sw" style="background:#a63603"></span><span><b>C5</b> highway-speed traffic (60+ km/h), a painted line at most</span></div><div><span class="cc-sw" style="background:#67000d"></span><span><b>C6</b> fast highway traffic (70+ km/h), a painted line at most</span></div><div><span class="cc-sw" style="background:#e7298a"></span><span><b>backcountry</b> resource road or bare path, off the scale</span></div><div><span class="cc-sw" style="background:#1c1917"></span><span><b>forbidden</b> bikes not allowed</span></div></div>
+<div class="rc-leg cc-leg" data-m="theirs" style="display:none"><div><span class="cc-sw" style="background:#4f6e1a"></span>Protected Bike Lane</div><div><span class="cc-sw" style="background:#4f6e1a"></span>Painted Bike Lane</div><div><span class="cc-sw" style="background:#9db21f"></span>Neighbourhood Bikeway</div><div><span class="cc-sw" style="background:#c9db29"></span>Quiet Street/Road</div><div><span class="cc-sw" style="background:#78a12e"></span>Multi-Use Trail Paved</div><div><span class="cc-sw" style="background:#702685"></span>Multi-Use Trail Unpaved</div><div><span class="cc-sw" style="background:#b48ec0"></span>Roadway Unpaved</div><div><span class="cc-sw" style="background:#faa640"></span>Medium Traffic with Shoulder</div><div><span class="cc-sw" style="background:#faa640"></span>Medium Traffic without Shoulder</div><div><span class="cc-sw" style="background:#f5878c"></span>High Traffic with Shoulder</div><div><span class="cc-sw" style="background:#f5878c"></span>High Traffic without Shoulder</div><p class="cc-key">Traced from their PDF maps. Dashed: painted lanes and trails. Their own map uses finer line styles.</p></div>
+<div class="rc-leg cc-leg" data-m="diff" style="display:none"><div><span class="cc-sw" style="background:#8a8a94"></span>same colour as their map</div><div><span class="cc-sw" style="background:#1c7ed6"></span>we rate it calmer</div><div><span class="cc-sw" style="background:#c2255c"></span>we rate it more cautious</div><div><span class="cc-sw" style="background:#1c1917"></span>not in our ratings</div><div><span class="cc-sw" style="background:#e9e9ec"></span>not compared</div><p class="cc-key">Click a coloured road for the reason.</p></div>
+<h2 id="show" class="next">Show<a class="h-anchor" href="#show" aria-label="Link to this section">#</a></h2>
+<label class="cc-chk"><input type="checkbox" id="rc-pins" checked>OpenStreetMap fix items</label>
+<label class="cc-chk"><input type="checkbox" id="rc-unm">Their lines with no OSM way under them</label>
+<h2 id="fix-items" class="next">Fix items<a class="h-anchor" href="#fix-items" aria-label="Link to this section">#</a></h2>
+<p class="cc-note">Click to zoom.</p>
+<div class="rc-pin" data-rank="1"><b>1</b>One Spot Trail (rail-grade trail)</div><div class="rc-pin" data-rank="2"><b>2</b>Lazo Greenway (unbiked sections)</div><div class="rc-pin" data-rank="3"><b>3</b>Courtenay Riverway Heritage Walk gaps</div><div class="rc-pin" data-rank="4"><b>4</b>Comox: Robb Ave to Noel Ave path link</div><div class="rc-pin" data-rank="5"><b>5</b>Comox Avenue (Comox)</div><div class="rc-pin" data-rank="6"><b>6</b>Anderton Road (Comox)</div><div class="rc-pin" data-rank="7"><b>7</b>Cliffe Avenue (Courtenay)</div><div class="rc-pin" data-rank="8"><b>8</b>Hornby Island trails tagged highway=cycleway</div><div class="rc-pin" data-rank="9"><b>9</b>Puntledge Triangle Trail</div><div class="rc-pin" data-rank="10"><b>10</b>Ford Cove to Shingle Spit Trail (Hornby)</div><div class="rc-pin" data-rank="11"><b>11</b>River Trail footway links</div><div class="rc-pin" data-rank="12"><b>12</b>Lazo Road</div><div class="rc-pin" data-rank="13"><b>13</b>Rural paved tertiaries missing maxspeed</div><div class="rc-pin" data-rank="14"><b>14</b>Central Road (Hornby)</div><div class="rc-pin" data-rank="15"><b>15</b>Hornby / Denman side roads</div><div class="rc-pin" data-rank="16"><b>16</b>Forbidden Plateau Road</div><div class="rc-pin" data-rank="17"><b>17</b>Duncan Bay Mainline</div><div class="rc-pin" data-rank="18"><b>18</b>Cruikshank Road</div><div class="rc-pin" data-rank="19"><b>19</b>CFB Comox Fitness Trail</div><div class="rc-pin" data-rank="20"><b>20</b>Courtenay/Comox greenway footways</div></div>
+</div>
+
+<div class="cc-prose">
+<h2 id="what-youre-looking-at">What you're looking at<a class="h-anchor" href="#what-youre-looking-at" aria-label="Link to this section">#</a></h2>
+<p>Every road and trail in the Comox Valley, coloured by our traffic comfort class, C1 to C6. We compute it from OpenStreetMap tags: road type, speed limit, lanes, parking, and any bike lane or path. You can see it on our own six-step scale, or grouped into three colours: C1 and C2 as green, C3 to C5 as orange, and C6 as red.</p>
+<p>Switch to <b>Their map</b> to see the Comox Valley Cycling Coalition bike map (2026), traced from the published PDFs and matched road by road to OpenStreetMap. <b>Where we differ</b> marks each road where our colour isn't theirs. Click one for the reason, read from the tags. Their map is the answer key here. It holds local knowledge that no tag does.</p>
+<p>The purple pins are OpenStreetMap fixes that would change our ratings most. Each opens the way in OpenStreetMap.</p>
+
+<h2 id="how-often-we-agree">How often we agree<a class="h-anchor" href="#how-often-we-agree" aria-label="Link to this section">#</a></h2>
+<p>Of the 788 km on their map that we matched to OpenStreetMap, our colour is the same as theirs on 67% of the kilometres we could compare. We rate 107 km calmer than they do and 141 km more cautious. Another 34 km isn't in our ratings at all, mostly footways with no bicycle tag.</p>
+<div class="rc-wide"><table class="rc-tab"><thead><tr><th>Their category</th><th>Counts as</th><th class="n">km</th><th class="n">Same colour</th><th class="n">We're calmer (km)</th><th class="n">We're more cautious (km)</th></tr></thead><tbody><tr><td><span class="cc-sw" style="background:#4f6e1a"></span> Protected Bike Lane</td><td>green</td><td class="n">2.1</td><td class="n">45%</td><td class="n">0.0</td><td class="n">1.2</td></tr><tr><td><span class="cc-sw" style="background:#4f6e1a"></span> Painted Bike Lane</td><td>green</td><td class="n">38.6</td><td class="n">4%</td><td class="n">0.0</td><td class="n">37.1</td></tr><tr><td><span class="cc-sw" style="background:#9db21f"></span> Neighbourhood Bikeway</td><td>green</td><td class="n">6.8</td><td class="n">93%</td><td class="n">0.0</td><td class="n">0.5</td></tr><tr><td><span class="cc-sw" style="background:#c9db29"></span> Quiet Street/Road</td><td>green</td><td class="n">178.3</td><td class="n">79%</td><td class="n">0.0</td><td class="n">37.6</td></tr><tr><td><span class="cc-sw" style="background:#78a12e"></span> Multi-Use Trail Paved</td><td>green</td><td class="n">17.1</td><td class="n">94%</td><td class="n">0.0</td><td class="n">0.6</td></tr><tr><td><span class="cc-sw" style="background:#702685"></span> Multi-Use Trail Unpaved</td><td>green</td><td class="n">120.8</td><td class="n">95%</td><td class="n">0.0</td><td class="n">4.5</td></tr><tr><td><span class="cc-sw" style="background:#b48ec0"></span> Roadway Unpaved</td><td>green</td><td class="n">35.8</td><td class="n">69%</td><td class="n">0.0</td><td class="n">10.8</td></tr><tr><td><span class="cc-sw" style="background:#faa640"></span> Medium Traffic with Shoulder</td><td>orange</td><td class="n">66.2</td><td class="n">56%</td><td class="n">0.3</td><td class="n">29.0</td></tr><tr><td><span class="cc-sw" style="background:#faa640"></span> Medium Traffic without Shoulder</td><td>orange</td><td class="n">165.0</td><td class="n">43%</td><td class="n">75.3</td><td class="n">18.7</td></tr><tr><td><span class="cc-sw" style="background:#f5878c"></span> High Traffic with Shoulder</td><td>red</td><td class="n">143.3</td><td class="n">87%</td><td class="n">17.3</td><td class="n">1.4</td></tr><tr><td><span class="cc-sw" style="background:#f5878c"></span> High Traffic without Shoulder</td><td>red</td><td class="n">14.3</td><td class="n">2%</td><td class="n">13.9</td><td class="n">0.1</td></tr></tbody></table></div>
+<h2 id="their-categories-against-our-classes-km">Their categories against our classes (km)<a class="h-anchor" href="#their-categories-against-our-classes-km" aria-label="Link to this section">#</a></h2>
+<div class="rc-wide"><table class="rc-tab"><thead><tr><th>Their category</th><th class="n">C1</th><th class="n">C2</th><th class="n">C3</th><th class="n">C4</th><th class="n">C5</th><th class="n">C6</th><th class="n">backcountry</th><th class="n">forbidden</th><th class="n">not rated</th><th class="n">total</th></tr></thead><tbody><tr><td>Protected Bike Lane</td><td class="n">0.9</td><td class="n">0.1</td><td class="n">1.2</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>2.1</b></td></tr><tr><td>Painted Bike Lane</td><td class="n"></td><td class="n">1.5</td><td class="n">28.0</td><td class="n">9.0</td><td class="n">0.1</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>38.6</b></td></tr><tr><td>Neighbourhood Bikeway</td><td class="n"></td><td class="n">6.3</td><td class="n">0.5</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>6.8</b></td></tr><tr><td>Quiet Street/Road</td><td class="n">1.9</td><td class="n">137.1</td><td class="n">14.5</td><td class="n">20.2</td><td class="n">2.9</td><td class="n">0.1</td><td class="n"></td><td class="n"></td><td class="n">1.7</td><td class="n"><b>178.3</b></td></tr><tr><td>Multi-Use Trail Paved</td><td class="n">9.5</td><td class="n">0.3</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">0.6</td><td class="n"></td><td class="n">6.7</td><td class="n"><b>17.1</b></td></tr><tr><td>Multi-Use Trail Unpaved</td><td class="n">44.2</td><td class="n">4.6</td><td class="n"></td><td class="n">4.5</td><td class="n"></td><td class="n"></td><td class="n">43.0</td><td class="n"></td><td class="n">24.5</td><td class="n"><b>120.8</b></td></tr><tr><td>Roadway Unpaved</td><td class="n">0.1</td><td class="n">24.5</td><td class="n">1.0</td><td class="n">9.8</td><td class="n"></td><td class="n"></td><td class="n">0.5</td><td class="n"></td><td class="n"></td><td class="n"><b>35.8</b></td></tr><tr><td>Medium Traffic with Shoulder</td><td class="n"></td><td class="n">0.3</td><td class="n">17.6</td><td class="n">2.1</td><td class="n">17.1</td><td class="n">28.9</td><td class="n">0.1</td><td class="n"></td><td class="n">0.1</td><td class="n"><b>66.2</b></td></tr><tr><td>Medium Traffic without Shoulder</td><td class="n">3.0</td><td class="n">72.3</td><td class="n">25.1</td><td class="n">27.4</td><td class="n">17.6</td><td class="n">18.7</td><td class="n"></td><td class="n"></td><td class="n">1.0</td><td class="n"><b>165.0</b></td></tr><tr><td>High Traffic with Shoulder</td><td class="n"></td><td class="n">2.2</td><td class="n">1.4</td><td class="n">2.2</td><td class="n">11.6</td><td class="n">124.3</td><td class="n">1.4</td><td class="n"></td><td class="n">0.2</td><td class="n"><b>143.3</b></td></tr><tr><td>High Traffic without Shoulder</td><td class="n"></td><td class="n">0.9</td><td class="n">3.8</td><td class="n">3.5</td><td class="n">5.7</td><td class="n">0.2</td><td class="n"></td><td class="n">0.1</td><td class="n"></td><td class="n"><b>14.3</b></td></tr></tbody></table></div>
+<h2 id="the-limits">The limits<a class="h-anchor" href="#the-limits" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Our ratings are from OpenStreetMap as of July 2026 (OpenStreetMap extract of 2026-07-01; tags from 2026-07-05). Edits made since then, and there have been some here, aren't reflected yet. Their map was matched to OpenStreetMap as of 2026-10-04.</li>
+<li>OpenStreetMap has no tag for traffic volume. We estimate it from the road type, lanes, and bus stops. That is why a painted lane on a collector road comes out C3: we assume about 4,000 vehicles a day there. On this map that is a known error in our model.</li>
+<li>Where no speed limit is tagged, we assume one from the road type.</li>
+<li>Only <code>cycleway=shoulder</code> earns credit as a bike shoulder today. A plain shoulder tag doesn't, because it says nothing about width.</li>
+<li>Backcountry means a bare track or path with no bicycle or surface tag. It is off the traffic scale, not a verdict.</li>
+<li>Nothing here has been checked on the ground.</li>
+</ul>
+<h2 id="methods-and-licence">Methods and licence<a class="h-anchor" href="#methods-and-licence" aria-label="Link to this section">#</a></h2>
+<p>The comfort classes are explained in our methodology report, <a href="/research/files/character_map_methodology.pdf">How we read the terrain</a> (PDF). The traced map is the CVCCo's own work, used with thanks, and shared with them for discussion. This map contains information from OpenStreetMap, © <a target="_blank" rel="noopener" href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the <a target="_blank" rel="noopener" href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database Licence</a>. Basemap cartography © <a target="_blank" rel="noopener" href="https://www.openmaptiles.org/">OpenMapTiles</a>.</p>
+<p>Questions or corrections: <a href="mailto:heather@bccycletourism.ca">heather@bccycletourism.ca</a>.</p>
+</div>
+
+</div>
+</main>
+<!--chrome--><div class="g-footer">
+  <a class="g-footer-brand" href="/">
+    <img src="/img/logo.svg" alt="BC Cycle Tourism Society" />
+  </a>
+  <div class="g-footer-nav">
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get Inspired</div>
+      <a href="/routes/all/">Browse all routes</a>
+      <a href="/routes/">The highlight reel</a>
+      <a href="/trails/">Named trails</a>
+      <a href="/route-publishers/">Route makers</a>
+      <a href="/wwc/communities/">Communities</a>
+      <a href="/routes/how-we-describe/">How we describe routes</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Plan Your Trip</div>
+      <a href="/plan/">How a trip comes together</a>
+      <a href="/wwc/">BC Bike Stops directory</a>
+      <a href="/to-fro/">To &amp; Fro</a>
+      <a href="/add-stops/">Add Stops to Your Route</a>
+      <a href="/wwc/guide/">Stop guides</a>
+      <a href="/be-prepared/">Be Prepared</a>
+      <a href="/design-your-own-route/">Design Your Own Route</a>
+      <a href="/bike-together/">Bike Together</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Newsletter</div>
+      <a href="/field-notes">Read the latest</a>
+      <a href="/#newsletter">Subscribe</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">Get involved</div>
+      <a href="/suggest/">Suggest a stop</a>
+      <a href="/apply/">Apply for accreditation</a>
+      <a href="/support/trail-organizations/">Support the trail organizations</a>
+      <a href="/#contact">Say hi! 🙂</a>
+    </div>
+    <div class="g-footer-col">
+      <div class="g-footer-h">About</div>
+      <a href="/about">About us</a>
+      <a href="/advocacy/">Advocacy</a>
+      <a href="/research/">Research and Data</a>
+      <a href="/with-thanks/">With thanks</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/land-acknowledgement">Land acknowledgement</a>
+    </div>
+  </div>
+</div><!--/chrome-->
+<script src="/map/lib/maplibre-gl.js"></script>
+<script src="/map/lib/pmtiles.js"></script>
+<script>
+(function(){
+var D={"slug":"comox","title":"Comox Valley: the Cycling Coalition's bike map and our comfort ratings","area_name":"Comox Valley","page_path":"research/comox-valley-bike-map-comparison/","center":[-124.99,49.68],"zoom":10.3,"jumps":{"Courtenay":{"center":[-124.995,49.687],"zoom":13},"Comox":{"center":[-124.93,49.675],"zoom":13.3},"Cumberland":{"center":[-125.03,49.62],"zoom":13.5},"Royston and Union Bay":{"center":[-124.92,49.6],"zoom":12},"Merville and Black Creek":{"center":[-125.1,49.82],"zoom":11.5},"Denman and Hornby":{"center":[-124.73,49.53],"zoom":11},"Whole valley":{"center":[-124.99,49.68],"zoom":10.3}},"generated":"2026-10-25","our_vintage":"July 2026 (OpenStreetMap extract of 2026-07-01; tags from 2026-07-05)","tiles":"https://bcbb-assets.bccycletourism.workers.dev/tiles/region_compare/region_compare_comox.pmtiles","ours":{"km":7431.8,"class_km":{"C1":288.6,"C2":1682.8,"C3":241.5,"C4":107.2,"C5":81.2,"C6":348.7,"BACKCOUNTRY":4681.2,"FORBIDDEN":0.6,"NOT RATED":0}},"reference":{"name":"Comox Valley Cycling Coalition bike map (2026)","short":"CVCCo","source":"Interactive-CV-Urban_2026.pdf and Interactive-CV-Regional_2026.pdf, https://cyclecv.com/maps/ (March 2026)","osm_vintage":"2026-10-04","legend":[{"name":"Protected Bike Lane","group":"green","colour":"#4f6e1a","width":3.5},{"name":"Painted Bike Lane","group":"green","colour":"#4f6e1a","width":3.5,"dash":[2,1.2]},{"name":"Neighbourhood Bikeway","group":"green","colour":"#9db21f","width":3.5},{"name":"Quiet Street/Road","group":"green","colour":"#c9db29","width":2.5},{"name":"Multi-Use Trail Paved","group":"green","colour":"#78a12e","width":3,"dash":[1,1]},{"name":"Multi-Use Trail Unpaved","group":"green","colour":"#702685","width":2.5,"dash":[1,1],"also_agree":["BACKCOUNTRY"]},{"name":"Roadway Unpaved","group":"green","colour":"#b48ec0","width":2.5,"not_compared":["BACKCOUNTRY"]},{"name":"Medium Traffic with Shoulder","group":"orange","colour":"#faa640","width":4},{"name":"Medium Traffic without Shoulder","group":"orange","colour":"#faa640","width":2.5},{"name":"High Traffic with Shoulder","group":"red","colour":"#f5878c","width":4},{"name":"High Traffic without Shoulder","group":"red","colour":"#f5878c","width":2.5}],"rows":[{"cat":"Protected Bike Lane","grp":"green","colour":"#4f6e1a","km":2.1,"class_km":{"C1":0.9,"C2":0.1,"C3":1.2,"C4":0,"C5":0,"C6":0,"BACKCOUNTRY":0,"FORBIDDEN":0,"NOT RATED":0},"status_km":{"agree":1.0,"greener":0,"redder":1.2,"skip":0,"notrated":0},"agree_pct":45},{"cat":"Painted Bike Lane","grp":"green","colour":"#4f6e1a","km":38.6,"class_km":{"C1":0.0,"C2":1.5,"C3":28.0,"C4":9.0,"C5":0.1,"C6":0,"BACKCOUNTRY":0,"FORBIDDEN":0,"NOT RATED":0},"status_km":{"agree":1.5,"greener":0,"redder":37.1,"skip":0,"notrated":0},"agree_pct":4},{"cat":"Neighbourhood Bikeway","grp":"green","colour":"#9db21f","km":6.8,"class_km":{"C1":0,"C2":6.3,"C3":0.5,"C4":0.0,"C5":0,"C6":0,"BACKCOUNTRY":0,"FORBIDDEN":0,"NOT RATED":0},"status_km":{"agree":6.3,"greener":0,"redder":0.5,"skip":0,"notrated":0},"agree_pct":93},{"cat":"Quiet Street/Road","grp":"green","colour":"#c9db29","km":178.3,"class_km":{"C1":1.9,"C2":137.1,"C3":14.5,"C4":20.2,"C5":2.9,"C6":0.1,"BACKCOUNTRY":0.0,"FORBIDDEN":0,"NOT RATED":1.7},"status_km":{"agree":138.9,"greener":0,"redder":37.6,"skip":0,"notrated":1.7},"agree_pct":79},{"cat":"Multi-Use Trail Paved","grp":"green","colour":"#78a12e","km":17.1,"class_km":{"C1":9.5,"C2":0.3,"C3":0,"C4":0,"C5":0,"C6":0,"BACKCOUNTRY":0.6,"FORBIDDEN":0,"NOT RATED":6.7},"status_km":{"agree":9.8,"greener":0,"redder":0.6,"skip":0,"notrated":6.7},"agree_pct":94},{"cat":"Multi-Use Trail Unpaved","grp":"green","colour":"#702685","km":120.8,"class_km":{"C1":44.2,"C2":4.6,"C3":0.0,"C4":4.5,"C5":0,"C6":0,"BACKCOUNTRY":43.0,"FORBIDDEN":0,"NOT RATED":24.5},"status_km":{"agree":91.8,"greener":0,"redder":4.5,"skip":0,"notrated":24.5},"agree_pct":95},{"cat":"Roadway Unpaved","grp":"green","colour":"#b48ec0","km":35.8,"class_km":{"C1":0.1,"C2":24.5,"C3":1.0,"C4":9.8,"C5":0,"C6":0,"BACKCOUNTRY":0.5,"FORBIDDEN":0,"NOT RATED":0.0},"status_km":{"agree":24.6,"greener":0,"redder":10.8,"skip":0.5,"notrated":0.0},"agree_pct":69},{"cat":"Medium Traffic with Shoulder","grp":"orange","colour":"#faa640","km":66.2,"class_km":{"C1":0,"C2":0.3,"C3":17.6,"C4":2.1,"C5":17.1,"C6":28.9,"BACKCOUNTRY":0.1,"FORBIDDEN":0,"NOT RATED":0.1},"status_km":{"agree":36.8,"greener":0.3,"redder":29.0,"skip":0,"notrated":0.1},"agree_pct":56},{"cat":"Medium Traffic without Shoulder","grp":"orange","colour":"#faa640","km":165.0,"class_km":{"C1":3.0,"C2":72.3,"C3":25.1,"C4":27.4,"C5":17.6,"C6":18.7,"BACKCOUNTRY":0,"FORBIDDEN":0,"NOT RATED":1.0},"status_km":{"agree":70.0,"greener":75.3,"redder":18.7,"skip":0,"notrated":1.0},"agree_pct":43},{"cat":"High Traffic with Shoulder","grp":"red","colour":"#f5878c","km":143.3,"class_km":{"C1":0,"C2":2.2,"C3":1.4,"C4":2.2,"C5":11.6,"C6":124.3,"BACKCOUNTRY":1.4,"FORBIDDEN":0,"NOT RATED":0.2},"status_km":{"agree":124.3,"greener":17.3,"redder":1.4,"skip":0,"notrated":0.2},"agree_pct":87},{"cat":"High Traffic without Shoulder","grp":"red","colour":"#f5878c","km":14.3,"class_km":{"C1":0,"C2":0.9,"C3":3.8,"C4":3.5,"C5":5.7,"C6":0.2,"BACKCOUNTRY":0,"FORBIDDEN":0.1,"NOT RATED":0.0},"status_km":{"agree":0.2,"greener":13.9,"redder":0.1,"skip":0,"notrated":0.0},"agree_pct":2}],"km":788.2,"status_km":{"agree":505.3,"greener":106.9,"redder":141.4,"skip":0.5,"notrated":34.2},"agree_pct":67,"missing_geom_km":0.0},"pins":[{"rank":1,"item":"One Spot Trail (rail-grade trail)","km":8.29,"n":5,"url":"https://www.openstreetmap.org/way/115026671","check":"precise surface instead of 'unpaved': gravel -> ruggedness becomes tagged but comfort stays BACKCOUNTRY; compacted/fine_gravel -> ruggedness tagged AND leaves BACKCOUNTRY; bicycle=designated only if signed","why":"BACKCOUNTRY + defaulted ruggedness on 8.3 km of a rail-grade trail; 'unpaved' is too vague to grade","now":"BACKCOUNTRY","lnglat":[-125.047149,49.719487]},{"rank":2,"item":"Lazo Greenway (unbiked sections)","km":1.08,"n":3,"url":"https://www.openstreetmap.org/way/1296680469","check":"bicycle=* (survey; CVRD calls it a multi-use path)","why":"footway with no bicycle tag is dropped entirely; the adjoining section w1296680466 already has bicycle=designated","now":"not in network","lnglat":[-124.879112,49.687251]},{"rank":3,"item":"Courtenay Riverway Heritage Walk gaps","km":0.3,"n":2,"url":"https://www.openstreetmap.org/way/570544285","check":"bicycle=* on the gravel footway and the bridge (survey)","why":"two footway links break an otherwise bicycle=designated corridor","now":"not in network","lnglat":[-124.978379,49.679334]},{"rank":4,"item":"Comox: Robb Ave to Noel Ave path link","km":0.55,"n":2,"url":"https://www.openstreetmap.org/way/711555669","check":"bicycle=* (survey)","why":"footway between two bicycle=designated streets; dropping it breaks the bike route","now":"not in network","lnglat":[-124.948822,49.682017]},{"rank":5,"item":"Comox Avenue (Comox)","km":1.66,"n":15,"url":"https://www.openstreetmap.org/way/918483129","check":"maxspeed","why":"secondary with no maxspeed: comfort uses a 60 km/h guess, VERY FEW with the lane; a posted 50 would read better","now":"VERY FEW","lnglat":[-124.932619,49.675357]},{"rank":6,"item":"Anderton Road (Comox)","km":1.39,"n":5,"url":"https://www.openstreetmap.org/way/40561289","check":"maxspeed","why":"same guessed-60 problem on a secondary with a bike lane (VERY FEW now)","now":"VERY FEW","lnglat":[-124.935548,49.678239]},{"rank":7,"item":"Cliffe Avenue (Courtenay)","km":0.96,"n":9,"url":"https://www.openstreetmap.org/way/40664294","check":"maxspeed","why":"secondary with no maxspeed reads EXPERIENCED ONLY on a guessed 60","now":"EXPERIENCED ONLY","lnglat":[-124.993722,49.687178]},{"rank":8,"item":"Hornby Island trails tagged highway=cycleway","km":10.83,"n":11,"url":"https://www.openstreetmap.org/way/366230915","check":"survey: if singletrack, highway=path + mtb:scale + surface","why":"11 ways, 10.8 km scored MOST comfort with no surface tag; probably over-scored MTB trails (accuracy, not gap). IN PROGRESS: by Oct 4, 6 of 11 retagged to path and 1 split/deleted","now":"MOST","lnglat":[-124.671129,49.521742]},{"rank":9,"item":"Puntledge Triangle Trail","km":3.97,"n":4,"url":"https://www.openstreetmap.org/way/1442699475","check":"surface; bike access if signed","why":"bare path from a DataBC import: BACKCOUNTRY + defaulted ruggedness","now":"BACKCOUNTRY","lnglat":[-125.088767,49.68743]},{"rank":10,"item":"Ford Cove to Shingle Spit Trail (Hornby)","km":2.99,"n":1,"url":"https://www.openstreetmap.org/way/232286646","check":"surface; bike access if signed","why":"bare path: BACKCOUNTRY + defaulted ruggedness","now":"BACKCOUNTRY","lnglat":[-124.689003,49.504965]},{"rank":11,"item":"River Trail footway links","km":1.88,"n":3,"url":"https://www.openstreetmap.org/way/366219791","check":"bicycle=* (survey); also w366218668 has bicycle=unknown","why":"footways between bicycle=yes sections of the same trail","now":"not in network","lnglat":[-125.084169,49.669389]},{"rank":12,"item":"Lazo Road","km":1.84,"n":4,"url":"https://www.openstreetmap.org/way/240229037","check":"maxspeed","why":"rural paved tertiary, untagged so assumed 50; a posted 60-80 would change its class","now":"FEW","lnglat":[-124.897453,49.680233]},{"rank":13,"item":"Rural paved tertiaries missing maxspeed","km":3.83,"n":5,"url":"https://www.openstreetmap.org/way/40560025","check":"maxspeed (McLeod, Huband, McDonald, Knight, Idiens)","why":"same as Lazo Road, about 3.8 km total","now":"FEW","lnglat":[-124.89203,49.581045]},{"rank":14,"item":"Central Road (Hornby)","km":10.58,"n":5,"url":"https://www.openstreetmap.org/way/40567951","check":"surface (likely asphalt; confirm)","why":"CONFIRMATION, low expected score change: 10.6 km with no surface tag; paved default probably right","now":"SOME","lnglat":[-124.650373,49.500825]},{"rank":15,"item":"Hornby / Denman side roads","km":9.02,"n":4,"url":"https://www.openstreetmap.org/way/1011138009","check":"surface","why":"CONFIRMATION, low expected score change unless some are gravel: Shingle Spit Rd, St Johns Point Rd, Anderson Dr, Northwest Rd (Denman) defaulted to paved R0","now":"SOME","lnglat":[-124.841501,49.568195]},{"rank":16,"item":"Forbidden Plateau Road","km":6.87,"n":7,"url":"https://www.openstreetmap.org/way/40564026","check":"surface","why":"6.9 km residential with no surface tag, defaulted paved","now":"VERY FEW","lnglat":[-125.108321,49.667418]},{"rank":17,"item":"Duncan Bay Mainline","km":6.78,"n":9,"url":"https://www.openstreetmap.org/way/40571436","check":"surface, maxspeed","why":"6.8 km logging road as unclassified with no surface, so it reads paved R0 and 50 km/h","now":"SOME","lnglat":[-125.103149,49.698989]},{"rank":18,"item":"Cruikshank Road","km":3.08,"n":1,"url":"https://www.openstreetmap.org/way/433551932","check":"surface, maxspeed","why":"3.1 km unclassified with no surface or speed","now":"SOME","lnglat":[-125.221797,49.575222]},{"rank":19,"item":"CFB Comox Fitness Trail","km":3.64,"n":8,"url":"https://www.openstreetmap.org/way/547342426","check":"bicycle=* / access (survey; on DND land)","why":"3.5 km of asphalt footway dropped from the network","now":"not in network","lnglat":[-124.917405,49.711127]},{"rank":20,"item":"Courtenay/Comox greenway footways","km":2.53,"n":5,"url":"https://www.openstreetmap.org/way/688054720","check":"bicycle=* (survey signage)","why":"Condensory, Valley View, Cottonwood, Avonlee, and King Coho greenways are footways with no bicycle tag, so they are dropped","now":"not in network","lnglat":[-124.997324,49.697211]}]};
+var C={'C1':'#1a9641','C2':'#a6d96a','C3':'#fdae61','C4':'#f16913','C5':'#a63603','C6':'#67000d',
+  'BACKCOUNTRY':'#e7298a','FORBIDDEN':'#1c1917','NOT RATED':'#9aa0a6'};
+var CDESC={'C1':'separated paths, or slow streets with few cars','C2':'sharing light traffic, or bike lanes on calm roads',
+  'C3':'sharing busier traffic, or bike lanes on busy roads','C4':'fast or heavy traffic, a painted line at most',
+  'C5':'highway-speed traffic (60+ km/h), a painted line at most','C6':'fast highway traffic (70+ km/h), a painted line at most',
+  'BACKCOUNTRY':'resource road or bare backcountry path, off the traffic scale','FORBIDDEN':'cycling not legally allowed','NOT RATED':'not in our ratings'};
+var G={'green':'#5c8a1e','orange':'#f59f00','red':'#e8590c','backcountry':'#e7298a','forbidden':'#1c1917','notrated':'#9aa0a6'};
+var GWORD={'green':'green','orange':'orange','red':'red','backcountry':'backcountry','forbidden':'forbidden','notrated':'not rated'};
+var ST={'agree':'#8a8a94','greener':'#1c7ed6','redder':'#c2255c','notrated':'#1c1917','skip':'#e9e9ec'};
+var STWORD={'agree':'same colour','greener':'we rate it calmer','redder':'we rate it more cautious','notrated':'not in our ratings','skip':'not compared (unpaved road we call backcountry)'};
+var R=D.reference||null, LEG={};
+if(R) R.legend.forEach(function(c){ LEG[c.name]=c; });
+var esc=function(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+function osm(w){ return w?'<a target="_blank" rel="noopener" href="https://www.openstreetmap.org/way/'+w+'">OpenStreetMap way '+w+'</a>':''; }
+function sw(col){ return '<span class="cc-sw" style="background:'+col+'"></span>'; }
+function oursHtml(p){
+  var s='<b>'+esc(p.name||p.hw||'Unnamed way')+'</b><div>'+sw(C[p.c])+' <b>'+esc(p.c)+'</b> \u00b7 '+GWORD[p.g]+'</div><div class="cc-meta">'+esc(CDESC[p.c])+'</div>';
+  if(p.spd>=0) s+='<div class="cc-meta">Speed '+p.spd+' km/h'+(p.est==1?' (assumed: no maxspeed tag)':' (tagged)')+(p.adt?' \u00b7 we assume about '+(+p.adt).toLocaleString()+' vehicles a day':'')+'</div>';
+  return s+'<div class="rc-tags">'+esc(p.tags)+'</div><div class="cc-meta">'+osm(p.way)+'</div>'; }
+function diffHtml(p){
+  var s='<b>'+esc(p.name||'Unnamed way')+'</b><div>Their map: '+sw(LEG[p.cat]?LEG[p.cat].colour:'#999')+' '+esc(p.cat)+' ('+GWORD[p.grp]+')</div>'
+    +'<div>Ours: '+sw(C[p.c])+' <b>'+esc(p.c)+'</b> ('+GWORD[p.og]+')</div><div style="margin-top:3px"><b>'+STWORD[p.st]+'</b></div>';
+  if(p.why) s+='<div class="cc-meta" style="margin-top:2px">Why: '+esc(p.why)+'</div>';
+  return s+'<div class="rc-tags">'+esc(p.tags)+'</div><div class="cc-meta">'+osm(p.way)+'</div>'; }
+function theirsHtml(p){ return 'Their map: '+sw(LEG[p.cat]?LEG[p.cat].colour:'#999')+' <b>'+esc(p.cat)+'</b><div class="cc-meta">'+(p.sheet==='urban'?'Urban':'Regional')+' sheet</div>'; }
+function unmHtml(p){ return '<b>Their line with no OpenStreetMap way under it</b><div>'+esc(p.cat)+', '+p.m+' m</div>'
+  +(p.near?'<div class="cc-meta">Nearest OSM way: '+esc(p.near)+', '+p.dist+' m away. '+osm(p.near_way)+'</div>':'')
+  +'<div class="cc-meta">One of the two lines may be off, or the way may be missing. Worth a look in the editor.</div>'; }
+function pinHtml(p){ return '<b>Fix item '+p.rank+': '+esc(p.item)+'</b><div class="cc-meta">'+p.km+' km on '+p.n+' way'+(p.n==1?'':'s')+'</div>'
+  +'<div style="margin-top:3px"><b>Check:</b> '+esc(p.check)+'</div><div class="cc-meta" style="margin-top:2px">'+esc(p.why)+'</div>'
+  +'<div class="cc-meta"><a target="_blank" rel="noopener" href="'+esc(p.url)+'">Open in OpenStreetMap</a></div>'; }
+fetch('/map/style/style.json').then(function(r){ return r.json(); }).then(function(style){
+  delete style.sources['bc-cycling'];
+  style.layers=style.layers.filter(function(l){ return l.source!=='bc-cycling'; });
+  // ?tiles=<url> previews a local archive before upload (serve_local.py handles range requests)
+  var TILES=new URLSearchParams(location.search).get('tiles')||D.tiles;
+  style.sources.rc={type:'vector',url:'pmtiles://'+TILES};
+  style.sources['cc-world']={type:'geojson',data:{type:'Feature',properties:{},
+    geometry:{type:'Polygon',coordinates:[[[-180,-85],[180,-85],[180,85],[-180,85],[-180,-85]]]}}};
+  style.sources.pins={type:'geojson',data:{type:'FeatureCollection',features:(D.pins||[]).map(function(p){
+    return {type:'Feature',geometry:{type:'Point',coordinates:p.lnglat},properties:{rank:p.rank}}; })}};
+  function m(prop,tab,dflt){ var e=['match',['get',prop]]; Object.keys(tab).forEach(function(k){ e.push(k,tab[k]); }); e.push(dflt); return e; }
+  // zoom must be the top-level interpolate, so per-feature cases go inside each stop
+  var w=function(a,b,c){ return ['interpolate',['linear'],['zoom'],9,a,12,b,15,c]; };
+  var wz=function(f){ return ['interpolate',['linear'],['zoom'],9,f(0),12,f(1),15,f(2)]; };
+  var tcol=['match',['get','cat']], twid=['match',['get','cat']], dashed=[];
+  if(R){ R.legend.forEach(function(c){ tcol.push(c.name,c.colour); twid.push(c.name,c.width); if(c.dash) dashed.push(c.name); }); }
+  tcol.push('#999'); twid.push(2.5);
+  var L=[{id:'cc-veil',type:'fill',source:'cc-world',paint:{'fill-color':'#FFFDF9','fill-opacity':0.5}},
+    {id:'ours3',type:'line',source:'rc','source-layer':'ours',layout:{'line-cap':'round','line-join':'round'},
+      paint:{'line-color':m('g',G,'#999'),'line-width':wz(function(i){ return ['case',['==',['get','g'],'backcountry'],[0.6,1.2,2.2][i],[1.2,2.5,4.5][i]]; })}},
+    {id:'oursC',type:'line',source:'rc','source-layer':'ours',layout:{visibility:'none','line-cap':'round','line-join':'round'},
+      paint:{'line-color':m('c',C,'#999'),'line-width':wz(function(i){ return ['case',['==',['get','c'],'BACKCOUNTRY'],[0.6,1.2,2.2][i],[1.2,2.5,4.5][i]]; })}}];
+  if(R){
+    L.push({id:'theirs',type:'line',source:'rc','source-layer':'theirs',filter:['!',['in',['get','cat'],['literal',dashed]]],
+      layout:{visibility:'none','line-cap':'round','line-join':'round'},paint:{'line-color':tcol,'line-width':wz(function(i){ return ['*',twid,[0.45,0.8,1.3][i]]; })}});
+    L.push({id:'theirs-dash',type:'line',source:'rc','source-layer':'theirs',filter:['in',['get','cat'],['literal',dashed]],
+      layout:{visibility:'none','line-join':'round'},paint:{'line-color':tcol,'line-width':wz(function(i){ return ['*',twid,[0.45,0.8,1.3][i]]; }),'line-dasharray':[1.6,1]}});
+    L.push({id:'diff',type:'line',source:'rc','source-layer':'diff',layout:{visibility:'none','line-cap':'round','line-join':'round'},
+      paint:{'line-color':m('st',ST,'#999'),'line-width':wz(function(i){ return ['match',['get','st'],'agree',[1,1.6,2.5][i],'skip',[1,1.6,2.5][i],[2,3.5,6][i]]; })}});
+    L.push({id:'unm',type:'line',source:'rc','source-layer':'unmatched',layout:{visibility:'none'},
+      paint:{'line-color':'#1c1917','line-width':w(1.5,2.5,4),'line-dasharray':[1,1.2]}});
+  }
+  L.push({id:'pinways',type:'line',source:'rc','source-layer':'pinways',paint:{'line-color':'#7048e8','line-width':w(1.5,3,5),'line-opacity':0.55}});
+  L.push({id:'pins',type:'circle',source:'pins',paint:{'circle-radius':9,'circle-color':'#7048e8','circle-stroke-color':'#fff','circle-stroke-width':2}});
+  L.push({id:'pin-n',type:'symbol',source:'pins',layout:{'text-field':['to-string',['get','rank']],'text-size':11,'text-allow-overlap':true,'text-font':['Noto Sans Bold']},paint:{'text-color':'#fff'}});
+  var symIdx=style.layers.findIndex(function(l){ return l.type==='symbol'; }); if(symIdx<0) symIdx=style.layers.length;
+  style.layers.splice.apply(style.layers,[symIdx,0].concat(L.slice(0,-1)));
+  style.layers.push(L[L.length-1]);
+  maplibregl.addProtocol('pmtiles',new pmtiles.Protocol().tile);
+  var map=new maplibregl.Map({container:'ccmap',style:style,center:D.center,zoom:D.zoom,cooperativeGestures:true,attributionControl:false});
+  map.addControl(new maplibregl.NavigationControl(),'top-right');
+  var attrib=new maplibregl.AttributionControl({compact:true,customAttribution:(R?'Traced bike map \u00a9 '+esc(R.short)+' \u00b7 ':'')
+    +'\u00a9 <a target="_blank" rel="noopener" href="https://www.openmaptiles.org/">OpenMapTiles</a> \u00a9 <a target="_blank" rel="noopener" href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+  map.addControl(attrib);
+  if(attrib._container){ attrib._container.classList.remove('maplibregl-compact-show'); }
+  map.once('idle',function(){ var el=document.getElementById('cc-loading'); if(el) el.remove(); });
+  var MODES={ours3:['ours3'],oursC:['oursC'],theirs:['theirs','theirs-dash'],diff:['diff']};
+  var MODE='ours3';
+  function setMode(k){ MODE=k; Object.keys(MODES).forEach(function(x){ MODES[x].forEach(function(l){ if(map.getLayer(l)) map.setLayoutProperty(l,'visibility',x===k?'visible':'none'); }); });
+    document.querySelectorAll('.cc-mode').forEach(function(b){ b.classList.toggle('on',b.dataset.m===k); });
+    document.querySelectorAll('.rc-leg').forEach(function(d){ d.style.display=d.dataset.m===k?'':'none'; }); }
+  document.querySelectorAll('.cc-mode').forEach(function(b){ b.addEventListener('click',function(){ setMode(b.dataset.m); }); });
+  var pinOn=document.getElementById('rc-pins'), unmOn=document.getElementById('rc-unm');
+  if(pinOn) pinOn.onchange=function(){ ['pins','pin-n','pinways'].forEach(function(l){ map.setLayoutProperty(l,'visibility',pinOn.checked?'visible':'none'); }); };
+  if(unmOn) unmOn.onchange=function(){ map.setLayoutProperty('unm','visibility',unmOn.checked?'visible':'none'); };
+  var PIN={}; (D.pins||[]).forEach(function(p){ PIN[p.rank]=p; });
+  var pop=new maplibregl.Popup({closeButton:true,focusAfterOpen:false,className:'cc-pop',maxWidth:'340px'});
+  function hit(pt,layers){ layers=layers.filter(function(l){ return map.getLayer(l)&&map.getLayoutProperty(l,'visibility')!=='none'; });
+    if(!layers.length) return null; var fs=map.queryRenderedFeatures([[pt.x-5,pt.y-5],[pt.x+5,pt.y+5]],{layers:layers}); return fs.length?fs[0]:null; }
+  function clickAt(e){
+    var f=hit(e.point,['pins']); if(f){ pop.setLngLat(e.lngLat).setHTML(pinHtml(PIN[f.properties.rank])).addTo(map); return true; }
+    f=hit(e.point,['unm']); if(f){ pop.setLngLat(e.lngLat).setHTML(unmHtml(f.properties)).addTo(map); return true; }
+    f=hit(e.point,MODES[MODE]); if(!f) return false;
+    var p=f.properties, h=MODE==='diff'?diffHtml(p):MODE==='theirs'?theirsHtml(p):oursHtml(p);
+    pop.setLngLat(e.lngLat).setHTML(h).addTo(map); return true; }
+  map.on('click',clickAt);
+  map.on('mousemove',function(e){ map.getCanvas().style.cursor=hit(e.point,['pins','unm'].concat(MODES[MODE]))?'pointer':''; });
+  document.querySelectorAll('.cc-jump').forEach(function(b){ b.addEventListener('click',function(){ map.flyTo(D.jumps[b.dataset.r]); }); });
+  document.querySelectorAll('.rc-pin').forEach(function(d){ d.addEventListener('click',function(){ var p=PIN[d.dataset.rank];
+    map.flyTo({center:p.lnglat,zoom:14.5}); pop.setLngLat(p.lnglat).setHTML(pinHtml(p)).addTo(map); }); });
+  map.on('load',function(){ setMode('ours3'); });
+  window._rc=map;
+});
+})();
+</script>
+<script>
+window.addEventListener('load', (event) => {
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      let href = item.getAttribute('href') || '';
+      if (href.startsWith('tel:'))    { if (window.fathom) fathom.trackEvent('Phone click'); return; }
+      if (href.startsWith('mailto:')) { if (window.fathom) fathom.trackEvent('Email click'); return; }
+      let linkUrl = new URL(href, window.location.href);
+      if (linkUrl.hostname && linkUrl.hostname !== window.location.hostname) {
+        let domainParts = linkUrl.hostname.split('.');
+        let domainName = domainParts.length > 1 ? domainParts[domainParts.length - 2] : domainParts[0];
+        if (window.fathom) fathom.trackEvent(`External link clicked: ${domainName}`);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -930,10 +930,10 @@
 </wpt>
 <wpt lat="49.104926" lon="-121.964151">
 <name>Garrison Wine &amp; Liquor Merchants</name>
-<cmt>winery</cmt>
-<desc>Winery / Cidery</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.139394" lon="-121.963433">
 <name>Safeway</name>

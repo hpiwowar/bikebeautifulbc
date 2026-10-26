@@ -342,10 +342,10 @@
 </wpt>
 <wpt lat="49.164926" lon="-122.890902">
 <name>Kennedy's Liquor Beer &amp; Wine Store</name>
-<cmt>winery</cmt>
-<desc>Winery / Cidery</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.159332" lon="-122.891171">
 <name>Triple O's</name>

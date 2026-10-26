@@ -1567,10 +1567,10 @@
 </wpt>
 <wpt lat="49.268347" lon="-123.156548">
 <name>JAK's Beer Wine Spirits</name>
-<cmt>food</cmt>
-<desc>Grocery Store</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.268038" lon="-123.156928">
 <name>Hi Nippon</name>

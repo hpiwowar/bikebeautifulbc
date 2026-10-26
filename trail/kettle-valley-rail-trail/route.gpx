@@ -566,10 +566,10 @@
 </wpt>
 <wpt lat="49.456593" lon="-120.508657">
 <name>Prince Cold Beer and Wine Liquor Store</name>
-<cmt>winery</cmt>
-<desc>Winery / Cidery</desc>
+<cmt>convenience_store</cmt>
+<desc>Liquor Store</desc>
 <sym>Dot</sym>
-<type>food</type>
+<type>store</type>
 </wpt>
 <wpt lat="49.453648" lon="-120.514392">
 <name>Deerview Lodge &amp; Cabins</name>
