@@ -6,7 +6,7 @@ could find it: when it opens, when it closes, whether it is open all year,
 whether you can camp outside the season, where we read that, and how sure we
 are.
 
-Published 2026-10-18 by BC Cycle Tourism Society. Preliminary working data,
+Published 2026-11-17 by BC Cycle Tourism Society. Preliminary working data,
 subject to revision.
 https://bccycletourism.ca/research/
 Questions, corrections, or collaborations: heather@bccycletourism.ca
@@ -21,7 +21,7 @@ that or not. Use it, redistribute it, build on it. If you publish a database
 derived from it, that database has to carry the same licence.
 
 Suggested citation: BC Cycle Tourism Society (2026). When British Columbia
-campgrounds open and close [data set]. Version 2026-10-18.
+campgrounds open and close [data set]. Version 2026-11-17.
 https://bccycletourism.ca/research/
 
 HOW TO READ THIS FILE
@@ -32,8 +32,8 @@ A blank cell means we have not recorded that thing. It never means zero, and it
 never means the answer is no. A blank closing month is a campground whose
 closing month we could not find, not one that never closes.
 
-858 of the 1395 campgrounds have a season: 417 with high confidence, 299 medium,
-and 142 low. 250 say they are open all year.
+858 of the 1395 campgrounds have a season: 418 with high confidence, 298 medium,
+and 142 low. 263 say they are open all year.
 
 The confidence column is our own judgment of the evidence, not the operator's.
 'high' means an official source gave this year's dates or said plainly that the
@@ -52,7 +52,7 @@ it, marked the row not_confirmed in quote_check, and lowered its confidence to
 low. Not confirmed does not mean wrong. Some of those quotes leave out words
 without saying so, or stitch together a table, and the dates they support are
 real. Others we could not find at all. The dates stay in either way; treat them
-as a lead, not an answer. Of the 213 web-search quotes, 69 could not be
+as a lead, not an answer. Of the 209 web-search quotes, 69 could not be
 confirmed.
 
 Most Recreation Sites and Trails BC campgrounds post no season at all. They are
