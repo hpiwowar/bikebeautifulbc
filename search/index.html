@@ -411,11 +411,27 @@ h2:hover > .h-anchor { opacity: .55; }
     }, 120);
   });
 
-  function snippet(r, q) {
-    if (r.desc) return r.desc;
-    var body = r.body || '', w = q.toLowerCase().split(/\s+/)[0] || '';
+  // Phrase search (2026-11-23): MiniSearch has none, so text in "double quotes" is
+  // matched as usual, then kept only where the words sit side by side in that order.
+  function phrasesOf(q) {
+    var out = [], m, re = /"([^"]+)"/g;
+    while ((m = re.exec(q))) { var p = norm(m[1]); if (p) out.push(p); }
+    return out;
+  }
+  function norm(s) { return (s || '').toLowerCase().replace(/[^\w\u00C0-\u024F']+/g, ' ').trim(); }
+  function hasPhrases(r, phrases) {
+    var hay = ' ' + norm(r.title + ' ' + (r.desc || '') + ' ' + (r.body || '')) + ' ';
+    for (var i = 0; i < phrases.length; i++) {
+      if (hay.indexOf(' ' + phrases[i] + ' ') === -1) return false;
+    }
+    return true;
+  }
+
+  function snippet(r, q, phrases) {
+    if (r.desc && !phrases.length) return r.desc;
+    var body = r.body || '', w = phrases.length ? phrases[0] : (q.toLowerCase().split(/\s+/)[0] || '');
     var i = w ? body.toLowerCase().indexOf(w) : -1;
-    if (i < 0) return body.slice(0, 150);
+    if (i < 0) return r.desc || body.slice(0, 150);
     var start = Math.max(0, i - 40);
     return (start ? '\u2026' : '') + body.slice(start, start + 150) + '\u2026';
   }
@@ -423,21 +439,25 @@ h2:hover > .h-anchor { opacity: .55; }
   function run() {
     var q = input.value.trim();
     if (q.length < 2) { elEd.innerHTML = ''; elSt.innerHTML = ''; return; }
+    var phrases = phrasesOf(q);
+    var qWords = q.replace(/"/g, ' ').trim();
     if (mini) {
-      var hits = mini.search(q).slice(0, 15);
+      var hits = mini.search(qWords);
+      if (phrases.length) hits = hits.filter(function(r){ return hasPhrases(r, phrases); });
+      hits = hits.slice(0, 15);
       elEd.innerHTML = '<div class="sr-group-h">Pages</div>' + (hits.length
         ? hits.map(function(r){
             return '<a class="sr-item" href="' + esc(r.url) + '"><span class="sr-title">' + esc(r.title) +
-                   '</span><span class="sr-type">' + esc(r.type) + '</span><div class="sr-snip">' + esc(snippet(r, q)) + '</div></a>';
+                   '</span><span class="sr-type">' + esc(r.type) + '</span><div class="sr-snip">' + esc(snippet(r, q, phrases)) + '</div></a>';
           }).join('')
         : '<p class="sr-note">No pages match \u201c' + esc(q) + '\u201d.</p>');
     } else {
       elEd.innerHTML = '<p class="sr-note">Loading\u2026</p>';
     }
-    var dirLink = '/wwc/#view=all&q=' + encodeURIComponent(q);
+    var dirLink = '/wwc/#view=all&q=' + encodeURIComponent(qWords);
     var h = '<div class="sr-group-h">Stops</div>';
     if (stops) {
-      var words = q.toLowerCase().split(/\s+/).filter(Boolean);
+      var words = qWords.toLowerCase().split(/\s+/).filter(Boolean);
       var m = [];
       for (var i = 0; i < stops.length; i++) {
         var hay = (stops[i].n + ' ' + stops[i].c).toLowerCase();
